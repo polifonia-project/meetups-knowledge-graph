@@ -25,6 +25,8 @@ credits:
 
 # MEETUPS Knowledge Graph
 
+[![DOI](https://zenodo.org/badge/588597123.svg)](https://zenodo.org/badge/latestdoi/588597123)
+
 The MEETUPS knowledge graph contains data about historical encounters of people in the musical world in Europe from c. 1800 to c. 1945.
 
 
