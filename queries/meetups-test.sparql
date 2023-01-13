@@ -1,0 +1,23 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+PREFIX ont: <http://w3id.org/polifonia/ontology/meetups#>
+PREFIX meetup: <http://w3id.org/polifonia/pilot/meetups/>
+
+# 9039,http://dbpedia.org/resource/Django_Reinhardt,1910-01-23,9039.txt
+# "http://dbpedia.org/resource/Ian_Anderson"                           | "223497.txt"
+
+SELECT ?sentenceText WHERE {
+
+   SERVICE <x-sparql-anything:> {
+	 BIND ( CONCAT ( "../extractedEntities/10085.csv" ) AS ?location ) .
+   	 fx:properties fx:location ?location ; fx:csv.headers "true" .
+
+	 [] xyz:paragraphIndex ?paragraph ; 
+	    xyz:sentenceIndex ?sentence ; 
+	 	xyz:sentence ?sentenceText .
+ #		xyz:entType "sentence"
+}
+}

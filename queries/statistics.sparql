@@ -1,0 +1,48 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+PREFIX ont: <http://w3id.org/polifonia/ontology/meetups#>
+PREFIX meetup: <http://w3id.org/polifonia/pilot/meetups/>
+
+
+SELECT ?key ?value WHERE
+{
+   {
+   	SELECT ?key (COUNT(*) AS ?value) {
+		graph ?g {?x a ont:MusicalMeetup } .
+		BIND ("Meetups" as ?key ) 
+	} group by ?key
+   } UNION 
+   {
+   	SELECT ?key (COUNT(*) AS ?value) {
+		graph ?g {?x ont:excerpt [] } .
+		BIND ("Excerpts" as ?key ) 
+	} group by ?key
+   } UNION 
+   {
+   	SELECT ?key (COUNT(*) AS ?value) {
+		graph ?g {?x ont:person [] } .
+		BIND ("Persons mentioned" as ?key ) 
+	} group by ?key
+   } UNION 
+   {
+   	SELECT ?key (COUNT(distinct ?sub) AS ?value) {
+		graph ?g {?x ont:subject ?sub } .
+		BIND ("Subjects" as ?key ) 
+	} group by ?key
+   } UNION 
+   {
+   	SELECT ?key (COUNT(distinct ?sub) AS ?value) {
+		graph ?g {?x ont:place ?sub } .
+		BIND ("Places mentions" as ?key ) 
+	} group by ?key
+   } UNION 
+   {
+   	SELECT ?key (COUNT(*) AS ?value) {
+		graph ?g {?x ont:timeExpression ?time } .
+		BIND ("Time expressions" as ?key ) 
+	} group by ?key
+   } 
+} 

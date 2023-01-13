@@ -1,0 +1,22 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+
+# 9039,http://dbpedia.org/resource/Django_Reinhardt,1910-01-23,9039.txt
+
+SELECT ?subject ?fileId WHERE {
+
+    SERVICE <x-sparql-anything:> {
+    	 fx:properties fx:location "../infoBiographies.csv" ; fx:csv.headers "true" .
+ 	 [] xyz:fileName ?fileName ;
+	    xyz:s ?subject
+    }
+
+   SERVICE <x-sparql-anything:> {
+   	 fx:properties fx:location "../list_wikiIdSample.csv" ; fx:csv.headers "true" .
+	 [] xyz:file_name ?fileName
+   }
+   BIND ( replace(?fileName, ".txt", "" ) AS ?fileId )
+}

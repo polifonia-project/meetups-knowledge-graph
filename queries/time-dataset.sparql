@@ -1,0 +1,16 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> 
+prefix ont:    <http://w3id.org/polifonia/ontology/meetups#> 
+
+SELECT ?source ?excerpt ?expression 
+WHERE {
+    graph ?file { 
+	  []   ont:excerpt         ?excerpt ;
+      ont:subject         ?source ;
+      ont:timeExpression  ?expression .
+	}
+}

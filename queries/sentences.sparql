@@ -1,0 +1,68 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+PREFIX ont: <http://w3id.org/polifonia/ontology/meetups#>
+PREFIX meetup: <http://w3id.org/polifonia/pilot/meetups/>
+
+CONSTRUCT {
+?sentenceEntity a ont:Sentence ;
+	ont:person ?personIRI ;
+	ont:subject ?subjectIRI ;
+	ont:place ?placeIRI ;
+	ont:excerpt ?sentenceText ;
+	ont:timeExpression ?time ;
+	ont:inParagraph ?paragraphEntity ;
+	ont:prevSentence ?prevSentenceEntity ;
+	#ont:par ?paragraph ;
+	#ont:liiii ?li ;
+	#ont:prevvv ?prev
+	.
+?paragraphEntity a ont:Paragraph ;
+	?sentenceIndex ?sentenceEntity ;
+	ont:prevParagraph ?prevPragraphEntity .
+} WHERE {
+	# 
+    SERVICE <x-sparql-anything:> {
+ 	 BIND ( CONCAT ( "../indexedSentences/", ?_fileId , ".csv" ) AS ?location ) .
+    	 fx:properties fx:location ?location ; fx:csv.headers "true" .
+ 	 [] xyz:paragraphIndex ?paragraph ; 
+ 	    xyz:sentenceIndex ?sentence ;
+ 		xyz:sentences ?sentenceText .
+		# 
+	 BIND ( IRI(?_subject) as ?subjectIRI ) .
+   	 BIND ( IF ( xsd:int(?sentence) > 0, (xsd:int(?sentence) - 1), 0) AS ?prevSentence ) .
+   	 BIND ( fx:entity ( rdf:, "_", xsd:int(?sentence) + 1) AS ?sentenceIndex ) .
+     BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?prevSentence) AS ?prevSentenceEntity ) .
+        # 
+   	 BIND ( IF ( xsd:int(?paragraph) > 0, (xsd:int(?paragraph) - 1), 0) AS ?prevParagraph ) .
+   	 # BIND ( fx:entity ( rdf:, "_", xsd:int(?paragraph) + 1) AS ?paragraphIndex ) .
+     BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?prevParagraph ) AS ?prevParagraphEntity ) .
+	 
+     BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?sentence) AS ?sentenceEntity ) .
+     BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph ) AS ?paragraphEntity ) .
+	 
+	}
+   .
+   
+   SERVICE <x-sparql-anything:> {
+	 BIND ( CONCAT ( "../extractedEntities/", ?_fileId , ".csv" ) AS ?location2 ) .
+   	 fx:properties fx:location ?location2 ; fx:csv.headers "true" .
+	 ?s xyz:paragraphIndex ?paragraph ; 
+	    xyz:sentenceIndex ?sentence ;
+		xyz:sentence ?sentenceText .
+	#
+	OPTIONAL { ?s xyz:URI ?person ; xyz:entType "person" } .
+	OPTIONAL { ?s xyz:URI ?place ; xyz:entType "place" } .
+	OPTIONAL { ?s xyz:entity ?time ; xyz:entType "time" } .
+
+     BIND ( IRI(?_subject) as ?subjectIRI ) .
+	 BIND ( IRI(?person) as ?personIRI ) .
+	 BIND ( IRI(?place) as ?placeIRI ) .
+	 # 
+     BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?sentence) AS ?sentenceEntity ) .
+     BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph ) AS ?paragraphEntity ) .
+
+   }
+}
