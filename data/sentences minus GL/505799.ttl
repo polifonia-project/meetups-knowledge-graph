@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Claude_Nougaro>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Claude_Nougaro> .
+
+<http://dbpedia.org/resource/Dalida>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dalida> .
+
+<http://w3id.org/polifonia/pilot/meetups/505799/5/6>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:84cdc76cabf41bd7c961f6ab12f117d8 ;
+        mtp:hasAPurpose      meetup:musicMaking ;
+        mtp:hasConfidence    "0.9929166" ;
+        mtp:hasEvidenceText  "The same year he recorded his first live album at the Olympia: Une soirée avec Claude Nougaro." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Dalida> , <http://dbpedia.org/resource/Claude_Nougaro> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Olympia_London> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Claude_Nougaro> .
+
+<http://dbpedia.org/resource/Olympia_London>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Olympia_London> .
+
+meetup:84cdc76cabf41bd7c961f6ab12f117d8
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "year" .
+
+meetup:musicMaking  rdf:type  "musicMaking" ;
+        rdf:type  mtp:Purpose .

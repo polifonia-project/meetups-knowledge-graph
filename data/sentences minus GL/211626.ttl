@@ -1,0 +1,46 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/The_Highway>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/The_Highway> .
+
+meetup:1409c86d3d6e16f53a53243f3f1382c1
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "the 1950s" .
+
+<http://w3id.org/polifonia/pilot/meetups/211626/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:1409c86d3d6e16f53a53243f3f1382c1 ;
+        mtp:hasAPurpose      meetup:musicMaking ;
+        mtp:hasConfidence    "0.99413294" ;
+        mtp:hasEvidenceText  "As an adult, he had one release, \"Somewhere to Lay My Head\", on Chicago's Vee Jay Records label in the 1950s, as part of the gospel group The Highway Q.C.'s, which included a young Sam Cooke." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Sam_Cooke> , <http://dbpedia.org/resource/Johnnie_Taylor> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/The_Highway> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnnie_Taylor> .
+
+<http://dbpedia.org/resource/Chicago>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> .
+
+<http://dbpedia.org/resource/Sam_Cooke>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sam_Cooke> .
+
+<http://dbpedia.org/resource/Johnnie_Taylor>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Johnnie_Taylor> .
+
+meetup:musicMaking  rdf:type  "musicMaking" ;
+        rdf:type  mtp:Purpose .

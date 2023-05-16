@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jesus>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jesus> .
+
+meetup:b909fee1cf2862bf0157d00016da9eae
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "6 November 1975" .
+
+<http://dbpedia.org/resource/Watford_Palace_Theatre>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Watford_Palace_Theatre> .
+
+<http://w3id.org/polifonia/pilot/meetups/105767/5/16>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:b909fee1cf2862bf0157d00016da9eae ;
+        mtp:hasAPurpose      meetup:musicMaking ;
+        mtp:hasConfidence    "0.9825164" ;
+        mtp:hasEvidenceText  "On 6 November 1975, Sesto starred in the role of Jesus on the Spanish version/adaptation by Jaime Azpilicueta of the rock opera Jesus Christ Superstar at the Alcalá-Palace Theatre in Madrid (Spain)." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jaime_Hernandez> , <http://dbpedia.org/resource/Jesus> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Madrid> , <http://dbpedia.org/resource/Spain> , <http://dbpedia.org/resource/Watford_Palace_Theatre> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Camilo_Sesto> .
+
+<http://dbpedia.org/resource/Camilo_Sesto>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Camilo_Sesto> .
+
+<http://dbpedia.org/resource/Jaime_Hernandez>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jaime_Hernandez> .
+
+<http://dbpedia.org/resource/Madrid>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Madrid> .
+
+<http://dbpedia.org/resource/Spain>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Spain> .
+
+meetup:musicMaking  rdf:type  "musicMaking" ;
+        rdf:type  mtp:Purpose .

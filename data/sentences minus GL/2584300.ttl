@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/United_Kingdom>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
+
+<http://dbpedia.org/resource/John_E._McLaughlin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_E._McLaughlin> .
+
+<http://dbpedia.org/resource/Danny_Thompson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Danny_Thompson> .
+
+meetup:de805472e9fcadde285b895f87ca79cf
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1964 and 1967" .
+
+meetup:b69686ae4cee81d588f7b071db1145de
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "four years" .
+
+<http://w3id.org/polifonia/pilot/meetups/2584300/1/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:b69686ae4cee81d588f7b071db1145de , meetup:de805472e9fcadde285b895f87ca79cf ;
+        mtp:hasAPurpose      meetup:musicMaking ;
+        mtp:hasConfidence    "0.82431656" ;
+        mtp:hasEvidenceText  "For four years, between 1964 and 1967, he was a member of Alexis Korner's Blues Incorporated, led a trio that included guitarist John McLaughlin, and was a founding member of the British folk-jazz band Pentangle." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/John_McLaughlin_(musician)> , <http://dbpedia.org/resource/John_E._McLaughlin> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Danny_Thompson> .
+
+<http://dbpedia.org/resource/John_McLaughlin_(musician)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_McLaughlin_(musician)> .
+
+meetup:musicMaking  rdf:type  "musicMaking" ;
+        rdf:type  mtp:Purpose .

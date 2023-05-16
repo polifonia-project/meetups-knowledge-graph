@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Charles_Paul_Alexander>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Charles_Paul_Alexander> .
+
+<http://dbpedia.org/resource/Lili_Ivanova>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lili_Ivanova> .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+meetup:publicCelebration
+        rdf:type  "publicCelebration" ;
+        rdf:type  mtp:Purpose .
+
+<http://w3id.org/polifonia/pilot/meetups/3445142/12/2>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:dda648aa8c0acae01bbccbc19708d9a8 ;
+        mtp:hasAPurpose      meetup:publicCelebration ;
+        mtp:hasConfidence    "0.93751556" ;
+        mtp:hasEvidenceText  "According to Alexander Yosifov, ex-director of Balkanton from 1968 to 1986, Ivanova's albums in store for the Soviet Union always reached a circulation of over 1 million." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Charles_Paul_Alexander> , <http://dbpedia.org/resource/Viktor_Yosifov> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lili_Ivanova> .
+
+<http://dbpedia.org/resource/Viktor_Yosifov>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Viktor_Yosifov> .
+
+meetup:dda648aa8c0acae01bbccbc19708d9a8
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1968 to 1986" .

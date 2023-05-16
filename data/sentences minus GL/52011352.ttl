@@ -1,0 +1,82 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/United_Kingdom>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
+
+meetup:39dcaf7a053dc372fbc391d4e6b5d693
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1964" .
+
+<http://dbpedia.org/resource/New_York_City>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
+meetup:1e1cc9bdeb2f29f5480106aec7e9bc48
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "Now" .
+
+meetup:coincidence  rdf:type  "coincidence" ;
+        rdf:type  mtp:Purpose .
+
+<http://w3id.org/polifonia/pilot/meetups/52011352/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:39dcaf7a053dc372fbc391d4e6b5d693 ;
+        mtp:hasAPurpose      meetup:musicMaking ;
+        mtp:hasConfidence    "0.9750097" ;
+        mtp:hasEvidenceText  "He also worked in New York City as a songwriter, using his birth name, Louis Pegues, and wrote for Chubby Checker as well as Mary Wells' 1964 hit \"Ain't It the Truth\"." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Courtney_Love> , <http://dbpedia.org/resource/Mary_Wells> , <http://dbpedia.org/resource/Chubby_Checker> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lou_Courtney> .
+
+<http://w3id.org/polifonia/pilot/meetups/52011352/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:1e1cc9bdeb2f29f5480106aec7e9bc48 , meetup:db18d5695ce6af72ce2650e0cc73ff58 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.990991" ;
+        mtp:hasEvidenceText  "He released a series of singles on Riverside and its subsidiary Pop-Side label in the late 1960s, including two more R&B chart hits, \"You Ain't Ready\" and \"Hey Joyce\"; several tracks later regarded as classics on the British Northern soul scene such as \"Me & You Doing the Boogaloo\" and \"If the Shoe Fits\", together with an album, Skate Now - Shing-A-Ling." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Courtney_Love> , <http://dbpedia.org/resource/James_Joyce> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lou_Courtney> .
+
+<http://dbpedia.org/resource/James_Joyce>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/James_Joyce> .
+
+<http://dbpedia.org/resource/Chubby_Checker>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chubby_Checker> .
+
+meetup:db18d5695ce6af72ce2650e0cc73ff58
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "the late 1960s" .
+
+<http://dbpedia.org/resource/Lou_Courtney>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lou_Courtney> .
+
+<http://dbpedia.org/resource/Mary_Wells>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mary_Wells> .
+
+<http://dbpedia.org/resource/Courtney_Love>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Courtney_Love> .
+
+meetup:musicMaking  rdf:type  "musicMaking" ;
+        rdf:type  mtp:Purpose .

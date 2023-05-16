@@ -1,0 +1,52 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bob_Dylan>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bob_Dylan> .
+
+meetup:publicCelebration
+        rdf:type  "publicCelebration" ;
+        rdf:type  mtp:Purpose .
+
+<http://dbpedia.org/resource/Mary_I_of_England>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mary_I_of_England> .
+
+<http://w3id.org/polifonia/pilot/meetups/20484/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:16db07b376af467b92559ecee309037f ;
+        mtp:hasAPurpose      meetup:publicCelebration ;
+        mtp:hasConfidence    "0.9922472" ;
+        mtp:hasEvidenceText  "In May 1963, he appeared at the first Monterey Folk Festival, (which later became the Monterey Pop Festival) alongside other folk artists such as Bob Dylan, and Peter, Paul and Mary in California." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bob_Dylan> , <http://dbpedia.org/resource/Mary_I_of_England> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/California> , <http://dbpedia.org/resource/Roman_Catholic_Diocese_of_Monterey_in_California> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mance_Lipscomb> .
+
+<http://dbpedia.org/resource/California>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/California> .
+
+<http://dbpedia.org/resource/Roman_Catholic_Diocese_of_Monterey_in_California>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Roman_Catholic_Diocese_of_Monterey_in_California> .
+
+meetup:16db07b376af467b92559ecee309037f
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "May 1963" .
+
+<http://dbpedia.org/resource/Mance_Lipscomb>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mance_Lipscomb> .

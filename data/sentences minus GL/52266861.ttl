@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/San_Francisco>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/San_Francisco> .
+
+<http://dbpedia.org/resource/Marion_Bell>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Marion_Bell> .
+
+<http://dbpedia.org/resource/Cecil_Rhodes>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cecil_Rhodes> .
+
+<http://dbpedia.org/resource/John_Raitt>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Raitt> .
+
+<http://dbpedia.org/resource/Curran_Theatre>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Curran_Theatre> .
+
+meetup:6a508a60aa3bf9510ea6acb021c94b48
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1951" .
+
+<http://w3id.org/polifonia/pilot/meetups/52266861/11/6>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:6a508a60aa3bf9510ea6acb021c94b48 ;
+        mtp:hasAPurpose      meetup:musicMaking ;
+        mtp:hasConfidence    "0.9990773" ;
+        mtp:hasEvidenceText  "In 1951, she was performing in Three Wishes for Jamie with John Raitt and Cecil Kellaway, a production tried out at the Los Angeles Philharmonic Auditorium and then moved to the Curran Theatre in San Francisco." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/John_Raitt> , <http://dbpedia.org/resource/Cecil_Rhodes> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Curran_Theatre> , <http://dbpedia.org/resource/San_Francisco> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marion_Bell> .
+
+meetup:musicMaking  rdf:type  "musicMaking" ;
+        rdf:type  mtp:Purpose .

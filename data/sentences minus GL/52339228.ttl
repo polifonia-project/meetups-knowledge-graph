@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bob_Shad>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bob_Shad> .
+
+<http://w3id.org/polifonia/pilot/meetups/52339228/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:6a508a60aa3bf9510ea6acb021c94b48 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.9946984" ;
+        mtp:hasEvidenceText  "In New York, Henry met Sonny Terry and Brownie McGhee, and in 1951 he accompanied the duo on some recordings for the producer Bob Shad." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bob_Shad> , <http://dbpedia.org/resource/Brownie_McGhee> , <http://dbpedia.org/resource/Sonny_Terry> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Big_Boy_Henry> .
+
+<http://dbpedia.org/resource/Brownie_McGhee>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Brownie_McGhee> .
+
+<http://dbpedia.org/resource/New_York_City>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
+meetup:coincidence  rdf:type  "coincidence" ;
+        rdf:type  mtp:Purpose .
+
+<http://dbpedia.org/resource/Big_Boy_Henry>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Big_Boy_Henry> .
+
+meetup:6a508a60aa3bf9510ea6acb021c94b48
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1951" .
+
+<http://dbpedia.org/resource/Sonny_Terry>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sonny_Terry> .

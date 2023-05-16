@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Lill-Babs>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lill-Babs> .
+
+<http://dbpedia.org/resource/Gothenburg>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gothenburg> .
+
+<http://dbpedia.org/resource/Kar_de_Mumma>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kar_de_Mumma> .
+
+meetup:22c9fcf1cc0ebe5776879167be589d82
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "the 1970s" .
+
+<http://w3id.org/polifonia/pilot/meetups/2377280/6/11>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:22c9fcf1cc0ebe5776879167be589d82 ;
+        mtp:hasAPurpose      meetup:musicMaking ;
+        mtp:hasConfidence    "0.99793917" ;
+        mtp:hasEvidenceText  "Also in the 1970s she played in a Kar de Mumma revue at Folkan, and played Annie Oakley in the musical Annie Get Your Gun at Scandinavium arena in Gothenburg." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Kar_de_Mumma> , <http://dbpedia.org/resource/Lill-Babs> , <http://dbpedia.org/resource/Annie_Oakley> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Gothenburg> , <http://dbpedia.org/resource/Scandinavium> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lill-Babs> .
+
+<http://dbpedia.org/resource/Scandinavium>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Scandinavium> .
+
+<http://dbpedia.org/resource/Annie_Oakley>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Annie_Oakley> .
+
+meetup:musicMaking  rdf:type  "musicMaking" ;
+        rdf:type  mtp:Purpose .

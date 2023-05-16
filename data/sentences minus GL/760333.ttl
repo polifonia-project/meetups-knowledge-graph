@@ -1,0 +1,46 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Felix_Mendelssohn>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Felix_Mendelssohn> .
+
+<http://w3id.org/polifonia/pilot/meetups/760333/4/5>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:deb54ffb41e085fd7f69a75b6359c989 ;
+        mtp:hasAPurpose      meetup:musicMaking ;
+        mtp:hasConfidence    "0.9822786" ;
+        mtp:hasEvidenceText  "In 1973 he was created a baron by King Baudouin of Belgium for his services to music." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Felix_Mendelssohn> , <http://dbpedia.org/resource/Baudouin_of_Belgium> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Belgium> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Grumiaux> .
+
+<http://dbpedia.org/resource/Arthur_Grumiaux>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Arthur_Grumiaux> .
+
+<http://dbpedia.org/resource/Belgium>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Belgium> .
+
+<http://dbpedia.org/resource/Baudouin_of_Belgium>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Baudouin_of_Belgium> .
+
+meetup:deb54ffb41e085fd7f69a75b6359c989
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1973" .
+
+meetup:musicMaking  rdf:type  "musicMaking" ;
+        rdf:type  mtp:Purpose .

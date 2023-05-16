@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Argentina>
+        rdf:type              mtp:Location ;
+        rdf:seeAlso           core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Argentina> .
+
+<http://w3id.org/polifonia/pilot/meetups/290808/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:e4dd5528f7596dcdf871aa55cfccc53c ;
+        mtp:hasAPurpose      meetup:businessMeeting ;
+        mtp:hasConfidence    "0.99997044" ;
+        mtp:hasEvidenceText  "In 1959, at 19, he created his first pop music group with his brother Edelweiss (nicknamed \"Tim\") and his sister Argentina (nicknamed \"Nelly\") which was named \"TNT\"." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Nelly> , <http://dbpedia.org/resource/TNT_(American_TV_network)> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Argentina> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Croatto> .
+
+<http://dbpedia.org/resource/TNT_(American_TV_network)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/TNT_(American_TV_network)> .
+
+<http://dbpedia.org/resource/Nelly>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nelly> .
+
+meetup:businessMeeting
+        rdf:type  "businessMeeting" ;
+        rdf:type  mtp:Purpose .
+
+<http://dbpedia.org/resource/Tony_Croatto>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tony_Croatto> .
+
+meetup:e4dd5528f7596dcdf871aa55cfccc53c
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1959" .
