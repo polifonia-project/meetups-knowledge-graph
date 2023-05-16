@@ -25,14 +25,15 @@ credits:
 - https://github.com/enridaga
 related components:
 - informed-by: 
-	- meetups-data-cleaning
-	- meetups-themes
-	- meetups-entity-recognition
-	- meetups-time-extraction
-- reuses:
     - meetups-ontology
     - meetups-corpus-collection
+- persona:
+    - Ortenz
+	- David
+	- Sophie
+- reuses:
     - sparql-anything-java
+    - sparql-anything-cli
 ---
 
 # MEETUPS Knowledge Graph
