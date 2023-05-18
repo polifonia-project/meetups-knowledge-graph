@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,14 +11,23 @@
 
 <http://dbpedia.org/resource/United_Kingdom>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
+
+<http://dbpedia.org/resource/James_VI_and_I>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/James_VI_and_I> .
 
 meetup:026f710d25a4cc93935e13477493c467
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "12 December 1920 – 1 February 1986" .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 <http://dbpedia.org/resource/Dick_James>
         rdf:type              mtp:Participant ;
@@ -31,14 +41,30 @@ meetup:d77f00766fd3be3f2189c843a6af3fb2
 <http://w3id.org/polifonia/pilot/meetups/571468/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:026f710d25a4cc93935e13477493c467 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9874702" ;
         mtp:hasEvidenceText  "Dick James (born Leon Isaac Vapnick; 12 December 1920 – 1 February 1986) was a British music publisher and singer, and, together with his son Stephen, founded the DJM record label and recording studios, as well as (with Brian Epstein) the Beatles' publisher Northern Songs." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Bron> , <http://dbpedia.org/resource/United_Kingdom> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Dick_James> , <http://dbpedia.org/resource/Brian_Epstein> , <http://dbpedia.org/resource/Saint_Stephen> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Dick_James> .
+
+<http://dbpedia.org/resource/Brian_Epstein>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Brian_Epstein> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
 <http://w3id.org/polifonia/pilot/meetups/571468/8/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:638efc79391ba8d8a4f4b5b2a96bbfc5 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.9944483" ;
         mtp:hasEvidenceText  "In June 1985, the British music magazine NME reported that John was suing James over the rights to his earlier material – a case which John lost." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/LeBron_James> , <http://dbpedia.org/resource/James_VI_and_I> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Dick_James> .
 
 meetup:f106b7f99d2cb30c3db1c3cc0fde9ccb
@@ -48,16 +74,28 @@ meetup:f106b7f99d2cb30c3db1c3cc0fde9ccb
 <http://w3id.org/polifonia/pilot/meetups/571468/5/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:d77f00766fd3be3f2189c843a6af3fb2 , meetup:f106b7f99d2cb30c3db1c3cc0fde9ccb ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.8688229" ;
         mtp:hasEvidenceText  "In 1958 he joined Sidney Bron Music as a song-plugger but decided to leave and open Dick James Music in 1961." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/LeBron_James> , <http://dbpedia.org/resource/Dick_James> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Bron> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Dick_James> .
 
 <http://dbpedia.org/resource/Bron>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bron> ;
-        mtp:hasLatitud        "45.7394"^^xsd:float ;
-        mtp:hasLongitud       "45.7394"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bron> .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/LeBron_James> .
 
 meetup:638efc79391ba8d8a4f4b5b2a96bbfc5
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "June 1985" .
+
+<http://dbpedia.org/resource/Saint_Stephen>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Saint_Stephen> .

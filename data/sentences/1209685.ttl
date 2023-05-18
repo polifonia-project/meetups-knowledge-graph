@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,21 +9,32 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Rod_Woodson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Rod_Woodson> .
+
 <http://dbpedia.org/resource/Estal>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Estal> ;
-        mtp:hasLatitud        "44.9194"^^xsd:float ;
-        mtp:hasLongitud       "44.9194"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Estal> .
 
-meetup:4af366c60778a208683e8c833c03d2b6
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1969 , now" .
+<http://dbpedia.org/resource/Lara_Logan>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lara_Logan> .
 
 <http://w3id.org/polifonia/pilot/meetups/1209685/5/2>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:4af366c60778a208683e8c833c03d2b6 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.57732177" ;
         mtp:hasEvidenceText  "In 1969, now known as Estal Bond she fronted The Love Chain, an all-women quartet that also featured: Laura Logan, Ann Trip and Cookie Woodson." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Lara_Logan> , <http://dbpedia.org/resource/Rod_Woodson> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Estal> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Estelle_Bennett> .
 
@@ -30,3 +42,7 @@ meetup:4af366c60778a208683e8c833c03d2b6
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Estelle_Bennett> .
+
+meetup:4af366c60778a208683e8c833c03d2b6
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1969 , now" .

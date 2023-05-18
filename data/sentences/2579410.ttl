@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,40 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/Erwin_Schulhoff>
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Johannes_Brahms>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Erwin_Schulhoff> .
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Johannes_Brahms> .
 
-<http://w3id.org/polifonia/pilot/meetups/2579410/9/1>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:5bce843dd76db8c939d5323dd3e54ec9 ;
-        mtp:hasEvidenceText  "In 1928, the Flonzaley Quartet played the String Quartet No. 1 at their farewell New York concert between works of Beethoven and Brahms, and it was greeted enthusiastically." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Erwin_Schulhoff> .
+<http://dbpedia.org/resource/New_York_City>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
 
 meetup:5bce843dd76db8c939d5323dd3e54ec9
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1928" .
 
-<http://dbpedia.org/resource/New_York_City>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
+<http://w3id.org/polifonia/pilot/meetups/2579410/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:5bce843dd76db8c939d5323dd3e54ec9 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.9920685" ;
+        mtp:hasEvidenceText  "In 1928, the Flonzaley Quartet played the String Quartet No. 1 at their farewell New York concert between works of Beethoven and Brahms, and it was greeted enthusiastically." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Johannes_Brahms> , <http://dbpedia.org/resource/Ludwig_van_Beethoven> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erwin_Schulhoff> .
+
+<http://dbpedia.org/resource/Erwin_Schulhoff>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Erwin_Schulhoff> .
+
+<http://dbpedia.org/resource/Ludwig_van_Beethoven>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ludwig_van_Beethoven> .

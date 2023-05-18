@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,10 +11,17 @@
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+<http://dbpedia.org/resource/Edward_L._Jackson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Edward_L._Jackson> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
 meetup:093e3fade5c4c3585a5fe088a1e51a24
         rdf:type             mtp:TimeExpression ;
@@ -31,6 +39,9 @@ meetup:66225fb45d8282006401a1c2c6916ab5
 <http://w3id.org/polifonia/pilot/meetups/280945/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:093e3fade5c4c3585a5fe088a1e51a24 , meetup:66225fb45d8282006401a1c2c6916ab5 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99828964" ;
         mtp:hasEvidenceText  "Jack Pepper (born Edward Jackson Culpepper; June 14, 1902 – April 1, 1979) was an American vaudeville dancer, singer, comedian, musician, and later in life a nightclub manager." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jack_Pepper> , <http://dbpedia.org/resource/Edward_L._Jackson> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jack_Pepper> .

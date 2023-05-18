@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,19 +9,33 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/United_Kingdom>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
-
 <http://w3id.org/polifonia/pilot/meetups/797572/6/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:ef8446f35513a8d6aa2308357a268a7e ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9996953" ;
         mtp:hasEvidenceText  "In 2008, British label Blast First Petite released a limited edition Suicide 6-CD box set and monthly tribute series of 10\" Vinyl EP's, to mark the occasion of Alan Vega's 70th birthday Musicians who contributed to the tribute series included The Horrors, Lydia Lunch, Primal Scream, and Miss Kittin." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Lydia_Lunch> , <http://dbpedia.org/resource/Miss_Kittin> , <http://dbpedia.org/resource/Alan_Vega> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Alan_Vega> .
+
+<http://dbpedia.org/resource/United_Kingdom>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Miss_Kittin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Miss_Kittin> .
+
+<http://dbpedia.org/resource/Lydia_Lunch>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lydia_Lunch> .
 
 <http://dbpedia.org/resource/Alan_Vega>
         rdf:type              mtp:Participant ;

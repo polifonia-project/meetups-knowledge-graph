@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,34 +12,56 @@
 <http://w3id.org/polifonia/pilot/meetups/92450/42/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:2942f314a524f1147e4bed5138e4ee98 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.7254487" ;
         mtp:hasEvidenceText  "October 23, 1999 broadcast with Doc Watson, Jack Lawrence, and the Fairfield Four" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/North_Carolina> , <http://dbpedia.org/resource/Fairfield,_Connecticut> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jack_Lawrence> , <http://dbpedia.org/resource/Doc_Watson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Fairfield,_Connecticut> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Doc_Watson> .
+
+<http://dbpedia.org/resource/Electric_guitar>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Electric_guitar> .
 
 <http://dbpedia.org/resource/North_Carolina>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/North_Carolina> ;
-        mtp:hasLatitud        "36.0"^^xsd:float ;
-        mtp:hasLongitud       "36.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/North_Carolina> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
 
 <http://w3id.org/polifonia/pilot/meetups/92450/44/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:4a0e7d59402d668db72e20e6ecd88abe ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.9573946" ;
         mtp:hasEvidenceText  "\"A History of Bluegrass Guitar in Western North Carolina\" by John Martin in North Carolina Folklore Journal, Volume 56, Number 2 (Fall–Winter 2009): Article on Doc Watson and other western NC guitar players" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/North_Carolina> , <http://dbpedia.org/resource/Fairfield,_Connecticut> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Doc_Watson> , <http://dbpedia.org/resource/Electric_guitar> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/North_Carolina> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Doc_Watson> .
+
+<http://dbpedia.org/resource/James_Watson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/James_Watson> .
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
 meetup:4a0e7d59402d668db72e20e6ecd88abe
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "Fall–Winter 2009" .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
 
 meetup:06964dce9addb1c5cb5d6e3d9838f733
         rdf:type             mtp:TimeExpression ;
@@ -46,10 +69,13 @@ meetup:06964dce9addb1c5cb5d6e3d9838f733
 
 <http://dbpedia.org/resource/Fairfield,_Connecticut>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Fairfield,_Connecticut> ;
-        mtp:hasLatitud        "41.1758"^^xsd:float ;
-        mtp:hasLongitud       "41.1758"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Fairfield,_Connecticut> .
+
+<http://dbpedia.org/resource/Bill_Clinton>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bill_Clinton> .
 
 meetup:2942f314a524f1147e4bed5138e4ee98
         rdf:type             mtp:TimeExpression ;
@@ -63,6 +89,14 @@ meetup:2942f314a524f1147e4bed5138e4ee98
 <http://w3id.org/polifonia/pilot/meetups/92450/23/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:06964dce9addb1c5cb5d6e3d9838f733 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.9999554" ;
         mtp:hasEvidenceText  "In 1997, Watson received the National Medal of Arts from U.S. President Bill Clinton." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/North_Carolina> , <http://dbpedia.org/resource/Fairfield,_Connecticut> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bill_Clinton> , <http://dbpedia.org/resource/James_Watson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Doc_Watson> .
+
+<http://dbpedia.org/resource/Jack_Lawrence>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jack_Lawrence> .

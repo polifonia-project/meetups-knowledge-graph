@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,6 +14,9 @@
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bridget_St_John> .
 
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
 meetup:3f3e2a2b0827c095f8923ccf1c0a3efe
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1969 and 1972" .
@@ -20,16 +24,27 @@ meetup:3f3e2a2b0827c095f8923ccf1c0a3efe
 <http://w3id.org/polifonia/pilot/meetups/1213916/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:3f3e2a2b0827c095f8923ccf1c0a3efe , meetup:8812383c366fb906b861761d52a1acdb ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.8680209" ;
         mtp:hasEvidenceText  "Bridget St John (born Bridget Anne Hobbs; 4 October 1946 in Surrey, England) is an English singer-songwriter and guitarist, best known for the three albums she recorded between 1969 and 1972 for John Peel's Dandelion record label." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bridget_of_Sweden> , <http://dbpedia.org/resource/John_Peel> , <http://dbpedia.org/resource/Bridget_St_John> ;
         mtp:hasPlace         <http://dbpedia.org/resource/England> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Bridget_St_John> .
 
 <http://dbpedia.org/resource/England>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
+
+<http://dbpedia.org/resource/Bridget_of_Sweden>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bridget_of_Sweden> .
+
+<http://dbpedia.org/resource/John_Peel>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Peel> .
 
 meetup:8812383c366fb906b861761d52a1acdb
         rdf:type             mtp:TimeExpression ;

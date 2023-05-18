@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,29 +14,70 @@
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sammy_Cahn> .
 
+<http://dbpedia.org/resource/Kathryn_Grayson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kathryn_Grayson> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jamie_Lee_Curtis>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jamie_Lee_Curtis> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://w3id.org/polifonia/pilot/meetups/323499/11/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:0004d0b59e19461ff126e3a08a814c33 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.96688753" ;
         mtp:hasEvidenceText  "In 1970, he married Virginia (Tita) Curtis, a former fashion coordinator for the clothes designer Donald Brooks." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Donald_Brooks> , <http://dbpedia.org/resource/Jamie_Lee_Curtis> , <http://dbpedia.org/resource/Mike_Franks_(tennis)> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Virginia> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Sammy_Cahn> .
 
 <http://w3id.org/polifonia/pilot/meetups/323499/30/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:03e7d2ebec1e820ac34d054df7e68f48 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.99994874" ;
         mtp:hasEvidenceText  "1950 – \"Be My Love\" (music by Nicholas Brodszky) introduced by Mario Lanza and Kathryn Grayson in the film The Toast of New Orleans." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Virginia> , <http://dbpedia.org/resource/New_Orleans> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Mario_Lanza> , <http://dbpedia.org/resource/Nicholas_Brodszky> , <http://dbpedia.org/resource/Kathryn_Grayson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_Orleans> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Sammy_Cahn> .
+
+<http://dbpedia.org/resource/Donald_Brooks>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Donald_Brooks> .
 
 meetup:0004d0b59e19461ff126e3a08a814c33
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1970" .
 
+<http://dbpedia.org/resource/Mike_Franks_(tennis)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mike_Franks_(tennis)> .
+
+<http://dbpedia.org/resource/Mario_Lanza>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mario_Lanza> .
+
 <http://dbpedia.org/resource/Virginia>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Virginia> ;
-        mtp:hasLatitud        "37.0"^^xsd:float ;
-        mtp:hasLongitud       "37.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Virginia> .
+
+<http://dbpedia.org/resource/Nicholas_Brodszky>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nicholas_Brodszky> .
 
 meetup:03e7d2ebec1e820ac34d054df7e68f48
         rdf:type             mtp:TimeExpression ;
@@ -43,7 +85,5 @@ meetup:03e7d2ebec1e820ac34d054df7e68f48
 
 <http://dbpedia.org/resource/New_Orleans>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Orleans> ;
-        mtp:hasLatitud        "29.95"^^xsd:float ;
-        mtp:hasLongitud       "29.95"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Orleans> .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,43 +9,85 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Mary_I_of_England>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mary_I_of_England> .
+
+<http://dbpedia.org/resource/Richard_Wagner>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Richard_Wagner> .
+
 meetup:8d98d9f030773e1cbe51721447fa6e0d
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1888–1971" .
 
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
 <http://dbpedia.org/resource/Royal_Court_Theatre>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Royal_Court_Theatre> ;
-        mtp:hasLatitud        "51.4926"^^xsd:float ;
-        mtp:hasLongitud       "51.4926"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Royal_Court_Theatre> .
 
 meetup:98c7242894844ecd6ec94af67ac8247d
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1968" .
 
+<http://dbpedia.org/resource/Laurence_Olivier>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Laurence_Olivier> .
+
+<http://dbpedia.org/resource/Richard_Francis_Burton>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Richard_Francis_Burton> .
+
+<http://dbpedia.org/resource/Ben_Jonson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ben_Jonson> .
+
 <http://w3id.org/polifonia/pilot/meetups/251481/12/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:98c7242894844ecd6ec94af67ac8247d ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.9835157" ;
         mtp:hasEvidenceText  "In 1968, he was invited by Laurence Olivier to join the National Theatre at the Old Vic, to play divorce solicitor A.B. Raham in Somerset Maugham's Home and Beauty." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Strand,_London> , <http://dbpedia.org/resource/Royal_Court_Theatre> , <http://dbpedia.org/resource/Royal_National_Theatre> , <http://dbpedia.org/resource/Venice> , <http://dbpedia.org/resource/The_Old_Vic> , <http://dbpedia.org/resource/Hayfield,_Derbyshire> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Somerset_Maugham> , <http://dbpedia.org/resource/Divorce> , <http://dbpedia.org/resource/Laurence_Olivier> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Royal_National_Theatre> , <http://dbpedia.org/resource/The_Old_Vic> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Lowe> .
-
-<http://dbpedia.org/resource/Strand,_London>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Strand,_London> ;
-        mtp:hasLatitud        "51.5114"^^xsd:float ;
-        mtp:hasLongitud       "51.5114"^^xsd:float .
 
 meetup:84cdc76cabf41bd7c961f6ab12f117d8
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "year" .
 
+<http://dbpedia.org/resource/Strand,_London>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Strand,_London> .
+
+<http://dbpedia.org/resource/Robert_Adam>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Robert_Adam> .
+
+<http://dbpedia.org/resource/Divorce>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Divorce> .
+
 <http://w3id.org/polifonia/pilot/meetups/251481/14/17>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:fd1d465ae39b7912571949415f283e7b ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9392293" ;
         mtp:hasEvidenceText  "In January 1982, Richard Burton had his private aeroplane fly Lowe to Venice to film a cameo role in the television miniseries Wagner." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Richard_Wagner> , <http://dbpedia.org/resource/Richard_Francis_Burton> , <http://dbpedia.org/resource/Richard_Burton> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Venice> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Lowe> .
 
 meetup:fd1d465ae39b7912571949415f283e7b
@@ -56,12 +99,18 @@ meetup:fd1d465ae39b7912571949415f283e7b
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Arthur_Lowe> .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://dbpedia.org/resource/Venice>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Venice> ;
-        mtp:hasLatitud        "45.4375"^^xsd:float ;
-        mtp:hasLongitud       "45.4375"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Venice> .
+
+<http://dbpedia.org/resource/Richard_Burton>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Richard_Burton> .
 
 meetup:eb5e139d021b5cd317a708f06ce8d9fe
         rdf:type             mtp:TimeExpression ;
@@ -73,42 +122,67 @@ meetup:b3c26006733e2db9e4b78b665f438828
 
 <http://dbpedia.org/resource/Hayfield,_Derbyshire>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hayfield,_Derbyshire> ;
-        mtp:hasLatitud        "53.38"^^xsd:float ;
-        mtp:hasLongitud       "53.38"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hayfield,_Derbyshire> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Edward_Bond>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Edward_Bond> .
+
+<http://dbpedia.org/resource/William_Shakespeare>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/William_Shakespeare> .
 
 <http://dbpedia.org/resource/The_Old_Vic>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/The_Old_Vic> ;
-        mtp:hasLatitud        "51.5022"^^xsd:float ;
-        mtp:hasLongitud       "51.5022"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/The_Old_Vic> .
+
+<http://dbpedia.org/resource/Somerset_Maugham>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Somerset_Maugham> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
 
 <http://dbpedia.org/resource/Royal_National_Theatre>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Royal_National_Theatre> ;
-        mtp:hasLatitud        "51.5071"^^xsd:float ;
-        mtp:hasLongitud       "51.5071"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Royal_National_Theatre> .
+
+<http://w3id.org/polifonia/pilot/meetups/251481/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:b3c26006733e2db9e4b78b665f438828 , meetup:8d98d9f030773e1cbe51721447fa6e0d ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9675556" ;
+        mtp:hasEvidenceText  "Lowe was born in Hayfield, Derbyshire, the only child of Arthur Lowe (1888–1971) and Mary Annie (“Nan”) Lowe, née Ford (1885–1981)." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Arthur_Lowe> , <http://dbpedia.org/resource/Mary_I_of_England> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Hayfield,_Derbyshire> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Lowe> .
 
 <http://w3id.org/polifonia/pilot/meetups/251481/8/8>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:eb5e139d021b5cd317a708f06ce8d9fe ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.9640026" ;
         mtp:hasEvidenceText  "After Joan's divorce came through they married at a registry office in Robert Adam Street, The Strand, London, on 10 January 1948." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Strand,_London> , <http://dbpedia.org/resource/Royal_Court_Theatre> , <http://dbpedia.org/resource/Venice> , <http://dbpedia.org/resource/Hayfield,_Derbyshire> , <http://dbpedia.org/resource/The_Old_Vic> , <http://dbpedia.org/resource/Royal_National_Theatre> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Divorce> , <http://dbpedia.org/resource/Robert_Adam> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Strand,_London> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Lowe> .
 
 <http://w3id.org/polifonia/pilot/meetups/251481/12/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:84cdc76cabf41bd7c961f6ab12f117d8 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.6280688" ;
         mtp:hasEvidenceText  "In the same year he appeared as Ben Jonson alongside Gielgud's Shakespeare in Edward Bond's Bingo at the Royal Court Theatre." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Venice> , <http://dbpedia.org/resource/The_Old_Vic> , <http://dbpedia.org/resource/Hayfield,_Derbyshire> , <http://dbpedia.org/resource/Royal_Court_Theatre> , <http://dbpedia.org/resource/Royal_National_Theatre> , <http://dbpedia.org/resource/Strand,_London> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Lowe> .
-
-<http://w3id.org/polifonia/pilot/meetups/251481/3/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:b3c26006733e2db9e4b78b665f438828 , meetup:8d98d9f030773e1cbe51721447fa6e0d ;
-        mtp:hasEvidenceText  "Lowe was born in Hayfield, Derbyshire, the only child of Arthur Lowe (1888–1971) and Mary Annie (“Nan”) Lowe, née Ford (1885–1981)." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Hayfield,_Derbyshire> , <http://dbpedia.org/resource/Venice> , <http://dbpedia.org/resource/Royal_Court_Theatre> , <http://dbpedia.org/resource/Royal_National_Theatre> , <http://dbpedia.org/resource/Strand,_London> , <http://dbpedia.org/resource/The_Old_Vic> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Ben_Jonson> , <http://dbpedia.org/resource/William_Shakespeare> , <http://dbpedia.org/resource/Edward_Bond> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Royal_Court_Theatre> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Lowe> .

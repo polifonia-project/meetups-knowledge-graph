@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,61 +9,104 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://w3id.org/polifonia/pilot/meetups/933559/12/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:3631480b7c866e74e5dc13f3a513bfbf ;
-        mtp:hasEvidenceText  "Holdridge's first marriage, on November 8, 1964, was to sportsman and playboy Lance Reventlow, the only child of Woolworth heiress Barbara Hutton; his father was a Danish count." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Hawaii> , <http://dbpedia.org/resource/Denmark> , <http://dbpedia.org/resource/United_States> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Cheryl_Holdridge> .
-
-meetup:b541e39f8559de105b6a89510a60a2bc
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "June 20 , 1944 – January 6 , 2009" .
-
-<http://w3id.org/polifonia/pilot/meetups/933559/0/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:b541e39f8559de105b6a89510a60a2bc ;
-        mtp:hasEvidenceText  "Cheryl Lynn Holdridge (née Phelps; June 20, 1944 – January 6, 2009) was an American actress, best known as an original cast member of The Mickey Mouse Club." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Hawaii> , <http://dbpedia.org/resource/Denmark> , <http://dbpedia.org/resource/United_States> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Cheryl_Holdridge> .
-
-meetup:3631480b7c866e74e5dc13f3a513bfbf
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "November 8 , 1964" .
-
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
-
-<http://dbpedia.org/resource/Denmark>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Denmark> ;
-        mtp:hasLatitud        "56.0"^^xsd:float ;
-        mtp:hasLongitud       "56.0"^^xsd:float .
-
-<http://w3id.org/polifonia/pilot/meetups/933559/12/1>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:af3f4d131c0ca1264fe411fdd143758c ;
-        mtp:hasEvidenceText  "During their 1964 honeymoon in Hawaii, Holdridge became the last Mouseketeer to visit with the show's original host, Jimmie Dodd, before Dodd's death from cancer." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Hawaii> , <http://dbpedia.org/resource/Denmark> , <http://dbpedia.org/resource/United_States> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Cheryl_Holdridge> .
-
-meetup:af3f4d131c0ca1264fe411fdd143758c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "their 1964" .
-
 <http://dbpedia.org/resource/Cheryl_Holdridge>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cheryl_Holdridge> .
 
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+meetup:3631480b7c866e74e5dc13f3a513bfbf
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "November 8 , 1964" .
+
+<http://dbpedia.org/resource/William_H._Phelps_Sr.>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/William_H._Phelps_Sr.> .
+
+<http://w3id.org/polifonia/pilot/meetups/933559/12/1>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:af3f4d131c0ca1264fe411fdd143758c ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9905654" ;
+        mtp:hasEvidenceText  "During their 1964 honeymoon in Hawaii, Holdridge became the last Mouseketeer to visit with the show's original host, Jimmie Dodd, before Dodd's death from cancer." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Coxsone_Dodd> , <http://dbpedia.org/resource/Jimmie_Dodd> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Hawaii> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cheryl_Holdridge> .
+
+<http://dbpedia.org/resource/Denmark>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Denmark> .
+
+<http://w3id.org/polifonia/pilot/meetups/933559/12/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:3631480b7c866e74e5dc13f3a513bfbf ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99706477" ;
+        mtp:hasEvidenceText  "Holdridge's first marriage, on November 8, 1964, was to sportsman and playboy Lance Reventlow, the only child of Woolworth heiress Barbara Hutton; his father was a Danish count." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Barbara_Hutton> , <http://dbpedia.org/resource/Lance_Reventlow> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Denmark> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cheryl_Holdridge> .
+
+<http://dbpedia.org/resource/Barbara_Hutton>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Barbara_Hutton> .
+
+<http://dbpedia.org/resource/Jimmie_Dodd>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jimmie_Dodd> .
+
+<http://w3id.org/polifonia/pilot/meetups/933559/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:b541e39f8559de105b6a89510a60a2bc ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.72251457" ;
+        mtp:hasEvidenceText  "Cheryl Lynn Holdridge (née Phelps; June 20, 1944 – January 6, 2009) was an American actress, best known as an original cast member of The Mickey Mouse Club." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/William_H._Phelps_Sr.> , <http://dbpedia.org/resource/Cheryl_Lynn> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cheryl_Holdridge> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Lance_Reventlow>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lance_Reventlow> .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+<http://dbpedia.org/resource/Cheryl_Lynn>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cheryl_Lynn> .
+
+<http://dbpedia.org/resource/Coxsone_Dodd>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Coxsone_Dodd> .
+
+meetup:b541e39f8559de105b6a89510a60a2bc
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "June 20 , 1944 – January 6 , 2009" .
+
+meetup:education  rdf:type  mtp:Purpose ;
+        rdfs:label  "Education" .
+
 <http://dbpedia.org/resource/Hawaii>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hawaii> ;
-        mtp:hasLatitud        "21.5"^^xsd:float ;
-        mtp:hasLongitud       "21.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hawaii> .
+
+meetup:af3f4d131c0ca1264fe411fdd143758c
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "their 1964" .

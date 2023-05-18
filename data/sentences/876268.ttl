@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,18 +13,64 @@ meetup:068eac49a56f23307a6679dbe6200695
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "of 1938" .
 
+<http://dbpedia.org/resource/Maureen_Jones>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Maureen_Jones> .
+
+<http://dbpedia.org/resource/George_Washington>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Washington> .
+
+<http://dbpedia.org/resource/Lyndon_LaRouche>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lyndon_LaRouche> .
+
 <http://w3id.org/polifonia/pilot/meetups/876268/4/2>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:d5c186983b52c4551ee00f72316c6eaa ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.9669593" ;
         mtp:hasEvidenceText  "In 1992, he performed a benefit concert in Washington, D.C. for then-jailed presidential candidate Lyndon LaRouche." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Maureen_Jones> , <http://dbpedia.org/resource/Lyndon_LaRouche> , <http://dbpedia.org/resource/George_Washington> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Washington,_D.C.> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Norbert_Brainin> .
+
+<http://dbpedia.org/resource/Reuben_Brainin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Reuben_Brainin> .
+
+<http://dbpedia.org/resource/Peter_Schidlof>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Peter_Schidlof> .
+
+<http://dbpedia.org/resource/Siegmund_Nissel>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Siegmund_Nissel> .
+
+<http://dbpedia.org/resource/Vienna>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Vienna> .
 
 <http://w3id.org/polifonia/pilot/meetups/876268/0/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:068eac49a56f23307a6679dbe6200695 ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.7214904" ;
         mtp:hasEvidenceText  "Because of Brainin's Jewish origin, he was driven out of Vienna after Hitler's Anschluss of 1938, as were violinist Siegmund Nissel and violist Peter Schidlof." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Washington,_D.C.> , <http://dbpedia.org/resource/Vienna> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Peter_Schidlof> , <http://dbpedia.org/resource/Siegmund_Nissel> , <http://dbpedia.org/resource/Reuben_Brainin> , <http://dbpedia.org/resource/Adolf_Hitler> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Vienna> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Norbert_Brainin> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
 <http://dbpedia.org/resource/Norbert_Brainin>
         rdf:type              mtp:Participant ;
@@ -36,14 +83,13 @@ meetup:d5c186983b52c4551ee00f72316c6eaa
 
 <http://dbpedia.org/resource/Washington,_D.C.>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Washington,_D.C.> ;
-        mtp:hasLatitud        "38.9047"^^xsd:float ;
-        mtp:hasLongitud       "38.9047"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Washington,_D.C.> .
 
-<http://dbpedia.org/resource/Vienna>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Vienna> ;
-        mtp:hasLatitud        "48.2"^^xsd:float ;
-        mtp:hasLongitud       "48.2"^^xsd:float .
+<http://dbpedia.org/resource/Adolf_Hitler>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Adolf_Hitler> .
+
+meetup:education  rdf:type  mtp:Purpose ;
+        rdfs:label  "Education" .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,17 +13,38 @@ meetup:d12a2b30ecd3b79b5b235a1ae9320c64
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the late 1950s" .
 
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
 <http://w3id.org/polifonia/pilot/meetups/50902387/9/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:53601cf218f64489828d6f702bd26441 , meetup:ddc7970f0fc508360100027c17870d7a ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.83423406" ;
         mtp:hasEvidenceText  "Lasting one day, it consisted of talks given by Margaret Bent, David Fallows, Tess Knighton, Warwick Edwards and Christopher Page." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Dublin> , <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/Hampstead> , <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/Warwick> , <http://dbpedia.org/resource/England> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Brad_Knighton> , <http://dbpedia.org/resource/Margaret_Bent> , <http://dbpedia.org/resource/Tess_Daly> , <http://dbpedia.org/resource/David_Fallows> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Warwick> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Michael_Morrow> .
+
+<http://dbpedia.org/resource/Galton_and_Simpson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Galton_and_Simpson> .
+
+<http://dbpedia.org/resource/Margaret_Bent>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Margaret_Bent> .
 
 <http://w3id.org/polifonia/pilot/meetups/50902387/4/0>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:97bc592b27a9ada2d9a4bb418ed0ebed , meetup:5860f95ad2018e7c6b20db3f3aade15e ;
+        mtp:happensAt        meetup:5860f95ad2018e7c6b20db3f3aade15e , meetup:97bc592b27a9ada2d9a4bb418ed0ebed ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.9991192" ;
         mtp:hasEvidenceText  "As there was little or no work for Michael in Dublin, he finally left for England at the end of 1953, and settled down in Hampstead, where John Beckett was now living." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/John_Beckett_(politician)> , <http://dbpedia.org/resource/John_S._Beckett> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Hampstead> , <http://dbpedia.org/resource/England> , <http://dbpedia.org/resource/Dublin> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Michael_Morrow> .
 
 meetup:d9f41dd9508dbb7ce26c54b30d329602
@@ -31,17 +53,18 @@ meetup:d9f41dd9508dbb7ce26c54b30d329602
 
 <http://dbpedia.org/resource/London>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> ;
-        mtp:hasLatitud        "51.5072"^^xsd:float ;
-        mtp:hasLongitud       "51.5072"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .
 
 <http://dbpedia.org/resource/United_Kingdom>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
+
+<http://dbpedia.org/resource/John_Beckett_(politician)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Beckett_(politician)> .
 
 meetup:53601cf218f64489828d6f702bd26441
         rdf:type             mtp:TimeExpression ;
@@ -54,32 +77,49 @@ meetup:53601cf218f64489828d6f702bd26441
 
 <http://dbpedia.org/resource/Dublin>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dublin> ;
-        mtp:hasLatitud        "53.35"^^xsd:float ;
-        mtp:hasLongitud       "53.35"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dublin> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Tess_Daly>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tess_Daly> .
+
+<http://w3id.org/polifonia/pilot/meetups/50902387/2/21>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d9f41dd9508dbb7ce26c54b30d329602 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9682989" ;
+        mtp:hasEvidenceText  "Later in the year he designed scenery for the new Pike Theatre Club, Dublin, founded by Alan Simpson and Carolyn Swift." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Carolyn_S._Shoemaker> , <http://dbpedia.org/resource/Galton_and_Simpson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Dublin> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Morrow> .
 
 meetup:97bc592b27a9ada2d9a4bb418ed0ebed
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "now" .
 
-<http://w3id.org/polifonia/pilot/meetups/50902387/2/21>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d9f41dd9508dbb7ce26c54b30d329602 ;
-        mtp:hasEvidenceText  "Later in the year he designed scenery for the new Pike Theatre Club, Dublin, founded by Alan Simpson and Carolyn Swift." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Warwick> , <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/Dublin> , <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/Hampstead> , <http://dbpedia.org/resource/England> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Morrow> .
-
 <http://dbpedia.org/resource/Hampstead>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hampstead> ;
-        mtp:hasLatitud        "51.5541"^^xsd:float ;
-        mtp:hasLongitud       "51.5541"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hampstead> .
+
+<http://dbpedia.org/resource/Brad_Knighton>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Brad_Knighton> .
 
 meetup:5860f95ad2018e7c6b20db3f3aade15e
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the end of 1953" .
+
+<http://dbpedia.org/resource/David_Fallows>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Fallows> .
 
 meetup:07d773159e0fdd7613eefa71256f0c95
         rdf:type             mtp:TimeExpression ;
@@ -87,17 +127,34 @@ meetup:07d773159e0fdd7613eefa71256f0c95
 
 <http://dbpedia.org/resource/Warwick>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Warwick> ;
-        mtp:hasLatitud        "52.28"^^xsd:float ;
-        mtp:hasLongitud       "52.28"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Warwick> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Carolyn_S._Shoemaker>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Carolyn_S._Shoemaker> .
 
 <http://w3id.org/polifonia/pilot/meetups/50902387/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:07d773159e0fdd7613eefa71256f0c95 , meetup:d12a2b30ecd3b79b5b235a1ae9320c64 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.7456294" ;
         mtp:hasEvidenceText  "Michael Morrow (2 October 1929 – 20 April 1994) was an Irish artist, ornithologist, musician and musicologist who, together with John Beckett, founded the British early music group Musica Reservata in London during the late 1950s." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Warwick> , <http://dbpedia.org/resource/Hampstead> , <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/England> , <http://dbpedia.org/resource/Dublin> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/John_S._Beckett> , <http://dbpedia.org/resource/Michael_Morrow> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/London> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Michael_Morrow> .
+
+<http://dbpedia.org/resource/John_S._Beckett>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_S._Beckett> .
 
 meetup:ddc7970f0fc508360100027c17870d7a
         rdf:type             mtp:TimeExpression ;
@@ -105,7 +162,5 @@ meetup:ddc7970f0fc508360100027c17870d7a
 
 <http://dbpedia.org/resource/England>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .

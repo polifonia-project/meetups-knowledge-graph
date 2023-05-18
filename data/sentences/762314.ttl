@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,42 +11,51 @@
 
 <http://dbpedia.org/resource/Lancashire>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lancashire> ;
-        mtp:hasLatitud        "53.8"^^xsd:float ;
-        mtp:hasLongitud       "53.8"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lancashire> .
+
+<http://dbpedia.org/resource/Bede>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bede> .
 
 <http://dbpedia.org/resource/Flixton_railway_station>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Flixton_railway_station> ;
-        mtp:hasLatitud        "53.4439"^^xsd:float ;
-        mtp:hasLongitud       "53.4439"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Flixton_railway_station> .
 
 <http://dbpedia.org/resource/Urmston>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Urmston> ;
-        mtp:hasLatitud        "53.4487"^^xsd:float ;
-        mtp:hasLongitud       "53.4487"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Urmston> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
 meetup:580faae20eb12bf1b3987afacfbdbeb4
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "Noone" .
 
+<http://dbpedia.org/resource/England>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
+
 <http://w3id.org/polifonia/pilot/meetups/762314/2/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:580faae20eb12bf1b3987afacfbdbeb4 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99761605" ;
         mtp:hasEvidenceText  "Noone was born in Davyhulme, Lancashire, England, the second of five children, the son of an accountant, and attended English Martyrs (Urmston), Wellacre Primary School (Flixton), Stretford Grammar School, and St Bede's College, Manchester." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Urmston> , <http://dbpedia.org/resource/Lancashire> , <http://dbpedia.org/resource/Manchester> , <http://dbpedia.org/resource/Flixton_railway_station> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bede> , <http://dbpedia.org/resource/England> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Lancashire> , <http://dbpedia.org/resource/Urmston> , <http://dbpedia.org/resource/Flixton_railway_station> , <http://dbpedia.org/resource/Manchester> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peter_Noone> .
 
 <http://dbpedia.org/resource/Manchester>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Manchester> ;
-        mtp:hasLatitud        "53.4794"^^xsd:float ;
-        mtp:hasLongitud       "53.4794"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Manchester> .
 
 <http://dbpedia.org/resource/Peter_Noone>
         rdf:type              mtp:Participant ;

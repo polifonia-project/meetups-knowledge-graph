@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,12 +9,18 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Lanny_Poffo>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lanny_Poffo> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 meetup:f1981e4bd8a0d6d8462016d2fc6276b3
         rdf:type             mtp:TimeExpression ;
@@ -21,10 +28,12 @@ meetup:f1981e4bd8a0d6d8462016d2fc6276b3
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
 <http://dbpedia.org/resource/Billy_Name>
         rdf:type              mtp:Participant ;
@@ -38,13 +47,29 @@ meetup:9326a97f40203e75aa3e2225358f847b
 <http://w3id.org/polifonia/pilot/meetups/3798459/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:9326a97f40203e75aa3e2225358f847b ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.7210994" ;
         mtp:hasEvidenceText  "William George Linich (February 22, 1940 – July 18, 2016), known professionally as Billy Name, was an American photographer, filmmaker, and lighting designer." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/United_States> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/George_V> , <http://dbpedia.org/resource/Billy_Name> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Billy_Name> .
 
 <http://w3id.org/polifonia/pilot/meetups/3798459/18/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:f1981e4bd8a0d6d8462016d2fc6276b3 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.98273104" ;
         mtp:hasEvidenceText  "The Genius of Andy Warhol, HarperCollins, New York, N.Y. 2009" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/United_States> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Andy_Warhol> , <http://dbpedia.org/resource/Lanny_Poffo> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Billy_Name> .
+
+<http://dbpedia.org/resource/Andy_Warhol>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Andy_Warhol> .
+
+<http://dbpedia.org/resource/George_V>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_V> .

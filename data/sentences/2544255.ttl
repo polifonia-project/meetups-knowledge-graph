@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,17 +9,34 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://w3id.org/polifonia/pilot/meetups/2544255/3/3>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:6ac98f05e5559019b38fdcd2997094bf ;
-        mtp:hasEvidenceText  "Thereupon director Georgy Tovstonogov invited her to join the troupe of Bolshoi Drama Theater in which she works to this day." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Alisa_Freindlich> .
-
 meetup:6ac98f05e5559019b38fdcd2997094bf
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "this day" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Bolshoi_Theatre>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bolshoi_Theatre> .
 
 <http://dbpedia.org/resource/Alisa_Freindlich>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alisa_Freindlich> .
+
+<http://w3id.org/polifonia/pilot/meetups/2544255/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:6ac98f05e5559019b38fdcd2997094bf ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.61029" ;
+        mtp:hasEvidenceText  "Thereupon director Georgy Tovstonogov invited her to join the troupe of Bolshoi Drama Theater in which she works to this day." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Alisa_Freindlich> , <http://dbpedia.org/resource/Georgy_Tovstonogov> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Bolshoi_Theatre> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alisa_Freindlich> .
+
+<http://dbpedia.org/resource/Georgy_Tovstonogov>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Georgy_Tovstonogov> .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,6 +9,25 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Raymond_Burr>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Raymond_Burr> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Cinematographer>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cinematographer> .
+
+<http://dbpedia.org/resource/Pop_icon>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Pop_icon> .
+
 meetup:98c7242894844ecd6ec94af67ac8247d
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1968" .
@@ -15,47 +35,46 @@ meetup:98c7242894844ecd6ec94af67ac8247d
 <http://w3id.org/polifonia/pilot/meetups/1391973/15/5>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:e4dd5528f7596dcdf871aa55cfccc53c ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9999999" ;
         mtp:hasEvidenceText  "One of these, a television adaptation of Julien Green's novel South (1959, originally Sud), in which Wyngarde featured in a lead role, is thought to be the earliest television play with an overtly homosexual theme." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Peter_Wyngarde> , <http://dbpedia.org/resource/Julien_Green> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Charleroi-South_railway_station> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peter_Wyngarde> .
 
 <http://dbpedia.org/resource/Royal_Alexandra_Theatre>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Royal_Alexandra_Theatre> ;
-        mtp:hasLatitud        "43.6472"^^xsd:float ;
-        mtp:hasLongitud       "43.6472"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Royal_Alexandra_Theatre> .
 
 <http://dbpedia.org/resource/Nairobi>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nairobi> ;
-        mtp:hasLatitud        "-1.28639"^^xsd:float ;
-        mtp:hasLongitud       "-1.28639"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nairobi> .
+
+<http://dbpedia.org/resource/Dorinda_Stevens>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dorinda_Stevens> .
 
 <http://dbpedia.org/resource/Bristol_Old_Vic>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bristol_Old_Vic> ;
-        mtp:hasLatitud        "51.4521"^^xsd:float ;
-        mtp:hasLongitud       "51.4521"^^xsd:float .
-
-<http://dbpedia.org/resource/United_Kingdom>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bristol_Old_Vic> .
 
 <http://dbpedia.org/resource/London>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> ;
-        mtp:hasLatitud        "51.5072"^^xsd:float ;
-        mtp:hasLongitud       "51.5072"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .
 
 meetup:1e4d36177d71bbb3558e43af9577d70e
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1983" .
+
+<http://dbpedia.org/resource/United_Kingdom>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
 
 meetup:9ea4a272573c9a27fd669e2d1e070f64
         rdf:type             mtp:TimeExpression ;
@@ -68,7 +87,11 @@ meetup:d77f00766fd3be3f2189c843a6af3fb2
 <http://w3id.org/polifonia/pilot/meetups/1391973/0/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:9ea4a272573c9a27fd669e2d1e070f64 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99998045" ;
         mtp:hasEvidenceText  "His flamboyant dress sense and stylish performances led to success, and he was considered a style icon in Britain and elsewhere in the early 1970s." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jason_King_(presenter)> , <http://dbpedia.org/resource/Pop_icon> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peter_Wyngarde> .
 
 meetup:5c9189120a220c32d5b395cb23b009b9
@@ -77,10 +100,8 @@ meetup:5c9189120a220c32d5b395cb23b009b9
 
 <http://dbpedia.org/resource/Wales>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Wales> ;
-        mtp:hasLatitud        "51.4833"^^xsd:float ;
-        mtp:hasLongitud       "51.4833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Wales> .
 
 <http://dbpedia.org/resource/Peter_Wyngarde>
         rdf:type              mtp:Participant ;
@@ -90,47 +111,107 @@ meetup:5c9189120a220c32d5b395cb23b009b9
 <http://w3id.org/polifonia/pilot/meetups/1391973/15/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:d77f00766fd3be3f2189c843a6af3fb2 , meetup:e4dd5528f7596dcdf871aa55cfccc53c ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9922294" ;
         mtp:hasEvidenceText  "His theatre appearances included playing opposite Vivien Leigh in 1958, and as Cyrano de Bergerac at the Bristol Old Vic in 1959, which he considered a highlight of his career." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Vivien_Leigh> , <http://dbpedia.org/resource/Peter_Wyngarde> , <http://dbpedia.org/resource/Cyrano_de_Bergerac> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Bristol_Old_Vic> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peter_Wyngarde> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Marc_Sinden>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Marc_Sinden> .
 
 <http://dbpedia.org/resource/Toronto>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Toronto> ;
-        mtp:hasLatitud        "43.7417"^^xsd:float ;
-        mtp:hasLongitud       "43.7417"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Toronto> .
+
+<http://dbpedia.org/resource/Cyrano_de_Bergerac>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cyrano_de_Bergerac> .
 
 <http://w3id.org/polifonia/pilot/meetups/1391973/27/3>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:277a78fc05c8864a170e9a56ceeabc4c , meetup:5c9189120a220c32d5b395cb23b009b9 ;
+        mtp:happensAt        meetup:5c9189120a220c32d5b395cb23b009b9 , meetup:277a78fc05c8864a170e9a56ceeabc4c ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9165406" ;
         mtp:hasEvidenceText  "She married the Canadian cinematographer William Michael Boultbee (1933–2005) in Nairobi in 1957 while filming for African Patrol." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Cinematographer> , <http://dbpedia.org/resource/Dorinda_Stevens> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Nairobi> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peter_Wyngarde> .
+
+<http://dbpedia.org/resource/Vivien_Leigh>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Vivien_Leigh> .
 
 meetup:e4dd5528f7596dcdf871aa55cfccc53c
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1959" .
 
+<http://dbpedia.org/resource/Julien_Green>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Julien_Green> .
+
 <http://dbpedia.org/resource/Charleroi-South_railway_station>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Charleroi-South_railway_station> ;
-        mtp:hasLatitud        "50.4047"^^xsd:float ;
-        mtp:hasLongitud       "50.4047"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Charleroi-South_railway_station> .
 
 <http://w3id.org/polifonia/pilot/meetups/1391973/15/14>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:98c7242894844ecd6ec94af67ac8247d ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.93869317" ;
         mtp:hasEvidenceText  "Wyngarde was also a guest star, playing himself as a Shakespearean actor in Lucy in London (1968), a prime-time TV special starring Lucille Ball." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Charleroi-South_railway_station> , <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/Bristol_Old_Vic> , <http://dbpedia.org/resource/Royal_Alexandra_Theatre> , <http://dbpedia.org/resource/Wales> , <http://dbpedia.org/resource/Toronto> , <http://dbpedia.org/resource/Nairobi> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Lucille_Ball> , <http://dbpedia.org/resource/William_Shakespeare> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/London> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peter_Wyngarde> .
 
 <http://w3id.org/polifonia/pilot/meetups/1391973/20/2>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:1e4d36177d71bbb3558e43af9577d70e ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.8510189" ;
         mtp:hasEvidenceText  "Also on stage he appeared in the thriller Underground with Raymond Burr and Marc Sinden (whose father Donald had worked with Wyngarde on The Siege of Sidney Street) at the Royal Alexandra Theatre, Toronto and at the Prince of Wales Theatre, London in 1983." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Royal_Alexandra_Theatre> , <http://dbpedia.org/resource/Nairobi> , <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/Toronto> , <http://dbpedia.org/resource/Charleroi-South_railway_station> , <http://dbpedia.org/resource/Bristol_Old_Vic> , <http://dbpedia.org/resource/Wales> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Prince_Michael_of_Kent> , <http://dbpedia.org/resource/Raymond_Burr> , <http://dbpedia.org/resource/Marc_Sinden> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Royal_Alexandra_Theatre> , <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/Toronto> , <http://dbpedia.org/resource/Wales> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peter_Wyngarde> .
 
 meetup:277a78fc05c8864a170e9a56ceeabc4c
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1957" .
+
+<http://dbpedia.org/resource/Lucille_Ball>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lucille_Ball> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Prince_Michael_of_Kent>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Prince_Michael_of_Kent> .
+
+<http://dbpedia.org/resource/William_Shakespeare>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/William_Shakespeare> .
+
+<http://dbpedia.org/resource/Jason_King_(presenter)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jason_King_(presenter)> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .

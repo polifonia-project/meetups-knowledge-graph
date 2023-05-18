@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,36 +9,78 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
 <http://w3id.org/polifonia/pilot/meetups/1048172/8/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:14abd87927a1c24b566c5e2045a4cb55 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.5517723" ;
         mtp:hasEvidenceText  "Sylvia joined Ian to sing their signature song, Four Strong Winds, at the 50th anniversary of the Mariposa Folk Festival on 11 July 2010, in Orillia, Ontario." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Calgary> , <http://dbpedia.org/resource/British_Columbia> , <http://dbpedia.org/resource/Orillia> , <http://dbpedia.org/resource/Kelowna> , <http://dbpedia.org/resource/Ontario> , <http://dbpedia.org/resource/Alberta> , <http://dbpedia.org/resource/Dawson_City> , <http://dbpedia.org/resource/Mariposa_Creek> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Ian_Tyson> , <http://dbpedia.org/resource/Sylvia_Anderson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Orillia> , <http://dbpedia.org/resource/Ontario> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Ian_Tyson> .
+
+<http://dbpedia.org/resource/Sylvia_Anderson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sylvia_Anderson> .
 
 <http://w3id.org/polifonia/pilot/meetups/1048172/4/9>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:f80bf05527157a8c2a7bb63b22f49aaa ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.9999212" ;
         mtp:hasEvidenceText  "In 1980, Tyson became associated with Calgary music manager and producer Neil MacGonigill." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Neil_MacGonigill> , <http://dbpedia.org/resource/Mike_Tyson> , <http://dbpedia.org/resource/Neil_deGrasse_Tyson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Calgary> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Ian_Tyson> .
 
 <http://dbpedia.org/resource/Calgary>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Calgary> ;
-        mtp:hasLatitud        "51.0458"^^xsd:float ;
-        mtp:hasLongitud       "51.0458"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Calgary> .
 
 <http://w3id.org/polifonia/pilot/meetups/1048172/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:c9499ddc959f47c6ac2fb2cd78cdcd69 ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.88439363" ;
         mtp:hasEvidenceText  "Ian Dawson Tyson  (born 25 September 1933) is a Canadian singer-songwriter, best known for having written the songs \"Four Strong Winds\" and \"Someday Soon\", performed with partner Sylvia Tyson as the duo Ian & Sylvia." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Mariposa_Creek> , <http://dbpedia.org/resource/Calgary> , <http://dbpedia.org/resource/Kelowna> , <http://dbpedia.org/resource/Alberta> , <http://dbpedia.org/resource/Orillia> , <http://dbpedia.org/resource/Dawson_City> , <http://dbpedia.org/resource/Ontario> , <http://dbpedia.org/resource/British_Columbia> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Ian_Tyson> , <http://dbpedia.org/resource/Sylvia_Tyson> , <http://dbpedia.org/resource/Sylvia_Anderson> , <http://dbpedia.org/resource/Frank_Tyson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Dawson_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Ian_Tyson> .
+
+<http://dbpedia.org/resource/Sylvia_Pankhurst>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sylvia_Pankhurst> .
+
+<http://dbpedia.org/resource/Soulmate>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Soulmate> .
+
+<http://dbpedia.org/resource/Neil_MacGonigill>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Neil_MacGonigill> .
+
+<http://dbpedia.org/resource/Sylvia_Tyson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sylvia_Tyson> .
 
 meetup:f80bf05527157a8c2a7bb63b22f49aaa
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1980" .
+
+<http://dbpedia.org/resource/Frank_Tyson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Frank_Tyson> .
 
 meetup:c9499ddc959f47c6ac2fb2cd78cdcd69
         rdf:type             mtp:TimeExpression ;
@@ -46,8 +89,11 @@ meetup:c9499ddc959f47c6ac2fb2cd78cdcd69
 <http://w3id.org/polifonia/pilot/meetups/1048172/13/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:4a3e00961a08879c34f91ca0070ea2f5 , meetup:ea5a486c712a91e48443cd802642223d ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.9962528" ;
         mtp:hasEvidenceText  "Ian Tyson was inducted into the Mariposa Hall of Fame, with Sylvia, in 2006 He was inducted into the Canadian Country Music Hall of Fame in 1989." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Kelowna> , <http://dbpedia.org/resource/Calgary> , <http://dbpedia.org/resource/British_Columbia> , <http://dbpedia.org/resource/Mariposa_Creek> , <http://dbpedia.org/resource/Ontario> , <http://dbpedia.org/resource/Orillia> , <http://dbpedia.org/resource/Dawson_City> , <http://dbpedia.org/resource/Alberta> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Mike_Tyson> , <http://dbpedia.org/resource/Sylvia_Pankhurst> , <http://dbpedia.org/resource/Ian_Tyson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Mariposa_Creek> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Ian_Tyson> .
 
 meetup:f85b7b377112c272bc87f3e73f10508d
@@ -57,15 +103,17 @@ meetup:f85b7b377112c272bc87f3e73f10508d
 <http://w3id.org/polifonia/pilot/meetups/1048172/11/13>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:f85b7b377112c272bc87f3e73f10508d , meetup:566783dfcfce28ac65b3ce6e35b3005d ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.993725" ;
         mtp:hasEvidenceText  "A few years later, Ian said that Evinia Pulos (Bruce) was his soulmate; since she lived in Kelowna, BC, he was not seeing her often." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Soulmate> , <http://dbpedia.org/resource/Ian_Tyson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/British_Columbia> , <http://dbpedia.org/resource/Kelowna> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Ian_Tyson> .
 
 <http://dbpedia.org/resource/Kelowna>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kelowna> ;
-        mtp:hasLatitud        "49.8881"^^xsd:float ;
-        mtp:hasLongitud       "49.8881"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kelowna> .
 
 meetup:7d2b92b6726c241134dae6cd3fb8c182
         rdf:type             mtp:TimeExpression ;
@@ -74,7 +122,11 @@ meetup:7d2b92b6726c241134dae6cd3fb8c182
 <http://w3id.org/polifonia/pilot/meetups/1048172/11/4>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:798cebccb32617ad94123450fd137104 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.64432585" ;
         mtp:hasEvidenceText  "In 1979, Neil Young recorded Four Strong Winds, and Tyson used the royalties for a down payment on his own cattle and horse ranch; he started playing regularly at Calgary's Ranchman's Club." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Neil_Young> , <http://dbpedia.org/resource/Frank_Tyson> , <http://dbpedia.org/resource/Mike_Tyson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Calgary> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Ian_Tyson> .
 
 <http://dbpedia.org/resource/Ian_Tyson>
@@ -84,10 +136,13 @@ meetup:7d2b92b6726c241134dae6cd3fb8c182
 
 <http://dbpedia.org/resource/Orillia>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Orillia> ;
-        mtp:hasLatitud        "44.6042"^^xsd:float ;
-        mtp:hasLongitud       "44.6042"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Orillia> .
+
+<http://dbpedia.org/resource/Mike_Tyson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mike_Tyson> .
 
 meetup:798cebccb32617ad94123450fd137104
         rdf:type             mtp:TimeExpression ;
@@ -95,20 +150,26 @@ meetup:798cebccb32617ad94123450fd137104
 
 <http://dbpedia.org/resource/Alberta>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alberta> ;
-        mtp:hasLatitud        "55.9917"^^xsd:float ;
-        mtp:hasLongitud       "55.9917"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alberta> .
 
 meetup:ea5a486c712a91e48443cd802642223d
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "2006" .
 
+<http://dbpedia.org/resource/Neil_Young>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Neil_Young> .
+
 <http://w3id.org/polifonia/pilot/meetups/1048172/11/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:7d2b92b6726c241134dae6cd3fb8c182 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99348277" ;
         mtp:hasEvidenceText  "After the marriage to Sylvia ended in 1975, Ian returned to Southern Alberta to farm and train horses but also continued his musical career on a limited basis." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Ontario> , <http://dbpedia.org/resource/Alberta> , <http://dbpedia.org/resource/Dawson_City> , <http://dbpedia.org/resource/Calgary> , <http://dbpedia.org/resource/Mariposa_Creek> , <http://dbpedia.org/resource/Kelowna> , <http://dbpedia.org/resource/Orillia> , <http://dbpedia.org/resource/British_Columbia> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Sylvia_Pankhurst> , <http://dbpedia.org/resource/Ian_Tyson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Alberta> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Ian_Tyson> .
 
 meetup:14abd87927a1c24b566c5e2045a4cb55
@@ -117,10 +178,14 @@ meetup:14abd87927a1c24b566c5e2045a4cb55
 
 <http://dbpedia.org/resource/British_Columbia>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/British_Columbia> ;
-        mtp:hasLatitud        "54.0"^^xsd:float ;
-        mtp:hasLongitud       "54.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/British_Columbia> .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+meetup:education  rdf:type  mtp:Purpose ;
+        rdfs:label  "Education" .
 
 meetup:566783dfcfce28ac65b3ce6e35b3005d
         rdf:type             mtp:TimeExpression ;
@@ -128,24 +193,27 @@ meetup:566783dfcfce28ac65b3ce6e35b3005d
 
 <http://dbpedia.org/resource/Mariposa_Creek>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mariposa_Creek> ;
-        mtp:hasLatitud        "37.5361"^^xsd:float ;
-        mtp:hasLongitud       "37.5361"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mariposa_Creek> .
 
 <http://dbpedia.org/resource/Ontario>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ontario> ;
-        mtp:hasLatitud        "49.25"^^xsd:float ;
-        mtp:hasLongitud       "49.25"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ontario> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Neil_deGrasse_Tyson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Neil_deGrasse_Tyson> .
 
 <http://dbpedia.org/resource/Dawson_City>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dawson_City> ;
-        mtp:hasLatitud        "64.06"^^xsd:float ;
-        mtp:hasLongitud       "64.06"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dawson_City> .
 
 meetup:4a3e00961a08879c34f91ca0070ea2f5
         rdf:type             mtp:TimeExpression ;

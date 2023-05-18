@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,10 +11,21 @@
 
 <http://dbpedia.org/resource/Fleetwood>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Fleetwood> ;
-        mtp:hasLatitud        "53.922"^^xsd:float ;
-        mtp:hasLongitud       "53.922"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Fleetwood> .
+
+<http://dbpedia.org/resource/Jimmy_Page>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jimmy_Page> .
+
+<http://dbpedia.org/resource/Felix_Mendelssohn>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Felix_Mendelssohn> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
 
 <http://dbpedia.org/resource/Julie_Felix>
         rdf:type              mtp:Participant ;
@@ -22,28 +34,35 @@
 
 <http://dbpedia.org/resource/Chorleywood>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chorleywood> ;
-        mtp:hasLatitud        "51.65"^^xsd:float ;
-        mtp:hasLongitud       "51.65"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chorleywood> .
 
 meetup:84ddfb34126fc3a48ee38d7044e87276
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "2018" .
 
-<http://w3id.org/polifonia/pilot/meetups/3026264/7/2>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:84ddfb34126fc3a48ee38d7044e87276 ;
-        mtp:hasEvidenceText  "Felix lived in Chorleywood, Hertfordshire, England, until her death, still recording and performing, appearing on stage on her 80th birthday in 2018." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Hertfordshire> , <http://dbpedia.org/resource/Chorleywood> , <http://dbpedia.org/resource/Fleetwood> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Julie_Felix> .
-
 <http://w3id.org/polifonia/pilot/meetups/3026264/4/4>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:95884b5232ea01d055768613fc84f242 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.71624225" ;
         mtp:hasEvidenceText  "Among those featured on her show were the Kinks, Fleetwood Mac, Leonard Cohen and Led Zeppelin's lead guitarist, Jimmy Page, who played the \"White Summer\" and \"Black Mountain Side\" guitar solo pieces." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Hertfordshire> , <http://dbpedia.org/resource/Chorleywood> , <http://dbpedia.org/resource/Fleetwood> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jimmy_Page> , <http://dbpedia.org/resource/Leonard_Cohen> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Fleetwood> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Julie_Felix> .
+
+<http://w3id.org/polifonia/pilot/meetups/3026264/7/2>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:84ddfb34126fc3a48ee38d7044e87276 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99597675" ;
+        mtp:hasEvidenceText  "Felix lived in Chorleywood, Hertfordshire, England, until her death, still recording and performing, appearing on stage on her 80th birthday in 2018." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/England> , <http://dbpedia.org/resource/Felix_Mendelssohn> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Chorleywood> , <http://dbpedia.org/resource/Hertfordshire> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Julie_Felix> .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
 
 meetup:95884b5232ea01d055768613fc84f242
         rdf:type             mtp:TimeExpression ;
@@ -51,7 +70,15 @@ meetup:95884b5232ea01d055768613fc84f242
 
 <http://dbpedia.org/resource/Hertfordshire>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hertfordshire> ;
-        mtp:hasLatitud        "51.8167"^^xsd:float ;
-        mtp:hasLongitud       "51.8167"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hertfordshire> .
+
+<http://dbpedia.org/resource/England>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
+
+<http://dbpedia.org/resource/Leonard_Cohen>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Leonard_Cohen> .

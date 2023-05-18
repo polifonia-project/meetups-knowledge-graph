@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,34 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:74181d1b5075e1a087346a2f426966a9
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "August 19 , 1918 – May 28 , 1996" .
+<http://dbpedia.org/resource/George_Gershwin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Gershwin> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 <http://w3id.org/polifonia/pilot/meetups/2423427/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:74181d1b5075e1a087346a2f426966a9 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99999917" ;
         mtp:hasEvidenceText  "James George Hunter (August 19, 1918 – May 28, 1996), known professionally as Jimmy Rowles (sometimes spelled Jimmie Rowles), was an American jazz pianist, vocalist, and composer." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/George_Gershwin> , <http://dbpedia.org/resource/Jimmy_Rowles> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Rowles> .
-
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
 
 <http://dbpedia.org/resource/Jimmy_Rowles>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jimmy_Rowles> .
+
+meetup:74181d1b5075e1a087346a2f426966a9
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "August 19 , 1918 – May 28 , 1996" .

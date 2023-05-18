@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,50 +9,83 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://w3id.org/polifonia/pilot/meetups/2706137/9/1>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:0004d0b59e19461ff126e3a08a814c33 ;
-        mtp:hasEvidenceText  "He was her talent scout and the organizer of the first song contest she won, but their union caused a scandal in Italian society, because he was still married to his first wife, Livia Protti, and Italy had no divorce law until 1970." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Rita_Pavone> .
+<http://dbpedia.org/resource/Teddy_Reno>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Teddy_Reno> .
+
+<http://dbpedia.org/resource/Aldo_Protti>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Aldo_Protti> .
+
+<http://dbpedia.org/resource/Cher>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cher> .
+
+<http://dbpedia.org/resource/Frank_Sinatra>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Frank_Sinatra> .
 
 <http://dbpedia.org/resource/Italy>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Italy> ;
-        mtp:hasLatitud        "41.9"^^xsd:float ;
-        mtp:hasLongitud       "41.9"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Italy> .
+
+<http://w3id.org/polifonia/pilot/meetups/2706137/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:0004d0b59e19461ff126e3a08a814c33 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99899703" ;
+        mtp:hasEvidenceText  "He was her talent scout and the organizer of the first song contest she won, but their union caused a scandal in Italian society, because he was still married to his first wife, Livia Protti, and Italy had no divorce law until 1970." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Livia> , <http://dbpedia.org/resource/Aldo_Protti> , <http://dbpedia.org/resource/Teddy_Reno> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Italy> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rita_Pavone> .
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
-
-<http://dbpedia.org/resource/Atlantic_City,_New_Jersey>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Atlantic_City,_New_Jersey> ;
-        mtp:hasLatitud        "39.3625"^^xsd:float ;
-        mtp:hasLongitud       "39.3625"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 <http://dbpedia.org/resource/Bolshoi_Theatre>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bolshoi_Theatre> ;
-        mtp:hasLatitud        "55.7603"^^xsd:float ;
-        mtp:hasLongitud       "55.7603"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bolshoi_Theatre> .
+
+<http://dbpedia.org/resource/Atlantic_City,_New_Jersey>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Atlantic_City,_New_Jersey> .
 
 <http://w3id.org/polifonia/pilot/meetups/2706137/11/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:d5c186983b52c4551ee00f72316c6eaa ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.98807573" ;
         mtp:hasEvidenceText  "In 1992, Pavone returned to the United States, where she sang during a multiple-artist concert that included Whitney Houston, Frank Sinatra, the Bolshoi Ballet, and Cher at the Sands hotel in Atlantic City." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Italy> , <http://dbpedia.org/resource/Atlantic_City,_New_Jersey> , <http://dbpedia.org/resource/Bolshoi_Theatre> , <http://dbpedia.org/resource/United_States> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Cher> , <http://dbpedia.org/resource/Whitney_Houston> , <http://dbpedia.org/resource/Frank_Sinatra> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Atlantic_City,_New_Jersey> , <http://dbpedia.org/resource/Bolshoi_Theatre> , <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Rita_Pavone> .
+
+<http://dbpedia.org/resource/Livia>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Livia> .
 
 meetup:0004d0b59e19461ff126e3a08a814c33
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1970" .
+
+<http://dbpedia.org/resource/Whitney_Houston>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Whitney_Houston> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
 meetup:d5c186983b52c4551ee00f72316c6eaa
         rdf:type             mtp:TimeExpression ;

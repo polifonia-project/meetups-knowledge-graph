@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,39 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:d4061c580cac41ce50ae96a44bba79d5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the early 1990s" .
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1310858/18/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d4061c580cac41ce50ae96a44bba79d5 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.40934664" ;
+        mtp:hasEvidenceText  "The City of Los Angeles, in the early 1990s, declared the nearby intersection of Jefferson Boulevard and Van Buren Place - across from the Korean National Association and Korean Presbyterian church - to be named \"Dosan Ahn Chang Ho Square\" in his honor." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Martin_Van_Buren> , <http://dbpedia.org/resource/Ahn_Changho> , <http://dbpedia.org/resource/Thomas_Jefferson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Los_Angeles> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ahn_Changho> .
 
 <http://dbpedia.org/resource/Los_Angeles>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Los_Angeles> ;
-        mtp:hasLatitud        "34.05"^^xsd:float ;
-        mtp:hasLongitud       "34.05"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Los_Angeles> .
+
+<http://dbpedia.org/resource/Martin_Van_Buren>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Martin_Van_Buren> .
+
+<http://dbpedia.org/resource/Thomas_Jefferson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Thomas_Jefferson> .
 
 <http://dbpedia.org/resource/Ahn_Changho>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ahn_Changho> .
 
-<http://w3id.org/polifonia/pilot/meetups/1310858/18/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d4061c580cac41ce50ae96a44bba79d5 ;
-        mtp:hasEvidenceText  "The City of Los Angeles, in the early 1990s, declared the nearby intersection of Jefferson Boulevard and Van Buren Place - across from the Korean National Association and Korean Presbyterian church - to be named \"Dosan Ahn Chang Ho Square\" in his honor." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Los_Angeles> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Ahn_Changho> .
+meetup:d4061c580cac41ce50ae96a44bba79d5
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "the early 1990s" .

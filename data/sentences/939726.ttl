@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,61 +9,121 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://w3id.org/polifonia/pilot/meetups/939726/3/10>
+<http://dbpedia.org/resource/John_Lawton_(musician)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Lawton_(musician)> .
+
+<http://dbpedia.org/resource/John_Wetton>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Wetton> .
+
+<http://w3id.org/polifonia/pilot/meetups/939726/4/5>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:7d2b92b6726c241134dae6cd3fb8c182 ;
-        mtp:hasEvidenceText  "After the departure of bassist Gary Thain (who died in 1975) and vocalist David Byron, other musicians were brought into the Heep family: John Wetton (Family, King Crimson, Roxy Music, later of U.K. and Asia), Trevor Bolder (from Spiders From Mars, later of Wishbone Ash) and John Lawton (Lucifer's Friend), among others." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/Daydream_Island> , <http://dbpedia.org/resource/Bron> ;
+        mtp:happensAt        meetup:1f36c15d6a3d18d52e8d493bc8187cb9 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.943456" ;
+        mtp:hasEvidenceText  "Although the group achieved some success, Hensley left after Bron informed him of Heep vocalist David Byron's death in 1985." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/David_Byron> , <http://dbpedia.org/resource/Clay_Hensley> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Bron> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Ken_Hensley> .
 
-<http://dbpedia.org/resource/Daydream_Island>
+<http://dbpedia.org/resource/Asia>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Daydream_Island> ;
-        mtp:hasLatitud        "-20.2567"^^xsd:float ;
-        mtp:hasLongitud       "-20.2567"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Asia> .
+
+<http://dbpedia.org/resource/Bron>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bron> .
 
 <http://dbpedia.org/resource/United_Kingdom>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
 
 <http://dbpedia.org/resource/Ken_Hensley>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ken_Hensley> .
 
-<http://w3id.org/polifonia/pilot/meetups/939726/27/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:251763b6a21c03f94056582ae12a8c2a ;
-        mtp:hasEvidenceText  "Bruce Cameron (Midnight Daydream, 1999) – keyboards" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/Daydream_Island> , <http://dbpedia.org/resource/Bron> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Ken_Hensley> .
+<http://dbpedia.org/resource/Trevor_Bolder>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Trevor_Bolder> .
 
-<http://w3id.org/polifonia/pilot/meetups/939726/4/5>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:1f36c15d6a3d18d52e8d493bc8187cb9 ;
-        mtp:hasEvidenceText  "Although the group achieved some success, Hensley left after Bron informed him of Heep vocalist David Byron's death in 1985." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/Daydream_Island> , <http://dbpedia.org/resource/Bron> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Ken_Hensley> .
-
-meetup:251763b6a21c03f94056582ae12a8c2a
+meetup:7d2b92b6726c241134dae6cd3fb8c182
         rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "Midnight Daydream , 1999" .
+        mtp:hasEvidenceText  "1975" .
+
+<http://dbpedia.org/resource/Daydream_Island>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Daydream_Island> .
+
+<http://dbpedia.org/resource/Bruce_Cameron_(guitarist)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bruce_Cameron_(guitarist)> .
+
+<http://dbpedia.org/resource/Gary_Thain>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gary_Thain> .
+
+<http://w3id.org/polifonia/pilot/meetups/939726/3/10>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:7d2b92b6726c241134dae6cd3fb8c182 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.7764124" ;
+        mtp:hasEvidenceText  "After the departure of bassist Gary Thain (who died in 1975) and vocalist David Byron, other musicians were brought into the Heep family: John Wetton (Family, King Crimson, Roxy Music, later of U.K. and Asia), Trevor Bolder (from Spiders From Mars, later of Wishbone Ash) and John Lawton (Lucifer's Friend), among others." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/David_Byron> , <http://dbpedia.org/resource/Trevor_Bolder> , <http://dbpedia.org/resource/John_Lawton_(musician)> , <http://dbpedia.org/resource/John_Wetton> , <http://dbpedia.org/resource/Gary_Thain> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Mars> , <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/Asia> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ken_Hensley> .
 
 meetup:1f36c15d6a3d18d52e8d493bc8187cb9
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1985" .
 
-<http://dbpedia.org/resource/Bron>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bron> ;
-        mtp:hasLatitud        "45.7394"^^xsd:float ;
-        mtp:hasLongitud       "45.7394"^^xsd:float .
+<http://dbpedia.org/resource/Clay_Hensley>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Clay_Hensley> .
 
-meetup:7d2b92b6726c241134dae6cd3fb8c182
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mars>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mars> .
+
+<http://dbpedia.org/resource/Keyboard_instrument>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Keyboard_instrument> .
+
+meetup:251763b6a21c03f94056582ae12a8c2a
         rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1975" .
+        mtp:hasEvidenceText  "Midnight Daydream , 1999" .
+
+<http://dbpedia.org/resource/David_Byron>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Byron> .
+
+<http://w3id.org/polifonia/pilot/meetups/939726/27/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:251763b6a21c03f94056582ae12a8c2a ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9996209" ;
+        mtp:hasEvidenceText  "Bruce Cameron (Midnight Daydream, 1999) – keyboards" ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Keyboard_instrument> , <http://dbpedia.org/resource/Bruce_Cameron_(guitarist)> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Daydream_Island> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ken_Hensley> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .

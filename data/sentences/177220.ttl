@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,16 +9,40 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/James_Chambers_(writer)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/James_Chambers_(writer)> .
+
 meetup:164485a3fb4ba637bfd07453b0d95db5
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "30 July 1944" .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Johnny_Nash>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Johnny_Nash> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
 <http://dbpedia.org/resource/Six_Flags_America>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Six_Flags_America> ;
-        mtp:hasLatitud        "38.9062"^^xsd:float ;
-        mtp:hasLongitud       "38.9062"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Six_Flags_America> .
+
+<http://dbpedia.org/resource/Cat_Stevens>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cat_Stevens> .
+
+<http://dbpedia.org/resource/James_the_Great>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/James_the_Great> .
 
 <http://dbpedia.org/resource/Jimmy_Cliff>
         rdf:type              mtp:Participant ;
@@ -31,14 +56,21 @@ meetup:1e1cc9bdeb2f29f5480106aec7e9bc48
 <http://w3id.org/polifonia/pilot/meetups/177220/1/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:0edc9b073397681dc9f2c479686ea0d9 , meetup:1e1cc9bdeb2f29f5480106aec7e9bc48 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.99727255" ;
         mtp:hasEvidenceText  "Cliff is best known among mainstream audiences for songs such as \"Wonderful World, Beautiful People\", \"Many Rivers to Cross\", \"You Can Get It If You Really Want\", \"The Harder They Come\", \"Reggae Night\", and \"Hakuna Matata\", and his covers of Cat Stevens's \"Wild World\" and Johnny Nash's \"I Can See Clearly Now\" from the film Cool Runnings." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Jamaica> , <http://dbpedia.org/resource/Six_Flags_America> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Cat_Stevens> , <http://dbpedia.org/resource/Johnny_Nash> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Six_Flags_America> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Cliff> .
 
 <http://w3id.org/polifonia/pilot/meetups/177220/3/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:164485a3fb4ba637bfd07453b0d95db5 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9997979" ;
         mtp:hasEvidenceText  "Jimmy Cliff was born James Chambers on 30 July 1944 in Saint James, Colony of Jamaica." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jimmy_Cliff> , <http://dbpedia.org/resource/James_Chambers_(writer)> , <http://dbpedia.org/resource/James_the_Great> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Jamaica> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Cliff> .
 
 meetup:0edc9b073397681dc9f2c479686ea0d9
@@ -47,7 +79,5 @@ meetup:0edc9b073397681dc9f2c479686ea0d9
 
 <http://dbpedia.org/resource/Jamaica>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jamaica> ;
-        mtp:hasLatitud        "17.9714"^^xsd:float ;
-        mtp:hasLongitud       "17.9714"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jamaica> .

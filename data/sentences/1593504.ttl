@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,19 +13,42 @@ meetup:bb5a6187d303f86eb96b2e497e5737af
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "July 17 , 1947" .
 
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Ellen_Terry>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ellen_Terry> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://w3id.org/polifonia/pilot/meetups/1593504/8/0>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:88a919f04cfe37283cf0503178f0c648 , meetup:499ac65a3342731d8a9cefd616b95dfb ;
+        mtp:happensAt        meetup:499ac65a3342731d8a9cefd616b95dfb , meetup:88a919f04cfe37283cf0503178f0c648 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.9999813" ;
         mtp:hasEvidenceText  "He was a founding member of the band Sweetshop in January 1968 along with Steve Priest, Brian Connolly, and Frank Torpey (born 30 April 1947, Kilburn, North West London), who was later replaced by Mick Stewart, who was himself succeeded by Andy Scott." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Kingsbury_tube_station> , <http://dbpedia.org/resource/Kilburn_tube_station> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Pat_Torpey> , <http://dbpedia.org/resource/Brian_Connolly> , <http://dbpedia.org/resource/Steve_Priest> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Kilburn_tube_station> , <http://dbpedia.org/resource/NW_postcode_area> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Mick_Tucker> .
+
+<http://dbpedia.org/resource/NW_postcode_area>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/NW_postcode_area> .
 
 <http://dbpedia.org/resource/Kingsbury_tube_station>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kingsbury_tube_station> ;
-        mtp:hasLatitud        "51.5847"^^xsd:float ;
-        mtp:hasLongitud       "51.5847"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kingsbury_tube_station> .
+
+<http://dbpedia.org/resource/Brian_Connolly>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Brian_Connolly> .
 
 meetup:499ac65a3342731d8a9cefd616b95dfb
         rdf:type             mtp:TimeExpression ;
@@ -33,22 +57,33 @@ meetup:499ac65a3342731d8a9cefd616b95dfb
 <http://w3id.org/polifonia/pilot/meetups/1593504/2/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:bb5a6187d303f86eb96b2e497e5737af ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "1.0" ;
         mtp:hasEvidenceText  "Mick Tucker was born on July 17, 1947, in Kingsbury, North West London, the son of Hubert and Ellen Tucker." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Kingsbury_tube_station> , <http://dbpedia.org/resource/Kilburn_tube_station> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Ellen_Terry> , <http://dbpedia.org/resource/Mick_Tucker> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/NW_postcode_area> , <http://dbpedia.org/resource/Kingsbury_tube_station> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Mick_Tucker> .
 
 <http://dbpedia.org/resource/Kilburn_tube_station>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kilburn_tube_station> ;
-        mtp:hasLatitud        "51.5472"^^xsd:float ;
-        mtp:hasLongitud       "51.5472"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kilburn_tube_station> .
 
 <http://dbpedia.org/resource/Mick_Tucker>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mick_Tucker> .
 
+<http://dbpedia.org/resource/Pat_Torpey>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Pat_Torpey> .
+
 meetup:88a919f04cfe37283cf0503178f0c648
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "30 April 1947" .
+
+<http://dbpedia.org/resource/Steve_Priest>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Steve_Priest> .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,20 +9,32 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/William_Inge>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/William_Inge> .
+
 meetup:a00e5eb0973d24649a4a920fc53d9564
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "2007" .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
 
 meetup:c5f73d5dbd8fd1f453c262338916e37a
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "April 30 , 1924" .
 
+<http://dbpedia.org/resource/Sheldon_Mayer>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sheldon_Mayer> .
+
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 meetup:f1981e4bd8a0d6d8462016d2fc6276b3
         rdf:type             mtp:TimeExpression ;
@@ -30,37 +43,51 @@ meetup:f1981e4bd8a0d6d8462016d2fc6276b3
 <http://w3id.org/polifonia/pilot/meetups/852908/38/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:f1981e4bd8a0d6d8462016d2fc6276b3 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.93682265" ;
         mtp:hasEvidenceText  "Sheldon Harnick and Jerry Bock were presented with the 18th Annual York Theatre Company's prestigious Oscar Hammerstein Award for Lifetime Achievement in Theatre in 2009." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/York_Theatre> , <http://dbpedia.org/resource/Kansas> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jerry_Bock> , <http://dbpedia.org/resource/Sheldon_Harnick> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/York_Theatre> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Sheldon_Harnick> .
+
+<http://dbpedia.org/resource/Jerry_Bock>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jerry_Bock> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
 <http://dbpedia.org/resource/Kansas>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kansas> ;
-        mtp:hasLatitud        "38.45"^^xsd:float ;
-        mtp:hasLongitud       "38.45"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kansas> .
 
 <http://w3id.org/polifonia/pilot/meetups/852908/37/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:a00e5eb0973d24649a4a920fc53d9564 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.94032276" ;
         mtp:hasEvidenceText  "Sheldon Harnick was honored at the Twenty-Sixth Annual William Inge Theatre Festival located in Independence, Kansas, in 2007." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/York_Theatre> , <http://dbpedia.org/resource/Kansas> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Sheldon_Harnick> , <http://dbpedia.org/resource/William_Inge> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Kansas> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Sheldon_Harnick> .
 
 <http://w3id.org/polifonia/pilot/meetups/852908/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:c5f73d5dbd8fd1f453c262338916e37a ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.8334842" ;
         mtp:hasEvidenceText  "Sheldon Mayer Harnick (born April 30, 1924) is an American lyricist and songwriter best known for his collaborations with composer Jerry Bock on musicals such as Fiorello!" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/York_Theatre> , <http://dbpedia.org/resource/Kansas> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Sheldon_Mayer> , <http://dbpedia.org/resource/Jerry_Bock> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Sheldon_Harnick> .
 
 <http://dbpedia.org/resource/York_Theatre>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/York_Theatre> ;
-        mtp:hasLatitud        "40.7589"^^xsd:float ;
-        mtp:hasLongitud       "40.7589"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/York_Theatre> .
 
 <http://dbpedia.org/resource/Sheldon_Harnick>
         rdf:type              mtp:Participant ;

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,17 +9,34 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+meetup:c78ce6aae313de9376d8118e4ee13f05
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "November 2 , 1945" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1129635/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:c78ce6aae313de9376d8118e4ee13f05 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.5808292" ;
+        mtp:hasEvidenceText  "John David \"J.D.\" Souther (born November 2, 1945) is an American singer, songwriter, and actor." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/J._D._Souther> , <http://dbpedia.org/resource/John_David_Booty> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/J._D._Souther> .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
 <http://dbpedia.org/resource/J._D._Souther>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/J._D._Souther> .
 
-<http://w3id.org/polifonia/pilot/meetups/1129635/0/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:c78ce6aae313de9376d8118e4ee13f05 ;
-        mtp:hasEvidenceText  "John David \"J.D.\" Souther (born November 2, 1945) is an American singer, songwriter, and actor." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/J._D._Souther> .
-
-meetup:c78ce6aae313de9376d8118e4ee13f05
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "November 2 , 1945" .
+<http://dbpedia.org/resource/John_David_Booty>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_David_Booty> .

@@ -1,0 +1,59 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+PREFIX mtp:  <http://w3id.org/polifonia/ontology/meetups-ontology#>
+PREFIX meetup: <http://w3id.org/polifonia/pilot/meetups/>
+PREFIX core: <https://w3id.org/polifonia/ontology/core/> 
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX geo: <https://www.w3.org/2003/01/geo/wgs84_pos>
+
+CONSTRUCT {
+	?personIRI a mtp:Participant ;
+		rdfs:seeAlso core:Person ;
+		rdfs:label ?label ;
+		mtp:thumbnail ?personImage ;
+		mtp:hasdob ?birthdate ;
+		mtp:hasdod ?deathdate ;
+		mtp:hasDBPediaEntity ?personIRI ;
+		mtp:hasWikidataEntity ?wikidataid .
+	?placeIRI a mtp:Location ;
+		rdfs:seeAlso core:Place ;
+		geo:lat ?latitude ;
+		geo:long ?longitude ;
+		mtp:hasDBPediaEntity ?placeIRI ;
+		rdfs:label ?label ;
+		mtp:thumbnail ?placeImage .
+} WHERE {
+	# 
+    SERVICE <x-sparql-anything:> {
+ 	 BIND ( CONCAT ( "../geoLocationInformation/", ?_fileId , ".csv" ) AS ?location1 ) .
+    	 fx:properties fx:location ?location1 ; fx:csv.headers "true" .
+ 		?s1 xyz:s ?place ;
+ 		#	xyz:label ?label .
+ 		OPTIONAL { ?s1 xyz:lat ?lt ; xyz:long ?ln } .
+		OPTIONAL { ?s1 xyz:label ?label ; xyz:image ?placeImage } .
+ 		#OPTIONAL { ?s1 xyz:lat ?lt ; xyz:long ?ln } . 
+ 		#OPTIONAL { ?s1 xyz:label ?label } .
+ 		#OPTIONAL { ?s1 xyz:image ?placeImage } .
+ 		BIND ( xsd:float ( ?lt ) AS ?latitude ) .
+ 		BIND ( xsd:float ( ?ln ) AS ?longitude ) .
+		BIND ( IRI(?place) as ?placeIRI ) .
+   }
+   .
+      SERVICE <x-sparql-anything:> {
+   	 BIND ( CONCAT ( "../peopleComplementaryInformation/", ?_fileId , ".csv" ) AS ?location2 ) .
+      	 fx:properties fx:location ?location2 ; fx:csv.headers "true" .
+   		?s2 xyz:s ?person .
+		
+		OPTIONAL { ?s2 xyz:label ?label } .
+		OPTIONAL { ?s2 xyz:image ?personImage } .
+		OPTIONAL { ?s2 xyz:birthdate ?birthdate } .
+		OPTIONAL { ?s2 xyz:deathdate ?deathdate } .
+		OPTIONAL { ?s2 xyz:wikidataId ?wikidataid } .
+		OPTIONAL { ?s2 xyz:abstract ?abstract } .
+
+   	BIND ( IRI(?person) as ?personIRI ) .
+     }
+  }

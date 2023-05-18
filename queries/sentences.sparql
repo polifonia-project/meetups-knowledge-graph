@@ -7,6 +7,7 @@ PREFIX mtp:  <http://w3id.org/polifonia/ontology/meetups-ontology#>
 PREFIX meetup: <http://w3id.org/polifonia/pilot/meetups/>
 PREFIX core: <https://w3id.org/polifonia/ontology/core/> 
 PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX geo: <https://www.w3.org/2003/01/geo/wgs84_pos>
 
 CONSTRUCT {
 	?personIRI a mtp:Participant ;
@@ -16,13 +17,15 @@ CONSTRUCT {
 		rdfs:seeAlso core:Person ;
 		mtp:hasDBPediaEntity ?subjectIRI ;
 		mtp:hasRole ?participantRole .
-	?purposeType a mtp:Purpose ;
-		rdf:type ?purposeTypeName .
+	?purposeIRI a mtp:Purpose ;
+		rdfs:label ?themeType .
 	?placeIRI a mtp:Location ;
-		rdf:seeAlso core:Place ;
-		mtp:hasLatitud ?latitud ;
-		mtp:hasLongitud ?longitud ;
-		mtp:hasDBPediaEntity ?placeIRI .
+		rdfs:seeAlso core:Place ;
+		geo:lat ?latitude ;
+		geo:long ?longitude ;
+		mtp:hasDBPediaEntity ?placeIRI ;
+		rdfs:label ?label ;
+		mtp:thumbnail ?placeImage .
 	?beginning_IRI a time:GeneralDateTimeDescription ;
 		time:numericDuration ?fValue ;
 		time:unitType ?fUnit .
@@ -36,7 +39,7 @@ CONSTRUCT {
 	?meetupIRI a mtp:Meetup ;
 		mtp:hasParticipant ?personIRI ;
 		mtp:hasEvidenceText ?sentenceText ;
-		mtp:hasAPurpose ?purposeType ;
+		mtp:hasAPurpose ?purposeIRI ;
 		mtp:hasConfidence ?valueTheme ;
 		mtp:hasPlace ?placeIRI ;
 		mtp:happensAt ?timeExpression_IRI ;
@@ -60,16 +63,9 @@ CONSTRUCT {
 	 {
 	 ?s1 xyz:paragraphIndex ?paragraph ; 
 	    xyz:sentenceIndex ?sentence .
-	#	xyz:sentence ?sentenceText .
 	# 
 	OPTIONAL { ?s1 xyz:URI ?person ; xyz:entType "person" } .
 	OPTIONAL { ?s1 xyz:URI ?place ; xyz:entType "place" } .
-
-     # BIND ( IRI(?_subject) as ?subjectIRI ) .
-	 #BIND ( IRI(?person) as ?personIRI ) .
-	 #BIND ( IRI(?place) as ?placeIRI ) .
-	 # 
-     #BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?sentence) AS ?meetupIRI ) .
    }
    UNION {
        SERVICE <x-sparql-anything:> {
@@ -77,37 +73,13 @@ CONSTRUCT {
        	 fx:properties fx:location ?location2 ; fx:csv.headers "true" .
     	 ?s1 xyz:paragraphIndex ?paragraph ;
     	  	 xyz:sentenceIndex ?sentence .
-    	#	xyz:sentence ?sentenceText .
     	# 
     	OPTIONAL { ?s1 xyz:URI ?person ; xyz:entType "person" } .
     	OPTIONAL { ?s1 xyz:URI ?place ; xyz:entType "place" } .
     	# 
-    	 #BIND ( IRI(?person) as ?personIRI ) .
-    	 #BIND ( IRI(?place) as ?placeIRI ) .
-    	 # 
-         # BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?sentence) AS ?meetupIRI ) .
        }
    }
-   UNION {
-       SERVICE <x-sparql-anything:> {
-    	 BIND ( CONCAT ( "../geoLocationInformation/", ?_fileId , ".csv" ) AS ?location5 ) .
-       	 fx:properties fx:location ?location5 ; fx:csv.headers "true" .
-    	 ?s5 xyz:lat ?lt ;
-		 	xyz:long ?ln .
-    	 # 	 xyz:sentenceIndex ?sentence .
-    	#	xyz:sentence ?sentenceText .
-    	# 
-    	#OPTIONAL { ?s1 xyz:URI ?person ; xyz:entType "person" } .
-    	OPTIONAL { ?s1 xyz:URI ?place ; xyz:entType "place" } .
-		BIND ( xsd:float ( ?lt ) AS ?latitud) .
-		BIND ( xsd:float ( ?ln ) AS ?longitud) .
-    	# 
-    	 #BIND ( IRI(?person) as ?personIRI ) .
-    	 #BIND ( IRI(?place) as ?placeIRI ) .
-    	 # 
-         # BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?sentence) AS ?meetupIRI ) .
-       }
-   }
+   
  # 
  	BIND ( IRI(?person) as ?personIRI ) .
 	BIND ( IRI(?place) as ?placeIRI ) .
@@ -117,7 +89,7 @@ CONSTRUCT {
    SERVICE <x-sparql-anything:> {
 	 BIND ( CONCAT ( "../extractedTimeExpressions/", ?_fileId , ".csv" ) AS ?location3 ) .
    	 fx:properties fx:location ?location3 ; fx:csv.headers "true" .
-	 ?s xyz:paragraphIndex ?paragraph ; 
+	 ?s3 xyz:paragraphIndex ?paragraph ; 
 	    xyz:sentenceIndex ?sentence ;
 		xyz:time_expression_type ?entType ;
 		xyz:time_expression ?timeEvidenceText .
@@ -129,17 +101,14 @@ CONSTRUCT {
    SERVICE <x-sparql-anything:> {
 	 BIND ( CONCAT ( "../extractedMeetupTypes/", ?_fileId , ".csv" ) AS ?location4 ) .
    	 fx:properties fx:location ?location4 ; fx:csv.headers "true" .
-	 ?s xyz:paragraphIndex ?paragraph ; 
+	 ?s4 xyz:paragraphIndex ?paragraph ; 
 	    xyz:sentenceIndex ?sentence ;
 		xyz:themeType ?themeType ;
 		xyz:value ?valueTheme  .
-		#xyz:sentence ?sentenceText .
 	# 
 	BIND ( IF (?themeType = "Business meeting", "businessMeeting" , IF (?themeType = "Coincidence","coincidence", IF (?themeType = "Education", "education", IF (?themeType = "Music making", "musicMaking", IF (?themeType = "Personal life", "personalLife", IF (?themeType = "Public celebration", "publicCelebration", "")))))) AS ?purposeTypeName ) .
-    BIND ( IRI( CONCAT ( STR (meetup:), ?purposeTypeName)) AS ?purposeType ) .
+	BIND ( fx:entity (meetup: , fx:String.toLowerCase(?purposeTypeName) ) AS ?purposeIRI ) .
 	 # 
      BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?sentence) AS ?meetupIRI ) .
-     #BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph ) AS ?paragraphEntity ) .
    }
-	
 }

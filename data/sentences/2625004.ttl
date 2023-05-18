@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,12 +9,18 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Stephen_V_of_Hungary>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Stephen_V_of_Hungary> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
 <http://dbpedia.org/resource/Cincinnati>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cincinnati> ;
-        mtp:hasLatitud        "39.1"^^xsd:float ;
-        mtp:hasLongitud       "39.1"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cincinnati> .
 
 meetup:e90df72c600b0d93a2857d2a426001aa
         rdf:type             mtp:TimeExpression ;
@@ -21,10 +28,8 @@ meetup:e90df72c600b0d93a2857d2a426001aa
 
 <http://dbpedia.org/resource/Ohio>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ohio> ;
-        mtp:hasLatitud        "40.0"^^xsd:float ;
-        mtp:hasLongitud       "40.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ohio> .
 
 <http://dbpedia.org/resource/Edwin_Pearce_Christy>
         rdf:type              mtp:Participant ;
@@ -34,6 +39,14 @@ meetup:e90df72c600b0d93a2857d2a426001aa
 <http://w3id.org/polifonia/pilot/meetups/2625004/2/7>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:e90df72c600b0d93a2857d2a426001aa ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.99319047" ;
         mtp:hasEvidenceText  "After performing at a benefit performance for Stephen Foster in Cincinnati, Ohio, on August 25, 1847, the group specialized in performances of Foster's works." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Ohio> , <http://dbpedia.org/resource/Cincinnati> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/David_Foster> , <http://dbpedia.org/resource/Stephen_V_of_Hungary> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Cincinnati> , <http://dbpedia.org/resource/Ohio> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Edwin_Pearce_Christy> .
+
+<http://dbpedia.org/resource/David_Foster>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Foster> .

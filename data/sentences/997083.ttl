@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,40 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:3683af9d6f6c06acee72992f2977f67e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1966" .
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
 
 <http://w3id.org/polifonia/pilot/meetups/997083/4/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:3683af9d6f6c06acee72992f2977f67e ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.8161834" ;
         mtp:hasEvidenceText  "Simon caught the eye of Nashville, Tennessee, R&B disc jockey John Richbourg during this time, and Richbourg not only became Simon's manager/record producer but also brought the singer to Monument Records' subsidiary label Sound Stage 7 in 1966." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/John_R.> , <http://dbpedia.org/resource/Sound_Stage_7> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Tennessee> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Joe_Simon_(musician)> .
+
+meetup:3683af9d6f6c06acee72992f2977f67e
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1966" .
+
+<http://dbpedia.org/resource/Sound_Stage_7>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sound_Stage_7> .
 
 <http://dbpedia.org/resource/Joe_Simon_(musician)>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joe_Simon_(musician)> .
 
+<http://dbpedia.org/resource/John_R.>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_R.> .
+
 <http://dbpedia.org/resource/Tennessee>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tennessee> ;
-        mtp:hasLatitud        "36.0"^^xsd:float ;
-        mtp:hasLongitud       "36.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tennessee> .

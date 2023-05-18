@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,21 +9,54 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:93a04b066fd81a1017825f2dcda313b2
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "night" .
+<http://dbpedia.org/resource/New_Jersey>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Jersey> .
+
+<http://w3id.org/polifonia/pilot/meetups/2307312/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:8a67d68bf6d889d69f0edfad9f907c73 , meetup:93a04b066fd81a1017825f2dcda313b2 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.49024588" ;
+        mtp:hasEvidenceText  "In late December, 1952, she appeared, along with Danny Thomas, Lou Wills, Jr., and Ray Sinatra and his orchestra, at the opening night gala of the Copa Room at the Sands Hotel and Casino in Las Vegas." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Ray_Sinatra> , <http://dbpedia.org/resource/Danny_Thomas> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_Jersey> , <http://dbpedia.org/resource/Copa_Room> , <http://dbpedia.org/resource/Las_Vegas_Strip> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Connie_Russell> .
 
 <http://dbpedia.org/resource/Connie_Russell>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Connie_Russell> .
 
+<http://dbpedia.org/resource/Copa_Room>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Copa_Room> .
+
+meetup:93a04b066fd81a1017825f2dcda313b2
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "night" .
+
 meetup:8a67d68bf6d889d69f0edfad9f907c73
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "late December , 1952" .
 
-<http://w3id.org/polifonia/pilot/meetups/2307312/4/1>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:93a04b066fd81a1017825f2dcda313b2 , meetup:8a67d68bf6d889d69f0edfad9f907c73 ;
-        mtp:hasEvidenceText  "In late December, 1952, she appeared, along with Danny Thomas, Lou Wills, Jr., and Ray Sinatra and his orchestra, at the opening night gala of the Copa Room at the Sands Hotel and Casino in Las Vegas." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Connie_Russell> .
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Las_Vegas_Strip>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Las_Vegas_Strip> .
+
+<http://dbpedia.org/resource/Ray_Sinatra>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ray_Sinatra> .
+
+<http://dbpedia.org/resource/Danny_Thomas>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Danny_Thomas> .

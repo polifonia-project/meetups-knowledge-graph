@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,32 +13,62 @@ meetup:545a291efeea8b6d71eda7ecab1cd0a4
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "January 5 , 1929 – October 26 , 1994" .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
 <http://w3id.org/polifonia/pilot/meetups/1562492/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:545a291efeea8b6d71eda7ecab1cd0a4 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9995819" ;
         mtp:hasEvidenceText  "Wilbert Huntington Harrison (January 5, 1929 – October 26, 1994) was an American rhythm and blues singer, pianist, guitarist and harmonica player." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Antipope_Clement_III> , <http://dbpedia.org/resource/George_Harrison> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Huntington,_West_Virginia> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Wilbert_Harrison> .
+
+<http://dbpedia.org/resource/George_Harrison>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Harrison> .
+
+<http://dbpedia.org/resource/Antipope_Clement_III>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Antipope_Clement_III> .
 
 <http://w3id.org/polifonia/pilot/meetups/1562492/3/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:e306dc6498d58a2da13fa284ebcc415f ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9926743" ;
         mtp:hasEvidenceText  "The litigation, which lasted until September 1959, abruptly prevented Robinson from issuing follow-ups to \"Kansas City\" while Harrison was a star." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Huntington,_West_Virginia> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/George_Harrison> , <http://dbpedia.org/resource/Danielle_Robinson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Kansas_City_metropolitan_area> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Wilbert_Harrison> .
 
 meetup:e306dc6498d58a2da13fa284ebcc415f
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "September 1959" .
 
+<http://dbpedia.org/resource/Danielle_Robinson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Danielle_Robinson> .
+
 <http://dbpedia.org/resource/Huntington,_West_Virginia>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Huntington,_West_Virginia> ;
-        mtp:hasLatitud        "38.4208"^^xsd:float ;
-        mtp:hasLongitud       "38.4208"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Huntington,_West_Virginia> .
 
 <http://dbpedia.org/resource/Wilbert_Harrison>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Wilbert_Harrison> .
+
+<http://dbpedia.org/resource/Kansas_City_metropolitan_area>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kansas_City_metropolitan_area> .

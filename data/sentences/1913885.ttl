@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -16,29 +17,86 @@
 <http://w3id.org/polifonia/pilot/meetups/1913885/1/2>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:7ca57a9f85a19a6e4b9a248c1daca185 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.80331844" ;
         mtp:hasEvidenceText  "Following Vianna da Motta's death in 1948, Sequeira Costa continued his studies in London under another eminent pianist, Mark Hambourg." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/José_Vianna_da_Motta> , <http://dbpedia.org/resource/Sequeira_Costa> , <http://dbpedia.org/resource/Mark_Hambourg> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/London> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Sequeira_Costa> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lisbon>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lisbon> .
+
+<http://dbpedia.org/resource/Franz_Liszt>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Franz_Liszt> .
 
 meetup:d77f00766fd3be3f2189c843a6af3fb2
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1958" .
 
+<http://dbpedia.org/resource/José_Vianna_da_Motta>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/José_Vianna_da_Motta> .
+
 meetup:7ca57a9f85a19a6e4b9a248c1daca185
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1948" .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
 meetup:88495f946d69f0eead6d790eaabef4e1
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "eight years old" .
 
+<http://dbpedia.org/resource/Dmitri_Shostakovich>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dmitri_Shostakovich> .
+
+meetup:education  rdf:type  mtp:Purpose ;
+        rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/London>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .
+
 <http://w3id.org/polifonia/pilot/meetups/1913885/2/2>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:d77f00766fd3be3f2189c843a6af3fb2 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.9141078" ;
         mtp:hasEvidenceText  "In 1958, Dmitri Shostakovich invited Sequeira Costa to sit on the jury of the inaugural International Tchaikovsky Competition in Moscow, on which he served a further six times." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Sequeira_Costa> , <http://dbpedia.org/resource/Dmitri_Shostakovich> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Moscow> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Sequeira_Costa> .
 
 <http://w3id.org/polifonia/pilot/meetups/1913885/1/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:88495f946d69f0eead6d790eaabef4e1 ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.9550706" ;
         mtp:hasEvidenceText  "When he was eight years old, he moved to Lisbon to become the protégé of José Vianna da Motta who was one of the last pupils of Franz Liszt." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Franz_Liszt> , <http://dbpedia.org/resource/José_Vianna_da_Motta> , <http://dbpedia.org/resource/Sequeira_Costa> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Lisbon> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Sequeira_Costa> .
+
+<http://dbpedia.org/resource/Mark_Hambourg>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mark_Hambourg> .
+
+<http://dbpedia.org/resource/Moscow>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Moscow> .

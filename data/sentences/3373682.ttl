@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,45 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:7ed2a6a93418c06eb6f603b37d4d4345
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the 1960s" .
+<http://dbpedia.org/resource/Geoffrey_Atherden>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Geoffrey_Atherden> .
 
-<http://w3id.org/polifonia/pilot/meetups/3373682/2/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:7ed2a6a93418c06eb6f603b37d4d4345 ;
-        mtp:hasEvidenceText  "Bond began his career in entertainment at University of Sydney in the 1960s as a founding student member of the Sydney University Architecture Revue, which included his university friends Geoffrey Atherden (writer Mother and Son, Grass Roots), Peter Weir (director Gallipoli, The Truman Show), Peter Best (composer Crocodile Dundee, Wildside) and Rory O'Donoghue." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Sydney> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Grahame_Bond> .
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
 
 <http://dbpedia.org/resource/Grahame_Bond>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Grahame_Bond> .
 
+meetup:7ed2a6a93418c06eb6f603b37d4d4345
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "the 1960s" .
+
+<http://dbpedia.org/resource/Mother>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mother> .
+
 <http://dbpedia.org/resource/Sydney>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sydney> ;
-        mtp:hasLatitud        "-33.8678"^^xsd:float ;
-        mtp:hasLongitud       "-33.8678"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sydney> .
+
+<http://dbpedia.org/resource/Peter_Weir>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Peter_Weir> .
+
+<http://w3id.org/polifonia/pilot/meetups/3373682/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:7ed2a6a93418c06eb6f603b37d4d4345 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.99768484" ;
+        mtp:hasEvidenceText  "Bond began his career in entertainment at University of Sydney in the 1960s as a founding student member of the Sydney University Architecture Revue, which included his university friends Geoffrey Atherden (writer Mother and Son, Grass Roots), Peter Weir (director Gallipoli, The Truman Show), Peter Best (composer Crocodile Dundee, Wildside) and Rory O'Donoghue." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Geoffrey_Atherden> , <http://dbpedia.org/resource/Mother> , <http://dbpedia.org/resource/Peter_Weir> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Sydney> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Grahame_Bond> .

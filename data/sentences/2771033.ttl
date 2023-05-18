@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,18 +9,92 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://w3id.org/polifonia/pilot/meetups/2771033/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d47268e9db2e9aa3827bba3afb7ff94a ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9782714" ;
+        mtp:hasEvidenceText  "His work in Chicago has included his first conducting of Der Ring des Nibelungen cycle of Richard Wagner in 2005 and the first Chicago production of Michael Tippett's The Midsummer Marriage." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Michael_Tippett> , <http://dbpedia.org/resource/Richard_Wagner> , <http://dbpedia.org/resource/Miles_Davis> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Chicago> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Davis_(conductor)> .
+
+<http://dbpedia.org/resource/Richard_Wagner>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Richard_Wagner> .
+
 <http://w3id.org/polifonia/pilot/meetups/2771033/6/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:da91c4598945ce54d0d95991f17951b7 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.98315686" ;
         mtp:hasEvidenceText  "Davis and his wife Gianna Rolandi (1952–2021) resided in Chicago." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/Penzance> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Anthony_Davis> , <http://dbpedia.org/resource/Gianna_Rolandi> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Chicago> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Davis_(conductor)> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Anthony_Davis>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Anthony_Davis> .
+
+<http://dbpedia.org/resource/Penzance>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Penzance> .
+
+<http://dbpedia.org/resource/Mother_Teresa>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mother_Teresa> .
+
+<http://dbpedia.org/resource/Chicago>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> .
+
+<http://dbpedia.org/resource/Andrew_Davis_(conductor)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Andrew_Davis_(conductor)> .
+
+<http://dbpedia.org/resource/Miles_Davis>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Miles_Davis> .
 
 <http://w3id.org/polifonia/pilot/meetups/2771033/3/7>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:06964dce9addb1c5cb5d6e3d9838f733 , meetup:1b97c1831543eaca97c21608a6f7a431 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "1.0" ;
         mtp:hasEvidenceText  "He was noted for his humorous Last Night speeches, including giving two speeches after the Major-General's patter song from The Pirates of Penzance, but he also more seriously addressed the deaths of Diana, Princess of Wales, Mother Teresa, and Sir Georg Solti in his 1997 Last Night speech." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Miles_Davis> , <http://dbpedia.org/resource/Georg_Solti> , <http://dbpedia.org/resource/Wales> , <http://dbpedia.org/resource/Mother_Teresa> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Penzance> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Davis_(conductor)> .
+
+<http://dbpedia.org/resource/Wales>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Wales> .
+
+<http://dbpedia.org/resource/Michael_Tippett>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Michael_Tippett> .
+
+<http://dbpedia.org/resource/Gianna_Rolandi>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gianna_Rolandi> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
 
 meetup:d47268e9db2e9aa3827bba3afb7ff94a
         rdf:type             mtp:TimeExpression ;
@@ -27,24 +102,24 @@ meetup:d47268e9db2e9aa3827bba3afb7ff94a
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
-<http://dbpedia.org/resource/Penzance>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Penzance> ;
-        mtp:hasLatitud        "50.119"^^xsd:float ;
-        mtp:hasLongitud       "50.119"^^xsd:float .
+meetup:da91c4598945ce54d0d95991f17951b7
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1952–2021" .
 
-<http://w3id.org/polifonia/pilot/meetups/2771033/3/3>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:9d7311ba459f9e45ed746755a32dcd11 ;
-        mtp:hasEvidenceText  "In 1988, Davis became music director at Glyndebourne, where he met the American soprano Gianna Rolandi, who became his third wife." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/Penzance> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Davis_(conductor)> .
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+meetup:9d7311ba459f9e45ed746755a32dcd11
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1988" .
+
+<http://dbpedia.org/resource/Georg_Solti>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Georg_Solti> .
 
 meetup:1b97c1831543eaca97c21608a6f7a431
         rdf:type             mtp:TimeExpression ;
@@ -54,28 +129,12 @@ meetup:06964dce9addb1c5cb5d6e3d9838f733
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1997" .
 
-meetup:da91c4598945ce54d0d95991f17951b7
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1952–2021" .
-
-<http://w3id.org/polifonia/pilot/meetups/2771033/5/1>
+<http://w3id.org/polifonia/pilot/meetups/2771033/3/3>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d47268e9db2e9aa3827bba3afb7ff94a ;
-        mtp:hasEvidenceText  "His work in Chicago has included his first conducting of Der Ring des Nibelungen cycle of Richard Wagner in 2005 and the first Chicago production of Michael Tippett's The Midsummer Marriage." ;
+        mtp:happensAt        meetup:9d7311ba459f9e45ed746755a32dcd11 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.7275991" ;
+        mtp:hasEvidenceText  "In 1988, Davis became music director at Glyndebourne, where he met the American soprano Gianna Rolandi, who became his third wife." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Gianna_Rolandi> , <http://dbpedia.org/resource/Miles_Davis> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Davis_(conductor)> .
-
-<http://dbpedia.org/resource/Chicago>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> ;
-        mtp:hasLatitud        "41.8819"^^xsd:float ;
-        mtp:hasLongitud       "41.8819"^^xsd:float .
-
-<http://dbpedia.org/resource/Andrew_Davis_(conductor)>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Andrew_Davis_(conductor)> .
-
-meetup:9d7311ba459f9e45ed746755a32dcd11
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1988" .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,6 +8,24 @@
 @prefix time:   <http://www.w3.org/2006/time#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/790333/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:7af6266cc52234b5aa339b16695f7fc4 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.6125694" ;
+        mtp:hasEvidenceText  "In 1941, he collaborated with Pierce Norman, and baseball's Joe DiMaggio to write \"In the Beauty of Tahoe\", published by Larry Spier, Inc.." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Joe_DiMaggio> , <http://dbpedia.org/resource/Paul_Pierce> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Lake_Tahoe> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harold_Adamson> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lake_Tahoe>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lake_Tahoe> .
 
 meetup:7af6266cc52234b5aa339b16695f7fc4
         rdf:type             mtp:TimeExpression ;
@@ -17,16 +36,12 @@ meetup:7af6266cc52234b5aa339b16695f7fc4
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Harold_Adamson> .
 
-<http://w3id.org/polifonia/pilot/meetups/790333/6/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:7af6266cc52234b5aa339b16695f7fc4 ;
-        mtp:hasEvidenceText  "In 1941, he collaborated with Pierce Norman, and baseball's Joe DiMaggio to write \"In the Beauty of Tahoe\", published by Larry Spier, Inc.." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Lake_Tahoe> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Harold_Adamson> .
+<http://dbpedia.org/resource/Joe_DiMaggio>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joe_DiMaggio> .
 
-<http://dbpedia.org/resource/Lake_Tahoe>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lake_Tahoe> ;
-        mtp:hasLatitud        "39.0"^^xsd:float ;
-        mtp:hasLongitud       "39.0"^^xsd:float .
+<http://dbpedia.org/resource/Paul_Pierce>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paul_Pierce> .

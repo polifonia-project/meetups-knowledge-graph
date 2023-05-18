@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,18 +12,38 @@
 <http://w3id.org/polifonia/pilot/meetups/3419345/3/5>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:15d185eaa7c954e77f5343d941e25fbd ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.9978236" ;
         mtp:hasEvidenceText  "Blackwell was dissatisfied with the lack of credit given his contributions with Carr; the situation was remedied by Vocalion's Mayo Williams after his 1931 breakaway: in all future recordings, Blackwell and Carr received equal songwriting credits and equal status in recording contracts." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/J._Mayo_Williams> , <http://dbpedia.org/resource/Ian_Blackwell> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/County_Mayo> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Scrapper_Blackwell> .
+
+<http://dbpedia.org/resource/Leroy_Carr>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Leroy_Carr> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
 
 meetup:acf003626180da2402276f8b20827ae2
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "early 1930s" .
 
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
 <http://w3id.org/polifonia/pilot/meetups/3419345/0/0>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:acf003626180da2402276f8b20827ae2 , meetup:d6c8f30150545ec05242f89a0a57237c , meetup:d98a440f6ed8fec273c47a3ce6f0137f ;
+        mtp:happensAt        meetup:d98a440f6ed8fec273c47a3ce6f0137f , meetup:d6c8f30150545ec05242f89a0a57237c , meetup:acf003626180da2402276f8b20827ae2 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9661095" ;
         mtp:hasEvidenceText  "Francis Hillman \"Scrapper\" Blackwell (February 21, 1903 – October 7, 1962) was an American blues guitarist and singer, best known as half of the guitar-piano duo he formed with Leroy Carr in the late 1920s and early 1930s." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/County_Mayo> , <http://dbpedia.org/resource/United_States> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Pope_Francis> , <http://dbpedia.org/resource/Leroy_Carr> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Scrapper_Blackwell> .
 
 <http://dbpedia.org/resource/Scrapper_Blackwell>
@@ -30,12 +51,15 @@ meetup:acf003626180da2402276f8b20827ae2
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Scrapper_Blackwell> .
 
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+<http://dbpedia.org/resource/J._Mayo_Williams>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/J._Mayo_Williams> .
+
+<http://dbpedia.org/resource/Pope_Francis>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Pope_Francis> .
 
 meetup:d6c8f30150545ec05242f89a0a57237c
         rdf:type             mtp:TimeExpression ;
@@ -45,13 +69,19 @@ meetup:d98a440f6ed8fec273c47a3ce6f0137f
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "February 21 , 1903 – October 7 , 1962" .
 
+<http://dbpedia.org/resource/Ian_Blackwell>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ian_Blackwell> .
+
+meetup:education  rdf:type  mtp:Purpose ;
+        rdfs:label  "Education" .
+
 meetup:15d185eaa7c954e77f5343d941e25fbd
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1931" .
 
 <http://dbpedia.org/resource/County_Mayo>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/County_Mayo> ;
-        mtp:hasLatitud        "53.9"^^xsd:float ;
-        mtp:hasLongitud       "53.9"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/County_Mayo> .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,39 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://w3id.org/polifonia/pilot/meetups/1097923/8/3>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:f0c93f2a489d7889b5897a9e3eb9fc8a ;
-        mtp:hasEvidenceText  "The film, starring Ben Kingsley and Patricia Clarkson, was released in the US on August 21, 2015." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Sarah_Kernochan> .
+<http://dbpedia.org/resource/Patricia_Clarkson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Patricia_Clarkson> .
 
 <http://dbpedia.org/resource/Sarah_Kernochan>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sarah_Kernochan> .
 
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
-
 meetup:f0c93f2a489d7889b5897a9e3eb9fc8a
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "August 21 , 2015" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+<http://dbpedia.org/resource/Ben_Kingsley>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ben_Kingsley> .
+
+<http://w3id.org/polifonia/pilot/meetups/1097923/8/3>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:f0c93f2a489d7889b5897a9e3eb9fc8a ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.61031896" ;
+        mtp:hasEvidenceText  "The film, starring Ben Kingsley and Patricia Clarkson, was released in the US on August 21, 2015." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Patricia_Clarkson> , <http://dbpedia.org/resource/Ben_Kingsley> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sarah_Kernochan> .

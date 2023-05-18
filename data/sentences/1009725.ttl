@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,17 +11,18 @@
 
 <http://dbpedia.org/resource/Southern_Uplands>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Southern_Uplands> ;
-        mtp:hasLatitud        "55.41"^^xsd:float ;
-        mtp:hasLongitud       "55.41"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Southern_Uplands> .
 
 <http://dbpedia.org/resource/Fulton_County,_Georgia>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Fulton_County,_Georgia> ;
-        mtp:hasLatitud        "33.79"^^xsd:float ;
-        mtp:hasLongitud       "33.79"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Fulton_County,_Georgia> .
+
+<http://dbpedia.org/resource/George_Gershwin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Gershwin> .
 
 meetup:f404ee128ef4d5d2691fefa93a1b9ceb
         rdf:type             mtp:TimeExpression ;
@@ -30,11 +32,22 @@ meetup:1e913e1b06ead0b66e30b6867bf63549
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1933" .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Mary_II_of_England>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mary_II_of_England> .
+
 <http://w3id.org/polifonia/pilot/meetups/1009725/14/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:f404ee128ef4d5d2691fefa93a1b9ceb ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99999654" ;
         mtp:hasEvidenceText  "On January 19, 1887, James Landrum White married Mary Melinda (Minnie) Clarke in Fulton County, Georgia." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Southern_Uplands> , <http://dbpedia.org/resource/Fulton_County,_Georgia> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Mary_II_of_England> , <http://dbpedia.org/resource/James_Landrum_White> , <http://dbpedia.org/resource/Melinda_Katz> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Fulton_County,_Georgia> ;
         mtp:hasSubject       <http://dbpedia.org/resource/James_Landrum_White> .
 
 <http://dbpedia.org/resource/James_Landrum_White>
@@ -42,9 +55,22 @@ meetup:1e913e1b06ead0b66e30b6867bf63549
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/James_Landrum_White> .
 
+<http://dbpedia.org/resource/Melinda_Katz>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Melinda_Katz> .
+
+<http://dbpedia.org/resource/Michael_Jackson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Michael_Jackson> .
+
 <http://w3id.org/polifonia/pilot/meetups/1009725/20/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:1e913e1b06ead0b66e30b6867bf63549 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99964154" ;
         mtp:hasEvidenceText  "Jackson, George Pullen (1933) White Spirituals in the Southern Uplands." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Southern_Uplands> , <http://dbpedia.org/resource/Fulton_County,_Georgia> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/George_Gershwin> , <http://dbpedia.org/resource/Michael_Jackson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Southern_Uplands> ;
         mtp:hasSubject       <http://dbpedia.org/resource/James_Landrum_White> .

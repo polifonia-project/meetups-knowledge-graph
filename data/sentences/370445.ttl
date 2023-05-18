@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,26 +9,38 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://dbpedia.org/resource/Bonn>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bonn> ;
-        mtp:hasLatitud        "50.7333"^^xsd:float ;
-        mtp:hasLongitud       "50.7333"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bonn> .
+
+<http://dbpedia.org/resource/Kingdom_of_Prussia>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kingdom_of_Prussia> .
+
+<http://dbpedia.org/resource/Charles-Valentin_Alkan>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Charles-Valentin_Alkan> .
+
+<http://dbpedia.org/resource/Johanna_von_Trapp>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Johanna_von_Trapp> .
 
 <http://dbpedia.org/resource/Dillingen,_Saarland>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dillingen,_Saarland> ;
-        mtp:hasLatitud        "49.35"^^xsd:float ;
-        mtp:hasLongitud       "49.35"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dillingen,_Saarland> .
 
 <http://dbpedia.org/resource/Germany>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Germany> ;
-        mtp:hasLatitud        "51.0"^^xsd:float ;
-        mtp:hasLongitud       "51.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Germany> .
 
 <http://dbpedia.org/resource/Siegfried_Alkan>
         rdf:type              mtp:Participant ;
@@ -41,6 +54,9 @@ meetup:97bc592b27a9ada2d9a4bb418ed0ebed
 <http://w3id.org/polifonia/pilot/meetups/370445/1/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:97bc592b27a9ada2d9a4bb418ed0ebed ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99983096" ;
         mtp:hasEvidenceText  "Alkan was born in Dillingen, Saarland (then Prussia, now Germany), the son of Johannes Alkan and Johanna Bonn in a family of merchants and musicians." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Bonn> , <http://dbpedia.org/resource/Germany> , <http://dbpedia.org/resource/Dillingen,_Saarland> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Johanna_von_Trapp> , <http://dbpedia.org/resource/Charles-Valentin_Alkan> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Kingdom_of_Prussia> , <http://dbpedia.org/resource/Bonn> , <http://dbpedia.org/resource/Dillingen,_Saarland> , <http://dbpedia.org/resource/Germany> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Siegfried_Alkan> .

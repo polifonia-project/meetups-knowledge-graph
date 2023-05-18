@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,61 +9,100 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/McCarthey_Athletic_Center>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/McCarthey_Athletic_Center> ;
-        mtp:hasLatitud        "47.665"^^xsd:float ;
-        mtp:hasLongitud       "47.665"^^xsd:float .
-
-<http://w3id.org/polifonia/pilot/meetups/7672/15/2>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:deb54ffb41e085fd7f69a75b6359c989 ;
-        mtp:hasEvidenceText  "In 1973, he produced an animated version of the George Selden book The Cricket in Times Square and subsequently produced two sequels." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Times_Square> , <http://dbpedia.org/resource/McCarthey_Athletic_Center> , <http://dbpedia.org/resource/Chicago> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Jones> .
-
-meetup:f590a2f3aa99fa1fd5a192b9ca8adab5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "September 21 , 1912" .
-
-meetup:deb54ffb41e085fd7f69a75b6359c989
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1973" .
-
-<http://w3id.org/polifonia/pilot/meetups/7672/5/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:f590a2f3aa99fa1fd5a192b9ca8adab5 ;
-        mtp:hasEvidenceText  "Chuck Jones was born on September 21, 1912, in Spokane, Washington, to Mabel McQuiddy (née Martin) and Charles Adams Jones." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Times_Square> , <http://dbpedia.org/resource/McCarthey_Athletic_Center> , <http://dbpedia.org/resource/Chicago> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Jones> .
-
-meetup:9a3ec6f3f077b3dfaa1ce7cf1be3b17c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1977 to 1978" .
-
-<http://dbpedia.org/resource/Chicago>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> ;
-        mtp:hasLatitud        "41.8819"^^xsd:float ;
-        mtp:hasLongitud       "41.8819"^^xsd:float .
+<http://dbpedia.org/resource/George_Gershwin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Gershwin> .
 
 <http://dbpedia.org/resource/Times_Square>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Times_Square> ;
-        mtp:hasLatitud        "40.757"^^xsd:float ;
-        mtp:hasLongitud       "40.757"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Times_Square> .
 
 <http://dbpedia.org/resource/Chuck_Jones>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chuck_Jones> .
 
+<http://dbpedia.org/resource/Chicago>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> .
+
+<http://w3id.org/polifonia/pilot/meetups/7672/15/2>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:deb54ffb41e085fd7f69a75b6359c989 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.7903135" ;
+        mtp:hasEvidenceText  "In 1973, he produced an animated version of the George Selden book The Cricket in Times Square and subsequently produced two sequels." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/George_B._Selden> , <http://dbpedia.org/resource/George_Gershwin> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Times_Square> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Jones> .
+
+<http://dbpedia.org/resource/McCarthey_Athletic_Center>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/McCarthey_Athletic_Center> .
+
+<http://dbpedia.org/resource/Jordan_Crawford>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jordan_Crawford> .
+
+<http://dbpedia.org/resource/Charles_Adams_(ice_hockey)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Charles_Adams_(ice_hockey)> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Mabel_Gardiner_Hubbard>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mabel_Gardiner_Hubbard> .
+
+meetup:9a3ec6f3f077b3dfaa1ce7cf1be3b17c
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1977 to 1978" .
+
+meetup:f590a2f3aa99fa1fd5a192b9ca8adab5
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "September 21 , 1912" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/George_B._Selden>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_B._Selden> .
+
+<http://w3id.org/polifonia/pilot/meetups/7672/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:f590a2f3aa99fa1fd5a192b9ca8adab5 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9998211" ;
+        mtp:hasEvidenceText  "Chuck Jones was born on September 21, 1912, in Spokane, Washington, to Mabel McQuiddy (née Martin) and Charles Adams Jones." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Mabel_Gardiner_Hubbard> , <http://dbpedia.org/resource/Chuck_Jones> , <http://dbpedia.org/resource/Charles_Adams_(ice_hockey)> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/McCarthey_Athletic_Center> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Jones> .
+
+<http://dbpedia.org/resource/Morgan_Earp>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Morgan_Earp> .
+
 <http://w3id.org/polifonia/pilot/meetups/7672/17/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:9a3ec6f3f077b3dfaa1ce7cf1be3b17c ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.98758984" ;
         mtp:hasEvidenceText  "From 1977 to 1978, Jones wrote and drew the newspaper comic strip Crawford (also known as Crawford & Morgan) for the Chicago Tribune-NY News Syndicate." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Times_Square> , <http://dbpedia.org/resource/McCarthey_Athletic_Center> , <http://dbpedia.org/resource/Chicago> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Morgan_Earp> , <http://dbpedia.org/resource/Jordan_Crawford> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Chicago> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Jones> .
+
+meetup:deb54ffb41e085fd7f69a75b6359c989
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1973" .

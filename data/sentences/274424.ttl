@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,68 +9,110 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Atlantic_Ocean>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Atlantic_Ocean> .
+
+<http://dbpedia.org/resource/Coleman_Hawkins>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Coleman_Hawkins> .
+
+<http://dbpedia.org/resource/Milt_Jackson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Milt_Jackson> .
+
 <http://w3id.org/polifonia/pilot/meetups/274424/3/2>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:70036702739a4a0c62ec9071fcdc7a59 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.8415486" ;
         mtp:hasEvidenceText  "After he moved to New York, he was one of the musicians (together with Dizzy Gillespie, Thelonious Monk, Kenny Clarke) who in the early 1940s jammed at Minton's Playhouse, where the music style developed that later was called bebop." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Playhouse_Theatre> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Atlantic_Ocean> , <http://dbpedia.org/resource/Essen> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Kenny_Clarke> , <http://dbpedia.org/resource/Dizzy_Gillespie> , <http://dbpedia.org/resource/Thelonious_Monk> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Playhouse_Theatre> , <http://dbpedia.org/resource/New_York_City> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Oscar_Pettiford> .
+
+<http://dbpedia.org/resource/New_York_City>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
+<http://dbpedia.org/resource/Essen>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Essen> .
+
+<http://w3id.org/polifonia/pilot/meetups/274424/22/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:7f16109f1619fd7a733daf5a84c708c1 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.72837096" ;
+        mtp:hasEvidenceText  "The Complete Essen Jazz Festival Concert, (Black Lion, 1960) with Coleman Hawkins, Bud Powell, Kenny Clarke" ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Kenny_Clarke> , <http://dbpedia.org/resource/Coleman_Hawkins> , <http://dbpedia.org/resource/Bud_Powell> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Essen> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Oscar_Pettiford> .
 
 meetup:d77f00766fd3be3f2189c843a6af3fb2
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1958" .
 
-meetup:7f16109f1619fd7a733daf5a84c708c1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1960" .
-
-<http://w3id.org/polifonia/pilot/meetups/274424/22/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:7f16109f1619fd7a733daf5a84c708c1 ;
-        mtp:hasEvidenceText  "The Complete Essen Jazz Festival Concert, (Black Lion, 1960) with Coleman Hawkins, Bud Powell, Kenny Clarke" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Playhouse_Theatre> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Atlantic_Ocean> , <http://dbpedia.org/resource/Essen> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Oscar_Pettiford> .
-
-<http://dbpedia.org/resource/New_York_City>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
-
-<http://dbpedia.org/resource/Playhouse_Theatre>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Playhouse_Theatre> ;
-        mtp:hasLatitud        "51.5069"^^xsd:float ;
-        mtp:hasLongitud       "51.5069"^^xsd:float .
-
-<http://dbpedia.org/resource/Essen>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Essen> ;
-        mtp:hasLatitud        "51.4508"^^xsd:float ;
-        mtp:hasLongitud       "51.4508"^^xsd:float .
+<http://dbpedia.org/resource/Ray_Charles>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ray_Charles> .
 
 <http://w3id.org/polifonia/pilot/meetups/274424/52/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:d77f00766fd3be3f2189c843a6af3fb2 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9130651" ;
         mtp:hasEvidenceText  "Milt Jackson: \"Soul Brothers\" (with Ray Charles) (Atlantic 1958)" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Playhouse_Theatre> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Atlantic_Ocean> , <http://dbpedia.org/resource/Essen> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Ray_Charles> , <http://dbpedia.org/resource/Milt_Jackson> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Atlantic_Ocean> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Oscar_Pettiford> .
 
-<http://dbpedia.org/resource/Oscar_Pettiford>
+<http://dbpedia.org/resource/Kenny_Clarke>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Oscar_Pettiford> .
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kenny_Clarke> .
+
+<http://dbpedia.org/resource/Dizzy_Gillespie>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dizzy_Gillespie> .
+
+meetup:7f16109f1619fd7a733daf5a84c708c1
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1960" .
+
+<http://dbpedia.org/resource/Playhouse_Theatre>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Playhouse_Theatre> .
 
 meetup:70036702739a4a0c62ec9071fcdc7a59
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the early 1940s" .
 
-<http://dbpedia.org/resource/Atlantic_Ocean>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Atlantic_Ocean> ;
-        mtp:hasLatitud        "0.0"^^xsd:float ;
-        mtp:hasLongitud       "0.0"^^xsd:float .
+<http://dbpedia.org/resource/Bud_Powell>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bud_Powell> .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Thelonious_Monk>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Thelonious_Monk> .
+
+<http://dbpedia.org/resource/Oscar_Pettiford>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Oscar_Pettiford> .

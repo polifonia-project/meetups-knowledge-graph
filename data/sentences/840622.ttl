@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,6 +12,13 @@
 meetup:b8b4b727d6f5d1b61fff7be687f7970f
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "2004" .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 meetup:3b76429df6a74360a189515220f596e3
         rdf:type             mtp:TimeExpression ;
@@ -29,34 +37,51 @@ meetup:08f90c1a417155361a5c4b8d297e0d78
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "2000" .
 
+<http://dbpedia.org/resource/Salvador_Allende>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Salvador_Allende> .
+
+<http://dbpedia.org/resource/Augusto_Pinochet>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Augusto_Pinochet> .
+
 meetup:3d863b367aa379f71c7afc0c9cdca41d
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1974" .
 
 <http://w3id.org/polifonia/pilot/meetups/840622/5/0>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:ff6f473ea012ce08527ccd8dcb884863 , meetup:3d863b367aa379f71c7afc0c9cdca41d ;
+        mtp:happensAt        meetup:3d863b367aa379f71c7afc0c9cdca41d , meetup:ff6f473ea012ce08527ccd8dcb884863 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.513087" ;
         mtp:hasEvidenceText  "In 1974, she recorded with guitarist Martín Rojas, an album in which she lauds Salvador Allende and the people of Chile a year after the military coup led by General Augusto Pinochet." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Carnegie_Hall> , <http://dbpedia.org/resource/Chile> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Augusto_Pinochet> , <http://dbpedia.org/resource/Salvador_Allende> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Chile> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Omara_Portuondo> .
 
-<http://w3id.org/polifonia/pilot/meetups/840622/8/1>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:3b76429df6a74360a189515220f596e3 , meetup:b8b4b727d6f5d1b61fff7be687f7970f , meetup:08f90c1a417155361a5c4b8d297e0d78 ;
-        mtp:hasEvidenceText  "This led not only to more touring (including playing at Carnegie Hall with the Buena Vista troupe) and her appearance in Wim Wenders' film Buena Vista Social Club, but to two further albums for the World Circuit label: Buena Vista Social Club Presents Omara Portuondo (2000) and Flor de Amor (2004)." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Carnegie_Hall> , <http://dbpedia.org/resource/Chile> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Omara_Portuondo> .
+<http://dbpedia.org/resource/Wim_Wenders>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Wim_Wenders> .
 
 <http://dbpedia.org/resource/Carnegie_Hall>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Carnegie_Hall> ;
-        mtp:hasLatitud        "40.765"^^xsd:float ;
-        mtp:hasLongitud       "40.765"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Carnegie_Hall> .
+
+<http://w3id.org/polifonia/pilot/meetups/840622/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:b8b4b727d6f5d1b61fff7be687f7970f , meetup:3b76429df6a74360a189515220f596e3 , meetup:08f90c1a417155361a5c4b8d297e0d78 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.722647" ;
+        mtp:hasEvidenceText  "This led not only to more touring (including playing at Carnegie Hall with the Buena Vista troupe) and her appearance in Wim Wenders' film Buena Vista Social Club, but to two further albums for the World Circuit label: Buena Vista Social Club Presents Omara Portuondo (2000) and Flor de Amor (2004)." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Omara_Portuondo> , <http://dbpedia.org/resource/Wim_Wenders> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Carnegie_Hall> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Omara_Portuondo> .
 
 <http://dbpedia.org/resource/Chile>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chile> ;
-        mtp:hasLatitud        "-34.0"^^xsd:float ;
-        mtp:hasLongitud       "-34.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chile> .

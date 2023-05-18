@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -15,10 +16,16 @@
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/David_Dubal>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Dubal> .
 
 meetup:72ab9d0304d3e84c6aa2dd15eda282f2
         rdf:type             mtp:TimeExpression ;
@@ -27,7 +34,10 @@ meetup:72ab9d0304d3e84c6aa2dd15eda282f2
 <http://w3id.org/polifonia/pilot/meetups/3622246/29/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:7b9e20aa6170ace2b088d32fbc59c63b , meetup:72ab9d0304d3e84c6aa2dd15eda282f2 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.93885267" ;
         mtp:hasEvidenceText  "David Dubal interview with Paul Badura-Skoda (1 hour) on YouTube, WNCN-FM New York City, 26 March 1982" ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Paul_Badura-Skoda> , <http://dbpedia.org/resource/David_Dubal> ;
         mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_Badura-Skoda> .
 

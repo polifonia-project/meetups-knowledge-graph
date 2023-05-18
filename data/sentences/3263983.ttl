@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,89 +9,131 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:e8fbbc8b89c5090afca39a589278ad26
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "November 8 , 2019" .
-
-<http://w3id.org/polifonia/pilot/meetups/3263983/31/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:e8fbbc8b89c5090afca39a589278ad26 ;
-        mtp:hasEvidenceText  "On November 8, 2019, the Tennessee Historical Commission and the City of Harriman, Tennessee, unveiled a Tennessee State Historical Marker (1F 46) near Dixie's birthplace in the Walnut Hill section of downtown Harriman." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Holy_Cross_Cemetery,_Culver_City> , <http://dbpedia.org/resource/Holmby_Hills,_Los_Angeles> , <http://dbpedia.org/resource/Tennessee> , <http://dbpedia.org/resource/Culver_City,_California> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Dixie_Lee> .
+<http://dbpedia.org/resource/Wyatt_Earp>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Wyatt_Earp> .
 
 <http://w3id.org/polifonia/pilot/meetups/3263983/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:339506465cc1f610968814873bbe002f ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.68304664" ;
         mtp:hasEvidenceText  "Wilma Winifred Wyatt (November 4, 1909 – November 1, 1952), better known as Dixie Lee, was an American actress, dancer, and singer." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Holy_Cross_Cemetery,_Culver_City> , <http://dbpedia.org/resource/Holmby_Hills,_Los_Angeles> , <http://dbpedia.org/resource/Tennessee> , <http://dbpedia.org/resource/Culver_City,_California> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Wyatt_Earp> , <http://dbpedia.org/resource/Dixie_Lee> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Dixie_Lee> .
 
-<http://dbpedia.org/resource/Dixie_Lee>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dixie_Lee> .
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
-<http://dbpedia.org/resource/Culver_City,_California>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Culver_City,_California> ;
-        mtp:hasLatitud        "34.0078"^^xsd:float ;
-        mtp:hasLongitud       "34.0078"^^xsd:float .
-
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
-
-meetup:ccfc4668eb2d3ffb7508555f92fd582c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "January 1951" .
+<http://w3id.org/polifonia/pilot/meetups/3263983/31/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:e8fbbc8b89c5090afca39a589278ad26 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.6682903" ;
+        mtp:hasEvidenceText  "On November 8, 2019, the Tennessee Historical Commission and the City of Harriman, Tennessee, unveiled a Tennessee State Historical Marker (1F 46) near Dixie's birthplace in the Walnut Hill section of downtown Harriman." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/E._H._Harriman> , <http://dbpedia.org/resource/Dixie> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Tennessee> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dixie_Lee> .
 
 <http://dbpedia.org/resource/Holmby_Hills,_Los_Angeles>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Holmby_Hills,_Los_Angeles> ;
-        mtp:hasLatitud        "34.0896"^^xsd:float ;
-        mtp:hasLongitud       "34.0896"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Holmby_Hills,_Los_Angeles> .
+
+<http://w3id.org/polifonia/pilot/meetups/3263983/9/3>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:ccfc4668eb2d3ffb7508555f92fd582c , meetup:9d37489d0dc3801455919cceb4b67e99 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.97815734" ;
+        mtp:hasEvidenceText  "In January 1951, Press reports indicated that Crosby had recently moved back into his Holmby Hills home with Dixie Lee." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Dixie_Lee> , <http://dbpedia.org/resource/Bing_Crosby> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Holmby_Hills,_Los_Angeles> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dixie_Lee> .
+
+<http://dbpedia.org/resource/Dixie>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dixie> .
 
 meetup:2bd6e8f8cb98f5ca6d01bf1a151e88be
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "November 3" .
 
+meetup:ccfc4668eb2d3ffb7508555f92fd582c
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "January 1951" .
+
+<http://dbpedia.org/resource/Bing_Crosby>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bing_Crosby> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+<http://dbpedia.org/resource/Holy_Cross_Cemetery,_Culver_City>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Holy_Cross_Cemetery,_Culver_City> .
+
+<http://dbpedia.org/resource/E._H._Harriman>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/E._H._Harriman> .
+
 meetup:9d37489d0dc3801455919cceb4b67e99
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "recently" .
 
-<http://dbpedia.org/resource/Holy_Cross_Cemetery,_Culver_City>
+<http://dbpedia.org/resource/Requiem>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Holy_Cross_Cemetery,_Culver_City> ;
-        mtp:hasLatitud        "33.9967"^^xsd:float ;
-        mtp:hasLongitud       "33.9967"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Requiem> .
 
-<http://w3id.org/polifonia/pilot/meetups/3263983/9/3>
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/3263983/9/6>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:ccfc4668eb2d3ffb7508555f92fd582c , meetup:9d37489d0dc3801455919cceb4b67e99 ;
-        mtp:hasEvidenceText  "In January 1951, Press reports indicated that Crosby had recently moved back into his Holmby Hills home with Dixie Lee." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Holmby_Hills,_Los_Angeles> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Culver_City,_California> , <http://dbpedia.org/resource/Holy_Cross_Cemetery,_Culver_City> , <http://dbpedia.org/resource/Tennessee> ;
+        mtp:happensAt        meetup:2bd6e8f8cb98f5ca6d01bf1a151e88be ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99976665" ;
+        mtp:hasEvidenceText  "She was interred in the Crosby plot at Holy Cross Cemetery in Culver City, California, after a Requiem High Mass at the Church of the Good Shepherd in Beverly Hills on November 3." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bing_Crosby> , <http://dbpedia.org/resource/Dixie_Lee> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Culver_City,_California> , <http://dbpedia.org/resource/Requiem> , <http://dbpedia.org/resource/Holy_Cross_Cemetery,_Culver_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Dixie_Lee> .
+
+meetup:e8fbbc8b89c5090afca39a589278ad26
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "November 8 , 2019" .
 
 meetup:339506465cc1f610968814873bbe002f
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "November 4 , 1909 – November 1 , 1952" .
 
+<http://dbpedia.org/resource/Culver_City,_California>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Culver_City,_California> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
 <http://dbpedia.org/resource/Tennessee>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tennessee> ;
-        mtp:hasLatitud        "36.0"^^xsd:float ;
-        mtp:hasLongitud       "36.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tennessee> .
 
-<http://w3id.org/polifonia/pilot/meetups/3263983/9/6>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:2bd6e8f8cb98f5ca6d01bf1a151e88be ;
-        mtp:hasEvidenceText  "She was interred in the Crosby plot at Holy Cross Cemetery in Culver City, California, after a Requiem High Mass at the Church of the Good Shepherd in Beverly Hills on November 3." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Dixie_Lee> .
+<http://dbpedia.org/resource/Dixie_Lee>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dixie_Lee> .

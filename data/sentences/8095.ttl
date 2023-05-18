@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,6 +8,11 @@
 @prefix time:   <http://www.w3.org/2006/time#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Computer_scientist>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Computer_scientist> .
 
 meetup:890311a9419feb0d7bbea9f5764629ea
         rdf:type             mtp:TimeExpression ;
@@ -17,12 +23,13 @@ meetup:890311a9419feb0d7bbea9f5764629ea
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Donald_Knuth> .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 meetup:faa0140ce48c1b1476576db0e8a38511
         rdf:type             mtp:TimeExpression ;
@@ -31,20 +38,34 @@ meetup:faa0140ce48c1b1476576db0e8a38511
 <http://w3id.org/polifonia/pilot/meetups/8095/33/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:890311a9419feb0d7bbea9f5764629ea ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99970067" ;
         mtp:hasEvidenceText  "Donald Knuth married Nancy Jill Carter on 24 June 1961, while he was a graduate student at the California Institute of Technology." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/California> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Donald_Knuth> , <http://dbpedia.org/resource/Jimmy_Carter> , <http://dbpedia.org/resource/Nancy_Reagan> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/California> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Donald_Knuth> .
 
 <http://dbpedia.org/resource/California>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/California> ;
-        mtp:hasLatitud        "35.491"^^xsd:float ;
-        mtp:hasLongitud       "35.491"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/California> .
+
+<http://dbpedia.org/resource/Nancy_Reagan>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nancy_Reagan> .
+
+<http://dbpedia.org/resource/Jimmy_Carter>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jimmy_Carter> .
 
 <http://w3id.org/polifonia/pilot/meetups/8095/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:faa0140ce48c1b1476576db0e8a38511 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.98947155" ;
         mtp:hasEvidenceText  "Donald Ervin Knuth ( kə-NOOTH; born January 10, 1938) is an American computer scientist, mathematician, and professor emeritus at Stanford University." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/California> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Computer_scientist> , <http://dbpedia.org/resource/Donald_Knuth> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Donald_Knuth> .

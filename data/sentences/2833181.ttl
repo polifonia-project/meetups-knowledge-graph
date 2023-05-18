@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,39 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/Merl_Saunders>
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Keyboard_instrument>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Merl_Saunders> .
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Keyboard_instrument> .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 meetup:4063af1a4aee615fa749a04f5085eca2
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "February 14 , 1934 – October 24 , 2008" .
 
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+<http://dbpedia.org/resource/Merl_Saunders>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Merl_Saunders> .
 
 <http://w3id.org/polifonia/pilot/meetups/2833181/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:4063af1a4aee615fa749a04f5085eca2 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.99609655" ;
         mtp:hasEvidenceText  "Merl Saunders (February 14, 1934 – October 24, 2008) was an American multi-genre musician who played piano and keyboards, favoring the Hammond B-3 console organ." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Keyboard_instrument> , <http://dbpedia.org/resource/Hammond_organ> , <http://dbpedia.org/resource/Merl_Saunders> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Merl_Saunders> .
+
+<http://dbpedia.org/resource/Hammond_organ>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hammond_organ> .

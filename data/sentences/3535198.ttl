@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,23 +12,68 @@
 <http://w3id.org/polifonia/pilot/meetups/3535198/0/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:ea5a486c712a91e48443cd802642223d ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99861825" ;
         mtp:hasEvidenceText  "Livaneli is known for his novels that interweave diverse social and historical backgrounds, figures, and incidents, such as in Bliss which won the Barnes & Noble's Discovery of Great New Writers Award in 2006, and in his Serenade for Nadia, Leyla's House, and My Brother's Story, which were all translated into 37 languages and won numerous Turkish and International literary awards." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Zülfü_Livaneli> , <http://dbpedia.org/resource/Arthur_Bliss> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Nadia_district> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Zülfü_Livaneli> .
 
-<http://w3id.org/polifonia/pilot/meetups/3535198/4/6>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d7a84628c025d30f7b2c52c958767e76 ;
-        mtp:hasEvidenceText  "In 2010, he sang 'Mothers of The Disappeared' with Bono at U2's concert in Istanbul, Turkey, which was U2's first-ever concert in Istanbul." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Zülfü_Livaneli> .
+<http://dbpedia.org/resource/Turkey>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Turkey> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Arthur_Bliss>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Arthur_Bliss> .
+
+<http://dbpedia.org/resource/Nadia_district>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nadia_district> .
+
+meetup:ea5a486c712a91e48443cd802642223d
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "2006" .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Helma_Sanders-Brahms>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Helma_Sanders-Brahms> .
 
 <http://dbpedia.org/resource/Zülfü_Livaneli>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Zülfü_Livaneli> .
 
-meetup:ea5a486c712a91e48443cd802642223d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2006" .
+<http://w3id.org/polifonia/pilot/meetups/3535198/4/6>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d7a84628c025d30f7b2c52c958767e76 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9989548" ;
+        mtp:hasEvidenceText  "In 2010, he sang 'Mothers of The Disappeared' with Bono at U2's concert in Istanbul, Turkey, which was U2's first-ever concert in Istanbul." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Helma_Sanders-Brahms> , <http://dbpedia.org/resource/Bono> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Turkey> , <http://dbpedia.org/resource/Istanbul> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zülfü_Livaneli> .
+
+<http://dbpedia.org/resource/Bono>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bono> .
+
+<http://dbpedia.org/resource/Istanbul>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Istanbul> .
 
 meetup:d7a84628c025d30f7b2c52c958767e76
         rdf:type             mtp:TimeExpression ;

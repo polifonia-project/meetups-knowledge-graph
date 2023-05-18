@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,24 +11,34 @@
 
 <http://dbpedia.org/resource/Blythburgh>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Blythburgh> ;
-        mtp:hasLatitud        "52.321"^^xsd:float ;
-        mtp:hasLongitud       "52.321"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Blythburgh> .
+
+<http://dbpedia.org/resource/Padraic_Colum>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Padraic_Colum> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
 
 <http://dbpedia.org/resource/Suffolk>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Suffolk> ;
-        mtp:hasLatitud        "52.1667"^^xsd:float ;
-        mtp:hasLongitud       "52.1667"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Suffolk> .
+
+<http://dbpedia.org/resource/Tony_Kushner>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tony_Kushner> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 <http://dbpedia.org/resource/Dunwich>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dunwich> ;
-        mtp:hasLatitud        "52.2769"^^xsd:float ;
-        mtp:hasLongitud       "52.2769"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dunwich> .
 
 meetup:39dcaf7a053dc372fbc391d4e6b5d693
         rdf:type             mtp:TimeExpression ;
@@ -44,23 +55,32 @@ meetup:7ec99afaa6f7fb8cd4b3814b6068fed9
 
 <http://dbpedia.org/resource/Dublin>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dublin> ;
-        mtp:hasLatitud        "53.35"^^xsd:float ;
-        mtp:hasLongitud       "53.35"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dublin> .
 
 <http://w3id.org/polifonia/pilot/meetups/1394504/8/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:da92e1da8997a1446dc825224d3cd5b7 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.7596064" ;
         mtp:hasEvidenceText  "Fedelma, mime ballet in one scene (February 1931); libretto: Padraic Colum, choreography: Ninette de Valois; costumes: Dolly Travers-Smith; Abbey Theatre Dublin" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Dublin> , <http://dbpedia.org/resource/Suffolk> , <http://dbpedia.org/resource/Dunwich> , <http://dbpedia.org/resource/Abbey_Theatre> , <http://dbpedia.org/resource/Blythburgh> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Padraic_Colum> , <http://dbpedia.org/resource/Ninette_de_Valois> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Dublin> , <http://dbpedia.org/resource/Abbey_Theatre> ;
         mtp:hasSubject       <http://dbpedia.org/resource/William_Alwyn> .
+
+<http://dbpedia.org/resource/Ninette_de_Valois>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ninette_de_Valois> .
 
 <http://w3id.org/polifonia/pilot/meetups/1394504/2/21>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:52e744e6f3564f1296af9d84f84743c0 , meetup:7ec99afaa6f7fb8cd4b3814b6068fed9 , meetup:39dcaf7a053dc372fbc391d4e6b5d693 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9930084" ;
         mtp:hasEvidenceText  "William Alwyn spent the last twenty-five years of his life at Lark Rise, Dunwich Road, Blythburgh, Suffolk, where he composed his Concerto Grosso no. 3 (1964) two operas, Juan, or the Libertine and  Miss Julie and his last major orchestral work, Symphony No. 5 Hydriotaphia (1972–73)." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Dublin> , <http://dbpedia.org/resource/Dunwich> , <http://dbpedia.org/resource/Suffolk> , <http://dbpedia.org/resource/Abbey_Theatre> , <http://dbpedia.org/resource/Blythburgh> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Tony_Kushner> , <http://dbpedia.org/resource/William_Alwyn> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Dunwich> , <http://dbpedia.org/resource/Suffolk> , <http://dbpedia.org/resource/Blythburgh> ;
         mtp:hasSubject       <http://dbpedia.org/resource/William_Alwyn> .
 
 meetup:da92e1da8997a1446dc825224d3cd5b7
@@ -73,7 +93,5 @@ meetup:52e744e6f3564f1296af9d84f84743c0
 
 <http://dbpedia.org/resource/Abbey_Theatre>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Abbey_Theatre> ;
-        mtp:hasLatitud        "53.3483"^^xsd:float ;
-        mtp:hasLongitud       "53.3483"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Abbey_Theatre> .

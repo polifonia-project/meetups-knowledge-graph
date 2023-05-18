@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,23 +12,30 @@
 <http://w3id.org/polifonia/pilot/meetups/1147577/2/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:7af6266cc52234b5aa339b16695f7fc4 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99980086" ;
         mtp:hasEvidenceText  "Rabbitt was born to Irish immigrants Thomas Michael and Mae (née Joyce) Rabbitt in Brooklyn, New York, in 1941, and was raised in the nearby community of East Orange, New Jersey." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_Jersey> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Brooklyn> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/James_Joyce> , <http://dbpedia.org/resource/Mae_Marsh> , <http://dbpedia.org/resource/Thomas_the_Apostle> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Brooklyn> , <http://dbpedia.org/resource/New_Jersey> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Rabbitt> .
+
+<http://dbpedia.org/resource/Mae_Marsh>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mae_Marsh> .
 
 <http://dbpedia.org/resource/Brooklyn>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Brooklyn> ;
-        mtp:hasLatitud        "40.6928"^^xsd:float ;
-        mtp:hasLongitud       "40.6928"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Brooklyn> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
 
 <http://dbpedia.org/resource/New_Jersey>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Jersey> ;
-        mtp:hasLatitud        "40.0"^^xsd:float ;
-        mtp:hasLongitud       "40.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Jersey> .
 
 meetup:7af6266cc52234b5aa339b16695f7fc4
         rdf:type             mtp:TimeExpression ;
@@ -35,12 +43,20 @@ meetup:7af6266cc52234b5aa339b16695f7fc4
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
 
 <http://dbpedia.org/resource/Eddie_Rabbitt>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Eddie_Rabbitt> .
+
+<http://dbpedia.org/resource/James_Joyce>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/James_Joyce> .
+
+<http://dbpedia.org/resource/Thomas_the_Apostle>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Thomas_the_Apostle> .

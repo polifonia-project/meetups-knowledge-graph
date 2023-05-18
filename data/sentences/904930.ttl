@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,99 +9,125 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://w3id.org/polifonia/pilot/meetups/904930/53/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:6b06b8b636b79c03f3e0902702d410b3 ;
-        mtp:hasEvidenceText  "Nancy Spero: Works Of The 1980s (Barbara Gross Galerie, Munich, Germany)" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Italy> , <http://dbpedia.org/resource/Germany> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Munich> , <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/Turin> , <http://dbpedia.org/resource/Nazi_Germany> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Nancy_Spero> .
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
 
-meetup:d47268e9db2e9aa3827bba3afb7ff94a
+meetup:03e7d2ebec1e820ac34d054df7e68f48
         rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2005" .
-
-<http://w3id.org/polifonia/pilot/meetups/904930/70/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d47268e9db2e9aa3827bba3afb7ff94a ;
-        mtp:hasEvidenceText  "Nancy Spero (Franco Soffiantino Gallery, Turin, Italy)2005" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Nazi_Germany> , <http://dbpedia.org/resource/Turin> , <http://dbpedia.org/resource/Germany> , <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/Munich> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Italy> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Nancy_Spero> .
-
-<http://w3id.org/polifonia/pilot/meetups/904930/92/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:dc513ea4fbdaa7a14786ffdebc4ef64e ;
-        mtp:hasEvidenceText  "Nancy Spero (Barbara Gross Galerie, Munich, Germany)1990" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Turin> , <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/Italy> , <http://dbpedia.org/resource/Nazi_Germany> , <http://dbpedia.org/resource/Germany> , <http://dbpedia.org/resource/Munich> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Nancy_Spero> .
-
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
-
-<http://dbpedia.org/resource/Italy>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Italy> ;
-        mtp:hasLatitud        "41.9"^^xsd:float ;
-        mtp:hasLongitud       "41.9"^^xsd:float .
-
-<http://dbpedia.org/resource/Nazi_Germany>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nazi_Germany> ;
-        mtp:hasLatitud        "52.5167"^^xsd:float ;
-        mtp:hasLongitud       "52.5167"^^xsd:float .
-
-meetup:dc513ea4fbdaa7a14786ffdebc4ef64e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1990" .
-
-<http://dbpedia.org/resource/Turin>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Turin> ;
-        mtp:hasLatitud        "45.0792"^^xsd:float ;
-        mtp:hasLongitud       "45.0792"^^xsd:float .
+        mtp:hasEvidenceText  "1950" .
 
 <http://dbpedia.org/resource/Nancy_Spero>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nancy_Spero> .
 
-meetup:03e7d2ebec1e820ac34d054df7e68f48
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1950" .
+<http://w3id.org/polifonia/pilot/meetups/904930/70/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d47268e9db2e9aa3827bba3afb7ff94a ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.8808612" ;
+        mtp:hasEvidenceText  "Nancy Spero (Franco Soffiantino Gallery, Turin, Italy)2005" ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Francisco_Franco> , <http://dbpedia.org/resource/Nancy_Spero> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Turin> , <http://dbpedia.org/resource/Italy> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nancy_Spero> .
 
-<http://dbpedia.org/resource/Germany>
+<http://dbpedia.org/resource/Leon_Golub>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Leon_Golub> .
+
+<http://w3id.org/polifonia/pilot/meetups/904930/92/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:dc513ea4fbdaa7a14786ffdebc4ef64e ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.91849405" ;
+        mtp:hasEvidenceText  "Nancy Spero (Barbara Gross Galerie, Munich, Germany)1990" ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Nancy_Spero> , <http://dbpedia.org/resource/Barbara_Gross> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Germany> , <http://dbpedia.org/resource/Munich> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nancy_Spero> .
+
+<http://dbpedia.org/resource/Chicago>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Germany> ;
-        mtp:hasLatitud        "51.0"^^xsd:float ;
-        mtp:hasLongitud       "51.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> .
 
 meetup:6b06b8b636b79c03f3e0902702d410b3
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "Of The 1980s" .
 
-<http://dbpedia.org/resource/Chicago>
+<http://w3id.org/polifonia/pilot/meetups/904930/53/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:6b06b8b636b79c03f3e0902702d410b3 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.9909136" ;
+        mtp:hasEvidenceText  "Nancy Spero: Works Of The 1980s (Barbara Gross Galerie, Munich, Germany)" ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Nancy_Spero> , <http://dbpedia.org/resource/Barbara_Gross> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Munich> , <http://dbpedia.org/resource/Nazi_Germany> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nancy_Spero> .
+
+<http://dbpedia.org/resource/Turin>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> ;
-        mtp:hasLatitud        "41.8819"^^xsd:float ;
-        mtp:hasLongitud       "41.8819"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Turin> .
+
+<http://dbpedia.org/resource/Gene_H._Golub>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gene_H._Golub> .
+
+meetup:d47268e9db2e9aa3827bba3afb7ff94a
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "2005" .
+
+<http://dbpedia.org/resource/Italy>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Italy> .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 <http://w3id.org/polifonia/pilot/meetups/904930/2/6>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:03e7d2ebec1e820ac34d054df7e68f48 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.8848463" ;
         mtp:hasEvidenceText  "Soon after her return to the United States in 1950, she married Leon Golub, and the two artists settled in Chicago." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Gene_H._Golub> , <http://dbpedia.org/resource/Leon_Golub> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Chicago> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Nancy_Spero> .
+
+<http://dbpedia.org/resource/Francisco_Franco>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Francisco_Franco> .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Germany>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Germany> .
+
+<http://dbpedia.org/resource/Barbara_Gross>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Barbara_Gross> .
+
+<http://dbpedia.org/resource/Nazi_Germany>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nazi_Germany> .
 
 <http://dbpedia.org/resource/Munich>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Munich> ;
-        mtp:hasLatitud        "48.1375"^^xsd:float ;
-        mtp:hasLongitud       "48.1375"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Munich> .
+
+meetup:dc513ea4fbdaa7a14786ffdebc4ef64e
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1990" .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,39 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:10732f7825764f167d4606139e7eb167
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "July 22 , 1937" .
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+<http://w3id.org/polifonia/pilot/meetups/2974145/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:10732f7825764f167d4606139e7eb167 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.994169" ;
+        mtp:hasEvidenceText  "Chuck Jackson (born July 22, 1937) is an American R&B singer who was one of the first artists to record material by Burt Bacharach and Hal David successfully." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Hal_David> , <http://dbpedia.org/resource/Chuck_Jackson> , <http://dbpedia.org/resource/Burt_Bacharach> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Jackson> .
+
+<http://dbpedia.org/resource/Burt_Bacharach>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Burt_Bacharach> .
+
+<http://dbpedia.org/resource/Hal_David>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hal_David> .
+
+meetup:10732f7825764f167d4606139e7eb167
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "July 22 , 1937" .
 
 <http://dbpedia.org/resource/Chuck_Jackson>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chuck_Jackson> .
-
-<http://w3id.org/polifonia/pilot/meetups/2974145/0/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:10732f7825764f167d4606139e7eb167 ;
-        mtp:hasEvidenceText  "Chuck Jackson (born July 22, 1937) is an American R&B singer who was one of the first artists to record material by Burt Bacharach and Hal David successfully." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Jackson> .

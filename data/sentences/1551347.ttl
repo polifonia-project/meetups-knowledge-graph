@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,15 +9,31 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://w3id.org/polifonia/pilot/meetups/1551347/6/6>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d77f00766fd3be3f2189c843a6af3fb2 ;
-        mtp:hasEvidenceText  "She portrayed Moselle Corey on Annette (1958) starring Annette Funicello." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Shelley_Fabares> .
+<http://dbpedia.org/resource/Annette_Funicello>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Annette_Funicello> .
+
+<http://dbpedia.org/resource/Moselle>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Moselle> .
 
 meetup:c8c012313f10e2d0830f3fbc5afca619
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "Midnight" .
+
+<http://dbpedia.org/resource/Jeanne_Eagels_(film)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jeanne_Eagels_(film)> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 meetup:d77f00766fd3be3f2189c843a6af3fb2
         rdf:type             mtp:TimeExpression ;
@@ -30,5 +47,29 @@ meetup:d77f00766fd3be3f2189c843a6af3fb2
 <http://w3id.org/polifonia/pilot/meetups/1551347/6/5>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:c8c012313f10e2d0830f3fbc5afca619 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.960369" ;
         mtp:hasEvidenceText  "On TV she was in Captain Midnight, Annie Oakley, Fury, and Colgate Theatre." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jeanne_Eagels_(film)> , <http://dbpedia.org/resource/Annie_Oakley> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Midnight> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shelley_Fabares> .
+
+<http://dbpedia.org/resource/Annie_Oakley>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Annie_Oakley> .
+
+<http://dbpedia.org/resource/Midnight>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Midnight> .
+
+<http://w3id.org/polifonia/pilot/meetups/1551347/6/6>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d77f00766fd3be3f2189c843a6af3fb2 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.86055833" ;
+        mtp:hasEvidenceText  "She portrayed Moselle Corey on Annette (1958) starring Annette Funicello." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jeanne_Eagels_(film)> , <http://dbpedia.org/resource/Annette_Funicello> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Moselle> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Shelley_Fabares> .

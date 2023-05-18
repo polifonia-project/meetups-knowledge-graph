@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,19 +9,28 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/George_Washington>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Washington> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Bob_Fosse>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bob_Fosse> .
+
 <http://dbpedia.org/resource/Willard_InterContinental_Washington>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Willard_InterContinental_Washington> ;
-        mtp:hasLatitud        "38.8967"^^xsd:float ;
-        mtp:hasLongitud       "38.8967"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Willard_InterContinental_Washington> .
 
 <http://dbpedia.org/resource/Washington,_D.C.>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Washington,_D.C.> ;
-        mtp:hasLatitud        "38.9047"^^xsd:float ;
-        mtp:hasLongitud       "38.9047"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Washington,_D.C.> .
 
 meetup:d784ae09715d09ec0ceb622ab21fa6c9
         rdf:type             mtp:TimeExpression ;
@@ -34,6 +44,9 @@ meetup:d784ae09715d09ec0ceb622ab21fa6c9
 <http://w3id.org/polifonia/pilot/meetups/55608/16/7>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:d784ae09715d09ec0ceb622ab21fa6c9 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "1.0" ;
         mtp:hasEvidenceText  "Verdon was with Fosse when he suffered a fatal heart attack at the Willard Hotel in Washington, D.C., in September 1987." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Washington,_D.C.> , <http://dbpedia.org/resource/Willard_InterContinental_Washington> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bob_Fosse> , <http://dbpedia.org/resource/George_Washington> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Willard_InterContinental_Washington> , <http://dbpedia.org/resource/Washington,_D.C.> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gwen_Verdon> .

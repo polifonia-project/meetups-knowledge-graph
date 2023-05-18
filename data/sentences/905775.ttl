@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,24 +9,48 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Electric_guitar>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Electric_guitar> .
+
 <http://dbpedia.org/resource/Seine>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Seine> ;
-        mtp:hasLatitud        "49.4339"^^xsd:float ;
-        mtp:hasLongitud       "49.4339"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Seine> .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Keyboard_instrument>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Keyboard_instrument> .
 
 <http://dbpedia.org/resource/Conny_Plank>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Conny_Plank> .
 
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+<http://dbpedia.org/resource/Patrick_Cantlay>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Patrick_Cantlay> .
+
+<http://dbpedia.org/resource/Philip_II_of_Spain>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Philip_II_of_Spain> .
+
+<http://dbpedia.org/resource/Conga>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Conga> .
 
 meetup:0004d0b59e19461ff126e3a08a814c33
         rdf:type             mtp:TimeExpression ;
@@ -35,37 +60,40 @@ meetup:ab75a9b47e8778c9fea2910aee6b64a2
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "43 Minuten" .
 
+meetup:education  rdf:type  mtp:Purpose ;
+        rdfs:label  "Education" .
+
 <http://w3id.org/polifonia/pilot/meetups/905775/6/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:0004d0b59e19461ff126e3a08a814c33 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9999889" ;
         mtp:hasEvidenceText  "On a recording session in Hamburg in 1970 with Hartmut Kulka from the German Blue Flames & Philip Cantlay of Casey Jones & the Governors/Gaslight Union, together known as Kulka & Cantlay, he set up and recorded conga drums with specially inserted microphones to provide an unusual percussion sound." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Hamburg> , <http://dbpedia.org/resource/Kang_Guru> , <http://dbpedia.org/resource/Germany> , <http://dbpedia.org/resource/Seine> , <http://dbpedia.org/resource/United_States> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Patrick_Cantlay> , <http://dbpedia.org/resource/Philip_II_of_Spain> , <http://dbpedia.org/resource/Conga> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Hamburg> , <http://dbpedia.org/resource/Germany> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Conny_Plank> .
 
 <http://dbpedia.org/resource/Kang_Guru>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kang_Guru> ;
-        mtp:hasLatitud        "28.6575"^^xsd:float ;
-        mtp:hasLongitud       "28.6575"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kang_Guru> .
 
 <http://dbpedia.org/resource/Germany>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Germany> ;
-        mtp:hasLatitud        "51.0"^^xsd:float ;
-        mtp:hasLongitud       "51.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Germany> .
 
 <http://dbpedia.org/resource/Hamburg>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hamburg> ;
-        mtp:hasLatitud        "53.55"^^xsd:float ;
-        mtp:hasLongitud       "53.55"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hamburg> .
 
 <http://w3id.org/polifonia/pilot/meetups/905775/13/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:ab75a9b47e8778c9fea2910aee6b64a2 ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.999622" ;
         mtp:hasEvidenceText  "As a musician, Plank played guitar and keyboards on three Guru Guru albums: Kang Guru, Guru Guru, and Mani und Seine Freunde, the Os Mundi album 43 Minuten, and Cluster's self-titled debut album." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Hamburg> , <http://dbpedia.org/resource/Kang_Guru> , <http://dbpedia.org/resource/Germany> , <http://dbpedia.org/resource/Seine> , <http://dbpedia.org/resource/United_States> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Electric_guitar> , <http://dbpedia.org/resource/Keyboard_instrument> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Kang_Guru> , <http://dbpedia.org/resource/Seine> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Conny_Plank> .

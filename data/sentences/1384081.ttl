@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,9 +12,28 @@
 <http://w3id.org/polifonia/pilot/meetups/1384081/20/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:405e28906322882c5be9b4b27f4c35fd , meetup:1113d7a76ffceca1bb350bfe145467c6 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.992607" ;
         mtp:hasEvidenceText  "With Wardell Gray Live in Hollywood (Xanadu 1952 [1978])With Barney Kessel" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Bethlehem> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Wardell_Gray> , <http://dbpedia.org/resource/Barney_Kessel> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Hollywood> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Hampton_Hawes> .
+
+<http://dbpedia.org/resource/Red_Mitchell>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Red_Mitchell> .
+
+<http://dbpedia.org/resource/Art_Pepper>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Art_Pepper> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 <http://dbpedia.org/resource/Hampton_Hawes>
         rdf:type              mtp:Participant ;
@@ -24,24 +44,40 @@ meetup:405e28906322882c5be9b4b27f4c35fd
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1978" .
 
+<http://dbpedia.org/resource/Barney_Kessel>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Barney_Kessel> .
+
 meetup:378a063b8fdb1db941e34f4bde584c7d
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1955" .
 
 <http://dbpedia.org/resource/Bethlehem>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bethlehem> ;
-        mtp:hasLatitud        "31.7031"^^xsd:float ;
-        mtp:hasLongitud       "31.7031"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bethlehem> .
 
 <http://w3id.org/polifonia/pilot/meetups/1384081/26/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:378a063b8fdb1db941e34f4bde584c7d ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.90345395" ;
         mtp:hasEvidenceText  "Red Mitchell (Bethlehem, 1955)With Art Pepper" ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Red_Mitchell> , <http://dbpedia.org/resource/Art_Pepper> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Bethlehem> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Hampton_Hawes> .
 
 meetup:1113d7a76ffceca1bb350bfe145467c6
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1952" .
+
+<http://dbpedia.org/resource/Hollywood>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hollywood> .
+
+<http://dbpedia.org/resource/Wardell_Gray>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Wardell_Gray> .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,39 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:7dc592aa47c2db099a5a2aa592a5df74
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "July 17 , 1922 – October 25 , 1994" .
+<http://dbpedia.org/resource/Irene_of_Athens>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Irene_of_Athens> .
 
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
-<http://w3id.org/polifonia/pilot/meetups/2351271/0/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:7dc592aa47c2db099a5a2aa592a5df74 ;
-        mtp:hasEvidenceText  "Lillian Irene Hayman (July 17, 1922 – October 25, 1994) was an American actress and singer." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Lillian_Hayman> .
+<http://dbpedia.org/resource/Darren_Hayman>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Darren_Hayman> .
 
 <http://dbpedia.org/resource/Lillian_Hayman>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lillian_Hayman> .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+<http://w3id.org/polifonia/pilot/meetups/2351271/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:7dc592aa47c2db099a5a2aa592a5df74 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.92941767" ;
+        mtp:hasEvidenceText  "Lillian Irene Hayman (July 17, 1922 – October 25, 1994) was an American actress and singer." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Darren_Hayman> , <http://dbpedia.org/resource/Irene_of_Athens> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lillian_Hayman> .
+
+meetup:7dc592aa47c2db099a5a2aa592a5df74
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "July 17 , 1922 – October 25 , 1994" .

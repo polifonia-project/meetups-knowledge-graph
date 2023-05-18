@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,12 +14,39 @@
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chico_Hamilton> .
 
-<http://w3id.org/polifonia/pilot/meetups/559163/3/4>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:1113d7a76ffceca1bb350bfe145467c6 ;
-        mtp:hasEvidenceText  "Hamilton also performed on the soundtrack of the Bing Crosby and Bob Hope film Road to Bali (1952)." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Chico_Hamilton> .
+<http://dbpedia.org/resource/Bing_Crosby>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bing_Crosby> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Bob_Hope>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bob_Hope> .
+
+<http://dbpedia.org/resource/Bernie_Hamilton>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bernie_Hamilton> .
 
 meetup:1113d7a76ffceca1bb350bfe145467c6
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1952" .
+
+<http://dbpedia.org/resource/Bali>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bali> .
+
+<http://w3id.org/polifonia/pilot/meetups/559163/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:1113d7a76ffceca1bb350bfe145467c6 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.99968386" ;
+        mtp:hasEvidenceText  "Hamilton also performed on the soundtrack of the Bing Crosby and Bob Hope film Road to Bali (1952)." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bernie_Hamilton> , <http://dbpedia.org/resource/Bob_Hope> , <http://dbpedia.org/resource/Bing_Crosby> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Bali> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chico_Hamilton> .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,17 +9,46 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Margaret_Tudor>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Margaret_Tudor> .
+
 <http://w3id.org/polifonia/pilot/meetups/2232977/8/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:0004d0b59e19461ff126e3a08a814c33 , meetup:98c7242894844ecd6ec94af67ac8247d ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.748723" ;
         mtp:hasEvidenceText  "Bubbling Under Hot 100, 1968, later a hit for Barbra Streisand in 1970) and \"Lu\" (1970), both written by Laura Nyro." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Barbra_Streisand> , <http://dbpedia.org/resource/Laura_Nyro> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Lu_(state)> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peggy_Lipton> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Barbra_Streisand>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Barbra_Streisand> .
+
+<http://dbpedia.org/resource/Julius_and_Ethel_Rosenberg>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Julius_and_Ethel_Rosenberg> .
 
 <http://dbpedia.org/resource/Peggy_Lipton>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Peggy_Lipton> .
+
+<http://dbpedia.org/resource/Laura_Nyro>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Laura_Nyro> .
 
 meetup:0004d0b59e19461ff126e3a08a814c33
         rdf:type             mtp:TimeExpression ;
@@ -26,15 +56,21 @@ meetup:0004d0b59e19461ff126e3a08a814c33
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
+<http://dbpedia.org/resource/Lu_(state)>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lu_(state)> .
 
 <http://w3id.org/polifonia/pilot/meetups/2232977/3/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:ccb7f4418a30da3cd27844b2d447b913 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.98539937" ;
         mtp:hasEvidenceText  "Lipton was born Margaret Ann Lipton into an upper middle-class Jewish family in New York City on August 30, 1946, the daughter of artist Rita Benson (born Rita Hetty Rosenberg) and corporate lawyer Harold Lipton." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Margaret_Tudor> , <http://dbpedia.org/resource/Julius_and_Ethel_Rosenberg> ;
         mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peggy_Lipton> .
 

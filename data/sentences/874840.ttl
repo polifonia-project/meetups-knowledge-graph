@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,84 +9,124 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://w3id.org/polifonia/pilot/meetups/874840/5/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:98c7242894844ecd6ec94af67ac8247d ;
-        mtp:hasEvidenceText  "Motown president Berry Gordy discovered the 24-year-old Terrell in 1968 in Miami, Florida where she was performing with her brother at a club." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Las_Vegas> , <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Florida> , <http://dbpedia.org/resource/Belzoni,_Mississippi> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Jean_Terrell> .
-
 <http://dbpedia.org/resource/Las_Vegas>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Las_Vegas> ;
-        mtp:hasLatitud        "36.175"^^xsd:float ;
-        mtp:hasLongitud       "36.175"^^xsd:float .
-
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
-
-<http://w3id.org/polifonia/pilot/meetups/874840/3/1>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:db18d5695ce6af72ce2650e0cc73ff58 ;
-        mtp:hasEvidenceText  "Moving from Belzoni, Mississippi to Chicago for a better life at an early age, Jean Terrell was guided by her family to sing, and it was in the late 1960s that she and her brother formed a group called Ernie Terrell and the Heavyweights." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Las_Vegas> , <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Florida> , <http://dbpedia.org/resource/Belzoni,_Mississippi> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Jean_Terrell> .
-
-meetup:80efe7551dfc9a2c28c78018d09d81ae
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "January 14 , 1970" .
-
-<http://w3id.org/polifonia/pilot/meetups/874840/6/2>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:80efe7551dfc9a2c28c78018d09d81ae ;
-        mtp:hasEvidenceText  "After Ross's farewell show with the group at the Frontier Hotel in Las Vegas on January 14, 1970, Terrell joined the group on stage to be presented to the press and public." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Jean_Terrell> .
-
-<http://dbpedia.org/resource/Florida>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Florida> ;
-        mtp:hasLatitud        "28.0"^^xsd:float ;
-        mtp:hasLongitud       "28.0"^^xsd:float .
-
-<http://dbpedia.org/resource/Belzoni,_Mississippi>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Belzoni,_Mississippi> ;
-        mtp:hasLatitud        "33.1817"^^xsd:float ;
-        mtp:hasLongitud       "33.1817"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Las_Vegas> .
 
 <http://dbpedia.org/resource/Jean_Terrell>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jean_Terrell> .
 
-meetup:db18d5695ce6af72ce2650e0cc73ff58
+<http://w3id.org/polifonia/pilot/meetups/874840/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:98c7242894844ecd6ec94af67ac8247d ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "1.0" ;
+        mtp:hasEvidenceText  "Motown president Berry Gordy discovered the 24-year-old Terrell in 1968 in Miami, Florida where she was performing with her brother at a club." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Ernie_Terrell> , <http://dbpedia.org/resource/Berry_Gordy> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Florida> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jean_Terrell> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+meetup:98c7242894844ecd6ec94af67ac8247d
         rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the late 1960s" .
+        mtp:hasEvidenceText  "1968" .
+
+meetup:80efe7551dfc9a2c28c78018d09d81ae
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "January 14 , 1970" .
+
+<http://w3id.org/polifonia/pilot/meetups/874840/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:db18d5695ce6af72ce2650e0cc73ff58 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.999982" ;
+        mtp:hasEvidenceText  "Moving from Belzoni, Mississippi to Chicago for a better life at an early age, Jean Terrell was guided by her family to sing, and it was in the late 1960s that she and her brother formed a group called Ernie Terrell and the Heavyweights." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jean_Terrell> , <http://dbpedia.org/resource/Ernie_Terrell> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/Belzoni,_Mississippi> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jean_Terrell> .
+
+<http://dbpedia.org/resource/Berry_Gordy>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Berry_Gordy> .
+
+<http://dbpedia.org/resource/Chicago>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> .
+
+<http://dbpedia.org/resource/Mary_Church_Terrell>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mary_Church_Terrell> .
+
+<http://dbpedia.org/resource/Terrell_Edmunds>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Terrell_Edmunds> .
+
+<http://w3id.org/polifonia/pilot/meetups/874840/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:3f4c76f9bb1c1c501ed21dd73e716fbd ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.9804339" ;
+        mtp:hasEvidenceText  "In the early 1980s Terrell put together a one-woman show and did limited touring throughout the United States." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Terrell_Edmunds> , <http://dbpedia.org/resource/Mary_Church_Terrell> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jean_Terrell> .
 
 meetup:3f4c76f9bb1c1c501ed21dd73e716fbd
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the early 1980s" .
 
-<http://dbpedia.org/resource/Chicago>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> ;
-        mtp:hasLatitud        "41.8819"^^xsd:float ;
-        mtp:hasLongitud       "41.8819"^^xsd:float .
+<http://dbpedia.org/resource/Diana_Ross>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Diana_Ross> .
 
-<http://w3id.org/polifonia/pilot/meetups/874840/9/1>
+<http://dbpedia.org/resource/Florida>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Florida> .
+
+<http://w3id.org/polifonia/pilot/meetups/874840/6/2>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:3f4c76f9bb1c1c501ed21dd73e716fbd ;
-        mtp:hasEvidenceText  "In the early 1980s Terrell put together a one-woman show and did limited touring throughout the United States." ;
+        mtp:happensAt        meetup:80efe7551dfc9a2c28c78018d09d81ae ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.9593123" ;
+        mtp:hasEvidenceText  "After Ross's farewell show with the group at the Frontier Hotel in Las Vegas on January 14, 1970, Terrell joined the group on stage to be presented to the press and public." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Diana_Ross> , <http://dbpedia.org/resource/Ernie_Terrell> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Las_Vegas> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jean_Terrell> .
 
-meetup:98c7242894844ecd6ec94af67ac8247d
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Ernie_Terrell>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ernie_Terrell> .
+
+meetup:db18d5695ce6af72ce2650e0cc73ff58
         rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1968" .
+        mtp:hasEvidenceText  "the late 1960s" .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Belzoni,_Mississippi>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Belzoni,_Mississippi> .

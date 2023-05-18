@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,37 +9,19 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/River_Trent>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/River_Trent> ;
-        mtp:hasLatitud        "53.1161"^^xsd:float ;
-        mtp:hasLongitud       "53.1161"^^xsd:float .
-
-<http://dbpedia.org/resource/Staffordshire>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Staffordshire> ;
-        mtp:hasLatitud        "52.8333"^^xsd:float ;
-        mtp:hasLongitud       "52.8333"^^xsd:float .
-
-<http://dbpedia.org/resource/Burton_upon_Trent>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Burton_upon_Trent> ;
-        mtp:hasLatitud        "52.8019"^^xsd:float ;
-        mtp:hasLongitud       "52.8019"^^xsd:float .
-
-<http://w3id.org/polifonia/pilot/meetups/2888557/4/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:5bce843dd76db8c939d5323dd3e54ec9 , meetup:d7c1df3a0298c65f9abfefc24fe7d24f ;
-        mtp:hasEvidenceText  "In 1928, she was an unknown member of the black chorus in the London production of Show Boat, but she had become the toast of Paris by the 1930s, with admirers who included Ernest Hemingway, Gertrude Stein, F. Scott Fitzgerald, and Cole Porter." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Paris> , <http://dbpedia.org/resource/River_Trent> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Staffordshire> , <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/Burton_upon_Trent> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Mabel_Mercer> .
-
 meetup:d7c1df3a0298c65f9abfefc24fe7d24f
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the 1930s" .
+
+<http://dbpedia.org/resource/Staffordshire>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Staffordshire> .
+
+<http://dbpedia.org/resource/Mabel_Mercer>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mabel_Mercer> .
 
 meetup:f98de843d2136393cfb74c89c78639f3
         rdf:type             mtp:TimeExpression ;
@@ -46,47 +29,104 @@ meetup:f98de843d2136393cfb74c89c78639f3
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
+<http://w3id.org/polifonia/pilot/meetups/2888557/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:5bce843dd76db8c939d5323dd3e54ec9 , meetup:d7c1df3a0298c65f9abfefc24fe7d24f ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9825052" ;
+        mtp:hasEvidenceText  "In 1928, she was an unknown member of the black chorus in the London production of Show Boat, but she had become the toast of Paris by the 1930s, with admirers who included Ernest Hemingway, Gertrude Stein, F. Scott Fitzgerald, and Cole Porter." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Walter_Scott> , <http://dbpedia.org/resource/Gertrude_Stein> , <http://dbpedia.org/resource/Ernest_Hemingway> , <http://dbpedia.org/resource/Cole_Porter> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Paris> , <http://dbpedia.org/resource/London> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mabel_Mercer> .
+
+<http://dbpedia.org/resource/Walter_Scott>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Walter_Scott> .
+
+<http://dbpedia.org/resource/London>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .
+
+<http://dbpedia.org/resource/Gertrude_Stein>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gertrude_Stein> .
+
+<http://w3id.org/polifonia/pilot/meetups/2888557/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:f98de843d2136393cfb74c89c78639f3 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99986815" ;
+        mtp:hasEvidenceText  "Mabel Mercer was born on 3 February 1900 in Burton upon Trent, Staffordshire, England." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Johnny_Mercer> , <http://dbpedia.org/resource/England> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Burton_upon_Trent> , <http://dbpedia.org/resource/Staffordshire> , <http://dbpedia.org/resource/River_Trent> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mabel_Mercer> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Johnny_Mercer>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Johnny_Mercer> .
+
+<http://w3id.org/polifonia/pilot/meetups/2888557/4/4>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:db18d5695ce6af72ce2650e0cc73ff58 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.8884862" ;
+        mtp:hasEvidenceText  "In the late 1960s, she gave two concerts with Bobby Short at Town Hall in New York City." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Johnny_Mercer> , <http://dbpedia.org/resource/Bobby_Short> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mabel_Mercer> .
+
+<http://dbpedia.org/resource/Burton_upon_Trent>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Burton_upon_Trent> .
+
+<http://dbpedia.org/resource/Paris>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paris> .
+
+<http://dbpedia.org/resource/Ernest_Hemingway>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ernest_Hemingway> .
+
+<http://dbpedia.org/resource/Cole_Porter>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cole_Porter> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Bobby_Short>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bobby_Short> .
 
 meetup:5bce843dd76db8c939d5323dd3e54ec9
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1928" .
 
-<http://w3id.org/polifonia/pilot/meetups/2888557/4/4>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:db18d5695ce6af72ce2650e0cc73ff58 ;
-        mtp:hasEvidenceText  "In the late 1960s, she gave two concerts with Bobby Short at Town Hall in New York City." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Mabel_Mercer> .
-
-<http://dbpedia.org/resource/London>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> ;
-        mtp:hasLatitud        "51.5072"^^xsd:float ;
-        mtp:hasLongitud       "51.5072"^^xsd:float .
-
 meetup:db18d5695ce6af72ce2650e0cc73ff58
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the late 1960s" .
 
-<http://w3id.org/polifonia/pilot/meetups/2888557/2/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:f98de843d2136393cfb74c89c78639f3 ;
-        mtp:hasEvidenceText  "Mabel Mercer was born on 3 February 1900 in Burton upon Trent, Staffordshire, England." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Burton_upon_Trent> , <http://dbpedia.org/resource/Staffordshire> , <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Paris> , <http://dbpedia.org/resource/River_Trent> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Mabel_Mercer> .
-
-<http://dbpedia.org/resource/Mabel_Mercer>
+<http://dbpedia.org/resource/England>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mabel_Mercer> .
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
 
-<http://dbpedia.org/resource/Paris>
+<http://dbpedia.org/resource/River_Trent>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paris> ;
-        mtp:hasLatitud        "48.8566"^^xsd:float ;
-        mtp:hasLongitud       "48.8566"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/River_Trent> .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,19 +9,34 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Greg_Monroe>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Greg_Monroe> .
+
 <http://dbpedia.org/resource/Nashville,_Tennessee>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nashville,_Tennessee> ;
-        mtp:hasLatitud        "36.1622"^^xsd:float ;
-        mtp:hasLongitud       "36.1622"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nashville,_Tennessee> .
+
+<http://dbpedia.org/resource/Erick_Rowan>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Erick_Rowan> .
 
 <http://dbpedia.org/resource/United_Kingdom>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Rhythm_guitar>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Rhythm_guitar> .
 
 meetup:50b5258a1726c8dd8164cf2824f4d4a2
         rdf:type             mtp:TimeExpression ;
@@ -29,7 +45,11 @@ meetup:50b5258a1726c8dd8164cf2824f4d4a2
 <http://w3id.org/polifonia/pilot/meetups/2464424/2/7>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:50b5258a1726c8dd8164cf2824f4d4a2 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.98813385" ;
         mtp:hasEvidenceText  "Accompanied by Keith, Rowan went to Nashville and was hired in 1963 or 1964 as songwriter, rhythm guitarist and lead vocalist of Monroe's Bluegrass Boys." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bill_Keith_(musician)> , <http://dbpedia.org/resource/Greg_Monroe> , <http://dbpedia.org/resource/Rhythm_guitar> , <http://dbpedia.org/resource/Peter_Rowan> , <http://dbpedia.org/resource/Erick_Rowan> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Nashville,_Tennessee> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peter_Rowan> .
 
 <http://dbpedia.org/resource/Peter_Rowan>
@@ -37,12 +57,28 @@ meetup:50b5258a1726c8dd8164cf2824f4d4a2
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Peter_Rowan> .
 
+<http://dbpedia.org/resource/Richard_Clement_Moody>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Richard_Clement_Moody> .
+
+meetup:education  rdf:type  mtp:Purpose ;
+        rdfs:label  "Education" .
+
 <http://w3id.org/polifonia/pilot/meetups/2464424/4/7>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:af55593229a8a020940d3adf3db60f75 ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.9994066" ;
         mtp:hasEvidenceText  "Rowan contributed to the 2011 bluegrass tribute album to the British progressive rock band the Moody Blues, entitled Moody Bluegrass TWO..." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Nashville,_Tennessee> , <http://dbpedia.org/resource/United_Kingdom> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Peter_Rowan> , <http://dbpedia.org/resource/Richard_Clement_Moody> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Peter_Rowan> .
+
+<http://dbpedia.org/resource/Bill_Keith_(musician)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bill_Keith_(musician)> .
 
 meetup:af55593229a8a020940d3adf3db60f75
         rdf:type             mtp:TimeExpression ;

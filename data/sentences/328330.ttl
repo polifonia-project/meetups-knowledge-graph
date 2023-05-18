@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,6 +8,11 @@
 @prefix time:   <http://www.w3.org/2006/time#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/George_Gershwin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Gershwin> .
 
 meetup:bd49f26b9b2957991829d632142d147b
         rdf:type             mtp:TimeExpression ;
@@ -16,33 +22,70 @@ meetup:1dd1c5fb7f25cd41b291d43a89e3aefd
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "Today" .
 
+<http://dbpedia.org/resource/Robert_E._Lee>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Robert_E._Lee> .
+
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
+<http://dbpedia.org/resource/Randy_Newman>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Randy_Newman> .
+
+<http://dbpedia.org/resource/Burt_Bacharach>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Burt_Bacharach> .
+
+<http://dbpedia.org/resource/Eddie_Cochran>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Eddie_Cochran> .
 
 <http://w3id.org/polifonia/pilot/meetups/328330/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:bd49f26b9b2957991829d632142d147b , meetup:7ed2a6a93418c06eb6f603b37d4d4345 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9678216" ;
         mtp:hasEvidenceText  "Jackie DeShannon (born Sharon Lee Myers, August 21, 1941) is an American singer-songwriter with a string of hit song credits from the 1960s onwards, as both singer and composer." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Sherry> , <http://dbpedia.org/resource/Canada> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Illinois> , <http://dbpedia.org/resource/California> , <http://dbpedia.org/resource/River_Shannon> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jackie_DeShannon> , <http://dbpedia.org/resource/Sharon_Lee_(writer)> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jackie_DeShannon> .
+
+<http://dbpedia.org/resource/Sharon_Lee_(writer)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sharon_Lee_(writer)> .
 
 <http://dbpedia.org/resource/Canada>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Canada> ;
-        mtp:hasLatitud        "45.4"^^xsd:float ;
-        mtp:hasLongitud       "45.4"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Canada> .
+
+<http://dbpedia.org/resource/Sharon_Sheeley>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sharon_Sheeley> .
 
 <http://w3id.org/polifonia/pilot/meetups/328330/8/4>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:7f16109f1619fd7a733daf5a84c708c1 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.99351525" ;
         mtp:hasEvidenceText  "However, her interpretations of country songs \"Buddy\" (as Jackie Dee) and \"Trouble\" (as Jackie Shannon) gained the attention of rock and roll star Eddie Cochran, who arranged for her to travel to California to meet his girlfriend, singer-songwriter Sharon Sheeley, who formed a writing partnership with DeShannon in 1960." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/California> , <http://dbpedia.org/resource/Illinois> , <http://dbpedia.org/resource/River_Shannon> , <http://dbpedia.org/resource/Canada> , <http://dbpedia.org/resource/Sherry> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Eddie_Cochran> , <http://dbpedia.org/resource/Sharon_Sheeley> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/California> , <http://dbpedia.org/resource/River_Shannon> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jackie_DeShannon> .
+
+<http://dbpedia.org/resource/Alan_Jay_Lerner>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alan_Jay_Lerner> .
 
 meetup:1e1cc9bdeb2f29f5480106aec7e9bc48
         rdf:type             mtp:TimeExpression ;
@@ -52,11 +95,17 @@ meetup:7f16109f1619fd7a733daf5a84c708c1
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1960" .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://w3id.org/polifonia/pilot/meetups/328330/13/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:97972b9f9792b8b08420686a9b0ff910 , meetup:1e1cc9bdeb2f29f5480106aec7e9bc48 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.86247456" ;
         mtp:hasEvidenceText  "In March 1965, DeShannon recorded Burt Bacharach and Hal David's \"What the World Needs Now Is Love\", which led to club tours and regular appearances on television and went to No. 7 on the US charts and No. 1 in Canada." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/River_Shannon> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Canada> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Sherry> , <http://dbpedia.org/resource/California> , <http://dbpedia.org/resource/Illinois> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Hal_David> , <http://dbpedia.org/resource/Burt_Bacharach> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Canada> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jackie_DeShannon> .
 
 <http://dbpedia.org/resource/Jackie_DeShannon>
@@ -66,49 +115,60 @@ meetup:7f16109f1619fd7a733daf5a84c708c1
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 <http://dbpedia.org/resource/Sherry>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sherry> ;
-        mtp:hasLatitud        "36.6839"^^xsd:float ;
-        mtp:hasLongitud       "36.6839"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sherry> .
 
 meetup:9d37489d0dc3801455919cceb4b67e99
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "recently" .
 
+<http://dbpedia.org/resource/California>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/California> .
+
 meetup:7ed2a6a93418c06eb6f603b37d4d4345
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the 1960s" .
 
-<http://dbpedia.org/resource/California>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/California> ;
-        mtp:hasLatitud        "35.491"^^xsd:float ;
-        mtp:hasLongitud       "35.491"^^xsd:float .
-
 <http://w3id.org/polifonia/pilot/meetups/328330/13/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:1dd1c5fb7f25cd41b291d43a89e3aefd ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.73790205" ;
         mtp:hasEvidenceText  "Moving to New York City, DeShannon co-wrote with Randy Newman, producing such songs as \"She Don't Understand Him Like I Do\" and \"Did He Call Today Mama?\", as well as writing \"You Have No Choice\" for Delaney Bramlett." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/River_Shannon> , <http://dbpedia.org/resource/Canada> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Illinois> , <http://dbpedia.org/resource/California> , <http://dbpedia.org/resource/Sherry> , <http://dbpedia.org/resource/United_States> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Delaney_Bramlett> , <http://dbpedia.org/resource/Randy_Newman> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jackie_DeShannon> .
 
 meetup:97972b9f9792b8b08420686a9b0ff910
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "March 1965" .
 
+<http://dbpedia.org/resource/Hal_David>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hal_David> .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
 <http://w3id.org/polifonia/pilot/meetups/328330/65/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:d8678fd0ef2888e65eb95df7bb02774e ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.944035" ;
         mtp:hasEvidenceText  "Images of each record from 1956 to 1960, including additional liner notes, are found at \"Sweet Sherry: The Early Recording Career of Jackie DeShannon\" by Pete Lerner." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Sherry> , <http://dbpedia.org/resource/California> , <http://dbpedia.org/resource/River_Shannon> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Canada> , <http://dbpedia.org/resource/Illinois> , <http://dbpedia.org/resource/New_York_City> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jackie_DeShannon> , <http://dbpedia.org/resource/Alan_Jay_Lerner> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Sherry> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jackie_DeShannon> .
 
 meetup:4497bc781a555f41ef7f8c9d1f6ac74b
@@ -117,17 +177,22 @@ meetup:4497bc781a555f41ef7f8c9d1f6ac74b
 
 <http://dbpedia.org/resource/Illinois>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Illinois> ;
-        mtp:hasLatitud        "41.2782"^^xsd:float ;
-        mtp:hasLongitud       "41.2782"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Illinois> .
 
 <http://dbpedia.org/resource/River_Shannon>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/River_Shannon> ;
-        mtp:hasLatitud        "54.235"^^xsd:float ;
-        mtp:hasLongitud       "54.235"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/River_Shannon> .
+
+<http://dbpedia.org/resource/Delaney_Bramlett>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Delaney_Bramlett> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
 
 meetup:d8678fd0ef2888e65eb95df7bb02774e
         rdf:type             mtp:TimeExpression ;
@@ -136,6 +201,9 @@ meetup:d8678fd0ef2888e65eb95df7bb02774e
 <http://w3id.org/polifonia/pilot/meetups/328330/8/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:9d37489d0dc3801455919cceb4b67e99 , meetup:4497bc781a555f41ef7f8c9d1f6ac74b ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.994311" ;
         mtp:hasEvidenceText  "Billboard noted (June 10, 1957) that Sherry Lee Myers, \"16-year-old C&W singer of Batavia, Illinois,\" had recently signed to George Goldner's Gone label in New York as a rockabilly artist, and that her \"handlers\" (Irving Schacht and Paul Kallett) had changed her name to Jackie Dee." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Illinois> , <http://dbpedia.org/resource/Sherry> , <http://dbpedia.org/resource/Canada> , <http://dbpedia.org/resource/California> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/River_Shannon> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/George_Gershwin> , <http://dbpedia.org/resource/Robert_E._Lee> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Illinois> , <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jackie_DeShannon> .

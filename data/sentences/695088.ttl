@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,16 +12,26 @@
 <http://w3id.org/polifonia/pilot/meetups/695088/0/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:a42c0c5dd877d6e66365769f5df09a26 , meetup:98c7242894844ecd6ec94af67ac8247d ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.9274544" ;
         mtp:hasEvidenceText  "His first group Alex Riel/Palle Mikkelborg Quintet won Montreux Grand Prix Award at the Montreux Jazz Festival in 1968 and it was published in Billboard's June 1968 edition." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Alex_Riel> , <http://dbpedia.org/resource/Palle_Mikkelborg> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Montreux> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Alex_Riel> .
 
+<http://dbpedia.org/resource/Palle_Mikkelborg>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Palle_Mikkelborg> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
 <http://dbpedia.org/resource/Montreux>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Montreux> ;
-        mtp:hasLatitud        "46.4333"^^xsd:float ;
-        mtp:hasLongitud       "46.4333"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Montreux> .
 
 meetup:a42c0c5dd877d6e66365769f5df09a26
         rdf:type             mtp:TimeExpression ;

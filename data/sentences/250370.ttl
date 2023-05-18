@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,87 +9,162 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/George_Gershwin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Gershwin> .
+
+meetup:e5b294b70c9647dcf804d7baa1903918
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1927" .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Willie_%22The_Lion%22_Smith>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Willie_%22The_Lion%22_Smith> .
+
+<http://dbpedia.org/resource/New_York_City>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
+<http://dbpedia.org/resource/Tony_Jackson_(pianist)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tony_Jackson_(pianist)> .
+
 <http://w3id.org/polifonia/pilot/meetups/250370/2/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:07a4e20a7bbeeb7a736682b26b16ebe8 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.76202035" ;
         mtp:hasEvidenceText  "In 1914 she settled in Chicago, Illinois, where, often billed as \"The Georgia Peach\", she worked with Tony Jackson and Jelly Roll Morton before marrying the pianist-composer Bill Hegamin." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/Philadelphia> , <http://dbpedia.org/resource/Illinois> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jelly_Roll_Morton> , <http://dbpedia.org/resource/Tony_Jackson_(pianist)> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Illinois> , <http://dbpedia.org/resource/Chicago> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Lucille_Hegamin> .
 
-meetup:d013ba6c44bd1750de33898c2fa080bf
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "January 20 , 1922" .
+<http://dbpedia.org/resource/Chicago>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> .
+
+<http://dbpedia.org/resource/Ken_Hyder>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ken_Hyder> .
+
+<http://dbpedia.org/resource/Jelly_Roll_Morton>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jelly_Roll_Morton> .
 
 <http://dbpedia.org/resource/Lucille_Hegamin>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lucille_Hegamin> .
 
+<http://dbpedia.org/resource/Trixie_Smith>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Trixie_Smith> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 meetup:5abacb3c1fa9850990c8b28a46efc50b
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the decade" .
-
-meetup:39dcaf7a053dc372fbc391d4e6b5d693
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1964" .
 
 meetup:07a4e20a7bbeeb7a736682b26b16ebe8
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1914" .
 
-<http://dbpedia.org/resource/New_York_City>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
-
-<http://w3id.org/polifonia/pilot/meetups/250370/3/13>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:e5b294b70c9647dcf804d7baa1903918 ;
-        mtp:hasEvidenceText  "She sang with a band that was led by George \"Doc\" Hyder in 1927 for a show in Philadelphia." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Lucille_Hegamin> .
-
-<http://dbpedia.org/resource/Philadelphia>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Philadelphia> ;
-        mtp:hasLatitud        "39.9528"^^xsd:float ;
-        mtp:hasLongitud       "39.9528"^^xsd:float .
-
-<http://w3id.org/polifonia/pilot/meetups/250370/5/3>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:39dcaf7a053dc372fbc391d4e6b5d693 ;
-        mtp:hasEvidenceText  "She performed at a benefit concert for Mamie Smith at the Celebrity Club in New York City in 1964." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Lucille_Hegamin> .
-
-meetup:e5b294b70c9647dcf804d7baa1903918
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1927" .
-
 <http://w3id.org/polifonia/pilot/meetups/250370/3/6>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:d013ba6c44bd1750de33898c2fa080bf ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.9998324" ;
         mtp:hasEvidenceText  "On January 20, 1922, she competed in a blues singing contest with Daisy Martin, Alice Leslie Carter and Trixie Smith at the Fifteenth Infantry's First Band Concert and Dance in New York City." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Chicago> , <http://dbpedia.org/resource/Philadelphia> , <http://dbpedia.org/resource/Illinois> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Trixie_Smith> , <http://dbpedia.org/resource/Alice_Leslie_Carter> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Lucille_Hegamin> .
 
-<http://dbpedia.org/resource/Chicago>
+<http://dbpedia.org/resource/Harlem>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> ;
-        mtp:hasLatitud        "41.8819"^^xsd:float ;
-        mtp:hasLongitud       "41.8819"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Harlem> .
+
+<http://dbpedia.org/resource/Mamie_Smith>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mamie_Smith> .
+
+<http://dbpedia.org/resource/Hyder_Ali>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hyder_Ali> .
+
+meetup:39dcaf7a053dc372fbc391d4e6b5d693
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1964" .
 
 <http://w3id.org/polifonia/pilot/meetups/250370/3/14>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:5abacb3c1fa9850990c8b28a46efc50b ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9993156" ;
         mtp:hasEvidenceText  "Further into the decade she performed in further revues with Hyder that were staged in Harlem theaters." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Ken_Hyder> , <http://dbpedia.org/resource/Florence_Mills> , <http://dbpedia.org/resource/Hyder_Ali> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Harlem> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucille_Hegamin> .
+
+<http://dbpedia.org/resource/Alice_Leslie_Carter>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alice_Leslie_Carter> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/250370/5/3>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:39dcaf7a053dc372fbc391d4e6b5d693 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99916506" ;
+        mtp:hasEvidenceText  "She performed at a benefit concert for Mamie Smith at the Celebrity Club in New York City in 1964." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Willie_%22The_Lion%22_Smith> , <http://dbpedia.org/resource/Mamie_Smith> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucille_Hegamin> .
+
+meetup:d013ba6c44bd1750de33898c2fa080bf
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "January 20 , 1922" .
+
+<http://dbpedia.org/resource/Philadelphia>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Philadelphia> .
+
+<http://w3id.org/polifonia/pilot/meetups/250370/3/13>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:e5b294b70c9647dcf804d7baa1903918 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9994722" ;
+        mtp:hasEvidenceText  "She sang with a band that was led by George \"Doc\" Hyder in 1927 for a show in Philadelphia." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Florence_Mills> , <http://dbpedia.org/resource/Hyder_Ali> , <http://dbpedia.org/resource/George_Gershwin> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Philadelphia> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Lucille_Hegamin> .
 
 <http://dbpedia.org/resource/Illinois>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Illinois> ;
-        mtp:hasLatitud        "41.2782"^^xsd:float ;
-        mtp:hasLongitud       "41.2782"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Illinois> .
+
+<http://dbpedia.org/resource/Florence_Mills>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Florence_Mills> .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,6 +8,29 @@
 @prefix time:   <http://www.w3.org/2006/time#> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Saint_Joseph>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Saint_Joseph> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+<http://w3id.org/polifonia/pilot/meetups/2519838/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:998561d6cb6a6bcaf8f1c6cefbd56b42 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9999583" ;
+        mtp:hasEvidenceText  "Joseph Edward Filippelli (March 26, 1915 – August 17, 2001), known professionally as Flip Phillips, was an American jazz tenor saxophone and clarinet player." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Flip_Phillips> , <http://dbpedia.org/resource/Saint_Joseph> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Flip_Phillips> .
 
 <http://dbpedia.org/resource/Flip_Phillips>
         rdf:type              mtp:Participant ;
@@ -16,17 +40,3 @@
 meetup:998561d6cb6a6bcaf8f1c6cefbd56b42
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "March 26 , 1915 – August 17 , 2001" .
-
-<http://w3id.org/polifonia/pilot/meetups/2519838/0/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:998561d6cb6a6bcaf8f1c6cefbd56b42 ;
-        mtp:hasEvidenceText  "Joseph Edward Filippelli (March 26, 1915 – August 17, 2001), known professionally as Flip Phillips, was an American jazz tenor saxophone and clarinet player." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Flip_Phillips> .
-
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .

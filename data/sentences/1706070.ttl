@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,16 +12,33 @@
 <http://w3id.org/polifonia/pilot/meetups/1706070/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:a1e3ebbefd1bf3c2cee68a7591bf6650 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.6484113" ;
         mtp:hasEvidenceText  "William Atherton Knight (born July 30, 1947) is an American actor, best known for portraying Richard Thornburg in Die Hard and its sequel and Walter Peck in Ghostbusters." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Los_Angeles> , <http://dbpedia.org/resource/United_States> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/William_Atherton> , <http://dbpedia.org/resource/Tyler_Thornburg> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/William_Atherton> .
+
+<http://dbpedia.org/resource/Michael_Atherton>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Michael_Atherton> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+<http://dbpedia.org/resource/Tyler_Thornburg>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tyler_Thornburg> .
 
 <http://dbpedia.org/resource/William_Atherton>
         rdf:type              mtp:Participant ;
@@ -29,20 +47,27 @@
 
 <http://dbpedia.org/resource/Los_Angeles>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Los_Angeles> ;
-        mtp:hasLatitud        "34.05"^^xsd:float ;
-        mtp:hasLongitud       "34.05"^^xsd:float .
-
-<http://w3id.org/polifonia/pilot/meetups/1706070/5/4>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:c8758b517083196f05ac29810b924aca ;
-        mtp:hasEvidenceText  "He appeared in the musical Gigi for the Reprise Theatre in Los Angeles as \"Honoré Lachailles\" in 2011." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/William_Atherton> .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Los_Angeles> .
 
 meetup:a1e3ebbefd1bf3c2cee68a7591bf6650
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "July 30 , 1947" .
+
+<http://dbpedia.org/resource/Gigi_Hadid>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gigi_Hadid> .
+
+<http://w3id.org/polifonia/pilot/meetups/1706070/5/4>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:c8758b517083196f05ac29810b924aca ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.98553" ;
+        mtp:hasEvidenceText  "He appeared in the musical Gigi for the Reprise Theatre in Los Angeles as \"Honoré Lachailles\" in 2011." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Michael_Atherton> , <http://dbpedia.org/resource/Gigi_Hadid> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Los_Angeles> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_Atherton> .
 
 meetup:c8758b517083196f05ac29810b924aca
         rdf:type             mtp:TimeExpression ;

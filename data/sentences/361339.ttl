@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,25 +9,40 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:15d185eaa7c954e77f5343d941e25fbd
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1931" .
+<http://dbpedia.org/resource/Sano,_Tochigi>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sano,_Tochigi> .
 
-<http://w3id.org/polifonia/pilot/meetups/361339/31/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:15d185eaa7c954e77f5343d941e25fbd ;
-        mtp:hasEvidenceText  "The Trial of Mary Dugan (1931, co-director: Marcel De Sano)" ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Sano,_Tochigi> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Gregorio_Martínez_Sierra> .
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Mary_I_of_England>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mary_I_of_England> .
 
 <http://dbpedia.org/resource/Gregorio_Martínez_Sierra>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gregorio_Martínez_Sierra> .
 
-<http://dbpedia.org/resource/Sano,_Tochigi>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sano,_Tochigi> ;
-        mtp:hasLatitud        "36.3145"^^xsd:float ;
-        mtp:hasLongitud       "36.3145"^^xsd:float .
+<http://w3id.org/polifonia/pilot/meetups/361339/31/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:15d185eaa7c954e77f5343d941e25fbd ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.96658015" ;
+        mtp:hasEvidenceText  "The Trial of Mary Dugan (1931, co-director: Marcel De Sano)" ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Dennis_Dugan> , <http://dbpedia.org/resource/Mary_I_of_England> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Sano,_Tochigi> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gregorio_Martínez_Sierra> .
+
+meetup:15d185eaa7c954e77f5343d941e25fbd
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1931" .
+
+<http://dbpedia.org/resource/Dennis_Dugan>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dennis_Dugan> .

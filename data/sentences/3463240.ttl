@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -15,15 +16,17 @@ meetup:0950ca92a4dcf426067cfd2246bb5ff3
 <http://w3id.org/polifonia/pilot/meetups/3463240/2/2>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:0609154fa35b3194026346c9cac2a248 ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.99995744" ;
         mtp:hasEvidenceText  "From 1909, Dessau majored in violin, studying with Florian Zajic at the Klindworth-Scharwenka Conservatory in Berlin." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Paul_Dessau> , <http://dbpedia.org/resource/Saint_Florian> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Dessau> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_Dessau> .
 
 <http://dbpedia.org/resource/East_Berlin>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/East_Berlin> ;
-        mtp:hasLatitud        "52.5186"^^xsd:float ;
-        mtp:hasLongitud       "52.5186"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/East_Berlin> .
 
 meetup:0609154fa35b3194026346c9cac2a248
         rdf:type             mtp:TimeExpression ;
@@ -31,29 +34,45 @@ meetup:0609154fa35b3194026346c9cac2a248
 
 <http://w3id.org/polifonia/pilot/meetups/3463240/2/7>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:0950ca92a4dcf426067cfd2246bb5ff3 , meetup:414e773d5b7e5c06d564f594bf6384d0 ;
+        mtp:happensAt        meetup:414e773d5b7e5c06d564f594bf6384d0 , meetup:0950ca92a4dcf426067cfd2246bb5ff3 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9150892" ;
         mtp:hasEvidenceText  "In 1923 he became Kapellmeister at the Staatstheater Mainz and from 1925 Principal Kapellmeister at the Städtische Oper Berlin under Bruno Walter." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Paul_Dessau> , <http://dbpedia.org/resource/Bruno_Walter> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Staatstheater_Mainz> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_Dessau> .
 
 <http://w3id.org/polifonia/pilot/meetups/3463240/2/6>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:26104c5e17f0c111fe1d71af675117f0 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.99998474" ;
         mtp:hasEvidenceText  "After World War I he became conductor at the Kammerspiele Hamburg, and was répétiteur and later Kapellmeister at the Cologne Opera under Otto Klemperer between 1919 and 1923." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Otto_Klemperer> , <http://dbpedia.org/resource/Paul_Dessau> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Cologne_Opera> , <http://dbpedia.org/resource/Hamburg> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_Dessau> .
 
 <http://dbpedia.org/resource/Hamburg>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hamburg> ;
-        mtp:hasLatitud        "53.55"^^xsd:float ;
-        mtp:hasLongitud       "53.55"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hamburg> .
 
 <http://dbpedia.org/resource/Cologne_Opera>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cologne_Opera> ;
-        mtp:hasLatitud        "50.9381"^^xsd:float ;
-        mtp:hasLongitud       "50.9381"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cologne_Opera> .
+
+<http://dbpedia.org/resource/Otto_Klemperer>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Otto_Klemperer> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+meetup:7ca57a9f85a19a6e4b9a248c1daca185
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "1948" .
 
 meetup:26104c5e17f0c111fe1d71af675117f0
         rdf:type             mtp:TimeExpression ;
@@ -64,16 +83,18 @@ meetup:26104c5e17f0c111fe1d71af675117f0
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paul_Dessau> .
 
-meetup:7ca57a9f85a19a6e4b9a248c1daca185
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1948" .
-
 <http://dbpedia.org/resource/Staatstheater_Mainz>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Staatstheater_Mainz> ;
-        mtp:hasLatitud        "49.9994"^^xsd:float ;
-        mtp:hasLongitud       "49.9994"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Staatstheater_Mainz> .
+
+<http://dbpedia.org/resource/Saint_Florian>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Saint_Florian> .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 meetup:c5a4e7e6882845ea7bb4d9462868219b
         rdf:type             mtp:TimeExpression ;
@@ -81,37 +102,56 @@ meetup:c5a4e7e6882845ea7bb4d9462868219b
 
 <http://dbpedia.org/resource/Germany>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Germany> ;
-        mtp:hasLatitud        "51.0"^^xsd:float ;
-        mtp:hasLongitud       "51.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Germany> .
+
+meetup:education  rdf:type  mtp:Purpose ;
+        rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Bertolt_Brecht>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bertolt_Brecht> .
+
+<http://dbpedia.org/resource/Elisabeth_Hauptmann>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Elisabeth_Hauptmann> .
 
 <http://dbpedia.org/resource/Dessau>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dessau> ;
-        mtp:hasLatitud        "51.8333"^^xsd:float ;
-        mtp:hasLongitud       "51.8333"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dessau> .
 
 <http://w3id.org/polifonia/pilot/meetups/3463240/96/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:c5a4e7e6882845ea7bb4d9462868219b ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.8916851" ;
         mtp:hasEvidenceText  "Das Verhör in der Oper: Die Debatte um die Aufführung \"Das Verhör des Lukullus\" von Bertolt Brecht und Paul Dessau (BasisDruck, Berlin 1993)." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Staatstheater_Mainz> , <http://dbpedia.org/resource/Dessau> , <http://dbpedia.org/resource/Berlin> , <http://dbpedia.org/resource/Cologne_Opera> , <http://dbpedia.org/resource/East_Berlin> , <http://dbpedia.org/resource/Germany> , <http://dbpedia.org/resource/Hamburg> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Paul_Dessau> , <http://dbpedia.org/resource/Bertolt_Brecht> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Berlin> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_Dessau> .
+
+<http://dbpedia.org/resource/Bruno_Walter>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bruno_Walter> .
 
 <http://w3id.org/polifonia/pilot/meetups/3463240/2/9>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:7ca57a9f85a19a6e4b9a248c1daca185 ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.8676022" ;
         mtp:hasEvidenceText  "Dessau returned to Germany with his second wife, the writer Elisabeth Hauptmann, and settled in East Berlin in 1948." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Paul_Dessau> , <http://dbpedia.org/resource/Elisabeth_Hauptmann> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Germany> , <http://dbpedia.org/resource/Dessau> , <http://dbpedia.org/resource/East_Berlin> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_Dessau> .
 
 <http://dbpedia.org/resource/Berlin>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Berlin> ;
-        mtp:hasLatitud        "52.52"^^xsd:float ;
-        mtp:hasLongitud       "52.52"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Berlin> .
 
 meetup:414e773d5b7e5c06d564f594bf6384d0
         rdf:type             mtp:TimeExpression ;

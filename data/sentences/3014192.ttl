@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -17,6 +18,9 @@ meetup:041ec9d044bdaec0d6f8d2890c10e9fb
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bruno_Nicolai> .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 meetup:a1eab10fb0d83b14dd765a4c9348405a
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "16 August 1991" .
@@ -25,12 +29,26 @@ meetup:e2cc6d32b78f8bb4c8a9ec2b50a066d0
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "20 May 1926" .
 
+<http://dbpedia.org/resource/Rome>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Rome> .
+
 meetup:7ed2a6a93418c06eb6f603b37d4d4345
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the 1960s" .
 
 <http://w3id.org/polifonia/pilot/meetups/3014192/0/0>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:e2cc6d32b78f8bb4c8a9ec2b50a066d0 , meetup:041ec9d044bdaec0d6f8d2890c10e9fb , meetup:7ed2a6a93418c06eb6f603b37d4d4345 , meetup:a1eab10fb0d83b14dd765a4c9348405a ;
+        mtp:happensAt        meetup:041ec9d044bdaec0d6f8d2890c10e9fb , meetup:a1eab10fb0d83b14dd765a4c9348405a , meetup:7ed2a6a93418c06eb6f603b37d4d4345 , meetup:e2cc6d32b78f8bb4c8a9ec2b50a066d0 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9995296" ;
         mtp:hasEvidenceText  "Bruno Nicolai (20 May 1926 in Rome – 16 August 1991 in Rome) was an Italian film music composer, orchestra director and musical editor most active in the 1960s through the 1980s." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Camil_Baciu> , <http://dbpedia.org/resource/Bruno_Nicolai> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Rome> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Bruno_Nicolai> .
+
+<http://dbpedia.org/resource/Camil_Baciu>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Camil_Baciu> .

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,15 +12,23 @@
 <http://w3id.org/polifonia/pilot/meetups/470115/7/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:6b58966e9b36ce3b56ed3928f7f8e150 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.95156676" ;
         mtp:hasEvidenceText  "Smith also recorded an instrumental track, entitled \"Theme From an Unmade Silent Movie\", which the West Midlands based radio presenter, Tony Butler, adopted as his theme music, playing it frequently on his sports show in an attempt, often successful, to encourage the region's local football teams to score a goal." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Tony_Butler_(broadcaster)> , <http://dbpedia.org/resource/Tony_Butler_(musician)> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/West_Midlands_conurbation> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Norman_Smith_(record_producer)> .
 
 <http://dbpedia.org/resource/United_Kingdom>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 meetup:6b58966e9b36ce3b56ed3928f7f8e150
         rdf:type             mtp:TimeExpression ;
@@ -35,31 +44,53 @@ meetup:a3aa5aecd792e01636677104f3f743dc
 
 <http://dbpedia.org/resource/East_Sussex>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/East_Sussex> ;
-        mtp:hasLatitud        "50.94"^^xsd:float ;
-        mtp:hasLongitud       "50.94"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/East_Sussex> .
 
 <http://w3id.org/polifonia/pilot/meetups/470115/12/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:a3aa5aecd792e01636677104f3f743dc ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99999976" ;
         mtp:hasEvidenceText  "Norman Smith died aged 85, in March 2008 in East Sussex, England." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/East_Sussex> , <http://dbpedia.org/resource/West_Midlands_conurbation> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Norman_Smith_(record_producer)> , <http://dbpedia.org/resource/England> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/East_Sussex> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Norman_Smith_(record_producer)> .
+
+<http://dbpedia.org/resource/Pseudonym>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Pseudonym> .
 
 <http://w3id.org/polifonia/pilot/meetups/470115/6/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:de73998802680548b916f1947ffbad76 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99983406" ;
         mtp:hasEvidenceText  "In 1971, Smith, using a recording artist pseudonym of Hurricane Smith, had a UK No. 2 hit with \"Don't Let It Die\"." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/East_Sussex> , <http://dbpedia.org/resource/West_Midlands_conurbation> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Norman_Smith_(record_producer)> , <http://dbpedia.org/resource/Pseudonym> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Norman_Smith_(record_producer)> .
+
+<http://dbpedia.org/resource/Tony_Butler_(broadcaster)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tony_Butler_(broadcaster)> .
+
+<http://dbpedia.org/resource/Tony_Butler_(musician)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tony_Butler_(musician)> .
 
 <http://dbpedia.org/resource/West_Midlands_conurbation>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/West_Midlands_conurbation> ;
-        mtp:hasLatitud        "52.5118"^^xsd:float ;
-        mtp:hasLongitud       "52.5118"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/West_Midlands_conurbation> .
+
+<http://dbpedia.org/resource/England>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
 
 <http://dbpedia.org/resource/Norman_Smith_(record_producer)>
         rdf:type              mtp:Participant ;

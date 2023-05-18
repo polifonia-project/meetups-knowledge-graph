@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,33 +14,44 @@
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Stanley_Ralph_Ross> .
 
+<http://dbpedia.org/resource/Adam_West>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Adam_West> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
 <http://dbpedia.org/resource/Brooklyn>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Brooklyn> ;
-        mtp:hasLatitud        "40.6928"^^xsd:float ;
-        mtp:hasLongitud       "40.6928"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Brooklyn> .
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
 
 <http://w3id.org/polifonia/pilot/meetups/3064783/0/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:7ed2a6a93418c06eb6f603b37d4d4345 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.99326295" ;
         mtp:hasEvidenceText  "He was raised in Brooklyn, New York, starting his career in advertising With Chudacoff and Margulis Advertising in West Los Angeles, then soon going to work as a writer on various television shows such as the 1960s Batman series starring Adam West and also The Monkees, and developed Wonder Woman for television with Douglas S. Cramer." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/West_Los_Angeles> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Brooklyn> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Adam_West> , <http://dbpedia.org/resource/Pieter_Cramer> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/Brooklyn> , <http://dbpedia.org/resource/West_Los_Angeles> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Stanley_Ralph_Ross> .
+
+<http://dbpedia.org/resource/Pieter_Cramer>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Pieter_Cramer> .
 
 <http://dbpedia.org/resource/West_Los_Angeles>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/West_Los_Angeles> ;
-        mtp:hasLatitud        "34.0464"^^xsd:float ;
-        mtp:hasLongitud       "34.0464"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/West_Los_Angeles> .
 
 meetup:7ed2a6a93418c06eb6f603b37d4d4345
         rdf:type             mtp:TimeExpression ;

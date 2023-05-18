@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,15 +9,33 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://w3id.org/polifonia/pilot/meetups/3004631/2/4>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d281cf40b648f3e5bfe092a0584f3ace ;
-        mtp:hasEvidenceText  "Her son Fabian Stang was mayor of Oslo from 2007 to 2015." ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Wenche_Foss> .
-
 meetup:d281cf40b648f3e5bfe092a0584f3ace
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "2007 to 2015" .
+
+<http://dbpedia.org/resource/Oslo>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Oslo> .
+
+<http://w3id.org/polifonia/pilot/meetups/3004631/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d281cf40b648f3e5bfe092a0584f3ace ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.9538384" ;
+        mtp:hasEvidenceText  "Her son Fabian Stang was mayor of Oslo from 2007 to 2015." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Wenche_Foss> , <http://dbpedia.org/resource/Fabian_Stang> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Oslo> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wenche_Foss> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Fabian_Stang>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Fabian_Stang> .
 
 <http://dbpedia.org/resource/Wenche_Foss>
         rdf:type              mtp:Participant ;

@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -16,26 +17,40 @@ meetup:461f442d0ff8028d80b81b043761b48f
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "many years" .
 
+<http://dbpedia.org/resource/Jimi_Hendrix>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jimi_Hendrix> .
+
 <http://w3id.org/polifonia/pilot/meetups/2780714/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:982b6d146efa506573909d61f7a04029 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.99919456" ;
         mtp:hasEvidenceText  "Curtis Knight (May 9, 1929 – November 29, 1999), born Mont Curtis McNear, was an American musician who is known for his association with Jimi Hendrix." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/London> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jamie_Lee_Curtis> , <http://dbpedia.org/resource/Curtis_Knight> , <http://dbpedia.org/resource/Jimi_Hendrix> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Curtis_Knight> .
+
+<http://dbpedia.org/resource/Jamie_Lee_Curtis>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jamie_Lee_Curtis> .
 
 <http://w3id.org/polifonia/pilot/meetups/2780714/0/5>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:461f442d0ff8028d80b81b043761b48f , meetup:22c9fcf1cc0ebe5776879167be589d82 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.9826401" ;
         mtp:hasEvidenceText  "During the 1970s, after Hendrix's demise, Knight moved to London, where he formed the group \"Curtis Knight, Zeus\", and toured throughout Europe, relying on his Hendrix connection for many years." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/London> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Curtis_Knight> , <http://dbpedia.org/resource/Jimi_Hendrix> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/Europe> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Curtis_Knight> .
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> ;
-        mtp:hasLatitud        "38.8833"^^xsd:float ;
-        mtp:hasLongitud       "38.8833"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 <http://dbpedia.org/resource/Curtis_Knight>
         rdf:type              mtp:Participant ;
@@ -46,9 +61,15 @@ meetup:22c9fcf1cc0ebe5776879167be589d82
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "the 1970s" .
 
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Europe>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Europe> .
+
 <http://dbpedia.org/resource/London>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> ;
-        mtp:hasLatitud        "51.5072"^^xsd:float ;
-        mtp:hasLongitud       "51.5072"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .

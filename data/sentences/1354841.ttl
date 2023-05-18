@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,36 +9,50 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://w3id.org/polifonia/pilot/meetups/1354841/12/0>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:b370db259bb96c27b393e20667157e00 , meetup:2355998124adb019d2f6536dabc56255 ;
+        mtp:happensAt        meetup:2355998124adb019d2f6536dabc56255 , meetup:b370db259bb96c27b393e20667157e00 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.9994104" ;
         mtp:hasEvidenceText  "Clarence Cameron White, Jr. (March 11, 1908–January 30, 1913)Beatrice died at their home in Elizabeth, New Jersey, in October 1942." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/New_Jersey> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Princess_Beatrice_of_the_United_Kingdom> , <http://dbpedia.org/resource/Clarence_Cameron_White> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_Jersey> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Clarence_Cameron_White> .
 
 <http://dbpedia.org/resource/New_Jersey>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Jersey> ;
-        mtp:hasLatitud        "40.0"^^xsd:float ;
-        mtp:hasLongitud       "40.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Jersey> .
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> ;
-        mtp:hasLatitud        "40.7128"^^xsd:float ;
-        mtp:hasLongitud       "40.7128"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
 
 meetup:b370db259bb96c27b393e20667157e00
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "October 1942" .
 
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Puppeteer>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Puppeteer> .
+
 <http://w3id.org/polifonia/pilot/meetups/1354841/12/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:c3395dd46c34fa7fd8d729d8cf88b7a8 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.5068502" ;
         mtp:hasEvidenceText  "White soon moved to New York City and in 1943 married the librarian, writer, and puppeteer, Pura Belpré." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/New_Jersey> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Puppeteer> , <http://dbpedia.org/resource/Librarian> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Clarence_Cameron_White> .
 
 meetup:2355998124adb019d2f6536dabc56255
@@ -52,3 +67,13 @@ meetup:c3395dd46c34fa7fd8d729d8cf88b7a8
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Clarence_Cameron_White> .
+
+<http://dbpedia.org/resource/Librarian>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Librarian> .
+
+<http://dbpedia.org/resource/Princess_Beatrice_of_the_United_Kingdom>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Princess_Beatrice_of_the_United_Kingdom> .

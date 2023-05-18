@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,10 +15,8 @@ meetup:44fdec47036f482b68b748f9d786801b
 
 <http://dbpedia.org/resource/Kerala>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kerala> ;
-        mtp:hasLatitud        "10.0"^^xsd:float ;
-        mtp:hasLongitud       "10.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kerala> .
 
 meetup:13b8c060886f6d488ba0e83a2ba251d7
         rdf:type             mtp:TimeExpression ;
@@ -25,50 +24,59 @@ meetup:13b8c060886f6d488ba0e83a2ba251d7
 
 <http://dbpedia.org/resource/Kulathupuzha>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kulathupuzha> ;
-        mtp:hasLatitud        "8.90823"^^xsd:float ;
-        mtp:hasLongitud       "8.90823"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kulathupuzha> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
 
 <http://dbpedia.org/resource/Tamil_Nadu>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tamil_Nadu> ;
-        mtp:hasLatitud        "11.529"^^xsd:float ;
-        mtp:hasLongitud       "11.529"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tamil_Nadu> .
+
+<http://dbpedia.org/resource/Thiruvananthapuram>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Thiruvananthapuram> .
 
 <http://w3id.org/polifonia/pilot/meetups/3460078/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:13b8c060886f6d488ba0e83a2ba251d7 , meetup:305408c840532bec121767d27c9c9e0c ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.999995" ;
         mtp:hasEvidenceText  "Madhavan Raveendran (Malayalam: മാധവൻ രവീന്ദ്രൻ), (born Kulathupuzha, Kollam, 9 November 1943 – died Chennai, Tamil Nadu, 3 March 2005), fondly known as Raveendran Master, was a popular South Indian music composer and playback singer from Kerala." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Kerala> , <http://dbpedia.org/resource/Thiruvananthapuram> , <http://dbpedia.org/resource/Kollam> , <http://dbpedia.org/resource/Chennai> , <http://dbpedia.org/resource/Kulathupuzha> , <http://dbpedia.org/resource/Tamil_Nadu> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Raveendran> , <http://dbpedia.org/resource/R._Madhavan> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Kerala> , <http://dbpedia.org/resource/Kollam> , <http://dbpedia.org/resource/Chennai> , <http://dbpedia.org/resource/Kulathupuzha> , <http://dbpedia.org/resource/Tamil_Nadu> , <http://dbpedia.org/resource/South_India> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Raveendran> .
 
 <http://dbpedia.org/resource/Chennai>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chennai> ;
-        mtp:hasLatitud        "13.0827"^^xsd:float ;
-        mtp:hasLongitud       "13.0827"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chennai> .
 
-<http://dbpedia.org/resource/Thiruvananthapuram>
-        rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Thiruvananthapuram> ;
-        mtp:hasLatitud        "8.4875"^^xsd:float ;
-        mtp:hasLongitud       "8.4875"^^xsd:float .
+<http://dbpedia.org/resource/R._Madhavan>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/R._Madhavan> .
 
 <http://dbpedia.org/resource/Raveendran>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Raveendran> .
 
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/South_India>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/South_India> .
+
 <http://dbpedia.org/resource/Kollam>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kollam> ;
-        mtp:hasLatitud        "8.88"^^xsd:float ;
-        mtp:hasLongitud       "8.88"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kollam> .
 
 meetup:305408c840532bec121767d27c9c9e0c
         rdf:type             mtp:TimeExpression ;
@@ -77,5 +85,14 @@ meetup:305408c840532bec121767d27c9c9e0c
 <http://w3id.org/polifonia/pilot/meetups/3460078/2/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:44fdec47036f482b68b748f9d786801b ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.99999654" ;
         mtp:hasEvidenceText  "After his school days, he went to Swathi Thirunal Music College in Thiruvananthapuram, where he met K. J. Yesudas, and soon began a great friendship." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Raveendran> , <http://dbpedia.org/resource/Swathi_Thirunal_Rama_Varma> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Thiruvananthapuram> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Raveendran> .
+
+<http://dbpedia.org/resource/Swathi_Thirunal_Rama_Varma>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Swathi_Thirunal_Rama_Varma> .

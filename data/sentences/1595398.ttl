@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,33 +15,53 @@ meetup:a00e5eb0973d24649a4a920fc53d9564
 
 <http://dbpedia.org/resource/United_Kingdom>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
+
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
 
 meetup:008bd5ad93b754d500338c253d9c1770
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "1994" .
 
+<http://dbpedia.org/resource/Walter_Scott>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Walter_Scott> .
+
+<http://dbpedia.org/resource/Chris_Coleman_(footballer)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chris_Coleman_(footballer)> .
+
 <http://w3id.org/polifonia/pilot/meetups/1595398/5/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:a00e5eb0973d24649a4a920fc53d9564 ;
+        mtp:hasAPurpose      meetup:coincidence ;
+        mtp:hasConfidence    "0.55904573" ;
         mtp:hasEvidenceText  "In 2007, Jack Scott was voted into the Michigan Rock and Roll Legends Hall of Fame." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Walter_Scott> , <http://dbpedia.org/resource/Jack_Scott_(singer)> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Michigan> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jack_Scott_(singer)> .
 
 <http://dbpedia.org/resource/Netherlands>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Netherlands> ;
-        mtp:hasLatitud        "52.3667"^^xsd:float ;
-        mtp:hasLongitud       "52.3667"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Netherlands> .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
 
 <http://w3id.org/polifonia/pilot/meetups/1595398/4/2>
         rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:c5a4e7e6882845ea7bb4d9462868219b , meetup:008bd5ad93b754d500338c253d9c1770 , meetup:de7bc2c59115c3492ba4a474b661404f ;
+        mtp:happensAt        meetup:de7bc2c59115c3492ba4a474b661404f , meetup:008bd5ad93b754d500338c253d9c1770 , meetup:c5a4e7e6882845ea7bb4d9462868219b ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.9571556" ;
         mtp:hasEvidenceText  "Scott recorded his penultimate album, a live album with British band The Class of '58 whilst headlining at the Rockhouse Festival in The Netherlands in 1994; a recording which had to be postponed from its originally scheduled 1993 date due to the pregnancy of Double Bass player, Chris Coleman." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/Michigan> , <http://dbpedia.org/resource/Netherlands> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Chris_Coleman_(footballer)> , <http://dbpedia.org/resource/Walter_Scott> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/Netherlands> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jack_Scott_(singer)> .
 
 meetup:de7bc2c59115c3492ba4a474b661404f
@@ -54,10 +75,8 @@ meetup:de7bc2c59115c3492ba4a474b661404f
 
 <http://dbpedia.org/resource/Michigan>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Michigan> ;
-        mtp:hasLatitud        "44.0"^^xsd:float ;
-        mtp:hasLongitud       "44.0"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Michigan> .
 
 meetup:c5a4e7e6882845ea7bb4d9462868219b
         rdf:type             mtp:TimeExpression ;

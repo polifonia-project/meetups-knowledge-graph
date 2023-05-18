@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,23 +11,32 @@
 
 <http://dbpedia.org/resource/United_Kingdom>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Justin_Masterson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Justin_Masterson> .
 
 <http://dbpedia.org/resource/Jeff_Wayne>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jeff_Wayne> .
 
-meetup:b69686ae4cee81d588f7b071db1145de
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "four years" .
-
 <http://w3id.org/polifonia/pilot/meetups/1263963/3/2>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:b69686ae4cee81d588f7b071db1145de ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.7451827" ;
         mtp:hasEvidenceText  "Jeff Wayne spent four years of his childhood in the UK when his father played romantic gambler Sky Masterson in the original West End musical production of Guys and Dolls." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jeff_Wayne> , <http://dbpedia.org/resource/Justin_Masterson> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Wayne> .
+
+meetup:b69686ae4cee81d588f7b071db1145de
+        rdf:type             mtp:TimeExpression ;
+        mtp:hasEvidenceText  "four years" .

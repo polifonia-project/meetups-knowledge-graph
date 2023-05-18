@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,10 +11,8 @@
 
 <http://dbpedia.org/resource/United_Kingdom>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> ;
-        mtp:hasLatitud        "51.5"^^xsd:float ;
-        mtp:hasLongitud       "51.5"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_Kingdom> .
 
 meetup:a38b16173474ba8b1a95bcbc30d3b8a5
         rdf:type             mtp:TimeExpression ;
@@ -24,16 +23,36 @@ meetup:a38b16173474ba8b1a95bcbc30d3b8a5
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chris_Albertson> .
 
+<http://dbpedia.org/resource/Ken_Colyer>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ken_Colyer> .
+
+<http://dbpedia.org/resource/Lonnie_Donegan>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lonnie_Donegan> .
+
+meetup:publiccelebration
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Chris_Barber>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chris_Barber> .
+
 <http://w3id.org/polifonia/pilot/meetups/1113588/3/2>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:a38b16173474ba8b1a95bcbc30d3b8a5 ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.926863" ;
         mtp:hasEvidenceText  "On his home tape machine, Albertson recorded visiting British New Orleans revivalists Ken Colyer, Chris Barber and Lonnie Donegan in 1953." ;
-        mtp:hasPlace         <http://dbpedia.org/resource/New_Orleans> , <http://dbpedia.org/resource/United_Kingdom> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Chris_Barber> , <http://dbpedia.org/resource/Ken_Colyer> , <http://dbpedia.org/resource/Lonnie_Donegan> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/New_Orleans> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Chris_Albertson> .
 
 <http://dbpedia.org/resource/New_Orleans>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Orleans> ;
-        mtp:hasLatitud        "29.95"^^xsd:float ;
-        mtp:hasLongitud       "29.95"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Orleans> .

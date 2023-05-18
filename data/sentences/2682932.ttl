@@ -1,5 +1,6 @@
 @prefix core:   <https://w3id.org/polifonia/ontology/core/> .
 @prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
 @prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
 @prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
 @prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,12 +9,24 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
 <http://dbpedia.org/resource/Soviet_Union>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Soviet_Union> ;
-        mtp:hasLatitud        "55.75"^^xsd:float ;
-        mtp:hasLongitud       "55.75"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Soviet_Union> .
+
+<http://dbpedia.org/resource/Yevgeny_Vakhtangov>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Yevgeny_Vakhtangov> .
+
+<http://dbpedia.org/resource/Vasili_III_of_Russia>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Vasili_III_of_Russia> .
 
 meetup:72b6fae5e3298e5061f75718bd595069
         rdf:type             mtp:TimeExpression ;
@@ -22,7 +35,10 @@ meetup:72b6fae5e3298e5061f75718bd595069
 <http://w3id.org/polifonia/pilot/meetups/2682932/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:72b6fae5e3298e5061f75718bd595069 ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.8578545" ;
         mtp:hasEvidenceText  "Vasily Semyonovich Lanovoy (Russian: Василий Семёнович Лановой; (16 January 1934 – 28 January 2021) was a Soviet and Russian actor who worked in the Vakhtangov Theatre, Moscow." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Vasili_III_of_Russia> , <http://dbpedia.org/resource/Yevgeny_Vakhtangov> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Soviet_Union> , <http://dbpedia.org/resource/Moscow> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Vasily_Lanovoy> .
 
@@ -33,7 +49,5 @@ meetup:72b6fae5e3298e5061f75718bd595069
 
 <http://dbpedia.org/resource/Moscow>
         rdf:type              mtp:Location ;
-        rdf:seeAlso           core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Moscow> ;
-        mtp:hasLatitud        "55.7558"^^xsd:float ;
-        mtp:hasLongitud       "55.7558"^^xsd:float .
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Moscow> .
