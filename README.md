@@ -1,8 +1,8 @@
 ---
 component-id: meetups-knowledge-graph
+type: KnowledgeGraph
 name: MEETUPS Knowledge Graph
 description: MEETUPS Knowledge Graph module with data on historical meetups and related to MEETUPS Pilot
-type: KnowledgeGraph
 work-package:
 - WP4
 pilot:
@@ -17,23 +17,23 @@ changelog: https://github.com/polifonia-project/meetups-knowledge-graph/releases
 licence: CC BY
 copyright: "Copyright (c) 2023 MEETUPS @ The Open University"
 contributors:
-- Alba Morales Tirado https://github.com/albamoralest
-- Enrico Daga https://github.com/enridaga
-- Jason Carvalho https://github.com/JaseMK
+- Alba Morales Tirado <https://github.com/albamoralest>
+- Enrico Daga <https://github.com/enridaga>
+- Jason Carvalho <https://github.com/JaseMK>
 credits:
 - https://github.com/albamoralest
 - https://github.com/enridaga
 related components:
 - informed-by: 
-    - meetups-ontology
-    - meetups-corpus-collection
+  - meetups-ontology
+  - meetups-corpus-collection
 - persona:
-    - Ortenz
-	- David
-	- Sophie
+  - Ortenz
+  - David
+  - Sophie
 - reuses:
-    - sparql-anything-java
-    - sparql-anything-cli
+  - sparql-anything-java
+  - sparql-anything-cli
 ---
 
 # MEETUPS Knowledge Graph
