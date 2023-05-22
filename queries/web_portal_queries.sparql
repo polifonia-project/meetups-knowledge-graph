@@ -1,0 +1,39 @@
+# SPARQL queries created for WebPortal searches
+
+# ==================== TOPICS
+# QUERY all the meetups types
+prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
+prefix meetup: <http://w3id.org/polifonia/pilot/meetups/>
+
+select DISTINCT ?s ?label
+from <http://data.open.ac.uk/context/meetups>
+where {
+  ?s rdf:type mtp:Purpose ;
+    rdfs:label ?label .
+}
+
+
+# ==================== PEOPLE
+# Query all the people who are the main subject of analysis, have a biography analysed in the MEETUPS KG
+prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
+
+select DISTINCT ?subject ?label
+from <http://data.open.ac.uk/context/meetups>
+where {
+  ?s mtp:hasSubject ?subject .
+  ?subject rdfs:label ?label .
+}
+
+
+# ==================== PLACES
+prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
+prefix geo: <https://www.w3.org/2003/01/geo/wgs84_pos>
+
+select DISTINCT ?s ?label
+from <http://data.open.ac.uk/context/meetups>
+where {
+  ?s rdf:type mtp:Location ;
+    rdfs:label ?label ;
+    geo:lat ?lat ;
+    geo:long ?long .
+}

@@ -27,6 +27,7 @@ CONSTRUCT {
 		mtp:thumbnail ?placeImage .
 } WHERE {
 	# 
+	{
     SERVICE <x-sparql-anything:> {
  	 BIND ( CONCAT ( "../geoLocationInformation/", ?_fileId , ".csv" ) AS ?location1 ) .
     	 fx:properties fx:location ?location1 ; fx:csv.headers "true" .
@@ -41,7 +42,8 @@ CONSTRUCT {
  		BIND ( xsd:float ( ?ln ) AS ?longitude ) .
 		BIND ( IRI(?place) as ?placeIRI ) .
    }
-   .
+   }
+   UNION {
       SERVICE <x-sparql-anything:> {
    	 BIND ( CONCAT ( "../peopleComplementaryInformation/", ?_fileId , ".csv" ) AS ?location2 ) .
       	 fx:properties fx:location ?location2 ; fx:csv.headers "true" .
@@ -56,4 +58,5 @@ CONSTRUCT {
 
    	BIND ( IRI(?person) as ?personIRI ) .
      }
+	 }
   }

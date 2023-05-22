@@ -1,0 +1,38 @@
+# ====================
+# Returns meetups URI, evidence text, people, places, time expressions, purposes
+# people, places entity labels are concatenated
+# replace ?subject to get an specific biography
+
+prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
+prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> 
+prefix geo: <https://www.w3.org/2003/01/geo/wgs84_pos>
+
+select ?s ?evidence_text ?purpose 
+(GROUP_CONCAT( DISTINCT ?participant; separator=", " ) as ?participants_URI )
+(GROUP_CONCAT( DISTINCT ?participant_label; separator=", " ) as ?participants_label )
+(GROUP_CONCAT( DISTINCT ?location_uri; separator=", " ) as ?locations_URI )
+(GROUP_CONCAT( DISTINCT ?location_label; separator=", " ) as ?locations_label )
+?time_expression_URI 
+from <http://data.open.ac.uk/context/meetups>
+where
+{ VALUES ?subject { <http://dbpedia.org/resource/Edward_Elgar> }
+  ?s rdf:type mtp:Meetup ;
+      mtp:hasSubject ?subject ;
+      mtp:hasParticipant ?participant ;
+    mtp:hasAPurpose ?purpose_uri ;
+    mtp:hasEvidenceText ?evidence_text ;
+    mtp:hasPlace ?location_uri .
+  FILTER  (!regex (str(?participant), str(?subject) ) ) .
+  ?participant rdfs:label ?participant_label .
+  ?location_uri rdfs:label ?location_label ;
+    geo:lat ?lat ;
+    geo:long ?long .
+  ?purpose_uri rdfs:label ?purpose 
+  . { SELECT ?time_expression_URI {
+	?s rdf:type mtp:Meetup ;
+	mtp:happensAt ?time_expression_URI .   
+    } LIMIT 1 }
+}
+
+group by ?s ?evidence_text ?purpose ?time_expression_URI
