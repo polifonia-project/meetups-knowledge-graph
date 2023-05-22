@@ -13,7 +13,7 @@ select ?s ?evidence_text ?purpose
 (GROUP_CONCAT( DISTINCT ?participant_label; separator=", " ) as ?participants_label )
 (GROUP_CONCAT( DISTINCT ?location_uri; separator=", " ) as ?locations_URI )
 (GROUP_CONCAT( DISTINCT ?location_label; separator=", " ) as ?locations_label )
-?time_expression_URI 
+?time_expression_URI ?lat ?long
 from <http://data.open.ac.uk/context/meetups>
 where
 { VALUES ?subject { <http://dbpedia.org/resource/Edward_Elgar> }
@@ -35,4 +35,4 @@ where
     } LIMIT 1 }
 }
 
-group by ?s ?evidence_text ?purpose ?time_expression_URI
+group by ?s ?evidence_text ?purpose ?time_expression_URI ?lat ?long
