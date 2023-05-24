@@ -14,7 +14,8 @@ release-number: v0.1
 release link: https://github.com/polifonia-project/meetups-knowledge-graph/releases/tag/v0.1
 doi: https://zenodo.org/badge/latestdoi/588597123
 changelog: https://github.com/polifonia-project/meetups-knowledge-graph/releases/tag/v0.1
-licence: CC BY
+licence:
+- CC-BY_v4
 copyright: "Copyright (c) 2023 MEETUPS @ The Open University"
 contributors:
 - Alba Morales Tirado <https://github.com/albamoralest>
