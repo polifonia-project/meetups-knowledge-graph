@@ -3,6 +3,11 @@
 # people, places entity labels are concatenated
 # replace ?subject to get an specific biography
 
+
+
+
+## ======================= Version 0.1 includes lat and long, works only for meetups with one place
+
 prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
 prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> 
@@ -34,3 +39,77 @@ where
 }
 
 group by ?s ?evidence_text ?purpose ?time_expression_URI ?lat ?long
+
+
+## ======================= Version 0.2 
+
+## concatenate the place name when more than one, does not include lat and long
+prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
+prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> 
+prefix geo: <https://www.w3.org/2003/01/geo/wgs84_pos>
+
+select ?s ?evidence_text ?purpose 
+(GROUP_CONCAT( DISTINCT ?participant; separator=", " ) as ?participants_URI )
+(GROUP_CONCAT( DISTINCT ?participant_label; separator=", " ) as ?participants_label )
+(GROUP_CONCAT( DISTINCT ?location_uri; separator=", " ) as ?locations_URI )
+(GROUP_CONCAT( DISTINCT ?location_label; separator=", " ) as ?locations_label )
+( MIN (?time_expression ) AS ?time_expression_URI ) 
+from <http://data.open.ac.uk/context/meetups>
+where
+{ VALUES ?subject { <http://dbpedia.org/resource/Al_Wilson_(singer)> }
+  ?s rdf:type mtp:Meetup ;
+      mtp:hasSubject ?subject ;
+      mtp:hasParticipant ?participant ;
+	  mtp:happensAt ?time_expression ;
+    mtp:hasAPurpose ?purpose_uri ;
+    mtp:hasEvidenceText ?evidence_text ;
+    mtp:hasPlace ?location_uri .
+  FILTER  (!regex (str(?participant), str(?subject) ) ) .
+  ?participant rdfs:label ?participant_label .
+  ?location_uri rdfs:label ?location_label .
+  ?purpose_uri rdfs:label ?purpose 
+}
+
+group by ?s ?evidence_text ?purpose ?time_expression_URI 
+
+## ======================= Version 0.3 
+## (a)	A query that retrieves only one place and the coordinates (no matter if there is two or more places)
+## first place (when more than one), includes coordinates
+
+prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
+prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> 
+prefix geo: <https://www.w3.org/2003/01/geo/wgs84_pos>
+
+select DISTINCT ?s ?evidence_text ?purpose
+(GROUP_CONCAT( DISTINCT ?participant; separator=", " ) as ?participants_URI )
+(GROUP_CONCAT( DISTINCT ?participant_label; separator=", " ) as ?participants_label )
+( MIN (?time_expression ) AS ?time_expression_URI ) 
+?location_uri ?location_label ?lat ?long 
+from <http://data.open.ac.uk/context/meetups>
+where { 
+  VALUES ?subject { <http://dbpedia.org/resource/Al_Wilson_(singer)> }
+  ?s rdf:type mtp:Meetup ;
+      mtp:hasSubject ?subject ;
+      mtp:hasParticipant ?participant ;
+	  mtp:happensAt ?time_expression ;
+      mtp:hasAPurpose ?purpose_uri ;
+      mtp:hasEvidenceText ?evidence_text ;
+      mtp:hasPlace ?location_uri .
+  {
+    SELECT ?s (MIN (?location ) AS ?location_uri) WHERE {
+      VALUES ?subject { <http://dbpedia.org/resource/Al_Wilson_(singer)> }
+    	?s mtp:hasPlace ?location ;
+      	 mtp:hasSubject ?subject .
+    }GROUP BY ?s
+  }
+  .
+  FILTER  (!regex (str(?participant), str(?subject) ) ) .
+  ?participant rdfs:label ?participant_label .
+  ?location_uri rdfs:label ?location_label ;
+    geo:lat ?lat ;
+    geo:long ?long .
+  ?purpose_uri rdfs:label ?purpose 
+}
+group by ?s ?evidence_text ?purpose ?time_expression_URI ?lat ?long ?location_label ?location_uri
