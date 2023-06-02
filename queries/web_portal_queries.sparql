@@ -1,5 +1,7 @@
 # SPARQL queries created for WebPortal searches
 
+# ==================== First level
+# 
 # ==================== TOPICS
 # QUERY all the meetups types
 prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
@@ -37,3 +39,40 @@ where {
     geo:lat ?lat ;
     geo:long ?long .
 }
+
+# ==================== Second level
+# 
+# ==================== PEOPLE <> PEOPLE
+prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
+prefix meetup: <http://w3id.org/polifonia/pilot/meetups/>
+
+SELECT DISTINCT ?rel ?inverse_rel ?entity ?entityLabel
+FROM <http://data.open.ac.uk/context/meetups>
+WHERE {
+  VALUES ?subject { <http://dbpedia.org/resource/Yehudi_Menuhin> }
+  ?s mtp:hasSubject ?subject ;
+    mtp:hasParticipant ?participant .
+  FILTER  (!regex (str(?participant), str(?subject) ) ) .
+  ?participant rdfs:label ?entityLabel .
+  BIND(str("shared a meetup with") AS ?rel) .
+  BIND(?participant AS ?entity) 
+}
+ORDER BY ?entityLabel
+
+# ==================== PEOPLE <> PLACES
+
+prefix mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#>
+prefix meetup: <http://w3id.org/polifonia/pilot/meetups/>
+
+SELECT DISTINCT ?rel ?inverse_rel ?entity ?entityLabel
+FROM <http://data.open.ac.uk/context/meetups>
+WHERE {
+  VALUES ?subject { <http://dbpedia.org/resource/Yehudi_Menuhin> }
+  ?s mtp:hasSubject ?subject ;
+    mtp:hasPlace ?place .
+  ?place rdfs:label ?entityLabel .
+  BIND(str("has meetup at") AS ?rel) .
+  BIND(?place AS ?entity) 
+}
+ORDER BY ?entityLabel
+
