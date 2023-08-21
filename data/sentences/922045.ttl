@@ -9,19 +9,19 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/Derek_Nimmo>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Derek_Nimmo> .
+<http://dbpedia.org/resource/Liverpool>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Liverpool> .
 
 meetup:businessmeeting
         rdf:type    mtp:Purpose ;
         rdfs:label  "Business meeting" .
 
-<http://dbpedia.org/resource/Liverpool>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Liverpool> .
+<http://dbpedia.org/resource/Derek_Nimmo>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Derek_Nimmo> .
 
 meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
@@ -41,10 +41,6 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Samuel_Marsden> .
 
-meetup:363d922d745b7f6f4b3d6fec53e24cfa
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "18 April 1989" .
-
 <http://w3id.org/polifonia/pilot/meetups/922045/5/14>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:363d922d745b7f6f4b3d6fec53e24cfa , meetup:9c45068d7346135612998ca2bc4dc27c ;
@@ -54,6 +50,12 @@ meetup:363d922d745b7f6f4b3d6fec53e24cfa
         mtp:hasParticipant   <http://dbpedia.org/resource/Samuel_Marsden> , <http://dbpedia.org/resource/Paul_McCartney> , <http://dbpedia.org/resource/Holly_Johnson> ;
         mtp:hasPlace         <http://dbpedia.org/resource/River_Mersey> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gerry_Marsden> .
+
+meetup:363d922d745b7f6f4b3d6fec53e24cfa
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "18 April 1989" ;
+        time:hasBeginning    "1989-04-18"^^xsd:date ;
+        time:hasEnd          "1989-04-18"^^xsd:date .
 
 <http://dbpedia.org/resource/Gerry_Marsden>
         rdf:type              mtp:Participant ;
@@ -76,7 +78,7 @@ meetup:363d922d745b7f6f4b3d6fec53e24cfa
         mtp:hasSubject       <http://dbpedia.org/resource/Gerry_Marsden> .
 
 meetup:9c45068d7346135612998ca2bc4dc27c
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "three days" .
 
 <http://dbpedia.org/resource/Paul_McCartney>
@@ -85,12 +87,16 @@ meetup:9c45068d7346135612998ca2bc4dc27c
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paul_McCartney> .
 
 meetup:621eb0c8ba5eb2b0a4566020387349f8
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "April 1968" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "April 1968" ;
+        time:hasBeginning    "1968-04-01"^^xsd:date ;
+        time:hasEnd          "1968-04-30"^^xsd:date .
 
 meetup:4a3e00961a08879c34f91ca0070ea2f5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1989" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1989" ;
+        time:hasBeginning    "1989-01-01"^^xsd:date ;
+        time:hasEnd          "1989-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/River_Mersey>
         rdf:type              mtp:Location ;

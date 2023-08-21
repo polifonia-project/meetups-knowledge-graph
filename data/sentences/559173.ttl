@@ -10,7 +10,7 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:7d17b47963b1cd330987d1dfd2b39a80
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "late 1930" .
 
 <http://dbpedia.org/resource/Jubilee_line>
@@ -23,19 +23,16 @@ meetup:7d17b47963b1cd330987d1dfd2b39a80
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
-<http://w3id.org/polifonia/pilot/meetups/559173/12/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:3d863b367aa379f71c7afc0c9cdca41d ;
-        mtp:hasAPurpose      meetup:publiccelebration ;
-        mtp:hasConfidence    "0.99531424" ;
-        mtp:hasEvidenceText  "Starting in 1974, Fox Lake, Wisconsin held an annual Bunny Berigan Jazz Jubilee originally organized by Berigan's daughter, Joyce Hansen, until she was incapacitated by Alzheimer's disease, and then by Julie Fleming." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Joyce_Hansen> , <http://dbpedia.org/resource/Bunny_Berigan> ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Wisconsin> , <http://dbpedia.org/resource/Jubilee_line> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Bunny_Berigan> .
+<http://dbpedia.org/resource/Joyce_Hansen>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joyce_Hansen> .
 
 meetup:3d863b367aa379f71c7afc0c9cdca41d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1974" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1974" ;
+        time:hasBeginning    "1974-01-01"^^xsd:date ;
+        time:hasEnd          "1974-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
@@ -56,10 +53,15 @@ meetup:publiccelebration
         rdf:type    mtp:Purpose ;
         rdfs:label  "Public celebration" .
 
-<http://dbpedia.org/resource/Joyce_Hansen>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joyce_Hansen> .
+<http://w3id.org/polifonia/pilot/meetups/559173/12/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:3d863b367aa379f71c7afc0c9cdca41d ;
+        mtp:hasAPurpose      meetup:publiccelebration ;
+        mtp:hasConfidence    "0.99531424" ;
+        mtp:hasEvidenceText  "Starting in 1974, Fox Lake, Wisconsin held an annual Bunny Berigan Jazz Jubilee originally organized by Berigan's daughter, Joyce Hansen, until she was incapacitated by Alzheimer's disease, and then by Julie Fleming." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Joyce_Hansen> , <http://dbpedia.org/resource/Bunny_Berigan> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Wisconsin> , <http://dbpedia.org/resource/Jubilee_line> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bunny_Berigan> .
 
 meetup:coincidence  rdf:type  mtp:Purpose ;
         rdfs:label  "Coincidence" .

@@ -10,7 +10,7 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:f9ed021a3e75c6d8d1685fe581c0c4fe
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "The following June" .
 
 <http://w3id.org/polifonia/pilot/meetups/173225/5/0>
@@ -19,7 +19,7 @@ meetup:f9ed021a3e75c6d8d1685fe581c0c4fe
         mtp:hasAPurpose      meetup:publiccelebration ;
         mtp:hasConfidence    "0.73074174" ;
         mtp:hasEvidenceText  "Lomax was born in Austin, Texas, in 1915, the third of four children born to Bess Brown and pioneering folklorist and author John A. Lomax." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/John_Lomax> , <http://dbpedia.org/resource/Bess_Lomax_Hawes> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bess_Lomax_Hawes> , <http://dbpedia.org/resource/John_Lomax> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Austin,_Texas> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Alan_Lomax> .
 
@@ -29,7 +29,7 @@ meetup:f9ed021a3e75c6d8d1685fe581c0c4fe
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Seville> .
 
 meetup:74b73c9243b5bbd17fb1b35e7a5dea01
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of September 11" .
 
 <http://dbpedia.org/resource/Midnight>
@@ -103,12 +103,14 @@ meetup:74b73c9243b5bbd17fb1b35e7a5dea01
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kentucky> .
 
 meetup:8e71656e7027ffc6705aadac208b59c5
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
         mtp:hasEvidenceText  "1941 and 42" .
 
 meetup:d0fb963ff976f9c37fc81fe03c21ea7b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2001" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2001" ;
+        time:hasBeginning    "2001-01-01"^^xsd:date ;
+        time:hasEnd          "2001-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/173225/46/1>
         rdf:type             mtp:Meetup ;
@@ -121,12 +123,16 @@ meetup:d0fb963ff976f9c37fc81fe03c21ea7b
         mtp:hasSubject       <http://dbpedia.org/resource/Alan_Lomax> .
 
 meetup:e4dd5528f7596dcdf871aa55cfccc53c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1959" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1959" ;
+        time:hasBeginning    "1959-01-01"^^xsd:date ;
+        time:hasEnd          "1959-12-31"^^xsd:date .
 
 meetup:c8758b517083196f05ac29810b924aca
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2011" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2011" ;
+        time:hasBeginning    "2011-01-01"^^xsd:date ;
+        time:hasEnd          "2011-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Sonny_Terry>
         rdf:type              mtp:Participant ;
@@ -139,11 +145,11 @@ meetup:c8758b517083196f05ac29810b924aca
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Woody_Guthrie> .
 
 meetup:22a7c56857681a21d9e351324bd4f97b
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "The Midnight" .
 
 meetup:988c64336b8b535611fc1f617eca2cef
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Eastern" .
 
 <http://w3id.org/polifonia/pilot/meetups/173225/6/3>
@@ -161,10 +167,10 @@ meetup:988c64336b8b535611fc1f617eca2cef
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gil_Evans> .
 
-<http://dbpedia.org/resource/Communism>
+<http://dbpedia.org/resource/Kingdom_of_Galicia>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Communism> .
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kingdom_of_Galicia> .
 
 <http://w3id.org/polifonia/pilot/meetups/173225/51/5>
         rdf:type             mtp:Meetup ;
@@ -176,6 +182,16 @@ meetup:988c64336b8b535611fc1f617eca2cef
         mtp:hasPlace         <http://dbpedia.org/resource/Greenwich_Village> , <http://dbpedia.org/resource/Virginia> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Alan_Lomax> .
 
+<http://dbpedia.org/resource/Communism>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Communism> .
+
+<http://dbpedia.org/resource/Miles_Davis>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Miles_Davis> .
+
 <http://w3id.org/polifonia/pilot/meetups/173225/11/4>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:501cc095b779f349da7d8c80e35fd469 ;
@@ -186,24 +202,16 @@ meetup:988c64336b8b535611fc1f617eca2cef
         mtp:hasPlace         <http://dbpedia.org/resource/Mexico> , <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Alan_Lomax> .
 
-<http://dbpedia.org/resource/Kingdom_of_Galicia>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kingdom_of_Galicia> .
-
-<http://dbpedia.org/resource/Miles_Davis>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Miles_Davis> .
-
 <http://dbpedia.org/resource/Goddard_Lieberson>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Goddard_Lieberson> .
 
 meetup:7f959a53fa2130588f09247992a8ac24
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1961–62" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1961–62" ;
+        time:hasBeginning    "1961-01-01"^^xsd:date ;
+        time:hasEnd          "2062-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Southern_United_States>
         rdf:type              mtp:Location ;
@@ -211,8 +219,10 @@ meetup:7f959a53fa2130588f09247992a8ac24
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Southern_United_States> .
 
 meetup:7af6266cc52234b5aa339b16695f7fc4
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1941" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1941" ;
+        time:hasBeginning    "1941-01-01"^^xsd:date ;
+        time:hasEnd          "1941-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/173225/17/9>
         rdf:type             mtp:Meetup ;
@@ -235,7 +245,7 @@ meetup:7af6266cc52234b5aa339b16695f7fc4
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Greenwich_Village> .
 
 meetup:180942fb5e1768bb790b59c98cef805f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "first year" .
 
 <http://dbpedia.org/resource/Morocco>
@@ -264,7 +274,7 @@ meetup:180942fb5e1768bb790b59c98cef805f
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Averill,_Vermont> .
 
 meetup:e631373d2b54f7077fb9f80eccb9d637
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of the 1950s" .
 
 <http://dbpedia.org/resource/Bess_Lomax_Hawes>
@@ -286,32 +296,36 @@ meetup:education  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
 
 meetup:70ca739b50c7bc3624b8f2e9050e185d
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the 1940s" .
 
 meetup:646df00ec1ad33516f7140a96cdffa66
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "February 8 , 2006" .
 
 meetup:ff6f473ea012ce08527ccd8dcb884863
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "a year" .
 
 meetup:95e6834d0a3d99e9ea8811855ae9229d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1940" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1940" ;
+        time:hasBeginning    "1940-01-01"^^xsd:date ;
+        time:hasEnd          "1940-12-31"^^xsd:date .
 
 meetup:publiccelebration
         rdf:type    mtp:Purpose ;
         rdfs:label  "Public celebration" .
 
 meetup:1409c86d3d6e16f53a53243f3f1382c1
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the 1950s" .
 
 meetup:136f951362dab62e64eb8e841183c2a9
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1937" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1937" ;
+        time:hasBeginning    "1937-01-01"^^xsd:date ;
+        time:hasEnd          "1937-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Memphis_Slim>
         rdf:type              mtp:Participant ;
@@ -354,8 +368,10 @@ meetup:136f951362dab62e64eb8e841183c2a9
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Burl_Ives> .
 
 meetup:03e7d2ebec1e820ac34d054df7e68f48
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1950" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1950" ;
+        time:hasBeginning    "1950-01-01"^^xsd:date ;
+        time:hasEnd          "1950-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Peggy_Seeger>
         rdf:type              mtp:Participant ;
@@ -418,8 +434,10 @@ meetup:03e7d2ebec1e820ac34d054df7e68f48
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mike_Seeger> .
 
 meetup:8d55a249e6baa5c06772297520da2051
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1935" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1935" ;
+        time:hasBeginning    "1935-01-01"^^xsd:date ;
+        time:hasEnd          "1935-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Eric_Lomax>
         rdf:type              mtp:Participant ;
@@ -460,8 +478,10 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jelly_Roll_Morton> .
 
 meetup:c5a4e7e6882845ea7bb4d9462868219b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1993" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1993" ;
+        time:hasBeginning    "1993-01-01"^^xsd:date ;
+        time:hasEnd          "1993-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/173225/15/2>
         rdf:type             mtp:Meetup ;
@@ -474,8 +494,10 @@ meetup:c5a4e7e6882845ea7bb4d9462868219b
         mtp:hasSubject       <http://dbpedia.org/resource/Alan_Lomax> .
 
 meetup:29530de21430b7540ec3f65135f7323c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1930" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1930" ;
+        time:hasBeginning    "1930-01-01"^^xsd:date ;
+        time:hasEnd          "1930-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Carnegie_Hall>
         rdf:type              mtp:Location ;
@@ -493,7 +515,7 @@ meetup:29530de21430b7540ec3f65135f7323c
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Spain> .
 
 meetup:86f5978d9b80124f509bdb71786e929e
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "January" .
 
 meetup:businessmeeting
@@ -526,7 +548,7 @@ meetup:businessmeeting
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Red_Channels> .
 
 meetup:b622beb7bea3668e5485a8cf9868780f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "August 24 , 1997" .
 
 <http://dbpedia.org/resource/Ronald_Reagan>
@@ -550,8 +572,10 @@ meetup:b622beb7bea3668e5485a8cf9868780f
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Haiti> .
 
 meetup:08f90c1a417155361a5c4b8d297e0d78
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2000" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2000" ;
+        time:hasBeginning    "2000-01-01"^^xsd:date ;
+        time:hasEnd          "2000-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Europe>
         rdf:type              mtp:Location ;
@@ -574,8 +598,10 @@ meetup:08f90c1a417155361a5c4b8d297e0d78
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Listed_building> .
 
 meetup:f106b7f99d2cb30c3db1c3cc0fde9ccb
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1961" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1961" ;
+        time:hasBeginning    "1961-01-01"^^xsd:date ;
+        time:hasEnd          "1961-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/173225/11/0>
         rdf:type             mtp:Meetup ;
@@ -598,16 +624,20 @@ meetup:f106b7f99d2cb30c3db1c3cc0fde9ccb
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Florida> .
 
 meetup:4552812d9636c7ed1a28a52f58992e94
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "June 1942" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "June 1942" ;
+        time:hasBeginning    "1942-06-01"^^xsd:date ;
+        time:hasEnd          "1942-06-30"^^xsd:date .
 
 meetup:461f442d0ff8028d80b81b043761b48f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "many years" .
 
 meetup:8562ae5e286544710b2e7ebe9858833b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1934" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1934" ;
+        time:hasBeginning    "1934-01-01"^^xsd:date ;
+        time:hasEnd          "1934-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Albany,_New_York>
         rdf:type              mtp:Location ;
@@ -625,8 +655,10 @@ meetup:8562ae5e286544710b2e7ebe9858833b
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Will_Geer> .
 
 meetup:ee89262dc250b8cb45c06aee71a073d0
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "The 1944" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "The 1944" ;
+        time:hasBeginning    "1944-01-01"^^xsd:date ;
+        time:hasEnd          "1944-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Tennessee>
         rdf:type              mtp:Location ;
@@ -639,7 +671,7 @@ meetup:ee89262dc250b8cb45c06aee71a073d0
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mexico> .
 
 meetup:97bc592b27a9ada2d9a4bb418ed0ebed
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "now" .
 
 <http://dbpedia.org/resource/Almeda_Riddle>
@@ -677,6 +709,11 @@ meetup:97bc592b27a9ada2d9a4bb418ed0ebed
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lewis_Jones_(rugby)> .
 
+<http://dbpedia.org/resource/Archibald_MacLeish>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Archibald_MacLeish> .
+
 <http://w3id.org/polifonia/pilot/meetups/173225/15/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:5c05418e1dafbbc5e50c90a640981da4 ;
@@ -693,24 +730,19 @@ meetup:97bc592b27a9ada2d9a4bb418ed0ebed
         mtp:hasAPurpose      meetup:musicmaking ;
         mtp:hasConfidence    "0.99634886" ;
         mtp:hasEvidenceText  "The 1944 \"ballad opera\", The Martins and the Coys, broadcast in Britain (but not the USA) by the BBC, featuring Burl Ives, Woody Guthrie, Will Geer, Sonny Terry, Pete Seeger, and Fiddlin' Arthur Smith, among others, was released on Rounder Records in 2000." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Burl_Ives> , <http://dbpedia.org/resource/Sonny_Terry> , <http://dbpedia.org/resource/Pete_Seeger> , <http://dbpedia.org/resource/Woody_Guthrie> , <http://dbpedia.org/resource/Will_Geer> , <http://dbpedia.org/resource/Fiddlin'_Arthur_Smith> , <http://dbpedia.org/resource/Arthur_Smith_(comedian)> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Burl_Ives> , <http://dbpedia.org/resource/Sonny_Terry> , <http://dbpedia.org/resource/Woody_Guthrie> , <http://dbpedia.org/resource/Pete_Seeger> , <http://dbpedia.org/resource/Will_Geer> , <http://dbpedia.org/resource/Fiddlin'_Arthur_Smith> , <http://dbpedia.org/resource/Arthur_Smith_(comedian)> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> , <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Alan_Lomax> .
-
-<http://dbpedia.org/resource/Archibald_MacLeish>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Archibald_MacLeish> .
-
-<http://dbpedia.org/resource/Lead_Belly>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lead_Belly> .
 
 <http://dbpedia.org/resource/Rockin'_Robin_Roberts>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Rockin'_Robin_Roberts> .
+
+<http://dbpedia.org/resource/Lead_Belly>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lead_Belly> .
 
 <http://dbpedia.org/resource/Librarian_of_Congress>
         rdf:type              mtp:Participant ;
@@ -718,8 +750,10 @@ meetup:97bc592b27a9ada2d9a4bb418ed0ebed
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Librarian_of_Congress> .
 
 meetup:f5dfa553dbde4c95b7e26d0ce878d9ef
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "February 1937" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "February 1937" ;
+        time:hasBeginning    "1937-02-01"^^xsd:date ;
+        time:hasEnd          "1937-02-28"^^xsd:date .
 
 <http://dbpedia.org/resource/Alan_Lomax>
         rdf:type              mtp:Participant ;
@@ -727,20 +761,24 @@ meetup:f5dfa553dbde4c95b7e26d0ce878d9ef
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alan_Lomax> .
 
 meetup:95f6870ff3dcd442254e334a9033d349
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1962" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1962" ;
+        time:hasBeginning    "1962-01-01"^^xsd:date ;
+        time:hasEnd          "1962-12-31"^^xsd:date .
 
 meetup:ccc32982e91345e196527270b60ab38f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "many hours" .
 
 meetup:e070046d72e8f6c2e56ebd559d0e7058
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "July to November 1959" .
 
 meetup:11108a3dbfe4636cb40b84b803b2fff6
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1936" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1936" ;
+        time:hasBeginning    "1936-01-01"^^xsd:date ;
+        time:hasEnd          "1936-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/173225/17/0>
         rdf:type             mtp:Meetup ;
@@ -793,8 +831,10 @@ meetup:11108a3dbfe4636cb40b84b803b2fff6
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Fiddlin'_Arthur_Smith> .
 
 meetup:5c05418e1dafbbc5e50c90a640981da4
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the 1960" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1960" ;
+        time:hasBeginning    "1960-01-01"^^xsd:date ;
+        time:hasEnd          "1960-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Wade_Ward>
         rdf:type              mtp:Participant ;
@@ -802,7 +842,7 @@ meetup:5c05418e1dafbbc5e50c90a640981da4
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Wade_Ward> .
 
 meetup:0b92316ca5b2732559e7b1100e511d8e
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "'59" .
 
 <http://dbpedia.org/resource/George_Washington>
@@ -811,7 +851,7 @@ meetup:0b92316ca5b2732559e7b1100e511d8e
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Washington> .
 
 meetup:892995ac186bcb3261c4ce325e0a258b
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "now 17" .
 
 <http://w3id.org/polifonia/pilot/meetups/173225/17/8>
@@ -835,8 +875,10 @@ meetup:892995ac186bcb3261c4ce325e0a258b
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Lomax> .
 
 meetup:829a93de7a3dd903b2fc5f79ad61511b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1936–1937" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1936–1937" ;
+        time:hasBeginning    "1936-01-01"^^xsd:date ;
+        time:hasEnd          "1937-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Jimmy_Driftwood>
         rdf:type              mtp:Participant ;
@@ -873,13 +915,17 @@ meetup:829a93de7a3dd903b2fc5f79ad61511b
         mtp:hasPlace         <http://dbpedia.org/resource/Hunter_Region> , <http://dbpedia.org/resource/Television_in_the_United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Alan_Lomax> .
 
-meetup:501cc095b779f349da7d8c80e35fd469
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "February 1941" .
-
 meetup:277a78fc05c8864a170e9a56ceeabc4c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1957" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1957" ;
+        time:hasBeginning    "1957-01-01"^^xsd:date ;
+        time:hasEnd          "1957-12-31"^^xsd:date .
+
+meetup:501cc095b779f349da7d8c80e35fd469
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "February 1941" ;
+        time:hasBeginning    "1941-02-01"^^xsd:date ;
+        time:hasEnd          "1941-02-28"^^xsd:date .
 
 <http://dbpedia.org/resource/Zora_Neale_Hurston>
         rdf:type              mtp:Participant ;
@@ -892,8 +938,10 @@ meetup:277a78fc05c8864a170e9a56ceeabc4c
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Arkansas> .
 
 meetup:b432f34c5a997c8e7c806a895ecc5e25
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1915" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1915" ;
+        time:hasBeginning    "1915-01-01"^^xsd:date ;
+        time:hasEnd          "1915-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Virginia>
         rdf:type              mtp:Location ;
@@ -909,8 +957,10 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Pete_Seeger> .
 
 meetup:a38b16173474ba8b1a95bcbc30d3b8a5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1953" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1953" ;
+        time:hasBeginning    "1953-01-01"^^xsd:date ;
+        time:hasEnd          "1953-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Television_in_the_United_Kingdom>
         rdf:type              mtp:Location ;
@@ -918,7 +968,7 @@ meetup:a38b16173474ba8b1a95bcbc30d3b8a5
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Television_in_the_United_Kingdom> .
 
 meetup:0a6189aae0fe75da24ceb543a95c6d53
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the following year" .
 
 <http://dbpedia.org/resource/Texas>

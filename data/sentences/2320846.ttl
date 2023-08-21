@@ -9,15 +9,15 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/Paul_Winter>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paul_Winter> .
-
 <http://dbpedia.org/resource/Samo>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Samo> .
+
+<http://dbpedia.org/resource/Paul_Winter>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paul_Winter> .
 
 meetup:publiccelebration
         rdf:type    mtp:Purpose ;
@@ -28,10 +28,15 @@ meetup:publiccelebration
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/DCU_Center> .
 
-<http://dbpedia.org/resource/New_York_City>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+<http://w3id.org/polifonia/pilot/meetups/2320846/2/13>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:8038da89e49ac5eabb489cfc6cea9fc1 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9927839" ;
+        mtp:hasEvidenceText  "Since 2013 he has been playing regularly in Europe with the Samo Salamon Bassless Trio." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Sandip_Burman> , <http://dbpedia.org/resource/Samo> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Europe> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_McCandless> .
 
 <http://w3id.org/polifonia/pilot/meetups/2320846/2/9>
         rdf:type             mtp:Meetup ;
@@ -40,16 +45,6 @@ meetup:publiccelebration
         mtp:hasConfidence    "0.85529554" ;
         mtp:hasEvidenceText  "In 1985, McCandless toured Europe with bassist Barre Phillips and German clarinetist Theo Jörgensmann." ;
         mtp:hasParticipant   <http://dbpedia.org/resource/Theseus> , <http://dbpedia.org/resource/Bruce_McCandless> , <http://dbpedia.org/resource/Barre_Phillips> ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Europe> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Paul_McCandless> .
-
-<http://w3id.org/polifonia/pilot/meetups/2320846/2/13>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:8038da89e49ac5eabb489cfc6cea9fc1 ;
-        mtp:hasAPurpose      meetup:musicmaking ;
-        mtp:hasConfidence    "0.9927839" ;
-        mtp:hasEvidenceText  "Since 2013 he has been playing regularly in Europe with the Samo Salamon Bassless Trio." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Sandip_Burman> , <http://dbpedia.org/resource/Samo> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Europe> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_McCandless> .
 
@@ -63,14 +58,21 @@ meetup:publiccelebration
         mtp:hasPlace         <http://dbpedia.org/resource/Washington_Union_Station> , <http://dbpedia.org/resource/New_York_City> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Jakarta> , <http://dbpedia.org/resource/Indonesia> , <http://dbpedia.org/resource/DCU_Center> , <http://dbpedia.org/resource/Mount_Bromo> , <http://dbpedia.org/resource/Dakota_Jazz_Club> , <http://dbpedia.org/resource/Surabaya> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_McCandless> .
 
+<http://dbpedia.org/resource/New_York_City>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
+
 <http://dbpedia.org/resource/Dakota_Jazz_Club>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dakota_Jazz_Club> .
 
 meetup:8038da89e49ac5eabb489cfc6cea9fc1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2013" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2013" ;
+        time:hasBeginning    "2013-01-01"^^xsd:date ;
+        time:hasEnd          "2013-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Washington_Union_Station>
         rdf:type              mtp:Location ;
@@ -83,8 +85,10 @@ meetup:8038da89e49ac5eabb489cfc6cea9fc1
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Heaven> .
 
 meetup:8d8818c8e140c64c743113f563cf750f
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2017" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2017" ;
+        time:hasBeginning    "2017-01-01"^^xsd:date ;
+        time:hasEnd          "2017-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Surabaya>
         rdf:type              mtp:Location ;
@@ -102,15 +106,15 @@ meetup:8d8818c8e140c64c743113f563cf750f
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Blues_Alley> .
 
 meetup:99168e98844f59f17fd5d3656dbc4084
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "March 24 , 1947" .
 
 meetup:b18e66b41efd9a3df1a7bc8758da1883
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Winter" .
 
 meetup:b16fe82caedc60804600482a2fc851f2
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
         mtp:hasEvidenceText  "2007 and 2011" .
 
 <http://dbpedia.org/resource/Theseus>
@@ -127,8 +131,10 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bruce_McCandless> .
 
 meetup:1f36c15d6a3d18d52e8d493bc8187cb9
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1985" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1985" ;
+        time:hasBeginning    "1985-01-01"^^xsd:date ;
+        time:hasEnd          "1985-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
@@ -169,8 +175,10 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
 
 meetup:c5a4e7e6882845ea7bb4d9462868219b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1993" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1993" ;
+        time:hasBeginning    "1993-01-01"^^xsd:date ;
+        time:hasEnd          "1993-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Europe>
         rdf:type              mtp:Location ;

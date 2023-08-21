@@ -9,15 +9,15 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/John_Philip_Sousa>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Philip_Sousa> .
-
 <http://dbpedia.org/resource/Percy_Grainger>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Percy_Grainger> .
+
+<http://dbpedia.org/resource/John_Philip_Sousa>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Philip_Sousa> .
 
 <http://dbpedia.org/resource/Belgium>
         rdf:type              mtp:Location ;
@@ -43,18 +43,20 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasSubject       <http://dbpedia.org/resource/Robert_Nathaniel_Dett> .
 
 meetup:8c8a58fa97c205ff222de3685497742c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1919" .
-
-<http://dbpedia.org/resource/Clarence_Cameron_White>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Clarence_Cameron_White> .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1919" ;
+        time:hasBeginning    "1919-01-01"^^xsd:date ;
+        time:hasEnd          "1919-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Roland_Hayes>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Roland_Hayes> .
+
+<http://dbpedia.org/resource/Clarence_Cameron_White>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Clarence_Cameron_White> .
 
 <http://dbpedia.org/resource/Robert_Nathaniel_Dett>
         rdf:type              mtp:Participant ;

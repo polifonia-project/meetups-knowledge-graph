@@ -31,15 +31,17 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gerry_Rafferty> .
 
 meetup:756b3ed7e6565c3dc59d5fac8346c7ea
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "A 1970" .
 
 meetup:14cadde78bd2b9c4203f6dbaafcfac94
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "January 2013" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "January 2013" ;
+        time:hasBeginning    "2013-01-01"^^xsd:date ;
+        time:hasEnd          "2013-01-31"^^xsd:date .
 
 meetup:c08df9bb5fb44242a6291b1eee5d09ad
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Mo" .
 
 meetup:publiccelebration
@@ -47,8 +49,10 @@ meetup:publiccelebration
         rdfs:label  "Public celebration" .
 
 meetup:253614bbac999b38b5b60cae531c4969
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2012" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2012" ;
+        time:hasBeginning    "2012-01-01"^^xsd:date ;
+        time:hasEnd          "2012-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/1068160/26/4>
         rdf:type             mtp:Meetup ;
@@ -56,7 +60,7 @@ meetup:253614bbac999b38b5b60cae531c4969
         mtp:hasAPurpose      meetup:publiccelebration ;
         mtp:hasConfidence    "0.95189524" ;
         mtp:hasEvidenceText  "Barbara Dickson released a tribute album of 13 Rafferty songs, To Each and Everyone: The Songs of Gerry Rafferty, in September 2013, including cover versions of \"Baker Street\", \"The Ark\", and \"Steamboat Row\"." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Gerry_Rafferty> , <http://dbpedia.org/resource/Barbara_Dickson> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Barbara_Dickson> , <http://dbpedia.org/resource/Gerry_Rafferty> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Baker_Street> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gerry_Rafferty> .
 
@@ -106,7 +110,7 @@ meetup:253614bbac999b38b5b60cae531c4969
         mtp:hasAPurpose      meetup:personallife ;
         mtp:hasConfidence    "0.9694891" ;
         mtp:hasEvidenceText  "A son of Joseph and Mary (Skeffington) Rafferty, he had two brothers, Jim and Joe (died 1988)." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Saint_Joseph> , <http://dbpedia.org/resource/Mary_I_of_England> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Mary_I_of_England> , <http://dbpedia.org/resource/Saint_Joseph> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Skeffington> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gerry_Rafferty> .
 
@@ -115,12 +119,8 @@ meetup:253614bbac999b38b5b60cae531c4969
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Scotland> .
 
-meetup:6c86e97246db9daa3687eb289dd374dd
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the late 1970s" .
-
 meetup:1e1cc9bdeb2f29f5480106aec7e9bc48
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Now" .
 
 <http://w3id.org/polifonia/pilot/meetups/1068160/41/15>
@@ -133,19 +133,25 @@ meetup:1e1cc9bdeb2f29f5480106aec7e9bc48
         mtp:hasPlace         <http://dbpedia.org/resource/Glasgow> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gerry_Rafferty> .
 
-meetup:d46e1fcf4c07ce4a69ee07e4134bcef1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1965" .
+meetup:6c86e97246db9daa3687eb289dd374dd
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "the late 1970s" .
 
-<http://dbpedia.org/resource/Ricky_Ross_(musician)>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ricky_Ross_(musician)> .
+meetup:d46e1fcf4c07ce4a69ee07e4134bcef1
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1965" ;
+        time:hasBeginning    "1965-01-01"^^xsd:date ;
+        time:hasEnd          "1965-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Barbados>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Barbados> .
+
+<http://dbpedia.org/resource/Ricky_Ross_(musician)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ricky_Ross_(musician)> .
 
 <http://dbpedia.org/resource/Royal_Festival_Hall>
         rdf:type              mtp:Location ;
@@ -176,8 +182,10 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         rdfs:label  "Coincidence" .
 
 meetup:0004d0b59e19461ff126e3a08a814c33
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1970" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1970" ;
+        time:hasBeginning    "1970-01-01"^^xsd:date ;
+        time:hasEnd          "1970-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Hugh_Burns>
         rdf:type              mtp:Participant ;
@@ -204,6 +212,11 @@ meetup:0004d0b59e19461ff126e3a08a814c33
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Italy> .
 
+<http://dbpedia.org/resource/Kenny_Craddock>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kenny_Craddock> .
+
 <http://w3id.org/polifonia/pilot/meetups/1068160/30/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:6c86e97246db9daa3687eb289dd374dd , meetup:0004d0b59e19461ff126e3a08a814c33 ;
@@ -213,11 +226,6 @@ meetup:0004d0b59e19461ff126e3a08a814c33
         mtp:hasParticipant   <http://dbpedia.org/resource/Martha> , <http://dbpedia.org/resource/Mary_I_of_England> ;
         mtp:hasPlace         <http://dbpedia.org/resource/England> , <http://dbpedia.org/resource/London> , <http://dbpedia.org/resource/Sussex> , <http://dbpedia.org/resource/Scotland> , <http://dbpedia.org/resource/Hampstead> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gerry_Rafferty> .
-
-<http://dbpedia.org/resource/Kenny_Craddock>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kenny_Craddock> .
 
 <http://dbpedia.org/resource/France>
         rdf:type              mtp:Location ;
@@ -230,8 +238,10 @@ meetup:0004d0b59e19461ff126e3a08a814c33
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Baker_Street> .
 
 meetup:9d7311ba459f9e45ed746755a32dcd11
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1988" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1988" ;
+        time:hasBeginning    "1988-01-01"^^xsd:date ;
+        time:hasEnd          "1988-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/1068160/21/1>
         rdf:type             mtp:Meetup ;
@@ -244,8 +254,10 @@ meetup:9d7311ba459f9e45ed746755a32dcd11
         mtp:hasSubject       <http://dbpedia.org/resource/Gerry_Rafferty> .
 
 meetup:6291a7bfc279fd785b8e3384eb4b097b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "September 2013" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "September 2013" ;
+        time:hasBeginning    "2013-09-01"^^xsd:date ;
+        time:hasEnd          "2013-09-30"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/1068160/30/0>
         rdf:type             mtp:Meetup ;
@@ -253,7 +265,7 @@ meetup:6291a7bfc279fd785b8e3384eb4b097b
         mtp:hasAPurpose      meetup:coincidence ;
         mtp:hasConfidence    "0.99745303" ;
         mtp:hasEvidenceText  "In 1965, 18-year-old Rafferty met 15-year-old Carla Ventilla, an apprentice hairdresser from an Italian family in Clydebank, at a dancehall—a story he later recounted in the song \"Shipyard Town\" on North and South." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Carla_Thomas> , <http://dbpedia.org/resource/Hairdresser> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Hairdresser> , <http://dbpedia.org/resource/Carla_Thomas> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Clydebank> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gerry_Rafferty> .
 

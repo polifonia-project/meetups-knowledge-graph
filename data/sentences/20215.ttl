@@ -15,8 +15,10 @@
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mississippi_John_Hurt> .
 
 meetup:98c7242894844ecd6ec94af67ac8247d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1968" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1968" ;
+        time:hasBeginning    "1968-01-01"^^xsd:date ;
+        time:hasEnd          "1968-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Tom_Paxton>
         rdf:type              mtp:Participant ;
@@ -53,39 +55,56 @@ meetup:98c7242894844ecd6ec94af67ac8247d
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Washington> .
 
-<http://dbpedia.org/resource/John_Smith_(explorer)>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Smith_(explorer)> .
-
 <http://dbpedia.org/resource/Greenwich_Village>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Greenwich_Village> .
 
-meetup:5ec829debe54b19a5f78d9a65b900a39
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1999" .
+<http://dbpedia.org/resource/John_Smith_(explorer)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Smith_(explorer)> .
 
 meetup:3f3637a03615481327a3f5f0ef91579e
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "around 1963" .
+
+meetup:5ec829debe54b19a5f78d9a65b900a39
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1999" ;
+        time:hasBeginning    "1999-01-01"^^xsd:date ;
+        time:hasEnd          "1999-12-31"^^xsd:date .
 
 meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
 
 meetup:f38b2514431e3bcce306665e110c662e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "March 8 , 1893 – November 2 , 1966" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "March 8 , 1893 – November 2 , 1966" ;
+        time:hasBeginning    "1893-01-01"^^xsd:date ;
+        time:hasEnd          "1966-12-31"^^xsd:date .
+
+meetup:4afd521d77158e02aed37e2274b90c9c
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1977" ;
+        time:hasBeginning    "1977-01-01"^^xsd:date ;
+        time:hasEnd          "1977-12-31"^^xsd:date .
+
+meetup:c215b446bcdf956d848a8419c1b5a920
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1963" ;
+        time:hasBeginning    "1963-01-01"^^xsd:date ;
+        time:hasEnd          "1963-12-31"^^xsd:date .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 <http://dbpedia.org/resource/John_Fahey_(musician)>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Fahey_(musician)> .
-
-meetup:c215b446bcdf956d848a8419c1b5a920
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1963" .
 
 <http://w3id.org/polifonia/pilot/meetups/20215/21/1>
         rdf:type             mtp:Meetup ;
@@ -93,18 +112,9 @@ meetup:c215b446bcdf956d848a8419c1b5a920
         mtp:hasAPurpose      meetup:education ;
         mtp:hasConfidence    "0.88578856" ;
         mtp:hasEvidenceText  "The New England singer-songwriter Bill Morrissey released the Grammy-nominated album Songs of Mississippi John Hurt in 1999." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Mississippi_John_Hurt> , <http://dbpedia.org/resource/Bill_Morrissey> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Bill_Morrissey> , <http://dbpedia.org/resource/Mississippi_John_Hurt> ;
         mtp:hasPlace         <http://dbpedia.org/resource/New_England> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Mississippi_John_Hurt> .
-
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
-
-meetup:4afd521d77158e02aed37e2274b90c9c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1977" .
 
 <http://w3id.org/polifonia/pilot/meetups/20215/1/0>
         rdf:type             mtp:Meetup ;
@@ -121,11 +131,11 @@ meetup:4afd521d77158e02aed37e2274b90c9c
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Requiem> .
 
-meetup:coincidence  rdf:type  mtp:Purpose ;
-        rdfs:label  "Coincidence" .
-
 meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
 
 <http://w3id.org/polifonia/pilot/meetups/20215/0/0>
         rdf:type             mtp:Meetup ;
@@ -143,7 +153,7 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasAPurpose      meetup:personallife ;
         mtp:hasConfidence    "0.53982675" ;
         mtp:hasEvidenceText  "The first track of John Fahey's 1968 solo acoustic guitar album Requia is \"Requiem for John Hurt\"." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/John_Fahey_(musician)> , <http://dbpedia.org/resource/John_Hurt> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/John_Hurt> , <http://dbpedia.org/resource/John_Fahey_(musician)> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Requiem> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Mississippi_John_Hurt> .
 

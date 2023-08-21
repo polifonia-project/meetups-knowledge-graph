@@ -10,8 +10,10 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:e06f967fb0d355592be4e7674fa31d26
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1896" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1896" ;
+        time:hasBeginning    "1896-01-01"^^xsd:date ;
+        time:hasEnd          "1896-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/18/1>
         rdf:type             mtp:Meetup ;
@@ -41,15 +43,15 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasPlace         <http://dbpedia.org/resource/Europe> , <http://dbpedia.org/resource/White_House> ;
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
-<http://dbpedia.org/resource/Napoleon>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Napoleon> .
-
 <http://dbpedia.org/resource/Saint_Joseph>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Saint_Joseph> .
+
+<http://dbpedia.org/resource/Napoleon>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Napoleon> .
 
 <http://dbpedia.org/resource/Charles_I_of_England>
         rdf:type              mtp:Participant ;
@@ -62,7 +64,7 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Europe> .
 
 meetup:6034c91b544cc793d4eb050b5a33b445
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the following day" .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/50/7>
@@ -71,7 +73,7 @@ meetup:6034c91b544cc793d4eb050b5a33b445
         mtp:hasAPurpose      meetup:businessmeeting ;
         mtp:hasConfidence    "0.9849068" ;
         mtp:hasEvidenceText  "Secretary Hay was at The Fells when McKinley was shot by Leon Czolgosz, an anarchist, on September 6 in Buffalo." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/William_McKinley> , <http://dbpedia.org/resource/Leon_Czolgosz> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Leon_Czolgosz> , <http://dbpedia.org/resource/William_McKinley> ;
         mtp:hasPlace         <http://dbpedia.org/resource/The_Fells> ;
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
@@ -101,7 +103,7 @@ meetup:6034c91b544cc793d4eb050b5a33b445
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
 meetup:59085d23a86695245db275a88bb3edb4
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Falls" .
 
 meetup:publiccelebration
@@ -132,15 +134,15 @@ meetup:education  rdf:type  mtp:Purpose ;
         rdfs:label  "Education" .
 
 meetup:9d37489d0dc3801455919cceb4b67e99
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "recently" .
 
 meetup:be60d341e5a64fb1d11d0d20237fe1ab
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "March 4 , 1905" .
 
 meetup:e2e1dc03a3760adbfd803a7b8234ff3c
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "August 14 , 1898" .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/6/7>
@@ -159,12 +161,14 @@ meetup:e2e1dc03a3760adbfd803a7b8234ff3c
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Jersey> .
 
 meetup:f00595eef7c5b6bb52da40307ca04a84
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of Springfield" .
 
 meetup:c14383b1de0fcba7d84c43729b8d2b53
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "June 1875" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "June 1875" ;
+        time:hasBeginning    "1875-06-01"^^xsd:date ;
+        time:hasEnd          "1875-06-30"^^xsd:date .
 
 <http://dbpedia.org/resource/John_Hay>
         rdf:type              mtp:Participant ;
@@ -177,12 +181,19 @@ meetup:c14383b1de0fcba7d84c43729b8d2b53
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Zeitz> .
 
 meetup:9b4cd1a0dfde5b1fde0d5c8afbccd79a
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "early August" .
 
+<http://dbpedia.org/resource/Whitelaw_Reid_(journalist)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Whitelaw_Reid_(journalist)> .
+
 meetup:4bc1b3eca58473e47d9e0dfbd9c75b78
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "October 8 , 1838 – July 1 , 1905" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "October 8 , 1838 – July 1 , 1905" ;
+        time:hasBeginning    "1838-01-01"^^xsd:date ;
+        time:hasEnd          "1905-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/41/1>
         rdf:type             mtp:Meetup ;
@@ -193,11 +204,6 @@ meetup:4bc1b3eca58473e47d9e0dfbd9c75b78
         mtp:hasParticipant   <http://dbpedia.org/resource/William_R._Day> , <http://dbpedia.org/resource/William_McKinley> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Guangzhou> ;
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
-
-<http://dbpedia.org/resource/Whitelaw_Reid_(journalist)>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Whitelaw_Reid_(journalist)> .
 
 <http://dbpedia.org/resource/Paris>
         rdf:type              mtp:Location ;
@@ -225,8 +231,10 @@ meetup:4bc1b3eca58473e47d9e0dfbd9c75b78
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
 meetup:2f25f6e326adb93c5787175dda209ab6
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1872" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1872" ;
+        time:hasBeginning    "1872-01-01"^^xsd:date ;
+        time:hasEnd          "1872-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Daniel_Sickles>
         rdf:type              mtp:Participant ;
@@ -249,11 +257,11 @@ meetup:2f25f6e326adb93c5787175dda209ab6
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Isabella_II_of_Spain> .
 
 meetup:da36cfaf48b9e19896e23e1207040d1e
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "months" .
 
 meetup:301cdddd389b8dbf9066fbfc6c5bce04
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "December 6 , 1901" .
 
 <http://dbpedia.org/resource/William_Jennings_Bryan>
@@ -271,31 +279,33 @@ meetup:301cdddd389b8dbf9066fbfc6c5bce04
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Victoria_(Australia)> .
 
-meetup:d19484b9236fa59138fe13d174a64580
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "Springfield" .
-
 <http://dbpedia.org/resource/Spain>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Spain> .
+
+meetup:d19484b9236fa59138fe13d174a64580
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "Springfield" .
 
 <http://dbpedia.org/resource/George_Washington>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Washington> .
 
-meetup:d3794ab9c35833e12621e1885dc2d29a
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "February 4 , 1861" .
-
 meetup:4f9cf4af2f1a3f5adab034489f840b60
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "March 4" .
 
+meetup:d3794ab9c35833e12621e1885dc2d29a
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "February 4 , 1861" .
+
 meetup:cd63a3eec3319fd9c84c942a08316e00
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1849" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1849" ;
+        time:hasBeginning    "1849-01-01"^^xsd:date ;
+        time:hasEnd          "1849-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/16/10>
         rdf:type             mtp:Meetup ;
@@ -328,7 +338,7 @@ meetup:cd63a3eec3319fd9c84c942a08316e00
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
 meetup:a051ded525be09f0e1884c8557406eca
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "December 26" .
 
 <http://dbpedia.org/resource/Niagara_River>
@@ -341,29 +351,19 @@ meetup:a051ded525be09f0e1884c8557406eca
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Perdicaris_affair> .
 
-<http://dbpedia.org/resource/Madrid>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Madrid> .
+<http://w3id.org/polifonia/pilot/meetups/16578/44/5>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:03727ac48595a24daed975559c944a44 , meetup:eca60ae8611369fe28a02e2ab8c5d12e ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.99630886" ;
+        mtp:hasEvidenceText  "At the time of Hay's swearing-in, McKinley was still undecided whether to take the Philippines, but in October finally decided to do so, and Hay sent instructions to Day and the other peace commissioners to insist on it." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/William_McKinley> , <http://dbpedia.org/resource/John_Hay> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Philippines> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
 meetup:84cdc76cabf41bd7c961f6ab12f117d8
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "year" .
-
-<http://dbpedia.org/resource/Springfield,_Massachusetts>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Springfield,_Massachusetts> .
-
-<http://w3id.org/polifonia/pilot/meetups/16578/13/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d3794ab9c35833e12621e1885dc2d29a ;
-        mtp:hasAPurpose      meetup:businessmeeting ;
-        mtp:hasConfidence    "0.9962792" ;
-        mtp:hasEvidenceText  "Milton Hay desired that his nephew go to Washington as a qualified attorney, and John Hay was admitted to the bar in Illinois on February 4, 1861." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/John_Hay> , <http://dbpedia.org/resource/George_Washington> , <http://dbpedia.org/resource/Milton_Hay> , <http://dbpedia.org/resource/John_Milton> ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Illinois> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/28/4>
         rdf:type             mtp:Meetup ;
@@ -373,6 +373,16 @@ meetup:84cdc76cabf41bd7c961f6ab12f117d8
         mtp:hasEvidenceText  "In 1884, Hay and Adams commissioned architect Henry Hobson Richardson to construct houses for them on Washington's Lafayette Square; these were completed by 1886." ;
         mtp:hasParticipant   <http://dbpedia.org/resource/George_Washington> , <http://dbpedia.org/resource/Henry_Hobson_Richardson> ;
         mtp:hasPlace         <http://dbpedia.org/resource/President's_Park> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
+
+<http://w3id.org/polifonia/pilot/meetups/16578/13/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d3794ab9c35833e12621e1885dc2d29a ;
+        mtp:hasAPurpose      meetup:businessmeeting ;
+        mtp:hasConfidence    "0.9962792" ;
+        mtp:hasEvidenceText  "Milton Hay desired that his nephew go to Washington as a qualified attorney, and John Hay was admitted to the bar in Illinois on February 4, 1861." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/John_Hay> , <http://dbpedia.org/resource/George_Washington> , <http://dbpedia.org/resource/Milton_Hay> , <http://dbpedia.org/resource/John_Milton> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Illinois> ;
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/6/0>
@@ -385,53 +395,45 @@ meetup:84cdc76cabf41bd7c961f6ab12f117d8
         mtp:hasPlace         <http://dbpedia.org/resource/Salem,_Indiana> ;
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
-<http://w3id.org/polifonia/pilot/meetups/16578/44/5>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:03727ac48595a24daed975559c944a44 , meetup:eca60ae8611369fe28a02e2ab8c5d12e ;
-        mtp:hasAPurpose      meetup:businessmeeting ;
-        mtp:hasConfidence    "0.99630886" ;
-        mtp:hasEvidenceText  "At the time of Hay's swearing-in, McKinley was still undecided whether to take the Philippines, but in October finally decided to do so, and Hay sent instructions to Day and the other peace commissioners to insist on it." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/William_McKinley> , <http://dbpedia.org/resource/John_Hay> ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Philippines> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
+<http://dbpedia.org/resource/Springfield,_Massachusetts>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Springfield,_Massachusetts> .
+
+<http://dbpedia.org/resource/Madrid>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Madrid> .
 
 <http://dbpedia.org/resource/Place_de_la_Concorde>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Place_de_la_Concorde> .
 
-meetup:e8cbd0b097624df150203e69ffd56bc0
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "that Day" .
-
 <http://dbpedia.org/resource/Southern_United_States>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Southern_United_States> .
-
-<http://dbpedia.org/resource/New_Hampshire>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Hampshire> .
 
 <http://dbpedia.org/resource/Clara_Stone>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Clara_Stone> .
 
-meetup:4971aa88386c70afc4a943e61111a67b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "March 1865" .
+<http://dbpedia.org/resource/New_Hampshire>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_Hampshire> .
 
-<http://w3id.org/polifonia/pilot/meetups/16578/53/4>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:c5e7dfaf771d423ecf59b008369021e8 ;
-        mtp:hasAPurpose      meetup:personallife ;
-        mtp:hasConfidence    "0.99130815" ;
-        mtp:hasEvidenceText  "According to Zeitz, \"Roosevelt's accidental ascendance to the presidency made John Hay an essential anachronism ... the wise elder statesman and senior member of the cabinet, he was indispensable to TR, who even today remains the youngest president ever\"." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Franklin_D._Roosevelt> , <http://dbpedia.org/resource/Theodore_Roosevelt> , <http://dbpedia.org/resource/John_Hay> ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Zeitz> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
+meetup:e8cbd0b097624df150203e69ffd56bc0
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "that Day" .
+
+meetup:4971aa88386c70afc4a943e61111a67b
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "March 1865" ;
+        time:hasBeginning    "1865-03-01"^^xsd:date ;
+        time:hasEnd          "1865-03-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/58/3>
         rdf:type             mtp:Meetup ;
@@ -441,6 +443,16 @@ meetup:4971aa88386c70afc4a943e61111a67b
         mtp:hasEvidenceText  "In fact, Perdicaris, though born in New Jersey, had renounced his citizenship during the Civil War to avoid Confederate confiscation of property in South Carolina, and had accepted Greek naturalization, a fact not generally known until years later, but that decreased Roosevelt's appetite for military action." ;
         mtp:hasParticipant   <http://dbpedia.org/resource/Theodore_Roosevelt> , <http://dbpedia.org/resource/Perdicaris_affair> ;
         mtp:hasPlace         <http://dbpedia.org/resource/South_Carolina> , <http://dbpedia.org/resource/Confederate_States_of_America> , <http://dbpedia.org/resource/Naturalization> , <http://dbpedia.org/resource/New_Jersey> , <http://dbpedia.org/resource/Greece> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
+
+<http://w3id.org/polifonia/pilot/meetups/16578/53/4>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:c5e7dfaf771d423ecf59b008369021e8 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.99130815" ;
+        mtp:hasEvidenceText  "According to Zeitz, \"Roosevelt's accidental ascendance to the presidency made John Hay an essential anachronism ... the wise elder statesman and senior member of the cabinet, he was indispensable to TR, who even today remains the youngest president ever\"." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Franklin_D._Roosevelt> , <http://dbpedia.org/resource/Theodore_Roosevelt> , <http://dbpedia.org/resource/John_Hay> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Zeitz> ;
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
 meetup:businessmeeting
@@ -463,8 +475,10 @@ meetup:businessmeeting
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/The_Fells> .
 
 meetup:c366c2c97d47b02b24c3ecade4c40a01
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1886" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1886" ;
+        time:hasBeginning    "1886-01-01"^^xsd:date ;
+        time:hasEnd          "1886-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Queen_Victoria>
         rdf:type              mtp:Participant ;
@@ -476,11 +490,6 @@ meetup:c366c2c97d47b02b24c3ecade4c40a01
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joseph_Scelsi_Intermodal_Transportation_Center> .
 
-<http://dbpedia.org/resource/Governor_of_New_York>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Governor_of_New_York> .
-
 <http://w3id.org/polifonia/pilot/meetups/16578/55/14>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:301cdddd389b8dbf9066fbfc6c5bce04 ;
@@ -490,6 +499,11 @@ meetup:c366c2c97d47b02b24c3ecade4c40a01
         mtp:hasParticipant   <http://dbpedia.org/resource/Saint_Joseph> , <http://dbpedia.org/resource/Julian_Pauncefote,_1st_Baron_Pauncefote> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/London> ;
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
+
+<http://dbpedia.org/resource/Governor_of_New_York>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Governor_of_New_York> .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/2/0>
         rdf:type             mtp:Meetup ;
@@ -537,8 +551,10 @@ meetup:c366c2c97d47b02b24c3ecade4c40a01
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
 meetup:69d1fc78dbda242c43ad6590368912d4
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1865" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1865" ;
+        time:hasBeginning    "1865-01-01"^^xsd:date ;
+        time:hasEnd          "1865-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/23/15>
         rdf:type             mtp:Meetup ;
@@ -584,11 +600,11 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/President's_Park> .
 
 meetup:cedb555d2e5154213dcee0c8edf8648c
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of the fall" .
 
 meetup:03727ac48595a24daed975559c944a44
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Day" .
 
 <http://dbpedia.org/resource/Greece>
@@ -597,15 +613,17 @@ meetup:03727ac48595a24daed975559c944a44
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Greece> .
 
 meetup:af174bc39ce5462879243ef94166c4ca
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "July 1864" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "July 1864" ;
+        time:hasBeginning    "1864-07-01"^^xsd:date ;
+        time:hasEnd          "1864-07-31"^^xsd:date .
 
 meetup:b3c409c3a3db302eac79421f274612c1
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of the 1860s" .
 
 meetup:c5e7dfaf771d423ecf59b008369021e8
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "today" .
 
 <http://dbpedia.org/resource/Ulysses_S._Grant>
@@ -679,8 +697,10 @@ meetup:c5e7dfaf771d423ecf59b008369021e8
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Guangzhou> .
 
 meetup:d4b2aeb2453bdadaa45cbe9882ffefcf
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1873" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1873" ;
+        time:hasBeginning    "1873-01-01"^^xsd:date ;
+        time:hasEnd          "1873-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/62/2>
         rdf:type             mtp:Meetup ;
@@ -708,15 +728,15 @@ meetup:d4b2aeb2453bdadaa45cbe9882ffefcf
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Naturalization> .
 
 meetup:461739ff59821a55d6c552174bce8f94
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "several years" .
 
 meetup:75aeb98e5241592ad6a6c2c4c78a16ef
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "years" .
 
 meetup:27939e6487dc93811699664dc9f8ceb7
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of 1904" .
 
 <http://dbpedia.org/resource/James_G._Blaine>
@@ -729,6 +749,10 @@ meetup:27939e6487dc93811699664dc9f8ceb7
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Horace> .
 
+meetup:eca60ae8611369fe28a02e2ab8c5d12e
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "October" .
+
 <http://w3id.org/polifonia/pilot/meetups/16578/65/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:69d1fc78dbda242c43ad6590368912d4 , meetup:4c88924788f419b562d50acfddc3a781 ;
@@ -739,14 +763,19 @@ meetup:27939e6487dc93811699664dc9f8ceb7
         mtp:hasPlace         <http://dbpedia.org/resource/Place_de_la_Concorde> , <http://dbpedia.org/resource/Paris> ;
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
-meetup:eca60ae8611369fe28a02e2ab8c5d12e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "October" .
-
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
+<http://dbpedia.org/resource/Henry_Hobson_Richardson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Henry_Hobson_Richardson> .
+
+meetup:78ab9c86795c058d9513cd507a7c29d8
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "September 6" .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/41/3>
         rdf:type             mtp:Meetup ;
@@ -757,15 +786,6 @@ meetup:eca60ae8611369fe28a02e2ab8c5d12e
         mtp:hasParticipant   <http://dbpedia.org/resource/William_R._Day> , <http://dbpedia.org/resource/William_McKinley> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Spain> , <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
-
-meetup:78ab9c86795c058d9513cd507a7c29d8
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "September 6" .
-
-<http://dbpedia.org/resource/Henry_Hobson_Richardson>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Henry_Hobson_Richardson> .
 
 <http://w3id.org/polifonia/pilot/meetups/16578/13/3>
         rdf:type             mtp:Meetup ;
@@ -788,7 +808,7 @@ meetup:78ab9c86795c058d9513cd507a7c29d8
         mtp:hasSubject       <http://dbpedia.org/resource/John_Hay> .
 
 meetup:f9671b2d1d4b05c2151517cbfd899eb5
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "a century" .
 
 <http://dbpedia.org/resource/Canada>
@@ -812,8 +832,10 @@ meetup:f9671b2d1d4b05c2151517cbfd899eb5
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Hay_(New_South_Wales_politician)> .
 
 meetup:f0fcf351df4eb6786e9bb6fc4e2dee02
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1884" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1884" ;
+        time:hasBeginning    "1884-01-01"^^xsd:date ;
+        time:hasEnd          "1884-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Euclid>
         rdf:type              mtp:Participant ;
@@ -826,11 +848,11 @@ meetup:f0fcf351df4eb6786e9bb6fc4e2dee02
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Milton_Hay> .
 
 meetup:4c88924788f419b562d50acfddc3a781
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Sunrise" .
 
 meetup:e5f62e3b829e73165521075b12d44b62
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "October 8 , 1838" .
 
 <http://dbpedia.org/resource/Nicolay_(musician)>

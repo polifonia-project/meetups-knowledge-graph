@@ -9,22 +9,22 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:businessmeeting
-        rdf:type    mtp:Purpose ;
-        rdfs:label  "Business meeting" .
-
 <http://dbpedia.org/resource/Richard_Tee>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Richard_Tee> .
 
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
 <http://dbpedia.org/resource/Bob_Dylan>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bob_Dylan> .
-
-meetup:musicmaking  rdf:type  mtp:Purpose ;
-        rdfs:label  "Music making" .
 
 <http://w3id.org/polifonia/pilot/meetups/1790603/7/3>
         rdf:type             mtp:Meetup ;
@@ -37,8 +37,10 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasSubject       <http://dbpedia.org/resource/Howard_Tate> .
 
 meetup:a825ecec17ced4b62a5f46d8aa842214
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the 1972" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1972" ;
+        time:hasBeginning    "1972-01-01"^^xsd:date ;
+        time:hasEnd          "1972-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Jerry_Ragovoy>
         rdf:type              mtp:Participant ;
@@ -61,13 +63,8 @@ meetup:a825ecec17ced4b62a5f46d8aa842214
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Northern_England> .
 
 meetup:e7fd90d5e3d96e2c5a6c8ec613e9453a
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
         mtp:hasEvidenceText  "1966 to 1968" .
-
-<http://dbpedia.org/resource/Eric_Gale>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Eric_Gale> .
 
 <http://w3id.org/polifonia/pilot/meetups/1790603/4/1>
         rdf:type             mtp:Meetup ;
@@ -78,6 +75,11 @@ meetup:e7fd90d5e3d96e2c5a6c8ec613e9453a
         mtp:hasParticipant   <http://dbpedia.org/resource/Eric_Gale> , <http://dbpedia.org/resource/Jerry_Ragovoy> , <http://dbpedia.org/resource/Richard_Tee> , <http://dbpedia.org/resource/Chuck_Rainey> ;
         mtp:hasPlace         <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Howard_Tate> .
+
+<http://dbpedia.org/resource/Eric_Gale>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Eric_Gale> .
 
 <http://dbpedia.org/resource/Chuck_Rainey>
         rdf:type              mtp:Participant ;

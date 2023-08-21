@@ -9,14 +9,16 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:3fc87634ecda305ce38070eb7f8a707e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "18 May 1917" .
-
 <http://dbpedia.org/resource/Jules_Depaquit>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jules_Depaquit> .
+
+meetup:3fc87634ecda305ce38070eb7f8a707e
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "18 May 1917" ;
+        time:hasBeginning    "1917-05-18"^^xsd:date ;
+        time:hasEnd          "1917-05-18"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/50929631/2/0>
         rdf:type             mtp:Meetup ;
@@ -56,8 +58,10 @@ meetup:publiccelebration
         mtp:hasSubject       <http://dbpedia.org/resource/Roger_Toziny> .
 
 meetup:b139e104214a08ae3f2ebcce149cdf6e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1924" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1924" ;
+        time:hasBeginning    "1924-01-01"^^xsd:date ;
+        time:hasEnd          "1924-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Paris>
         rdf:type              mtp:Location ;

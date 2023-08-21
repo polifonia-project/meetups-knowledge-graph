@@ -28,8 +28,10 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
 
 meetup:29530de21430b7540ec3f65135f7323c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1930" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1930" ;
+        time:hasBeginning    "1930-01-01"^^xsd:date ;
+        time:hasEnd          "1930-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Upper_Norwood>
         rdf:type              mtp:Location ;
@@ -42,7 +44,7 @@ meetup:29530de21430b7540ec3f65135f7323c
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Pseudonym> .
 
 meetup:f31587be0176b4c7e675a4ebc7b73728
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
         mtp:hasEvidenceText  "10 March 1866 – 9 March 1956" .
 
 <http://dbpedia.org/resource/Amanda_Aldridge>
@@ -60,15 +62,15 @@ meetup:f31587be0176b4c7e675a4ebc7b73728
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Ira_Aldridge> .
 
-<http://dbpedia.org/resource/London>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .
-
 <http://dbpedia.org/resource/Willy_Brandt>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Willy_Brandt> .
+
+<http://dbpedia.org/resource/London>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .
 
 <http://dbpedia.org/resource/LaMarcus_Aldridge>
         rdf:type              mtp:Participant ;
@@ -76,8 +78,10 @@ meetup:f31587be0176b4c7e675a4ebc7b73728
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/LaMarcus_Aldridge> .
 
 meetup:31827843cb2419106fd7eb5001e8e9fa
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "10 March 1866" .
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "10 March 1866" ;
+        time:hasBeginning    "1866-03-10"^^xsd:date ;
+        time:hasEnd          "1866-03-10"^^xsd:date .
 
 <http://dbpedia.org/resource/Paul_Robeson>
         rdf:type              mtp:Participant ;
@@ -100,6 +104,6 @@ meetup:31827843cb2419106fd7eb5001e8e9fa
         mtp:hasAPurpose      meetup:personallife ;
         mtp:hasConfidence    "0.99921215" ;
         mtp:hasEvidenceText  "Amanda Christina Elizabeth Aldridge, also known as Amanda Ira Aldridge (10 March 1866 – 9 March 1956), was a British opera singer and teacher who composed under the pseudonym of Montague Ring." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Amanda_Aldridge> , <http://dbpedia.org/resource/Pseudonym> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Pseudonym> , <http://dbpedia.org/resource/Amanda_Aldridge> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Amanda_Aldridge> .

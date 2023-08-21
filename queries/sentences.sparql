@@ -26,15 +26,16 @@ CONSTRUCT {
 		mtp:hasDBPediaEntity ?placeIRI ;
 		rdfs:label ?label ;
 		mtp:thumbnail ?placeImage .
-	?beginning_IRI a time:GeneralDateTimeDescription ;
-		time:numericDuration ?fValue ;
-		time:unitType ?fUnit .
-	?end_IRI a time:GeneralDateTimeDescription ;
-		time:numericDuration ?tValue ;
-		time:unitType ?tUnit .
+	#?beginning_IRI a time:GeneralDateTimeDescription ;
+	#	time:numericDuration ?fValue ;
+	#	time:unitType ?fUnit .
+	#?end_IRI a time:GeneralDateTimeDescription ;
+	#	time:numericDuration ?tValue ;
+	#	time:unitType ?tUnit .
+	?timeExpression_IRI a ?timeExpressionClass .
 	?timeExpression_IRI a mtp:TimeExpression ;
-		#time:hasBeginning ?beginning_IRI ;
-		#time:hasEnd ?end_IRI ;
+		time:hasBeginning ?nrmlsdValueStart ;
+		time:hasEnd ?nrmlsdValueEnd ;
 		mtp:hasEvidenceText ?timeEvidenceText .
 	?meetupIRI a mtp:Meetup ;
 		mtp:hasParticipant ?personIRI ;
@@ -92,10 +93,17 @@ CONSTRUCT {
 	 ?s3 xyz:paragraphIndex ?paragraph ; 
 	    xyz:sentenceIndex ?sentence ;
 		xyz:time_expression_type ?entType ;
-		xyz:time_expression ?timeEvidenceText .
+		xyz:time_expression ?timeEvidenceText ;
+		xyz:normalised_value_start ?nValueStart;
+		xyz:normalised_value_end ?nValueEnd.
 	# 
 	 BIND ( IRI ( CONCAT (STR(meetup:), STR( fx:DigestUtils.md5Hex(?timeEvidenceText)))) AS ?timeExpression_IRI ) .
      BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?sentence) AS ?meetupIRI ) .
+	 BIND ( IF (?entType = "time_point", mtp:TimePoint, IF (?entType = "time_reference", mtp:TimeReference, IF (?entType = "time_range", mtp:TimeRange, ""))) AS ?timeExpressionClass) .
+	 OPTIONAL { BIND ( xsd:date (?nValueStart) AS ?nrmlsdValueStart ) } .
+	 OPTIONAL { BIND ( xsd:date (?nValueEnd) AS ?nrmlsdValueEnd ) } .
+	 }
+   		
    }
    .
    SERVICE <x-sparql-anything:> {

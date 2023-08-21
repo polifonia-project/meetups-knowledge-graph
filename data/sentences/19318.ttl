@@ -12,15 +12,15 @@
 meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
 
-<http://dbpedia.org/resource/Jack_Benny>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jack_Benny> .
-
 <http://dbpedia.org/resource/John_F._Kennedy>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_F._Kennedy> .
+
+<http://dbpedia.org/resource/Jack_Benny>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jack_Benny> .
 
 <http://w3id.org/polifonia/pilot/meetups/19318/7/0>
         rdf:type             mtp:Meetup ;
@@ -37,8 +37,10 @@ meetup:publiccelebration
         rdfs:label  "Public celebration" .
 
 meetup:7ed520e80db11f4ac7e83876c8df461b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "April 1954" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "April 1954" ;
+        time:hasBeginning    "1954-04-01"^^xsd:date ;
+        time:hasEnd          "1954-04-30"^^xsd:date .
 
 meetup:education  rdf:type  mtp:Purpose ;
         rdfs:label  "Education" .
@@ -59,8 +61,10 @@ meetup:education  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Midwestern_United_States> .
 
 meetup:99939a0286777752337cbed478548423
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "July 1958" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "July 1958" ;
+        time:hasBeginning    "1958-07-01"^^xsd:date ;
+        time:hasEnd          "1958-07-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Hedda_Hopper>
         rdf:type              mtp:Participant ;
@@ -83,8 +87,14 @@ meetup:99939a0286777752337cbed478548423
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
 meetup:f35eb6acca05ba4d6bf821ff62c7854c
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "two days" .
+
+meetup:c3395dd46c34fa7fd8d729d8cf88b7a8
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1943" ;
+        time:hasBeginning    "1943-01-01"^^xsd:date ;
+        time:hasEnd          "1943-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/19318/19/2>
         rdf:type             mtp:Meetup ;
@@ -92,13 +102,9 @@ meetup:f35eb6acca05ba4d6bf821ff62c7854c
         mtp:hasAPurpose      meetup:businessmeeting ;
         mtp:hasConfidence    "1.0" ;
         mtp:hasEvidenceText  "While Niagara made Monroe a sex symbol and established her \"look\", her second film of 1953, the satirical musical comedy Gentlemen Prefer Blondes, cemented her screen persona as a \"dumb blonde\"." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Sex_symbol> , <http://dbpedia.org/resource/Greg_Monroe> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Greg_Monroe> , <http://dbpedia.org/resource/Sex_symbol> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Regional_Municipality_of_Niagara> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
-
-meetup:c3395dd46c34fa7fd8d729d8cf88b7a8
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1943" .
 
 <http://dbpedia.org/resource/Lyon>
         rdf:type              mtp:Location ;
@@ -121,7 +127,7 @@ meetup:c3395dd46c34fa7fd8d729d8cf88b7a8
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
 meetup:688937ccaf2a2b0c45a1c9bbba09698d
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "June" .
 
 <http://w3id.org/polifonia/pilot/meetups/19318/11/3>
@@ -135,7 +141,7 @@ meetup:688937ccaf2a2b0c45a1c9bbba09698d
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
 meetup:e0593e11e363cb8c33a347be69eb7bba
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "The Seven Year" .
 
 <http://dbpedia.org/resource/Westchester_County,_New_York>
@@ -149,11 +155,11 @@ meetup:e0593e11e363cb8c33a347be69eb7bba
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Libbie_Hyman> .
 
 meetup:35aa003ab252a972626807fc45b8a7c0
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of 1953" .
 
 meetup:2cafae350db5bdeee7decc021a5e8a37
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of 1933" .
 
 <http://dbpedia.org/resource/East_Coast_of_the_United_States>
@@ -176,6 +182,10 @@ meetup:2cafae350db5bdeee7decc021a5e8a37
         mtp:hasPlace         <http://dbpedia.org/resource/Kentucky> , <http://dbpedia.org/resource/Los_Angeles> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
+meetup:6fcf71a1cedf2a5e150f53d913887255
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "of the century" .
+
 <http://dbpedia.org/resource/Waccabuc,_New_York>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
@@ -191,18 +201,16 @@ meetup:2cafae350db5bdeee7decc021a5e8a37
         mtp:hasPlace         <http://dbpedia.org/resource/East_Coast_of_the_United_States> , <http://dbpedia.org/resource/Hollywood> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
-meetup:6fcf71a1cedf2a5e150f53d913887255
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "of the century" .
-
 <http://dbpedia.org/resource/Emmeline_Pankhurst>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Emmeline_Pankhurst> .
 
 meetup:aa86c6d640c1f1998c121ad2cacb6cc1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "November 1954" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "November 1954" ;
+        time:hasBeginning    "1954-11-01"^^xsd:date ;
+        time:hasEnd          "1954-11-30"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/19318/29/0>
         rdf:type             mtp:Meetup ;
@@ -215,7 +223,7 @@ meetup:aa86c6d640c1f1998c121ad2cacb6cc1
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
 meetup:615af5bee8b36ffdea43feb49a8a4495
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "nine months" .
 
 <http://dbpedia.org/resource/Billy_Wilder>
@@ -273,7 +281,7 @@ meetup:businessmeeting
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Divorce> .
 
 meetup:446fca1e1f700d54263bd26f4529241d
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "around 3:50 a.m." .
 
 <http://dbpedia.org/resource/Greg_Monroe>
@@ -282,17 +290,10 @@ meetup:446fca1e1f700d54263bd26f4529241d
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Greg_Monroe> .
 
 meetup:a38b16173474ba8b1a95bcbc30d3b8a5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1953" .
-
-<http://dbpedia.org/resource/Gail_Levin_(art_historian)>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gail_Levin_(art_historian)> .
-
-meetup:c024d243f62ff859880ccd62dfff4dc1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "late 1944" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1953" ;
+        time:hasBeginning    "1953-01-01"^^xsd:date ;
+        time:hasEnd          "1953-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/19318/18/0>
         rdf:type             mtp:Meetup ;
@@ -300,7 +301,7 @@ meetup:c024d243f62ff859880ccd62dfff4dc1
         mtp:hasAPurpose      meetup:businessmeeting ;
         mtp:hasConfidence    "0.99996877" ;
         mtp:hasEvidenceText  "Monroe starred in three movies that were released in 1953 and emerged as a major sex symbol and one of Hollywood's most bankable performers." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Greg_Monroe> , <http://dbpedia.org/resource/Sex_symbol> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Sex_symbol> , <http://dbpedia.org/resource/Greg_Monroe> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Hollywood> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
@@ -314,6 +315,23 @@ meetup:c024d243f62ff859880ccd62dfff4dc1
         mtp:hasPlace         <http://dbpedia.org/resource/Engelberg> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
+<http://dbpedia.org/resource/Gail_Levin_(art_historian)>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gail_Levin_(art_historian)> .
+
+<http://dbpedia.org/resource/Jack_Lemmon>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jack_Lemmon> .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
+
+meetup:559bad88b337326880d674cd44e7cb13
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "June 1 , 1926" .
+
 <http://w3id.org/polifonia/pilot/meetups/19318/23/6>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:04c4f9a83dac202f0e649f62fb452646 , meetup:615af5bee8b36ffdea43feb49a8a4495 ;
@@ -324,17 +342,9 @@ meetup:c024d243f62ff859880ccd62dfff4dc1
         mtp:hasPlace         <http://dbpedia.org/resource/Hollywood> , <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
-meetup:559bad88b337326880d674cd44e7cb13
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "June 1 , 1926" .
-
-meetup:coincidence  rdf:type  mtp:Purpose ;
-        rdfs:label  "Coincidence" .
-
-<http://dbpedia.org/resource/Jack_Lemmon>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jack_Lemmon> .
+meetup:c024d243f62ff859880ccd62dfff4dc1
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "late 1944" .
 
 <http://dbpedia.org/resource/Walter_Winchell>
         rdf:type              mtp:Participant ;
@@ -342,7 +352,7 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Walter_Winchell> .
 
 meetup:cc5d90569e1c8313c2b1c2aab1401174
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "September" .
 
 <http://dbpedia.org/resource/James_Dougherty_(police_officer)>
@@ -361,7 +371,7 @@ meetup:cc5d90569e1c8313c2b1c2aab1401174
         mtp:hasAPurpose      meetup:businessmeeting ;
         mtp:hasConfidence    "0.9999039" ;
         mtp:hasEvidenceText  "In April 1954, Otto Preminger's western River of No Return, the last film that Monroe had filmed prior to the suspension, was released." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Otto_Preminger> , <http://dbpedia.org/resource/Greg_Monroe> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Greg_Monroe> , <http://dbpedia.org/resource/Otto_Preminger> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Western_River,_South_Australia> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
@@ -381,7 +391,7 @@ meetup:cc5d90569e1c8313c2b1c2aab1401174
         mtp:hasAPurpose      meetup:businessmeeting ;
         mtp:hasConfidence    "0.9996706" ;
         mtp:hasEvidenceText  "According to Emmeline Snively, the agency's owner, Monroe quickly became one of its most ambitious and hard-working models; by early 1946, she had appeared on 33 magazine covers for publications such as Pageant, U.S. Camera, Laff, and Peek." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Greg_Monroe> , <http://dbpedia.org/resource/Emmeline_Pankhurst> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Emmeline_Pankhurst> , <http://dbpedia.org/resource/Greg_Monroe> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
@@ -426,8 +436,10 @@ meetup:cc5d90569e1c8313c2b1c2aab1401174
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/California> .
 
 meetup:414e773d5b7e5c06d564f594bf6384d0
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1923" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1923" ;
+        time:hasBeginning    "1923-01-01"^^xsd:date ;
+        time:hasEnd          "1923-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Santa_Catalina_Island_(California)>
         rdf:type              mtp:Location ;
@@ -459,19 +471,19 @@ meetup:414e773d5b7e5c06d564f594bf6384d0
         mtp:hasPlace         <http://dbpedia.org/resource/Los_Angeles> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
-<http://dbpedia.org/resource/David_Conover>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Conover> .
-
 <http://dbpedia.org/resource/Sex_symbol>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sex_symbol> .
 
 meetup:00642809a8724140aae8a0f94df60df6
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "nine years" .
+
+<http://dbpedia.org/resource/David_Conover>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Conover> .
 
 <http://dbpedia.org/resource/John_Milton>
         rdf:type              mtp:Participant ;
@@ -499,22 +511,22 @@ meetup:00642809a8724140aae8a0f94df60df6
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
 meetup:1dbbf1d451341f88d566ae4ebfa9b29e
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the summer" .
 
 meetup:97bc592b27a9ada2d9a4bb418ed0ebed
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "now" .
-
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 <http://dbpedia.org/resource/Madison_Square_Garden>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Madison_Square_Garden> .
+
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 <http://dbpedia.org/resource/Hollywood>
         rdf:type              mtp:Location ;
@@ -536,19 +548,6 @@ meetup:97bc592b27a9ada2d9a4bb418ed0ebed
         mtp:hasPlace         <http://dbpedia.org/resource/Cinema_of_the_United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
 
-meetup:bb9c198422ffe46f26020860b2abb2c3
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "of the 20th century" .
-
-meetup:283579266d5740435962cf33ed1e1b1e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "June 29" .
-
-<http://dbpedia.org/resource/John_Gilbert_Baker>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Gilbert_Baker> .
-
 <http://w3id.org/polifonia/pilot/meetups/19318/7/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:6fcf71a1cedf2a5e150f53d913887255 ;
@@ -558,6 +557,19 @@ meetup:283579266d5740435962cf33ed1e1b1e
         mtp:hasParticipant   <http://dbpedia.org/resource/Greg_Monroe> , <http://dbpedia.org/resource/John_Gilbert_Baker> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Los_Angeles> , <http://dbpedia.org/resource/Midwestern_United_States> , <http://dbpedia.org/resource/California> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marilyn_Monroe> .
+
+meetup:283579266d5740435962cf33ed1e1b1e
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "June 29" .
+
+<http://dbpedia.org/resource/John_Gilbert_Baker>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Gilbert_Baker> .
+
+meetup:bb9c198422ffe46f26020860b2abb2c3
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "of the 20th century" .
 
 <http://dbpedia.org/resource/Betty_Grable>
         rdf:type              mtp:Participant ;
@@ -570,8 +582,10 @@ meetup:283579266d5740435962cf33ed1e1b1e
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Marilyn_Monroe> .
 
 meetup:04c4f9a83dac202f0e649f62fb452646
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "October 1954" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "October 1954" ;
+        time:hasBeginning    "1954-10-01"^^xsd:date ;
+        time:hasEnd          "1954-10-31"^^xsd:date .
 
 <http://dbpedia.org/resource/John_Newton>
         rdf:type              mtp:Participant ;
@@ -584,11 +598,11 @@ meetup:04c4f9a83dac202f0e649f62fb452646
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Honolulu> .
 
 meetup:75fb99f0dc749ee5ecf7a4ba2e2d642f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "early 1946" .
 
 meetup:ec6d4f685e2bfa7bca12d49223fe9364
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "May 19" .
 
 <http://dbpedia.org/resource/New_York_City>
@@ -597,12 +611,14 @@ meetup:ec6d4f685e2bfa7bca12d49223fe9364
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/New_York_City> .
 
 meetup:0edc9b073397681dc9f2c479686ea0d9
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Night" .
 
 meetup:72f5044ecbefabe15e595531b7848b10
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "August 1946" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "August 1946" ;
+        time:hasBeginning    "1946-08-01"^^xsd:date ;
+        time:hasEnd          "1946-08-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Cinema_of_the_United_States>
         rdf:type              mtp:Location ;

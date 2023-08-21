@@ -16,12 +16,14 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
 
 meetup:43e4d5a92c2c5ff3a68c03376a81571d
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "That year" .
 
 meetup:52d2752b150f9c35ccb6869cbf074e48
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1932" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1932" ;
+        time:hasBeginning    "1932-01-01"^^xsd:date ;
+        time:hasEnd          "1932-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/W._G._Hoskins>
         rdf:type              mtp:Participant ;
@@ -29,7 +31,7 @@ meetup:52d2752b150f9c35ccb6869cbf074e48
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/W._G._Hoskins> .
 
 meetup:6370fac35171435e4da5253a3ef42f0e
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of The March" .
 
 <http://dbpedia.org/resource/Virginia>
@@ -51,14 +53,14 @@ meetup:publiccelebration
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Thomas_Jefferson> .
 
-meetup:41ba70891fb6f39327d8ccb9b1dafb84
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "August" .
-
 <http://dbpedia.org/resource/Bing_Crosby>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bing_Crosby> .
+
+meetup:41ba70891fb6f39327d8ccb9b1dafb84
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "August" .
 
 <http://w3id.org/polifonia/pilot/meetups/152557/5/13>
         rdf:type             mtp:Meetup ;
@@ -66,14 +68,9 @@ meetup:41ba70891fb6f39327d8ccb9b1dafb84
         mtp:hasAPurpose      meetup:publiccelebration ;
         mtp:hasConfidence    "0.9200187" ;
         mtp:hasEvidenceText  "Tatum first attended Jefferson School in Toledo, then moved to the School for the Blind in Columbus, Ohio, late in 1924." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Jayson_Tatum> , <http://dbpedia.org/resource/Thomas_Jefferson> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Thomas_Jefferson> , <http://dbpedia.org/resource/Jayson_Tatum> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Ohio> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Art_Tatum> .
-
-<http://dbpedia.org/resource/King_Arthur>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/King_Arthur> .
 
 <http://w3id.org/polifonia/pilot/meetups/152557/9/16>
         rdf:type             mtp:Meetup ;
@@ -85,13 +82,18 @@ meetup:41ba70891fb6f39327d8ccb9b1dafb84
         mtp:hasPlace         <http://dbpedia.org/resource/Los_Angeles> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Art_Tatum> .
 
+<http://dbpedia.org/resource/King_Arthur>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/King_Arthur> .
+
 <http://dbpedia.org/resource/Chicago>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Chicago> .
 
 meetup:84cdc76cabf41bd7c961f6ab12f117d8
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "year" .
 
 <http://dbpedia.org/resource/Benedict_Arnold>
@@ -115,7 +117,7 @@ meetup:84cdc76cabf41bd7c961f6ab12f117d8
         mtp:hasSubject       <http://dbpedia.org/resource/Art_Tatum> .
 
 meetup:d6c8f30150545ec05242f89a0a57237c
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the late 1920s" .
 
 <http://w3id.org/polifonia/pilot/meetups/152557/9/15>
@@ -171,7 +173,7 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasAPurpose      meetup:personallife ;
         mtp:hasConfidence    "0.9991881" ;
         mtp:hasEvidenceText  "Arthur Tatum Jr. (, October 13, 1909 – November 5, 1956) was an American jazz pianist who is widely regarded as one of the greatest in his field." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/King_Arthur> , <http://dbpedia.org/resource/Art_Tatum> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Art_Tatum> , <http://dbpedia.org/resource/King_Arthur> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Art_Tatum> .
 
@@ -179,6 +181,12 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Art_Tatum> .
+
+meetup:11108a3dbfe4636cb40b84b803b2fff6
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1936" ;
+        time:hasBeginning    "1936-01-01"^^xsd:date ;
+        time:hasEnd          "1936-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/152557/16/10>
         rdf:type             mtp:Meetup ;
@@ -190,17 +198,15 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Art_Tatum> .
 
-meetup:11108a3dbfe4636cb40b84b803b2fff6
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1936" .
-
 meetup:6ee27b063e356aee5486942081e1b77f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "early the following year – four" .
 
 meetup:136f951362dab62e64eb8e841183c2a9
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1937" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1937" ;
+        time:hasBeginning    "1937-01-01"^^xsd:date ;
+        time:hasEnd          "1937-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Jayson_Tatum>
         rdf:type              mtp:Participant ;
@@ -247,17 +253,19 @@ meetup:136f951362dab62e64eb8e841183c2a9
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tiny_Grimes> .
 
-meetup:28a4bada974e9701adce830e55d572f8
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "October 13 , 1909 – November 5 , 1956" .
-
 <http://dbpedia.org/resource/Domestic_worker>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Domestic_worker> .
 
+meetup:28a4bada974e9701adce830e55d572f8
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "October 13 , 1909 – November 5 , 1956" ;
+        time:hasBeginning    "1909-01-01"^^xsd:date ;
+        time:hasEnd          "1956-12-31"^^xsd:date .
+
 meetup:e50166b9237d93e1d78ee2934f377869
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "around 1890" .
 
 <http://dbpedia.org/resource/United_States>
@@ -276,8 +284,10 @@ meetup:e50166b9237d93e1d78ee2934f377869
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Erroll_Garner> .
 
 meetup:b139e104214a08ae3f2ebcce149cdf6e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1924" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1924" ;
+        time:hasBeginning    "1924-01-01"^^xsd:date ;
+        time:hasEnd          "1924-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/152557/8/8>
         rdf:type             mtp:Meetup ;
@@ -325,7 +335,7 @@ meetup:b139e104214a08ae3f2ebcce149cdf6e
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cleveland> .
 
 meetup:c3d9411e4fea31ee938f819e6dceca7b
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "three months" .
 
 <http://dbpedia.org/resource/New_York_City>

@@ -9,15 +9,15 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/Alan_Jay_Lerner>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alan_Jay_Lerner> .
-
 <http://dbpedia.org/resource/Leonard_Bernstein>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Leonard_Bernstein> .
+
+<http://dbpedia.org/resource/Alan_Jay_Lerner>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alan_Jay_Lerner> .
 
 meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
@@ -38,12 +38,16 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/White_House> .
 
 meetup:dd055f53a45702fe05e449c30ac80df9
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1976" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1976" ;
+        time:hasBeginning    "1976-01-01"^^xsd:date ;
+        time:hasEnd          "1976-12-31"^^xsd:date .
 
 meetup:9e984c108157cea74c894b5cf34efc44
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1600" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1600" ;
+        time:hasBeginning    "1600-01-01"^^xsd:date ;
+        time:hasEnd          "1600-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Gilbert_Price>
         rdf:type              mtp:Participant ;

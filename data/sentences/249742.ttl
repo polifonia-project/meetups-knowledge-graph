@@ -47,8 +47,10 @@ meetup:publiccelebration
         rdfs:label  "Public celebration" .
 
 meetup:26bbdc61eb7423ecebb16e9725c0e127
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "22 January 2011" .
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "22 January 2011" ;
+        time:hasBeginning    "2011-01-22"^^xsd:date ;
+        time:hasEnd          "2011-01-22"^^xsd:date .
 
 meetup:education  rdf:type  mtp:Purpose ;
         rdfs:label  "Education" .
@@ -59,8 +61,10 @@ meetup:education  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Coons> .
 
 meetup:d47268e9db2e9aa3827bba3afb7ff94a
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2005" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2005" ;
+        time:hasBeginning    "2005-01-01"^^xsd:date ;
+        time:hasEnd          "2005-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/George_IV>
         rdf:type              mtp:Participant ;
@@ -68,8 +72,10 @@ meetup:d47268e9db2e9aa3827bba3afb7ff94a
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_IV> .
 
 meetup:96055f5b06bf9381ac43879351642cf5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1991" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1991" ;
+        time:hasBeginning    "1991-01-01"^^xsd:date ;
+        time:hasEnd          "1991-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/249742/26/0>
         rdf:type             mtp:Meetup ;
@@ -91,20 +97,20 @@ meetup:96055f5b06bf9381ac43879351642cf5
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Rochester,_New_York> .
 
-<http://dbpedia.org/resource/Iris_printer>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Iris_printer> .
-
 <http://w3id.org/polifonia/pilot/meetups/249742/25/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:96055f5b06bf9381ac43879351642cf5 ;
         mtp:hasAPurpose      meetup:publiccelebration ;
         mtp:hasConfidence    "0.99935824" ;
         mtp:hasEvidenceText  "In 1991, Nash agreed to fund Mac Holbert to start a fine art digital-based printing company using the IRIS Graphics 3047 printer sitting in Nash's Manhattan Beach, California carriage house." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Iris_printer> , <http://dbpedia.org/resource/Graham_Nash> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Graham_Nash> , <http://dbpedia.org/resource/Iris_printer> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Manhattan_Beach,_California> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Graham_Nash> .
+
+<http://dbpedia.org/resource/Iris_printer>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Iris_printer> .
 
 <http://dbpedia.org/resource/England>
         rdf:type              mtp:Participant ;
@@ -112,8 +118,10 @@ meetup:96055f5b06bf9381ac43879351642cf5
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
 
 meetup:519c84155964659375821f7ca576f095
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1942" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1942" ;
+        time:hasBeginning    "1942-01-01"^^xsd:date ;
+        time:hasEnd          "1942-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Allan_Clarke_(singer)>
         rdf:type              mtp:Participant ;
@@ -121,17 +129,19 @@ meetup:519c84155964659375821f7ca576f095
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Allan_Clarke_(singer)> .
 
 meetup:cb08905344ae01f3422e9bf3accc9bd2
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "November 1990" .
-
-meetup:68e39f6e5309cae81f81c3fa33d80aa3
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the early 1960s" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "November 1990" ;
+        time:hasBeginning    "1990-11-01"^^xsd:date ;
+        time:hasEnd          "1990-11-30"^^xsd:date .
 
 <http://dbpedia.org/resource/Joni_Mitchell>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joni_Mitchell> .
+
+meetup:68e39f6e5309cae81f81c3fa33d80aa3
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "the early 1960s" .
 
 <http://dbpedia.org/resource/Treetops_Hotel>
         rdf:type              mtp:Location ;
@@ -178,7 +188,7 @@ meetup:businessmeeting
         mtp:hasSubject       <http://dbpedia.org/resource/Graham_Nash> .
 
 meetup:ee8472c5c510b6cd0a144ba005b9645d
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
         mtp:hasEvidenceText  "1968 to 1970" .
 
 <http://dbpedia.org/resource/County_Borough_of_Salford>
@@ -225,7 +235,7 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasAPurpose      meetup:publiccelebration ;
         mtp:hasConfidence    "0.7407444" ;
         mtp:hasEvidenceText  "David Coons and Steve Boulter used it to print an even larger November 1990 show of Nash's work for Parco Stores in Tokyo." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/David_Coons> , <http://dbpedia.org/resource/Graham_Nash> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Graham_Nash> , <http://dbpedia.org/resource/David_Coons> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Tokyo> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Graham_Nash> .
 
@@ -255,8 +265,10 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Laurel_Canyon,_Los_Angeles> .
 
 meetup:3683af9d6f6c06acee72992f2977f67e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1966" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1966" ;
+        time:hasBeginning    "1966-01-01"^^xsd:date ;
+        time:hasEnd          "1966-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/David_Crosby>
         rdf:type              mtp:Participant ;
@@ -264,8 +276,10 @@ meetup:3683af9d6f6c06acee72992f2977f67e
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Crosby> .
 
 meetup:98c7242894844ecd6ec94af67ac8247d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1968" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1968" ;
+        time:hasBeginning    "1968-01-01"^^xsd:date ;
+        time:hasEnd          "1968-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Paul_Waaktaar-Savoy>
         rdf:type              mtp:Participant ;

@@ -55,7 +55,7 @@ meetup:publiccelebration
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Municipality_of_Lorne> .
 
 meetup:3ffda89341b37a8421a046874b752c43
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "1980-1982" .
 
 <http://dbpedia.org/resource/George_Washington>
@@ -69,7 +69,7 @@ meetup:3ffda89341b37a8421a046874b752c43
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Victor_Garber> .
 
 meetup:e94824f0cc3caa0ea3ffa0e22d3fdb9e
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
         mtp:hasEvidenceText  "1975 and 1980" .
 
 <http://dbpedia.org/resource/Grafton_Elliot_Smith>
@@ -78,8 +78,10 @@ meetup:e94824f0cc3caa0ea3ffa0e22d3fdb9e
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Grafton_Elliot_Smith> .
 
 meetup:05273cf4e992763bdbe77e0ff44a92a5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the 2002" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 2002" ;
+        time:hasBeginning    "2002-01-01"^^xsd:date ;
+        time:hasEnd          "2002-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Paul_Shaffer>
         rdf:type              mtp:Participant ;
@@ -87,7 +89,7 @@ meetup:05273cf4e992763bdbe77e0ff44a92a5
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paul_Shaffer> .
 
 meetup:6e2fcd6a9d3bc714002ddc0dc906c220
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "more than seven months" .
 
 <http://dbpedia.org/resource/Eugene_Levy>
@@ -99,11 +101,6 @@ meetup:businessmeeting
         rdf:type    mtp:Purpose ;
         rdfs:label  "Business meeting" .
 
-<http://dbpedia.org/resource/David_Letterman>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Letterman> .
-
 <http://w3id.org/polifonia/pilot/meetups/90698/11/9>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:6e2fcd6a9d3bc714002ddc0dc906c220 ;
@@ -113,6 +110,11 @@ meetup:businessmeeting
         mtp:hasParticipant   <http://dbpedia.org/resource/George_Washington> , <http://dbpedia.org/resource/Tom_Shales> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Washington,_D.C.> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/John_F._Kennedy_Center_for_the_Performing_Arts> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gilda_Radner> .
+
+<http://dbpedia.org/resource/David_Letterman>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/David_Letterman> .
 
 <http://dbpedia.org/resource/Mike_Myers>
         rdf:type              mtp:Participant ;
@@ -125,7 +127,7 @@ meetup:businessmeeting
         mtp:hasAPurpose      meetup:publiccelebration ;
         mtp:hasConfidence    "0.99957234" ;
         mtp:hasEvidenceText  "Through the generosity of many who participated in the 2002 ABC special, \"Gilda Radner's Greatest Moments,\" including Lynda Carter, Victor Garber, Eric Idle, David Letterman, Eugene Levy, Peter Mann, Steve Martin, Mike Myers, Paul Shaffer, Lily Tomlin and The Jim Henson Company, producer/actor James Tumminia spearheaded a campaign to dedicate a posthumous star on the Hollywood Walk of Fame to Gilda." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Purple_martin> , <http://dbpedia.org/resource/Eric_Idle> , <http://dbpedia.org/resource/Paul_Shaffer> , <http://dbpedia.org/resource/Victor_Garber> , <http://dbpedia.org/resource/Eugene_Levy> , <http://dbpedia.org/resource/Lily_Tomlin> , <http://dbpedia.org/resource/Mike_Myers> , <http://dbpedia.org/resource/Gilda_Radner> , <http://dbpedia.org/resource/James_the_Great> , <http://dbpedia.org/resource/Lynda_Carter> , <http://dbpedia.org/resource/David_Letterman> , <http://dbpedia.org/resource/Peter_Mann> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Eric_Idle> , <http://dbpedia.org/resource/Purple_martin> , <http://dbpedia.org/resource/Paul_Shaffer> , <http://dbpedia.org/resource/Victor_Garber> , <http://dbpedia.org/resource/Eugene_Levy> , <http://dbpedia.org/resource/Lily_Tomlin> , <http://dbpedia.org/resource/Mike_Myers> , <http://dbpedia.org/resource/Gilda_Radner> , <http://dbpedia.org/resource/James_the_Great> , <http://dbpedia.org/resource/David_Letterman> , <http://dbpedia.org/resource/Lynda_Carter> , <http://dbpedia.org/resource/Peter_Mann> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Hollywood> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Gilda_Radner> .
 
@@ -148,11 +150,11 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tom_Shales> .
 
 meetup:170c92b15bc1757ba25f5226d4430e9e
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "a BC" .
 
 meetup:4d69e88b00b5987547f6d5c5d917d5ac
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Moments" .
 
 <http://dbpedia.org/resource/Lynda_Carter>

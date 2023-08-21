@@ -9,6 +9,11 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Alberto_Moreno>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alberto_Moreno> .
+
 <http://w3id.org/polifonia/pilot/meetups/1828359/6/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:f118d47730f995bb4b749a5b97f8b944 ;
@@ -18,11 +23,6 @@
         mtp:hasParticipant   <http://dbpedia.org/resource/Leticia_Palma> , <http://dbpedia.org/resource/Manuel_I_Komnenos> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Lez_(river)> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jorge_Negrete> .
-
-<http://dbpedia.org/resource/Alberto_Moreno>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alberto_Moreno> .
 
 <http://dbpedia.org/resource/Negrete>
         rdf:type              mtp:Location ;
@@ -55,8 +55,10 @@
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Manuel_I_Komnenos> .
 
 meetup:136f951362dab62e64eb8e841183c2a9
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1937" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1937" ;
+        time:hasBeginning    "1937-01-01"^^xsd:date ;
+        time:hasEnd          "1937-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Jorge_Negrete>
         rdf:type              mtp:Participant ;
@@ -79,7 +81,7 @@ meetup:136f951362dab62e64eb8e841183c2a9
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 meetup:f118d47730f995bb4b749a5b97f8b944
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "January 2 , 1953" .
 
 <http://dbpedia.org/resource/Lez_(river)>
@@ -87,11 +89,11 @@ meetup:f118d47730f995bb4b749a5b97f8b944
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lez_(river)> .
 
-meetup:coincidence  rdf:type  mtp:Purpose ;
-        rdfs:label  "Coincidence" .
-
 meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
+
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
 
 <http://w3id.org/polifonia/pilot/meetups/1828359/3/7>
         rdf:type             mtp:Meetup ;
@@ -104,8 +106,10 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jorge_Negrete> .
 
 meetup:1113d7a76ffceca1bb350bfe145467c6
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1952" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1952" ;
+        time:hasBeginning    "1952-01-01"^^xsd:date ;
+        time:hasEnd          "1952-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Cantinflas>
         rdf:type              mtp:Participant ;
@@ -113,8 +117,10 @@ meetup:1113d7a76ffceca1bb350bfe145467c6
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cantinflas> .
 
 meetup:52d2752b150f9c35ccb6869cbf074e48
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1932" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1932" ;
+        time:hasBeginning    "1932-01-01"^^xsd:date ;
+        time:hasEnd          "1932-12-31"^^xsd:date .
 
 meetup:businessmeeting
         rdf:type    mtp:Purpose ;
@@ -126,6 +132,6 @@ meetup:businessmeeting
         mtp:hasAPurpose      meetup:musicmaking ;
         mtp:hasConfidence    "0.9993" ;
         mtp:hasEvidenceText  "Negrete went to the United States and in 1932 recorded several operas using the stage-name Alberto Moreno." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Pedro_Celestino_Negrete> , <http://dbpedia.org/resource/Alberto_Moreno> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Alberto_Moreno> , <http://dbpedia.org/resource/Pedro_Celestino_Negrete> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Jorge_Negrete> .

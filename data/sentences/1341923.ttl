@@ -9,15 +9,15 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/Booth_Theatre>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Booth_Theatre> .
-
 <http://dbpedia.org/resource/Valerie_Violet_French>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Valerie_Violet_French> .
+
+<http://dbpedia.org/resource/Booth_Theatre>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Booth_Theatre> .
 
 meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
@@ -36,7 +36,7 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
 
 meetup:4289350aa3e4d21b1ee20a1f949bb5c0
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "May 2" .
 
 <http://dbpedia.org/resource/Larry_Blyden>
@@ -70,12 +70,12 @@ meetup:4289350aa3e4d21b1ee20a1f949bb5c0
         mtp:hasAPurpose      meetup:musicmaking ;
         mtp:hasConfidence    "0.92951405" ;
         mtp:hasEvidenceText  "The production also featured Eileen Heckart and Valerie French and premiered at the Booth Theatre on February 1, 1969." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Eileen_Heckart> , <http://dbpedia.org/resource/Valerie_Violet_French> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Valerie_Violet_French> , <http://dbpedia.org/resource/Eileen_Heckart> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Booth_Theatre> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Larry_Blyden> .
 
 meetup:b54edbb02cd9cdda57c16c6a31aa92b9
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "February 1 , 1969" .
 
 <http://dbpedia.org/resource/Joshua_Logan>
@@ -84,8 +84,10 @@ meetup:b54edbb02cd9cdda57c16c6a31aa92b9
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joshua_Logan> .
 
 meetup:e2541884c2e5ab58991e7a515d0ae0a9
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "June 23 , 1925 – June 6 , 1975" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "June 23 , 1925 – June 6 , 1975" ;
+        time:hasBeginning    "1925-01-01"^^xsd:date ;
+        time:hasEnd          "1975-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Ivan_Lawrence>
         rdf:type              mtp:Participant ;

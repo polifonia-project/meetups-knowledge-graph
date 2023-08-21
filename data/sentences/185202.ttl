@@ -10,7 +10,7 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:f6168e786df00c2eee6a28e8afa40504
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "more recently" .
 
 <http://dbpedia.org/resource/Bob_Dylan>
@@ -39,7 +39,7 @@ meetup:f6168e786df00c2eee6a28e8afa40504
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Norma_Waterson> .
 
 meetup:461f442d0ff8028d80b81b043761b48f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "many years" .
 
 <http://dbpedia.org/resource/United_Kingdom>
@@ -71,12 +71,14 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
 
 meetup:5be32332a6c03d21ca2f5ade4c5aa54b
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the early days" .
 
 meetup:3a458f2affa00d6b4581f95cabd777c7
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "21 May 1941" .
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "21 May 1941" ;
+        time:hasBeginning    "1941-05-21"^^xsd:date ;
+        time:hasEnd          "1941-05-21"^^xsd:date .
 
 <http://dbpedia.org/resource/Eliza_Carthy>
         rdf:type              mtp:Participant ;

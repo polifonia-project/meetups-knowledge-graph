@@ -10,7 +10,7 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:31af6628fc4c9b254cd5070549ddbd3a
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "now one" .
 
 <http://dbpedia.org/resource/Laurent-Désiré_Kabila>
@@ -34,7 +34,7 @@ meetup:31af6628fc4c9b254cd5070549ddbd3a
         mtp:hasAPurpose      meetup:education ;
         mtp:hasConfidence    "0.648352" ;
         mtp:hasEvidenceText  "When Mobutu was deposed in 1997, Tabu Ley returned to Kinshasa and took up a position as a cabinet minister in the government of new President Laurent Kabila." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Joseph_Kabila> , <http://dbpedia.org/resource/President_of_France> , <http://dbpedia.org/resource/Mobutu_Sese_Seko> , <http://dbpedia.org/resource/Laurent-Désiré_Kabila> , <http://dbpedia.org/resource/Tabu_Ley_Rochereau> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Joseph_Kabila> , <http://dbpedia.org/resource/Mobutu_Sese_Seko> , <http://dbpedia.org/resource/President_of_France> , <http://dbpedia.org/resource/Laurent-Désiré_Kabila> , <http://dbpedia.org/resource/Tabu_Ley_Rochereau> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Kinshasa> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Tabu_Ley_Rochereau> .
 
@@ -68,11 +68,6 @@ meetup:31af6628fc4c9b254cd5070549ddbd3a
         mtp:hasPlace         <http://dbpedia.org/resource/Faya-Largeau> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Tabu_Ley_Rochereau> .
 
-<http://dbpedia.org/resource/Franco_Luambo>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Franco_Luambo> .
-
 <http://w3id.org/polifonia/pilot/meetups/2785324/10/5>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:ef8446f35513a8d6aa2308357a268a7e ;
@@ -83,23 +78,28 @@ meetup:31af6628fc4c9b254cd5070549ddbd3a
         mtp:hasPlace         <http://dbpedia.org/resource/France> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Tabu_Ley_Rochereau> .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://dbpedia.org/resource/Willy_Ley>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Willy_Ley> .
 
-meetup:personallife  rdf:type  mtp:Purpose ;
-        rdfs:label  "Personal life" .
-
-<http://dbpedia.org/resource/President_of_France>
+<http://dbpedia.org/resource/Franco_Luambo>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/President_of_France> .
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Franco_Luambo> .
 
 <http://dbpedia.org/resource/Faya-Largeau>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Faya-Largeau> .
+
+<http://dbpedia.org/resource/President_of_France>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/President_of_France> .
 
 <http://dbpedia.org/resource/Africa>
         rdf:type              mtp:Location ;
@@ -112,7 +112,7 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kinshasa> .
 
 meetup:3c25ec54ccb62b82b9d7a824a8d2a4c8
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "20th century" .
 
 meetup:coincidence  rdf:type  mtp:Purpose ;
@@ -122,8 +122,10 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
 
 meetup:9d7311ba459f9e45ed746755a32dcd11
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1988" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1988" ;
+        time:hasBeginning    "1988-01-01"^^xsd:date ;
+        time:hasEnd          "1988-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/2785324/8/0>
         rdf:type             mtp:Meetup ;
@@ -148,6 +150,12 @@ meetup:education  rdf:type  mtp:Purpose ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Youssoupha> .
 
+meetup:ef8446f35513a8d6aa2308357a268a7e
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2008" ;
+        time:hasBeginning    "2008-01-01"^^xsd:date ;
+        time:hasEnd          "2008-12-31"^^xsd:date .
+
 <http://w3id.org/polifonia/pilot/meetups/2785324/6/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:31af6628fc4c9b254cd5070549ddbd3a ;
@@ -158,10 +166,6 @@ meetup:education  rdf:type  mtp:Purpose ;
         mtp:hasPlace         <http://dbpedia.org/resource/Africa> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Tabu_Ley_Rochereau> .
 
-meetup:ef8446f35513a8d6aa2308357a268a7e
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2008" .
-
 <http://dbpedia.org/resource/Mobutu_Sese_Seko>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
@@ -171,11 +175,13 @@ meetup:businessmeeting
         rdf:type    mtp:Purpose ;
         rdfs:label  "Business meeting" .
 
+meetup:06964dce9addb1c5cb5d6e3d9838f733
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1997" ;
+        time:hasBeginning    "1997-01-01"^^xsd:date ;
+        time:hasEnd          "1997-12-31"^^xsd:date .
+
 <http://dbpedia.org/resource/Joseph_Kabila>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joseph_Kabila> .
-
-meetup:06964dce9addb1c5cb5d6e3d9838f733
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1997" .

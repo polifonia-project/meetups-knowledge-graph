@@ -23,7 +23,7 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
 
 meetup:a150ace13eb41a580b13df38931f2676
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
         mtp:hasEvidenceText  "1966 to 1969" .
 
 <http://dbpedia.org/resource/Alexander_the_Great>
@@ -36,11 +36,6 @@ meetup:a150ace13eb41a580b13df38931f2676
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Nikita_Mikhalkov> .
 
-<http://dbpedia.org/resource/Stepan>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Stepan> .
-
 <http://w3id.org/polifonia/pilot/meetups/2825270/14/1>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:a150ace13eb41a580b13df38931f2676 ;
@@ -51,6 +46,11 @@ meetup:a150ace13eb41a580b13df38931f2676
         mtp:hasPlace         <http://dbpedia.org/resource/Stepan> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Alexander_Vertinsky> .
 
+<http://dbpedia.org/resource/Stepan>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Stepan> .
+
 meetup:coincidence  rdf:type  mtp:Purpose ;
         rdfs:label  "Coincidence" .
 
@@ -60,8 +60,10 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Restaurateur> .
 
 meetup:ff7d0f525b3be596a51fb919492c099c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1912" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1912" ;
+        time:hasBeginning    "1912-01-01"^^xsd:date ;
+        time:hasEnd          "1912-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Konstantin_Stanislavski>
         rdf:type              mtp:Participant ;

@@ -20,7 +20,7 @@
         mtp:hasAPurpose      meetup:personallife ;
         mtp:hasConfidence    "0.99999964" ;
         mtp:hasEvidenceText  "McKechnie was born in 1940 in Pontiac, Michigan, the daughter of Donald Bruce McKechnie and Carolyn Ruth Johnson." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Carolyn_Franklin> , <http://dbpedia.org/resource/Ruth_Johnson> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Ruth_Johnson> , <http://dbpedia.org/resource/Carolyn_Franklin> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Michigan> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Donna_McKechnie> .
 
@@ -46,7 +46,7 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasSubject       <http://dbpedia.org/resource/Donna_McKechnie> .
 
 meetup:ada6939d3a75d3fe5504d928db750307
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the fall" .
 
 <http://dbpedia.org/resource/Donna_McKechnie>
@@ -60,17 +60,14 @@ meetup:ada6939d3a75d3fe5504d928db750307
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Washington,_D.C.> .
 
 meetup:96ff98b4e3c5b528b6058b2658b1d447
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "of 2017" .
 
 meetup:95e6834d0a3d99e9ea8811855ae9229d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1940" .
-
-<http://dbpedia.org/resource/Mabel_Gardiner_Hubbard>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mabel_Gardiner_Hubbard> .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1940" ;
+        time:hasBeginning    "1940-01-01"^^xsd:date ;
+        time:hasEnd          "1940-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Ruth_Johnson>
         rdf:type              mtp:Participant ;
@@ -81,3 +78,8 @@ meetup:95e6834d0a3d99e9ea8811855ae9229d
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Michigan> .
+
+<http://dbpedia.org/resource/Mabel_Gardiner_Hubbard>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mabel_Gardiner_Hubbard> .

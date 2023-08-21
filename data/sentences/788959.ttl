@@ -10,7 +10,7 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:79313848ceb6b2f0db6226af25fdfa61
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Dawn" .
 
 <http://w3id.org/polifonia/pilot/meetups/788959/17/0>
@@ -52,20 +52,20 @@ meetup:publiccelebration
         mtp:hasPlace         <http://dbpedia.org/resource/Pony_Express> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Forrest_Tucker> .
 
-<http://dbpedia.org/resource/Charlton_Heston>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Charlton_Heston> .
-
 <http://w3id.org/polifonia/pilot/meetups/788959/2/4>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:f1da18990cb390e7021ec4dea697d901 , meetup:a5757e28f5e68c56fe971176bcfa4a26 ;
         mtp:hasAPurpose      meetup:publiccelebration ;
         mtp:hasConfidence    "0.81470776" ;
         mtp:hasEvidenceText  "After his family moved to Washington, D.C., Tucker attracted the attention of Jimmy Lake, the owner of the Old Gaiety Burlesque Theater, by winning its Saturday night amateur contest on consecutive weeks." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/George_Washington> , <http://dbpedia.org/resource/Jimmy_Lake> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jimmy_Lake> , <http://dbpedia.org/resource/George_Washington> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Washington,_D.C.> , <http://dbpedia.org/resource/Gaiety_Theatre,_London> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Forrest_Tucker> .
+
+<http://dbpedia.org/resource/Charlton_Heston>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Charlton_Heston> .
 
 <http://dbpedia.org/resource/United_Kingdom>
         rdf:type              mtp:Location ;
@@ -127,53 +127,63 @@ meetup:publiccelebration
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sterling_Hayden> .
 
-meetup:378a063b8fdb1db941e34f4bde584c7d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1955" .
-
 <http://dbpedia.org/resource/Margaret_Lockwood>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Margaret_Lockwood> .
 
+meetup:f1da18990cb390e7021ec4dea697d901
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "Saturday night" .
+
 meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
 
-meetup:f1da18990cb390e7021ec4dea697d901
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "Saturday night" .
+meetup:378a063b8fdb1db941e34f4bde584c7d
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1955" ;
+        time:hasBeginning    "1955-01-01"^^xsd:date ;
+        time:hasEnd          "1955-12-31"^^xsd:date .
 
 meetup:education  rdf:type  mtp:Purpose ;
         rdfs:label  "Education" .
-
-meetup:e3408432c1a48a52fb6c74d926b38886
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1956" .
-
-meetup:1e3d5477694f8de81a9fd1e19310a45f
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "of 1956" .
-
-meetup:1113d7a76ffceca1bb350bfe145467c6
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1952" .
-
-meetup:a38b16173474ba8b1a95bcbc30d3b8a5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1953" .
-
-meetup:businessmeeting
-        rdf:type    mtp:Purpose ;
-        rdfs:label  "Business meeting" .
 
 <http://dbpedia.org/resource/England>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
 
+meetup:e3408432c1a48a52fb6c74d926b38886
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1956" ;
+        time:hasBeginning    "1956-01-01"^^xsd:date ;
+        time:hasEnd          "1956-12-31"^^xsd:date .
+
+meetup:1113d7a76ffceca1bb350bfe145467c6
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1952" ;
+        time:hasBeginning    "1952-01-01"^^xsd:date ;
+        time:hasEnd          "1952-12-31"^^xsd:date .
+
+meetup:a38b16173474ba8b1a95bcbc30d3b8a5
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1953" ;
+        time:hasBeginning    "1953-01-01"^^xsd:date ;
+        time:hasEnd          "1953-12-31"^^xsd:date .
+
+meetup:1e3d5477694f8de81a9fd1e19310a45f
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "of 1956" .
+
+meetup:a5757e28f5e68c56fe971176bcfa4a26
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "consecutive weeks" .
+
 meetup:5a7f963e5e0504740c3a6b10bb6d4fa5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1954" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1954" ;
+        time:hasBeginning    "1954-01-01"^^xsd:date ;
+        time:hasEnd          "1954-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/788959/18/0>
         rdf:type             mtp:Meetup ;
@@ -185,9 +195,9 @@ meetup:5a7f963e5e0504740c3a6b10bb6d4fa5
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Forrest_Tucker> .
 
-meetup:a5757e28f5e68c56fe971176bcfa4a26
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "consecutive weeks" .
+meetup:businessmeeting
+        rdf:type    mtp:Purpose ;
+        rdfs:label  "Business meeting" .
 
 <http://dbpedia.org/resource/Frank_Lovejoy>
         rdf:type              mtp:Participant ;

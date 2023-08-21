@@ -9,6 +9,11 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+<http://dbpedia.org/resource/Joseph_Hill>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joseph_Hill> .
+
 <http://w3id.org/polifonia/pilot/meetups/66585/4/24>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:08f90c1a417155361a5c4b8d297e0d78 ;
@@ -18,11 +23,6 @@
         mtp:hasParticipant   <http://dbpedia.org/resource/Joseph_Hill_(musician)> , <http://dbpedia.org/resource/Joseph_Hill> ;
         mtp:hasPlace         <http://dbpedia.org/resource/South_Africa> , <http://dbpedia.org/resource/Cape_Town> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Burning_Spear> .
-
-<http://dbpedia.org/resource/Joseph_Hill>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Joseph_Hill> .
 
 meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
@@ -38,8 +38,10 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cape_Town> .
 
 meetup:08f90c1a417155361a5c4b8d297e0d78
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2000" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2000" ;
+        time:hasBeginning    "2000-01-01"^^xsd:date ;
+        time:hasEnd          "2000-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Joseph_Hill_(musician)>
         rdf:type              mtp:Participant ;
@@ -75,8 +77,10 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bob_Marley> .
 
 meetup:4d8556695c262ab91ff51a943fdd6058
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1969" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1969" ;
+        time:hasBeginning    "1969-01-01"^^xsd:date ;
+        time:hasEnd          "1969-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Saint_Ann_Parish>
         rdf:type              mtp:Location ;

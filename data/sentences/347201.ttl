@@ -10,22 +10,26 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:968076e689bf73c8e3406d6858a9e5d0
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "20 July 1979" .
-
-<http://dbpedia.org/resource/Rome>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Rome> .
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "20 July 1979" ;
+        time:hasBeginning    "1979-07-20"^^xsd:date ;
+        time:hasEnd          "1979-07-20"^^xsd:date .
 
 <http://dbpedia.org/resource/Anita_Pallenberg>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Anita_Pallenberg> .
 
+<http://dbpedia.org/resource/Rome>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Rome> .
+
 meetup:98c7242894844ecd6ec94af67ac8247d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1968" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1968" ;
+        time:hasBeginning    "1968-01-01"^^xsd:date ;
+        time:hasEnd          "1968-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
@@ -47,24 +51,26 @@ meetup:98c7242894844ecd6ec94af67ac8247d
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .
 
-<http://dbpedia.org/resource/Benedict_Arnold>
+<http://dbpedia.org/resource/Federico_Fellini>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Benedict_Arnold> .
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Federico_Fellini> .
 
 <http://dbpedia.org/resource/South_Salem,_New_York>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/South_Salem,_New_York> .
 
-<http://dbpedia.org/resource/Federico_Fellini>
+<http://dbpedia.org/resource/Benedict_Arnold>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Federico_Fellini> .
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Benedict_Arnold> .
 
 meetup:a82d922b133be19c1171534e6594f754
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1967" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1967" ;
+        time:hasBeginning    "1967-01-01"^^xsd:date ;
+        time:hasEnd          "1967-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Luchino_Visconti>
         rdf:type              mtp:Participant ;
@@ -77,12 +83,15 @@ meetup:a82d922b133be19c1171534e6594f754
         mtp:hasAPurpose      meetup:coincidence ;
         mtp:hasConfidence    "0.99292785" ;
         mtp:hasEvidenceText  "On 20 July 1979, a 17-year-old boy, Scott Cantrell, shot himself in the head in Pallenberg's bed with a gun owned by Keith Richards, while at the South Salem, New York, house shared by Richards and Pallenberg." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Walter_Scott> , <http://dbpedia.org/resource/Keith_Richards> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Keith_Richards> , <http://dbpedia.org/resource/Walter_Scott> ;
         mtp:hasPlace         <http://dbpedia.org/resource/South_Salem,_New_York> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Anita_Pallenberg> .
 
-meetup:personallife  rdf:type  mtp:Purpose ;
-        rdfs:label  "Personal life" .
+meetup:7f16109f1619fd7a733daf5a84c708c1
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1960" ;
+        time:hasBeginning    "1960-01-01"^^xsd:date ;
+        time:hasEnd          "1960-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/347201/4/6>
         rdf:type             mtp:Meetup ;
@@ -95,12 +104,11 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasSubject       <http://dbpedia.org/resource/Anita_Pallenberg> .
 
 meetup:1e1cc9bdeb2f29f5480106aec7e9bc48
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Now" .
 
-meetup:7f16109f1619fd7a733daf5a84c708c1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1960" .
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
 
 <http://w3id.org/polifonia/pilot/meetups/347201/2/7>
         rdf:type             mtp:Meetup ;
@@ -149,13 +157,15 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasAPurpose      meetup:personallife ;
         mtp:hasConfidence    "0.99991286" ;
         mtp:hasEvidenceText  "Pallenberg was born on  6 April 1942 in Rome, the daughter of Arnold \"Arnaldo\" Pallenberg, a German-Italian sales agent, amateur singer, and hobbyist painter, and Paula Wiederhold, a German embassy secretary." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Paula_of_Rome> , <http://dbpedia.org/resource/Benedict_Arnold> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Benedict_Arnold> , <http://dbpedia.org/resource/Paula_of_Rome> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Rome> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Anita_Pallenberg> .
 
 meetup:6f5b1f690bf896abe800c4fe69ec542b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "16 March 2007" .
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "16 March 2007" ;
+        time:hasBeginning    "2007-03-16"^^xsd:date ;
+        time:hasEnd          "2007-03-16"^^xsd:date .
 
 <http://dbpedia.org/resource/Germany>
         rdf:type              mtp:Location ;
@@ -168,8 +178,10 @@ meetup:6f5b1f690bf896abe800c4fe69ec542b
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Slovakia> .
 
 meetup:0004d0b59e19461ff126e3a08a814c33
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1970" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1970" ;
+        time:hasBeginning    "1970-01-01"^^xsd:date ;
+        time:hasEnd          "1970-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Alberto_Moravia>
         rdf:type              mtp:Participant ;
@@ -177,12 +189,10 @@ meetup:0004d0b59e19461ff126e3a08a814c33
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alberto_Moravia> .
 
 meetup:4d8556695c262ab91ff51a943fdd6058
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1969" .
-
-meetup:b2bd788b66c287c905f873428b8418f5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "6 April 1942" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1969" ;
+        time:hasBeginning    "1969-01-01"^^xsd:date ;
+        time:hasEnd          "1969-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Pier_Paolo_Pasolini>
         rdf:type              mtp:Participant ;
@@ -198,3 +208,9 @@ meetup:b2bd788b66c287c905f873428b8418f5
         mtp:hasParticipant   <http://dbpedia.org/resource/James_Coburn> , <http://dbpedia.org/resource/Brian_Jones> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Slovakia> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Anita_Pallenberg> .
+
+meetup:b2bd788b66c287c905f873428b8418f5
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "6 April 1942" ;
+        time:hasBeginning    "1942-04-06"^^xsd:date ;
+        time:hasEnd          "1942-04-06"^^xsd:date .

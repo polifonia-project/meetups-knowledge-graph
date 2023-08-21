@@ -10,7 +10,7 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:d7c1df3a0298c65f9abfefc24fe7d24f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the 1930s" .
 
 <http://dbpedia.org/resource/Staffordshire>
@@ -24,8 +24,10 @@ meetup:d7c1df3a0298c65f9abfefc24fe7d24f
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Mabel_Mercer> .
 
 meetup:f98de843d2136393cfb74c89c78639f3
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "3 February 1900" .
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "3 February 1900" ;
+        time:hasBeginning    "1900-02-03"^^xsd:date ;
+        time:hasEnd          "1900-02-03"^^xsd:date .
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
@@ -114,17 +116,19 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Bobby_Short> .
 
 meetup:5bce843dd76db8c939d5323dd3e54ec9
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1928" .
-
-meetup:db18d5695ce6af72ce2650e0cc73ff58
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the late 1960s" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1928" ;
+        time:hasBeginning    "1928-01-01"^^xsd:date ;
+        time:hasEnd          "1928-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/England>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
+
+meetup:db18d5695ce6af72ce2650e0cc73ff58
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "the late 1960s" .
 
 <http://dbpedia.org/resource/River_Trent>
         rdf:type              mtp:Location ;

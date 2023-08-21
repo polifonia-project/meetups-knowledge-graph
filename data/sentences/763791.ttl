@@ -9,10 +9,10 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/George_Gershwin>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Gershwin> .
+<http://dbpedia.org/resource/Las_Vegas>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Las_Vegas> .
 
 meetup:publiccelebration
         rdf:type    mtp:Purpose ;
@@ -34,8 +34,10 @@ meetup:publiccelebration
         mtp:hasSubject       <http://dbpedia.org/resource/Russ_Tamblyn> .
 
 meetup:36ac8e558ac7690b6f44e2cb5ef93322
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1949" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1949" ;
+        time:hasBeginning    "1949-01-01"^^xsd:date ;
+        time:hasEnd          "1949-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Lynn_Bari>
         rdf:type              mtp:Participant ;
@@ -43,7 +45,7 @@ meetup:36ac8e558ac7690b6f44e2cb5ef93322
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Lynn_Bari> .
 
 meetup:0a6572372b15cf2f9d520e7c84437924
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "20th Century" .
 
 <http://w3id.org/polifonia/pilot/meetups/763791/7/4>
@@ -62,7 +64,7 @@ meetup:0a6572372b15cf2f9d520e7c84437924
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Eddie_Tamblyn> .
 
 meetup:85578d89ad8efd9aaf9e09153ef646f9
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "December 30 , 1934" .
 
 <http://w3id.org/polifonia/pilot/meetups/763791/4/0>
@@ -76,8 +78,10 @@ meetup:85578d89ad8efd9aaf9e09153ef646f9
         mtp:hasSubject       <http://dbpedia.org/resource/Russ_Tamblyn> .
 
 meetup:7f16109f1619fd7a733daf5a84c708c1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1960" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1960" ;
+        time:hasBeginning    "1960-01-01"^^xsd:date ;
+        time:hasEnd          "1960-12-31"^^xsd:date .
 
 meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
@@ -108,8 +112,10 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/California> .
 
 meetup:277a78fc05c8864a170e9a56ceeabc4c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1957" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1957" ;
+        time:hasBeginning    "1957-01-01"^^xsd:date ;
+        time:hasEnd          "1957-12-31"^^xsd:date .
 
 meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
@@ -139,6 +145,11 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasPlace         <http://dbpedia.org/resource/Varsi> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Russ_Tamblyn> .
 
+<http://dbpedia.org/resource/Cleveland>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cleveland> .
+
 <http://dbpedia.org/resource/Russ_Tamblyn>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
@@ -149,16 +160,6 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Venetia_Stevenson> .
 
-<http://dbpedia.org/resource/Cleveland>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cleveland> .
-
-<http://dbpedia.org/resource/Gia_Scala>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gia_Scala> .
-
 <http://dbpedia.org/resource/Varsi>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
@@ -167,6 +168,16 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
 meetup:businessmeeting
         rdf:type    mtp:Purpose ;
         rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Gia_Scala>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Gia_Scala> .
+
+<http://dbpedia.org/resource/George_Gershwin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Gershwin> .
 
 <http://w3id.org/polifonia/pilot/meetups/763791/10/3>
         rdf:type             mtp:Meetup ;
@@ -177,8 +188,3 @@ meetup:businessmeeting
         mtp:hasParticipant   <http://dbpedia.org/resource/Glenn_Ford> , <http://dbpedia.org/resource/Gia_Scala> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Russ_Tamblyn> .
-
-<http://dbpedia.org/resource/Las_Vegas>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Las_Vegas> .

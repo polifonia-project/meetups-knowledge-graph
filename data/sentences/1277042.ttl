@@ -9,13 +9,13 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:personallife  rdf:type  mtp:Purpose ;
-        rdfs:label  "Personal life" .
-
 <http://dbpedia.org/resource/James_VI_and_I>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/James_VI_and_I> .
+
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
 
 <http://dbpedia.org/resource/James_McCracken>
         rdf:type              mtp:Participant ;
@@ -28,8 +28,10 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Otello> .
 
 meetup:0004d0b59e19461ff126e3a08a814c33
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1970" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1970" ;
+        time:hasBeginning    "1970-01-01"^^xsd:date ;
+        time:hasEnd          "1970-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/New_York_City>
         rdf:type              mtp:Location ;
@@ -39,14 +41,16 @@ meetup:0004d0b59e19461ff126e3a08a814c33
 meetup:coincidence  rdf:type  mtp:Purpose ;
         rdfs:label  "Coincidence" .
 
+meetup:db8064ebb95f927d2618a191517bc2cb
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "11 April 1964" ;
+        time:hasBeginning    "1964-04-11"^^xsd:date ;
+        time:hasEnd          "1964-04-11"^^xsd:date .
+
 <http://dbpedia.org/resource/Royal_Opera_House>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Royal_Opera_House> .
-
-meetup:db8064ebb95f927d2618a191517bc2cb
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "11 April 1964" .
 
 <http://dbpedia.org/resource/Giuseppe_Verdi>
         rdf:type              mtp:Participant ;

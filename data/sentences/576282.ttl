@@ -10,7 +10,7 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:971033445461a54e079d311ca5cbd442
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "July 1 , 1942" .
 
 <http://dbpedia.org/resource/Benjamin>
@@ -19,23 +19,15 @@ meetup:971033445461a54e079d311ca5cbd442
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Benjamin> .
 
 meetup:8c249675aea6c3cbd91661bbae767ff1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1986" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1986" ;
+        time:hasBeginning    "1986-01-01"^^xsd:date ;
+        time:hasEnd          "1986-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Pacoima,_Los_Angeles>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Pacoima,_Los_Angeles> .
-
-<http://w3id.org/polifonia/pilot/meetups/576282/13/6>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d0227eb1849a4009d6b361aacc22c907 ;
-        mtp:hasAPurpose      meetup:education ;
-        mtp:hasConfidence    "0.9734437" ;
-        mtp:hasEvidenceText  "After his father's death, Crouch and his sister took over the shared duty of senior pastor at the church his parents founded, Christ Memorial Church of God in Christ in Pacoima, California." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/God> , <http://dbpedia.org/resource/Jesus> ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Pacoima,_Los_Angeles> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Andraé_Crouch> .
 
 <http://w3id.org/polifonia/pilot/meetups/576282/8/5>
         rdf:type             mtp:Meetup ;
@@ -47,19 +39,29 @@ meetup:8c249675aea6c3cbd91661bbae767ff1
         mtp:hasPlace         <http://dbpedia.org/resource/River_Crouch> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Andraé_Crouch> .
 
+<http://w3id.org/polifonia/pilot/meetups/576282/13/6>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d0227eb1849a4009d6b361aacc22c907 ;
+        mtp:hasAPurpose      meetup:education ;
+        mtp:hasConfidence    "0.9734437" ;
+        mtp:hasEvidenceText  "After his father's death, Crouch and his sister took over the shared duty of senior pastor at the church his parents founded, Christ Memorial Church of God in Christ in Pacoima, California." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/God> , <http://dbpedia.org/resource/Jesus> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Pacoima,_Los_Angeles> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andraé_Crouch> .
+
 <http://dbpedia.org/resource/Siedah_Garrett>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Siedah_Garrett> .
 
-meetup:d0227eb1849a4009d6b361aacc22c907
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "pastor" .
-
 <http://dbpedia.org/resource/Michael_Jackson>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Michael_Jackson> .
+
+meetup:d0227eb1849a4009d6b361aacc22c907
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "pastor" .
 
 <http://w3id.org/polifonia/pilot/meetups/576282/11/7>
         rdf:type             mtp:Meetup ;
@@ -67,7 +69,7 @@ meetup:d0227eb1849a4009d6b361aacc22c907
         mtp:hasAPurpose      meetup:musicmaking ;
         mtp:hasConfidence    "0.6458365" ;
         mtp:hasEvidenceText  "In 1987, the Andraé Crouch Choir sang background vocals along with Siedah Garrett and The Winans on Jackson's hit single \"Man in the Mirror\" from the Bad album." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Siedah_Garrett> , <http://dbpedia.org/resource/Michael_Jackson> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Michael_Jackson> , <http://dbpedia.org/resource/Siedah_Garrett> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Spa_town> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Andraé_Crouch> .
 
@@ -106,12 +108,14 @@ meetup:d0227eb1849a4009d6b361aacc22c907
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/River_Crouch> .
 
-meetup:7f16109f1619fd7a733daf5a84c708c1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1960" .
-
 meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
+
+meetup:7f16109f1619fd7a733daf5a84c708c1
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1960" ;
+        time:hasBeginning    "1960-01-01"^^xsd:date ;
+        time:hasEnd          "1960-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Lance_Armstrong>
         rdf:type              mtp:Participant ;
@@ -147,8 +151,10 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
 
 meetup:d68a18275455ae3eaa2c291eebb46e6d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1987" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1987" ;
+        time:hasBeginning    "1987-01-01"^^xsd:date ;
+        time:hasEnd          "1987-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/576282/2/0>
         rdf:type             mtp:Meetup ;

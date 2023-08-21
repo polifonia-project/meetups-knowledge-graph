@@ -9,20 +9,22 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
+
 <http://dbpedia.org/resource/James_Fleming_Fagan>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/James_Fleming_Fagan> .
 
-meetup:musicmaking  rdf:type  mtp:Purpose ;
-        rdfs:label  "Music making" .
-
 meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
 
 meetup:05a5cf06982ba7892ed2a6d38fe832d6
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2021" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2021" ;
+        time:hasBeginning    "2021-01-01"^^xsd:date ;
+        time:hasEnd          "2021-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/New_Orleans>
         rdf:type              mtp:Location ;
@@ -49,15 +51,15 @@ meetup:05a5cf06982ba7892ed2a6d38fe832d6
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Queens_Borough_Hall> .
 
-<http://dbpedia.org/resource/Julia_the_Elder>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Julia_the_Elder> .
-
 <http://dbpedia.org/resource/Woody_Herman>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Woody_Herman> .
+
+<http://dbpedia.org/resource/Julia_the_Elder>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Julia_the_Elder> .
 
 <http://dbpedia.org/resource/Philadelphia>
         rdf:type              mtp:Location ;
@@ -65,7 +67,7 @@ meetup:05a5cf06982ba7892ed2a6d38fe832d6
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Philadelphia> .
 
 meetup:080e915355d7f5f0cfc90db140f5e066
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "January 16 , 1938" .
 
 <http://dbpedia.org/resource/Billie_Holiday>
@@ -74,7 +76,7 @@ meetup:080e915355d7f5f0cfc90db140f5e066
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Billie_Holiday> .
 
 meetup:494d0ffa9fe7f9e0bf231c8516d7069e
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the late 1930s" .
 
 <http://dbpedia.org/resource/Abel_Meeropol>
@@ -83,7 +85,7 @@ meetup:494d0ffa9fe7f9e0bf231c8516d7069e
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Abel_Meeropol> .
 
 meetup:628b7db04235f228d40adc671413a8c8
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "day" .
 
 <http://w3id.org/polifonia/pilot/meetups/50420/14/3>
@@ -122,8 +124,10 @@ meetup:628b7db04235f228d40adc671413a8c8
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Harold_E._Robinson> .
 
 meetup:ea6b2efbdd4255a9f1b3bbc6399b58f4
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "2019" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "2019" ;
+        time:hasBeginning    "2019-01-01"^^xsd:date ;
+        time:hasEnd          "2019-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Cain_and_Abel>
         rdf:type              mtp:Participant ;
@@ -131,8 +135,10 @@ meetup:ea6b2efbdd4255a9f1b3bbc6399b58f4
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Cain_and_Abel> .
 
 meetup:f856e0d2e03bbbb95f9e5b85732c9219
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "September 1946" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "September 1946" ;
+        time:hasBeginning    "1946-09-01"^^xsd:date ;
+        time:hasEnd          "1946-09-30"^^xsd:date .
 
 <http://dbpedia.org/resource/Louis_Armstrong>
         rdf:type              mtp:Participant ;
@@ -140,8 +146,10 @@ meetup:f856e0d2e03bbbb95f9e5b85732c9219
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Louis_Armstrong> .
 
 meetup:f106b7f99d2cb30c3db1c3cc0fde9ccb
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1961" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1961" ;
+        time:hasBeginning    "1961-01-01"^^xsd:date ;
+        time:hasEnd          "1961-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/The_Bronx>
         rdf:type              mtp:Location ;
@@ -149,12 +157,16 @@ meetup:f106b7f99d2cb30c3db1c3cc0fde9ccb
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/The_Bronx> .
 
 meetup:03e7d2ebec1e820ac34d054df7e68f48
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1950" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1950" ;
+        time:hasBeginning    "1950-01-01"^^xsd:date ;
+        time:hasEnd          "1950-12-31"^^xsd:date .
 
 meetup:e3408432c1a48a52fb6c74d926b38886
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1956" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1956" ;
+        time:hasBeginning    "1956-01-01"^^xsd:date ;
+        time:hasEnd          "1956-12-31"^^xsd:date .
 
 meetup:businessmeeting
         rdf:type    mtp:Purpose ;
@@ -194,7 +206,7 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasSubject       <http://dbpedia.org/resource/Billie_Holiday> .
 
 meetup:03727ac48595a24daed975559c944a44
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "Day" .
 
 <http://dbpedia.org/resource/Carnegie_Hall>
@@ -213,7 +225,7 @@ meetup:03727ac48595a24daed975559c944a44
         mtp:hasSubject       <http://dbpedia.org/resource/Billie_Holiday> .
 
 meetup:7a4e3cdea383cab273195206d1511e74
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "nightclubs" .
 
 <http://w3id.org/polifonia/pilot/meetups/50420/5/0>
@@ -247,7 +259,7 @@ meetup:7a4e3cdea383cab273195206d1511e74
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Benny_Goodman> .
 
 meetup:878d76487bac9916ae091382c9a4dcd7
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "April 7 , 1915" .
 
 <http://dbpedia.org/resource/New_York_City>

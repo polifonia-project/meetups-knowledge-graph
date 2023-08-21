@@ -1,0 +1,22 @@
+# Query to retrieve all the list of meetups, their time expressions, and if formalised the start and end date
+# time expressions can be a subClassOf: TimePoint, TimeRange, TimeReference. Filtering TimeExpression
+# as it is the main class	
+prefix meetup: <http://w3id.org/polifonia/pilot/meetups/>
+prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+prefix time:   <http://www.w3.org/2006/time#>
+
+SELECT *
+WHERE
+{
+  VALUES ?subject { <http://dbpedia.org/resource/Niccolò_Paganini> }
+         ?s mtp:hasSubject ?subject ;
+         mtp:happensAt ?time_expression .
+  ?time_expression mtp:hasEvidenceText  ?hasEvidenceTextTimeExpression ;
+                   rdf:type ?typeTimeExpression .
+	
+  FILTER ( ?typeTimeExpression !=  mtp:TimeExpression ) .
+  OPTIONAL {
+    ?time_expression time:hasBeginning ?beginDate;
+                     time:hasEnd ?endDate .
+  } .
+}

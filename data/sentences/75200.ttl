@@ -15,11 +15,13 @@
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/France> .
 
 meetup:f2606070e98af9735f97bf759a049b56
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "5 December 1889" .
+        rdf:type             mtp:TimeExpression , mtp:TimePoint ;
+        mtp:hasEvidenceText  "5 December 1889" ;
+        time:hasBeginning    "1889-12-05"^^xsd:date ;
+        time:hasEnd          "1889-12-05"^^xsd:date .
 
 meetup:2486923a98e77fd0740381d01acd1782
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "presentation" .
 
 <http://w3id.org/polifonia/pilot/meetups/75200/4/5>
@@ -32,14 +34,16 @@ meetup:2486923a98e77fd0740381d01acd1782
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/France> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marie-Louise_Damien> .
 
-meetup:04df4d434d481c5bb723be1b6df1ee65
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1911" .
-
 <http://dbpedia.org/resource/Dienne>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Dienne> .
+
+meetup:04df4d434d481c5bb723be1b6df1ee65
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1911" ;
+        time:hasBeginning    "1911-01-01"^^xsd:date ;
+        time:hasEnd          "1911-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Phine_District>
         rdf:type              mtp:Location ;
@@ -61,11 +65,6 @@ meetup:04df4d434d481c5bb723be1b6df1ee65
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Loie_Fuller> .
 
-<http://dbpedia.org/resource/Father_Damien>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Father_Damien> .
-
 <http://w3id.org/polifonia/pilot/meetups/75200/4/3>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:04df4d434d481c5bb723be1b6df1ee65 ;
@@ -75,6 +74,11 @@ meetup:04df4d434d481c5bb723be1b6df1ee65
         mtp:hasParticipant   <http://dbpedia.org/resource/Marie-Louise_Damien> , <http://dbpedia.org/resource/Harry_Fragson> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Alhambra-Maurice_Chevalier> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Marie-Louise_Damien> .
+
+<http://dbpedia.org/resource/Father_Damien>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Father_Damien> .
 
 <http://dbpedia.org/resource/Johnny_Palmer>
         rdf:type              mtp:Participant ;
@@ -94,13 +98,15 @@ meetup:04df4d434d481c5bb723be1b6df1ee65
 meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
 
-meetup:91ece9b7563805ae1b3be6a0638f18f0
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "of years" .
-
 meetup:c44799b04a1c72e3c8593a53e8000c78
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1913" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1913" ;
+        time:hasBeginning    "1913-01-01"^^xsd:date ;
+        time:hasEnd          "1913-12-31"^^xsd:date .
+
+meetup:91ece9b7563805ae1b3be6a0638f18f0
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "of years" .
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
@@ -142,7 +148,7 @@ meetup:businessmeeting
         rdfs:label  "Business meeting" .
 
 meetup:197639b278057c519189add5413712e3
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "mon" .
 
 <http://dbpedia.org/resource/Joan_of_Arc>

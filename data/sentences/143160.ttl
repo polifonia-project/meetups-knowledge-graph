@@ -30,12 +30,16 @@
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hans_Christian_Andersen> .
 
 meetup:d46e1fcf4c07ce4a69ee07e4134bcef1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1965" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1965" ;
+        time:hasBeginning    "1965-01-01"^^xsd:date ;
+        time:hasEnd          "1965-12-31"^^xsd:date .
 
 meetup:5103c3584b063c431bd1268e9b5e76fb
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1926" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1926" ;
+        time:hasBeginning    "1926-01-01"^^xsd:date ;
+        time:hasEnd          "1926-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Bari>
         rdf:type              mtp:Location ;
@@ -48,8 +52,10 @@ meetup:5103c3584b063c431bd1268e9b5e76fb
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Milan> .
 
 meetup:29530de21430b7540ec3f65135f7323c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1930" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1930" ;
+        time:hasBeginning    "1930-01-01"^^xsd:date ;
+        time:hasEnd          "1930-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/143160/0/0>
         rdf:type             mtp:Meetup ;
@@ -79,15 +85,15 @@ meetup:29530de21430b7540ec3f65135f7323c
 meetup:personallife  rdf:type  mtp:Purpose ;
         rdfs:label  "Personal life" .
 
-<http://dbpedia.org/resource/Italy>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Italy> .
-
 <http://dbpedia.org/resource/Alfredo_Casella>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Alfredo_Casella> .
+
+<http://dbpedia.org/resource/Italy>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Italy> .
 
 <http://w3id.org/polifonia/pilot/meetups/143160/0/5>
         rdf:type             mtp:Meetup ;
@@ -105,7 +111,7 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Eduardo_De_Filippo> .
 
 meetup:b65296d02423898f6e8353b054acdd2f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
         mtp:hasEvidenceText  "3 December 1911 – 10 April 1979" .
 
 <http://dbpedia.org/resource/Paris>
@@ -113,24 +119,18 @@ meetup:b65296d02423898f6e8353b054acdd2f
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paris> .
 
-meetup:a09e8d341863e13d9db465766ea9a290
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "almost 30 years" .
+<http://dbpedia.org/resource/Eugene_Walter>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Eugene_Walter> .
 
 <http://dbpedia.org/resource/Francisco_Franco>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Francisco_Franco> .
 
-<http://w3id.org/polifonia/pilot/meetups/143160/9/2>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:d46e1fcf4c07ce4a69ee07e4134bcef1 ;
-        mtp:hasAPurpose      meetup:musicmaking ;
-        mtp:hasConfidence    "0.99991727" ;
-        mtp:hasEvidenceText  "His score for Fellini's Juliet of the Spirits (1965) included a collaboration with Eugene Walter on the song, \"Go Milk the Moon\" (cut from the final version of the film), and they teamed again for the song \"What Is a Youth?\", part of Rota's score for Franco Zeffirelli's Romeo and Juliet." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Francisco_Franco> , <http://dbpedia.org/resource/Nino_Rota> , <http://dbpedia.org/resource/Eugene_Walter> ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Moon> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Nino_Rota> .
+meetup:musicmaking  rdf:type  mtp:Purpose ;
+        rdfs:label  "Music making" .
 
 <http://w3id.org/polifonia/pilot/meetups/143160/2/2>
         rdf:type             mtp:Meetup ;
@@ -142,13 +142,19 @@ meetup:a09e8d341863e13d9db465766ea9a290
         mtp:hasPlace         <http://dbpedia.org/resource/Rome> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Nino_Rota> .
 
-meetup:musicmaking  rdf:type  mtp:Purpose ;
-        rdfs:label  "Music making" .
+meetup:a09e8d341863e13d9db465766ea9a290
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "almost 30 years" .
 
-<http://dbpedia.org/resource/Eugene_Walter>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Eugene_Walter> .
+<http://w3id.org/polifonia/pilot/meetups/143160/9/2>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:d46e1fcf4c07ce4a69ee07e4134bcef1 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.99991727" ;
+        mtp:hasEvidenceText  "His score for Fellini's Juliet of the Spirits (1965) included a collaboration with Eugene Walter on the song, \"Go Milk the Moon\" (cut from the final version of the film), and they teamed again for the song \"What Is a Youth?\", part of Rota's score for Franco Zeffirelli's Romeo and Juliet." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Francisco_Franco> , <http://dbpedia.org/resource/Nino_Rota> , <http://dbpedia.org/resource/Eugene_Walter> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Moon> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nino_Rota> .
 
 <http://dbpedia.org/resource/Nino_Rota>
         rdf:type              mtp:Participant ;
@@ -179,5 +185,7 @@ meetup:education  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Moon> .
 
 meetup:414e773d5b7e5c06d564f594bf6384d0
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1923" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1923" ;
+        time:hasBeginning    "1923-01-01"^^xsd:date ;
+        time:hasEnd          "1923-12-31"^^xsd:date .

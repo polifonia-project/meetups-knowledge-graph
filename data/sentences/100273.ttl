@@ -14,13 +14,17 @@
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Vienna> .
 
-meetup:8562ae5e286544710b2e7ebe9858833b
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1934" .
-
 meetup:6f909dc5762200cdf499b40386590aa4
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "March 28 , 1890 – December 29 , 1967" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "March 28 , 1890 – December 29 , 1967" ;
+        time:hasBeginning    "1890-01-01"^^xsd:date ;
+        time:hasEnd          "1967-12-31"^^xsd:date .
+
+meetup:8562ae5e286544710b2e7ebe9858833b
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1934" ;
+        time:hasBeginning    "1934-01-01"^^xsd:date ;
+        time:hasEnd          "1934-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Paul_Whiteman>
         rdf:type              mtp:Participant ;
@@ -33,11 +37,13 @@ meetup:6f909dc5762200cdf499b40386590aa4
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Billy_Wilder> .
 
 meetup:5103c3584b063c431bd1268e9b5e76fb
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1926" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1926" ;
+        time:hasBeginning    "1926-01-01"^^xsd:date ;
+        time:hasEnd          "1926-12-31"^^xsd:date .
 
 meetup:489991e29d641579377633a55f7ab40f
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "May 11 , 1927" .
 
 <http://dbpedia.org/resource/Chicago>
@@ -55,6 +61,16 @@ meetup:489991e29d641579377633a55f7ab40f
         mtp:hasPlace         <http://dbpedia.org/resource/Illinois> , <http://dbpedia.org/resource/Chicago> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_Whiteman> .
 
+<http://dbpedia.org/resource/Jack_Teagarden>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jack_Teagarden> .
+
+<http://dbpedia.org/resource/Austria>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Austria> .
+
 <http://w3id.org/polifonia/pilot/meetups/100273/6/11>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:5103c3584b063c431bd1268e9b5e76fb ;
@@ -64,16 +80,6 @@ meetup:489991e29d641579377633a55f7ab40f
         mtp:hasParticipant   <http://dbpedia.org/resource/Billy_Wilder> , <http://dbpedia.org/resource/Paul_Whiteman> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Vienna> , <http://dbpedia.org/resource/Austria> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_Whiteman> .
-
-<http://dbpedia.org/resource/Austria>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Austria> .
-
-<http://dbpedia.org/resource/Jack_Teagarden>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Jack_Teagarden> .
 
 <http://dbpedia.org/resource/Jamal_Crawford>
         rdf:type              mtp:Participant ;
@@ -104,8 +110,10 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Johnny_Mercer> .
 
 meetup:fbb57263f3834be241e746367e1b6e47
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "October 4–5 , 1926" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "October 4–5 , 1926" ;
+        time:hasBeginning    "2023-01-01"^^xsd:date ;
+        time:hasEnd          "1926-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/United_States>
         rdf:type              mtp:Location ;
@@ -122,12 +130,12 @@ meetup:fbb57263f3834be241e746367e1b6e47
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Harlem> .
 
+meetup:68ef283a5aa5741cede0e0f495cee580
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1059-D" .
+
 meetup:coincidence  rdf:type  mtp:Purpose ;
         rdfs:label  "Coincidence" .
-
-meetup:68ef283a5aa5741cede0e0f495cee580
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1059-D" .
 
 meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
@@ -158,9 +166,13 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasAPurpose      meetup:personallife ;
         mtp:hasConfidence    "0.5400482" ;
         mtp:hasEvidenceText  "Paul Samuel 'Pops' Whiteman (March 28, 1890 – December 29, 1967) was an American bandleader, composer, orchestral director, and violist." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Bandleader> , <http://dbpedia.org/resource/Composer> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Composer> , <http://dbpedia.org/resource/Bandleader> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Paul_Whiteman> .
+
+meetup:58f03e4be24a4ff9d2d3ba639f11fd6a
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "20363" .
 
 <http://w3id.org/polifonia/pilot/meetups/100273/105/0>
         rdf:type             mtp:Meetup ;
@@ -176,7 +188,3 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/River_Trent> .
-
-meetup:58f03e4be24a4ff9d2d3ba639f11fd6a
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "20363" .

@@ -9,14 +9,16 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:469c5072c7e6060e733186f31585cd78
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "September 12 , 1931 – December 1 , 2011" .
-
 <http://dbpedia.org/resource/J._B._Lightfoot>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/J._B._Lightfoot> .
+
+meetup:469c5072c7e6060e733186f31585cd78
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "September 12 , 1931 – December 1 , 2011" ;
+        time:hasBeginning    "1931-01-01"^^xsd:date ;
+        time:hasEnd          "2011-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/William_Denison>
         rdf:type              mtp:Participant ;
@@ -41,14 +43,16 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasPlace         <http://dbpedia.org/resource/McKinney,_Texas> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Bill_McKinney> .
 
+meetup:3d863b367aa379f71c7afc0c9cdca41d
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1974" ;
+        time:hasBeginning    "1974-01-01"^^xsd:date ;
+        time:hasEnd          "1974-12-31"^^xsd:date .
+
 <http://dbpedia.org/resource/Clint_Eastwood>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Clint_Eastwood> .
-
-meetup:3d863b367aa379f71c7afc0c9cdca41d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1974" .
 
 meetup:coincidence  rdf:type  mtp:Purpose ;
         rdfs:label  "Coincidence" .
@@ -58,15 +62,15 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Michael_Cimino> .
 
-<http://dbpedia.org/resource/Character_actor>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Character_actor> .
-
 <http://dbpedia.org/resource/McKinney,_Texas>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/McKinney,_Texas> .
+
+<http://dbpedia.org/resource/Character_actor>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Character_actor> .
 
 <http://dbpedia.org/resource/Bill_McKinney>
         rdf:type              mtp:Participant ;

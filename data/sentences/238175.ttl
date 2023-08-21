@@ -20,27 +20,26 @@
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Los_Angeles> .
 
 meetup:03e7d2ebec1e820ac34d054df7e68f48
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1950" .
-
-meetup:96055f5b06bf9381ac43879351642cf5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1991" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1950" ;
+        time:hasBeginning    "1950-01-01"^^xsd:date ;
+        time:hasEnd          "1950-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Horace_Silver>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Horace_Silver> .
 
-<http://w3id.org/polifonia/pilot/meetups/238175/14/11>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:96055f5b06bf9381ac43879351642cf5 ;
-        mtp:hasAPurpose      meetup:musicmaking ;
-        mtp:hasConfidence    "0.9999801" ;
-        mtp:hasEvidenceText  "Rockin' with Rachmaninoff, a musical work featuring dancers and narration, written by Silver and choreographed and directed by Donald McKayle, was staged in Los Angeles in 1991." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Donald_McKayle> , <http://dbpedia.org/resource/Sergei_Rachmaninoff> ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Los_Angeles> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Horace_Silver> .
+meetup:96055f5b06bf9381ac43879351642cf5
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1991" ;
+        time:hasBeginning    "1991-01-01"^^xsd:date ;
+        time:hasEnd          "1991-12-31"^^xsd:date .
+
+<http://dbpedia.org/resource/Maupin,_Oregon>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Maupin,_Oregon> .
 
 <http://w3id.org/polifonia/pilot/meetups/238175/1/0>
         rdf:type             mtp:Meetup ;
@@ -48,18 +47,23 @@ meetup:96055f5b06bf9381ac43879351642cf5
         mtp:hasAPurpose      meetup:musicmaking ;
         mtp:hasConfidence    "0.99999976" ;
         mtp:hasEvidenceText  "After playing tenor saxophone and piano at school in Connecticut, Silver got his break on piano when his trio was recruited by Stan Getz in 1950." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Stan_Getz> , <http://dbpedia.org/resource/Tenor_saxophone> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Tenor_saxophone> , <http://dbpedia.org/resource/Stan_Getz> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Connecticut> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Horace_Silver> .
 
 meetup:937297c80e8d398ad320eec6cba19cfe
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "October and November 1968" .
 
-<http://dbpedia.org/resource/Maupin,_Oregon>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Maupin,_Oregon> .
+<http://w3id.org/polifonia/pilot/meetups/238175/14/11>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:96055f5b06bf9381ac43879351642cf5 ;
+        mtp:hasAPurpose      meetup:musicmaking ;
+        mtp:hasConfidence    "0.9999801" ;
+        mtp:hasEvidenceText  "Rockin' with Rachmaninoff, a musical work featuring dancers and narration, written by Silver and choreographed and directed by Donald McKayle, was staged in Los Angeles in 1991." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Sergei_Rachmaninoff> , <http://dbpedia.org/resource/Donald_McKayle> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Los_Angeles> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Horace_Silver> .
 
 <http://dbpedia.org/resource/Vincent_Herring>
         rdf:type              mtp:Participant ;
@@ -86,13 +90,13 @@ meetup:937297c80e8d398ad320eec6cba19cfe
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/John_Tavares> .
 
+meetup:personallife  rdf:type  mtp:Purpose ;
+        rdfs:label  "Personal life" .
+
 <http://dbpedia.org/resource/Sergei_Rachmaninoff>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Sergei_Rachmaninoff> .
-
-meetup:personallife  rdf:type  mtp:Purpose ;
-        rdfs:label  "Personal life" .
 
 <http://dbpedia.org/resource/Billy_Cobham>
         rdf:type              mtp:Participant ;
@@ -133,18 +137,20 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
 
 meetup:d68a18275455ae3eaa2c291eebb46e6d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1987" .
-
-<http://dbpedia.org/resource/Donald_McKayle>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Donald_McKayle> .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1987" ;
+        time:hasBeginning    "1987-01-01"^^xsd:date ;
+        time:hasEnd          "1987-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Europe>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Europe> .
+
+<http://dbpedia.org/resource/Donald_McKayle>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Donald_McKayle> .
 
 <http://dbpedia.org/resource/Stan_Getz>
         rdf:type              mtp:Participant ;
@@ -152,8 +158,10 @@ meetup:d68a18275455ae3eaa2c291eebb46e6d
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Stan_Getz> .
 
 meetup:a454e51dcb0d48384d2639e685824dde
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "September 2 , 1928 – June 18 , 2014" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "September 2 , 1928 – June 18 , 2014" ;
+        time:hasBeginning    "1928-01-01"^^xsd:date ;
+        time:hasEnd          "2014-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/238175/14/6>
         rdf:type             mtp:Meetup ;
@@ -161,7 +169,7 @@ meetup:a454e51dcb0d48384d2639e685824dde
         mtp:hasAPurpose      meetup:businessmeeting ;
         mtp:hasConfidence    "0.4788571" ;
         mtp:hasEvidenceText  "His band for performances in the UK and elsewhere in 1987 included trumpeter Dave Douglas and saxophonist Vincent Herring." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Vincent_Herring> , <http://dbpedia.org/resource/Dave_Douglas_(trumpeter)> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Dave_Douglas_(trumpeter)> , <http://dbpedia.org/resource/Vincent_Herring> ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_Kingdom> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Horace_Silver> .
 
@@ -170,7 +178,7 @@ meetup:businessmeeting
         rdfs:label  "Business meeting" .
 
 meetup:1409c86d3d6e16f53a53243f3f1382c1
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the 1950s" .
 
 <http://dbpedia.org/resource/Connecticut>

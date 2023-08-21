@@ -9,13 +9,13 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:d12a2b30ecd3b79b5b235a1ae9320c64
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the late 1950s" .
-
 meetup:publiccelebration
         rdf:type    mtp:Purpose ;
         rdfs:label  "Public celebration" .
+
+meetup:d12a2b30ecd3b79b5b235a1ae9320c64
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "the late 1950s" .
 
 <http://dbpedia.org/resource/Andrés_Segovia>
         rdf:type              mtp:Participant ;
@@ -28,13 +28,15 @@ meetup:publiccelebration
         mtp:hasAPurpose      meetup:coincidence ;
         mtp:hasConfidence    "0.98541915" ;
         mtp:hasEvidenceText  "In 1963, Byrd toured Europe with Les McCann and Zoot Sims." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Les_McCann> , <http://dbpedia.org/resource/Zoot_Sims> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Zoot_Sims> , <http://dbpedia.org/resource/Les_McCann> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Europe> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Charlie_Byrd> .
 
 meetup:03e7d2ebec1e820ac34d054df7e68f48
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1950" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1950" ;
+        time:hasBeginning    "1950-01-01"^^xsd:date ;
+        time:hasEnd          "1950-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/1599087/8/0>
         rdf:type             mtp:Meetup ;
@@ -72,7 +74,7 @@ meetup:03e7d2ebec1e820ac34d054df7e68f48
         mtp:hasAPurpose      meetup:coincidence ;
         mtp:hasConfidence    "0.99971837" ;
         mtp:hasEvidenceText  "In 1957, Byrd met double bassist Keter Betts in a Washington, D.C., club called the Vineyard." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/George_Washington> , <http://dbpedia.org/resource/Keter_Betts> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Keter_Betts> , <http://dbpedia.org/resource/George_Washington> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Washington,_D.C.> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Charlie_Byrd> .
 
@@ -101,15 +103,15 @@ meetup:03e7d2ebec1e820ac34d054df7e68f48
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Zoot_Sims> .
 
-<http://dbpedia.org/resource/Segovia>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Segovia> .
-
 <http://dbpedia.org/resource/Malcolm_Boyd>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Malcolm_Boyd> .
+
+<http://dbpedia.org/resource/Segovia>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Segovia> .
 
 <http://dbpedia.org/resource/Anglicanism>
         rdf:type              mtp:Location ;
@@ -117,8 +119,10 @@ meetup:03e7d2ebec1e820ac34d054df7e68f48
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Anglicanism> .
 
 meetup:7f16109f1619fd7a733daf5a84c708c1
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1960" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1960" ;
+        time:hasBeginning    "1960-01-01"^^xsd:date ;
+        time:hasEnd          "1960-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Italy>
         rdf:type              mtp:Location ;
@@ -136,8 +140,10 @@ meetup:7f16109f1619fd7a733daf5a84c708c1
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Brazil> .
 
 meetup:c215b446bcdf956d848a8419c1b5a920
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1963" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1963" ;
+        time:hasBeginning    "1963-01-01"^^xsd:date ;
+        time:hasEnd          "1963-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Felix_Grant>
         rdf:type              mtp:Participant ;
@@ -145,8 +151,10 @@ meetup:c215b446bcdf956d848a8419c1b5a920
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Felix_Grant> .
 
 meetup:277a78fc05c8864a170e9a56ceeabc4c
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1957" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1957" ;
+        time:hasBeginning    "1957-01-01"^^xsd:date ;
+        time:hasEnd          "1957-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Jesus>
         rdf:type              mtp:Participant ;
@@ -156,21 +164,21 @@ meetup:277a78fc05c8864a170e9a56ceeabc4c
 meetup:coincidence  rdf:type  mtp:Purpose ;
         rdfs:label  "Coincidence" .
 
-<http://dbpedia.org/resource/Europe>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Europe> .
-
 <http://dbpedia.org/resource/Keter_Betts>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Keter_Betts> .
 
+<http://dbpedia.org/resource/Europe>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Europe> .
+
 meetup:education  rdf:type  mtp:Purpose ;
         rdfs:label  "Education" .
 
 meetup:461739ff59821a55d6c552174bce8f94
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "several years" .
 
 <http://dbpedia.org/resource/Paulo_Santos_(Portuguese_footballer)>
@@ -179,8 +187,10 @@ meetup:461739ff59821a55d6c552174bce8f94
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paulo_Santos_(Portuguese_footballer)> .
 
 meetup:5a7f963e5e0504740c3a6b10bb6d4fa5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1954" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1954" ;
+        time:hasBeginning    "1954-01-01"^^xsd:date ;
+        time:hasEnd          "1954-12-31"^^xsd:date .
 
 <http://w3id.org/polifonia/pilot/meetups/1599087/8/22>
         rdf:type             mtp:Meetup ;
@@ -188,10 +198,10 @@ meetup:5a7f963e5e0504740c3a6b10bb6d4fa5
         mtp:hasAPurpose      meetup:publiccelebration ;
         mtp:hasConfidence    "0.94991195" ;
         mtp:hasEvidenceText  "Between 1964 and 1965, he appeared at the Newport Jazz Festival with Episcopal priest Malcolm Boyd, accompanying prayers from his book Are You Running With Me Jesus?" ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Malcolm_Boyd> , <http://dbpedia.org/resource/Jesus> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Jesus> , <http://dbpedia.org/resource/Malcolm_Boyd> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Anglicanism> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Charlie_Byrd> .
 
 meetup:45fe3ecb817d5df65dbc14ffb0e49a10
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
         mtp:hasEvidenceText  "1964 and 1965" .

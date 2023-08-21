@@ -9,15 +9,15 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-<http://dbpedia.org/resource/Flip_Wilson>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Flip_Wilson> .
-
 <http://dbpedia.org/resource/Christopher_Columbus>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Christopher_Columbus> .
+
+<http://dbpedia.org/resource/Flip_Wilson>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Flip_Wilson> .
 
 meetup:businessmeeting
         rdf:type    mtp:Purpose ;
@@ -32,17 +32,21 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         mtp:hasAPurpose      meetup:musicmaking ;
         mtp:hasConfidence    "0.6953791" ;
         mtp:hasEvidenceText  "A routine titled \"Columbus\", from the 1967 album Cowboys and Colored People, brought Wilson to Hollywood industry attention." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Woodrow_Wilson> , <http://dbpedia.org/resource/Christopher_Columbus> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Christopher_Columbus> , <http://dbpedia.org/resource/Woodrow_Wilson> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Hollywood> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Flip_Wilson> .
 
 meetup:cd55630380ff3fc277515c841e88a191
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the 1967" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1967" ;
+        time:hasBeginning    "1967-01-01"^^xsd:date ;
+        time:hasEnd          "1967-12-31"^^xsd:date .
 
 meetup:5a7f963e5e0504740c3a6b10bb6d4fa5
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1954" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1954" ;
+        time:hasBeginning    "1954-01-01"^^xsd:date ;
+        time:hasEnd          "1954-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Bellhop>
         rdf:type              mtp:Participant ;

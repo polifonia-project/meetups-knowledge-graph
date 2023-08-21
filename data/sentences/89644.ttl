@@ -10,12 +10,16 @@
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
 meetup:fac288c3a40cf276bbb39259c5388311
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "September 8 , 1932 – March 5 , 1963" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "September 8 , 1932 – March 5 , 1963" ;
+        time:hasBeginning    "1932-01-01"^^xsd:date ;
+        time:hasEnd          "1963-12-31"^^xsd:date .
 
 meetup:73f67493bd481e04838f790999ebc741
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1916–1998" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1916–1998" ;
+        time:hasBeginning    "1916-01-01"^^xsd:date ;
+        time:hasEnd          "1998-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/LaGuardia_Airport>
         rdf:type              mtp:Location ;
@@ -42,15 +46,15 @@ meetup:73f67493bd481e04838f790999ebc741
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kemba_Walker> .
 
-<http://dbpedia.org/resource/Arthur_Godfrey>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Arthur_Godfrey> .
-
 <http://dbpedia.org/resource/Patsy_Cline>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Patsy_Cline> .
+
+<http://dbpedia.org/resource/Arthur_Godfrey>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Arthur_Godfrey> .
 
 <http://dbpedia.org/resource/Kansas>
         rdf:type              mtp:Location ;
@@ -58,14 +62,17 @@ meetup:73f67493bd481e04838f790999ebc741
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Kansas> .
 
 meetup:3b00764aa07a28514d162a5e46c54063
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "March 1963" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "March 1963" ;
+        time:hasBeginning    "1963-03-01"^^xsd:date ;
+        time:hasEnd          "1963-03-31"^^xsd:date .
 
 meetup:fdd631b2515da8ef38034274af147d20
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "September 8 , 1932" .
 
 meetup:2704126e16795bd74c855ab49cae270f
+        rdf:type             "" ;
         rdf:type             mtp:TimeExpression ;
         mtp:hasEvidenceText  "5 p.m." .
 
@@ -92,6 +99,11 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Patsy_Cline> .
 
+<http://dbpedia.org/resource/United_States>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+
 <http://w3id.org/polifonia/pilot/meetups/89644/0/0>
         rdf:type             mtp:Meetup ;
         mtp:happensAt        meetup:fac288c3a40cf276bbb39259c5388311 ;
@@ -102,26 +114,33 @@ meetup:personallife  rdf:type  mtp:Purpose ;
         mtp:hasPlace         <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Virginia> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Patsy_Cline> .
 
-<http://dbpedia.org/resource/United_States>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/United_States> .
+meetup:628b7db04235f228d40adc671413a8c8
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "day" .
 
 <http://dbpedia.org/resource/Harrison,_Arkansas>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Harrison,_Arkansas> .
 
-meetup:628b7db04235f228d40adc671413a8c8
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "day" .
-
 meetup:26d024847c7cf9ade69572212e82d7a8
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "January 18 , 1957" .
 
-meetup:coincidence  rdf:type  mtp:Purpose ;
-        rdfs:label  "Coincidence" .
+<http://w3id.org/polifonia/pilot/meetups/89644/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:happensAt        meetup:fdd631b2515da8ef38034274af147d20 , meetup:36b3901ab7d0b446c6485daf41bdb9f7 , meetup:73f67493bd481e04838f790999ebc741 ;
+        mtp:hasAPurpose      meetup:personallife ;
+        mtp:hasConfidence    "0.999923" ;
+        mtp:hasEvidenceText  "Cline was born Virginia Patterson Hensley in Winchester, Virginia on September 8, 1932, to Hilda Virginia (née Patterson; 1916–1998) and Samuel Lawerence Hensley (1889–1956)." ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Hilda_of_Whitby> , <http://dbpedia.org/resource/Clay_Hensley> ;
+        mtp:hasPlace         <http://dbpedia.org/resource/Virginia> ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Patsy_Cline> .
+
+<http://dbpedia.org/resource/Clay_Hensley>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Clay_Hensley> .
 
 <http://w3id.org/polifonia/pilot/meetups/89644/13/8>
         rdf:type             mtp:Meetup ;
@@ -133,20 +152,8 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasPlace         <http://dbpedia.org/resource/LaGuardia_Airport> , <http://dbpedia.org/resource/New_York_City> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Patsy_Cline> .
 
-<http://dbpedia.org/resource/Clay_Hensley>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Clay_Hensley> .
-
-<http://w3id.org/polifonia/pilot/meetups/89644/6/0>
-        rdf:type             mtp:Meetup ;
-        mtp:happensAt        meetup:fdd631b2515da8ef38034274af147d20 , meetup:36b3901ab7d0b446c6485daf41bdb9f7 , meetup:73f67493bd481e04838f790999ebc741 ;
-        mtp:hasAPurpose      meetup:personallife ;
-        mtp:hasConfidence    "0.999923" ;
-        mtp:hasEvidenceText  "Cline was born Virginia Patterson Hensley in Winchester, Virginia on September 8, 1932, to Hilda Virginia (née Patterson; 1916–1998) and Samuel Lawerence Hensley (1889–1956)." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Hilda_of_Whitby> , <http://dbpedia.org/resource/Clay_Hensley> ;
-        mtp:hasPlace         <http://dbpedia.org/resource/Virginia> ;
-        mtp:hasSubject       <http://dbpedia.org/resource/Patsy_Cline> .
+meetup:coincidence  rdf:type  mtp:Purpose ;
+        rdfs:label  "Coincidence" .
 
 <http://dbpedia.org/resource/Hawkshaw_Hawkins>
         rdf:type              mtp:Participant ;
@@ -164,14 +171,25 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasAPurpose      meetup:personallife ;
         mtp:hasConfidence    "0.50844747" ;
         mtp:hasEvidenceText  "In March 1963, Cline was killed in a plane crash along with country performers Cowboy Copas, Hawkshaw Hawkins and manager Randy Hughes, during a flight from Kansas City, Kansas back to Nashville." ;
-        mtp:hasParticipant   <http://dbpedia.org/resource/Hawkshaw_Hawkins> , <http://dbpedia.org/resource/Cowboy_Copas> , <http://dbpedia.org/resource/Head_coach> , <http://dbpedia.org/resource/Randy_Hughes> ;
+        mtp:hasParticipant   <http://dbpedia.org/resource/Hawkshaw_Hawkins> , <http://dbpedia.org/resource/Head_coach> , <http://dbpedia.org/resource/Cowboy_Copas> , <http://dbpedia.org/resource/Randy_Hughes> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Kansas_City_metropolitan_area> , <http://dbpedia.org/resource/Kansas> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Patsy_Cline> .
+
+meetup:36b3901ab7d0b446c6485daf41bdb9f7
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1889–1956" ;
+        time:hasBeginning    "1889-01-01"^^xsd:date ;
+        time:hasEnd          "1956-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Billy_Walker_(musician)>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Billy_Walker_(musician)> .
+
+<http://dbpedia.org/resource/Randy_Hughes>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Randy_Hughes> .
 
 <http://w3id.org/polifonia/pilot/meetups/89644/29/0>
         rdf:type             mtp:Meetup ;
@@ -182,15 +200,6 @@ meetup:coincidence  rdf:type  mtp:Purpose ;
         mtp:hasParticipant   <http://dbpedia.org/resource/Billy_Walker_(musician)> , <http://dbpedia.org/resource/Kemba_Walker> ;
         mtp:hasPlace         <http://dbpedia.org/resource/Dyersburg,_Tennessee> , <http://dbpedia.org/resource/Harrison,_Arkansas> , <http://dbpedia.org/resource/Tennessee> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Patsy_Cline> .
-
-<http://dbpedia.org/resource/Randy_Hughes>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Randy_Hughes> .
-
-meetup:36b3901ab7d0b446c6485daf41bdb9f7
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1889–1956" .
 
 meetup:businessmeeting
         rdf:type    mtp:Purpose ;

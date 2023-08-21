@@ -9,13 +9,16 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 @prefix xyz:    <http://sparql.xyz/facade-x/data/> .
 
-meetup:3d863b367aa379f71c7afc0c9cdca41d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1974" .
+<http://dbpedia.org/resource/George_Gershwin>
+        rdf:type              mtp:Participant ;
+        rdfs:seeAlso          core:Person ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Gershwin> .
 
 meetup:6351bf9dce654515bf1ddbd6426dfa97
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1996" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1996" ;
+        time:hasBeginning    "1996-01-01"^^xsd:date ;
+        time:hasEnd          "1996-12-31"^^xsd:date .
 
 <http://dbpedia.org/resource/Don_Thompson_(musician)>
         rdf:type              mtp:Participant ;
@@ -37,19 +40,19 @@ meetup:6351bf9dce654515bf1ddbd6426dfa97
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Fraser_MacPherson> .
 
-<http://dbpedia.org/resource/London>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .
-
-meetup:14b2cfab359409ebd8d9f1fe86facc0d
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1965 to 1966" .
-
 <http://dbpedia.org/resource/Canada>
         rdf:type              mtp:Location ;
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Canada> .
+
+meetup:14b2cfab359409ebd8d9f1fe86facc0d
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
+        mtp:hasEvidenceText  "1965 to 1966" .
+
+<http://dbpedia.org/resource/London>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/London> .
 
 <http://dbpedia.org/resource/San_Francisco>
         rdf:type              mtp:Location ;
@@ -57,26 +60,28 @@ meetup:14b2cfab359409ebd8d9f1fe86facc0d
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/San_Francisco> .
 
 meetup:3f4c76f9bb1c1c501ed21dd73e716fbd
-        rdf:type             mtp:TimeExpression ;
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
         mtp:hasEvidenceText  "the early 1980s" .
-
-<http://dbpedia.org/resource/Royal_Academy_of_Arts>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Royal_Academy_of_Arts> .
 
 <http://dbpedia.org/resource/Hugh_Fraser_(actor)>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Hugh_Fraser_(actor)> .
 
-meetup:ca350c53f18e8152bb3062e7f3c0a3fa
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1974 to 1976" .
+<http://dbpedia.org/resource/Royal_Academy_of_Arts>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Royal_Academy_of_Arts> .
 
 meetup:1a49200c2fe2c81b1c1e9935b0695900
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "the 1965" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1965" ;
+        time:hasBeginning    "1965-01-01"^^xsd:date ;
+        time:hasEnd          "1965-12-31"^^xsd:date .
+
+meetup:ca350c53f18e8152bb3062e7f3c0a3fa
+        rdf:type             mtp:TimeExpression , mtp:TimeRange ;
+        mtp:hasEvidenceText  "1974 to 1976" .
 
 <http://dbpedia.org/resource/Jim_Hall_(racing_driver)>
         rdf:type              mtp:Participant ;
@@ -98,6 +103,11 @@ meetup:1a49200c2fe2c81b1c1e9935b0695900
         rdfs:seeAlso          core:Place ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Toronto> .
 
+<http://dbpedia.org/resource/Japan>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Japan> .
+
 <http://dbpedia.org/resource/Kenny_Wheeler>
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
@@ -107,11 +117,6 @@ meetup:1a49200c2fe2c81b1c1e9935b0695900
         rdf:type              mtp:Participant ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Rhythm_guitar> .
-
-<http://dbpedia.org/resource/Japan>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Japan> .
 
 <http://dbpedia.org/resource/John_Handy>
         rdf:type              mtp:Participant ;
@@ -133,8 +138,10 @@ meetup:1a49200c2fe2c81b1c1e9935b0695900
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Paul_Desmond> .
 
-meetup:education  rdf:type  mtp:Purpose ;
-        rdfs:label  "Education" .
+<http://dbpedia.org/resource/Europe>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Europe> .
 
 meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:label  "Music making" .
@@ -149,19 +156,14 @@ meetup:musicmaking  rdf:type  mtp:Purpose ;
         rdfs:seeAlso          core:Person ;
         mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Tristan_Thompson> .
 
-<http://dbpedia.org/resource/Europe>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/Europe> .
-
 meetup:dd055f53a45702fe05e449c30ac80df9
-        rdf:type             mtp:TimeExpression ;
-        mtp:hasEvidenceText  "1976" .
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1976" ;
+        time:hasBeginning    "1976-01-01"^^xsd:date ;
+        time:hasEnd          "1976-12-31"^^xsd:date .
 
-<http://dbpedia.org/resource/England>
-        rdf:type              mtp:Location ;
-        rdfs:seeAlso          core:Place ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
+meetup:education  rdf:type  mtp:Purpose ;
+        rdfs:label  "Education" .
 
 <http://w3id.org/polifonia/pilot/meetups/2815597/6/3>
         rdf:type             mtp:Meetup ;
@@ -172,6 +174,11 @@ meetup:dd055f53a45702fe05e449c30ac80df9
         mtp:hasParticipant   <http://dbpedia.org/resource/John_Handy> , <http://dbpedia.org/resource/Fraser_MacPherson> , <http://dbpedia.org/resource/W._C._Handy> ;
         mtp:hasPlace         <http://dbpedia.org/resource/San_Francisco> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Don_Thompson_(musician)> .
+
+<http://dbpedia.org/resource/England>
+        rdf:type              mtp:Location ;
+        rdfs:seeAlso          core:Place ;
+        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/England> .
 
 <http://w3id.org/polifonia/pilot/meetups/2815597/10/0>
         rdf:type             mtp:Meetup ;
@@ -203,7 +210,8 @@ meetup:dd055f53a45702fe05e449c30ac80df9
         mtp:hasPlace         <http://dbpedia.org/resource/Japan> , <http://dbpedia.org/resource/Europe> , <http://dbpedia.org/resource/United_States> , <http://dbpedia.org/resource/Canada> ;
         mtp:hasSubject       <http://dbpedia.org/resource/Don_Thompson_(musician)> .
 
-<http://dbpedia.org/resource/George_Gershwin>
-        rdf:type              mtp:Participant ;
-        rdfs:seeAlso          core:Person ;
-        mtp:hasDBPediaEntity  <http://dbpedia.org/resource/George_Gershwin> .
+meetup:3d863b367aa379f71c7afc0c9cdca41d
+        rdf:type             mtp:TimeExpression , mtp:TimeReference ;
+        mtp:hasEvidenceText  "1974" ;
+        time:hasBeginning    "1974-01-01"^^xsd:date ;
+        time:hasEnd          "1974-12-31"^^xsd:date .
