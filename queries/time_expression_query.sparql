@@ -20,3 +20,29 @@ WHERE
                      time:hasEnd ?endDate .
   } .
 }
+
+
+# Filter all the MEETUPS by date, works only with meetups that have a beginning and end date
+
+prefix meetup: <http://w3id.org/polifonia/pilot/meetups/>
+prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+prefix time:   <http://www.w3.org/2006/time#>
+
+SELECT *
+WHERE
+{
+  VALUES ?subject { <http://dbpedia.org/resource/Niccolò_Paganini> }
+         
+  
+  #                 rdf:type ?typeTimeExpression .
+  #FILTER ( ?typeTimeExpression !=  mtp:TimeExpression ) .
+  OPTIONAL {
+    ?time_expression time:hasBeginning ?beginDate;
+                     time:hasEnd ?endDate ;
+                     mtp:hasEvidenceText  ?hasEvidenceTextTimeExpression ;
+    FILTER (?beginDate >= "1900-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ) 
+  } .
+  ?s mtp:happensAt ?time_expression .
+  ?s mtp:hasSubject ?subject .
+}
+ORDER BY ?beginDate
