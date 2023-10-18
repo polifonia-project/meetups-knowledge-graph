@@ -24,7 +24,7 @@ contributors:
 credits:
 - https://github.com/albamoralest
 - https://github.com/enridaga
-related components:
+related-components:
 - informed-by: 
   - meetups-ontology
   - meetups-corpus-collection
