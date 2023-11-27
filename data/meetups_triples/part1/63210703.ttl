@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:4e9e785cd7399484881f3e1f212daa92
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chloe_Moriondo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chloe Moriondo" .
+
+<http://w3id.org/polifonia/pilot/meetups/63210703/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chloe Moriondo (stylized in all lowercase as chloe moriondo) (born September 29, 2002) is an American singer-songwriter and YouTuber born and based in Detroit." ;
+        mtp:hasParticipant   meetup:4e9e785cd7399484881f3e1f212daa92 ;
+        mtp:hasPurpose       meetup:71501deecd629df0a796bf2d55f5f9a1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chloe_Moriondo> ;
+        mtp:hasType          "HT" .
+
+meetup:  rdfs:label  "Confidence value: 0.5341604" , "Confidence value: 0.9192859" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/63210703/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They currently are in a relationship with their girlfriend Samantha." ;
+        mtp:hasParticipant   meetup:095baf0c6aa8ae179c71e195f034554c ;
+        mtp:hasPurpose       meetup:7966990629099de27e90a8754f51d5c7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chloe_Moriondo> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Chloe_Moriondo>
+        rdf:type  core:Person .
+
+meetup:095baf0c6aa8ae179c71e195f034554c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Samantha_Ruth_Prabhu> ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "0.6246487479457576" ;
+        mtp:hasTextEvidence     "Samantha" .
+
+meetup:71501deecd629df0a796bf2d55f5f9a1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Business meeting" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40798464" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Samantha_Ruth_Prabhu>
+        rdf:type  core:Person .
+
+meetup:7966990629099de27e90a8754f51d5c7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.066853486" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/12786027/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Dean Roland (born October 10, 1972) is an American musician and songwriter." ;
+        mtp:hasParticipant   meetup:7caab7919d8f27950d07446fe4c5d568 , meetup:3ccaebac60123e66f41e27856b7118ad ;
+        mtp:hasPurpose       meetup:80faddf6daaea7015ea11539001a1a87 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dean_Roland> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Dean_Roland>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9992173" .
+
+meetup:80faddf6daaea7015ea11539001a1a87
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00076883886" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Mike_Dean_(record_producer)>
+        rdf:type  core:Person .
+
+meetup:7caab7919d8f27950d07446fe4c5d568
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dean_Roland> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "0.9999999999868692" ;
+        mtp:hasTextEvidence     "Dean Roland" .
+
+meetup:3ccaebac60123e66f41e27856b7118ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Dean_(record_producer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9656637999663676" ;
+        mtp:hasTextEvidence     "Michael Dean" .

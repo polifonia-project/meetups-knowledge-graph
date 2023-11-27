@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1e615185e8773f88bffb39a476aebab1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.2100462e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9983053" , "Confidence value: 0.9999151" , "Confidence value: 0.9355458" .
+
+<http://dbpedia.org/resource/Doseone>
+        rdf:type  core:Person .
+
+meetup:49df33403309546400584a5a2396e83b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daxstrong" .
+
+meetup:907ce800b9efe5786fc2cff5f4b43bb6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.060309887" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jordan_Dalrymple>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/36236467/21/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Themselves - \"Daxstrong\" from CrownsDown (2009)" ;
+        mtp:hasParticipant   meetup:49df33403309546400584a5a2396e83b ;
+        mtp:hasPurpose       meetup:1e615185e8773f88bffb39a476aebab1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jordan_Dalrymple> ;
+        mtp:hasType          "HT" .
+
+meetup:103b9d17123c24e253d2bda27351e7ed
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jordan_Dalrymple> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99999999999973" ;
+        mtp:hasTextEvidence     "Antonionian" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:03cc37c34ab4e314c6bcfabf1db3a9b5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doseone> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999975032694" ;
+        mtp:hasTextEvidence     "Doseone" .
+
+meetup:37ff1f9796f1ef3962a3301b6f0f98c5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0014865438" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/36236467/20/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Doseone - \"The Tale of the Private Mind\" from Ha (2005)" ;
+        mtp:hasParticipant   meetup:03cc37c34ab4e314c6bcfabf1db3a9b5 ;
+        mtp:hasPurpose       meetup:37ff1f9796f1ef3962a3301b6f0f98c5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jordan_Dalrymple> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/36236467/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Antonionian (born Jordan Dalrymple) is a multi-instrumentalist based in California." ;
+        mtp:hasParticipant   meetup:103b9d17123c24e253d2bda27351e7ed ;
+        mtp:hasPurpose       meetup:907ce800b9efe5786fc2cff5f4b43bb6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jordan_Dalrymple> ;
+        mtp:hasType          "HT" .

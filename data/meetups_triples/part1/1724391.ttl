@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9614466" , "Confidence value: 0.9999405" .
+
+meetup:d3c07104c16d4f1c783da2ac7c30d11d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Father> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9259975407696198" ;
+        mtp:hasTextEvidence     "Dad" .
+
+<http://w3id.org/polifonia/pilot/meetups/1724391/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Songs My Dad Taught Me (First Impression Music, 1997)" ;
+        mtp:hasParticipant   meetup:d3c07104c16d4f1c783da2ac7c30d11d ;
+        mtp:hasPurpose       meetup:407edbca1cd49fd19a984b73b1be694b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeremy_Monteiro> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1724391/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeremy Ian Monteiro (born 20 June 1960, Singapore) is a jazz pianist, singer, composer, and music educator." ;
+        mtp:hasParticipant   meetup:97a461bcc550c89eb991e27e9f4199d4 ;
+        mtp:hasPurpose       meetup:1137b3e8518efaf57ec1df364e3c6b50 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeremy_Monteiro> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Father>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:407edbca1cd49fd19a984b73b1be694b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.953245e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jeremy_Monteiro>
+        rdf:type  core:Person .
+
+meetup:97a461bcc550c89eb991e27e9f4199d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jeremy Ian Monteiro" .
+
+meetup:1137b3e8518efaf57ec1df364e3c6b50
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03848681" ;
+        mtp:hasSourcePurpose          "ML" .

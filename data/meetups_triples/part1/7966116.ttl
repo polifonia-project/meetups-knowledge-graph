@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Heavy_Trash>
+        rdf:type  core:Person .
+
+meetup:  rdfs:label  "Confidence value: 0.8458249" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/7966116/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Heavy Trash is an American rockabilly band based in New York City, formed by Jon Spencer of The Jon Spencer Blues Explosion and Matt Verta-Ray (formerly of New York bands Madder Rose and Speedball Baby)." ;
+        mtp:hasParticipant   meetup:2c5ed57200f8ef565d39aebee3a0aae7 , meetup:9f7a3078e5abf8569c718ca601fc8386 ;
+        mtp:hasPurpose       meetup:a7d3a2ff835cc572155c94bb1ff7d57d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Heavy_Trash> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jon_Spencer>
+        rdf:type  core:Person .
+
+meetup:9f7a3078e5abf8569c718ca601fc8386
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "128" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Matt Verta-Ray" .
+
+meetup:a7d3a2ff835cc572155c94bb1ff7d57d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15384755" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2c5ed57200f8ef565d39aebee3a0aae7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jon_Spencer> ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "0.9999997837532484" ;
+        mtp:hasTextEvidence     "Jon Spencer" .

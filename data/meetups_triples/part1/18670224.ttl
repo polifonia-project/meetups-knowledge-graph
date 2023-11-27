@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9993318" .
+
+<http://dbpedia.org/resource/Sean_Carlson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18670224/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sean Carlson (born June 13, 1985), is an American music promoter from Torrance, California." ;
+        mtp:hasParticipant   meetup:1459adf8412c2e0460e3a965d9a8320c ;
+        mtp:hasPurpose       meetup:bdaf69be4336e13e46cd93223158782b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sean_Carlson> ;
+        mtp:hasType          "HT" .
+
+meetup:1459adf8412c2e0460e3a965d9a8320c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sean_Carlson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999984652" ;
+        mtp:hasTextEvidence     "Sean Carlson" .
+
+<http://w3id.org/polifonia/pilot/meetups/18670224/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sean Carlson (born June 13, 1985), is an American music promoter from Torrance, California. He is the founder of FYF_Fest and the \"F Yeah Fest\" music tour." ;
+        mtp:hasPurpose       meetup:4f802e7959691cf795c26fff8d2865c5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sean_Carlson> ;
+        mtp:hasType          "HM" .
+
+meetup:4f802e7959691cf795c26fff8d2865c5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Sean Carlson is a music promoter" ;
+        mtp:hasEvidencePurposeSecond  "He founded FYF_Fest and the F Yeah Fest music tour" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:bdaf69be4336e13e46cd93223158782b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00037553985" ;
+        mtp:hasSourcePurpose          "ML" .

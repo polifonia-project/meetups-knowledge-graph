@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.8732072" .
+
+<http://w3id.org/polifonia/pilot/meetups/33292254/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "William McCaughey (December 12, 1929 – May 26, 2000) was an American sound engineer." ;
+        mtp:hasParticipant   meetup:9634d8138568ef7a04db6224aabd2d05 ;
+        mtp:hasPurpose       meetup:fc47999d9812a75d97c544b30ffd4faa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_McCaughey> ;
+        mtp:hasType          "HT" .
+
+meetup:fc47999d9812a75d97c544b30ffd4faa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Business meeting" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12065717" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9634d8138568ef7a04db6224aabd2d05
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_McCaughey> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99999999999892" ;
+        mtp:hasTextEvidence     "William McCaughey" .
+
+<http://dbpedia.org/resource/William_McCaughey>
+        rdf:type  core:Person .

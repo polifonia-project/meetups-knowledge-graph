@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Morton_Gould>
+        rdf:type  core:Person .
+
+meetup:30b5fb884d2059642732b92da5f9a05a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dwight_Howard> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Howard" .
+
+meetup:  rdfs:label  "Confidence value: 0.99956626" , "Confidence value: 0.9988618" .
+
+meetup:513af747d394b388d2058423d5521837
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dwight_Howard> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Howard" .
+
+<http://w3id.org/polifonia/pilot/meetups/47129572/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also won a Grammy Award for Classical Album of the Year for producing Ives' Symphony No. 1 in collaboration with conductor Morton Gould." ;
+        mtp:hasParticipant   meetup:30b5fb884d2059642732b92da5f9a05a , meetup:7a7d932c5ce9b813b3ad4ddb853630ae ;
+        mtp:hasPurpose       meetup:b285f32718b26ec0da8045e93f7fb015 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Howard_H._Scott> ;
+        mtp:hasType          "HT" .
+
+meetup:7a7d932c5ce9b813b3ad4ddb853630ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Morton_Gould> ;
+        mtp:hasOffset           "126" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Morton Gould" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Dwight_Howard>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Howard_H._Scott>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/47129572/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He died on September 22, 2012 in Reading, PA, at the age of 92." ;
+        mtp:hasParticipant   meetup:513af747d394b388d2058423d5521837 ;
+        mtp:hasPurpose       meetup:bf7d9b22b0445717ff1effa56d5f06fb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Howard_H._Scott> ;
+        mtp:hasType          "HT" .
+
+meetup:bf7d9b22b0445717ff1effa56d5f06fb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00021811346" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b285f32718b26ec0da8045e93f7fb015
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010496967" ;
+        mtp:hasSourcePurpose          "ML" .

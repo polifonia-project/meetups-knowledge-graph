@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9997472" .
+
+<http://w3id.org/polifonia/pilot/meetups/22617360/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Julius Foss (21 April 1879 – 26 June 1953) was a Danish composer and organist." ;
+        mtp:hasParticipant   meetup:d3d67adb756d29fd1ea1d65526f459d9 ;
+        mtp:hasPurpose       meetup:d79b061fc670ed427e6606ebfe6b39e6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Julius_Foss> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Julius_Foss>
+        rdf:type  core:Person .
+
+meetup:d3d67adb756d29fd1ea1d65526f459d9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Julius_Foss> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999978213647722" ;
+        mtp:hasTextEvidence     "Julius Foss" .
+
+meetup:d79b061fc670ed427e6606ebfe6b39e6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00025144787" ;
+        mtp:hasSourcePurpose          "ML" .

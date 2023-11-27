@@ -1,0 +1,101 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Barbara_Bush>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Brad_Penny>
+        rdf:type  core:Person .
+
+meetup:  rdfs:label  "Confidence value: 0.31825304" , "Confidence value: 0.895772" , "Confidence value: 0.9390806" .
+
+<https://www.wikidata.org/wiki/Q4859218>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Barbara_Penny>
+        rdf:type  core:Person .
+
+meetup:7aa770a43505cdc4a6a7ae719f24f106
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03417437" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b2f4ebeba6b134b84d3a8bc5f54064b5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10124695" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/16805327/7/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "4 April 2008." ;
+        mtp:hasParticipant   meetup:010103fa0142076d1384edd155a1bd8f ;
+        mtp:hasPurpose       meetup:7aa770a43505cdc4a6a7ae719f24f106 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barbara_Penny> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/16805327/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Barbara Penny (1929 – 2007) was a British violinist." ;
+        mtp:hasParticipant   meetup:7dc87614323ff2550a59232f78c3ed75 ;
+        mtp:hasPurpose       meetup:a7a4a7cb8e284526c9e08d86638dd15e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barbara_Penny> ;
+        mtp:hasType          "HT" .
+
+meetup:010103fa0142076d1384edd155a1bd8f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q4859218> ;
+        mtp:hasOffset           "93" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Barbara Penny" .
+
+<http://w3id.org/polifonia/pilot/meetups/16805327/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In April, 2008, a Stradivarius violin owned by Penny since 1965 was auctioned by Christie's for $1.2 million." ;
+        mtp:hasParticipant   meetup:6000467fd396a6cc48f08ab35eaa5fcd ;
+        mtp:hasPurpose       meetup:b2f4ebeba6b134b84d3a8bc5f54064b5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barbara_Penny> ;
+        mtp:hasType          "HT" .
+
+meetup:a7a4a7cb8e284526c9e08d86638dd15e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28568822" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7dc87614323ff2550a59232f78c3ed75
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barbara_Bush> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7403247515381879" ;
+        mtp:hasTextEvidence     "Barbara" .
+
+meetup:6000467fd396a6cc48f08ab35eaa5fcd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brad_Penny> ;
+        mtp:hasOffset           "47" ;
+        mtp:hasSimilarityScore  "0.7180933767783488" ;
+        mtp:hasTextEvidence     "Penny" .

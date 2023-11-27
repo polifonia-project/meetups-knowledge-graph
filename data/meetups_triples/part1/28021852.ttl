@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:  rdfs:label  "Confidence value: 0.76301074" .
+
+<http://w3id.org/polifonia/pilot/meetups/28021852/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Reno Hilligsø Kiilerich (born October 21, 1976) - is a heavy metal drummer from Denmark." ;
+        mtp:hasParticipant   meetup:697d7988bc3a86c0d7d9ede8ce83e2c6 ;
+        mtp:hasPurpose       meetup:0c15b86b6663beda03a338a026e26786 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Reno_Kiilerich> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Reno_Kiilerich>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:697d7988bc3a86c0d7d9ede8ce83e2c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marcus_Reno> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.655397556348662" ;
+        mtp:hasTextEvidence     "Reno" .
+
+<http://dbpedia.org/resource/Marcus_Reno>
+        rdf:type  core:Person .
+
+meetup:0c15b86b6663beda03a338a026e26786
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23556042" ;
+        mtp:hasSourcePurpose          "ML" .

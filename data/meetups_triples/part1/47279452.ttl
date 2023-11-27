@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/47279452/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Arisa Sato (佐藤 ありさ, Satō Arisa, born September 20, 1988, in Hokkaido) is a Japanese model and weathercaster who is represented by the talent agency Stardust Promotion." ;
+        mtp:hasParticipant   meetup:11a7ce06a3c37314abe741de9946c09c , meetup:f6455b7e378b8ed9dd605fbcd806eb97 ;
+        mtp:hasPurpose       meetup:6296c86a3d398f1c223405f937e2e6cd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arisa_Sato_(model)> ;
+        mtp:hasType          "HM" .
+
+meetup:11a7ce06a3c37314abe741de9946c09c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arisa> ;
+        mtp:hasOffset           "36" ;
+        mtp:hasSimilarityScore  "0.9999999997650376" ;
+        mtp:hasTextEvidence     "Arisa" .
+
+meetup:f6455b7e378b8ed9dd605fbcd806eb97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arisa_Sato_(model)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999940446516" ;
+        mtp:hasTextEvidence     "Arisa Sato" .
+
+<http://dbpedia.org/resource/Arisa>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Arisa_Sato_(model)>
+        rdf:type  core:Person .
+
+meetup:6296c86a3d398f1c223405f937e2e6cd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Information about an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Representation by a talent agency" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,90 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Marek_Pająk>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/27813871/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2010, he joined death metal band Vader as their lead and rhythm guitarist. Pająk was endorsed by Ibanez and Schecter guitars." ;
+        mtp:hasPurpose       meetup:5838d0d2c134b095e468fa7362108c2b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marek_Pająk> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/27813871/14/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Modus Operandi (2010, Propaganda Promotion)" ;
+        mtp:hasParticipant   meetup:5350b3c6590c801a6da4921cade2f19c ;
+        mtp:hasPurpose       meetup:68c9d9758de321c00e3cebfb706630ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marek_Pająk> ;
+        mtp:hasType          "HT" .
+
+meetup:5350b3c6590c801a6da4921cade2f19c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Modus_operandi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999997649384" ;
+        mtp:hasTextEvidence     "Modus Operandi" .
+
+meetup:  rdfs:label  "Confidence value: 0.99900925" , "Confidence value: 0.8276789" .
+
+<http://dbpedia.org/resource/Rhythm_guitar>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Modus_operandi>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/27813871/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2010, he joined death metal band Vader as their lead and rhythm guitarist." ;
+        mtp:hasParticipant   meetup:56845f1a144dad692945a271aa214221 ;
+        mtp:hasPurpose       meetup:e29c9697115c940236f691763c741f05 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marek_Pająk> ;
+        mtp:hasType          "HT" .
+
+meetup:e29c9697115c940236f691763c741f05
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00050771044" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:68c9d9758de321c00e3cebfb706630ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17175639" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5838d0d2c134b095e468fa7362108c2b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a death metal band" ;
+        mtp:hasEvidencePurposeSecond  "Endorsement by guitar companies" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:56845f1a144dad692945a271aa214221
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rhythm_guitar> ;
+        mtp:hasOffset           "60" ;
+        mtp:hasSimilarityScore  "0.9930198257655042" ;
+        mtp:hasTextEvidence     "rhythm" .

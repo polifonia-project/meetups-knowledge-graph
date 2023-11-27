@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.53112274" .
+
+<http://w3id.org/polifonia/pilot/meetups/28302261/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rich Mullins is the former bassist of the alternative, desert rock band Karma To Burn, Speedealer (originally REO Speedealer before lawsuit), and the rock band Year Long Disaster, both of which shared the bandmate Daniel Davies." ;
+        mtp:hasParticipant   meetup:635271b5db84d192f802704468858ec5 , meetup:6260e3a09f3d7d08909f533b10ef3474 ;
+        mtp:hasPurpose       meetup:0fd758f9d944cd52f8dce06e926dc0fa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rich_Mullins_(bassist)> ;
+        mtp:hasType          "HT" .
+
+meetup:0fd758f9d944cd52f8dce06e926dc0fa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.42225313" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Daniel_Davies_(musician)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Rich_Mullins_(bassist)>
+        rdf:type  core:Person .
+
+meetup:6260e3a09f3d7d08909f533b10ef3474
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rich_Mullins> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999993932532" ;
+        mtp:hasTextEvidence     "Rich Mullins" .
+
+meetup:635271b5db84d192f802704468858ec5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daniel_Davies_(musician)> ;
+        mtp:hasOffset           "214" ;
+        mtp:hasSimilarityScore  "0.9864254244073783" ;
+        mtp:hasTextEvidence     "Daniel Davies" .
+
+<http://dbpedia.org/resource/Rich_Mullins>
+        rdf:type  core:Person .

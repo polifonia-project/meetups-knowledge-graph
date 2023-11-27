@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:245c37d047b928d8e31c583e1e6f7c58
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rafael Bolívar Coronado" .
+
+meetup:13af13f262fe331c47ec66323d9dd82b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bolívar" .
+
+<http://w3id.org/polifonia/pilot/meetups/5000981/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bolívar died on January 31, 1924 in Barcelona, Spain at the age of 39, following complications from influenza." ;
+        mtp:hasParticipant   meetup:13af13f262fe331c47ec66323d9dd82b ;
+        mtp:hasPurpose       meetup:84195513bc5169ef0685a25bcca7cea6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rafael_Bolívar_Coronado> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.98975194" , "Confidence value: 0.98026454" .
+
+<http://w3id.org/polifonia/pilot/meetups/5000981/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born on June 6, 1884 in Villa de Cura, Aragua State." ;
+        mtp:hasParticipant   meetup:245c37d047b928d8e31c583e1e6f7c58 ;
+        mtp:hasPurpose       meetup:516e9e309186468c33a62854e9ebe971 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rafael_Bolívar_Coronado> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Rafael_Bolívar_Coronado>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:516e9e309186468c33a62854e9ebe971
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.016999107" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:84195513bc5169ef0685a25bcca7cea6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007378385" ;
+        mtp:hasSourcePurpose          "ML" .

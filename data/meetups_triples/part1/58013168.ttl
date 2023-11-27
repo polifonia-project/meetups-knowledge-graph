@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7369b436640a3c9ca556c970d38096fc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Composer and musician" ;
+        mtp:hasEvidencePurposeSecond  "Biographical information" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/58013168/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael John Convertino (born 1952 in New York City) is an American musician and film score composer best known for his collaborations with director Randa Haines on films like Children of a Lesser God, The Doctor, Wrestling Ernest Hemingway, and Dance with Me, as well as The Hidden, Bull Durham, Things to Do in Denver When You're Dead, and the Tim Allen comedies The Santa Clause and Jungle 2 Jungle." ;
+        mtp:hasParticipant   meetup:9d1fbf46eb3e630f71c3a84ab5314a5f , meetup:9a58f76360a1f968e7b75807558f2dc9 , meetup:130aa638c1903989b29f3dec73cd85ba ;
+        mtp:hasPurpose       meetup:7369b436640a3c9ca556c970d38096fc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Convertino> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Michael_Convertino>
+        rdf:type  core:Person .
+
+meetup:130aa638c1903989b29f3dec73cd85ba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Randa_Haines> ;
+        mtp:hasOffset           "149" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Randa Haines" .
+
+meetup:9a58f76360a1f968e7b75807558f2dc9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Allen> ;
+        mtp:hasOffset           "346" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tim Allen" .
+
+meetup:9d1fbf46eb3e630f71c3a84ab5314a5f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael John Convertino" .
+
+<http://dbpedia.org/resource/Randa_Haines>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Tim_Allen>
+        rdf:type  core:Person .

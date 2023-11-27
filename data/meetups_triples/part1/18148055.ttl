@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:  rdfs:label  "Confidence value: 0.7489772" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:94ff69f215bbe6a1bdebb52c59885359
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jacobus_Gallus> ;
+        mtp:hasOffset           "60" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jacobus Gallus" .
+
+meetup:5d27418132a10310db4a6613705d4833
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13174528" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/18148055/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He studied the works of Slovenian composers and the life of Jacobus Gallus." ;
+        mtp:hasParticipant   meetup:94ff69f215bbe6a1bdebb52c59885359 ;
+        mtp:hasPurpose       meetup:5d27418132a10310db4a6613705d4833 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rafael_Ajlec> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jacobus_Gallus>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:82dc098f934296b9d9ec5b6063054c55
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Rafael Ajlec was a musicologist" ;
+        mtp:hasEvidencePurposeSecond  "He was involved in education as a journalist and critic" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/18148055/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rafael Ajlec (Mokronog, 29 August 1915 – 11 December 1977, Ljubljana) was a Slovenian musicologist, journalist, and critic. He was born in Mokronog, Carniola." ;
+        mtp:hasPurpose       meetup:82dc098f934296b9d9ec5b6063054c55 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rafael_Ajlec> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Rafael_Ajlec>
+        rdf:type  core:Person .

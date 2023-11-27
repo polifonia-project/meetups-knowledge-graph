@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/37748384/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "José Tomas Uruñuela (Gasteiz, 28 July 1891 – Donostia, 3 July 1963) was a Basque composer. He was also a master of danza alavés." ;
+        mtp:hasPurpose       meetup:e097f6c316861aeb17b84666a4127e7c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/José_Uruñuela> ;
+        mtp:hasType          "HM" .
+
+meetup:  rdfs:label  "Confidence value: 0.71533734" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f2cff5938419b9d059b81d28aca50f05
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.27961576" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e097f6c316861aeb17b84666a4127e7c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "José Tomas Uruñuela was a composer" ;
+        mtp:hasEvidencePurposeSecond  "He had a personal life in Gasteiz and Donostia" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/José_Uruñuela>
+        rdf:type  core:Person .
+
+meetup:34819d36bd4aebccdaf5ab1b94f73344
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "José Tomas Uruñuela" .
+
+<http://w3id.org/polifonia/pilot/meetups/37748384/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "José Tomas Uruñuela (Gasteiz, 28 July 1891 – Donostia, 3 July 1963) was a Basque composer." ;
+        mtp:hasParticipant   meetup:34819d36bd4aebccdaf5ab1b94f73344 ;
+        mtp:hasPurpose       meetup:f2cff5938419b9d059b81d28aca50f05 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/José_Uruñuela> ;
+        mtp:hasType          "HT" .

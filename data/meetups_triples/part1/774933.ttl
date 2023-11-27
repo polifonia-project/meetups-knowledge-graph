@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Brian_Ritchie>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Martin_Rotsey>
+        rdf:type  core:Person .
+
+meetup:  rdfs:label  "Confidence value: 0.974477" , "Confidence value: 0.99836355" .
+
+<http://dbpedia.org/resource/Bass_guitar>
+        rdf:type  core:Person .
+
+meetup:a67776bcd6ad0c157ec95bf4b215ac1f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bass_guitar> ;
+        mtp:hasOffset           "110" ;
+        mtp:hasSimilarityScore  "0.9943994747050052" ;
+        mtp:hasTextEvidence     "bass" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:bef8403a4f8903c471c8de1c86db7350
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Ritchie> ;
+        mtp:hasOffset           "122" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brian Ritchie" .
+
+<http://dbpedia.org/resource/Jim_Moginie>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/774933/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is also featured – together with Hirst – on the track \"Around the world\" from fellow Midnight Oil guitarist Jim Moginie's solo debut album \"Alas Folkloric\"." ;
+        mtp:hasParticipant   meetup:3e8b52c18c3796646ef058c4b545ee8e ;
+        mtp:hasPurpose       meetup:12881e8545b91742e6a5b83c92905972 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martin_Rotsey> ;
+        mtp:hasType          "HT" .
+
+meetup:3e8b52c18c3796646ef058c4b545ee8e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jim_Moginie> ;
+        mtp:hasOffset           "115" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jim Moginie" .
+
+<http://w3id.org/polifonia/pilot/meetups/774933/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2010 Rotsey teamed up with two other former members of Midnight Oil, Hirst and Moginie, and Violent Femmes bass player Brian Ritchie to form a new surf rock band, The Break." ;
+        mtp:hasParticipant   meetup:a67776bcd6ad0c157ec95bf4b215ac1f , meetup:bef8403a4f8903c471c8de1c86db7350 ;
+        mtp:hasPurpose       meetup:4b07c73f162c87319db0a5371932495d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martin_Rotsey> ;
+        mtp:hasType          "HT" .
+
+meetup:4b07c73f162c87319db0a5371932495d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0015671562" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:12881e8545b91742e6a5b83c92905972
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.025331093" ;
+        mtp:hasSourcePurpose          "ML" .

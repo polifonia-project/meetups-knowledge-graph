@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11516815/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He performed with Sidney Bechet and at the Cotton Club in New York City." ;
+        mtp:hasParticipant   meetup:157e2cf3256fe5038e9a0fd3729ad8e2 ;
+        mtp:hasPurpose       meetup:fab04f90eea3ea28abe2da306ee3f8f5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Bocage> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:  rdfs:label  "Confidence value: 1.0" , "Confidence value: 0.7315724" .
+
+<http://dbpedia.org/resource/Sidney_Bechet>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Eddie_Bo>
+        rdf:type  core:Person .
+
+meetup:157e2cf3256fe5038e9a0fd3729ad8e2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sidney_Bechet> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sidney Bechet" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:500db672dc54bb59fb67cef16af25aa0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Edwin Bocage" .
+
+meetup:821d74b265fa8019d0e81e3f139c1b0d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26771206" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/11516815/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Peter Edwin Bocage (31 July 1887 – 3 December 1967) was an American jazz trumpeter and violinist." ;
+        mtp:hasParticipant   meetup:500db672dc54bb59fb67cef16af25aa0 , meetup:2a22375e57bb0beae61ff1cf5b6c4b1c ;
+        mtp:hasPurpose       meetup:821d74b265fa8019d0e81e3f139c1b0d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Bocage> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Peter_Bocage>
+        rdf:type  core:Person .
+
+meetup:fab04f90eea3ea28abe2da306ee3f8f5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Public celebration" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.4645319e-09" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2a22375e57bb0beae61ff1cf5b6c4b1c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Bo> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Edwin Bocage" .

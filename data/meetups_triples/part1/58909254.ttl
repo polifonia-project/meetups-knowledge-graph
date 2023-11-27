@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gorla>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Iceleak>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:790209a7865e6481ca9a5ada4a54497f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nelson Tordera" .
+
+meetup:0fbf6692c075fd5037a0139abfc69b6d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tordera> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "0.9999998866191568" ;
+        mtp:hasTextEvidence     "Tordera" .
+
+<http://w3id.org/polifonia/pilot/meetups/58909254/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Iceleak is an Italian-Luxembourgish DJ/Producer duo created by Nelson Tordera (born 9 December 1989 in Milan, Italy) and Filippo Gorla (born 17 July 1993 in Luxembourg, Luxembourg)." ;
+        mtp:hasParticipant   meetup:0fbf6692c075fd5037a0139abfc69b6d , meetup:eb8a8a5a7b8cfd3d5df930c8e550693e , meetup:790209a7865e6481ca9a5ada4a54497f ;
+        mtp:hasPurpose       meetup:1519d4201af35719e5b9549864291b67 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Iceleak> ;
+        mtp:hasType          "HM" .
+
+meetup:eb8a8a5a7b8cfd3d5df930c8e550693e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gorla> ;
+        mtp:hasOffset           "129" ;
+        mtp:hasSimilarityScore  "0.9999999987448404" ;
+        mtp:hasTextEvidence     "Gorla" .
+
+meetup:1519d4201af35719e5b9549864291b67
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Iceleak is a DJ/Producer duo" ;
+        mtp:hasEvidencePurposeSecond  "Nelson Tordera and Filippo Gorla are the members" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Tordera>
+        rdf:type  core:Person .

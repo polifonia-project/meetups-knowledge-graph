@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:  rdfs:label  "Confidence value: 0.65996957" .
+
+<http://w3id.org/polifonia/pilot/meetups/52272735/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is the opera critic for the Sunday Express, and a book reviewer for the Daily Mail." ;
+        mtp:hasParticipant   meetup:ce56e322b43882860bb0e28550e2e478 ;
+        mtp:hasPurpose       meetup:43681c2e79f214748e197981f468b971 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Clare_Colvin> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Clare_Colvin>
+        rdf:type  core:Person .
+
+meetup:ce56e322b43882860bb0e28550e2e478
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clare_Colvin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Clare Colvin" .
+
+meetup:43681c2e79f214748e197981f468b971
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Public celebration" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3233651" ;
+        mtp:hasSourcePurpose          "ML" .

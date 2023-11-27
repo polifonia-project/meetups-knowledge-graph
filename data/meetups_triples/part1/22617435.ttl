@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9999999" .
+
+meetup:4a01d28904f71b70415cccd470137af8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.5210028e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:777a538d7537466f44515b714b2fe3b4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elizabeth_II> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9875893145080548" ;
+        mtp:hasTextEvidence     "Elizabeth" .
+
+<http://w3id.org/polifonia/pilot/meetups/22617435/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Margaret Elizabeth Hamerik (13 December 1867 – 30 October 1942) was a Danish composer and pianist." ;
+        mtp:hasParticipant   meetup:777a538d7537466f44515b714b2fe3b4 , meetup:d724e254d187ae01cf785a53ddd4143b ;
+        mtp:hasPurpose       meetup:4a01d28904f71b70415cccd470137af8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Margaret_Hamerik> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Margaret_Hamerik>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Elizabeth_II>
+        rdf:type  core:Person .
+
+meetup:d724e254d187ae01cf785a53ddd4143b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Margaret Elizabeth Hamerik" .

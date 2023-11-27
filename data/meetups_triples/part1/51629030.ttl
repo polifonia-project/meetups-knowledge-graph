@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9166641" .
+
+<http://w3id.org/polifonia/pilot/meetups/51629030/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shoko Haida (はいだ しょうこ, Haida Shōko, born 25 March 1979, in Tachikawa, Tokyo, Japan) is a Japanese singer, actress, and tarento." ;
+        mtp:hasParticipant   meetup:d760cff170cab0c14be93a30425133a0 , meetup:53b23e58ddad1578e4f40da721f0d26b ;
+        mtp:hasPurpose       meetup:22e5cb3cea8b3ac22eddcffd29a2a7ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shoko_Haida> ;
+        mtp:hasType          "HM" .
+
+<https://www.wikidata.org/wiki/Q210332>
+        rdf:type  core:Person .
+
+meetup:d760cff170cab0c14be93a30425133a0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Haida Shōko" .
+
+<http://dbpedia.org/resource/Shoko_Haida>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/51629030/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She grew up in Kunitachi, Tokyo." ;
+        mtp:hasParticipant   meetup:00428f26da64b977253d11b73fba327b ;
+        mtp:hasPurpose       meetup:02966ffb1eea63214fd4b35a811ca190 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shoko_Haida> ;
+        mtp:hasType          "HT" .
+
+meetup:22e5cb3cea8b3ac22eddcffd29a2a7ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Shoko Haida is a Japanese singer" ;
+        mtp:hasEvidencePurposeSecond  "She was born in Tachikawa, Tokyo" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:02966ffb1eea63214fd4b35a811ca190
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.071749605" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:00428f26da64b977253d11b73fba327b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q210332> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Haida" .
+
+meetup:53b23e58ddad1578e4f40da721f0d26b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shoko_Haida> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Shoko Haida" .

@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Max_Matsuura>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Tatsumi_Yoda>
+        rdf:type  core:Person .
+
+meetup:8c5177d68c1a87f4ed19d6c8fd1f7cf5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Yoda founded Avex Group in music and entertainment" ;
+        mtp:hasEvidencePurposeSecond  "Yoda, Max Matsuura, and Kazunari Suzuki had a business meeting" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:5ae84cd8bd2ec8419451c0fe1aefc27a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Max_Matsuura> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Max Matsuura" .
+
+<http://w3id.org/polifonia/pilot/meetups/26548965/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Still in 1988, Yoda, with Max Matsuura and Kazunari \"Ken\" Suzuki, founded Avex Group, one of Japan's biggest names in music and entertainment." ;
+        mtp:hasParticipant   meetup:3c3d4b6b3b63f1526133af923a63be29 , meetup:5ae84cd8bd2ec8419451c0fe1aefc27a ;
+        mtp:hasPurpose       meetup:8c5177d68c1a87f4ed19d6c8fd1f7cf5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tatsumi_Yoda> ;
+        mtp:hasType          "HM" .
+
+meetup:3c3d4b6b3b63f1526133af923a63be29
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kazunari \"Ken\" Suzuki" .
+
+meetup:82080488bbe4bb85f53fb9221c29948e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tatsumi_Yoda> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999959072" ;
+        mtp:hasTextEvidence     "Tatsumi Yoda" .
+
+meetup:381c95788c1c82151247851f9fff0071
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.3405735e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/26548965/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tatsumi Yoda (依田 巽, Yoda Tatsumi, born May 27, 1940) is a Japanese businessman." ;
+        mtp:hasParticipant   meetup:82080488bbe4bb85f53fb9221c29948e ;
+        mtp:hasPurpose       meetup:381c95788c1c82151247851f9fff0071 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tatsumi_Yoda> ;
+        mtp:hasType          "HT" .
+
+meetup:  rdfs:label  "Confidence value: 0.99999964" .

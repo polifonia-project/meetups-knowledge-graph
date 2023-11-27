@@ -1,0 +1,98 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9981317" , "Confidence value: 0.999998" , "Confidence value: 0.9143149" .
+
+<http://w3id.org/polifonia/pilot/meetups/54857472/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He won the Swiss Film Award in 2010 for the music he composed for Peter Liechti's documentary film the Hummings of Insects." ;
+        mtp:hasParticipant   meetup:6922b14f1003ee11e304356e3edb719f ;
+        mtp:hasPurpose       meetup:4d27a87c6ae60409ad3ead8bad048653 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Norbert_Möslang> ;
+        mtp:hasType          "HT" .
+
+meetup:6922b14f1003ee11e304356e3edb719f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Liechti> ;
+        mtp:hasOffset           "66" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peter Liechti" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Norbert_Möslang>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Soprano_saxophone>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/54857472/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Norbert Möslang (October 6, 1952 in St. Gallen) is a Swiss musician in the field of free improvisation (soprano saxophone, double bass, Live electronic music) and luthier." ;
+        mtp:hasParticipant   meetup:7abc0db63a4e109522ac22f0c2b3fe67 ;
+        mtp:hasPurpose       meetup:ca6c180ac003c2e8dc18dfb379c714a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Norbert_Möslang> ;
+        mtp:hasType          "HT" .
+
+meetup:4d27a87c6ae60409ad3ead8bad048653
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.082385726" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/54857472/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 1972, he worked with Andy Guhl in a duet for 30 years." ;
+        mtp:hasParticipant   meetup:e5a2c532b0607df31765ce2bd538d649 ;
+        mtp:hasPurpose       meetup:0b2865675582d9b2ab78f95833ade683 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Norbert_Möslang> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Peter_Liechti>
+        rdf:type  core:Person .
+
+meetup:0b2865675582d9b2ab78f95833ade683
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.919572e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ca6c180ac003c2e8dc18dfb379c714a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013800972" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7abc0db63a4e109522ac22f0c2b3fe67
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Soprano_saxophone> ;
+        mtp:hasOffset           "105" ;
+        mtp:hasSimilarityScore  "0.9999998990328488" ;
+        mtp:hasTextEvidence     "soprano saxophone" .
+
+meetup:e5a2c532b0607df31765ce2bd538d649
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Möslang" .

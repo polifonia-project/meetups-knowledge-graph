@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9997147" .
+
+meetup:cd2e0476280c362f412beeb093ff703b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00028192613" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/35628805/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Irena Dubiska (1899–1989) was a Polish violinist." ;
+        mtp:hasParticipant   meetup:32dce08a29f56d536d7e50b31f65d941 ;
+        mtp:hasPurpose       meetup:cd2e0476280c362f412beeb093ff703b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Irena_Dubiska> ;
+        mtp:hasType          "HT" .
+
+meetup:32dce08a29f56d536d7e50b31f65d941
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Irena_Dubiska> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Irena Dubiska" .
+
+<http://dbpedia.org/resource/Irena_Dubiska>
+        rdf:type  core:Person .

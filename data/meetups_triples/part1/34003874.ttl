@@ -1,0 +1,70 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:fbaf1fd5d9ccbdacdefa55f66ce4774d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Public celebration" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013495192" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:939bbe0d58216a27a9c9898e5554160a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35075897" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:47ec239a5f2d187b6b41e1ba1b315683
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Amanda Linnea Fondell" .
+
+meetup:  rdfs:label  "Confidence value: 0.9815232" , "Confidence value: 0.5661912" .
+
+meetup:e087d2cb5e7f87d538a16c83493de715
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Darin_(singer)> ;
+        mtp:hasOffset           "57" ;
+        mtp:hasSimilarityScore  "0.9999999948537096" ;
+        mtp:hasTextEvidence     "Darin Zanyar" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Darin_(singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/34003874/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The song was written and produced by Idol 2004 runner up Darin Zanyar, amongst others." ;
+        mtp:hasParticipant   meetup:e087d2cb5e7f87d538a16c83493de715 ;
+        mtp:hasPurpose       meetup:939bbe0d58216a27a9c9898e5554160a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amanda_Fondell> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/34003874/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Amanda Linnea Fondell (born 29 August 1994, Linderöd, Sweden) is a Swedish singer and winner of the eighth series of Swedish Idol, which she won on 9 December 2011 with 52% of the votes." ;
+        mtp:hasParticipant   meetup:47ec239a5f2d187b6b41e1ba1b315683 ;
+        mtp:hasPurpose       meetup:fbaf1fd5d9ccbdacdefa55f66ce4774d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amanda_Fondell> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Amanda_Fondell>
+        rdf:type  core:Person .

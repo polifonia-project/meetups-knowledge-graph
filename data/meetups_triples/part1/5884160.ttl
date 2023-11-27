@@ -1,0 +1,96 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/5884160/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Edwin Torbert (June 7, 1948 – December 7, 1982) was a Bay Area musician, best known for his associations with the Grateful Dead and the New Riders of the Purple Sage." ;
+        mtp:hasParticipant   meetup:7b27f5eae27ab755d471425b5504ea6b ;
+        mtp:hasPurpose       meetup:f28413422658cf6373382ef0ad627ac6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Torbert> ;
+        mtp:hasType          "HT" .
+
+meetup:5c1178b702c14a393a4576c48090681f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Business meeting" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.6896844e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Dave_Torbert>
+        rdf:type  core:Person .
+
+meetup:f28413422658cf6373382ef0ad627ac6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.31431633" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:  rdfs:label  "Confidence value: 0.99999976" , "Confidence value: 0.6809322" , "Confidence value: 0.99991715" .
+
+<http://dbpedia.org/resource/Hunter_Biden>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:af0976533aeae30f526e98e9405514d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q22059318> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Torbert" .
+
+<https://www.wikidata.org/wiki/Q22059318>
+        rdf:type  core:Person .
+
+meetup:7b27f5eae27ab755d471425b5504ea6b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q22059318> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Torbert" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/5884160/0/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Torbert died of a heart attack in 1982." ;
+        mtp:hasParticipant   meetup:af0976533aeae30f526e98e9405514d2 ;
+        mtp:hasPurpose       meetup:5c1178b702c14a393a4576c48090681f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Torbert> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/5884160/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tiger Rose – Robert Hunter (1975)" ;
+        mtp:hasParticipant   meetup:cd5f6035f41e98ea9db9a3b97c5f7463 ;
+        mtp:hasPurpose       meetup:4153594feacd60eb3eef21c8c8647845 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Torbert> ;
+        mtp:hasType          "HT" .
+
+meetup:cd5f6035f41e98ea9db9a3b97c5f7463
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hunter_Biden> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "0.9999952774738532" ;
+        mtp:hasTextEvidence     "Robert Hunter" .
+
+meetup:4153594feacd60eb3eef21c8c8647845
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.6240785e-05" ;
+        mtp:hasSourcePurpose          "ML" .

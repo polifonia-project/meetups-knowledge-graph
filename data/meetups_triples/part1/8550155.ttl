@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<https://www.wikidata.org/wiki/Q1063676>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8550155/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She has taught at Yale University, Baruch College, Manhattan School of Music, Sarah Lawrence College, Brooklyn College, and The New School for Social Research and currently teaches at Mannes College of Music Prep Division and Kingsborough Community College, CUNY." ;
+        mtp:hasParticipant   meetup:dfbc3f6b35ab72c160b28d588a165100 ;
+        mtp:hasPurpose       meetup:c28a842bcee20076b5c54f373ff58eb5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eleanor_Cory> ;
+        mtp:hasType          "HT" .
+
+meetup:  rdfs:label  "Confidence value: 1.0" , "Confidence value: 0.9742837" .
+
+<http://w3id.org/polifonia/pilot/meetups/8550155/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Eleanor Cory (born 1943) is an American composer." ;
+        mtp:hasParticipant   meetup:b958b1252c16623db7ddab6ebce39914 ;
+        mtp:hasPurpose       meetup:21be077f32201fc79d42545c45390c8e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eleanor_Cory> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:21be077f32201fc79d42545c45390c8e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02314329" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c28a842bcee20076b5c54f373ff58eb5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.40782e-10" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b958b1252c16623db7ddab6ebce39914
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eleanor_Cory> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999998898894456" ;
+        mtp:hasTextEvidence     "Eleanor Cory" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Eleanor_Cory>
+        rdf:type  core:Person .
+
+meetup:dfbc3f6b35ab72c160b28d588a165100
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q1063676> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cory" .

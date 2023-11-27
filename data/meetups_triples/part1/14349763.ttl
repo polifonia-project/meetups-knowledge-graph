@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9963301" , "Confidence value: 0.9999057" .
+
+<http://dbpedia.org/resource/Bob_Fosse>
+        rdf:type  core:Person .
+
+meetup:0173077533500823cc00f57f8af6d2bc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.3634255e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:36051ab4ce8ff5d132c32aa1cf6a1b8b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Porém Fosse Portanto" .
+
+<http://dbpedia.org/resource/Francis_Hime>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0888849952f531027de5e24b9b7cd1b8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0022322184" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b9de0766647cf1eb81ad4d7842c797dc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Fosse> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.9999999414093866" ;
+        mtp:hasTextEvidence     "Fosse" .
+
+meetup:93c835854bfd12aa8ccfdc2e9e1582fb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Francis_Hime> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Francis Hime" .
+
+<http://w3id.org/polifonia/pilot/meetups/14349763/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1978 – Se Porém Fosse Portanto" ;
+        mtp:hasParticipant   meetup:36051ab4ce8ff5d132c32aa1cf6a1b8b , meetup:b9de0766647cf1eb81ad4d7842c797dc ;
+        mtp:hasPurpose       meetup:0173077533500823cc00f57f8af6d2bc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Francis_Hime> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/14349763/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Francis Hime (Rio de Janeiro, August 31, 1939) is a Brazilian composer, arranger, pianist and singer." ;
+        mtp:hasParticipant   meetup:93c835854bfd12aa8ccfdc2e9e1582fb ;
+        mtp:hasPurpose       meetup:0888849952f531027de5e24b9b7cd1b8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Francis_Hime> ;
+        mtp:hasType          "HT" .

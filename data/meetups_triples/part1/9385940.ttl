@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bernie_Sanders>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/9385940/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Larry Sanders (born November 21, 1957), better known by his stage name L.V. (which stands for \"Large Variety\"), is an American R&B singer." ;
+        mtp:hasParticipant   meetup:eb1df3ba9763a50fa42f8998408cad1c , meetup:a217c8ae5f203723d0d9c2a955081097 ;
+        mtp:hasPurpose       meetup:39fa8fb2f5f26c6161be9da4ea0d17de ;
+        mtp:hasSubject       <http://dbpedia.org/resource/L.V._(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:  rdfs:label  "Confidence value: 0.9980907" .
+
+meetup:a217c8ae5f203723d0d9c2a955081097
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bernie_Sanders> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.9953683395574504" ;
+        mtp:hasTextEvidence     "Sanders" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:eb1df3ba9763a50fa42f8998408cad1c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/L.V._(singer)> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "0.9999999994838618" ;
+        mtp:hasTextEvidence     "L.V." .
+
+meetup:39fa8fb2f5f26c6161be9da4ea0d17de
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0018213942" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/L.V._(singer)>
+        rdf:type  core:Person .

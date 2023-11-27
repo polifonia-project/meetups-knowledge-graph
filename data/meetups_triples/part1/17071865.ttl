@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Felix_Mendelssohn>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/17071865/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1996 Felix Slováček – Saxo (Bonton music)" ;
+        mtp:hasParticipant   meetup:6d064f914803dc7ac79984e69dede2ae ;
+        mtp:hasPurpose       meetup:aade38d7eccc85e32ba90c90e1479b34 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Felix_Slováček> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9999738" , "Confidence value: 0.99999833" .
+
+<http://dbpedia.org/resource/Saxo_Grammaticus>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0d3f2c7b9da06cf48774c01d19af9db2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Business meeting" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.4237217e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Felix_Slováček>
+        rdf:type  core:Person .
+
+meetup:aade38d7eccc85e32ba90c90e1479b34
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.2748973e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/17071865/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Felix Slováček (born May 23, 1943 in Zlín) is a Czech clarinetist, conductor, film composer, and saxophonist." ;
+        mtp:hasParticipant   meetup:447b5cc6633e4f1a1eeff96d21ef67b4 ;
+        mtp:hasPurpose       meetup:0d3f2c7b9da06cf48774c01d19af9db2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Felix_Slováček> ;
+        mtp:hasType          "HT" .
+
+meetup:6d064f914803dc7ac79984e69dede2ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Saxo_Grammaticus> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.9999999999674004" ;
+        mtp:hasTextEvidence     "Saxo" .
+
+meetup:447b5cc6633e4f1a1eeff96d21ef67b4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Felix_Mendelssohn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9932990693415678" ;
+        mtp:hasTextEvidence     "Felix" .

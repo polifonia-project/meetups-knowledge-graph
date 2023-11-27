@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:  rdfs:label  "Confidence value: 0.999645" , "Confidence value: 0.68747383" .
+
+<http://w3id.org/polifonia/pilot/meetups/68410264/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mark Abrahams (born 30 September 1978, Leeds, England) is an English guitarist, known as current member of Wishbone Ash." ;
+        mtp:hasParticipant   meetup:943f7d1a5c1808a22d28670e8dfc6050 ;
+        mtp:hasPurpose       meetup:7721152c8116c3bc8ec1d6b97617f936 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Abrahams_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mark_Abrahams_(musician)>
+        rdf:type  core:Person .
+
+meetup:943f7d1a5c1808a22d28670e8dfc6050
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Abrahams_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999444495495567" ;
+        mtp:hasTextEvidence     "Mark Abrahams" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:6ff3959dda442b941390a2eed0ba50e4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Abrahams_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mark Abrahams" .
+
+<http://w3id.org/polifonia/pilot/meetups/68410264/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He replaced guitarist Muddy Manninen in May 2017." ;
+        mtp:hasParticipant   meetup:6ff3959dda442b941390a2eed0ba50e4 ;
+        mtp:hasPurpose       meetup:d26ddd8a5397444644496b7c0b7151e6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Abrahams_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:d26ddd8a5397444644496b7c0b7151e6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Business meeting" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2981523" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7721152c8116c3bc8ec1d6b97617f936
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0003118442" ;
+        mtp:hasSourcePurpose          "ML" .

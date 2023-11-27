@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Lev_Ivanov>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:c37213c5db9a6919d28371ef3951a7f5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Anatoli Vasilyevich Ivanov was a Russian solo-timpanist and percussionist" ;
+        mtp:hasEvidencePurposeSecond  "He was also a book author and People's Artist of Russia" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:af74a2af3a07bde5d9f86aa6e3dba6fb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anatoli Vasilyevich Ivanov" .
+
+<http://dbpedia.org/resource/Anatoli_Ivanov_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/62642266/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anatoli Vasilyevich Ivanov (Russian: Анато́лий Васи́льевич Ивано́в; June 26, 1934 – April 2, 2012) was a Russian solo-timpanist, percussionist with the Saint Petersburg Philharmonic Orchestra, book author and People's Artist of Russia (1997)." ;
+        mtp:hasParticipant   meetup:af74a2af3a07bde5d9f86aa6e3dba6fb , meetup:edd5e1422b8a878e6871abe7f7153755 ;
+        mtp:hasPurpose       meetup:c37213c5db9a6919d28371ef3951a7f5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anatoli_Ivanov_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:edd5e1422b8a878e6871abe7f7153755
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lev_Ivanov> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "0.9998532259960672" ;
+        mtp:hasTextEvidence     "Ivanov" .

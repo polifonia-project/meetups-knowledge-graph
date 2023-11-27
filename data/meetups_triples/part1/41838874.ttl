@@ -1,0 +1,99 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Koppel,_Pennsylvania>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:  rdfs:label  "Confidence value: 0.7383722" , "Confidence value: 0.9283233" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Nikolaj_Koppel>
+        rdf:type  core:Person .
+
+meetup:88d40aab54257b4034a46fe5eb3634d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06847067" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4a04d5a2a9187d6dbbc350e44758124c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nikolaj_Koppel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nikolaj Koppel" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:698ede85db9a6e9409ece89fb978ba49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Koppel,_Pennsylvania> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "0.9548990135466876" ;
+        mtp:hasTextEvidence     "Koppel" .
+
+meetup:8bc7d6e80586e7f59309770f94a4a1f5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Career as a concert pianist" ;
+        mtp:hasEvidencePurposeSecond  "Work as a music journalist and editor" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Lise_de_Baissac>
+        rdf:type  core:Person .
+
+meetup:3c1f11eac854e2b550ef1e22073f4af5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Business meeting" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23330654" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/41838874/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 4 February 2014, DR announced that Koppel would co-host the Eurovision Song Contest 2014 alongside Lise Rønne and Pilou Asbæk." ;
+        mtp:hasParticipant   meetup:a7ac423a10af3e967899ff0fe3c8b124 , meetup:698ede85db9a6e9409ece89fb978ba49 ;
+        mtp:hasPurpose       meetup:3c1f11eac854e2b550ef1e22073f4af5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nikolaj_Koppel> ;
+        mtp:hasType          "HT" .
+
+meetup:a7ac423a10af3e967899ff0fe3c8b124
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lise_de_Baissac> ;
+        mtp:hasOffset           "102" ;
+        mtp:hasSimilarityScore  "0.9672846664732432" ;
+        mtp:hasTextEvidence     "Lise" .
+
+<http://w3id.org/polifonia/pilot/meetups/41838874/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nikolaj Koppel (born 6 March 1969 in Gentofte) is a Danish musician, journalist and radio presenter." ;
+        mtp:hasParticipant   meetup:4a04d5a2a9187d6dbbc350e44758124c ;
+        mtp:hasPurpose       meetup:88d40aab54257b4034a46fe5eb3634d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nikolaj_Koppel> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/41838874/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He studied at the Royal Danish Academy of Music and went on to become a concert pianist in 1998, but retired from the business after just two years. He later took up work as a music journalist on Danmarks Radio, he also served as editor for the magazine Euroman." ;
+        mtp:hasPurpose       meetup:8bc7d6e80586e7f59309770f94a4a1f5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nikolaj_Koppel> ;
+        mtp:hasType          "HM" .

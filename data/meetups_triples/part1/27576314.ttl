@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/27576314/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Richard A. Allen (January 6, 1935 – May 29, 2005) was an American blues singer from Chicago." ;
+        mtp:hasParticipant   meetup:5d2c854159005a5ab7d897f2cbc824e1 , meetup:71ba211de5405ab02ee32a9feb3425dc ;
+        mtp:hasPurpose       meetup:3647ef9ca967b01998f72ff72e7fb3f1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ricky_Allen> ;
+        mtp:hasType          "HM" .
+
+meetup:3647ef9ca967b01998f72ff72e7fb3f1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Richard A. Allen was a blues singer" ;
+        mtp:hasEvidencePurposeSecond  "He was from Chicago" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Steve_Allen>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ricky_Allen>
+        rdf:type  core:Person .
+
+meetup:5d2c854159005a5ab7d897f2cbc824e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Allen> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "0.6951824420516381" ;
+        mtp:hasTextEvidence     "Allen" .
+
+meetup:71ba211de5405ab02ee32a9feb3425dc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Richard A. Allen" .

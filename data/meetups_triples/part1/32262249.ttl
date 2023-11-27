@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:10c252b848a5d8defe694aa892ea0bbd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "125" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tore Birkedal" .
+
+meetup:  rdfs:label  "Confidence value: 0.9990945" , "Confidence value: 0.5418172" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Frank_Cook_(musician)>
+        rdf:type  core:Person .
+
+meetup:4645a01befd826379c28b3e2e2036b87
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Cook_(musician)> ;
+        mtp:hasOffset           "110" ;
+        mtp:hasSimilarityScore  "0.6045013980568551" ;
+        mtp:hasTextEvidence     "Frank Cook" .
+
+meetup:a13b6fff5e3a0c03fe169680de539ea4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0009028635" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:243ee1faf819c993bcfa0b32cb4e4466
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Public celebration" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35615587" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/32262249/1/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was a jazz pianist in the group String Swing and Jolly Seven, he led the Carsten Klouman Trio in 1954 with Frank Cook and Tore Birkedal before becoming musical director of the NRK Radio Orchestra and conducting the Norwegian Eurovision Song Contest entries on five occasions 1972, 1973, 1975, 1977 and 1978." ;
+        mtp:hasParticipant   meetup:4645a01befd826379c28b3e2e2036b87 , meetup:10c252b848a5d8defe694aa892ea0bbd ;
+        mtp:hasPurpose       meetup:243ee1faf819c993bcfa0b32cb4e4466 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carsten_Klouman> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Carsten_Klouman>
+        rdf:type  core:Person .
+
+meetup:77d2541cebd99efbdc06b3758a20e889
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carsten_Klouman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Carsten Klouman" .
+
+<http://w3id.org/polifonia/pilot/meetups/32262249/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carsten Klouman (21 August 1923 – 2 July 2004) was born in Oslo and was a Norwegian pianist, arranger and composer." ;
+        mtp:hasParticipant   meetup:77d2541cebd99efbdc06b3758a20e889 ;
+        mtp:hasPurpose       meetup:a13b6fff5e3a0c03fe169680de539ea4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carsten_Klouman> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:  rdfs:label  "Confidence value: 0.67346275" , "Confidence value: 0.99921346" .
+
+<http://w3id.org/polifonia/pilot/meetups/33278941/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has worked on more than 60 films between 1971 and 1989." ;
+        mtp:hasParticipant   meetup:a46c0d993a250e2eac029016294fc7fd ;
+        mtp:hasPurpose       meetup:465f4d47d27dcac924dce6778433a4a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_Tyler_(sound_engineer)> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/33278941/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Richard Tyler (May 7, 1928 – October 24, 1990) was an American sound engineer." ;
+        mtp:hasParticipant   meetup:1db70b97afca363397e6147299b2e855 ;
+        mtp:hasPurpose       meetup:3f3d57de84cf125789adc13dd6657cb0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_Tyler_(sound_engineer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Richard_Tyler_(sound_engineer)>
+        rdf:type  core:Person .
+
+meetup:3f3d57de84cf125789adc13dd6657cb0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24331512" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1db70b97afca363397e6147299b2e855
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richard_Tyler_(designer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7852563599258422" ;
+        mtp:hasTextEvidence     "Richard Tyler" .
+
+meetup:a46c0d993a250e2eac029016294fc7fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richard_Tyler_(designer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Richard Tyler" .
+
+<http://dbpedia.org/resource/Richard_Tyler_(designer)>
+        rdf:type  core:Person .
+
+meetup:465f4d47d27dcac924dce6778433a4a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007570257" ;
+        mtp:hasSourcePurpose          "ML" .

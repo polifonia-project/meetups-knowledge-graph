@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ivan_Pedersen>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:42a10d9b7cb1992f709a15fb25e5870b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.088423185" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.8989455" , "Confidence value: 0.98760986" .
+
+<http://w3id.org/polifonia/pilot/meetups/22617623/22/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2010: Komplet & rariteter" ;
+        mtp:hasParticipant   meetup:a9449fd9317b258430e94378af16c2bf ;
+        mtp:hasPurpose       meetup:42a10d9b7cb1992f709a15fb25e5870b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ivan_Pedersen> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/22617623/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ivan Pedersen  (born April 22, 1950) is a Danish composer." ;
+        mtp:hasParticipant   meetup:9fcf638f755f15e6823b54ced1010ff7 ;
+        mtp:hasPurpose       meetup:620c28d872c883fb170d6cd7803753da ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ivan_Pedersen> ;
+        mtp:hasType          "HT" .
+
+meetup:9fcf638f755f15e6823b54ced1010ff7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ivan_Pedersen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999994384403515" ;
+        mtp:hasTextEvidence     "Ivan Pedersen" .
+
+meetup:620c28d872c883fb170d6cd7803753da
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011999455" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a9449fd9317b258430e94378af16c2bf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Komplet" .

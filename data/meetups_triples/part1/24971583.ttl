@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:7311dcc989685f53be8c3990462112d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Seki Megumi" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:d09ea8ef840fb883614e55a044639163
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Megumi_Seki> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Megumi Seki" .
+
+<http://dbpedia.org/resource/Megumi_Seki>
+        rdf:type  core:Person .
+
+meetup:be3ee958f3815503195c5470b4f14b53
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about the person's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about the person's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/24971583/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Megumi Seki (関 めぐみ, Seki Megumi) (born 8 September 1985 in Kanagawa Prefecture, Japan) is a Japanese actress." ;
+        mtp:hasParticipant   meetup:d09ea8ef840fb883614e55a044639163 , meetup:7311dcc989685f53be8c3990462112d6 ;
+        mtp:hasPurpose       meetup:be3ee958f3815503195c5470b4f14b53 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Megumi_Seki> ;
+        mtp:hasType          "HM" .

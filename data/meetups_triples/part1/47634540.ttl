@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a198f2768598549be9d890df6cabdbe4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0018772376" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9990544" , "Confidence value: 0.997282" .
+
+<http://dbpedia.org/resource/Darius_the_Great>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Darius_Jones_(saxophonist)>
+        rdf:type  core:Person .
+
+meetup:db27f9715fcc0201b0ea34e0422a52b8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Coincidence" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00088825356" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/47634540/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Darius Jones (born May 3, 1978) is an American jazz alto saxophonist and composer." ;
+        mtp:hasParticipant   meetup:a63f68eccba96367730a489a611c7625 , meetup:c52ce02f8ef070703d4a83c17ae9b58a ;
+        mtp:hasPurpose       meetup:a198f2768598549be9d890df6cabdbe4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Darius_Jones_(saxophonist)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/47634540/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Darius was born in Virginia." ;
+        mtp:hasParticipant   meetup:9fbc944017eb0fb28be46eea1f9417c9 ;
+        mtp:hasPurpose       meetup:db27f9715fcc0201b0ea34e0422a52b8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Darius_Jones_(saxophonist)> ;
+        mtp:hasType          "HT" .
+
+meetup:a63f68eccba96367730a489a611c7625
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alto_saxophone> ;
+        mtp:hasOffset           "52" ;
+        mtp:hasSimilarityScore  "0.9954287149174592" ;
+        mtp:hasTextEvidence     "alto saxophonist" .
+
+<http://dbpedia.org/resource/Alto_saxophone>
+        rdf:type  core:Person .
+
+meetup:c52ce02f8ef070703d4a83c17ae9b58a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Darius_Jones_(saxophonist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999998462885292" ;
+        mtp:hasTextEvidence     "Darius Jones" .
+
+meetup:9fbc944017eb0fb28be46eea1f9417c9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Darius_the_Great> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9057054757782804" ;
+        mtp:hasTextEvidence     "Darius" .

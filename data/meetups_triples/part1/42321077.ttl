@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:aaaf27e246fbc7e22ade16c823f72279
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wilhelmina_of_the_Netherlands> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.7746931319189992" ;
+        mtp:hasTextEvidence     "Wilhelmina" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:2e8f44594e5c382467ef986cf3ebe708
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Carolina Wilhelmina Stålberg" .
+
+<http://dbpedia.org/resource/Wilhelmina_of_the_Netherlands>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/42321077/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carolina Wilhelmina Stålberg (26 November 1803, Stockholm – 23 July 1872, Mariefred) was a Swedish writer, poet, translator, and lyricist." ;
+        mtp:hasParticipant   meetup:2e8f44594e5c382467ef986cf3ebe708 , meetup:aaaf27e246fbc7e22ade16c823f72279 ;
+        mtp:hasPurpose       meetup:b189cf2c549dc7f39c25e8bee6123816 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wilhelmina_Stålberg> ;
+        mtp:hasType          "HM" .
+
+meetup:b189cf2c549dc7f39c25e8bee6123816
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Swedish writer and poet" ;
+        mtp:hasEvidencePurposeSecond  "Personal life and career" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Wilhelmina_Stålberg>
+        rdf:type  core:Person .

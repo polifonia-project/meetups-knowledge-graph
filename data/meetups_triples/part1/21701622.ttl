@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Dalibor_Davidović>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Alexander_the_Great>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Alexander_Blok>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1d00b44f9ede8413192fdc0eae1dafcf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alexander_Blok> ;
+        mtp:hasOffset           "110" ;
+        mtp:hasSimilarityScore  "0.9999999999988064" ;
+        mtp:hasTextEvidence     "Blok" .
+
+meetup:f7bd2f32e146577b7037e9dea695103b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Book about Visconti's work" ;
+        mtp:hasEvidencePurposeSecond  "Author's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:28935de80cf8e18e513030e9c36c614d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alexander_the_Great> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9785812094740284" ;
+        mtp:hasTextEvidence     "Alexander" .
+
+<http://w3id.org/polifonia/pilot/meetups/21701622/12/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alexander García Düttmann: Visconti: Uvidi u krvi i mesu (Visconti: Insights into Flesh and Blood), Zagreb: Blok, 2006, ISBN 953-95317-0-5" ;
+        mtp:hasParticipant   meetup:1d00b44f9ede8413192fdc0eae1dafcf , meetup:28935de80cf8e18e513030e9c36c614d ;
+        mtp:hasPurpose       meetup:f7bd2f32e146577b7037e9dea695103b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dalibor_Davidović> ;
+        mtp:hasType          "HM" .

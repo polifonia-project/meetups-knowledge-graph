@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<https://www.wikidata.org/wiki/Q5217159>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/4667077/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Daniel N. Flickinger was an audio engineer in the late 1960s and 1970s, who designed and manufactured some of the era's most important music recording consoles." ;
+        mtp:hasParticipant   meetup:f9b409d8675037636cc1fd6be8d40e6a ;
+        mtp:hasPurpose       meetup:547a02520d6d5906eb9a9dadd43a17d2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daniel_Flickinger> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Wayne_Moss>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.85761476" , "Confidence value: 0.5643484" .
+
+<http://w3id.org/polifonia/pilot/meetups/4667077/15/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cinderella Sound Studio (Wayne Moss) (Madison, Tennessee)" ;
+        mtp:hasParticipant   meetup:ce3560205d7191941abf76dde2cfef1e ;
+        mtp:hasPurpose       meetup:254187782652d159b68f0d159f8c2bf1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daniel_Flickinger> ;
+        mtp:hasType          "HT" .
+
+meetup:254187782652d159b68f0d159f8c2bf1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Personal life" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12396064" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Daniel_Flickinger>
+        rdf:type  core:Person .
+
+meetup:f9b409d8675037636cc1fd6be8d40e6a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q5217159> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daniel N. Flickinger" .
+
+meetup:547a02520d6d5906eb9a9dadd43a17d2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Public celebration" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3795278" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ce3560205d7191941abf76dde2cfef1e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wayne_Moss> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wayne Moss" .

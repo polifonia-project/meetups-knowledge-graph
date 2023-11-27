@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/DJ_Irene>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5222153/15/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Stacey Hollywood (1998)" ;
+        mtp:hasParticipant   meetup:e14bb07c2ecf26c3853cd9d7b1de6ce8 ;
+        mtp:hasPurpose       meetup:a703a3dad3a45a09aba3548150e2970a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Irene> ;
+        mtp:hasType          "HT" .
+
+meetup:e14bb07c2ecf26c3853cd9d7b1de6ce8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stacey_Hollywood> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999865" ;
+        mtp:hasTextEvidence     "Stacey Hollywood" .
+
+meetup:  rdfs:label  "Confidence value: 0.87352806" .
+
+meetup:a703a3dad3a45a09aba3548150e2970a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Education" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10000713" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Stacey_Hollywood>
+        rdf:type  core:Person .

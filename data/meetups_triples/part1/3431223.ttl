@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jeff_Mangum>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:  rdfs:label  "Confidence value: 0.9987915" , "Confidence value: 0.9626156" .
+
+meetup:7afe56ede4a0f523c150048b3407d8c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Mangum> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Jeff Mangum" .
+
+<http://w3id.org/polifonia/pilot/meetups/3431223/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She also dated Jeff Mangum for several years in the late 1990s until their break up in 2000." ;
+        mtp:hasParticipant   meetup:7afe56ede4a0f523c150048b3407d8c6 ;
+        mtp:hasPurpose       meetup:b331887bcbc720f859422bec0f4dedd7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laura_Carter_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ea96d44862987c0de63c3331eaa013d1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010662506" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b331887bcbc720f859422bec0f4dedd7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Public celebration" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.037324015" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Laura_Carter_(musician)>
+        rdf:type  core:Person .
+
+meetup:2e6c8ab8ea94a0a096afc6185a5742fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Laura_Carter_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999986278238744" ;
+        mtp:hasTextEvidence     "Laura Carter" .
+
+<http://w3id.org/polifonia/pilot/meetups/3431223/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Laura Carter is a multi-instrumentalist musician from Athens, Georgia." ;
+        mtp:hasParticipant   meetup:2e6c8ab8ea94a0a096afc6185a5742fd ;
+        mtp:hasPurpose       meetup:ea96d44862987c0de63c3331eaa013d1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laura_Carter_(musician)> ;
+        mtp:hasType          "HT" .

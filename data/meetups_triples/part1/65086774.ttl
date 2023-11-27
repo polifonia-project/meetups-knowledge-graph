@@ -1,0 +1,54 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/65086774/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cullen provided the singing voice of Helen Reddy in the 2019 biographical film, I Am Woman, for which she won an ARIA Music Award." ;
+        mtp:hasParticipant   meetup:acf4cfc7c82ce716ac64fb9b8227237b , meetup:75e237b10ea812e042d59dc79adfc657 ;
+        mtp:hasPurpose       meetup:8feae9cde7ab40a04e59256aec2c172c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chelsea_Cullen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Matt_Cullen>
+        rdf:type  core:Person .
+
+meetup:acf4cfc7c82ce716ac64fb9b8227237b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Cullen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.6431393108871841" ;
+        mtp:hasTextEvidence     "Cullen" .
+
+meetup:  rdfs:label  "Confidence value: 0.98926955" .
+
+<http://dbpedia.org/resource/Helen_Reddy>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Chelsea_Cullen>
+        rdf:type  core:Person .
+
+meetup:75e237b10ea812e042d59dc79adfc657
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Helen_Reddy> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "0.9999999999981242" ;
+        mtp:hasTextEvidence     "Helen Reddy" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:8feae9cde7ab40a04e59256aec2c172c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup: ;
+        mtp:hasEvidencePurposeFirst   "Music making" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0061513684" ;
+        mtp:hasSourcePurpose          "ML" .

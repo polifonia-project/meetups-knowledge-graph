@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Felix_Mendelssohn>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Robert_Schumann>
+        rdf:type  core:Person .
+
+meetup:1545d9d3035a0a81d3bf00c9532674ea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Schumann> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "0.9999998413593528" ;
+        mtp:hasTextEvidence     "Schumann" .
+
+meetup:310a8c35688f0a88ba65d91565a7e186
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a choir" ;
+        mtp:hasEvidencePurposeSecond  "Teaching and learning music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Ángel_Recasens>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/38923488/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 1975 to 1986, he was director of the Coro de Sant Esteve of Vila-seca. There, he performed music from the romantics Schumann and Mendelssohn, to the contemporary music of Ligeti and Schnittke." ;
+        mtp:hasParticipant   meetup:1545d9d3035a0a81d3bf00c9532674ea , meetup:8f8db508c687204bdab1c9b68a528295 ;
+        mtp:hasPurpose       meetup:310a8c35688f0a88ba65d91565a7e186 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ángel_Recasens> ;
+        mtp:hasType          "HM" .
+
+meetup:8f8db508c687204bdab1c9b68a528295
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Felix_Mendelssohn> ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "0.99999999342333" ;
+        mtp:hasTextEvidence     "Mendelssohn" .
