@@ -1,0 +1,38 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX fx:  <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz: <http://sparql.xyz/facade-x/data/>
+
+CONSTRUCT {
+   GRAPH ?graph { ?s1 ?p1 ?o1 }
+   GRAPH ?graph { ?s2 ?p2 ?o2 }
+   GRAPH ?graph { ?s3 ?p3 ?o3 }
+   GRAPH ?graph { ?s4 ?p4 ?o4 }
+} WHERE {
+{
+    SERVICE SILENT <x-sparql-anything:>{
+        BIND (CONCAT("./data/meetups_triples/part1/",?_id,".ttl") as ?path1) .
+        fx:properties fx:location ?path1 ; fx:media-type "text/turtle".
+        ?s1 ?p1 ?o1
+    }
+} UNION {    
+    SERVICE SILENT <x-sparql-anything:>{
+        BIND (CONCAT("./data/meetups_triples/part2/",?_id,".ttl") as ?path2) .
+        fx:properties fx:location ?path2 ; fx:media-type "text/turtle".
+        ?s2 ?p2 ?o2
+    }
+} UNION {
+    SERVICE SILENT <x-sparql-anything:>{
+        BIND (CONCAT("./data/meetups_triples/part3/",?_id,".ttl") as ?path3) .
+        fx:properties fx:location ?path3 ; fx:media-type "text/turtle".
+        ?s3 ?p3 ?o3
+    }
+} 
+UNION {
+    SERVICE SILENT <x-sparql-anything:>{
+        BIND (CONCAT("./data/meetups_triples/part4/",?_id,".ttl") as ?path4) .
+        fx:properties fx:location ?path4 ; fx:media-type "text/turtle".
+        ?s4 ?p4 ?o4
+    }
+}
+    BIND (fx:entity(?_s) as ?graph) .
+}

@@ -105,3 +105,8 @@ fx -q queries/sentences.sparql -i data/biographies.csv -p "data/sentences/?fileI
 ```
 fx -q queries/sentences.sparql -v fileId=10085 -v subject=http://dbpedia.org/resource/Edward_Elgar
 ```
+
+Last step: generate `meetups_quads` from `meetups_triples` and `list-of-biographies.csv`:
+```
+fx -q queries/generate_nq_each.sparql -v data/list-of-biographies.csv -f NQ -p "./data/meetups_quads/?id.nq"
+```
