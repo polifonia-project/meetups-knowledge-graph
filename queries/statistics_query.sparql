@@ -1,0 +1,73 @@
+# ==================================== START
+# Total number of biographies in the MMKG
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX core: <https://w3id.org/polifonia/ontology/core/> 
+
+SELECT (COUNT( DISTINCT ?subject ) AS ?total) WHERE {
+  ?s mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+  ?s mtp:hasSubject ?subject .
+  ?subject rdf:type core:Person .
+}
+# ==================================== END
+
+# ==================================== START
+# Total number of historical meetups type = HM
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX core: <https://w3id.org/polifonia/ontology/core/> 
+
+SELECT (COUNT( DISTINCT ?s ) AS ?total) WHERE {
+  ?s mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+}
+# ==================================== END
+
+# ==================================== START
+# Total number of people mentions
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX core: <https://w3id.org/polifonia/ontology/core/> 
+
+SELECT (COUNT( DISTINCT ?personIRI) AS ?total) WHERE {
+  ?s mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+  ?s mtp:hasParticipant ?participant .
+  ?participant mtp:hasEntity ?personIRI .
+}
+# ==================================== END
+
+
+# ==================================== START
+# Total number of places mentions
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX core: <https://w3id.org/polifonia/ontology/core/> 
+
+SELECT (COUNT( DISTINCT ?placeIRI) AS ?total) WHERE {
+  ?s mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+  ?s mtp:hasPlace ?place .
+  ?place mtp:hasEntity ?placeIRI .
+}
+# ==================================== END
+
+# ==================================== START
+# Total number of temporal expressions
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX core: <https://w3id.org/polifonia/ontology/core/> 
+
+SELECT (COUNT( DISTINCT ?timeexpression) AS ?total) WHERE {
+  ?s mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+  ?s mtp:happensAt ?timeexpression .
+  ?timeexpression rdf:type mtp:TimeExpression .
+}
+# ==================================== END
