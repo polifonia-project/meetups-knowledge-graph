@@ -1,0 +1,133 @@
+# ================================== START
+# 1 Query built to answer CQ:
+# What places did musician Z visit in his/her career?
+
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?resource ?placeLabel
+WHERE { 
+  VALUES ?subject { <http://dbpedia.org/resource/Clara_Schumann> } 
+  ?s mtp:hasSubject ?subject ; mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+  ?s  mtp:hasPlace ?aPlaceIRI .
+  ?aPlaceIRI mtp:hasEntity ?resource .  
+  ?resource rdfs:label ?placeLabel . 
+}
+
+# ================================== START
+# 2 Query built to answer CQ:
+# Where did musician X and performer Y meet?
+
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?resource ?placeLabel ?personIRI ?personLabel ?text
+WHERE { 
+  VALUES ?subject { <http://dbpedia.org/resource/Clara_Schumann> } 
+  ?s mtp:hasSubject ?subject ; mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+  ?s  mtp:hasPlace ?aPlaceIRI .
+  ?aPlaceIRI mtp:hasEntity ?resource .  
+  OPTIONAL { ?resource rdfs:label ?placeLabel } . 
+  ?s mtp:hasParticipant ?aParticipantIRI ;
+     mtp:hasEvidenceText ?text .
+  ?aParticipantIRI rdf:type mtp:Participant ;
+                   mtp:hasEntity ?personIRI .
+  OPTIONAL { ?personIRI rdfs:label ?personLabel  } . 
+} ORDER BY ?s
+
+# ================================== START
+# 7 Query built to answer CQ:
+# Why did musician X and performer Y meet?
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?resource ?placeLabel ?personIRI ?personLabel ?text ?purposeLabel1
+WHERE { 
+  VALUES ?subject { <http://dbpedia.org/resource/Clara_Schumann> } 
+  VALUES ?participant { <http://dbpedia.org/resource/Joseph_Joachim> <https://www.wikidata.org/wiki/Q159976> }
+  ?s mtp:hasSubject ?subject ; mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+  ?s  mtp:hasPlace ?aPlaceIRI .
+  ?aPlaceIRI mtp:hasEntity ?resource .  
+  OPTIONAL { ?resource rdfs:label ?placeLabel } . 
+  ?s mtp:hasParticipant ?aParticipantIRI ;
+     mtp:hasEvidenceText ?text .
+  ?aParticipantIRI rdf:type mtp:Participant ;
+                   mtp:hasEntity ?personIRI .
+  OPTIONAL { ?personIRI rdfs:label ?personLabel  } . 
+  FILTER EXISTS { ?aParticipantIRI mtp:hasEntity ?participant } .
+  ?s mtp:hasPurpose ?aPurposeIRI .
+  ?aPurposeIRI rdf:type mtp:Purpose ;
+               mtp:hasAPurposeFirst ?purpose1 .    
+  ?purpose1 rdfs:label ?purposeLabel1 .
+} ORDER BY ?s
+
+# ================================== START
+# 5 Query built to answer CQ:
+# When did musician X and performer Y meet?
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+SELECT #DISTINCT ?resource ?placeLabel ?personIRI ?personLabel 
+DISTINCT ?text ?purposeLabel1 ?nrmlsdValueStart ?nrmlsdValueEnd ?timeEvidenceText
+WHERE { 
+  VALUES ?subject { <http://dbpedia.org/resource/Clara_Schumann> } 
+  VALUES ?participant { <http://dbpedia.org/resource/Joseph_Joachim> <https://www.wikidata.org/wiki/Q159976> }
+  ?s mtp:hasSubject ?subject ; mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+  ?s mtp:hasParticipant ?aParticipantIRI ;
+     mtp:hasEvidenceText ?text .
+  ?aParticipantIRI rdf:type mtp:Participant ;
+                   mtp:hasEntity ?personIRI .
+  OPTIONAL { ?personIRI rdfs:label ?personLabel  } . 
+  FILTER EXISTS { ?aParticipantIRI mtp:hasEntity ?participant } .
+  ?s mtp:happensAt ?timeExpression_IRI .
+  ?timeExpression_IRI a mtp:TimeExpression ;
+  OPTIONAL {  ?timeExpression_IRI  time:hasBeginning ?nrmlsdValueStart ;
+	time:hasEnd ?nrmlsdValueEnd ; mtp:hasEvidenceText ?timeEvidenceText }.
+} ORDER BY ?s
+
+# ================================== START
+# 3 Query built to answer CQ:
+# Who other musicians were working at the same time?
+
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?personIRI ?personLabel
+WHERE { 
+  VALUES ?subject { <http://dbpedia.org/resource/Clara_Schumann> } 
+  ?s mtp:hasSubject ?subject ; mtp:hasType ?type . 
+  FILTER (regex ( str (?type), str ("HM") ) ) . 
+  ?s mtp:hasParticipant ?aParticipantIRI ;
+     mtp:hasEvidenceText ?text .
+  ?aParticipantIRI rdf:type mtp:Participant ;
+                   mtp:hasEntity ?personIRI .
+  OPTIONAL { ?personIRI rdfs:label ?personLabel  } . 
+} ORDER BY ?personLabel
+
+# ================================== START
+# 4 Query built to answer CQ:
+# What was the composer’s network?
+PREFIX mtp: <http://w3id.org/polifonia/ontology/meetups-ontology#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?personIRI ?personLabel
+WHERE { 
+  VALUES ?subject { <http://dbpedia.org/resource/Clara_Schumann> } 
+  ?s mtp:hasSubject ?subject ;
+  	 mtp:hasParticipant ?aParticipantIRI ;
+     mtp:hasEvidenceText ?text .
+  ?aParticipantIRI rdf:type mtp:Participant ;
+                   mtp:hasEntity ?personIRI .
+  OPTIONAL { ?personIRI rdfs:label ?personLabel  } . 
+} ORDER BY ?personLabel
+
+
