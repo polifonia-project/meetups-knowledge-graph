@@ -1,0 +1,79 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX fx:   <http://sparql.xyz/facade-x/ns/>
+PREFIX xyz:  <http://sparql.xyz/facade-x/data/>
+PREFIX mtp:  <http://w3id.org/polifonia/ontology/meetups-ontology#>
+PREFIX meetup: <http://w3id.org/polifonia/pilot/meetups/>
+PREFIX core: <https://w3id.org/polifonia/ontology/core/> 
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX geo: <https://www.w3.org/2003/01/geo/wgs84_pos>
+
+CONSTRUCT {
+	?meetupIRI a mtp:Meetup ;
+ 		mtp:hasParticipant ?meetupParticipantIRI ;
+ 		mtp:hasPlace ?meetupPlaceIRI ;
+ 		mtp:hasEvidenceText ?sentenceText ;
+        mtp:hasPurpose ?meetupPurposeIRI ;
+ 		mtp:happensAt ?timeExpression_IRI ;
+		mtp:hasSubject ?subjectIRI ;
+		mtp:hasType ?annotation .
+	?meetupParticipantIRI a mtp:Participant ;
+		mtp:hasTextEvidence ?mentionPerson ;
+		mtp:hasOffset ?offsetPerson ;
+		mtp:hasSimilarityScore ?similarityScorePerson ;
+		mtp:hasEntity ?personIRI  .
+	?personIRI a core:Person .
+    ?subjectIRI a core:Person .
+	?meetupPlaceIRI a mtp:Location ;
+		mtp:hasTextEvidence ?mentionPlace ;
+		mtp:hasOffset ?offsetPlace ;
+		mtp:hasSimilarityScore ?similarityScorePlace ;
+		mtp:hasEntity ?placeIRI .
+	?placeIRI a core:Place .
+    ?meetupPurposeIRI a mtp:Purpose ;
+        mtp:hasAPurposeFirst ?purposeIRIF ;
+ 		mtp:hasEvidencePurposeFirst ?valueThemeF ;
+		mtp:hasEvidencePurposeSecond ?valueThemeS ;
+		mtp:hasAPurposeSecond ?purposeIRIS ;
+        mtp:hasSourcePurpose ?sourceTheme .
+    ?purposeIRIF rdfs:label ?themeTypeFirst .
+    ?purposeIRIS rdfs:label ?themeTypeSecond .
+	?timeExpression_IRI a ?timeExpressionClass .
+	?timeExpression_IRI a mtp:TimeExpression ;
+		time:hasBeginning ?nrmlsdValueStart ;
+		time:hasEnd ?nrmlsdValueEnd ;
+        mtp:hasSource ?sourceTE ;
+		mtp:hasEvidenceText ?timeEvidenceText .
+} WHERE {
+    SERVICE <x-sparql-anything:> {
+ 	 BIND ( CONCAT ( "meetupsAnnotations/", ?_fileId , ".csv" ) AS ?entity ) .
+    	 fx:properties fx:location ?entity ; fx:csv.headers "true" .
+ 	 [] xyz:paragraphIndex ?paragraph ; 
+ 	    xyz:after ?sentence ;
+		xyz:annotation ?annotation ;
+ 		# xyz:sentences ?sentenceText .
+    	FILTER (?annotation = "HM" || ?annotation = "HT") .
+    	# BIND ( IRI(?_subject) as ?subjectIRI ) .
+        BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?sentence) AS ?meetupIRI ) .
+	}
+     .
+    SERVICE <x-sparql-anything:> {
+        BIND ( CONCAT ( "meetupsFastCorefOutputPP/", STR(?_fileId) , ".csv" ) AS ?entity1 ) .
+        fx:properties fx:location ?entity1 ; fx:blank-nodes "true" ; fx:csv.headers "true" .
+        ?s1 xyz:paragraphIndex ?paragraph ;
+    	  	 xyz:sentenceIndex ?sentence ;
+    		 xyz:offset ?offsetPlace ;
+    		 xyz:entity ?mentionPlace ;
+             xyz:entType ?eType ;
+    		 xyz:URI ?place 
+    		 .
+    	FILTER (?eType = "place") .
+        BIND ( IRI (?place) AS ?placeIRI ) .
+        BIND ( fx:entity (meetup:, fx:String.toLowerCase(?_fileId), "/", ?paragraph, "/", ?sentence) AS ?meetupIRI ) .
+        OPTIONAL { ?s1 xyz:similarityScore ?similarityScorePlace } .
+        BIND ( CONCAT( fx:String.toLowerCase(?_fileId),"/",STR(?paragraph),"/",STR(?sentence),STR(?mentionPlace) ) AS ?placeKey ) .
+        BIND ( fx:entity ( meetup:, fx:DigestUtils.md5Hex( ?placeKey )) AS ?meetupPlaceIRI ) .
+    }
+   .
+}
