@@ -50,7 +50,7 @@ The MEETUPS knowledge graph contains data about historical encounters of people 
 
 ## Knowledge Graph description
 
-The KG was built using data collected from Wikipedia. A total of 33309 biographies of musical artist's web pages were collected [1]. 
+The KG was built using data collected from Wikipedia. A total of 33309 biographies of musical artist's web pages in English were collected [1]. 
 We apply knowledge extraction techniques and methods for text processing to recognise, classify and link the entities that are part of a historical meetup, particularly: people, places, time expressions and themes [3].
 
 The MMKG data contains evidence that describes historical meetups according to Meetups Ontology [2]. A historical meetup – mtp:Meetup, is derived from evidence within a biography – mtp:hasEvidenceText. Mentions of at least one or more participants and places are represented by the mtp:Participant and mtp:Location class, respectively. Each mention is an entity (mtp:hasEntity) extracted and linked to DBpedia or Wikidata (Section 4 gives details on the extraction process). To represent the time when the meetup took place, we use the mtp:TimeExpression class. It is composed of start time:hasBeginning and end time:hasEnd dates as well as the text from where it was compiled. Lastly, the purpose of the encounter (mtp:Purpose) is captured by one of the following meetups types: mtp:BusinessCareer, mtp:PersonalLife, mtp:Coincidence, mtp:Education, mtp:PublicCelebration or mtp:MusicMaking.
@@ -107,20 +107,21 @@ $ fx -q queries/statistics.sparql -l data/meetups/
 
 ## KG quick use
 
+The KG is available in TTL and N-quad format, it can be directly uploaded in any non-relational database. 
+- TTL format: `data/meetups_triples`
+- N-quad format: `data/meetups_quads`
+
+Each file in the repository is named after the DBpedia identifier (E.g., 10085.ttl, meaning it contains information regarding Edward Elgar).
 For a list of all the biographies processed please see [list-of-biographies.csv](https://github.com/polifonia-project/meetups-knowledge-graph/blob/main/data/list-of-biographies.csv). Column "s" is the DBpedia resource and column "id" the unique identifier give by DBpedia
 ```
 ------------------------------------------------------------
-| s			                 					| id	|
+| s	| id	|
 ============================================================
-| "http://dbpedia.org/resource/Edward_Elgar"       | 10085 |
-| "http://dbpedia.org/resource/Clara_Schumann"     | 45181 |
-| "http://dbpedia.org/resource/Yehudi_Menuhin"     | 57520 |
+| "http://dbpedia.org/resource/Edward_Elgar"	| 10085 |
+| "http://dbpedia.org/resource/Clara_Schumann"	| 45181 |
+| "http://dbpedia.org/resource/Yehudi_Menuhin"	| 57520 |
 ------------------------------------------------------------
 ```
-Each file in the repository is named after the DBpedia identifier. E.g., 10085.ttl. Meaning it contains information regarding Edward Elgar		
-The KG is available in TTL and N-quad format. 
-- TTL format: `data/meetups_triples`
-- N-quad format: `data/meetups_quads`
 
 ### Repository structure
 
@@ -130,24 +131,24 @@ The KG is available in TTL and N-quad format.
 
 ## KG construction
 
-We use SPARQL Anything and design CONSTRUCT mappings, to create triples from each biography. 
+To build the KG from scratch we use SPARQL Anything and CONSTRUCT mappings to create triples for each biography. 
+The data used to generate the KG is the evidence (text) that describes an encounter, the entities (people and places), temporal expressions and the purpose of the encounter extracted from a piece of evidence. All this data is the result of the execution of the knowledge construction pipeline detailed in [Meetups Pilot](https://github.com/polifonia-project/meetups-ontology).
 
 ### Pre-requirements
 
-- Download the SPARQL Anything command line from the [project release page](https://github.com/SPARQL-Anything/sparql.anything/releases).
+- Download and install the SPARQL Anything command line from the [project release page](https://github.com/SPARQL-Anything/sparql.anything/releases).
 SPARQL Anything requires Java >= 11. We used the  sparql-anything-0.8.1 version
-- Download the CONSTRUCT mapping scripts from this repository
-	- queries/generate-meetups-1.sparql
-	- queries/generate-meetups-2.sparql
-	- queries/generate-meetups-3.sparql
+- Download the CONSTRUCT mapping scripts stored in this repository
+	- `queries/generate-meetups-1.sparql`
+	- `queries/generate-meetups-2.sparql`
+	- `queries/generate-meetups-3.sparql`
+- Download the list of biographies stored in this repository
+	- `data/list-of-biographies.csv`
 - Download the CSV files generated as output of the [Knowledge extraction pipeline](https://github.com/polifonia-project/meetups_pilot) repository
 	- Folders: 
-- Download the list of biographies
-	- data/list-of-biographies.csv
-	
+
 ### Commands
 
-The KG was generated in three parts
 Part1. Generates triples about the meetup evidence, people and purpose of the meetup.
 ```
 java -jar sparql-anything-0.8.1.jar -q generate-meetups-1.sparql -i list-of-biographies.csv -p "data/?fileId.ttl" -f TTL
@@ -166,13 +167,13 @@ Last step: generate `meetups_quads` from `meetups_triples` and `list-of-biograph
 fx -q queries/generate_nq_each.sparql -v data/list-of-biographies.csv -f NQ -p "./data/meetups_quads/?id.nq"
 ```
 
-Note*: change directory names to reflect your settings.
+These commands build the whole KG, if you like to build a specific list of biographies from the available ones, just compile a new `list-of-biographies.csv` file and run the scripts.
+
+
+Note*: be reminded to change any directory names to reflect your settings.
 
 ## Meetups KG extraction: summary
 
-## Repository structure
-
-The meetups 
 
 ## MELODY data stories
 
