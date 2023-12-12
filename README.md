@@ -111,9 +111,9 @@ $ fx -q queries/statistics.sparql -l data/meetups/
 
 The KG is built using the output of the knowledge construction pipeline. 
 To run the following commands, first:
-- Download the SPARQL Anything command line from the [project release page]https://github.com/SPARQL-Anything/sparql.anything/releases.
+- Download the SPARQL Anything command line from the [project release page](https://github.com/SPARQL-Anything/sparql.anything/releases).
 SPARQL Anything requires Java >= 11. We used the  sparql-anything-0.8.1 version
-- Download the CSV files generated as output of the [Knowledge extraction pipeline]https://github.com/polifonia-project/meetups_pilot
+- Download the CSV files generated as output of the [Knowledge extraction pipeline](https://github.com/polifonia-project/meetups_pilot)
 	- Folders: 
 - Download the CONSTRUCT mapping scripts from 
 	- script 1
