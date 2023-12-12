@@ -39,7 +39,8 @@ related-components:
   - sparql-anything-cli
 ---
 
-# MEETUPS Knowledge Graph
+# MEETUPS Knowledge Graph 
+##Musical Meetups Knowledge Graph (MMKG)
 
 [![DOI](https://zenodo.org/badge/588597123.svg)](https://zenodo.org/badge/latestdoi/588597123)
 
@@ -48,9 +49,16 @@ The MEETUPS knowledge graph contains data about historical encounters of people 
 
 ## Knowledge Graph description
 
-All the data is extracted from artists' biographies, mainly from open-access digital sources such as Wikipedia artists' web pages.
-A total of 33,309 biographies were collected for knowledge extraction and construction of the KG.
-Currently, the KG contains data on the data extraction of 1000 biographies in the next deliverable. The KG will include data on the total number of biographies collected.
+The KG was built using data collected from Wikipedia. 33309 biographies of musical artists' web pages were collected [1].
+The MMKG data contains evidence that describes historical meetups according to Meetups Ontology [2]. 
+We apply knowledge extraction techniques and methods for text processing to recognise, classify and link the entities that are part of a historical meetup, particularly: people, places, time expressions and themes.
+
+The MMKG is one of the main components of the MEETUPS Pilot.
+MMKG is one of the main components of the MEETUPS Pilot.
+Here are the links to important components linked to the KG.
+1. [Meetups Corpus Collection](https://github.com/polifonia-project/meetups_corpus_collection)
+2. [Meetups Ontology](https://github.com/polifonia-project/meetups-ontology)
+3. [Meetups Pilot](https://github.com/polifonia-project/meetups-ontology)
 
 ## Competency questions related to MEETUPS knowledge graph 
 Ortenz
@@ -71,26 +79,39 @@ Ortenz
 
 ## Statistics:
 ```
-$ fx -q queries/statistics.sparql -l data/meetups/
+queries/statistics_query.sparql
+
 -------------------------------
 | key                 | value |
 ===============================
-| "Meetups"           | 74445 |
-| "Persons mentioned" | 51425 |
-| "Subjects"          | 1002  |
-| "Places mentions"   | 5595  |
-| "Time expressions"  | 79838 |
+| "Biographies"       | 33309 |
+| "Meetups"           | 45812 |
+| "Persons mentioned" | 49170 |
+| "Subjects"          | 16748 |
+| "Places mentions"   | 7107  |
+| "Time expressions"  | 51120 |
 -------------------------------
 ```
 
+It is possible to use SPARQL Anything to generate the same statistics using the CSV-generated
+```
+$ fx -q queries/statistics.sparql -l data/meetups/
+```
+
+## Meetups KG extraction: summary
+
+## Repository structure
+
+The meetups 
+
 ## MELODY data stories
 
-To be released in next deliverable
+To be released in the next deliverable
 
 ## Additional information  
 ### Queries and usage
 
-Generate list of biographies and related files.
+Generate a list of biographies and related files.
 ```
 fx -q queries/list-sample.sparql -o data/biographies.csv -f CSV
 ```
@@ -98,7 +119,6 @@ Generate sentences KG data
 ```
 fx -q queries/sentences.sparql -i data/biographies.csv -p "data/sentences/?fileId.ttl" -f TTL
 ```
-
 
 [part above to be updated...]
 
@@ -110,3 +130,8 @@ Last step: generate `meetups_quads` from `meetups_triples` and `list-of-biograph
 ```
 fx -q queries/generate_nq_each.sparql -v data/list-of-biographies.csv -f NQ -p "./data/meetups_quads/?id.nq"
 ```
+
+## Acknowledgements
+
+This work was supported by the EU’s Horizon Europe research and innovation
+programme within the Polifonia project (grant agreement N. 101004746).
