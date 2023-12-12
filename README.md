@@ -172,13 +172,13 @@ These commands build the whole KG, if you like to build a specific list of biogr
 
 Note*: be reminded to change any directory names to reflect your settings.
 
-## Meetups KG extraction: summary
+## Meetups KG extraction 
 
+![KG extraction pipeline](diagrams/meetups-pipeline.png?raw=true "KG extraction pipeline")
 
 ## MELODY data stories
 
 To be released in the next deliverable
-
 
 
 ## Acknowledgements
