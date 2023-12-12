@@ -151,15 +151,15 @@ SPARQL Anything requires Java >= 11. We used the  sparql-anything-0.8.1 version
 
 Part1. Generates triples about the meetup evidence, people and purpose of the meetup.
 ```
-java -jar sparql-anything-0.8.1.jar -q generate-meetups-1.sparql -i list-of-biographies.csv -p "data/?fileId.ttl" -f TTL
+java -jar sparql-anything-0.8.1.jar -q generate-meetups-1.sparql -i list-of-biographies.csv -p "data/meetups_triples/part1/?fileId.ttl" -f TTL
 ```
 Part2. Generates triples about the meetup places
 ```
-java -jar sparql-anything-0.8.1.jar -q generate-meetups-2.sparql -i list-of-biographies.csv -p "kg/part2/?fileId.ttl" -f TTL
+java -jar sparql-anything-0.8.1.jar -q generate-meetups-2.sparql -i list-of-biographies.csv -p "data/meetups_triples/part2/?fileId.ttl" -f TTL
 ```
 Part3. Generates triples about the meetup temporal expressions
 ```
-java -jar sparql-anything-0.8.1.jar -q generate-meetups-3.sparql -i list-of-biographies.csv -p "kg/part3/?fileId.ttl" -f TTL
+java -jar sparql-anything-0.8.1.jar -q generate-meetups-3.sparql -i list-of-biographies.csv -p "data/meetups_triples/part3/?fileId.ttl" -f TTL
 ```
 
 Last step: generate `meetups_quads` from `meetups_triples` and `list-of-biographies.csv`:
