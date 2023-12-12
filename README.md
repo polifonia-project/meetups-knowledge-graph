@@ -40,7 +40,8 @@ related-components:
 ---
 
 # MEETUPS Knowledge Graph 
-##Musical Meetups Knowledge Graph (MMKG)
+
+## Musical Meetups Knowledge Graph (MMKG)
 
 [![DOI](https://zenodo.org/badge/588597123.svg)](https://zenodo.org/badge/latestdoi/588597123)
 
@@ -49,18 +50,21 @@ The MEETUPS knowledge graph contains data about historical encounters of people 
 
 ## Knowledge Graph description
 
-The KG was built using data collected from Wikipedia. 33309 biographies of musical artists' web pages were collected [1].
+The KG was built using data collected from Wikipedia. A total of 33309 biographies of musical artist's web pages were collected [1].
 The MMKG data contains evidence that describes historical meetups according to Meetups Ontology [2]. 
 We apply knowledge extraction techniques and methods for text processing to recognise, classify and link the entities that are part of a historical meetup, particularly: people, places, time expressions and themes.
 
 The MMKG is one of the main components of the MEETUPS Pilot.
 MMKG is one of the main components of the MEETUPS Pilot.
-Here are the links to important components linked to the KG.
+Here are the links to important components related to the KG.
 1. [Meetups Corpus Collection](https://github.com/polifonia-project/meetups_corpus_collection)
 2. [Meetups Ontology](https://github.com/polifonia-project/meetups-ontology)
 3. [Meetups Pilot](https://github.com/polifonia-project/meetups-ontology)
 
-## Competency questions related to MEETUPS knowledge graph 
+## Competency questions related to MMKG
+
+The KG answers the CQs formalised as part of the Meetups Ontology knowledge requirements.
+
 Ortenz
 - What places did musician Z visited in her career?
 - Where did she perform?
@@ -78,9 +82,12 @@ Ortenz
 - Was there a power relation? (e.g., Patreon / Musician)
 
 ## Statistics:
+
+We use SPARQL Anything and design CONSTRUCT mappings, to create triples from each biography. To obtain these statistics we build a series of queries available here
 ```
 queries/statistics_query.sparql
-
+```
+```
 -------------------------------
 | key                 | value |
 ===============================
@@ -98,18 +105,21 @@ It is possible to use SPARQL Anything to generate the same statistics using the 
 $ fx -q queries/statistics.sparql -l data/meetups/
 ```
 
-## Meetups KG extraction: summary
+## KG construction
 
-## Repository structure
+### Pre-requirements
 
-The meetups 
-
-## MELODY data stories
-
-To be released in the next deliverable
-
-## Additional information  
-### Queries and usage
+The KG is built using the output of the knowledge construction pipeline. 
+To run the following commands, first:
+- Download the SPARQL Anything command line from the [project release page]https://github.com/SPARQL-Anything/sparql.anything/releases.
+SPARQL Anything requires Java >= 11. We used the  sparql-anything-0.8.1 version
+- Download the CSV files generated as output of the [Knowledge extraction pipeline]https://github.com/polifonia-project/meetups_pilot
+	- Folders: 
+- Download the CONSTRUCT mapping scripts from 
+	- script 1
+	- script 2
+	
+### Commands
 
 Generate a list of biographies and related files.
 ```
@@ -130,6 +140,18 @@ Last step: generate `meetups_quads` from `meetups_triples` and `list-of-biograph
 ```
 fx -q queries/generate_nq_each.sparql -v data/list-of-biographies.csv -f NQ -p "./data/meetups_quads/?id.nq"
 ```
+
+## Meetups KG extraction: summary
+
+## Repository structure
+
+The meetups 
+
+## MELODY data stories
+
+To be released in the next deliverable
+
+
 
 ## Acknowledgements
 
