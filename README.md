@@ -57,9 +57,9 @@ The MMKG data contains evidence that describes historical meetups according to M
 
 MMKG is one of the main components of the MEETUPS Pilot.
 Here are the links to important components related to the KG.
-1. [Meetups Corpus Collection](https://github.com/polifonia-project/meetups_corpus_collection)
-2. [Meetups Ontology](https://github.com/polifonia-project/meetups-ontology)
-3. [Meetups Pilot](https://github.com/polifonia-project/meetups-ontology)
+1. [Meetups Ontology](https://github.com/polifonia-project/meetups-ontology)
+2. [Meetups Pilot](https://github.com/polifonia-project/meetups_pilot)
+3. [Meetups Corpus Collection](https://github.com/polifonia-project/meetups_corpus_collection)
 
 ## Competency questions related to MMKG
 
@@ -80,6 +80,8 @@ Ortenz
 - Were they invited? Was the meeting accidental?
 - How can we characterize the relation among the participants?
 - Was there a power relation? (e.g., Patreon / Musician)
+
+[SPARQL queries developed to answer a set of CQs](https://github.com/polifonia-project/meetups-knowledge-graph/blob/main/queries/cq-validation-queries-MMKG-resource.sparql)
 
 ## Statistics:
 
@@ -107,11 +109,11 @@ $ fx -q queries/statistics.sparql -l data/meetups/
 
 ## KG quick use
 
-The KG is available in TTL and N-quad format, it can be directly uploaded into any non-relational database. 
+The KG is available in TTL and N-quad format.  
 - TTL format: `data/meetups_triples`
 - N-quad format: `data/meetups_quads`
 
-Each file in the repository is named after the DBpedia identifier (E.g., 10085.ttl, meaning it contains information regarding Edward Elgar).
+Each file in the repository is named after the DBpedia identifier (E.g., 10085.ttl, meaning it contains information regarding Edward Elgar). Triples can be directly uploaded into any non-relational database.
 
 For a list of all the biographies processed please see [list-of-biographies.csv](https://github.com/polifonia-project/meetups-knowledge-graph/blob/main/data/list-of-biographies.csv). Column "s" is the DBpedia resource and column "id" the unique identifier give by DBpedia
 ```
@@ -145,7 +147,7 @@ SPARQL Anything requires Java >= 11. We used the  sparql-anything-0.8.1 version
 	- `queries/generate-meetups-3.sparql`
 - Download the list of biographies stored in this repository
 	- `data/list-of-biographies.csv`
-- Download the CSV files generated as output of the [Knowledge extraction pipeline](https://github.com/polifonia-project/meetups_pilot) repository. These three folders:
+- Download the CSV files generated as output of the [Knowledge extraction pipeline](https://github.com/polifonia-project/meetups_pilot) repository. These four folders:
 	- [meetupsAnnotations](https://github.com/polifonia-project/meetups_pilot/tree/main/meetupsAnnotations)
  	- [meetupsFastCorefOutputPP](https://github.com/polifonia-project/meetups_pilot/tree/main/meetupsFastCorefOutputPP)
   	- [meetupsTimeExpressions](https://github.com/polifonia-project/meetups_pilot/tree/main/meetupsTimeExpressions)
@@ -174,7 +176,7 @@ fx -q queries/generate_nq_each.sparql -v data/list-of-biographies.csv -f NQ -p "
 These commands build the whole KG, if you like to build a specific list of biographies from the available ones, just compile a new `list-of-biographies.csv` file and run the scripts.
 
 
-Note*: be reminded to change any directory names to reflect your settings.
+*Note: be reminded to change any directory names/structure to reflect your settings.
 
 ## Meetups KG extraction 
 
