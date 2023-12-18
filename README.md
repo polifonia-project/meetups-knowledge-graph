@@ -107,11 +107,12 @@ $ fx -q queries/statistics.sparql -l data/meetups/
 
 ## KG quick use
 
-The KG is available in TTL and N-quad format, it can be directly uploaded in any non-relational database. 
+The KG is available in TTL and N-quad format, it can be directly uploaded into any non-relational database. 
 - TTL format: `data/meetups_triples`
 - N-quad format: `data/meetups_quads`
 
 Each file in the repository is named after the DBpedia identifier (E.g., 10085.ttl, meaning it contains information regarding Edward Elgar).
+
 For a list of all the biographies processed please see [list-of-biographies.csv](https://github.com/polifonia-project/meetups-knowledge-graph/blob/main/data/list-of-biographies.csv). Column "s" is the DBpedia resource and column "id" the unique identifier give by DBpedia
 ```
 ------------------------------------------------------------
