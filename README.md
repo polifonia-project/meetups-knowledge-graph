@@ -145,8 +145,11 @@ SPARQL Anything requires Java >= 11. We used the  sparql-anything-0.8.1 version
 	- `queries/generate-meetups-3.sparql`
 - Download the list of biographies stored in this repository
 	- `data/list-of-biographies.csv`
-- Download the CSV files generated as output of the [Knowledge extraction pipeline](https://github.com/polifonia-project/meetups_pilot) repository
-	- Folders: 
+- Download the CSV files generated as output of the [Knowledge extraction pipeline](https://github.com/polifonia-project/meetups_pilot) repository. These three folders:
+	- [meetupsAnnotations](https://github.com/polifonia-project/meetups_pilot/tree/main/meetupsAnnotations)
+ 	- [meetupsFastCorefOutputPP](https://github.com/polifonia-project/meetups_pilot/tree/main/meetupsFastCorefOutputPP)
+  	- [meetupsTimeExpressions](https://github.com/polifonia-project/meetups_pilot/tree/main/meetupsTimeExpressions)
+  	- [extractedMeetupsTypes](https://github.com/polifonia-project/meetups_pilot/tree/main/extractedMeetupsTypes) 
 
 ### Commands
 
