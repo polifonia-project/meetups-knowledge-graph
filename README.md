@@ -50,7 +50,7 @@ The MEETUPS knowledge graph contains data about historical encounters of people 
 ## Meetups SPARQL Endpoint
 
 ```
-[queries/statistics_query.sparql](https://polifonia.kmi.open.ac.uk/meetups/sparql/)
+https://polifonia.kmi.open.ac.uk/meetups/sparql/
 ```
 
 ## Knowledge Graph description
