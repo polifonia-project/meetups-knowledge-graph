@@ -47,6 +47,11 @@ related-components:
 
 The MEETUPS knowledge graph contains data about historical encounters of people in the musical world in Europe from c. 1800 to c. 1945.
 
+## Meetups SPARQL Endpoint
+
+```
+[queries/statistics_query.sparql](https://polifonia.kmi.open.ac.uk/meetups/sparql/)
+```
 
 ## Knowledge Graph description
 
