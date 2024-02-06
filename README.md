@@ -37,6 +37,8 @@ related-components:
 - reuses:
   - sparql-anything-java
   - sparql-anything-cli
+- bibliography:
+  - main-publication: "Morales Tirado, A., Carvalho, J., Mulholland, P. and Daga, E., 2023. Musical Meetups: a Knowledge Graph approach for Historical Social Network Analysis."
 ---
 
 # MEETUPS Knowledge Graph 
