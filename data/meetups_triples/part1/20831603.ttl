@@ -1,0 +1,104 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:218ba2927bf36ef4ea7cfcc8f341256d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Matejka> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mark \"Sparky\" Matejka" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:db99d00fd0bfad74f30d6a19b5b87918
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9378232" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.060103234" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:302cafc604844d7e57c2cc8f16e613b4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9001138" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.098924294" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Hughie_Thomasson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/20831603/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He first played with the band on their Christmas Time Again album in 2000 and was credited with guitar and vocals." ;
+        mtp:hasParticipant   meetup:49947424f1d405fe1078248b050d8851 ;
+        mtp:hasPurpose       meetup:d4a00d93d4fe5675f1a22b3d816fc756 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Matejka> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/20831603/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vincent Mark \"Sparky\" Matejka (born January 2, 1967) is an American Southern rock guitarist." ;
+        mtp:hasParticipant   meetup:5b2a160a88a6642be5da135aedb51cb3 ;
+        mtp:hasPurpose       meetup:db99d00fd0bfad74f30d6a19b5b87918 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Matejka> ;
+        mtp:hasType          "HT" .
+
+meetup:d4a00d93d4fe5675f1a22b3d816fc756
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9776154" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.016861156" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:fa7fbff2cb6271c7e9a504d509a6ba14
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hughie_Thomasson> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hughie Thomasson" .
+
+<http://dbpedia.org/resource/Mark_Matejka>
+        rdf:type  core:Person .
+
+meetup:49947424f1d405fe1078248b050d8851
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Matejka> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mark \"Sparky\" Matejka" .
+
+meetup:5b2a160a88a6642be5da135aedb51cb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Matejka> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mark \"Sparky\" Matejka" .
+
+<http://w3id.org/polifonia/pilot/meetups/20831603/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He joined Lynyrd Skynyrd in 2006, replacing Hughie Thomasson who had left to reform Outlaws." ;
+        mtp:hasParticipant   meetup:218ba2927bf36ef4ea7cfcc8f341256d , meetup:fa7fbff2cb6271c7e9a504d509a6ba14 ;
+        mtp:hasPurpose       meetup:302cafc604844d7e57c2cc8f16e613b4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Matejka> ;
+        mtp:hasType          "HM" .

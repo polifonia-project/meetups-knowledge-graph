@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:0766b0f4ebd8f30169dae5ba002f1bc8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99439275" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.005461735" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:b7b322e7b8424d6da7c65ee08e4c4b69
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6836119" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26082098" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:6dd896623193f362cb2caf0ecfba314d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Participation in Eurovision contest" ;
+        mtp:hasEvidencePurposeSecond  "Media appearances and interviews" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/22929317/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Kennedy O'Connor (born 1964) is a television and radio broadcaster, author and entertainment commentator, who was born in North London, but is a naturalized citizen of the United States, where he is based." ;
+        mtp:hasParticipant   meetup:224189c184405881abe7c05238468704 ;
+        mtp:hasPurpose       meetup:0766b0f4ebd8f30169dae5ba002f1bc8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Kennedy_O'Connor> ;
+        mtp:hasType          "HT" .
+
+meetup:5ce5e75c1077caae978074dbd4b5b5f6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Kennedy_O'Connor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Kennedy O'Connor" .
+
+<http://w3id.org/polifonia/pilot/meetups/22929317/10/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During the 2010 contest in Oslo, Norway, O'Connor appeared on Aljazeera TV, BBC World News & BBC News Channel with James Dagwell on E24 and after a one-on-one interview, won PopMaster on BBC Radio 2's Ken Bruce show, playing against Paddy O'Connell in a Eurovision spoof of the regular feature, a feat he repeated in 2012 against the BBC Moscow Correspondent Steven Rosenberg. He also featured across ITV News and BBC Local Radio live from Oslo." ;
+        mtp:hasPurpose       meetup:6dd896623193f362cb2caf0ecfba314d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Kennedy_O'Connor> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/22929317/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is currently the news anchor for NBC and CBS Northern California channels KIEM-TV and KVIQ-LD, anchoring the 5pm, 6pm and 11pm news broadcasts, Monday to Friday." ;
+        mtp:hasParticipant   meetup:5ce5e75c1077caae978074dbd4b5b5f6 ;
+        mtp:hasPurpose       meetup:b7b322e7b8424d6da7c65ee08e4c4b69 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Kennedy_O'Connor> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/John_Kennedy_O'Connor>
+        rdf:type  core:Person .
+
+meetup:224189c184405881abe7c05238468704
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Kennedy_O'Connor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Kennedy O'Connor" .

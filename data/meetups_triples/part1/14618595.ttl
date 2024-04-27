@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1db828f9ccd5c61701e561051d9a6e5d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.932233" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06570024" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/14618595/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Curly Fox died in November 1995, at the age of 85." ;
+        mtp:hasParticipant   meetup:eadb91e3dbff6af73d706fa0d93d7dc5 ;
+        mtp:hasPurpose       meetup:1db828f9ccd5c61701e561051d9a6e5d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Curly_Fox> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Curly_Fox>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:eadb91e3dbff6af73d706fa0d93d7dc5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Curly_Fox> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "Curly Fox" .

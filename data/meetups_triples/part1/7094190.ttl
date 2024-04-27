@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:90ea9308dfe3e7771a623f5caf772f0d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9595332" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.032198075" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4b526f085e2f2627a0b1c73e5e3ae132
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Thelonious_Monk> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "0.606062464566821" ;
+        mtp:hasTextEvidence     "Monk" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:e03af0a60546638ee0de5b1082acacf8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Duck_Baker> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999862864" ;
+        mtp:hasTextEvidence     "Duck Baker" .
+
+<http://dbpedia.org/resource/Duck_Baker>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/7094190/25/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Duck Baker Plays Monk (Triple Point, 2018)" ;
+        mtp:hasParticipant   meetup:4b526f085e2f2627a0b1c73e5e3ae132 , meetup:e03af0a60546638ee0de5b1082acacf8 ;
+        mtp:hasPurpose       meetup:90ea9308dfe3e7771a623f5caf772f0d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Duck_Baker> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Thelonious_Monk>
+        rdf:type  core:Person .

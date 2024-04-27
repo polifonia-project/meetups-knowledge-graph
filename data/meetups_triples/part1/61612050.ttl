@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jimi_Hendrix>
+        rdf:type  core:Person .
+
+meetup:e1c22a50e7794b3da48ad88fb74af1f0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Jacob's time mixing sound for Hendrix" ;
+        mtp:hasEvidencePurposeSecond  "Jacob's new hometown and housemates" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ae02713ca0d70cf8cc238110e7924df3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shinzo_Abe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Abe" .
+
+<http://dbpedia.org/resource/Shinzo_Abe>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Abe_Jacob>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/61612050/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Abe John Jacob was born on October 7, 1944, in Tucson, Arizona. His parents were Abe Taft Jacob and Victoria Jacob (née Shaar), both of Lebanese heritage; his grandparents owned a supermarket in Tucson." ;
+        mtp:hasParticipant   meetup:520a70670bf7a2248cf65595f7d49801 , meetup:ae02713ca0d70cf8cc238110e7924df3 ;
+        mtp:hasPurpose       meetup:bc5cd72f690653c760fa4c5a9e5f1b4a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abe_Jacob> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:bc5cd72f690653c760fa4c5a9e5f1b4a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about a person's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about someone's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9c22615a825ac5a89658caba8c4b9eeb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimi_Hendrix> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "0.9998036645719234" ;
+        mtp:hasTextEvidence     "Hendrix" .
+
+<http://w3id.org/polifonia/pilot/meetups/61612050/9/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "San Francisco had been Jacob's new hometown since early June 1967 when he moved into an old Victorian flat with housemates Doug Leighton (future co-founder of RTS Systems intercom products), Ben Fong-Torres (editor at Rolling Stone) and his old friend Tom Gericke. Jacob's time in San Francisco was short as he soon left to mix sound for Hendrix in 49 cities across the U.S." ;
+        mtp:hasParticipant   meetup:9c22615a825ac5a89658caba8c4b9eeb ;
+        mtp:hasPurpose       meetup:e1c22a50e7794b3da48ad88fb74af1f0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abe_Jacob> ;
+        mtp:hasType          "HT" .
+
+meetup:520a70670bf7a2248cf65595f7d49801
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Abe Taft Jacob" .

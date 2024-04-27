@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e1e0c4c4c4c1b2464ec9f0ef315ae235
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dennis_Kucinich> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999992015915" ;
+        mtp:hasTextEvidence     "Kucinich" .
+
+<http://w3id.org/polifonia/pilot/meetups/624457/12/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2012, Simmons supported Ohio congressman Dennis Kucinich's re-election campaign, appearing with the politician at various speaking events." ;
+        mtp:hasParticipant   meetup:e1e0c4c4c4c1b2464ec9f0ef315ae235 ;
+        mtp:hasPurpose       meetup:286f65b6ab40b1f5a0b7dfb966f1fbd0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Russell_Simmons> ;
+        mtp:hasType          "HT" .
+
+meetup:286f65b6ab40b1f5a0b7dfb966f1fbd0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Activities and relationships of an individual" ;
+        mtp:hasEvidencePurposeSecond  "Events involving a public figure" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Dennis_Kucinich>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Russell_Simmons>
+        rdf:type  core:Person .

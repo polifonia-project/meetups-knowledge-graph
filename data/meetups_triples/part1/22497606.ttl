@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6dc5f1fbfbb5d267df6f0baa01f1f20b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8996946" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10000545" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/22497606/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Floyd Mutrux (born June 21, 1941) is an American stage and film director, writer, producer, and screenwriter." ;
+        mtp:hasParticipant   meetup:6bbd6e81c8bf96d419c724ee846cd582 ;
+        mtp:hasPurpose       meetup:6dc5f1fbfbb5d267df6f0baa01f1f20b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Floyd_Mutrux> ;
+        mtp:hasType          "HT" .
+
+meetup:6bbd6e81c8bf96d419c724ee846cd582
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Floyd_Mutrux> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Floyd Mutrux" .
+
+<http://dbpedia.org/resource/Floyd_Mutrux>
+        rdf:type  core:Person .

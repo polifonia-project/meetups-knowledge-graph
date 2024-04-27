@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Gene_Corman>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/36135628/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Eugene Harold \"Gene\" Corman (September 24, 1927 – September 28, 2020) was an American film producer and agent." ;
+        mtp:hasParticipant   meetup:50a5d77660d7abdd404727dc5180d777 ;
+        mtp:hasPurpose       meetup:594dbecedce63d9a55657ea633a52e5a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gene_Corman> ;
+        mtp:hasType          "HT" .
+
+meetup:3f40d3910f207e3b14b79c1bcb14cc62
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gene_Corman> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Eugene Harold \"Gene\" Corman" .
+
+meetup:594dbecedce63d9a55657ea633a52e5a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998185" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00015221511" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Roger_Corman>
+        rdf:type  core:Person .
+
+meetup:50a5d77660d7abdd404727dc5180d777
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gene_Corman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Eugene Harold \"Gene\" Corman" .
+
+meetup:22c27fdf1dc7a8a6b93881f16dda6334
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roger_Corman> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Roger Corman" .
+
+<http://w3id.org/polifonia/pilot/meetups/36135628/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "With his older brother Roger Corman, they co-founded New World Pictures." ;
+        mtp:hasParticipant   meetup:22c27fdf1dc7a8a6b93881f16dda6334 , meetup:3f40d3910f207e3b14b79c1bcb14cc62 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gene_Corman> ;
+        mtp:hasType          "HM" .

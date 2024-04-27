@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1147324/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1977 David Dundas (AUS No. 82)" ;
+        mtp:hasParticipant   meetup:c2ab39b9359cdc381bb7eaae2a0e3b97 ;
+        mtp:hasPurpose       meetup:bffc2a133c496d9a9ec976b391970c48 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lord_David_Dundas> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fa01c56f950329f635c34064222b0381
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David Paul Nicholas Dundas" .
+
+meetup:bffc2a133c496d9a9ec976b391970c48
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7484301" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.25065553" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Lord_David_Dundas>
+        rdf:type  core:Person .
+
+meetup:c2ab39b9359cdc381bb7eaae2a0e3b97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lord_David_Dundas> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "0.9999795636808204" ;
+        mtp:hasTextEvidence     "David Dundas" .
+
+meetup:c3ad42d0f11e266682afab7c1a97ea77
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8801984" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11979885" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1147324/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lord David Paul Nicholas Dundas (born 2 June 1945) is an English musician and actor, best known for his chart success in the pop genre during the 1970s as well as his later career in film and television scores." ;
+        mtp:hasParticipant   meetup:c480de370f6920b39c8357ce132ac989 , meetup:fa01c56f950329f635c34064222b0381 ;
+        mtp:hasPurpose       meetup:c3ad42d0f11e266682afab7c1a97ea77 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lord_David_Dundas> ;
+        mtp:hasType          "HM" .
+
+meetup:c480de370f6920b39c8357ce132ac989
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lord_David_Dundas> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lord David Paul Nicholas Dundas" .

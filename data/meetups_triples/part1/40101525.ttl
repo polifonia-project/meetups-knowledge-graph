@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d274c38d1aac13f5190c04e8540460fd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6488515" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2403445" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9f1de99a6c49a51e90c698b07226d058
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nikki_Williams> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999799628" ;
+        mtp:hasTextEvidence     "Nikki Williams" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/40101525/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nikki Williams (born 9 November 1988) is a South African singer-songwriter." ;
+        mtp:hasParticipant   meetup:9f1de99a6c49a51e90c698b07226d058 ;
+        mtp:hasPurpose       meetup:d274c38d1aac13f5190c04e8540460fd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nikki_Williams> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Nikki_Williams>
+        rdf:type  core:Person .

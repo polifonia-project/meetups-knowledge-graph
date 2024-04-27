@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:45225f159e5d48bb80f55e7d7b425256
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99958974" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00022474557" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:53e984efd2c9ec0fba055619e5d9462e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Butler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Henry Butler" .
+
+<http://w3id.org/polifonia/pilot/meetups/2964420/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked as a soloist and in groups in Los Angeles and New York City." ;
+        mtp:hasParticipant   meetup:865ae556134a41f7a552a6127e30f901 ;
+        mtp:hasPurpose       meetup:65d62f95afa953f69d34e10e778de9d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Butler> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:865ae556134a41f7a552a6127e30f901
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Butler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Henry Butler" .
+
+<http://dbpedia.org/resource/Henry_Butler>
+        rdf:type  core:Person .
+
+meetup:44c51bac57be191a6996c57be7f45e68
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Butler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Henry Butler" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:65d62f95afa953f69d34e10e778de9d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9845004" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008613096" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:d8ab8068efd80a8f62e94052f531c594
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.0767537e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2964420/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He received a college degree and graduate degree and taught at the New Orleans Center for the Creative Arts." ;
+        mtp:hasParticipant   meetup:53e984efd2c9ec0fba055619e5d9462e ;
+        mtp:hasPurpose       meetup:d8ab8068efd80a8f62e94052f531c594 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Butler> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2964420/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Henry Butler (September 21, 1948 – July 2, 2018) was an American jazz and blues pianist." ;
+        mtp:hasParticipant   meetup:44c51bac57be191a6996c57be7f45e68 ;
+        mtp:hasPurpose       meetup:45225f159e5d48bb80f55e7d7b425256 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Butler> ;
+        mtp:hasType          "HT" .

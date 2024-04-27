@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5e333ecbbf169720411843a008d43c6d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DJ_Kane> ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "0.9999882607595336" ;
+        mtp:hasTextEvidence     "DJ Kane" .
+
+meetup:ecdb85f10a78b8079a4be75608cf3de4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9986821" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007146838" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/16599608/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jason Cano (born in Houston, Texas), better known as DJ Kane, is an American" ;
+        mtp:hasParticipant   meetup:5e333ecbbf169720411843a008d43c6d ;
+        mtp:hasPurpose       meetup:ecdb85f10a78b8079a4be75608cf3de4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Kane> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/DJ_Kane>
+        rdf:type  core:Person .

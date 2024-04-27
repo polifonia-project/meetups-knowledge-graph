@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Marilyn_Monroe>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1695028/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Host Red Foley suggested calling her simply Norma Jean, and she made it official in 1958; she also became known on the program as Pretty Miss Norma Jean." ;
+        mtp:hasParticipant   meetup:9d8484596658ce1492686670a3ec3254 , meetup:07a0e520a373305575f732c8a008bb90 , meetup:a9f737413aea9ceecd124f1049c3bb03 ;
+        mtp:hasPurpose       meetup:fb91908a6941f349cdb3e9e52f41f4fc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Norma_Jean_(singer)> ;
+        mtp:hasType          "HM" .
+
+meetup:9d8484596658ce1492686670a3ec3254
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marilyn_Monroe> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "0.684204392784865" ;
+        mtp:hasTextEvidence     "Norma Jean" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:07a0e520a373305575f732c8a008bb90
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Red_Foley> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "0.9999999999974988" ;
+        mtp:hasTextEvidence     "Red Foley" .
+
+meetup:fb91908a6941f349cdb3e9e52f41f4fc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.438382" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.36358136" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Norma_Jean_(singer)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Red_Foley>
+        rdf:type  core:Person .
+
+meetup:a9f737413aea9ceecd124f1049c3bb03
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Norma_Jean_(singer)> ;
+        mtp:hasOffset           "130" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pretty Miss Norma Jean" .

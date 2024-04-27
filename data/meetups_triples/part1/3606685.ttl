@@ -1,0 +1,88 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Bob_Dylan>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7ea93ba1522442cdbc8937c651bff58a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Miller_(actor)> ;
+        mtp:hasOffset           "240" ;
+        mtp:hasSimilarityScore  "0.9144557633866413" ;
+        mtp:hasTextEvidence     "Billy Miller" .
+
+meetup:7895f97bfe85f5009dd223f0164db063
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miriam_Linna> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Miriam Linna" .
+
+<http://dbpedia.org/resource/Billy_Miller_(actor)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3606685/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Miriam Linna (born October 16, 1955 in Sudbury, Ontario) is a Canadian-American drummer who has run the Brooklyn-based independent record label Norton Records since 1986, originally with her husband, the late producer and singer-songwriter Billy Miller." ;
+        mtp:hasParticipant   meetup:06c2bad042b78ca167f45bb87ada4cde , meetup:7ea93ba1522442cdbc8937c651bff58a ;
+        mtp:hasPurpose       meetup:6579f4de769454394ffc3df70b69da1d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miriam_Linna> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Miriam_Linna>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ba49c2708b66a8b9e7ed6327249e4c04
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Dylan> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "0.999999999957936" ;
+        mtp:hasTextEvidence     "Bob Dylan" .
+
+meetup:06c2bad042b78ca167f45bb87ada4cde
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miriam_Linna> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Miriam Linna" .
+
+<http://w3id.org/polifonia/pilot/meetups/3606685/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her skill as a drummer earned her a \"May I recommend?\" nod from Bob Dylan on his XM Theme Time Radio Hour program (episode 37) in January 2007." ;
+        mtp:hasParticipant   meetup:7895f97bfe85f5009dd223f0164db063 , meetup:ba49c2708b66a8b9e7ed6327249e4c04 ;
+        mtp:hasPurpose       meetup:e35e87dead06bc9f005084a4a8bcf5dc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miriam_Linna> ;
+        mtp:hasType          "HM" .
+
+meetup:e35e87dead06bc9f005084a4a8bcf5dc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5024624" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.48945418" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6579f4de769454394ffc3df70b69da1d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Drummer and record label owner" ;
+        mtp:hasEvidencePurposeSecond  "Running a record label" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cc9be34e86583a14cb8c925369639cc8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Pirner> ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "0.99999999999568" ;
+        mtp:hasTextEvidence     "Pirner" .
+
+meetup:25ef9041f2d275e3b45d706afabefadf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Tommy's shows and surprise encore" ;
+        mtp:hasEvidencePurposeSecond  "Unexpected appearance by Dave Pirner" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/889681/27/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In May 2011, Tommy played three well-attended shows in the Midwest – Club Garibaldi's in Milwaukee, First Avenue in Minneapolis and Double Door in Chicago. At First Avenue, he was surprised onstage by Dave Pirner from Soul Aslyum for the encore." ;
+        mtp:hasParticipant   meetup:cc9be34e86583a14cb8c925369639cc8 ;
+        mtp:hasPurpose       meetup:25ef9041f2d275e3b45d706afabefadf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Stinson> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Tommy_Stinson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Dave_Pirner>
+        rdf:type  core:Person .

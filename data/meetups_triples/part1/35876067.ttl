@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:523e3c5001e094774b71c4243f56c957
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Terry Leonard" .
+
+<http://dbpedia.org/resource/Kawhi_Leonard>
+        rdf:type  core:Person .
+
+meetup:73ea139c0021db25f107924d6927549d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DJ_Hatcha> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "DJ Hatcha" .
+
+<http://dbpedia.org/resource/DJ_Hatcha>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/35876067/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Terry Leonard, better known as DJ Hatcha or simply Hatcha, is a South London producer and DJ notable for his seminal work in the musical genre dubstep." ;
+        mtp:hasParticipant   meetup:523e3c5001e094774b71c4243f56c957 , meetup:73ea139c0021db25f107924d6927549d , meetup:e4e95c11e9b1f2545bbf13ec63566bf6 ;
+        mtp:hasPurpose       meetup:6e40b763391e49e7ad140a8626da90ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Hatcha> ;
+        mtp:hasType          "HM" .
+
+meetup:6e40b763391e49e7ad140a8626da90ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7761436" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22088003" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e4e95c11e9b1f2545bbf13ec63566bf6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kawhi_Leonard> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.6946808267081558" ;
+        mtp:hasTextEvidence     "Leonard" .

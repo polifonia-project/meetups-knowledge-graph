@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mick_Cocks>
+        rdf:type  core:Person .
+
+meetup:42208c7657580873f828a9c3b6f1d70f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mick_Cocks> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mick Cocks" .
+
+meetup:1e1c2977cff1d7c0a7e3e895a81d44d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99978715" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000210982" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/14743580/3/15>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mick Cocks died from liver cancer on 22 December 2009, aged 54." ;
+        mtp:hasParticipant   meetup:42208c7657580873f828a9c3b6f1d70f ;
+        mtp:hasPurpose       meetup:1e1c2977cff1d7c0a7e3e895a81d44d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mick_Cocks> ;
+        mtp:hasType          "HT" .

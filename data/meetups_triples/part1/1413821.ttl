@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Eric_Brosius>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Terri_Brosius>
+        rdf:type  core:Person .
+
+meetup:bd44eb386b4734b24acad0ae4645853f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9594372" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.024394529" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2dc8082d26bc8cb37018e6338acd5847
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eric_Brosius> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Eric Brosius" .
+
+<http://w3id.org/polifonia/pilot/meetups/1413821/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is a former member of the band Tribe and is married to Terri Brosius." ;
+        mtp:hasParticipant   meetup:1cc25554af913c4085c8451a78aac9d3 , meetup:60ba25e496cf010811d91f3e5e8eed13 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eric_Brosius> ;
+        mtp:hasType          "HM" .
+
+meetup:60ba25e496cf010811d91f3e5e8eed13
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eric_Brosius> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Eric Brosius" .
+
+meetup:1cc25554af913c4085c8451a78aac9d3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Terri_Brosius> ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Terri Brosius" .
+
+<http://w3id.org/polifonia/pilot/meetups/1413821/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is currently a member of the bands Eddie Japan and Dark Wheels." ;
+        mtp:hasParticipant   meetup:2dc8082d26bc8cb37018e6338acd5847 ;
+        mtp:hasPurpose       meetup:bd44eb386b4734b24acad0ae4645853f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eric_Brosius> ;
+        mtp:hasType          "HT" .

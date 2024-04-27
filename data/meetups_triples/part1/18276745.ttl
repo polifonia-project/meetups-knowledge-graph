@@ -1,0 +1,87 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ian_MacKaye>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:11f2366bc8bb311e966a3182a08754b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Drum_kit> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "0.981457601943486" ;
+        mtp:hasTextEvidence     "drums" .
+
+meetup:740a9bf5122e5691a7e6c298d294f5d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9988727" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00083080056" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:c48d9b0c752b64ea3a7a252c74152844
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amy_Farina> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Amy Farina" .
+
+<http://w3id.org/polifonia/pilot/meetups/18276745/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Amy Farina is a musician living in Washington, D.C." ;
+        mtp:hasParticipant   meetup:364ade3bc775710167dbb03e600e8f57 ;
+        mtp:hasPurpose       meetup:6e2e6c41cd4f894dd918cedf4f197cbc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amy_Farina> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4237a54d0df94c91c7b72ea3c723727e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ian_MacKaye> ;
+        mtp:hasOffset           "107" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ian MacKaye" .
+
+<http://dbpedia.org/resource/Amy_Farina>
+        rdf:type  core:Person .
+
+meetup:364ade3bc775710167dbb03e600e8f57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amy_Farina> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Amy Farina" .
+
+<http://dbpedia.org/resource/Drum_kit>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18276745/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As of 2001, Farina has played drums and sings in the Indie rock duo The Evens, which includes her husband, Ian MacKaye." ;
+        mtp:hasParticipant   meetup:c48d9b0c752b64ea3a7a252c74152844 , meetup:4237a54d0df94c91c7b72ea3c723727e , meetup:11f2366bc8bb311e966a3182a08754b9 ;
+        mtp:hasPurpose       meetup:740a9bf5122e5691a7e6c298d294f5d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amy_Farina> ;
+        mtp:hasType          "HM" .
+
+meetup:6e2e6c41cd4f894dd918cedf4f197cbc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8268125" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13747527" ;
+        mtp:hasSourcePurpose          "ML" .

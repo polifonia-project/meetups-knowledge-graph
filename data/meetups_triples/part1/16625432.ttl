@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/George_Benson>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f0a823e0adc17d6fdd457988315ee3c7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gene_Ammons> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gene Ammons" .
+
+<http://dbpedia.org/resource/King_Curtis>
+        rdf:type  core:Person .
+
+meetup:b32a22d10751e6139f40788ab8d7afb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_McDuff> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jack McDuff" .
+
+meetup:ac9b61797dfe2d2839016c0aa3c21d16
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/King_Curtis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ousley" .
+
+<http://dbpedia.org/resource/Gene_Ammons>
+        rdf:type  core:Person .
+
+meetup:c923a541df90341c730e16442ad91e49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Benson> ;
+        mtp:hasOffset           "78" ;
+        mtp:hasSimilarityScore  "0.99999999999676" ;
+        mtp:hasTextEvidence     "George Benson" .
+
+<http://dbpedia.org/resource/Jack_McDuff>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/16625432/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in Chicago, Ousley began playing in the late 1940s, and in the 1950s, accompanied  Billie Holiday and recorded with Dinah Washington. He played as a sideman with Gene Ammons in the 1950s and with Jack McDuff and George Benson in the 1960s." ;
+        mtp:hasParticipant   meetup:b32a22d10751e6139f40788ab8d7afb3 , meetup:f0a823e0adc17d6fdd457988315ee3c7 , meetup:c923a541df90341c730e16442ad91e49 , meetup:ac9b61797dfe2d2839016c0aa3c21d16 ;
+        mtp:hasPurpose       meetup:5bf25e7de986cedc4dfd34a2a03adbef ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harold_Ousley> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Harold_Ousley>
+        rdf:type  core:Person .
+
+meetup:5bf25e7de986cedc4dfd34a2a03adbef
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Ousley's career as a musician" ;
+        mtp:hasEvidencePurposeSecond  "Ousley's personal background" ;
+        mtp:hasSourcePurpose          "LLM" .

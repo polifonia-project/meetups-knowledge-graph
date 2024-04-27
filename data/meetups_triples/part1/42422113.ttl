@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:811a34eaaf17d477e172bc677c67b32e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Annabel_Arden> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Annabel Arden" .
+
+<http://dbpedia.org/resource/Annabel_Arden>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:50be3b468e6fffb49dae05dfa2333e10
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.40790847" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3533978" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/42422113/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Annabel Arden (born 11 November 1959) is a British actress, theatre and opera director, and one of the co-founders of Théâtre de Complicite." ;
+        mtp:hasParticipant   meetup:811a34eaaf17d477e172bc677c67b32e ;
+        mtp:hasPurpose       meetup:50be3b468e6fffb49dae05dfa2333e10 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Annabel_Arden> ;
+        mtp:hasType          "HT" .

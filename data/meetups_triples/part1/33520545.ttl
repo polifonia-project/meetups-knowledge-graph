@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/33520545/26/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Miranda Mulholland, Whipping Boy (2014) - vocals/fiddle" ;
+        mtp:hasParticipant   meetup:b423066eb2af4ae249bf51b52f63e3ba ;
+        mtp:hasPurpose       meetup:072ce029f149fb34d1d49d7bff862d70 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miranda_Mulholland> ;
+        mtp:hasType          "HT" .
+
+meetup:072ce029f149fb34d1d49d7bff862d70
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.78303033" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.20037046" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b423066eb2af4ae249bf51b52f63e3ba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miranda_Mulholland> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Miranda Mulholland" .
+
+<http://dbpedia.org/resource/Miranda_Mulholland>
+        rdf:type  core:Person .

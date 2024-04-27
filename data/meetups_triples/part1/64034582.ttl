@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Tate_McRae>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/64034582/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At age four, due to her father's work, she moved with her family to Oman, where her mother taught dance lessons, and lived there for three years. During her time in Oman, McRae attended The American International School Muscat (TAISM)." ;
+        mtp:hasPurpose       meetup:2c5854477a763fa823e2badb76c3cddc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tate_McRae> ;
+        mtp:hasType          "HT" .
+
+meetup:2c5854477a763fa823e2badb76c3cddc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Attending school in Oman" ;
+        mtp:hasEvidencePurposeSecond  "Family's relocation and mother teaching dance" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .

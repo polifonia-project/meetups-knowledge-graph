@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9f38e1b2e0a49c1c6fc9915f54233aee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.89327633" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.057078537" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Lester_Koenig>
+        rdf:type  core:Person .
+
+meetup:a82fae9df16f3f09ec98dab3ac5a6219
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_P._Hammond> ;
+        mtp:hasOffset           "47" ;
+        mtp:hasSimilarityScore  "0.9999999999977832" ;
+        mtp:hasTextEvidence     "John Hammond" .
+
+<http://dbpedia.org/resource/David_Stuart_(Mayanist)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/55107882/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lester Koenig (December 3, 1917 – November 20, 1977) was an American screenwriter, film producer, and founder of the jazz record label Contemporary Records." ;
+        mtp:hasParticipant   meetup:6028fcf4723195b49c65e7d7988cdbab ;
+        mtp:hasPurpose       meetup:9f38e1b2e0a49c1c6fc9915f54233aee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lester_Koenig> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/55107882/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1937, B.P. Schulberg offered him a job as a writer at Paramount Studios and he moved to Los Angeles. In Los Angeles, leveraging his experience with John Hammond, he was hired by David Stuart and his wife, Marili Morden – the owners of the Jazz Man Record Shop which was adjacent to Paramount Studios – to produce some records under Stuart's Jazz Man Records label." ;
+        mtp:hasParticipant   meetup:fa52bbf8c3509d68add1e7514c05ba02 , meetup:a82fae9df16f3f09ec98dab3ac5a6219 , meetup:e1e86bf4cc15f62234d76a2d91dd68a3 ;
+        mtp:hasPurpose       meetup:0cf9b2d23120d6fb6a56119d18976514 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lester_Koenig> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/John_P._Hammond>
+        rdf:type  core:Person .
+
+meetup:0cf9b2d23120d6fb6a56119d18976514
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Producing records for Jazz Man Records" ;
+        mtp:hasEvidencePurposeSecond  "Job offer from Paramount Studios" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6028fcf4723195b49c65e7d7988cdbab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lester_Koenig> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lester Koenig" .
+
+meetup:fa52bbf8c3509d68add1e7514c05ba02
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Stuart_(Mayanist)> ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "0.5975023801171471" ;
+        mtp:hasTextEvidence     "David Stuart" .
+
+meetup:e1e86bf4cc15f62234d76a2d91dd68a3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "104" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marili Morden" .

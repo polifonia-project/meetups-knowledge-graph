@@ -1,0 +1,97 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:bd1a6920690b4a774159afa6bb35e531
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999901" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.411366e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:dc76bfe5e5c7072caeff5b07da464e6c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998093" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00012128917" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/698755/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "George Wassouf (Arabic: جورج وسوف; born 23 December 1961, nicknamed Abou-Wadie (ابو وديع) and Sultan El-Tarab (سلطان الطرب))" ;
+        mtp:hasParticipant   meetup:cfc251743827f07433d6a3c6d68f45a0 , meetup:98cf71a751000e0642b59f757d357bee ;
+        mtp:hasPurpose       meetup:bd1a6920690b4a774159afa6bb35e531 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Wassouf> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Bashar_al-Assad>
+        rdf:type  core:Person .
+
+meetup:98cf71a751000e0642b59f757d357bee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Wassouf> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "George Wassouf" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/698755/5/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was married to Qatar rally champion Nada Zeidan, his second wife." ;
+        mtp:hasParticipant   meetup:60b169317c046d563be45a6b89718e2d ;
+        mtp:hasPurpose       meetup:dc76bfe5e5c7072caeff5b07da464e6c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Wassouf> ;
+        mtp:hasType          "HT" .
+
+meetup:71041b28c952a94894094b66876c7ff6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Wassouf> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "George Wassouf" .
+
+meetup:60b169317c046d563be45a6b89718e2d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Wassouf> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "George Wassouf" .
+
+meetup:cfc251743827f07433d6a3c6d68f45a0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Abou-Wadie" .
+
+<http://w3id.org/polifonia/pilot/meetups/698755/5/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wassouf has been a prominent supporter of President Bashar al-Assad's government throughout the Syrian Civil War." ;
+        mtp:hasParticipant   meetup:6292638b0f38cb8a40a95ab125b18692 , meetup:71041b28c952a94894094b66876c7ff6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Wassouf> ;
+        mtp:hasType          "HM" .
+
+meetup:6292638b0f38cb8a40a95ab125b18692
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bashar_al-Assad> ;
+        mtp:hasOffset           "52" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bashar al-Assad" .
+
+<http://dbpedia.org/resource/George_Wassouf>
+        rdf:type  core:Person .

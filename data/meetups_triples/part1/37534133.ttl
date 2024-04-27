@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8e73c969fffd98e732a4582befb634d9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9930335" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0069471477" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:82f0a68826a2c6f845d8df1590bbc0a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to jazz saxophonist" ;
+        mtp:hasEvidencePurposeSecond  "Information about personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Ole_Jacob_Hystad>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/37534133/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ole Jacob Hystad (born 20 July 1960) is a Norwegian jazz musician (tenor saxophone and clarinet)." ;
+        mtp:hasParticipant   meetup:bc4a46215fd152d1a0a631b3dcaa8158 ;
+        mtp:hasPurpose       meetup:8e73c969fffd98e732a4582befb634d9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ole_Jacob_Hystad> ;
+        mtp:hasType          "HT" .
+
+meetup:a57dde9f17e257537335ac25466570b5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ole_Jacob_Hystad> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ole Jacob Hystad" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/37534133/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born in Stord, and is the brother of jazz saxophonist Jan Kåre Hystad." ;
+        mtp:hasParticipant   meetup:a57dde9f17e257537335ac25466570b5 ;
+        mtp:hasPurpose       meetup:82f0a68826a2c6f845d8df1590bbc0a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ole_Jacob_Hystad> ;
+        mtp:hasType          "HT" .
+
+meetup:bc4a46215fd152d1a0a631b3dcaa8158
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ole_Jacob_Hystad> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ole Jacob Hystad" .

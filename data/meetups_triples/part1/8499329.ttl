@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5fd3a493cc7389e889eea4c275cae4c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Sirois> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joe Sirois" .
+
+<http://w3id.org/polifonia/pilot/meetups/8499329/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also played drums for the Boston-based band Street Dogs from 2004 to 2007." ;
+        mtp:hasParticipant   meetup:5fd3a493cc7389e889eea4c275cae4c6 ;
+        mtp:hasPurpose       meetup:f5389d0153a95b426ed359c82e2be71d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Sirois> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:854d19ad4a8ea64a84c387fe37e5fdee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Sirois> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joe Sirois" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Joe_Sirois>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8499329/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joe Sirois (born January 25, 1972) is an American drummer who plays with The Mighty Mighty Bosstones." ;
+        mtp:hasParticipant   meetup:854d19ad4a8ea64a84c387fe37e5fdee ;
+        mtp:hasPurpose       meetup:5891bcade254d45786f688021f245433 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Sirois> ;
+        mtp:hasType          "HT" .
+
+meetup:5891bcade254d45786f688021f245433
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9015856" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09104522" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f5389d0153a95b426ed359c82e2be71d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9955076" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0031960586" ;
+        mtp:hasSourcePurpose          "ML" .

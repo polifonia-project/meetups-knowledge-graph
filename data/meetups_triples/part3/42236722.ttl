@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:111df72bc5d1442c6c19bdddb5d587c4
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "of the twentieth century" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1900-01-01"^^xsd:date ;
+        time:hasEnd          "1999-12-31"^^xsd:date .
+
+meetup:a2dcf327eb961fa96ae1c66fbfda5854
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "20–25 March 1992" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1992-03-20"^^xsd:date ;
+        time:hasEnd          "1992-03-25"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/42236722/6/3>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:111df72bc5d1442c6c19bdddb5d587c4 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ursula_Günther> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Ursula_Günther>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/42236722/18/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:a2dcf327eb961fa96ae1c66fbfda5854 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ursula_Günther> ;
+        mtp:hasType     "HM" .

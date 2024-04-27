@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:bf1cf61d9b0ffbb974ca2c9b235611db
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Catarina Göransson" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:5d2be873993037b89dad59aa6b63320c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gina_Jacobi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999988178597784" ;
+        mtp:hasTextEvidence     "Gina Jacobi" .
+
+<http://w3id.org/polifonia/pilot/meetups/54671378/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gina Jacobi (born 12 December 1962 as Catarina Göransson) is a Swedish singer, songwriter, and record producer." ;
+        mtp:hasParticipant   meetup:bf1cf61d9b0ffbb974ca2c9b235611db , meetup:5d2be873993037b89dad59aa6b63320c ;
+        mtp:hasPurpose       meetup:3c78b875c4f01d958a82cc7ff578e1f6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gina_Jacobi> ;
+        mtp:hasType          "HM" .
+
+meetup:3c78b875c4f01d958a82cc7ff578e1f6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9807812" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0161854" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Gina_Jacobi>
+        rdf:type  core:Person .

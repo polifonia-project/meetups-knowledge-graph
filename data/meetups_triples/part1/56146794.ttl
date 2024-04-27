@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:77ca902976377ee91e7c809bf681cbdb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DerHova> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999993534" ;
+        mtp:hasTextEvidence     "DerHova" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:8a5b30d6b31dc2104e74975e18097293
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DerHova> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "H.A. Der-Hovagimian" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:04216475c6618f0810754d98bdd3482e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.65818167" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29746196" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/DerHova>
+        rdf:type  core:Person .
+
+meetup:3430480e4ef0a6fd4b9da6d4cd417950
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.73121375" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24422683" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/56146794/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "DerHova currently resides in Yerevan, Armenia." ;
+        mtp:hasParticipant   meetup:77ca902976377ee91e7c809bf681cbdb ;
+        mtp:hasPurpose       meetup:3430480e4ef0a6fd4b9da6d4cd417950 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DerHova> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/56146794/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "For the following 15 years, he was mainly credited under his stage name \"Mark Ryan\"." ;
+        mtp:hasParticipant   meetup:8a5b30d6b31dc2104e74975e18097293 ;
+        mtp:hasPurpose       meetup:04216475c6618f0810754d98bdd3482e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DerHova> ;
+        mtp:hasType          "HT" .

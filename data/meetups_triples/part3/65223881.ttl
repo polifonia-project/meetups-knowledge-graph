@@ -1,0 +1,39 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Heyoon_Jeong>
+        rdf:type  core:Person .
+
+meetup:f4cafd865ad6434d390de86dd1f750db
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "October 1 , 1996" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1996-10-01"^^xsd:date ;
+        time:hasEnd          "1996-10-01"^^xsd:date .
+
+meetup:e222e9301525ab12838cb50d9f1dd75e
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "Now" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/65223881/0/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:e222e9301525ab12838cb50d9f1dd75e ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Heyoon_Jeong> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/65223881/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:f4cafd865ad6434d390de86dd1f750db ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Heyoon_Jeong> ;
+        mtp:hasType     "HM" .

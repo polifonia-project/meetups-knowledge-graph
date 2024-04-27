@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/5972256/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mark Wynter (born Terence Sidney Lewis; 29 January 1943) is an English actor and former singer, who had four Top 20 singles in the 1960s, including \"Venus in Blue Jeans\" and \"Go Away Little Girl\"." ;
+        mtp:hasParticipant   meetup:c68cdd48e23b734247799141a9e53fe5 , meetup:2d22be22e72495726221783a71fdc8fa ;
+        mtp:hasPurpose       meetup:553af029e52c31bc7df92f702c8a9489 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Wynter> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:553af029e52c31bc7df92f702c8a9489
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8351757" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11974716" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2d22be22e72495726221783a71fdc8fa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Terence Sidney Lewis" .
+
+<http://dbpedia.org/resource/Mark_Wynter>
+        rdf:type  core:Person .
+
+meetup:c68cdd48e23b734247799141a9e53fe5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Wynter> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mark Wynter" .

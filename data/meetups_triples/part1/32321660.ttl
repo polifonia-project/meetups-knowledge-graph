@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<https://www.wikidata.org/wiki/Q1363177>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fafa5c6b1e0c9fd27842ce1d9d3af420
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/The_Soft_Moon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "The Soft Moon" .
+
+<http://dbpedia.org/resource/The_Soft_Moon>
+        rdf:type  core:Person .
+
+meetup:4d27148911d3225e690406fa95b96595
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q1363177> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Vasquez" .
+
+<http://w3id.org/polifonia/pilot/meetups/32321660/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band was founded by Vasquez as a solo project in 2009." ;
+        mtp:hasParticipant   meetup:4d27148911d3225e690406fa95b96595 , meetup:fafa5c6b1e0c9fd27842ce1d9d3af420 ;
+        mtp:hasPurpose       meetup:772b2e65f10fa53f8571be0b4f2e1975 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/The_Soft_Moon> ;
+        mtp:hasType          "HM" .
+
+meetup:772b2e65f10fa53f8571be0b4f2e1975
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8094821" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18960477" ;
+        mtp:hasSourcePurpose          "ML" .

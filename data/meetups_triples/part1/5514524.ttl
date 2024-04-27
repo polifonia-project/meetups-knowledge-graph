@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jeff_Duncan_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5514524/3/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Duncan also plays in and around Las Vegas, where he currently resides, and occasionally makes appearances in the Vegas Valley at Sin City Sinners shows. He is currently playing shows with Armored Saint, DC4, and the Las-Vegas based band, The Bones, featuring Sean Koos (ex-Joan Jett & The Blackhearts), Patrick Vitagliano (ex-John Connelly's Nuclear Theory), and brother Shawn Duncan." ;
+        mtp:hasParticipant   meetup:fdd5bc79970919dc39bb3e3b41f3f962 , meetup:dad670430ea910799fac68f77e216b03 ;
+        mtp:hasPurpose       meetup:b09eb80be500f0de6d4dcbf1267eeff5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Duncan_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Sean_Connery>
+        rdf:type  core:Person .
+
+meetup:dad670430ea910799fac68f77e216b03
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sean_Connery> ;
+        mtp:hasOffset           "106" ;
+        mtp:hasSimilarityScore  "0.5782676935040886" ;
+        mtp:hasTextEvidence     "Sean" .
+
+meetup:b09eb80be500f0de6d4dcbf1267eeff5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Duncan's involvement in various bands and performances" ;
+        mtp:hasEvidencePurposeSecond  "Duncan's residency and appearances in Las Vegas" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:fdd5bc79970919dc39bb3e3b41f3f962
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Duncan> ;
+        mtp:hasOffset           "224" ;
+        mtp:hasSimilarityScore  "0.9012019547173132" ;
+        mtp:hasTextEvidence     "Duncan" .
+
+<http://dbpedia.org/resource/Tim_Duncan>
+        rdf:type  core:Person .

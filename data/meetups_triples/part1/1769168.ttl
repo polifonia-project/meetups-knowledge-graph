@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:bf29bd34645c9d3e3d7968ad13b747d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pete_Fowler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pete Fowler" .
+
+meetup:8fa4547bb59e41d1db1d09c5a6290477
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pete_Fowler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pete Fowler" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:c06c98c353349ced1cff75d9d4d36bab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.61037886" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.38358203" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1769168/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has also worked on a number of other projects in the UK and Japan, such as television advertisements (Kia Picanto), as well as having art exhibitions in the UK and abroad." ;
+        mtp:hasParticipant   meetup:bf29bd34645c9d3e3d7968ad13b747d8 ;
+        mtp:hasPurpose       meetup:e2a147487cd5928ed17d5b662bae21c0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pete_Fowler> ;
+        mtp:hasType          "HT" .
+
+meetup:e2a147487cd5928ed17d5b662bae21c0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.83759" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15628031" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Pete_Fowler>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1769168/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pete Fowler (born 1969 in Cardiff) is a Welsh artist best known for his artwork for the Welsh band Super Furry Animals and his Monsterism toys and goods." ;
+        mtp:hasParticipant   meetup:8fa4547bb59e41d1db1d09c5a6290477 ;
+        mtp:hasPurpose       meetup:c06c98c353349ced1cff75d9d4d36bab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pete_Fowler> ;
+        mtp:hasType          "HT" .

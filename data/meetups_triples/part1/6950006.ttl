@@ -1,0 +1,90 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Bob_Clifford>
+        rdf:type  core:Person .
+
+meetup:ffe1b839ae6ac9bba798f32899c304dd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Salter" .
+
+meetup:53c751764e1cb4c94ae5297a28619cf2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Clifford> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.997444003032091" ;
+        mtp:hasTextEvidence     "Robert Clifford" .
+
+meetup:a28761e882642cb338e9f1e388b13df0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Washboard_Sam> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Washboard Sam" .
+
+meetup:8a90018b0405da17e2d001a7aea45d9b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9357423" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0640614" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:78119877bfa32635ec5f6e12f5f182a1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clifford_Brown> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Clifford Brown" .
+
+<http://w3id.org/polifonia/pilot/meetups/6950006/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert Clifford Brown (July 15, 1910 – November 6, 1966), known professionally as Washboard Sam, was an American blues musician and singer." ;
+        mtp:hasParticipant   meetup:53c751764e1cb4c94ae5297a28619cf2 , meetup:a28761e882642cb338e9f1e388b13df0 , meetup:78119877bfa32635ec5f6e12f5f182a1 ;
+        mtp:hasPurpose       meetup:8a90018b0405da17e2d001a7aea45d9b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Washboard_Sam> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Washboard_Sam>
+        rdf:type  core:Person .
+
+meetup:18e08a9e56fde1805b75217f7a3ba0d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Washboard_Sam> ;
+        mtp:hasOffset           "219" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Washboard Sam" .
+
+<http://dbpedia.org/resource/Clifford_Brown>
+        rdf:type  core:Person .
+
+meetup:cf254dd5a2248425e5fbe16b608dc239
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Concert organized to raise money" ;
+        mtp:hasEvidencePurposeSecond  "Fundraising for Washboard Sam's grave" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/6950006/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A concert organized by the executive producer Steve Salter, of the Killer Blues organization, was held on September 18, 2009, at the Howmet Playhouse Theater, in Whitehall, Michigan, to raise monies for a headstone for Washboard Sam's grave." ;
+        mtp:hasParticipant   meetup:18e08a9e56fde1805b75217f7a3ba0d6 , meetup:ffe1b839ae6ac9bba798f32899c304dd ;
+        mtp:hasPurpose       meetup:cf254dd5a2248425e5fbe16b608dc239 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Washboard_Sam> ;
+        mtp:hasType          "HM" .

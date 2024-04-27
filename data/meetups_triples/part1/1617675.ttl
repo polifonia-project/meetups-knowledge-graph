@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1617675/23/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"J.D. Crowe plays \"Lefty's Old Guitar\" - November 2006\"." ;
+        mtp:hasParticipant   meetup:a6c19d5f2e9c0529ee5aa477a2779392 ;
+        mtp:hasPurpose       meetup:c5641c64c30c6f8031487fc57007cfa0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/J._D._Crowe> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a6c19d5f2e9c0529ee5aa477a2779392
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/J._D._Crowe> ;
+        mtp:hasOffset           "1" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "J. D. Crowe" .
+
+<http://dbpedia.org/resource/J._D._Crowe>
+        rdf:type  core:Person .
+
+meetup:c5641c64c30c6f8031487fc57007cfa0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9764346" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01571189" ;
+        mtp:hasSourcePurpose          "ML" .

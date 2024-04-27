@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b58166574fe93926453e19bca5988266
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Description of the artist's music style." ;
+        mtp:hasEvidencePurposeSecond  "Description of the artist's talent and skills." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/487971/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ball was described in USA Today as \"a sensation, saucy singer and superb pianist... where Texas stomp-rock and Louisiana blues-swamp meet.\" The Boston Globe described her music as \"an irresistible celebratory blend of rollicking, two-fisted New Orleans piano, Louisiana swamp rock and smoldering Texas blues from a contemporary storyteller.\"" ;
+        mtp:hasParticipant   meetup:2d8967a9b0c9406876827d96445f407b ;
+        mtp:hasPurpose       meetup:b58166574fe93926453e19bca5988266 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marcia_Ball> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Marcia_Ball>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/487971/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marcia Ball (born March 20, 1949, Orange, Texas, United States) is an American blues singer and pianist raised in Vinton, Louisiana." ;
+        mtp:hasParticipant   meetup:0528ae99fb7c0820ae7285008de76cc2 ;
+        mtp:hasPurpose       meetup:45d29b1b007d5d946c4737857d209cca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marcia_Ball> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0528ae99fb7c0820ae7285008de76cc2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marcia_Ball> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marcia Ball" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:edebc45e4a197d8529bb645ca9c28b1a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marcia_Ball> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marcia Ball" .
+
+meetup:45d29b1b007d5d946c4737857d209cca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9960258" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0023125198" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/487971/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ball was described in USA Today as \"a sensation, saucy singer and superb pianist... where Texas stomp-rock and Louisiana blues-swamp meet.\"" ;
+        mtp:hasParticipant   meetup:edebc45e4a197d8529bb645ca9c28b1a ;
+        mtp:hasPurpose       meetup:2cd0c033b17992cfc0a64394ce4fdfb0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marcia_Ball> ;
+        mtp:hasType          "HT" .
+
+meetup:2cd0c033b17992cfc0a64394ce4fdfb0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95851326" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.041437484" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2d8967a9b0c9406876827d96445f407b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marcia_Ball> ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marcia Ball" .

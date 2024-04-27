@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Teddy_Randazzo>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/LaVern_Baker>
+        rdf:type  core:Person .
+
+meetup:fd91a1e4f26991a7fe001d2aa94cebdc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music industry" ;
+        mtp:hasEvidencePurposeSecond  "Career progression" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:692c3aa18b8be17497caed20d55e8691
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alan_Freed> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alan Freed" .
+
+meetup:cd3877ba6e5327d35ba3f7111dca06ff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to his music career" ;
+        mtp:hasEvidencePurposeSecond  "Related to his personal achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Alan_Freed>
+        rdf:type  core:Person .
+
+meetup:1485c4dfa60461f1147dfed68ee70645
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LaVern_Baker> ;
+        mtp:hasOffset           "93" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "LaVern Baker" .
+
+meetup:17f27766d550509d2c4c8628a4d68c8d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chuck_Berry> ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chuck Berry" .
+
+<http://w3id.org/polifonia/pilot/meetups/13191013/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As a solo artist, he had three singles that made the Billboard Hot 100:  \"Little Serenade\" (number 66) in 1958, \"The Way of a Clown\" (number 44) in 1960, and \"Big Wide World\" (number 51) in 1963. He co-starred in rock revues staged by Freed, appearing with such artists as Chuck Berry and LaVern Baker." ;
+        mtp:hasParticipant   meetup:1485c4dfa60461f1147dfed68ee70645 , meetup:17f27766d550509d2c4c8628a4d68c8d ;
+        mtp:hasPurpose       meetup:cd3877ba6e5327d35ba3f7111dca06ff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Teddy_Randazzo> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Chuck_Berry>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/13191013/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The following year, he became the group's lead singer, and sang on their hits \"Times Two, I Love You\" and \"And the Angels Sing\". The records' success brought him to the attention of disc jockey Alan Freed, who featured him in the movie Rock, Rock, Rock." ;
+        mtp:hasParticipant   meetup:692c3aa18b8be17497caed20d55e8691 ;
+        mtp:hasPurpose       meetup:fd91a1e4f26991a7fe001d2aa94cebdc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Teddy_Randazzo> ;
+        mtp:hasType          "HT" .

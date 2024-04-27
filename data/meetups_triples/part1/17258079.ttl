@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/John_Prine>
+        rdf:type  core:Person .
+
+meetup:867bc9fafb2efb2c8e0002a7ec1aef3a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pieta_Brown> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pieta Brown" .
+
+<http://dbpedia.org/resource/Mark_Knopfler>
+        rdf:type  core:Person .
+
+meetup:27f668726c1d246381b22d8d7abc8166
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.47300988" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3519244" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Amos_Lee>
+        rdf:type  core:Person .
+
+meetup:43548ccdefa65acf619b97d62753e99b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pieta_Brown> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pieta Brown" .
+
+meetup:cac3c19d6a3e9c31a66008cdcebb6721
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Prine> ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Prine" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/17258079/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pieta Brown (born 1973) is a critically acclaimed American artist, musician, producer, multi-instrumentalist, and singer-songwriter who has released eight albums and five EPs." ;
+        mtp:hasParticipant   meetup:867bc9fafb2efb2c8e0002a7ec1aef3a ;
+        mtp:hasPurpose       meetup:27f668726c1d246381b22d8d7abc8166 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pieta_Brown> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Pieta_Brown>
+        rdf:type  core:Person .
+
+meetup:f94c53bea125157fcd401751bfb427fa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Knopfler> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mark Knopfler" .
+
+meetup:c6a8316fd2a5938f07f7c84293b2e0a8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amos_Lee> ;
+        mtp:hasOffset           "66" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Amos Lee" .
+
+<http://w3id.org/polifonia/pilot/meetups/17258079/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She has performed with artists such as Mark Knopfler, John Prine, Amos Lee, Justin Vernon and Calexico." ;
+        mtp:hasParticipant   meetup:f94c53bea125157fcd401751bfb427fa , meetup:c6a8316fd2a5938f07f7c84293b2e0a8 , meetup:43548ccdefa65acf619b97d62753e99b , meetup:cac3c19d6a3e9c31a66008cdcebb6721 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pieta_Brown> ;
+        mtp:hasType          "HM" .

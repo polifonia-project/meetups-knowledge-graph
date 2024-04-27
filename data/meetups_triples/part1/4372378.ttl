@@ -1,0 +1,77 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:3f34c0543b9a05eb2430fdad9ba01b43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "de Guerbel" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b5bccafe9f5f69fff11d75dd568c31ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Study singing" ;
+        mtp:hasEvidencePurposeSecond  "Introduction to composer" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:675225870352debde7234bf00d05a492
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Unfortunate event" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:061988d3eddef5f44285f323cb45be09
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Geneviève_Ward> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Geneviève Ward" .
+
+<http://w3id.org/polifonia/pilot/meetups/4372378/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After a few years' stay in Europe, the family returned to New York, and soon afterward made the acquaintance of Henriette Sontag, who encouraged Ward to study singing. When the Ward family returned to Europe, Sontag gave Geneviève a letter of introduction to the composer Rossini." ;
+        mtp:hasParticipant   meetup:467129c11a20ff0e72a05e2edc27a3a5 ;
+        mtp:hasPurpose       meetup:b5bccafe9f5f69fff11d75dd568c31ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Geneviève_Ward> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Gioachino_Rossini>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:467129c11a20ff0e72a05e2edc27a3a5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gioachino_Rossini> ;
+        mtp:hasOffset           "105" ;
+        mtp:hasSimilarityScore  "0.9999999999480168" ;
+        mtp:hasTextEvidence     "Rossini" .
+
+<http://dbpedia.org/resource/Geneviève_Ward>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4372378/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Geneviève Ward, Countess de Guerbel, died of heart disease at her home in Hampstead on 18 August 1922, aged 85." ;
+        mtp:hasParticipant   meetup:3f34c0543b9a05eb2430fdad9ba01b43 , meetup:061988d3eddef5f44285f323cb45be09 ;
+        mtp:hasPurpose       meetup:675225870352debde7234bf00d05a492 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Geneviève_Ward> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/24165499/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A native of the San Francisco Bay Area, his 2019 album was the live affair, After the Rain: A Night for Coltrane, released on Tompkins Square in May that year." ;
+        mtp:hasParticipant   meetup:b97656d994d360d5ac25b0f68791aae4 ;
+        mtp:hasPurpose       meetup:c00b0f65412ea5f6c5f77c0c35645ad6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Teodross_Avery> ;
+        mtp:hasType          "HT" .
+
+meetup:1e456d3ca46567450167ce69eb75a27a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Teodross Avery is a jazz saxophonist" ;
+        mtp:hasEvidencePurposeSecond  "He was born in Fairfield, California" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/24165499/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Teodross Avery (born July 2, 1973 in Fairfield, California, United States) is an American jazz tenor saxophonist, who has released albums for the record labels including GRP Records and Impulse!" ;
+        mtp:hasParticipant   meetup:8c8339624a5072eea601e0d7e3a8d363 ;
+        mtp:hasPurpose       meetup:1e456d3ca46567450167ce69eb75a27a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Teodross_Avery> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Teodross_Avery>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b97656d994d360d5ac25b0f68791aae4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Teodross_Avery> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Teodross Avery" .
+
+meetup:c00b0f65412ea5f6c5f77c0c35645ad6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.57016134" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40472955" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8c8339624a5072eea601e0d7e3a8d363
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Teodross_Avery> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Teodross Avery" .

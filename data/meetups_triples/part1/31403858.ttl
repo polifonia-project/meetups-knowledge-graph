@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<https://www.wikidata.org/wiki/Q275788>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/31403858/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Scott Harding, sometimes credited as Scotty Hard, is a Canadian producer and musician who is based in New York City and who has worked in underground hip-hop and jazz." ;
+        mtp:hasParticipant   meetup:0446e435eedfa3b2110701f6f313db6a ;
+        mtp:hasPurpose       meetup:74610ac087d274bf7df644c14e301200 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Scott_Harding_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:d723847ab78b2324acbe6d7626e57805
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Scott_Harding_(musician)> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.999999648537885" ;
+        mtp:hasTextEvidence     "Scotty Hard" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ec6aaf032ba0f557eb5d2d1550f8b2ad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99192035" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.005766952" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0446e435eedfa3b2110701f6f313db6a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Scott_Harding_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.6330231410372942" ;
+        mtp:hasTextEvidence     "Scott Harding" .
+
+<http://w3id.org/polifonia/pilot/meetups/31403858/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His second solo album, Scotty Hard's Radical Reconstructive Surgery (2006), was an outright jazz album released by Thirsty Ear and featuring Harding producing and remixing \"an amazing all-star group\"." ;
+        mtp:hasParticipant   meetup:d723847ab78b2324acbe6d7626e57805 , meetup:37cf16a8e18fd8072300645c1e304144 ;
+        mtp:hasPurpose       meetup:ec6aaf032ba0f557eb5d2d1550f8b2ad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Scott_Harding_(musician)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Scott_Harding_(musician)>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:37cf16a8e18fd8072300645c1e304144
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q275788> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Harding" .
+
+meetup:74610ac087d274bf7df644c14e301200
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.64447206" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16126105" ;
+        mtp:hasSourcePurpose          "ML" .

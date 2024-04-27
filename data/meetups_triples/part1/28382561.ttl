@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:dba5db5f178ff4161a88b84285444e11
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5171908" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23624344" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/28382561/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dame Ruth Railton  (14 December 1915 – 23 February 2001) was a British music director and conductor." ;
+        mtp:hasParticipant   meetup:e3d9d220cf81a6c9292725ec17cc24fd ;
+        mtp:hasPurpose       meetup:dba5db5f178ff4161a88b84285444e11 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruth_Railton> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ruth_Railton>
+        rdf:type  core:Person .
+
+meetup:e3d9d220cf81a6c9292725ec17cc24fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruth_Railton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dame Ruth Railton" .

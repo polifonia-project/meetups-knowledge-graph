@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:e20adcd8b574027314b5b24d7dde0bab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.85629183" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13807741" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Pete_Staples>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/21252164/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pete Staples (born Peter Lawrence Staples, 3 May 1944) is an English musician best known as the original bassist of The Troggs." ;
+        mtp:hasParticipant   meetup:96f87d5c147b7d786224b9ec9a48cfc7 , meetup:f7f993f2eaeda9949402e3d8dd11f84e ;
+        mtp:hasPurpose       meetup:e20adcd8b574027314b5b24d7dde0bab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pete_Staples> ;
+        mtp:hasType          "HM" .
+
+meetup:f7f993f2eaeda9949402e3d8dd11f84e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pete_Staples> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pete Staples" .
+
+<http://dbpedia.org/resource/Peter_Anthony_Lawrence>
+        rdf:type  core:Person .
+
+meetup:96f87d5c147b7d786224b9ec9a48cfc7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Anthony_Lawrence> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.9994854758244784" ;
+        mtp:hasTextEvidence     "Peter Lawrence" .

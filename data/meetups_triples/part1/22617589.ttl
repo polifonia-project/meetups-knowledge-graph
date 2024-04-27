@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Otto_Mortensen>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/22617589/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Otto Hübertz Mortensen (18 August 1907 – 30 August 1986) was a Danish composer and conductor." ;
+        mtp:hasParticipant   meetup:a07895c3a771db7bf3596d3f6179c869 , meetup:1f5d2b202717d2837e7b89d68b54e55e ;
+        mtp:hasPurpose       meetup:fbb18031db48a6f2d6ef8c396e5276a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Otto_Mortensen> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:fbb18031db48a6f2d6ef8c396e5276a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8761952" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12271829" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1f5d2b202717d2837e7b89d68b54e55e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Otto Hübertz Mortensen" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:3041fb19915dfe87209d84f6e4a1f90f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9613656" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03792314" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a07895c3a771db7bf3596d3f6179c869
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Otto_Mortensen> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.7318206431800317" ;
+        mtp:hasTextEvidence     "Mortensen" .
+
+<http://w3id.org/polifonia/pilot/meetups/22617589/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "For a number of years he worked at the Royal Danish Theatre as a rehearser for the opera, and later worked at Aarhus University." ;
+        mtp:hasParticipant   meetup:18fc84713d0c0c9f910af020faca1050 ;
+        mtp:hasPurpose       meetup:3041fb19915dfe87209d84f6e4a1f90f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Otto_Mortensen> ;
+        mtp:hasType          "HT" .
+
+meetup:18fc84713d0c0c9f910af020faca1050
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Otto_Mortensen> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mortensen" .

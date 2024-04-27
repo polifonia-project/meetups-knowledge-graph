@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/14437645/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jerry Brandt (January 29, 1938 – January 16, 2021) was an American entrepreneur, impresario, agent, manager, promoter and club owner who was active since the 1960s." ;
+        mtp:hasParticipant   meetup:5e918f55707382b247934450a8ddda31 ;
+        mtp:hasPurpose       meetup:77ab84255c7cde44a72dcbf12e83afe2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jerry_Brandt> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Lori_Petty>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/14437645/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is known for discovering Carly Simon and serving as her first manager, as well as for his work with Lori Petty." ;
+        mtp:hasParticipant   meetup:d6b4d862fa917db4939171c9cb057eb4 , meetup:681258321dea4517c2cb812e22baaf97 , meetup:a5e54964169159fc8f475713c0341864 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jerry_Brandt> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:5e918f55707382b247934450a8ddda31
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jerry_Brandt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Jerry Brandt" .
+
+meetup:d6b4d862fa917db4939171c9cb057eb4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jerry_Brandt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jerry Brandt" .
+
+meetup:77ab84255c7cde44a72dcbf12e83afe2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7317078" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2458326" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jerry_Brandt>
+        rdf:type  core:Person .
+
+meetup:a5e54964169159fc8f475713c0341864
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carly_Simon> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "0.9999999678918816" ;
+        mtp:hasTextEvidence     "Carly Simon" .
+
+meetup:681258321dea4517c2cb812e22baaf97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lori_Petty> ;
+        mtp:hasOffset           "103" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lori Petty" .
+
+<http://dbpedia.org/resource/Carly_Simon>
+        rdf:type  core:Person .

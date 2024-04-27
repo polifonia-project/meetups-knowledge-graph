@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/26264409/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Roger Nilsson (born 19 April 1973) a Swedish bass-player best known for his work with The Quill, Spiritual Beggars, Arch Enemy and Firebird." ;
+        mtp:hasParticipant   meetup:f01a131d91cf56ea0e68a0d4df5193e0 ;
+        mtp:hasPurpose       meetup:b05f0b28fc7ce5e0e8939c8a0d2b040d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roger_Nilsson> ;
+        mtp:hasType          "HT" .
+
+meetup:f01a131d91cf56ea0e68a0d4df5193e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roger_Nilsson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Roger Nilsson" .
+
+<http://dbpedia.org/resource/Roger_Nilsson>
+        rdf:type  core:Person .
+
+meetup:b05f0b28fc7ce5e0e8939c8a0d2b040d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9557766" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.029077714" ;
+        mtp:hasSourcePurpose          "ML" .

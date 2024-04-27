@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/58990926/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Orielles are an English indie rock band from Halifax, West Yorkshire, England." ;
+        mtp:hasParticipant   meetup:29c40b2dfc03e3391064cad61076ec7f ;
+        mtp:hasPurpose       meetup:a397956966775473bc4e9c715c8c9ec5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/The_Orielles> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:29c40b2dfc03e3391064cad61076ec7f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/The_Orielles> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "The Orielles" .
+
+<http://dbpedia.org/resource/The_Orielles>
+        rdf:type  core:Person .
+
+meetup:a397956966775473bc4e9c715c8c9ec5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995789" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00035233962" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/14678157/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A solo artist, he is currently the singer, songwriter and guitarist for the band Dan Nelson and The Contention." ;
+        mtp:hasParticipant   meetup:4b84756b445d5f388e2621c790dbfd90 ;
+        mtp:hasPurpose       meetup:72736bfe17805794623105dc7dde4712 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Nelson> ;
+        mtp:hasType          "HT" .
+
+meetup:cdb221d92f475ef1ed713ca0a596b53e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9089733" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04667772" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:4b84756b445d5f388e2621c790dbfd90
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dan_Nelson> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Dan Nelson" .
+
+<http://dbpedia.org/resource/Dan_Nelson>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f8509f5716ffb104f065a8d2d282553c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dan_Nelson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999969305" ;
+        mtp:hasTextEvidence     "Dan Nelson" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/14678157/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dan Nelson (born June 21, 1976) is an American singer-songwriter, guitarist and bassist from New York City." ;
+        mtp:hasParticipant   meetup:f8509f5716ffb104f065a8d2d282553c ;
+        mtp:hasPurpose       meetup:cdb221d92f475ef1ed713ca0a596b53e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Nelson> ;
+        mtp:hasType          "HT" .
+
+meetup:72736bfe17805794623105dc7dde4712
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8860957" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08738612" ;
+        mtp:hasSourcePurpose          "ML" .

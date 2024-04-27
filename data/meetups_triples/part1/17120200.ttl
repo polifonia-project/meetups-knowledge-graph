@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/17120200/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yuriko Kuronuma (黒沼 ユリ子, Kuronuma Yuriko) (born 4 June 1940, in Tokyo) is a Japanese violinist." ;
+        mtp:hasParticipant   meetup:a1add72cb8bc544617b997ea16ed1cb0 , meetup:9131c7117d43f0143b00bd75f1db9cd5 ;
+        mtp:hasPurpose       meetup:ec0c6625e143d327c3e03142e4cf4b72 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuriko_Kuronuma> ;
+        mtp:hasType          "HM" .
+
+meetup:a1add72cb8bc544617b997ea16ed1cb0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kuronuma Yuriko" .
+
+meetup:9131c7117d43f0143b00bd75f1db9cd5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yuriko_Kuronuma> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999167130544" ;
+        mtp:hasTextEvidence     "Yuriko Kuronuma" .
+
+meetup:ec0c6625e143d327c3e03142e4cf4b72
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Yuriko Kuronuma is a violinist" ;
+        mtp:hasEvidencePurposeSecond  "She was born in Tokyo" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Yuriko_Kuronuma>
+        rdf:type  core:Person .

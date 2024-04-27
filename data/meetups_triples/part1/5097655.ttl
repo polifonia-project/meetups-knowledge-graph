@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Red_Top_Young>
+        rdf:type  core:Person .
+
+meetup:a03502d48d6979c3d84764a5439fafd9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99835914" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0016407936" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:df7545749db7ab715cb9a9f7e28b6f8b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Lee_Jun-fai> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "0.9999999789686174" ;
+        mtp:hasTextEvidence     "Robert Lee" .
+
+meetup:75703787d6e416045d557e79f5a6c7fa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Red_Top_Young> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999654030496" ;
+        mtp:hasTextEvidence     "Red Top Young" .
+
+<http://dbpedia.org/resource/Robert_Lee_Jun-fai>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e3eba8746cf928133d32f27e762b3190
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Robert Young's education." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also provides information about Robert Young's personal life." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8e9ad3038893c7ec75bd5ed01f4fbe63
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Lee_Jun-fai> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Robert Lee" .
+
+<http://w3id.org/polifonia/pilot/meetups/5097655/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert Lee Young was born February 15, 1936 in Martinsville, Virginia, to Willie and Mattie Young. One of seven children, he started his education in Martinsville and completed high school in Elyria, Ohio." ;
+        mtp:hasParticipant   meetup:8e9ad3038893c7ec75bd5ed01f4fbe63 ;
+        mtp:hasPurpose       meetup:e3eba8746cf928133d32f27e762b3190 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Red_Top_Young> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/5097655/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Red Top Young (born Robert Lee Young; February 15, 1936 – May 26, 2021) was an American blues, rhythm and blues, country, rock and roll and jazz musician." ;
+        mtp:hasParticipant   meetup:df7545749db7ab715cb9a9f7e28b6f8b , meetup:75703787d6e416045d557e79f5a6c7fa ;
+        mtp:hasPurpose       meetup:a03502d48d6979c3d84764a5439fafd9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Red_Top_Young> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:216cbc9e0ecb5879e7c538e978cae1e0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99966896" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00022773011" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/30134201/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She continued her studies in Stockholm with composer Sven-David Sandström." ;
+        mtp:hasParticipant   meetup:a135beac02b948693330f67056f7f525 ;
+        mtp:hasPurpose       meetup:216cbc9e0ecb5879e7c538e978cae1e0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Åse_Hedstrøm> ;
+        mtp:hasType          "HT" .
+
+meetup:a135beac02b948693330f67056f7f525
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Åse_Hedstrøm> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Åse Hedstrøm" .
+
+<http://dbpedia.org/resource/Åse_Hedstrøm>
+        rdf:type  core:Person .

@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:34531c7286cd53ecd78a6fae3fd6bf2d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Dimkich> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mike Dimkich" .
+
+<http://dbpedia.org/resource/Steve_Jones_(musician)>
+        rdf:type  core:Person .
+
+meetup:68d2c4d8775ca5af5a382daafb71b962
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8993581" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08903879" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/18469012/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mike Dimkich (born 15 February 1968) is an American guitarist who is currently a member of the punk rock band Bad Religion." ;
+        mtp:hasParticipant   meetup:ce0e9a080698b30a3887f752411999cd ;
+        mtp:hasPurpose       meetup:68d2c4d8775ca5af5a382daafb71b962 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Dimkich> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mike_Dimkich>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:57038e5fd376a07803b4630b6f33371e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Jones_(musician)> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "0.9116443112392368" ;
+        mtp:hasTextEvidence     "Steve Jones" .
+
+<http://w3id.org/polifonia/pilot/meetups/18469012/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has also played for The Cult, Channel 3, Suckerpunch, and Steve Jones." ;
+        mtp:hasParticipant   meetup:34531c7286cd53ecd78a6fae3fd6bf2d , meetup:57038e5fd376a07803b4630b6f33371e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Dimkich> ;
+        mtp:hasType          "HM" .
+
+meetup:ce0e9a080698b30a3887f752411999cd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Dimkich> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mike Dimkich" .

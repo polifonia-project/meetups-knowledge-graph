@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Iona_Brown>
+        rdf:type  core:Person .
+
+meetup:9b1e28252e50ecf2c0d132ab34cb8700
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Iona_Brown> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Iona Brown" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f9104f9a0407c07b86e3e7abffe88cb5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Iona_Brown> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "0.9999999999995168" ;
+        mtp:hasTextEvidence     "Iona Brown" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/723480/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Iona Brown, OBE, (7 January 1941 – 5 June 2004) was a British violinist and conductor." ;
+        mtp:hasParticipant   meetup:9b1e28252e50ecf2c0d132ab34cb8700 ;
+        mtp:hasPurpose       meetup:2f37b3bcab1663ba3ff1dac7ed1f0828 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Iona_Brown> ;
+        mtp:hasType          "HT" .
+
+meetup:2f37b3bcab1663ba3ff1dac7ed1f0828
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.50131226" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4960451" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8ade7931bbd300e47bd032e75b882d1f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8886624" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10159776" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/723480/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Elizabeth Iona Brown was born in Salisbury and was educated at Cranborne Chase School, Dorset." ;
+        mtp:hasParticipant   meetup:f9104f9a0407c07b86e3e7abffe88cb5 ;
+        mtp:hasPurpose       meetup:8ade7931bbd300e47bd032e75b882d1f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Iona_Brown> ;
+        mtp:hasType          "HT" .

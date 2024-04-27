@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ecd4e3932ec71dac9b9fd460a0cee4cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8603636" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13962168" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1992462/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johnny Costa (born John Costanza; January 18, 1922 – October 11, 1996) was an American jazz pianist." ;
+        mtp:hasParticipant   meetup:af10c6bd03835d9c0e4cbfabe98ff5b7 , meetup:5325b598576f52bb4d6321f46ec4a44b ;
+        mtp:hasPurpose       meetup:ecd4e3932ec71dac9b9fd460a0cee4cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Costa> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1992462/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On the day of his graduation, he began work as the house pianist for a radio station in Pittsburgh. Eventually he performed the same role for KDKA-TV in Pittsburgh." ;
+        mtp:hasPurpose       meetup:1b16ee9a694e2d030080711693e57ed7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Costa> ;
+        mtp:hasType          "HT" .
+
+meetup:af10c6bd03835d9c0e4cbfabe98ff5b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Costa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99999999997101" ;
+        mtp:hasTextEvidence     "Johnny Costa" .
+
+<http://dbpedia.org/resource/Johnny_Costa>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/John_Costanza>
+        rdf:type  core:Person .
+
+meetup:1b16ee9a694e2d030080711693e57ed7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Working as a pianist for radio and TV stations" ;
+        mtp:hasEvidencePurposeSecond  "Graduating and starting a job" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:5325b598576f52bb4d6321f46ec4a44b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Costanza> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.9999999998535144" ;
+        mtp:hasTextEvidence     "John Costanza" .

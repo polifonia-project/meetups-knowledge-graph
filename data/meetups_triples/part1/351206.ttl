@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:8071dc8a640c2eeb115d2019943f3d64
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Jeremy Steig, who was a jazz flutist, indicating the topic of music making." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions Jeremy Steig's personal life, but the main focus is on his career as a musician." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Jeremy_Steig>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/351206/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeremy Steig (September 23, 1942 – April 13, 2016) was an American jazz flutist." ;
+        mtp:hasParticipant   meetup:a0dbd08e576ab40facc0fd02e7a5d278 ;
+        mtp:hasPurpose       meetup:8071dc8a640c2eeb115d2019943f3d64 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeremy_Steig> ;
+        mtp:hasType          "HT" .
+
+meetup:a0dbd08e576ab40facc0fd02e7a5d278
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeremy_Steig> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jeremy Steig" .

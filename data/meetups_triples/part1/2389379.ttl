@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2389379/9/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2017, Mann co-wrote and produced \"I Am Here\" on P!nk's million selling album entitled \"Beautiful Trauma\". Variety Magazine profiled the long-standing partnership between the artist and Mann just after the album's release." ;
+        mtp:hasParticipant   meetup:743eb85c82ae22244aa629dcf5e51ca2 ;
+        mtp:hasPurpose       meetup:0c09990ea6ce9dd177c88d64c35dd19a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Mann> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:743eb85c82ae22244aa629dcf5e51ca2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barry_Mann> ;
+        mtp:hasOffset           "79" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mann" .
+
+meetup:5a451041ad6e6a21cd7c21a290ce35b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Mann> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Billy Mann" .
+
+<http://dbpedia.org/resource/Billy_Mann>
+        rdf:type  core:Person .
+
+meetup:530eecaf468dfdcdf56a6fc288811378
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9886939" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007953611" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0c09990ea6ce9dd177c88d64c35dd19a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involves music production and collaboration" ;
+        mtp:hasEvidencePurposeSecond  "Meeting between artist and producer" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Barry_Mann>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/2389379/6/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy Mann and 1998’s Earthbound." ;
+        mtp:hasParticipant   meetup:5a451041ad6e6a21cd7c21a290ce35b9 ;
+        mtp:hasPurpose       meetup:530eecaf468dfdcdf56a6fc288811378 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Mann> ;
+        mtp:hasType          "HT" .

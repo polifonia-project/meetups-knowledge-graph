@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1631099/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lloyd Bradley (born 21 January 1955) is a British music journalist and author." ;
+        mtp:hasParticipant   meetup:7017c491d09de03395267cbc186b8e54 ;
+        mtp:hasPurpose       meetup:6ac785806a5952d1215ff23e8aae14b2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lloyd_Bradley> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:7017c491d09de03395267cbc186b8e54
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lloyd_Bradley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Lloyd Bradley" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Lloyd_Bradley>
+        rdf:type  core:Person .
+
+meetup:6ac785806a5952d1215ff23e8aae14b2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.77777725" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1541478" ;
+        mtp:hasSourcePurpose          "ML" .

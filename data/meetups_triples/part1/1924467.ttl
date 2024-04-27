@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1924467/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tracy Bonham (born March 16, 1967) is an American alternative rock musician, best known for her 1996 single \"Mother Mother\"." ;
+        mtp:hasParticipant   meetup:d46e7c1ff431cbd87c900951199e04bc ;
+        mtp:hasPurpose       meetup:48ef54a5b135b1079070efdc3b915147 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tracy_Bonham> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Tracy_Bonham>
+        rdf:type  core:Person .
+
+meetup:d46e7c1ff431cbd87c900951199e04bc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tracy_Bonham> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tracy Bonham" .
+
+meetup:48ef54a5b135b1079070efdc3b915147
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8859975" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11217125" ;
+        mtp:hasSourcePurpose          "ML" .

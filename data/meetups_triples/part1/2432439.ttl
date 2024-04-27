@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Frank_Welker>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2432439/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A life member of The Actors Studio, David – under her maiden name Nicole Jaffe – had previously appeared in The Trouble with Girls (1969) with Elvis Presley (and Scooby-Doo voice actor Frank Welker) and in Disney's The Love Bug (1968)." ;
+        mtp:hasParticipant   meetup:02371162514dec0053e124eba059bc2a , meetup:67270d4a268982c2a044300f9199e876 , meetup:535beaa376fe6402d466fef1e2f265f3 ;
+        mtp:hasPurpose       meetup:39b43893a48d51531d8ae459d0b2ac8e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicole_Jaffe> ;
+        mtp:hasType          "HM" .
+
+meetup:02371162514dec0053e124eba059bc2a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Welker> ;
+        mtp:hasOffset           "189" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Frank Welker" .
+
+meetup:535beaa376fe6402d466fef1e2f265f3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicole_Jaffe> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nicole Jaffe" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Elvis_Presley>
+        rdf:type  core:Person .
+
+meetup:67270d4a268982c2a044300f9199e876
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elvis_Presley> ;
+        mtp:hasOffset           "147" ;
+        mtp:hasSimilarityScore  "0.9999999999995453" ;
+        mtp:hasTextEvidence     "Elvis Presley" .
+
+meetup:39b43893a48d51531d8ae459d0b2ac8e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6535622" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24198759" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Nicole_Jaffe>
+        rdf:type  core:Person .

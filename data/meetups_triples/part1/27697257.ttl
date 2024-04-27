@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:16d125cc9f771b9ac7101f3b163a034f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9994711" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00036604516" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:33cc74170d6fb685c5daf262f600d4df
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Benny_Joy> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "0.9999999999981242" ;
+        mtp:hasTextEvidence     "Benny Joy" .
+
+meetup:9d750a28229ae568d9b836ca6a4175b5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Benny Joy was a rockabilly guitarist and singer" ;
+        mtp:hasEvidencePurposeSecond  "He was popular regionally in Florida" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/27697257/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Benjamin Eidson, known professionally as Benny Joy (November 5, 1935 – October 24, 1988) was an American rockabilly guitarist and singer who released three singles in his recording career, and was popular regionally in Florida." ;
+        mtp:hasParticipant   meetup:42d17346fd2665a3a5d652dbdbe23d24 ;
+        mtp:hasPurpose       meetup:9d750a28229ae568d9b836ca6a4175b5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Benny_Joy> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Benny_Joy>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/27697257/14/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rockin' and Rollin' with Benny Joy, Collector Records, CLCD 4401 (1992)" ;
+        mtp:hasParticipant   meetup:33cc74170d6fb685c5daf262f600d4df ;
+        mtp:hasPurpose       meetup:16d125cc9f771b9ac7101f3b163a034f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Benny_Joy> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:42d17346fd2665a3a5d652dbdbe23d24
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Benny_Joy> ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "0.9999999999997158" ;
+        mtp:hasTextEvidence     "Benny Joy" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/598583/4/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As an engagement present, Breckman applied his fiancee's name (spelled \"Beth Landow\") to the murder victim in Monk's season two (2003) première, \"Mr. Monk Goes Back to School\". He honored his wife again by naming a murder victim after her in The Good Cop, season 1, episode 6, \"Did the TV" ;
+        mtp:hasParticipant   meetup:0c2f93f5a488de4f7115d277f52d782a ;
+        mtp:hasPurpose       meetup:550cdd727222aae8ace8df5c7a01ecfe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Breckman> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:550cdd727222aae8ace8df5c7a01ecfe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to personal relationships" ;
+        mtp:hasEvidencePurposeSecond  "Unintentional occurrence of similar events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Andy_Breckman>
+        rdf:type  core:Person .
+
+meetup:0c2f93f5a488de4f7115d277f52d782a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Breckman" .

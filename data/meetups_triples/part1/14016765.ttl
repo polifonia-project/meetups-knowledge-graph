@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:2cf666af93953e1e00bd29b67f6bbd31
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Acquiring historical archives" ;
+        mtp:hasEvidencePurposeSecond  "Traveling for personal reasons" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/14016765/2/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1872, Gottel traveled to Guatemala to recover archives corresponding to the history of Nicaragua. Due to the country's instability at the time, the valuable historical documents were sent to San Francisco, California to be protected." ;
+        mtp:hasPurpose       meetup:2cf666af93953e1e00bd29b67f6bbd31 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Enrique_Gottel> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Enrique_Gottel>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:cd45ab5a48bd83b522238ba9f8307c30
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Enrique_Gottel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Enrique Gottel" .
+
+<http://w3id.org/polifonia/pilot/meetups/14016765/6/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He would have been buried at the San Pedro cemetery in Managua, which was built in 1862 and was the city's first cemetery. However, after the construction of the cemetery, the local Catholic Church restricted burial to Catholic citizens." ;
+        mtp:hasPurpose       meetup:c74f1f83a4415ada961f96c78b73838d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Enrique_Gottel> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e158b44b3b465d6f6352c0111be64b15
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99684" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.003075984" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/14016765/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Enrique Gottel (1831–1875) was a German-Nicaraguan journalist, music composer and historian." ;
+        mtp:hasParticipant   meetup:cd45ab5a48bd83b522238ba9f8307c30 ;
+        mtp:hasPurpose       meetup:e158b44b3b465d6f6352c0111be64b15 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Enrique_Gottel> ;
+        mtp:hasType          "HT" .
+
+meetup:c74f1f83a4415ada961f96c78b73838d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Individual's burial and religious restrictions" ;
+        mtp:hasEvidencePurposeSecond  "Historical information about the cemetery" ;
+        mtp:hasSourcePurpose          "LLM" .

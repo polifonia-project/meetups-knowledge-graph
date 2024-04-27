@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1b26c63542c80cdee33a994a85cb06e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michele_Luppi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Michele Luppi" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:669b83c3ce9ab18f07be6434be0d696a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michele_Luppi> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Michele Luppi" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/47102117/15/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The 25th Hour - (2007)Michele Luppi's HeavenStrive - (2005)Los AngelesLos Angeles - (2007)" ;
+        mtp:hasParticipant   meetup:669b83c3ce9ab18f07be6434be0d696a ;
+        mtp:hasPurpose       meetup:b4a91f79077248446aa21a2cf904ceaa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michele_Luppi> ;
+        mtp:hasType          "HT" .
+
+meetup:6572d30396d083f6755878468780484e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8913428" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10856872" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/47102117/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michele Luppi (born 7 April 1974) is an Italian singer, keyboardist, producer, bassist, and vocal coach." ;
+        mtp:hasParticipant   meetup:1b26c63542c80cdee33a994a85cb06e0 ;
+        mtp:hasPurpose       meetup:6572d30396d083f6755878468780484e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michele_Luppi> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Michele_Luppi>
+        rdf:type  core:Person .
+
+meetup:b4a91f79077248446aa21a2cf904ceaa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6139423" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26124436" ;
+        mtp:hasSourcePurpose          "ML" .

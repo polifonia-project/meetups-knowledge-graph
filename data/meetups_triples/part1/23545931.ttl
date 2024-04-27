@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/23545931/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Since 2002 she has served on the musical instrument faculty at the Saint Petersburg Conservatory." ;
+        mtp:hasParticipant   meetup:0f181112eef6c555bc0a6a8e754a4f91 ;
+        mtp:hasPurpose       meetup:e1f6c84a7dae2cb68e065c9e71f94e7f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Svetlana_Nesterova> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:0f181112eef6c555bc0a6a8e754a4f91
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Svetlana_Nesterova> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Svetlana Nesterova" .
+
+<http://dbpedia.org/resource/Svetlana_Nesterova>
+        rdf:type  core:Person .
+
+meetup:e1f6c84a7dae2cb68e065c9e71f94e7f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99943846" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00056135183" ;
+        mtp:hasSourcePurpose          "ML" .

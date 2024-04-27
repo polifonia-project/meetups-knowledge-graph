@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Fran_Cosmo>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Pope_Francis>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/9967063/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Francis Cosmo Migliaccio (born October 17, 1956), known as Fran Cosmo, is an American musician best known as a former lead singer of the bands Boston and Orion the Hunter." ;
+        mtp:hasParticipant   meetup:c2bb7a3952d72cc71dbe3a6da6bafb2c , meetup:78c7782b7022bce74fa592bc88f3d060 ;
+        mtp:hasPurpose       meetup:f79cab413177041390436ed6767ec63a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fran_Cosmo> ;
+        mtp:hasType          "HM" .
+
+meetup:78c7782b7022bce74fa592bc88f3d060
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pope_Francis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7271024876744622" ;
+        mtp:hasTextEvidence     "Francis" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f79cab413177041390436ed6767ec63a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.57270324" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.27081004" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c2bb7a3952d72cc71dbe3a6da6bafb2c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fran_Cosmo> ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fran Cosmo" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:49e14ba60b7ccbf6b82089b7c70c516c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.70834875" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29157445" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/41935886/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His first single was \"A Cheap Imitation of You\" on the Swamp Pop label in 1990." ;
+        mtp:hasParticipant   meetup:0b8967a76c9d4c50f31dedadd804ba4d ;
+        mtp:hasPurpose       meetup:49e14ba60b7ccbf6b82089b7c70c516c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roger_Ballard> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Roger_Ballard>
+        rdf:type  core:Person .
+
+meetup:2ae5ada4854542e0fde7b85f64e586a4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9820691" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010892377" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:2ccf8e453893a760babd28e846b2ae28
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roger_Ballard> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999976458365691" ;
+        mtp:hasTextEvidence     "Roger Ballard" .
+
+meetup:0b8967a76c9d4c50f31dedadd804ba4d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roger_Ballard> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Roger Ballard" .
+
+<http://w3id.org/polifonia/pilot/meetups/41935886/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Roger Ballard (born in Kentwood, Louisiana) is an American country music singer-songwriter." ;
+        mtp:hasParticipant   meetup:2ccf8e453893a760babd28e846b2ae28 ;
+        mtp:hasPurpose       meetup:2ae5ada4854542e0fde7b85f64e586a4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roger_Ballard> ;
+        mtp:hasType          "HT" .

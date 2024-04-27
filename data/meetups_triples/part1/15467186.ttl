@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Lew_Williams>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:689e21683431bee174aa85e83d3d02f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95740813" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0327353" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5c281a3575392a2a8c5651bb858560f4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lew_Williams> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999988801487536" ;
+        mtp:hasTextEvidence     "Lew Williams" .
+
+<http://w3id.org/polifonia/pilot/meetups/15467186/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lew Williams died at age 85 on September 1, 2019 at an assisted living facility in Winnsboro, Texas." ;
+        mtp:hasParticipant   meetup:5c281a3575392a2a8c5651bb858560f4 ;
+        mtp:hasPurpose       meetup:689e21683431bee174aa85e83d3d02f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lew_Williams> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1262065/23/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In May 2006, he became the host of the station's morning drive-time program The Last of the Famous International Morning Shows, replacing Mighty Mighty Bosstones singer Dicky Barrett. Escalante's morning show included daily appearances by film director David Lynch, who served as weatherman, and actor Timothy Olyphant, who served as a sports commentator." ;
+        mtp:hasParticipant   meetup:d143239aaa8898739dc006d4c1e5e7fb , meetup:198e368b52dfccd40aa91a3a18cce6b2 ;
+        mtp:hasPurpose       meetup:036b0a5dbeda74deee4c654b7ee4daf0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Escalante> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Joe_Jonas>
+        rdf:type  core:Person .
+
+meetup:036b0a5dbeda74deee4c654b7ee4daf0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Host of a morning drive-time program" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration with film director and actor" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Joe_Escalante>
+        rdf:type  core:Person .
+
+meetup:d143239aaa8898739dc006d4c1e5e7fb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Lynch> ;
+        mtp:hasOffset           "69" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "David Lynch" .
+
+meetup:198e368b52dfccd40aa91a3a18cce6b2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Jonas> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joe" .
+
+<http://dbpedia.org/resource/David_Lynch>
+        rdf:type  core:Person .

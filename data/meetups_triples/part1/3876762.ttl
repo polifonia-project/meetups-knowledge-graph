@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:98568cddd1b4472c0bfc68a293ed72a3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jay_Chattaway> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jay Chattaway" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/3876762/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2001, he won an Emmy for Outstanding Music for a Series for the final episode of Star Trek: Voyager." ;
+        mtp:hasParticipant   meetup:98568cddd1b4472c0bfc68a293ed72a3 ;
+        mtp:hasPurpose       meetup:36ff35aa96c2e5a9777b597465c49a6a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jay_Chattaway> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/3876762/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jay Chattaway (born July 8, 1946) is an American composer of film and television scores." ;
+        mtp:hasParticipant   meetup:ac1bf5f0af8a36f2f727ab7fad9f4ec0 ;
+        mtp:hasPurpose       meetup:8eedb68af3d81fc472c2661aae2bc79a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jay_Chattaway> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Jay_Chattaway>
+        rdf:type  core:Person .
+
+meetup:36ff35aa96c2e5a9777b597465c49a6a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94223213" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.057238106" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8eedb68af3d81fc472c2661aae2bc79a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.91807044" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.055118646" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ac1bf5f0af8a36f2f727ab7fad9f4ec0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jay_Chattaway> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jay Chattaway" .

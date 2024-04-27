@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Daniel_Zhitomirsky>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/35245979/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Daniel Vladimirovich Zhitomirsky (22 December 1906 – 27 June 1992) was a Russian musicologist and music critic who specialized in the music of German composer Robert Schumann and the aesthetics of German Romanticism." ;
+        mtp:hasParticipant   meetup:0c7eb5cee0b61108cdc24990bd46ecba ;
+        mtp:hasPurpose       meetup:50aabdfcdc4ba9d277ac50d34510d1fc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daniel_Zhitomirsky> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4a038deb93e96b7bcc1ec686d812f00a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dmitri_Shostakovich> ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Dmitri Shostakovich" .
+
+<http://dbpedia.org/resource/Dmitri_Shostakovich>
+        rdf:type  core:Person .
+
+meetup:0c7eb5cee0b61108cdc24990bd46ecba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daniel_Zhitomirsky> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daniel Vladimirovich Zhitomirsky" .
+
+<http://w3id.org/polifonia/pilot/meetups/35245979/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also wrote extensively on Russian composers of the Soviet period, especially Dmitri Shostakovich." ;
+        mtp:hasParticipant   meetup:4a038deb93e96b7bcc1ec686d812f00a , meetup:781118627812c68e6cb0df6ec750c2e5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daniel_Zhitomirsky> ;
+        mtp:hasType          "HM" .
+
+meetup:781118627812c68e6cb0df6ec750c2e5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daniel_Zhitomirsky> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daniel Vladimirovich Zhitomirsky" .
+
+meetup:50aabdfcdc4ba9d277ac50d34510d1fc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998593" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.2295866e-06" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:76da21273650cf573ef47a94fabd9bc2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998706" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0011787747" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:9c4d09191ac5ff3081b1be4112dcc44f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lane_Caudell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lane Caudell" .
+
+<http://dbpedia.org/resource/Lane_Caudell>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/50784547/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lane Caudell (born April 25, 1952) is an American actor and singer-songwriter who appeared in the films Goodbye, Franklin High, and Hanging on a Star and played Woody King on the NBC daytime soap opera Days of Our Lives (1982–1983)." ;
+        mtp:hasParticipant   meetup:9c4d09191ac5ff3081b1be4112dcc44f , meetup:5c05d305826cdce473b897e8046d8568 ;
+        mtp:hasPurpose       meetup:76da21273650cf573ef47a94fabd9bc2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lane_Caudell> ;
+        mtp:hasType          "HM" .
+
+meetup:5c05d305826cdce473b897e8046d8568
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "161" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Woody King" .

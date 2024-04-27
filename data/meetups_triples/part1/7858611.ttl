@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:21aeccaee1253b26b523db59b7a57d84
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99958616" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00031230587" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8b7cdd4a5f6a58967f57fda85659b3f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emily_Loizeau> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "L'autre bout du monde" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/7858611/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "L'autre bout du monde (2006)" ;
+        mtp:hasParticipant   meetup:8b7cdd4a5f6a58967f57fda85659b3f2 ;
+        mtp:hasPurpose       meetup:91a369181af3d9f35a38285247983bb1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emily_Loizeau> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/7858611/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Emily Loizeau (born 7 February 1975) is a French author, composer, and singer." ;
+        mtp:hasParticipant   meetup:4bcc7d331466f7ffc1b10b6097afbdea ;
+        mtp:hasPurpose       meetup:21aeccaee1253b26b523db59b7a57d84 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emily_Loizeau> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Emily_Loizeau>
+        rdf:type  core:Person .
+
+meetup:91a369181af3d9f35a38285247983bb1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87045574" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07802409" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4bcc7d331466f7ffc1b10b6097afbdea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emily_Loizeau> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Emily Loizeau" .

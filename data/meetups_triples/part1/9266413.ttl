@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/9266413/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Erik Robert Jimmy Jansson (born September 17, 1985) is a Swedish singer and songwriter." ;
+        mtp:hasParticipant   meetup:4e739b4d50f583ac505501a01ef04db4 , meetup:6a9284c2739f862f535cc91e5086da09 ;
+        mtp:hasPurpose       meetup:611600af3fe50fe48817b2c76b41e422 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Jansson> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jimmy_Jansson>
+        rdf:type  core:Person .
+
+meetup:611600af3fe50fe48817b2c76b41e422
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999979" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.052942e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/9266413/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At Melodifestivalen 2020 he set a new record for the amount of competing entries by a composer at one contest with six entries." ;
+        mtp:hasParticipant   meetup:e1ce22181d834b33b56989ddd3d84ad3 ;
+        mtp:hasPurpose       meetup:693c5f55532607edece70d4e2675a19c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Jansson> ;
+        mtp:hasType          "HT" .
+
+meetup:e1ce22181d834b33b56989ddd3d84ad3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Jansson> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jimmy Jansson" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4e739b4d50f583ac505501a01ef04db4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Erik Robert Jimmy Jansson" .
+
+meetup:6a9284c2739f862f535cc91e5086da09
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Jansson> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jimmy Jansson" .
+
+meetup:693c5f55532607edece70d4e2675a19c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998604" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000124484" ;
+        mtp:hasSourcePurpose          "ML" .

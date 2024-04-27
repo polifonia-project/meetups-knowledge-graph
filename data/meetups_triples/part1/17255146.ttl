@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:48d4f3261a6b9aa0e0d98ff5fcdee6a4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.63409746" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35997644" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e4bfb4f3dbb0143d3cb79ab3ae921487
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Clarence \"Big\" Miller" .
+
+<http://w3id.org/polifonia/pilot/meetups/17255146/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bryce Rohde died on 26 January 2016." ;
+        mtp:hasParticipant   meetup:b129ebbd44c70f0bc61f011dbfb03a52 ;
+        mtp:hasPurpose       meetup:48d4f3261a6b9aa0e0d98ff5fcdee6a4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bryce_Rohde> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bryce_Rohde>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b129ebbd44c70f0bc61f011dbfb03a52
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bryce_Rohde> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bryce Rohde" .
+
+<http://w3id.org/polifonia/pilot/meetups/17255146/12/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Big 'n Bryce LP: Clarence \"Big\" Miller & the Bryce Rohde Quartet (CBS, April 1964)" ;
+        mtp:hasParticipant   meetup:ba66018cf3d7024cd3cf28c685531189 , meetup:e4bfb4f3dbb0143d3cb79ab3ae921487 ;
+        mtp:hasPurpose       meetup:5b26c7e44fb78ca749dfb9500f74a179 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bryce_Rohde> ;
+        mtp:hasType          "HM" .
+
+meetup:ba66018cf3d7024cd3cf28c685531189
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bryce_Rohde> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bryce Rohde" .
+
+meetup:5b26c7e44fb78ca749dfb9500f74a179
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8700839" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12583137" ;
+        mtp:hasSourcePurpose          "ML" .

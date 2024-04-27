@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/31089671/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jean de Castro (Liège, c. 1540 – 1611) was a Belgian composer." ;
+        mtp:hasParticipant   meetup:f2667d9337c6721e13c16f07d4b937ec ;
+        mtp:hasPurpose       meetup:0a4b3657040933e491cb171a50051ce1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jean_de_Castro> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:0a4b3657040933e491cb171a50051ce1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9178569" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08079614" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jean_de_Castro>
+        rdf:type  core:Person .
+
+meetup:6ba128f03b3b2e1d3a125da34a39b056
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jean_de_Castro> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jean de Castro" .
+
+meetup:b75f7d453c7f2d6c8bf7358d54b760e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5414088" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.39341822" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f2667d9337c6721e13c16f07d4b937ec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jean_de_Castro> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999998765928" ;
+        mtp:hasTextEvidence     "Jean de Castro" .
+
+<http://w3id.org/polifonia/pilot/meetups/31089671/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Although he has virtually been forgotten in the revival of renaissance music he was during his life second only to Lassus in his popularity according to the Antwerp printer-publisher Christophe Plantin." ;
+        mtp:hasParticipant   meetup:6ba128f03b3b2e1d3a125da34a39b056 ;
+        mtp:hasPurpose       meetup:b75f7d453c7f2d6c8bf7358d54b760e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jean_de_Castro> ;
+        mtp:hasType          "HT" .

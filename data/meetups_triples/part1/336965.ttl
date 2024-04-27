@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Bertrand_Russell>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:7c3c00573ba461737bd235ffbb8d6eef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Luis_Russell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Luis Russell" .
+
+<http://w3id.org/polifonia/pilot/meetups/336965/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band returned to Russell's name, while Armstrong played in California and Europe in the early 1930s; Russell and Armstrong were reunited in 1935. In 1935, Armstrong took over the orchestra altogether, and for the next eight years they functioned as back-up band for Armstrong, with Russell acting as the musical director." ;
+        mtp:hasParticipant   meetup:7215a47284d9178845bf4a144a4b651e ;
+        mtp:hasPurpose       meetup:bb9ba7d572a004a03689480e38775dae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Luis_Russell> ;
+        mtp:hasType          "HT" .
+
+meetup:bb9ba7d572a004a03689480e38775dae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Band's collaboration and music performances" ;
+        mtp:hasEvidencePurposeSecond  "Relationship and activities of the band members" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:7215a47284d9178845bf4a144a4b651e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bertrand_Russell> ;
+        mtp:hasOffset           "136" ;
+        mtp:hasSimilarityScore  "0.8285880836494068" ;
+        mtp:hasTextEvidence     "Russell" .
+
+meetup:f6f9144755b70e1b2178c759812f46f5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.54887354" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.42959338" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/336965/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Luis Russell (August 5, 1902 – December 11, 1963) was a pioneering Panamanian jazz pianist, orchestra leader, composer, and arranger." ;
+        mtp:hasParticipant   meetup:7c3c00573ba461737bd235ffbb8d6eef ;
+        mtp:hasPurpose       meetup:f6f9144755b70e1b2178c759812f46f5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Luis_Russell> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Luis_Russell>
+        rdf:type  core:Person .

@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/58788812/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is the host of the streaming radio show \"Roots Now,\" on Nashville's AcmeRadioLive." ;
+        mtp:hasParticipant   meetup:2819be2abb7920b4ac5f1addee39f0bd ;
+        mtp:hasPurpose       meetup:0bff67e9fa08561b49ba7a80899c0561 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barry_Mazor> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/58788812/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Barry Mazor is a music journalist and the author of Ralph Peer and the Making of Popular Roots Music, winner of Belmont University's Best Book on Country Music award in 2016, and \"Meeting Jimmie Rodgers: How America's Original Roots Music Hero Changed the Pop Sounds of a Century,\" which won the same award in 2010." ;
+        mtp:hasParticipant   meetup:1863b9d600389eee6a7d798eaa25f3b9 ;
+        mtp:hasPurpose       meetup:c7e574f8ca4346c65f1a1454720b199c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barry_Mazor> ;
+        mtp:hasType          "HT" .
+
+meetup:2819be2abb7920b4ac5f1addee39f0bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barry_Mazor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Barry Mazor" .
+
+<http://dbpedia.org/resource/Barry_Mazor>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1863b9d600389eee6a7d798eaa25f3b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barry_Mazor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Barry Mazor" .
+
+meetup:c7e574f8ca4346c65f1a1454720b199c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98856586" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011115597" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0bff67e9fa08561b49ba7a80899c0561
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9615624" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03759671" ;
+        mtp:hasSourcePurpose          "ML" .

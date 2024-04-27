@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/24886374/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born in Sarajevo." ;
+        mtp:hasParticipant   meetup:0a2161809ab5af0bb242f87a066bde20 ;
+        mtp:hasPurpose       meetup:036484c21abf4472dff8271b50d17c3d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andi_Kravljaca> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:036484c21abf4472dff8271b50d17c3d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996325" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00035571458" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0a2161809ab5af0bb242f87a066bde20
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andi_Kravljaca> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Andi Kravljaca" .
+
+<http://dbpedia.org/resource/Andi_Kravljaca>
+        rdf:type  core:Person .
+
+meetup:04a3311780d53da6402264c1bd194262
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andi_Kravljaca> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Andi Kravljaca" .
+
+<http://w3id.org/polifonia/pilot/meetups/24886374/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andi Kravljaca is a Bosnian-born Swedish heavy metal singer and guitarist, most known for his vocal work in progressive metal band Aeon Zen, although he is perhaps best known as vocalist for Swedish progressive metal band, Seventh Wonder, appearing on the band's first album, Become, in 2005." ;
+        mtp:hasParticipant   meetup:04a3311780d53da6402264c1bd194262 ;
+        mtp:hasPurpose       meetup:edac19d37fa65b1d5703164d37823965 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andi_Kravljaca> ;
+        mtp:hasType          "HT" .
+
+meetup:edac19d37fa65b1d5703164d37823965
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99827933" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0017037746" ;
+        mtp:hasSourcePurpose          "ML" .

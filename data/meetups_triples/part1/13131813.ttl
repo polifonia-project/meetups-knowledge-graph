@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:57712c67e17c65bc976ab97c14ec00f1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Engagements at opera and conservatories" ;
+        mtp:hasEvidencePurposeSecond  "Degree and work as music therapist" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:0f746ead65e344b8f7fadf1a5a2c1876
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Röthler" .
+
+<http://w3id.org/polifonia/pilot/meetups/13131813/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After engagements at the opera of Tel Aviv and at the Yemenite theatre INBAL, Röthler finished his degree at the conservatories in Cologne and Berlin in 1963. In Berlin he worked as a music therapist at the psychiatric clinic." ;
+        mtp:hasParticipant   meetup:0f746ead65e344b8f7fadf1a5a2c1876 ;
+        mtp:hasPurpose       meetup:57712c67e17c65bc976ab97c14ec00f1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gerhard_Röthler> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Gerhard_Röthler>
+        rdf:type  core:Person .

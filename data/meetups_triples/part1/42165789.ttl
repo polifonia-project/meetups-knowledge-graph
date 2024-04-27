@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/42165789/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From Maghnia (Tlemcen Province), Mourad Gana, better known under the name Gana El Maghnaoui, was born 2 February 1958 in Maghnia, Algeria." ;
+        mtp:hasParticipant   meetup:d60c913e71796fc3f5f4c545b3c1acbd ;
+        mtp:hasPurpose       meetup:b9a62f5a0fb543198f02431345d2b637 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gana_El_Maghnaoui> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Gana_El_Maghnaoui>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:81fc03db13cbf63efdc1e6cabc90ae63
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gana_El_Maghnaoui> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999995453" ;
+        mtp:hasTextEvidence     "Gana El Maghnaoui" .
+
+meetup:d60c913e71796fc3f5f4c545b3c1acbd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gana_El_Maghnaoui> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "0.9999999999995453" ;
+        mtp:hasTextEvidence     "Gana El Maghnaoui" .
+
+meetup:b9a62f5a0fb543198f02431345d2b637
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Reference to a musician's name" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:e04c7d0e2cac862a2c9f74e37e524734
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90730643" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.084028" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/42165789/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gana El Maghnaoui  (arabic قانا المغناوي), born 2 February 1958, is an Algerian raï songwriter, lyricist and composer." ;
+        mtp:hasParticipant   meetup:81fc03db13cbf63efdc1e6cabc90ae63 ;
+        mtp:hasPurpose       meetup:e04c7d0e2cac862a2c9f74e37e524734 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gana_El_Maghnaoui> ;
+        mtp:hasType          "HT" .

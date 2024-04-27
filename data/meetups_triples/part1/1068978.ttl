@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e434d7111486ee1617e8e8488c3c8d30
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8898986" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.074813314" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:15e2ad9484cc78731cda2e9dfdb0a5c4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Bare> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bobby Bare" .
+
+<http://dbpedia.org/resource/Bobby_Bare>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/1068978/19/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 1983 to 1988, Bare hosted Bobby Bare and Friends on The Nashville Network which featured him interviewing songwriters who sang their hit songs on the show." ;
+        mtp:hasParticipant   meetup:15e2ad9484cc78731cda2e9dfdb0a5c4 ;
+        mtp:hasPurpose       meetup:e434d7111486ee1617e8e8488c3c8d30 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bobby_Bare> ;
+        mtp:hasType          "HT" .

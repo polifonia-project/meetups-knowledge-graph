@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Kian_Egan>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1533271/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kian John Francis Egan (born 29 April 1980)" ;
+        mtp:hasParticipant   meetup:26458844db456ff3dd62fb1c4ec09cb8 ;
+        mtp:hasPurpose       meetup:fc3b8fbbc8d71db4b7e1a50fecdef512 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kian_Egan> ;
+        mtp:hasType          "HT" .
+
+meetup:fc3b8fbbc8d71db4b7e1a50fecdef512
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99830604" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0016062356" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:26458844db456ff3dd62fb1c4ec09cb8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kian_Egan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999400849594405" ;
+        mtp:hasTextEvidence     "Kian" .

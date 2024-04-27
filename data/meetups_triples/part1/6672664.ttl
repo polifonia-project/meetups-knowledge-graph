@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Shahram_Kashani>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:e406dbdd85842bfcbba4f8e736562b33
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Shahram Sebastian Shahbal" .
+
+<http://w3id.org/polifonia/pilot/meetups/6672664/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shahrum Kashani (Persian: شهرام کاشانی; 7 July 1974 – 28 July 2021), also known as Shahram Sebastian Shahbal was an Iranian pop singer." ;
+        mtp:hasParticipant   meetup:e406dbdd85842bfcbba4f8e736562b33 , meetup:20b11b4d3e67ea09bdbc1ebe8bb642f9 ;
+        mtp:hasPurpose       meetup:ad7307841b58c51eb79d20f59d1e767c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shahram_Kashani> ;
+        mtp:hasType          "HM" .
+
+meetup:ad7307841b58c51eb79d20f59d1e767c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.873287" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12669937" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:20b11b4d3e67ea09bdbc1ebe8bb642f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shahram_Kashani> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Shahrum Kashani" .

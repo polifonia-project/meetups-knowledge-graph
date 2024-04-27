@@ -1,0 +1,92 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/12776016/9/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His concept of \"post-cool\" described in his book The Birth (and Death) of the Cool, was selected as one of the Big Ideas of 2012 by Adbusters magazine." ;
+        mtp:hasParticipant   meetup:e7c2f66dc4a65bf8adaec513ab9ee80b ;
+        mtp:hasPurpose       meetup:473f1ebe4bebae1ef55dda1e9f5ee163 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ted_Gioia> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Ted_Gioia>
+        rdf:type  core:Person .
+
+meetup:0eb5f4d8e02d641aba9e170292d8eba7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ted_Gioia> ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ted Gioia" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:c70de02d59d818f74b104eae8a6a7712
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ted_Gioia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ted Gioia" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:01dada8f7cf10c342a3da4c121f529da
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8866101" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08908778" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:473f1ebe4bebae1ef55dda1e9f5ee163
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9045794" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09542029" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:dd5e3ac479d66eb2a2703225a85578b9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90649706" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.051791124" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/12776016/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Dallas Morning News has called Ted Gioia \"one of the outstanding music historians in America.\"" ;
+        mtp:hasParticipant   meetup:0eb5f4d8e02d641aba9e170292d8eba7 ;
+        mtp:hasPurpose       meetup:01dada8f7cf10c342a3da4c121f529da ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ted_Gioia> ;
+        mtp:hasType          "HT" .
+
+meetup:e7c2f66dc4a65bf8adaec513ab9ee80b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ted_Gioia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ted Gioia" .
+
+<http://w3id.org/polifonia/pilot/meetups/12776016/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ted Gioia (born 21 October 1957) is an American jazz critic and music historian." ;
+        mtp:hasParticipant   meetup:c70de02d59d818f74b104eae8a6a7712 ;
+        mtp:hasPurpose       meetup:dd5e3ac479d66eb2a2703225a85578b9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ted_Gioia> ;
+        mtp:hasType          "HT" .

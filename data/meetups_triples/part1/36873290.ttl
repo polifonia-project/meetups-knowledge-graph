@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/36873290/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Charles de Wolff (19 June 1932 – 23 November 2011) was a Dutch organist and conductor." ;
+        mtp:hasParticipant   meetup:4243154fa8d71a03918d185fceed1787 ;
+        mtp:hasPurpose       meetup:1de7526f1e4379f133fd4ba599fdf918 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_de_Wolff> ;
+        mtp:hasType          "HT" .
+
+meetup:54d5bb3c130280d6c08a3fa027ddd4e5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_de_Wolff> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charles de Wolff" .
+
+<http://dbpedia.org/resource/Charles_de_Wolff>
+        rdf:type  core:Person .
+
+meetup:4243154fa8d71a03918d185fceed1787
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_de_Wolff> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charles de Wolff" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/36873290/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He conducted the Netherlands Bach Society from 1965 until 1983." ;
+        mtp:hasParticipant   meetup:54d5bb3c130280d6c08a3fa027ddd4e5 ;
+        mtp:hasPurpose       meetup:0f3802c1896fea4e5ebf241d3d93bf03 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_de_Wolff> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:0f3802c1896fea4e5ebf241d3d93bf03
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9648807" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03488027" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d5eb2b5317736d66c59b07cd4b232114
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.484136" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4724113" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:89d486c6c243638f060cd6fd12395534
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_de_Wolff> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charles de Wolff" .
+
+meetup:1de7526f1e4379f133fd4ba599fdf918
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99990416" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.783784e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/36873290/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After 1983 he worked with the Bachkoor Holland." ;
+        mtp:hasParticipant   meetup:89d486c6c243638f060cd6fd12395534 ;
+        mtp:hasPurpose       meetup:d5eb2b5317736d66c59b07cd4b232114 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_de_Wolff> ;
+        mtp:hasType          "HT" .

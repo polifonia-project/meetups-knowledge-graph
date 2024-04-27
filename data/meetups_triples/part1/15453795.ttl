@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f69e179301dea05f6e2b24baba1012a7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6240996" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16450663" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/15453795/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lin Halliday (June 16, 1936 – January 25, 2000) was an American saxophonist." ;
+        mtp:hasParticipant   meetup:c797003944c3023c586a1da349445811 ;
+        mtp:hasPurpose       meetup:f69e179301dea05f6e2b24baba1012a7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lin_Halliday> ;
+        mtp:hasType          "HT" .
+
+meetup:38e80f147dddbc186720942dc6661f52
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "106" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joe Segal's" .
+
+meetup:e2be9d8f743b39c7ca9e770df553b559
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Albums and performances in the jazz community" ;
+        mtp:hasEvidencePurposeSecond  "Involvement in Chicago jazz clubs" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/15453795/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His following albums, East of the Sun (1991) and Where or When (1993) with saxophonist Ira Sullivan were well received by the Chicago jazz community. Halliday became a \"staple attraction\"  at many Chicago jazz clubs including the Green Mill, the Bop Shop, Joe Segal's Jazz Showcase, and the Get Me High Lounge." ;
+        mtp:hasParticipant   meetup:38e80f147dddbc186720942dc6661f52 ;
+        mtp:hasPurpose       meetup:e2be9d8f743b39c7ca9e770df553b559 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lin_Halliday> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lin_Halliday>
+        rdf:type  core:Person .
+
+meetup:c797003944c3023c586a1da349445811
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lin_Halliday> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lin Halliday" .

@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:b322ae3c2288af3a62f05e4b010764c0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Elkan Bauer was a composer" ;
+        mtp:hasEvidencePurposeSecond  "Elkan Bauer was a friend and contemporary of Johann Strauss II" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Elkan_Bauer>
+        rdf:type  core:Person .
+
+meetup:58f7b5fcc7fca62aea6a38340db5d238
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johann_Strauss_II> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johann Strauss II" .
+
+meetup:a37cac2a6e4decb15da916beb7c3f292
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elkan_Bauer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999968595262" ;
+        mtp:hasTextEvidence     "Elkan Bauer" .
+
+<http://dbpedia.org/resource/Johann_Strauss_II>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/41429271/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Elkan Bauer was an Austrian composer and friend and contemporary of Johann Strauss II born in Nikolsburg, on April 4, 1852." ;
+        mtp:hasParticipant   meetup:58f7b5fcc7fca62aea6a38340db5d238 , meetup:a37cac2a6e4decb15da916beb7c3f292 ;
+        mtp:hasPurpose       meetup:b322ae3c2288af3a62f05e4b010764c0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elkan_Bauer> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/9810323/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has recorded Beethoven's and Mozart's Piano and Wind Quintets and Poulenc's Trio for piano, oboe and bassoon with J. Levine and M. Turkovic." ;
+        mtp:hasParticipant   meetup:91ac8afa77101548b790e09734bcfcf3 , meetup:1be8fdc2cb8650eb4511cab0cbab044e , meetup:4c4011d8ae44a35fa6a2e3859f1aae8d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hansjörg_Schellenberger> ;
+        mtp:hasType          "HM" .
+
+meetup:ac472d6fcd41da9b7f98041878b5faac
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8983981" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05717054" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:91ac8afa77101548b790e09734bcfcf3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hansjörg_Schellenberger> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Schellenberger" .
+
+<http://dbpedia.org/resource/Hansjörg_Schellenberger>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Francis_Poulenc>
+        rdf:type  core:Person .
+
+meetup:579d7bca1cafc3d9ce937e9558aa6441
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hansjörg_Schellenberger> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Schellenberger" .
+
+<http://w3id.org/polifonia/pilot/meetups/9810323/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1991 Schellenberger founded the Berliner-Hadyn-Konzerte cycle, which he continues to conduct himself." ;
+        mtp:hasParticipant   meetup:579d7bca1cafc3d9ce937e9558aa6441 ;
+        mtp:hasPurpose       meetup:ac472d6fcd41da9b7f98041878b5faac ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hansjörg_Schellenberger> ;
+        mtp:hasType          "HT" .
+
+meetup:4c4011d8ae44a35fa6a2e3859f1aae8d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Francis_Poulenc> ;
+        mtp:hasOffset           "69" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Poulenc" .
+
+meetup:1be8fdc2cb8650eb4511cab0cbab044e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "131" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "M. Turkovic" .

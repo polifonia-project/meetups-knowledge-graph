@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/6777113/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1983 he moved to the United States on a scholarship to study at Berklee College of Music in Boston. He was the first student in the school's history to be offered a teaching position upon graduation." ;
+        mtp:hasPurpose       meetup:c585594db83fd65e1b636b5fc854043c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laszlo_Gardony> ;
+        mtp:hasType          "HT" .
+
+meetup:c585594db83fd65e1b636b5fc854043c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Scholarship and studying at Berklee College of Music" ;
+        mtp:hasEvidencePurposeSecond  "Teaching position at the school" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:92df686ccb6ee3638fe4984ac929fe44
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999157" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.812888e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:87fc00a3e61291acb50ba5a1d3daf6b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Laszlo_Gardony> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Laszlo Gardony" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Laszlo_Gardony>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/6777113/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Laszlo Gardony (born 1956) is a Hungarian-born American jazz pianist and composer." ;
+        mtp:hasParticipant   meetup:87fc00a3e61291acb50ba5a1d3daf6b6 ;
+        mtp:hasPurpose       meetup:92df686ccb6ee3638fe4984ac929fe44 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laszlo_Gardony> ;
+        mtp:hasType          "HT" .

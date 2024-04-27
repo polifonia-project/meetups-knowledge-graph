@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Trygve_Thue>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/47334751/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1978 Moll returned to Norway to form a new Hole In The Wall releasing a new album. Trygve Thue was producer for the second album Rose Of Barcelona (1978), where the material was composed by Moll." ;
+        mtp:hasParticipant   meetup:3c7c5b7eaa02d89f13117ec75cf0bc7c ;
+        mtp:hasPurpose       meetup:c4eebd6a97b41587577b7277b4837ca1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hole_in_the_Wall_(band)> ;
+        mtp:hasType          "HT" .
+
+meetup:3c7c5b7eaa02d89f13117ec75cf0bc7c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Trygve_Thue> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Trygve Thue" .
+
+meetup:c4eebd6a97b41587577b7277b4837ca1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating and releasing music" ;
+        mtp:hasEvidencePurposeSecond  "Personal activities and experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Hole_in_the_Wall_(band)>
+        rdf:type  core:Person .

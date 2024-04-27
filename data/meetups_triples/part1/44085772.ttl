@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:e25edb2ccf37448066d5b0b50b0cce09
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lloyd Byron Stripling" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:64e8f343c2a7f3f3bda880a2a85abe65
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Byron_Stripling> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Byron Stripling" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:5a75e75bf28f7425ca17f4f93ee5aac3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about someone's educational background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Byron_Stripling>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/44085772/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born Lloyd Byron Stripling on August 20, 1961, in Atlanta, Georgia." ;
+        mtp:hasParticipant   meetup:64e8f343c2a7f3f3bda880a2a85abe65 , meetup:e25edb2ccf37448066d5b0b50b0cce09 ;
+        mtp:hasPurpose       meetup:5a75e75bf28f7425ca17f4f93ee5aac3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Byron_Stripling> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:49e2bff6be83c1c34e442cedd91238d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in jazz band" ;
+        mtp:hasEvidencePurposeSecond  "Career and personal achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d416aa13c4c6231df41fc1e3411980ff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99792045" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0011763383" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/26090987/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1985, the same year he and Cecil Taylor were voted Main Jazz Men of the Year by the Toronto Globe and Mail, Bowen won the audition for the Blue Note Records co-leader position of the contemporary all-star New York based jazz band known as Out of the Blue (OTB). He moved to New York and would eventually record four albums for Blue Note." ;
+        mtp:hasPurpose       meetup:49e2bff6be83c1c34e442cedd91238d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ralph_Bowen> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/26090987/20/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ralph Bowen (Posi-Tone, 2017)" ;
+        mtp:hasParticipant   meetup:32f531538ddb20244de6396be689d023 ;
+        mtp:hasPurpose       meetup:d416aa13c4c6231df41fc1e3411980ff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ralph_Bowen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ralph_Bowen>
+        rdf:type  core:Person .
+
+meetup:32f531538ddb20244de6396be689d023
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ralph_Bowen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999959216" ;
+        mtp:hasTextEvidence     "Ralph Bowen" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:45687e00736a22a3b8183372f274eaa0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ralph_Bowen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ralph Bowen" .
+
+<http://w3id.org/polifonia/pilot/meetups/26090987/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ralph Bowen (born December 24, 1961) is a Canadian jazz saxophonist." ;
+        mtp:hasParticipant   meetup:45687e00736a22a3b8183372f274eaa0 ;
+        mtp:hasPurpose       meetup:a685ab7fabd37d84956a9b2b0c243715 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ralph_Bowen> ;
+        mtp:hasType          "HT" .
+
+meetup:a685ab7fabd37d84956a9b2b0c243715
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.875165" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08965059" ;
+        mtp:hasSourcePurpose          "ML" .

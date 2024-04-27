@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/John_Lee_Hooker>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:af1c080c9e66130882d3205aca989c6f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Kember> ;
+        mtp:hasOffset           "103" ;
+        mtp:hasSimilarityScore  "0.9999997491156906" ;
+        mtp:hasTextEvidence     "Sonic Boom" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f6888ed1a3206c9a9336ec0fac7ac572
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Music record label" ;
+        mtp:hasEvidencePurposeSecond  "Formation of a company" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Andrew_Lauder_(music_executive)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Peter_Kember>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/27621426/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He moved to London around 1965 to look for a job. He joined Southern Music, as an accounts clerk." ;
+        mtp:hasPurpose       meetup:7242de8b88daf9de56eb737445b87ae4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Lauder_(music_executive)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/27621426/6/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1988, he formed the UK based Silvertone Records under the Zomba Group of Companies. Initially focusing on indie bands such as The Stone Roses,  he expanded their roster to include Peter \"Sonic Boom\" Kember John Lee Hooker, J.J. Cale and The Men They Couldn't Hang." ;
+        mtp:hasParticipant   meetup:af1c080c9e66130882d3205aca989c6f , meetup:436d6f8de71c7d207d323a32f8e673ee ;
+        mtp:hasPurpose       meetup:f6888ed1a3206c9a9336ec0fac7ac572 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Lauder_(music_executive)> ;
+        mtp:hasType          "HT" .
+
+meetup:7242de8b88daf9de56eb737445b87ae4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Work-related interaction" ;
+        mtp:hasEvidencePurposeSecond  "Individual's personal experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:436d6f8de71c7d207d323a32f8e673ee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Lee_Hooker> ;
+        mtp:hasOffset           "122" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Lee Hooker" .

@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2385568/5/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Despite of all the publicity and positive reviews from most reviewers, Well Travelled Love and Willis's subsequent albums for MCA (Bang Bang in 1991 and Kelly Willis in 1993) sold modestly and received very little radio play." ;
+        mtp:hasParticipant   meetup:7cdc1a60a3cc39aae9f49b3b5a49fcd1 ;
+        mtp:hasPurpose       meetup:3d048d757df786014ac012dddde499f1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kelly_Willis> ;
+        mtp:hasType          "HT" .
+
+meetup:7cdc1a60a3cc39aae9f49b3b5a49fcd1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kelly_Willis> ;
+        mtp:hasOffset           "153" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kelly Willis" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:3b86f7e921d1485d02d8c7da1478dcc1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kelly_Willis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999753129" ;
+        mtp:hasTextEvidence     "Kelly Willis" .
+
+<http://dbpedia.org/resource/Kelly_Willis>
+        rdf:type  core:Person .
+
+meetup:72187c40f3297800a180ccc16f34725c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94930947" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03615139" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3d048d757df786014ac012dddde499f1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9904643" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00953294" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2385568/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kelly Willis (born October 2, 1968) is an American country music singer-songwriter, whose music has been described as alternative country and new traditionalist." ;
+        mtp:hasParticipant   meetup:3b86f7e921d1485d02d8c7da1478dcc1 ;
+        mtp:hasPurpose       meetup:72187c40f3297800a180ccc16f34725c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kelly_Willis> ;
+        mtp:hasType          "HT" .

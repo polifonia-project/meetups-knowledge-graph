@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Simon_d'Authie>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/39025310/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was from Authie, and died at Amiens." ;
+        mtp:hasParticipant   meetup:a8fb059e35716582ea2e529f5c50ceab ;
+        mtp:hasPurpose       meetup:9c2285ca59d5a7cac6e5f88b3ffa0b94 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_d'Authie> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4b80b5b5750e4a76243e41aaab0c7570
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_d'Authie> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999960210144572" ;
+        mtp:hasTextEvidence     "Simon d'Authie" .
+
+meetup:d0ef5d9f839fa7bcda5e12d52759dafb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "d'Autie" .
+
+<http://w3id.org/polifonia/pilot/meetups/39025310/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Simon d'Authie or d'Autie (born 1180/90; died after 1235) was a lawyer, priest and Old French trouvère." ;
+        mtp:hasParticipant   meetup:d0ef5d9f839fa7bcda5e12d52759dafb , meetup:4b80b5b5750e4a76243e41aaab0c7570 ;
+        mtp:hasPurpose       meetup:73cc3665debcd1037f6726cd78aab4cf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_d'Authie> ;
+        mtp:hasType          "HM" .
+
+meetup:73cc3665debcd1037f6726cd78aab4cf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9224681" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.037005007" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9c2285ca59d5a7cac6e5f88b3ffa0b94
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999225" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.3766167e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a8fb059e35716582ea2e529f5c50ceab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_d'Authie> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Simon d'Authie" .

@@ -1,0 +1,98 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/45432981/10/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "OG Maco is currently taking antibiotics for treatment and hoping for a speedy recovery." ;
+        mtp:hasParticipant   meetup:fd4bda7f193741d1bede9dfc3949e01e ;
+        mtp:hasPurpose       meetup:490b99f7d46027348f7cd00b4a668408 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/OG_Maco> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/45432981/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On July 28, 2016, OG Maco was in a near-fatal car crash." ;
+        mtp:hasParticipant   meetup:dd11df71053d3064edf764674a458aab ;
+        mtp:hasPurpose       meetup:25cec5748b0f903362fef0b2001725fa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/OG_Maco> ;
+        mtp:hasType          "HT" .
+
+meetup:25cec5748b0f903362fef0b2001725fa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98978186" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010180416" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/45432981/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Benedict Chiajulam Ihesiba Jr. (born April 23, 1992), better known by his stage name OG Maco, is an American rapper from Atlanta, Georgia." ;
+        mtp:hasParticipant   meetup:d6212bf74f03eb9d5cf782cd397cc997 , meetup:0ad4f6996b9ef525729a65ce0b75b12c ;
+        mtp:hasPurpose       meetup:b93f2df09a4d90ca1caf315fc98797d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/OG_Maco> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/OG_Maco>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:d6212bf74f03eb9d5cf782cd397cc997
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/OG_Maco> ;
+        mtp:hasOffset           "85" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "OG Maco" .
+
+meetup:b93f2df09a4d90ca1caf315fc98797d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "OG Maco is a rapper" ;
+        mtp:hasEvidencePurposeSecond  "Benedict Chiajulam Ihesiba Jr.'s personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:0ad4f6996b9ef525729a65ce0b75b12c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pope_Benedict_XVI> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.924815944818738" ;
+        mtp:hasTextEvidence     "Benedict" .
+
+meetup:490b99f7d46027348f7cd00b4a668408
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.76420736" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.20399447" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Pope_Benedict_XVI>
+        rdf:type  core:Person .
+
+meetup:dd11df71053d3064edf764674a458aab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/OG_Maco> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "OG Maco" .
+
+meetup:fd4bda7f193741d1bede9dfc3949e01e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/OG_Maco> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999994316" ;
+        mtp:hasTextEvidence     "OG Maco" .

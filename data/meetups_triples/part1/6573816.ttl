@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Dorothy_Shay>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a39e7819f703f8953ad579ddd83562a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dorothy_Shay> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dorothy Shay" .
+
+meetup:fda3a7c1a6eddb1628e66715e7b0c27b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8427687" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15106875" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6573816/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dorothy Shay (April 11, 1921 – October 22, 1978) was an American popular comedic recording artist in the late 1940s and early 1950s, who later became a character actress." ;
+        mtp:hasParticipant   meetup:a39e7819f703f8953ad579ddd83562a7 ;
+        mtp:hasPurpose       meetup:fda3a7c1a6eddb1628e66715e7b0c27b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dorothy_Shay> ;
+        mtp:hasType          "HT" .

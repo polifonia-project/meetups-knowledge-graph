@@ -1,0 +1,81 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:8e8fe9d78e3a20068bc1e81e228cf5e8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Events related to an individual's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Events that involve a public celebration" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Yuya_Yagira>
+        rdf:type  core:Person .
+
+meetup:a6307a8dcc16fe2c59f54049c0cbb24f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ellie Toyota" .
+
+<http://w3id.org/polifonia/pilot/meetups/4027164/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On January 15, 2010, Yuya Yagira married TV personality Ellie Toyota at Tokyo's Meiji Shrine." ;
+        mtp:hasParticipant   meetup:a6307a8dcc16fe2c59f54049c0cbb24f , meetup:f4d44fd804d7321713ad8d2bd65cf093 ;
+        mtp:hasPurpose       meetup:8e8fe9d78e3a20068bc1e81e228cf5e8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuya_Yagira> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/4027164/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yuya Yagira (柳楽 優弥, Yagira Yūya, born March 26, 1990) is a Japanese actor." ;
+        mtp:hasParticipant   meetup:e7bb1449c98492de803211dee30f55fe , meetup:380d249e67fde79c7c116372100b8d88 ;
+        mtp:hasPurpose       meetup:1ae0e7d21fc0c7039d565ef65909cbec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuya_Yagira> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:e7bb1449c98492de803211dee30f55fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Yagira Yūya" .
+
+meetup:380d249e67fde79c7c116372100b8d88
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yuya_Yagira> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Yuya Yagira" .
+
+meetup:f4d44fd804d7321713ad8d2bd65cf093
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yuya_Yagira> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Yuya Yagira" .
+
+meetup:1ae0e7d21fc0c7039d565ef65909cbec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999951" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.897065e-06" ;
+        mtp:hasSourcePurpose          "ML" .

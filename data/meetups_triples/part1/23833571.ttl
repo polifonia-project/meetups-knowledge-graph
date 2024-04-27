@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Molly_Mason>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/23833571/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Molly Mason is an American musician and composer and performs as a duo Jay & Molly with her husband Jay Ungar." ;
+        mtp:hasParticipant   meetup:28a27293715c22473266c4370927627f , meetup:2a8f2613dd940903f5335c6a9d58217a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Molly_Mason> ;
+        mtp:hasType          "HM" .
+
+meetup:2a8f2613dd940903f5335c6a9d58217a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Molly_Mason> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Molly Mason" .
+
+<http://w3id.org/polifonia/pilot/meetups/23833571/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mason grew up in Washington state." ;
+        mtp:hasParticipant   meetup:6f14b414f6eed8a222a52d41e6f09ae2 ;
+        mtp:hasPurpose       meetup:bbd52d54a37e8262d82fa169e91cdc35 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Molly_Mason> ;
+        mtp:hasType          "HT" .
+
+meetup:6f14b414f6eed8a222a52d41e6f09ae2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Molly_Mason> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Molly Mason" .
+
+<http://dbpedia.org/resource/Jay_Ungar>
+        rdf:type  core:Person .
+
+meetup:28a27293715c22473266c4370927627f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jay_Ungar> ;
+        mtp:hasOffset           "100" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jay Ungar" .
+
+meetup:bbd52d54a37e8262d82fa169e91cdc35
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99986947" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000116304" ;
+        mtp:hasSourcePurpose          "ML" .

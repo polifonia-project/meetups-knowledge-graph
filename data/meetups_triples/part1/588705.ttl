@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/588705/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joe McPhee (born November 3, 1939) is an American jazz multi-instrumentalist born in Miami, Florida, a player of tenor, alto, and soprano saxophone, the trumpet, flugelhorn and valve trombone." ;
+        mtp:hasParticipant   meetup:1b373d1981af6bae3c7aa5420838358b ;
+        mtp:hasPurpose       meetup:78ebe28fe20479ee17487088ab01eaff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_McPhee> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Joe_McPhee>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:35d4eeeb49a89b0ed25c013cba832c98
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_McPhee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joe McPhee" .
+
+<http://w3id.org/polifonia/pilot/meetups/588705/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "McPhee grew up in Poughkeepsie, New York, and is most notable for his free jazz work done from the late 1960s to the present day." ;
+        mtp:hasParticipant   meetup:35d4eeeb49a89b0ed25c013cba832c98 ;
+        mtp:hasPurpose       meetup:e86d6d831852a801464e97d61fc8d04e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_McPhee> ;
+        mtp:hasType          "HT" .
+
+meetup:78ebe28fe20479ee17487088ab01eaff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Joe McPhee is a jazz multi-instrumentalist" ;
+        mtp:hasEvidencePurposeSecond  "Joe McPhee was born in Miami, Florida" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:e86d6d831852a801464e97d61fc8d04e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7156404" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18698" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1b373d1981af6bae3c7aa5420838358b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_McPhee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joe McPhee" .

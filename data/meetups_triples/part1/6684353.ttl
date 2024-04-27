@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5f0f18df4c9aa53870f8cf899ba02f7a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Helio_Alves> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Helio Alves" .
+
+meetup:3eb530406fcfbd300cc4f67a59d26323
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9991817" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0008064209" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6684353/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Helio Alves (born 1966) is a jazz pianist and son of pianists." ;
+        mtp:hasParticipant   meetup:5f0f18df4c9aa53870f8cf899ba02f7a ;
+        mtp:hasPurpose       meetup:3eb530406fcfbd300cc4f67a59d26323 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Helio_Alves> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Helio_Alves>
+        rdf:type  core:Person .

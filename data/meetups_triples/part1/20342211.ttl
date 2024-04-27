@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/20342211/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leslie David Blasius: The Music Theory of Godfrey Winham, Princeton University Press, 1997." ;
+        mtp:hasParticipant   meetup:27654995fb212d44d9046a91737e42c0 , meetup:bd748756fa2c5150536da646a1130c17 ;
+        mtp:hasPurpose       meetup:431623a47b8c102253f33f781c83c0ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Godfrey_Winham> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/20342211/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Godfrey Winham (December 11, 1934 – April 26, 1975) was an English-born music theorist and composer of contemporary classical music who moved to the United States." ;
+        mtp:hasParticipant   meetup:30ead81d5be058393d4886ec81c52f6b ;
+        mtp:hasPurpose       meetup:c200544c541f4a802046b5b493fd40e8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Godfrey_Winham> ;
+        mtp:hasType          "HT" .
+
+meetup:c200544c541f4a802046b5b493fd40e8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.74393857" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23484379" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Godfrey_Winham>
+        rdf:type  core:Person .
+
+meetup:431623a47b8c102253f33f781c83c0ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9900355" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008247833" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:bd748756fa2c5150536da646a1130c17
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Godfrey_Winham> ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Godfrey Winham" .
+
+meetup:30ead81d5be058393d4886ec81c52f6b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Godfrey_Winham> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Godfrey Winham" .
+
+meetup:27654995fb212d44d9046a91737e42c0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Leslie David Blasius" .

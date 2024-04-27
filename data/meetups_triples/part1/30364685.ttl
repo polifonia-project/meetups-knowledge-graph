@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:92fef7697b00fc854e13b21c1e6c953f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elizabeth_Masson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999522055707712" ;
+        mtp:hasTextEvidence     "Elizabeth Masson" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/30364685/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Elizabeth Masson (1806 – 9 January 1865) was an English mezzo-soprano singer and composer." ;
+        mtp:hasParticipant   meetup:92fef7697b00fc854e13b21c1e6c953f ;
+        mtp:hasPurpose       meetup:702570f74dc7b558a565165761b562d8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elizabeth_Masson> ;
+        mtp:hasType          "HT" .
+
+meetup:702570f74dc7b558a565165761b562d8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99529296" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004579913" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Elizabeth_Masson>
+        rdf:type  core:Person .

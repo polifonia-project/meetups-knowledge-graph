@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/28685583/7/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2004, Dessa traveled to the United States to take a break from her work. In Los Angeles, she met Jay Inoue, a Filipino-American who, with Richard Wilner of the Wilner and O'Reilly law firm, enabled her to work legally in the US as a Person of Extraordinary Talent." ;
+        mtp:hasParticipant   meetup:2415ec707a731030d83a91899e443982 , meetup:e58d3946f80bce4e5fee0658810f000d ;
+        mtp:hasPurpose       meetup:8413d980db4ef855675f2bed0c21909f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dessa_(Filipina_singer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Dessa_(Filipina_singer)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Dessa>
+        rdf:type  core:Person .
+
+meetup:e58d3946f80bce4e5fee0658810f000d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jay Inoue" .
+
+meetup:2415ec707a731030d83a91899e443982
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dessa> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dessa" .
+
+meetup:8413d980db4ef855675f2bed0c21909f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Dessa's personal journey and experiences" ;
+        mtp:hasEvidencePurposeSecond  "Meeting with Jay Inoue for legal assistance" ;
+        mtp:hasSourcePurpose          "LLM" .

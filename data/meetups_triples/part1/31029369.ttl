@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/31029369/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He restarted his solo career with his 2016 release, Beulah." ;
+        mtp:hasParticipant   meetup:92545ea5bd27eaa6dff512c041ce3951 ;
+        mtp:hasPurpose       meetup:89b71c43d4d2c8f72e732605cad47f13 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Paul_White> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/John_Paul_White>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/31029369/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Paul White (born August 4, 1972) is an American singer-songwriter, and was a member of the Grammy Award-winning duo The Civil Wars." ;
+        mtp:hasParticipant   meetup:5db50e69dcb0905a93b3cb5861dd1b0c ;
+        mtp:hasPurpose       meetup:64d3275801124601a8b6ff2492d023e5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Paul_White> ;
+        mtp:hasType          "HT" .
+
+meetup:64d3275801124601a8b6ff2492d023e5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9674751" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02177612" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:89b71c43d4d2c8f72e732605cad47f13
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99960786" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00039215878" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:92545ea5bd27eaa6dff512c041ce3951
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Paul_White> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Paul White" .
+
+meetup:5db50e69dcb0905a93b3cb5861dd1b0c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Paul_White> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Paul White" .

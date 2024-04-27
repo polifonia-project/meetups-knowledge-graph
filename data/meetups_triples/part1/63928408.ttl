@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Sarah_Longfield>
+        rdf:type  core:Person .
+
+meetup:694b324d2290bcd9a84d758247b7ceac
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.730877" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17838463" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/63928408/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sarah Longfield is an American YouTuber, musician, and multi-instrumentalist based in Madison, Wisconsin." ;
+        mtp:hasParticipant   meetup:233e8702ad7a08095cdbe0a69467ee95 ;
+        mtp:hasPurpose       meetup:694b324d2290bcd9a84d758247b7ceac ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sarah_Longfield> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/63928408/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2018, she signed with label Season of Mist and released the album Disparity. She produced the album herself." ;
+        mtp:hasPurpose       meetup:a105c58854f3e45955c0268674c54bd5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sarah_Longfield> ;
+        mtp:hasType          "HT" .
+
+meetup:233e8702ad7a08095cdbe0a69467ee95
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sarah_Longfield> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "Sarah Longfield" .
+
+meetup:a105c58854f3e45955c0268674c54bd5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creating and releasing music" ;
+        mtp:hasEvidencePurposeSecond  "Signing a contract with a record label" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .

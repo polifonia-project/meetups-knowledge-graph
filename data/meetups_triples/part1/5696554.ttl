@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:f30cf51226ad2b56d62401e3ddcee037
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involves performing with orchestras" ;
+        mtp:hasEvidencePurposeSecond  "Involves managing an orchestra" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Christian_Zacharias>
+        rdf:type  core:Person .
+
+meetup:f8b666a7c99c0adda5ae275550994d85
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christian_Zacharias> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Christian Zacharias" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/5696554/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He made his US debut in 2000 with the Los Angeles Philharmonic. Since 2000, he has been artistic director of the Lausanne Chamber Orchestra." ;
+        mtp:hasPurpose       meetup:f30cf51226ad2b56d62401e3ddcee037 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christian_Zacharias> ;
+        mtp:hasType          "HT" .
+
+meetup:1c013c3b24ec85fcfac80d774c826298
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8373029" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16267033" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/5696554/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christian Zacharias (born 27 April 1950 in Jamshedpur) is a German pianist and conductor." ;
+        mtp:hasParticipant   meetup:f8b666a7c99c0adda5ae275550994d85 ;
+        mtp:hasPurpose       meetup:1c013c3b24ec85fcfac80d774c826298 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christian_Zacharias> ;
+        mtp:hasType          "HT" .

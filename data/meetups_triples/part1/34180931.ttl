@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/34180931/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Graduating from high school in 1982, he joined the navy and did his stint for his country. After receiving an honorable discharge, he returned to Portland for a short while and then relocated to Phoenix Arizona." ;
+        mtp:hasPurpose       meetup:d13519085d52180ebaa20275e3ce495f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Geno_Arce> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Geno_Arce>
+        rdf:type  core:Person .
+
+meetup:d13519085d52180ebaa20275e3ce495f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about education" ;
+        mtp:hasSourcePurpose          "LLM" .

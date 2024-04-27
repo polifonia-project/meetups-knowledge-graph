@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Carole_King>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:42f446e22b10233e3a1897229d3a2756
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jim_McCrary> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jim McCrary" .
+
+<http://w3id.org/polifonia/pilot/meetups/6318380/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jim McCrary (August 31, 1939 – April 29, 2012) was an American photographer known for his 1970s album covers, most notably Carole King's Tapestry, The Carpenters' Ticket to Ride, and Joe Cocker's Mad Dogs and Englishmen." ;
+        mtp:hasParticipant   meetup:42f446e22b10233e3a1897229d3a2756 , meetup:bbcf8ed58de14c54f6b8a0533084a19b , meetup:342f34d4908688db183d7414c8aeb859 ;
+        mtp:hasPurpose       meetup:cc4a54175e0217e461b88de37125db7a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jim_McCrary> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:cc4a54175e0217e461b88de37125db7a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99750155" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0019074804" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Joe_Cocker>
+        rdf:type  core:Person .
+
+meetup:342f34d4908688db183d7414c8aeb859
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carole_King> ;
+        mtp:hasOffset           "125" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Carole King" .
+
+<http://dbpedia.org/resource/Jim_McCrary>
+        rdf:type  core:Person .
+
+meetup:bbcf8ed58de14c54f6b8a0533084a19b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Cocker> ;
+        mtp:hasOffset           "185" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joe Cocker" .

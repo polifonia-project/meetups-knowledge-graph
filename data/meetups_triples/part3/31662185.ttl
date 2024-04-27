@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:1b17761d1b282e1f1c0faf5a8bc68ba0
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "15 March 1993" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1993-03-15"^^xsd:date ;
+        time:hasEnd          "1993-03-15"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/31662185/7/3>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Georgi_Kay> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Georgi_Kay>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/31662185/2/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:a6ff86a2ddf293352e646cea73f00ab9 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Georgi_Kay> ;
+        mtp:hasType     "HT" .
+
+meetup:be98efd403adc108221635614872d00c
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2009" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2009-01-01"^^xsd:date ;
+        time:hasEnd          "2009-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:a6ff86a2ddf293352e646cea73f00ab9
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "a year" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/31662185/2/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:be98efd403adc108221635614872d00c ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Georgi_Kay> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/31662185/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:2d31c9fe1283dba3646f9acd7aead3ce , meetup:1b17761d1b282e1f1c0faf5a8bc68ba0 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Georgi_Kay> ;
+        mtp:hasType     "HT" .
+
+meetup:2d31c9fe1283dba3646f9acd7aead3ce
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "currently" ;
+        mtp:hasSource        "ML" .

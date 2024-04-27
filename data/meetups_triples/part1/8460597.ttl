@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:bd89482b62cd5c30939086bae6e42085
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Martin Erdman" .
+
+meetup:92e9472b3a44515d4819f1014c3696e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Janet Mead" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/8460597/3/21>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Martin Erdman also received the Yamaha Golden Gospel Award concurrently and presented a short feature film, Sister Janet Mead, at these awards which were coordinated by the Australian Gospel Music Association." ;
+        mtp:hasParticipant   meetup:bd89482b62cd5c30939086bae6e42085 , meetup:c07725963ec51098d093f3300d79cf3d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Janet_Mead> ;
+        mtp:hasType          "HM" .
+
+meetup:0dc42e62e6f68d9fc38ea395e0ea5744
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Janet_Mead> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sister Janet Mead" .
+
+<http://w3id.org/polifonia/pilot/meetups/8460597/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sister Janet Mead died from cancer in Adelaide on 26 January 2022, aged 84." ;
+        mtp:hasParticipant   meetup:92e9472b3a44515d4819f1014c3696e1 , meetup:0dc42e62e6f68d9fc38ea395e0ea5744 ;
+        mtp:hasPurpose       meetup:a7feccc9f43acf0a31ddbf329ccc55cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Janet_Mead> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Janet_Mead>
+        rdf:type  core:Person .
+
+meetup:c07725963ec51098d093f3300d79cf3d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Janet_Mead> ;
+        mtp:hasOffset           "108" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sister Janet Mead" .
+
+meetup:a7feccc9f43acf0a31ddbf329ccc55cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Involvement in the music industry" ;
+        mtp:hasSourcePurpose          "LLM" .

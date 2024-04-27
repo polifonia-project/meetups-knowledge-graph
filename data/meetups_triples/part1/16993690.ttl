@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e2dc4abeb8cf9403e622adf4f2a8e4a8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.91311204" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08687882" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/16993690/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Albert Snaer (January 29, 1902 – 1962) was an American jazz trumpeter." ;
+        mtp:hasParticipant   meetup:2dfb39adcfe7fda3ab79b414c9f5fcee ;
+        mtp:hasPurpose       meetup:e2dc4abeb8cf9403e622adf4f2a8e4a8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Albert_Snaer> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Albert_Snaer>
+        rdf:type  core:Person .
+
+meetup:2dfb39adcfe7fda3ab79b414c9f5fcee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Albert_Snaer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "Albert Snaer" .

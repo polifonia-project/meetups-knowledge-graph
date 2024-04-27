@@ -1,0 +1,106 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/41136402/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alex Hope was highlighted for their achievement during the 2018 Billboard Music Awards, alongside Ciara, Audra Mae and Taylor Parks, in partnership with Uber." ;
+        mtp:hasParticipant   meetup:339a7bf0d6f905c78fe447a1fea2b13a , meetup:dd6ffc949288b844146369f4f2fb42d1 , meetup:16737ca234e22d54bdd98458e47cf22f , meetup:b8f3bd3e72edd01cb9d6f896a9efa818 ;
+        mtp:hasPurpose       meetup:b79b211ec4609756ef20884c3e75fc6c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alex_Hope_(songwriter)> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/41136402/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alexandra Hope Robotham (born 29 November 1993), professionally known as Alex Hope, is an Australian producer, songwriter, and multi-instrumentalist." ;
+        mtp:hasParticipant   meetup:407d1583a95bf00bb9a07127d1e05ff8 , meetup:b436faf6bab86836fc7989ad61d7adbc ;
+        mtp:hasPurpose       meetup:eb106f419e013a2efb200d85eeba85d1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alex_Hope_(songwriter)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Alex_Hope_(songwriter)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:339a7bf0d6f905c78fe447a1fea2b13a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tayla_Parx> ;
+        mtp:hasOffset           "119" ;
+        mtp:hasSimilarityScore  "0.9999999999978684" ;
+        mtp:hasTextEvidence     "Taylor Parks" .
+
+meetup:dd6ffc949288b844146369f4f2fb42d1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alex_Hope_(songwriter)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999990454806784" ;
+        mtp:hasTextEvidence     "Alex Hope" .
+
+<http://dbpedia.org/resource/Tayla_Parx>
+        rdf:type  core:Person .
+
+meetup:b436faf6bab86836fc7989ad61d7adbc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alexandra Hope Robotham" .
+
+<http://dbpedia.org/resource/Audra_Mae>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ciara>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:eb106f419e013a2efb200d85eeba85d1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.88654137" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07604107" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b79b211ec4609756ef20884c3e75fc6c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7341977" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22839564" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:16737ca234e22d54bdd98458e47cf22f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Audra_Mae> ;
+        mtp:hasOffset           "105" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Audra Mae" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:407d1583a95bf00bb9a07127d1e05ff8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alex_Hope_(songwriter)> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "0.9999990454806784" ;
+        mtp:hasTextEvidence     "Alex Hope" .
+
+meetup:b8f3bd3e72edd01cb9d6f896a9efa818
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ciara> ;
+        mtp:hasOffset           "98" ;
+        mtp:hasSimilarityScore  "0.9999995548570976" ;
+        mtp:hasTextEvidence     "Ciara" .

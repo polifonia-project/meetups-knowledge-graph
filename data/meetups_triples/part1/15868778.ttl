@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Terje_Winterstø_Røthing>
+        rdf:type  core:Person .
+
+meetup:62d70c1a7374fa1e3a75dea3d7b0717b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Terje_Winterstø_Røthing> ;
+        mtp:hasOffset           "34" ;
+        mtp:hasSimilarityScore  "0.999998297047626" ;
+        mtp:hasTextEvidence     "Ted Winters" .
+
+<http://w3id.org/polifonia/pilot/meetups/15868778/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In that band, he goes by the name Ted Winters and plays second guitar and sings." ;
+        mtp:hasParticipant   meetup:62d70c1a7374fa1e3a75dea3d7b0717b , meetup:430da964f845d4ff5ad01dcda7f59795 ;
+        mtp:hasPurpose       meetup:d0661ec0043471d48385575273c47843 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Terje_Winterstø_Røthing> ;
+        mtp:hasType          "HM" .
+
+meetup:d0661ec0043471d48385575273c47843
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involves playing guitar and singing in a band" ;
+        mtp:hasEvidencePurposeSecond  "Relates to the individual's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:430da964f845d4ff5ad01dcda7f59795
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Røthing" .

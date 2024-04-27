@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/35714809/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aya Uchida (内田 彩, Uchida Aya, born July 23, 1986) is a Japanese voice actress and singer." ;
+        mtp:hasParticipant   meetup:e153842dd2a511c3a5e14ae2059b73db ;
+        mtp:hasPurpose       meetup:920088842352f58fb6724499ba351975 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aya_Uchida> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/35714809/0/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her nickname is Ucchi." ;
+        mtp:hasParticipant   meetup:2bf82ebb913cb2dc493a38c81717f653 , meetup:0bd96a7451fd5477b1e24977238bf830 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aya_Uchida> ;
+        mtp:hasType          "HM" .
+
+meetup:0bd96a7451fd5477b1e24977238bf830
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ucchi" .
+
+meetup:e153842dd2a511c3a5e14ae2059b73db
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aya_Uchida> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aya Uchida" .
+
+meetup:2bf82ebb913cb2dc493a38c81717f653
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aya_Uchida> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aya Uchida" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Aya_Uchida>
+        rdf:type  core:Person .
+
+meetup:987f1d4b4bec711ec1241fa059c011f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Minami_Kuribayashi> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.9998052859330964" ;
+        mtp:hasTextEvidence     "Minami" .
+
+<http://dbpedia.org/resource/Minami_Kuribayashi>
+        rdf:type  core:Person .
+
+meetup:e765f0b2182463750c417b5326be1696
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aya_Uchida> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aya Uchida" .
+
+<http://w3id.org/polifonia/pilot/meetups/35714809/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She played Kotori Minami in Love Live!" ;
+        mtp:hasParticipant   meetup:987f1d4b4bec711ec1241fa059c011f2 , meetup:e765f0b2182463750c417b5326be1696 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aya_Uchida> ;
+        mtp:hasType          "HM" .
+
+meetup:920088842352f58fb6724499ba351975
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9974164" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00096634333" ;
+        mtp:hasSourcePurpose          "ML" .

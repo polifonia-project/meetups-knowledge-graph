@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e5b2ce1dbeb675d489c36797902557b6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Alina Eremia is a singer and member of LaLa band" ;
+        mtp:hasEvidencePurposeSecond  "She represented Romania in the Junior Eurovision Song Contest" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:47345cd2a7bde354f2ff620297274cdc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alina_Eremia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alina Eremia" .
+
+meetup:44e26590b8b7bd6f20bae6b45cbe23f4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92143005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07827957" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Alina_Eremia>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3127625/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 2014, she participated at the Romanian version of Dancing with the stars on Antena 1 and she was in the jury of Next Star." ;
+        mtp:hasParticipant   meetup:652ae7ddbfbebd4162c6861f9b5f04fc ;
+        mtp:hasPurpose       meetup:44e26590b8b7bd6f20bae6b45cbe23f4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alina_Eremia> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:652ae7ddbfbebd4162c6861f9b5f04fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alina_Eremia> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alina Eremia" .
+
+<http://w3id.org/polifonia/pilot/meetups/3127625/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alina Eremia (Romanian pronunciation: [aˈlina ereˈmi.a]; born 15 December 1993 in Buftea) is a Romanian singer, TV personality, actress and member of the LaLa band, who represented Romania in the Junior Eurovision Song Contest 2005 with the song Țurai." ;
+        mtp:hasParticipant   meetup:47345cd2a7bde354f2ff620297274cdc ;
+        mtp:hasPurpose       meetup:e5b2ce1dbeb675d489c36797902557b6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alina_Eremia> ;
+        mtp:hasType          "HT" .

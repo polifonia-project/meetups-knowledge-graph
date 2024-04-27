@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bobby_Ellsworth>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f1b72b2eb79ef08baf70a7c3a492f5ce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Ellsworth> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bobby \"Blitz\" Ellsworth" .
+
+meetup:42e9af0f79d8026db7da9c3c18a73b22
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Ellsworth> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999997708642" ;
+        mtp:hasTextEvidence     "Robert Ellsworth" .
+
+<http://dbpedia.org/resource/Robert_Ellsworth>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/17994602/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert Ellsworth (born May 3, 1959), best known as Bobby \"Blitz\" Ellsworth, is an American singer who is the lead vocalist of New Jersey thrash metal band Overkill." ;
+        mtp:hasParticipant   meetup:f1b72b2eb79ef08baf70a7c3a492f5ce , meetup:42e9af0f79d8026db7da9c3c18a73b22 ;
+        mtp:hasPurpose       meetup:edad62f95fb01291e8235c779177df20 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bobby_Ellsworth> ;
+        mtp:hasType          "HM" .
+
+meetup:edad62f95fb01291e8235c779177df20
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Lead vocalist of a thrash metal band" ;
+        mtp:hasEvidencePurposeSecond  "American singer" ;
+        mtp:hasSourcePurpose          "LLM" .

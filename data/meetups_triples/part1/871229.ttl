@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/871229/9/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pirate Monitor Ltd voluntarily withdrew from the class action lawsuit on March 8, 2021, while Maria Schneider continues with the case." ;
+        mtp:hasParticipant   meetup:320ecca22220d374353a851fa24f4cdc ;
+        mtp:hasPurpose       meetup:edca9e491285ada362c68413286d9a34 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maria_Schneider_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:edca9e491285ada362c68413286d9a34
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90577304" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09407752" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Maria_Schneider_(musician)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/871229/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The orchestra has also performed at jazz festivals and concert halls in Europe, South America, and Asia." ;
+        mtp:hasParticipant   meetup:2ad5e740957e53bdf5256a45573c47f3 ;
+        mtp:hasPurpose       meetup:c7daad67a792e3c3e74ceabd4b153aa5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maria_Schneider_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/871229/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On July 2, 2020, Maria Schneider filed a class action lawsuit with Pirate Monitor Ltd against YouTube arguing that smaller musicians are unable to access YouTube's Content ID system which would allow them to publish, monetize or block infringing material." ;
+        mtp:hasParticipant   meetup:b32eb2bf98b93b88f67794c048aa5ebc ;
+        mtp:hasPurpose       meetup:018e6448a808137c741ecfb006dda3a7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maria_Schneider_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:2ad5e740957e53bdf5256a45573c47f3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maria_Schneider_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Maria Schneider Orchestra" .
+
+meetup:b32eb2bf98b93b88f67794c048aa5ebc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maria_Schneider_(musician)> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "0.7649955340150648" ;
+        mtp:hasTextEvidence     "Maria Schneider" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:320ecca22220d374353a851fa24f4cdc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maria_Schneider_(musician)> ;
+        mtp:hasOffset           "94" ;
+        mtp:hasSimilarityScore  "0.764995534015043" ;
+        mtp:hasTextEvidence     "Maria Schneider" .
+
+meetup:c7daad67a792e3c3e74ceabd4b153aa5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9992955" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00040642187" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:018e6448a808137c741ecfb006dda3a7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7836139" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21497893" ;
+        mtp:hasSourcePurpose          "ML" .

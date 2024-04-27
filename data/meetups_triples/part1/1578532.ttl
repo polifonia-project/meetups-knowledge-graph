@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:93068bbe03a7594bf8b25f2a239d9384
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99985135" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0001474337" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5ef132fdfe4faecdbd9515bc3d238ab6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nick_Hexum> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nick Hexum" .
+
+<http://dbpedia.org/resource/George_Clanton>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1578532/33/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "George Clanton & Nick Hexum (2020)" ;
+        mtp:hasParticipant   meetup:5ef132fdfe4faecdbd9515bc3d238ab6 , meetup:8b0b83c14f5e23b741f530da9814cbf1 ;
+        mtp:hasPurpose       meetup:93068bbe03a7594bf8b25f2a239d9384 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nick_Hexum> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Nick_Hexum>
+        rdf:type  core:Person .
+
+meetup:8b0b83c14f5e23b741f530da9814cbf1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Clanton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999933776" ;
+        mtp:hasTextEvidence     "George Clanton" .

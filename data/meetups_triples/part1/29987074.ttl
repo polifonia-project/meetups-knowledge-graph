@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/29987074/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joshua Coyne (born March 5, 1993) is an American musician and composer." ;
+        mtp:hasParticipant   meetup:d29322df995cc1c708adbc99b6cac8ea ;
+        mtp:hasPurpose       meetup:f7a547447746dfc9421c1c0ef39db4de ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joshua_Coyne> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Joshua_Coyne>
+        rdf:type  core:Person .
+
+meetup:d29322df995cc1c708adbc99b6cac8ea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joshua_Coyne> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joshua Coyne" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f7a547447746dfc9421c1c0ef39db4de
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.48064706" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4412174" ;
+        mtp:hasSourcePurpose          "ML" .

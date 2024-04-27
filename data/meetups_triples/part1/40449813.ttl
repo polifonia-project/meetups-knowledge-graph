@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ef3fa92cb0af79a051a272dcc15bbb61
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7521223" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24225947" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:7b9408e7159d5643a92de63ade32cc98
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kamasi_Washington> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kamasi Washington" .
+
+<http://dbpedia.org/resource/Kamasi_Washington>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/40449813/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kamasi Washington (born 1981) is an American jazz saxophonist, usually playing tenor saxophone." ;
+        mtp:hasParticipant   meetup:7b9408e7159d5643a92de63ade32cc98 ;
+        mtp:hasPurpose       meetup:ef3fa92cb0af79a051a272dcc15bbb61 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kamasi_Washington> ;
+        mtp:hasType          "HT" .

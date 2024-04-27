@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:93b62d3064e2befb83b7f6dc7e509f32
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9898337" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010166099" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a1bbc86a20dbb43adf1887763949ec73
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involves working as a manager for a pianist" ;
+        mtp:hasEvidencePurposeSecond  "Involves working for a publisher" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Clarence_Williams_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/241441/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1918, Jones moved to Chicago, Illinois. He worked as Chicago manager for publisher and pianist Clarence Williams." ;
+        mtp:hasParticipant   meetup:886d27cc10daf57c258630a75de94ac7 ;
+        mtp:hasPurpose       meetup:a1bbc86a20dbb43adf1887763949ec73 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_M._Jones> ;
+        mtp:hasType          "HT" .
+
+meetup:886d27cc10daf57c258630a75de94ac7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clarence_Williams_(musician)> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "0.996519746987882" ;
+        mtp:hasTextEvidence     "Clarence Williams" .
+
+<http://dbpedia.org/resource/Richard_M._Jones>
+        rdf:type  core:Person .
+
+meetup:1c19c77d2fce71e7619093677fcad767
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richard_M._Jones> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Richard M. Jones" .
+
+<http://w3id.org/polifonia/pilot/meetups/241441/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Richard M. Jones worked for Mercury Records until his death in December 1945 in Chicago, at the age of 53." ;
+        mtp:hasParticipant   meetup:1c19c77d2fce71e7619093677fcad767 ;
+        mtp:hasPurpose       meetup:93b62d3064e2befb83b7f6dc7e509f32 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_M._Jones> ;
+        mtp:hasType          "HT" .

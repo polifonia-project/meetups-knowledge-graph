@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:7d75453375304835098e8a3c6dcd443a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emanuel_Paul> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Emanuel Paul" .
+
+meetup:3b45c5cbf8cceef260b2509bc2bf328e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99065185" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009219191" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/16679724/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Emanuel Paul (February 2, 1904 – May 23, 1988) was an American jazz tenor saxophonist." ;
+        mtp:hasParticipant   meetup:7d75453375304835098e8a3c6dcd443a ;
+        mtp:hasPurpose       meetup:3b45c5cbf8cceef260b2509bc2bf328e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emanuel_Paul> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Emanuel_Paul>
+        rdf:type  core:Person .

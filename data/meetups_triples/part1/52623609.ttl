@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2201226db4359abdd07c305f9cf331ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5101547" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4086268" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jonathan_Chua>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Jake_Williams>
+        rdf:type  core:Person .
+
+meetup:fd7b03332404d687c8647375e865cf60
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jake_Williams> ;
+        mtp:hasOffset           "67" ;
+        mtp:hasSimilarityScore  "0.997866470740462" ;
+        mtp:hasTextEvidence     "JX" .
+
+<http://w3id.org/polifonia/pilot/meetups/52623609/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jonathan Chua (born February 12, 1990) or better known as Jon Chua JX, is a Singapore-based actor and singer." ;
+        mtp:hasParticipant   meetup:fd7b03332404d687c8647375e865cf60 , meetup:74b58dc3d88ed18610754bce5ecad315 , meetup:6a9e50f2814cbf79f41db77e8f483ef4 ;
+        mtp:hasPurpose       meetup:2201226db4359abdd07c305f9cf331ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jonathan_Chua> ;
+        mtp:hasType          "HM" .
+
+meetup:74b58dc3d88ed18610754bce5ecad315
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jon Chua JX" .
+
+meetup:6a9e50f2814cbf79f41db77e8f483ef4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jonathan_Chua> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jonathan Chua" .

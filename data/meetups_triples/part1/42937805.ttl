@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Rosa_Menkman>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fc30876f6b009b7a6b79538463ea6af5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92736375" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04513567" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/42937805/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rosa Menkman (born 1983) is a Dutch art theorist, curator, and visual artist specialising in glitch art and resolution theory." ;
+        mtp:hasParticipant   meetup:5df5a57a36b985a43ecd10c46046503a ;
+        mtp:hasPurpose       meetup:fc30876f6b009b7a6b79538463ea6af5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rosa_Menkman> ;
+        mtp:hasType          "HT" .
+
+meetup:5df5a57a36b985a43ecd10c46046503a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rosa_Menkman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rosa Menkman" .

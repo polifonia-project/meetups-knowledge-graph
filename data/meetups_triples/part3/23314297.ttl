@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/23314297/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Louis-Philippe_Laurendeau> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Louis-Philippe_Laurendeau>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:45040a4723d88538c2a2f3115a68b1d2
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "13 February 1916" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1916-02-13"^^xsd:date ;
+        time:hasEnd          "1916-02-13"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/23314297/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:4d48415e09fc765229479b3a3e61511e , meetup:45040a4723d88538c2a2f3115a68b1d2 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Louis-Philippe_Laurendeau> ;
+        mtp:hasType     "HT" .
+
+meetup:4d48415e09fc765229479b3a3e61511e
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1861" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1861-01-01"^^xsd:date ;
+        time:hasEnd          "1861-12-31"^^xsd:date .

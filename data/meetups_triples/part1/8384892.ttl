@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/8384892/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carol Claire Aguilar Banawa-Crisostomo (born March 4, 1981), better known in the Philippines as Carol Banawa, is a US-based Filipina singer, actress, and nurse." ;
+        mtp:hasParticipant   meetup:a81612adba3859a5b63dc59c6a1271eb , meetup:a5ddedbd01e6de314bc0d344d5705923 ;
+        mtp:hasPurpose       meetup:1e8abe96d4563b721321c41312b3568d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carol_Banawa> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Carol_Banawa>
+        rdf:type  core:Person .
+
+meetup:a81612adba3859a5b63dc59c6a1271eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carol_Banawa> ;
+        mtp:hasOffset           "96" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Carol Banawa" .
+
+meetup:a5ddedbd01e6de314bc0d344d5705923
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Carol Claire Aguilar Banawa-Crisostomo" .
+
+meetup:1e8abe96d4563b721321c41312b3568d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Carol Banawa is a singer" ;
+        mtp:hasEvidencePurposeSecond  "Carol Banawa is a nurse" ;
+        mtp:hasSourcePurpose          "LLM" .

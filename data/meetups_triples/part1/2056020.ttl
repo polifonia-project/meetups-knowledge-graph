@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:bdf7eeea2966a367e2d21db5ec88ce34
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doc_Pomus> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Doc Pomus" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Johnny_Adams>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Doc_Pomus>
+        rdf:type  core:Person .
+
+meetup:a3c4ba2524acfa54a7051aa699af7447
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Adams> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "0.9999999999832028" ;
+        mtp:hasTextEvidence     "Johnny Adams" .
+
+meetup:4fe5ba684666856d253c53ceaeb8dbb8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9703293" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.027341928" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:511cdbe3c3892750d3b1f2225a88450b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.38940722" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.25565782" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6be7674de089a3d14cfff48738b478cb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Adams> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "0.9999837394808112" ;
+        mtp:hasTextEvidence     "Johnny Adams" .
+
+<http://w3id.org/polifonia/pilot/meetups/2056020/15/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Real Me: Johnny Adams Sings Doc Pomus (Rounder, 1991)" ;
+        mtp:hasParticipant   meetup:bdf7eeea2966a367e2d21db5ec88ce34 , meetup:a3c4ba2524acfa54a7051aa699af7447 ;
+        mtp:hasPurpose       meetup:511cdbe3c3892750d3b1f2225a88450b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Adams> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2056020/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A Christmas in New Orleans with Johnny Adams (Ace, 1975)" ;
+        mtp:hasParticipant   meetup:6be7674de089a3d14cfff48738b478cb ;
+        mtp:hasPurpose       meetup:4fe5ba684666856d253c53ceaeb8dbb8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Adams> ;
+        mtp:hasType          "HT" .

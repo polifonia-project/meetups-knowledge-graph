@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/7361015/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sally Barker (born 19 September 1959) is a British singer and songwriter, known for her solo work and as a founding member of the Poozies." ;
+        mtp:hasParticipant   meetup:57a3fa8a7f87a7947ce4bf6ba41b454d ;
+        mtp:hasPurpose       meetup:13435c614e0a007d3663fd145be635e4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sally_Barker> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Sally_Barker>
+        rdf:type  core:Person .
+
+meetup:57a3fa8a7f87a7947ce4bf6ba41b454d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sally_Barker> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sally Barker" .
+
+meetup:90e96d7bb79382725b75ac392ff5c633
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99850273" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013591418" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/7361015/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2014, she was a finalist in the BBC One talent contest The Voice, finishing in joint second place." ;
+        mtp:hasParticipant   meetup:2d040d119f6b5ca66dc959b75dc8e1ae ;
+        mtp:hasPurpose       meetup:90e96d7bb79382725b75ac392ff5c633 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sally_Barker> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:2d040d119f6b5ca66dc959b75dc8e1ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sally_Barker> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sally Barker" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:13435c614e0a007d3663fd145be635e4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9883034" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01140823" ;
+        mtp:hasSourcePurpose          "ML" .

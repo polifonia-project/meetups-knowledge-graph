@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Maureen_Stapleton>
+        rdf:type  core:Person .
+
+meetup:b97a9ddb2b777d2f1995fb5ae94def3f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8101629" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18272398" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:24f0864a707c4b4c22a2807c02780fd4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lois Maureen Stapleton" .
+
+meetup:77e568c909d7301b078cbeecc5fb495f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maureen_Stapleton> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Maureen Stapleton" .
+
+<http://w3id.org/polifonia/pilot/meetups/768228/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lois Maureen Stapleton (June 21, 1925 – March 13, 2006) was an American actress." ;
+        mtp:hasParticipant   meetup:24f0864a707c4b4c22a2807c02780fd4 , meetup:77e568c909d7301b078cbeecc5fb495f ;
+        mtp:hasPurpose       meetup:b97a9ddb2b777d2f1995fb5ae94def3f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maureen_Stapleton> ;
+        mtp:hasType          "HM" .

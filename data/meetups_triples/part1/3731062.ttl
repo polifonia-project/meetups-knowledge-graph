@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/3731062/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In an August 2006 interview on VH1 Classic, Ted Nugent remarked \"I'm the only guy in rock'n'roll that plays that hollow body jazz guitar and it's because in 1960 I saw Jimmy McCarty creating those big fat full chords like I do on \"Stranglehold\"; I learned that from Jimmy McCarty." ;
+        mtp:hasParticipant   meetup:9574f6aaa9db602606974b5f8361721e , meetup:d8951591d5b9f171e60e42ca6e5a1c00 ;
+        mtp:hasPurpose       meetup:d664bd74c5f7b2f488e1eb28e3b23c5b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jim_McCarty_(guitarist)> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d8951591d5b9f171e60e42ca6e5a1c00
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ted_Nugent> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ted Nugent" .
+
+<http://dbpedia.org/resource/Ted_Nugent>
+        rdf:type  core:Person .
+
+meetup:d664bd74c5f7b2f488e1eb28e3b23c5b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is discussing the topic of music making, specifically the influence of Jimmy McCarty on Ted Nugent's guitar playing." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions Ted Nugent's personal life and his experience of seeing Jimmy McCarty play the guitar in 1960." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9574f6aaa9db602606974b5f8361721e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jim_McCarty_(guitarist)> ;
+        mtp:hasOffset           "168" ;
+        mtp:hasSimilarityScore  "0.9999980442711174" ;
+        mtp:hasTextEvidence     "Jimmy McCarty" .
+
+<http://dbpedia.org/resource/Jim_McCarty_(guitarist)>
+        rdf:type  core:Person .

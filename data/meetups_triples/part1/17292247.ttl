@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Wayne_Raney>
+        rdf:type  core:Person .
+
+meetup:5d230b9c3df7504acc904fabc4ba70e2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wayne_Raney> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wayne Raney" .
+
+<http://w3id.org/polifonia/pilot/meetups/17292247/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wayne Raney (August 17, 1921 – January 23, 1993) was an American country singer and harmonica player." ;
+        mtp:hasParticipant   meetup:5d230b9c3df7504acc904fabc4ba70e2 ;
+        mtp:hasPurpose       meetup:31af7c89960b33dbe92490233d3d15e2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wayne_Raney> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:31af7c89960b33dbe92490233d3d15e2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9369682" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.046793967" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .

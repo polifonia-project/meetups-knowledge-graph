@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:617cd74509295561a04eade7360fd975
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gard_Nilssen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gard Nilssen" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ca36de2a2af2699876888472ddda2398
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Jazz musician and composer" ;
+        mtp:hasEvidencePurposeSecond  "Born in Skien, Norway" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/36885460/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gard Nilssen (born 24 June 1983 in Skien, Norway) is a Norwegian Jazz musician (drums) and composer, and member of the bands Bushman's Revenge and Puma." ;
+        mtp:hasParticipant   meetup:617cd74509295561a04eade7360fd975 ;
+        mtp:hasPurpose       meetup:ca36de2a2af2699876888472ddda2398 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gard_Nilssen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Gard_Nilssen>
+        rdf:type  core:Person .

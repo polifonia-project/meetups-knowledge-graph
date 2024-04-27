@@ -1,0 +1,70 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Monty_Don>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/John_F._Kennedy>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Doug_Boyle>
+        rdf:type  core:Person .
+
+meetup:9fa0651ae8a1feb1496d6de30be9fe77
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Guitarist and composer" ;
+        mtp:hasEvidencePurposeSecond  "Born in Buckhurst Hill, Essex" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:adf6a3c930c0c74878ccd531a11fada3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_F._Kennedy> ;
+        mtp:hasOffset           "154" ;
+        mtp:hasSimilarityScore  "0.9992276600429432" ;
+        mtp:hasTextEvidence     "Kennedy" .
+
+<http://dbpedia.org/resource/Robert_Plant>
+        rdf:type  core:Person .
+
+meetup:472a16b608a2b75524fafdb7b88ea31b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Plant> ;
+        mtp:hasOffset           "134" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Robert Plant" .
+
+meetup:71f904bfa589a5767e531376a79ef8de
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Monty_Don> ;
+        mtp:hasOffset           "148" ;
+        mtp:hasSimilarityScore  "0.7320975707734393" ;
+        mtp:hasTextEvidence     "Nigel" .
+
+<http://w3id.org/polifonia/pilot/meetups/12907903/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Doug Boyle (born 6 September 1962, Buckhurst Hill, Essex, England) is an English guitarist and composer, best known for his work with Robert Plant, Nigel Kennedy and later incarnations of Caravan." ;
+        mtp:hasParticipant   meetup:71f904bfa589a5767e531376a79ef8de , meetup:a38cae87cf37804eea02df4ad1bef4e9 , meetup:472a16b608a2b75524fafdb7b88ea31b , meetup:adf6a3c930c0c74878ccd531a11fada3 ;
+        mtp:hasPurpose       meetup:9fa0651ae8a1feb1496d6de30be9fe77 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Doug_Boyle> ;
+        mtp:hasType          "HM" .
+
+meetup:a38cae87cf37804eea02df4ad1bef4e9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doug_Boyle> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Doug Boyle" .

@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/10635746/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Meyers was the top-selling classical instrumentalist of 2014 on Billboard's traditional classical charts." ;
+        mtp:hasParticipant   meetup:d96ff3c208ad35538d31e119f4677758 ;
+        mtp:hasPurpose       meetup:0f68c633609c405447ee3551a9e5b936 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anne_Akiko_Meyers> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Anne_Akiko_Meyers>
+        rdf:type  core:Person .
+
+meetup:d96ff3c208ad35538d31e119f4677758
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anne_Akiko_Meyers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anne Akiko Meyers" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f1e9cfbbc821d8443683659108633ae6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anne_Akiko_Meyers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Anne Akiko Meyers" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:973365c02c9fe425787ccc2718eaf7e6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.82448906" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17497197" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/10635746/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anne Akiko Meyers (born May 15, 1970) is an American concert violinist." ;
+        mtp:hasParticipant   meetup:f1e9cfbbc821d8443683659108633ae6 ;
+        mtp:hasPurpose       meetup:973365c02c9fe425787ccc2718eaf7e6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anne_Akiko_Meyers> ;
+        mtp:hasType          "HT" .
+
+meetup:0f68c633609c405447ee3551a9e5b936
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.82558167" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15836453" ;
+        mtp:hasSourcePurpose          "ML" .

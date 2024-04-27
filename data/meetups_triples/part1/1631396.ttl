@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:46ca713e8219bcae450f04c42c23e3b6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Production of music tracks" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration between music producers" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1631396/10/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also produced sides from many other acts, including rhythm and blues star James Brown, whose \"Papa's Got a Brand New Bag\" (1965) was cut in Smith's studio. It was later ranked as \"No. 72 in Rolling Stone's list of the 500 greatest songs of all time.\"" ;
+        mtp:hasPurpose       meetup:46ca713e8219bcae450f04c42c23e3b6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_%22Guitar_Boogie%22_Smith> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1631396/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Arthur Smith was born in 1921 in Clinton, South Carolina, the son of Clayton Seymour Smith, a cotton mill worker, and his wife. His father was also a music teacher, and led a brass band in Kershaw, South Carolina." ;
+        mtp:hasParticipant   meetup:9aeb8f5e5f6f16578fbc4a8e035cd503 ;
+        mtp:hasPurpose       meetup:51dfe37ea798404cfa16c571b43ad441 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_%22Guitar_Boogie%22_Smith> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Arthur_%22Guitar_Boogie%22_Smith>
+        rdf:type  core:Person .
+
+meetup:51dfe37ea798404cfa16c571b43ad441
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Arthur Smith's father was a music teacher and led a brass band" ;
+        mtp:hasEvidencePurposeSecond  "Arthur Smith's personal life and family background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9aeb8f5e5f6f16578fbc4a8e035cd503
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arthur_Smith_(comedian)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Arthur Smith" .
+
+<http://dbpedia.org/resource/Arthur_Smith_(comedian)>
+        rdf:type  core:Person .

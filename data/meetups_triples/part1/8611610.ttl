@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/8611610/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Drängarna's greatest hit song, \"Vill du bli min fru\", was subject to some controversy in 2002, when it was decided by the Supreme Court of Sweden that an eight-bar violin part was plagiarized from a song by the group Landslaget. This was the first copyright infringement case tried in Sweden." ;
+        mtp:hasPurpose       meetup:a62ca62f25929113fd12733025381abe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Drängarna> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Drängarna>
+        rdf:type  core:Person .
+
+meetup:a62ca62f25929113fd12733025381abe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The controversy involves a copyright infringement in a song." ;
+        mtp:hasEvidencePurposeSecond  "The case being the first of its kind in Sweden is a coincidence." ;
+        mtp:hasSourcePurpose          "LLM" .

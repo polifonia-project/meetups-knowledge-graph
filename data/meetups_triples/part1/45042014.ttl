@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Anna-Lisa_Frykman>
+        rdf:type  core:Person .
+
+meetup:9a3b38602e4cf35e416ebd1ba65ce57c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99623007" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0025656284" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:893a003f65f7a27ad16af24cbe5107cf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna-Lisa_Frykman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Anna-Lisa Frykman" .
+
+<http://w3id.org/polifonia/pilot/meetups/45042014/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anna-Lisa Frykman, born Anna Elisabet Frykman in Stockholm, Sweden, was a Swedish composer, song lyricist and teacher." ;
+        mtp:hasParticipant   meetup:893a003f65f7a27ad16af24cbe5107cf ;
+        mtp:hasPurpose       meetup:9a3b38602e4cf35e416ebd1ba65ce57c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna-Lisa_Frykman> ;
+        mtp:hasType          "HT" .

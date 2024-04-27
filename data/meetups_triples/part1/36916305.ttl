@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/36916305/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He lived in Berkeley, California." ;
+        mtp:hasParticipant   meetup:e24a12afcc4431b1370eddecb6e20690 ;
+        mtp:hasPurpose       meetup:beced827dd70c0106d2a84fb566ca2f4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daniel_Heartz> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/36916305/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Daniel Heartz (1928–2019) was an American musicologist and professor emeritus of music at the University of California, Berkeley." ;
+        mtp:hasParticipant   meetup:6337e837fe7177ed7613728995b2cd66 ;
+        mtp:hasPurpose       meetup:6aa61658ef8ff6b44b180976f8eae08b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daniel_Heartz> ;
+        mtp:hasType          "HT" .
+
+meetup:6337e837fe7177ed7613728995b2cd66
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daniel_Heartz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Daniel Heartz" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:6aa61658ef8ff6b44b180976f8eae08b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99925476" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0005294336" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Daniel_Heartz>
+        rdf:type  core:Person .
+
+meetup:beced827dd70c0106d2a84fb566ca2f4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8861715" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.089399785" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e24a12afcc4431b1370eddecb6e20690
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daniel_Heartz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daniel Heartz" .

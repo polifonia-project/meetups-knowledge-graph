@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/7805407/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wayne Escoffery (born 23 February 1975) is an American jazz saxophonist." ;
+        mtp:hasParticipant   meetup:4100f18a7c44b1a0bae3a376590d5fb3 ;
+        mtp:hasPurpose       meetup:210e5b38d1cbab260eac0db3589d4373 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wayne_Escoffery> ;
+        mtp:hasType          "HT" .
+
+meetup:4100f18a7c44b1a0bae3a376590d5fb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wayne_Escoffery> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wayne Escoffery" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:210e5b38d1cbab260eac0db3589d4373
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.50048095" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4578084" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Wayne_Escoffery>
+        rdf:type  core:Person .

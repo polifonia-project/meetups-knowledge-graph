@@ -1,0 +1,88 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/5415031/9/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1947 she created a five-part lecture series on Peter Warlock for the BBC. Much later, she defended his reputation in a very personal broadcast talk." ;
+        mtp:hasParticipant   meetup:2e2b99e16c4fafc2e01dfce3b9a18928 ;
+        mtp:hasPurpose       meetup:d7633ab6750c2dea4ea2525f80bf24bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elizabeth_Poston> ;
+        mtp:hasType          "HT" .
+
+meetup:2e2b99e16c4fafc2e01dfce3b9a18928
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Warlock> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Warlock" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/5415031/11/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A catalogue of her works by her friend Dr John Alabaster published in 2018 lists some two dozen of her compositions considered lost. One of them, the Festal Te Deum, first performed in 1959, was rediscovered in 2018." ;
+        mtp:hasPurpose       meetup:68d5f15338446053efb54249340c1943 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elizabeth_Poston> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Peter_Warlock>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Elizabeth_Poston>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:c5ec475a8f8c3514257d7509f6e066c5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elizabeth_Poston> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elizabeth Poston" .
+
+meetup:68d5f15338446053efb54249340c1943
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions a composition and its rediscovery." ;
+        mtp:hasEvidencePurposeSecond  "The rediscovery of the composition in the same year it was published is a coincidence." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:0ae5dbee6636a08f51e055c9bcd11166
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6540775" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17903048" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d7633ab6750c2dea4ea2525f80bf24bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Teaching and sharing knowledge" ;
+        mtp:hasEvidencePurposeSecond  "Personal experiences and opinions" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/5415031/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Elizabeth Poston (24 October 1905 – 18 March 1987) was an English composer, pianist and writer." ;
+        mtp:hasParticipant   meetup:c5ec475a8f8c3514257d7509f6e066c5 ;
+        mtp:hasPurpose       meetup:0ae5dbee6636a08f51e055c9bcd11166 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elizabeth_Poston> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/3575481/11/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The VIII Corps at Beaumont-Hamel and Serre, 1 July 1916. A new book, the Long Road to the Somme 1870-1916, is due in 2018 and J Jour: The French 6e Armee on the Somme, 1 July 1916, in 2019." ;
+        mtp:hasPurpose       meetup:b0324b29b55ecb286f8ed6bde597aab3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_MacCormick> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/3575481/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "William MacCormick (born 15 April 1951 from London) is an English bassist and vocalist." ;
+        mtp:hasPurpose       meetup:b586a4c9c9686aabe3a62bf0786d2212 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_MacCormick> ;
+        mtp:hasType          "HT" .
+
+meetup:f51f2851c44feeeba3002eda6e097860
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "105" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chris (later Lord" .
+
+<http://w3id.org/polifonia/pilot/meetups/3575481/8/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was also the agent in the Liberal Democrats' first by-election in Kensington by-election in 1988. In 1988 he was appointed one of two National Elections Co-ordinators for the Liberal Democrats alongside Chris" ;
+        mtp:hasParticipant   meetup:f51f2851c44feeeba3002eda6e097860 ;
+        mtp:hasPurpose       meetup:0aac54ed9dcb9da29fb416d123846566 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_MacCormick> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b0324b29b55ecb286f8ed6bde597aab3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The new book is about the history of the Somme" ;
+        mtp:hasEvidencePurposeSecond  "J Jour's book focuses on the French 6e Armee" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Bill_MacCormick>
+        rdf:type  core:Person .
+
+meetup:0aac54ed9dcb9da29fb416d123846566
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Political coordination" ;
+        mtp:hasEvidencePurposeSecond  "Party organization" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b586a4c9c9686aabe3a62bf0786d2212
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Bassist and vocalist" ;
+        mtp:hasEvidencePurposeSecond  "Born in London" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Steve_Reynolds_(singer-songwriter)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/18646329/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steve Reynolds is a singer-songwriter from Vancouver, British Columbia." ;
+        mtp:hasParticipant   meetup:65c84b039eaeb66c5b77b73cbdb5e2aa ;
+        mtp:hasPurpose       meetup:8269b464e2d77dbb7fde6f6a228b48ee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Reynolds_(singer-songwriter)> ;
+        mtp:hasType          "HT" .
+
+meetup:007f1c536e82bea746dae9e416bf2d35
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Reynolds_(singer-songwriter)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Reynolds" .
+
+meetup:65c84b039eaeb66c5b77b73cbdb5e2aa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Reynolds_(singer-songwriter)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9321917330219304" ;
+        mtp:hasTextEvidence     "Steve Reynolds" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/18646329/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His song \"Mistaken Identity\" appears in the season 5 premiere for Grey's Anatomy along with dozens of other TV shows, films and ad campaigns." ;
+        mtp:hasParticipant   meetup:52aea8efa1d3076c361fb50c474e8f20 ;
+        mtp:hasPurpose       meetup:997eae9363db6377ad00bfefd9bb04cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Reynolds_(singer-songwriter)> ;
+        mtp:hasType          "HT" .
+
+meetup:997eae9363db6377ad00bfefd9bb04cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.88678265" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07530809" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/18646329/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Reynolds was nominated for a 2008 Grammy award for his album, the Carnival Papers." ;
+        mtp:hasParticipant   meetup:007f1c536e82bea746dae9e416bf2d35 ;
+        mtp:hasPurpose       meetup:fece99280dc447e1668b00850043082d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Reynolds_(singer-songwriter)> ;
+        mtp:hasType          "HT" .
+
+meetup:52aea8efa1d3076c361fb50c474e8f20
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Reynolds_(singer-songwriter)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Reynolds" .
+
+meetup:8269b464e2d77dbb7fde6f6a228b48ee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.72208726" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22574219" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fece99280dc447e1668b00850043082d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84822935" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1359837" ;
+        mtp:hasSourcePurpose          "ML" .

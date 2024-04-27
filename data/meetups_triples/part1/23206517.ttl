@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:0aabce3afd428903a376f76ce913a555
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98842967" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010965749" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/23206517/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aurèle Nicolet (22 January 1926 – 29 January 2016) was a Swiss flautist." ;
+        mtp:hasParticipant   meetup:02c4d95039a5e31f5674d30af463d8a9 ;
+        mtp:hasPurpose       meetup:0aabce3afd428903a376f76ce913a555 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aurèle_Nicolet> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:894348f1e6e0450fda7bf9a9c1ba3b26
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99995935" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.914493e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/23206517/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was considered one of the world's best flute players of the late twentieth century." ;
+        mtp:hasParticipant   meetup:c9ad343fb859e1387c35dd06618e541e ;
+        mtp:hasPurpose       meetup:894348f1e6e0450fda7bf9a9c1ba3b26 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aurèle_Nicolet> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Aurèle_Nicolet>
+        rdf:type  core:Person .
+
+meetup:c9ad343fb859e1387c35dd06618e541e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aurèle_Nicolet> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aurèle Nicolet" .
+
+meetup:02c4d95039a5e31f5674d30af463d8a9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aurèle_Nicolet> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aurèle Nicolet" .

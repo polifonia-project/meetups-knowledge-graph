@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Miki_Matsuhashi>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:dff57e0e98a2aec7b16d1bf98c7ac289
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Matsuhashi Miki" .
+
+meetup:89f309cfc49664188008a5ce169afd5b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99113303" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008574212" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ae11730636454eb23cece4f319c79d49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miki_Matsuhashi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Miki Matsuhashi" .
+
+<http://w3id.org/polifonia/pilot/meetups/15917648/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Miki Matsuhashi (松橋 未樹, Matsuhashi Miki) (born August 10, 1983) is a Japanese former singer and songwriter who was active between 2000 to 2003." ;
+        mtp:hasParticipant   meetup:dff57e0e98a2aec7b16d1bf98c7ac289 , meetup:ae11730636454eb23cece4f319c79d49 ;
+        mtp:hasPurpose       meetup:89f309cfc49664188008a5ce169afd5b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miki_Matsuhashi> ;
+        mtp:hasType          "HM" .

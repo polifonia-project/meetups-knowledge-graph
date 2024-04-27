@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a5f73e7c8465c609c043c656e13faed4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Pop and rock singer-songwriter" ;
+        mtp:hasEvidencePurposeSecond  "Born in Quebec" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f0bb34b99f027ef7b4cddd95b021fb9d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lise_de_Baissac> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.9809958171348336" ;
+        mtp:hasTextEvidence     "Lise" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/4912871/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Laurence Jalbert (born Lise Jalbert, 18 August 1959 in Rivière-au-Renard, Quebec) is a pop and rock singer-songwriter from Quebec." ;
+        mtp:hasParticipant   meetup:f0bb34b99f027ef7b4cddd95b021fb9d , meetup:871deafa07db6aa15c52210bf8492b6c ;
+        mtp:hasPurpose       meetup:a5f73e7c8465c609c043c656e13faed4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laurence_Jalbert> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Lise_de_Baissac>
+        rdf:type  core:Person .
+
+meetup:871deafa07db6aa15c52210bf8492b6c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Laurence_Jalbert> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Laurence Jalbert" .
+
+<http://dbpedia.org/resource/Laurence_Jalbert>
+        rdf:type  core:Person .

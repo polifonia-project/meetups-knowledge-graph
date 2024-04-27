@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Conrad_Herwig>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:af082decc6447bb9b6acc726dc1e311c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Conrad_Herwig> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Conrad Herwig" .
+
+<http://w3id.org/polifonia/pilot/meetups/2592629/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lee Conrad Herwig III is an American jazz trombonist from New York City." ;
+        mtp:hasParticipant   meetup:af082decc6447bb9b6acc726dc1e311c ;
+        mtp:hasPurpose       meetup:ebf469360d42c23852fb4d6578cb8aab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Conrad_Herwig> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:ebf469360d42c23852fb4d6578cb8aab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99964714" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00015844454" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/32169645/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band consists of vocalist and multi-instrumentalist Nick Berry and drummer Kurt Biroc." ;
+        mtp:hasParticipant   meetup:fabd61b46a12b41620dce684feb547bd , meetup:aa24ccff808c740fb4e31dc2dfd10b37 , meetup:8d7ca787cb39d6a67f868f89ca0690eb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dots_Will_Echo> ;
+        mtp:hasType          "HM" .
+
+meetup:8d7ca787cb39d6a67f868f89ca0690eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nick_Berry> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "0.9999999999863292" ;
+        mtp:hasTextEvidence     "Nick Berry" .
+
+meetup:08b94c2a7714abb7fe7e66f49eb381bc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dots_Will_Echo> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dots Will Echo" .
+
+<http://dbpedia.org/resource/Dots_Will_Echo>
+        rdf:type  core:Person .
+
+meetup:aa24ccff808c740fb4e31dc2dfd10b37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dots_Will_Echo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dots Will Echo" .
+
+meetup:fabd61b46a12b41620dce684feb547bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "79" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kurt Biroc" .
+
+<http://w3id.org/polifonia/pilot/meetups/32169645/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1996, the group independently released their second album Get Your Hands Off My Modem, You Weasel." ;
+        mtp:hasParticipant   meetup:08b94c2a7714abb7fe7e66f49eb381bc ;
+        mtp:hasPurpose       meetup:17f8d6d160b27e33bc0a1aca7105061d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dots_Will_Echo> ;
+        mtp:hasType          "HT" .
+
+meetup:17f8d6d160b27e33bc0a1aca7105061d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95515555" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.033836953" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Nick_Berry>
+        rdf:type  core:Person .

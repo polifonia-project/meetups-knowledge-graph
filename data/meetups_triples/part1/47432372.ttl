@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Kato_Khandwala>
+        rdf:type  core:Person .
+
+meetup:2798ab6868784ba121dc0ab7ed053bd8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kato_Khandwala> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kato Khandwala" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:39c7bfe6a07bdcf5255a817151118336
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kato_Khandwala> ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kato Khandwala" .
+
+<http://w3id.org/polifonia/pilot/meetups/47432372/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Khandwala died on April 25, 2018, at the age of 47, due to injuries sustained in a motorcycle accident in North Hollywood, Los Angeles." ;
+        mtp:hasParticipant   meetup:2798ab6868784ba121dc0ab7ed053bd8 ;
+        mtp:hasPurpose       meetup:c8f8acff4412b9a17a271ebdd8fe691c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kato_Khandwala> ;
+        mtp:hasType          "HT" .
+
+meetup:b1154ff907101024b690cbd86fe95931
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Suketo Khandwala" .
+
+<http://w3id.org/polifonia/pilot/meetups/47432372/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Suketo Khandwala, known professionally as Kato Khandwala, was an American record producer, songwriter, mixer, and engineer." ;
+        mtp:hasParticipant   meetup:39c7bfe6a07bdcf5255a817151118336 , meetup:b1154ff907101024b690cbd86fe95931 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kato_Khandwala> ;
+        mtp:hasType          "HM" .
+
+meetup:c8f8acff4412b9a17a271ebdd8fe691c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98818356" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011720032" ;
+        mtp:hasSourcePurpose          "ML" .

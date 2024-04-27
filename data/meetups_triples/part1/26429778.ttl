@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Nick_Martin_(musician)>
+        rdf:type  core:Person .
+
+meetup:dbb1f0edced1c8b4458b56d94174f509
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999977" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.8864272e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:85d5893c53485e811f59e6f0ae5d750d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nick_Martin_(musician)> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nicholas Anthony Martin" .
+
+<http://w3id.org/polifonia/pilot/meetups/26429778/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Previously he was a guitarist for the band Cinematic Sunrise." ;
+        mtp:hasParticipant   meetup:85d5893c53485e811f59e6f0ae5d750d ;
+        mtp:hasPurpose       meetup:dbb1f0edced1c8b4458b56d94174f509 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nick_Martin_(musician)> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mark_Rylance>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Claire_van_Kampen>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e3c6365d62c9a3b18a8048198b431f0f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Recognition in the arts" ;
+        mtp:hasEvidencePurposeSecond  "Work at Shakespeare's Globe Theatre" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/42811726/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In spring 2007, she received the Vero Nihil Verius award for Distinguished Achievement in the Arts, conferred upon her by Concordia University in Oregon, United States. Together with Mark Rylance and Jenny Tiramani, she received the 2007 Sam Wanamaker Award for the founding work during the opening ten years at Shakespeare's Globe Theatre." ;
+        mtp:hasParticipant   meetup:5f839932da9dd6b56d2295660e75acba , meetup:d412fcb521968d062504751a8ab9f1eb ;
+        mtp:hasPurpose       meetup:e3c6365d62c9a3b18a8048198b431f0f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Claire_van_Kampen> ;
+        mtp:hasType          "HT" .
+
+meetup:d412fcb521968d062504751a8ab9f1eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Rylance> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mark Rylance" .
+
+<http://dbpedia.org/resource/Jenny_Tiramani>
+        rdf:type  core:Person .
+
+meetup:5f839932da9dd6b56d2295660e75acba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jenny_Tiramani> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jenny Tiramani" .

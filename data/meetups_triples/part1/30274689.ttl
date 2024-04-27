@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Jay_Frank>
+        rdf:type  core:Person .
+
+meetup:8245dddd71f0eb7b3d3d57a408ecc4b0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9496818" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02987062" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/30274689/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jay Frank (December 24, 1971 – October 13, 2019) was an American author and music industry executive." ;
+        mtp:hasParticipant   meetup:915e6cf57c03a1c983267abd354ff860 ;
+        mtp:hasPurpose       meetup:8245dddd71f0eb7b3d3d57a408ecc4b0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jay_Frank> ;
+        mtp:hasType          "HT" .
+
+meetup:915e6cf57c03a1c983267abd354ff860
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jay_Frank> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999957538" ;
+        mtp:hasTextEvidence     "Jay Frank" .

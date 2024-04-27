@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/26176105/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Parry (born 23 March 1949) is an English conductor who is particularly known for his work in opera." ;
+        mtp:hasParticipant   meetup:31db6e32ae79d6c078a97d6fa0a589ad ;
+        mtp:hasPurpose       meetup:900ee77df53dab8977075b9412b1f376 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Parry_(conductor)> ;
+        mtp:hasType          "HT" .
+
+meetup:06d6f855b689875997718e7f687eb5e9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9974975" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0023627565" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/26176105/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Parry's name has become associated with Chandos Records's recordings of operas in English (principally underwritten by the Peter Moores Foundation), as well as Opera Rara's rare and unusual operas, many from the bel canto era of the early 19th century." ;
+        mtp:hasParticipant   meetup:be6dc4a63d14bcd2263b11380e9ca1bc ;
+        mtp:hasPurpose       meetup:06d6f855b689875997718e7f687eb5e9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Parry_(conductor)> ;
+        mtp:hasType          "HT" .
+
+meetup:900ee77df53dab8977075b9412b1f376
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6214804" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.37826142" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:31db6e32ae79d6c078a97d6fa0a589ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Parry_(conductor)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9697923071630692" ;
+        mtp:hasTextEvidence     "David Parry" .
+
+meetup:be6dc4a63d14bcd2263b11380e9ca1bc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Parry_(conductor)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David Parry" .
+
+<http://dbpedia.org/resource/David_Parry_(conductor)>
+        rdf:type  core:Person .

@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/26479649/4/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her recordings for Paramount in 1930 were labeled \"Elvie Thomas\"." ;
+        mtp:hasParticipant   meetup:613d32ba59c78fc6171139135524a5a1 ;
+        mtp:hasPurpose       meetup:076237da794b278c23cd8efeab9baff7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elvie_Thomas> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:aff8f8a1412501a1161f1a744875ddb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "L.V. Grant" .
+
+meetup:19e4409a8de69525aeb929f9f22e0fa5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elvie_Thomas> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elvie Thomas" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:436032856105f14bcc44b631a8c941d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/L.V._(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999994838618" ;
+        mtp:hasTextEvidence     "L.V." .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:076237da794b278c23cd8efeab9baff7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8130228" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14140029" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Elvie_Thomas>
+        rdf:type  core:Person .
+
+meetup:613d32ba59c78fc6171139135524a5a1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elvie_Thomas> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Elvie Thomas" .
+
+<http://w3id.org/polifonia/pilot/meetups/26479649/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "L.V. Thomas  (née L.V. Grant, August 7, 1891 – May 20, 1979), better known as Elvie Thomas, was an American country blues singer and guitarist from Houston, Texas." ;
+        mtp:hasParticipant   meetup:aff8f8a1412501a1161f1a744875ddb3 , meetup:19e4409a8de69525aeb929f9f22e0fa5 , meetup:436032856105f14bcc44b631a8c941d4 ;
+        mtp:hasPurpose       meetup:54eab0df63d5cf90c0ef81b7079768b3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elvie_Thomas> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/L.V._(singer)>
+        rdf:type  core:Person .
+
+meetup:54eab0df63d5cf90c0ef81b7079768b3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Elvie Thomas was a country blues singer and guitarist" ;
+        mtp:hasEvidencePurposeSecond  "Elvie Thomas was born on August 7, 1891 and passed away on May 20, 1979" ;
+        mtp:hasSourcePurpose          "LLM" .

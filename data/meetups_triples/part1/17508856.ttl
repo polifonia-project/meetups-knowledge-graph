@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7d58fb6c5217d85eefaa26bf4cdf898b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Freddie Notes" .
+
+<http://dbpedia.org/resource/Greyhound_(band)>
+        rdf:type  core:Person .
+
+meetup:5c4789d7b995962ab8bb953f954915a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Greyhound_(band)> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "0.9999986004081184" ;
+        mtp:hasTextEvidence     "The Rudies" .
+
+meetup:cef80b8da2f334d1e6da8d415dd0dd20
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9759754" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.015213351" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/17508856/1/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billed as Freddie Notes and The Rudies, \"Montego Bay\" peaked at #45 in the UK Singles Chart in October 1970." ;
+        mtp:hasParticipant   meetup:7d58fb6c5217d85eefaa26bf4cdf898b , meetup:5c4789d7b995962ab8bb953f954915a6 ;
+        mtp:hasPurpose       meetup:cef80b8da2f334d1e6da8d415dd0dd20 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Greyhound_(band)> ;
+        mtp:hasType          "HM" .

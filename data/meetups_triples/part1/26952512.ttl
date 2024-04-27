@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Titus_Hjelm>
+        rdf:type  core:Person .
+
+meetup:f83662bcd6441acce4f37f69d30c67c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Titus_Hjelm> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999994919037516" ;
+        mtp:hasTextEvidence     "Titus Hjelm" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:2a87d4a93352e4b4cf69e0e1c0bad049
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99995756" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.0970477e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/26952512/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Previously he was a Reader in Sociology and a lecturer of Finnish Society and Culture at the School of Slavonic and East European Studies, a part of University College London (UCL), where he teaches culture, social science, and literature courses. He studied Comparative Religion, History and Sociology at The University of Helsinki and has written several books concerning perspectives of popular culture and social attitudes towards religion." ;
+        mtp:hasPurpose       meetup:4601d0ab672a13aea729db34000b8656 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Titus_Hjelm> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/26952512/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Titus Hjelm (born 15 October 1974) is an academic and musician from Helsinki, Finland." ;
+        mtp:hasParticipant   meetup:f83662bcd6441acce4f37f69d30c67c1 ;
+        mtp:hasPurpose       meetup:2a87d4a93352e4b4cf69e0e1c0bad049 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Titus_Hjelm> ;
+        mtp:hasType          "HT" .
+
+meetup:4601d0ab672a13aea729db34000b8656
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Teaching culture and social science at UCL" ;
+        mtp:hasEvidencePurposeSecond  "Studied Comparative Religion and Sociology" ;
+        mtp:hasSourcePurpose          "LLM" .

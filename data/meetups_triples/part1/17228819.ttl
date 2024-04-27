@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/17228819/8/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "For the 30-year anniversary of the Zurich James Joyce Foundation he wrote \"Winds of May\" for soprano and piano based on Joyce's Chamber Music IX. He wrote a hymn for his Swiss hometown, Weggis, called \"s'Wäggiser Lied\"." ;
+        mtp:hasPurpose       meetup:31d8b54e27edcdf2781a440ebf0dafe5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Wolf_Brennan> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/17228819/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Wolf Brennan (born 13 February 1954) is an Irish pianist, organist, melodica player, and composer based in Weggis, Switzerland." ;
+        mtp:hasParticipant   meetup:5dfcf801700eb83538804a0668ddd84f ;
+        mtp:hasPurpose       meetup:b5ddbb1807d84c0d86e3acc6c0e20ec2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Wolf_Brennan> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5dfcf801700eb83538804a0668ddd84f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Wolf_Brennan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Wolf Brennan" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:b5ddbb1807d84c0d86e3acc6c0e20ec2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "John Wolf Brennan is a musician" ;
+        mtp:hasEvidencePurposeSecond  "John Wolf Brennan is based in Weggis, Switzerland" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/John_Wolf_Brennan>
+        rdf:type  core:Person .
+
+meetup:31d8b54e27edcdf2781a440ebf0dafe5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Creating music compositions" ;
+        mtp:hasEvidencePurposeSecond  "Celebrating the 30-year anniversary" ;
+        mtp:hasSourcePurpose          "LLM" .

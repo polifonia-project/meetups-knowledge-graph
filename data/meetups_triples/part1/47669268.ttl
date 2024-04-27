@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/47669268/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Coleman Hell (2015, Columbia Records) (No. 49 in Canada)" ;
+        mtp:hasParticipant   meetup:81f08d90e6526b0b9c876a7d7ded814c ;
+        mtp:hasPurpose       meetup:eadd1e68b1cd77bf4ff34c526932e7fb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Coleman_Hell> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/47669268/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After moving to Toronto, Coleman Hell released a free mixtape called Stark Raving followed by the VENA EP." ;
+        mtp:hasParticipant   meetup:18e9d7890bed7a2f77520a83a2de03f8 ;
+        mtp:hasPurpose       meetup:b7f7c057ddffdfb6c394921d8c811160 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Coleman_Hell> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:81f08d90e6526b0b9c876a7d7ded814c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Coleman_Hell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Coleman Hell" .
+
+<http://dbpedia.org/resource/Coleman_Hell>
+        rdf:type  core:Person .
+
+meetup:b7f7c057ddffdfb6c394921d8c811160
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9974899" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0018701045" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:18e9d7890bed7a2f77520a83a2de03f8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Coleman_Hell> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "0.9999999999996874" ;
+        mtp:hasTextEvidence     "Coleman Hell" .
+
+meetup:eadd1e68b1cd77bf4ff34c526932e7fb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999778" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.7093773e-05" ;
+        mtp:hasSourcePurpose          "ML" .

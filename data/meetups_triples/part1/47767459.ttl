@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/47767459/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shanell Lynn Woodgett (born November 15, 1980) known simply as Shanell or SnL, is an American singer and songwriter from Springfield, Massachusetts." ;
+        mtp:hasParticipant   meetup:33bf2dfa101adbb5085ebf6b89aeb9ae ;
+        mtp:hasPurpose       meetup:4d172c9d404898fed7df22ac2c98b424 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shanell> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lil_Wayne>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/47767459/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is signed to Lil Wayne's Young Money Entertainment, which was formerly an imprint of Birdman's Republic Records-distributed Cash Money Records." ;
+        mtp:hasParticipant   meetup:7ac96032dd8234a02a7469feab666410 , meetup:9ffb2ffd4ba12b5a24da4c3f1f64f514 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shanell> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Shanell>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:7ac96032dd8234a02a7469feab666410
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lil_Wayne> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lil Wayne" .
+
+meetup:33bf2dfa101adbb5085ebf6b89aeb9ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shanell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "SnL" .
+
+meetup:4d172c9d404898fed7df22ac2c98b424
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97006005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.015317614" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9ffb2ffd4ba12b5a24da4c3f1f64f514
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shanell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "SnL" .

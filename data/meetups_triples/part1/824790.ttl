@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/824790/45/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "An Evening with Ron Carter, Richard Galliano (In+Out, 2017)" ;
+        mtp:hasParticipant   meetup:7c7dce29ef6ebf83e0410a7e4d9776c9 ;
+        mtp:hasPurpose       meetup:09c657ad87a405a34553e277456ce21e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_Galliano> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b3b2a0ae46f557bb9f7cd4c311018f17
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richard_Galliano> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Richard Galliano" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:d10cbb680242019704153a3acf923958
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99621457" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0037803673" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7c7dce29ef6ebf83e0410a7e4d9776c9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richard_Galliano> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "0.9999999999990336" ;
+        mtp:hasTextEvidence     "Richard Galliano" .
+
+<http://w3id.org/polifonia/pilot/meetups/824790/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Richard Galliano (born 12 December 1950, Cannes, Alpes-Maritimes) is a French accordionist of Italian heritage." ;
+        mtp:hasParticipant   meetup:b3b2a0ae46f557bb9f7cd4c311018f17 ;
+        mtp:hasPurpose       meetup:d10cbb680242019704153a3acf923958 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_Galliano> ;
+        mtp:hasType          "HT" .
+
+meetup:09c657ad87a405a34553e277456ce21e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.54241043" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.37168863" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Richard_Galliano>
+        rdf:type  core:Person .

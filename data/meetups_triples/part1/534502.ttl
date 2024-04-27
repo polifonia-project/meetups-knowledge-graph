@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Otto_Kretschmer>
+        rdf:type  core:Person .
+
+meetup:9faee88ed9b4c3c7b588ededb574d26e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daniel Kretschmer" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:990aa6e02f07410c23dcf01ee2631792
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/D-Flame> ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "D-Flame" .
+
+<http://dbpedia.org/resource/D-Flame>
+        rdf:type  core:Person .
+
+meetup:068bdf1c7741e1f7b79031b671acfd61
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Otto_Kretschmer> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.811674683866685" ;
+        mtp:hasTextEvidence     "Kretschmer" .
+
+meetup:8ace8837689409500699a44c6aa4b09b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99889463" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00070329173" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/534502/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Daniel Kretschmer (born 19 September 1971), better known by his stage-name D-Flame, is a German hip hop and reggae musician." ;
+        mtp:hasParticipant   meetup:9faee88ed9b4c3c7b588ededb574d26e , meetup:990aa6e02f07410c23dcf01ee2631792 , meetup:068bdf1c7741e1f7b79031b671acfd61 ;
+        mtp:hasPurpose       meetup:8ace8837689409500699a44c6aa4b09b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/D-Flame> ;
+        mtp:hasType          "HM" .

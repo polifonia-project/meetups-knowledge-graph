@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/19510803/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cajsalisa performed the song \"Du gör mig hel igen\" by Robyn in Sweden's preselection for Eurovision Song Contest 1997, Melodifestivalen 1997." ;
+        mtp:hasParticipant   meetup:d0085d788b513a5076d37123f23ff7fd , meetup:b5bc5d1c73b9c2556fdb0747811c16ae ;
+        mtp:hasPurpose       meetup:ecf2834db161f7647f40cdc5639e4425 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cajsalisa_Ejemyr> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ecf2834db161f7647f40cdc5639e4425
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performing a song in a competition" ;
+        mtp:hasEvidencePurposeSecond  "Participating in a national music contest" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:242e4ebdf8a7381b2f61295c17976f08
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cajsalisa_Ejemyr> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cajsalisa Ejemyr" .
+
+meetup:b5bc5d1c73b9c2556fdb0747811c16ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robyn> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "0.9999999999993464" ;
+        mtp:hasTextEvidence     "Robyn" .
+
+<http://dbpedia.org/resource/Robyn>
+        rdf:type  core:Person .
+
+meetup:4cea4b6959c4ae113bfe8610faa98ef0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8010872" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1983631" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Cajsalisa_Ejemyr>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/19510803/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cajsalisa Ejemyr (born 7 November 1978 in Stockholm, Sweden) is a Swedish singer and actress." ;
+        mtp:hasParticipant   meetup:242e4ebdf8a7381b2f61295c17976f08 ;
+        mtp:hasPurpose       meetup:4cea4b6959c4ae113bfe8610faa98ef0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cajsalisa_Ejemyr> ;
+        mtp:hasType          "HT" .
+
+meetup:d0085d788b513a5076d37123f23ff7fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cajsalisa_Ejemyr> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cajsalisa Ejemyr" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:9dba15ed63e4721457837f20b370c4e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sharlee_D'Angelo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sharlee D'Angelo" .
+
+<http://dbpedia.org/resource/Sharlee_D'Angelo>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2234775/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sharlee D'Angelo (born Charles Petter Andreason, 27 April 1973) is the Swedish bassist for the melodic death metal band Arch Enemy, as well as the classic rock/AOR band the Night Flight Orchestra, the stoner metal band Spiritual Beggars and the blackened thrash/speed metal band Witchery." ;
+        mtp:hasParticipant   meetup:9dba15ed63e4721457837f20b370c4e6 ;
+        mtp:hasPurpose       meetup:6b2d10ccff51ecd3eb38db55365618f6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sharlee_D'Angelo> ;
+        mtp:hasType          "HT" .
+
+meetup:6b2d10ccff51ecd3eb38db55365618f6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.70118475" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29770204" ;
+        mtp:hasSourcePurpose          "ML" .

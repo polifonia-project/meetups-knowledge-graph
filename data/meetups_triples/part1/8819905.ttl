@@ -1,0 +1,90 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Justin_Bieber>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Taylor_James>
+        rdf:type  core:Person .
+
+meetup:703f027888ac40d0e4eaa27f4c33b062
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music industry" ;
+        mtp:hasEvidencePurposeSecond  "Unlikely sequence of events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:32f0a10c225f9a3e6c17da7e73773744
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Hampton> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hampton" .
+
+meetup:2e3f51dc02ce7ba726b0878f94ad139e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "114" ;
+        mtp:hasSimilarityScore  "0.9959845824480952" ;
+        mtp:hasTextEvidence     "James" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:006d2f83dd666a55db844ef8b63cef72
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Justin_Bieber> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9999824754300394" ;
+        mtp:hasTextEvidence     "Bieber" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Mike_Hampton>
+        rdf:type  core:Person .
+
+meetup:9397c18ae267402ffc3215197deb0258
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James" .
+
+meetup:7d22addee260a0cc46037897367b1c2a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about Taylor's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Details about Taylor's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8819905/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While getting a haircut in July 2009 James got a call from former Hampton classmate DJ Boogie, who was working in Atlanta with R&B artist Sammie. Justin Bieber's management (also based in Atlanta) had asked Boogie for a DJ recommendation, and they interviewed James and flew him to Oklahoma to meet and tour with Bieber." ;
+        mtp:hasParticipant   meetup:006d2f83dd666a55db844ef8b63cef72 , meetup:32f0a10c225f9a3e6c17da7e73773744 , meetup:2e3f51dc02ce7ba726b0878f94ad139e ;
+        mtp:hasPurpose       meetup:703f027888ac40d0e4eaa27f4c33b062 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taylor_James> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/8819905/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Taylor Austin James was born on May 15, 1987 in Baltimore, Maryland. He grew up in Columbia, Maryland, later moving to Bel Air, Harford County, Maryland." ;
+        mtp:hasParticipant   meetup:9397c18ae267402ffc3215197deb0258 ;
+        mtp:hasPurpose       meetup:7d22addee260a0cc46037897367b1c2a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taylor_James> ;
+        mtp:hasType          "HT" .

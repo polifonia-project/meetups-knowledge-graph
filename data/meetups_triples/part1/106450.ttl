@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:13c3a8bcb6089bee686e7025e68ee1cf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9918576" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008042495" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0fefe82a49c1ef83b914bfb0c6fcc7be
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Hazel> ;
+        mtp:hasOffset           "96" ;
+        mtp:hasSimilarityScore  "0.9999707890341756" ;
+        mtp:hasTextEvidence     "Grace Cook" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4dc02b0a22c507706de554c01f7f76eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Hazel> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "0.9999999940572196" ;
+        mtp:hasTextEvidence     "Eddie Hazel" .
+
+<http://w3id.org/polifonia/pilot/meetups/106450/18/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At Home (With Family) (2006), Eddie Hazel" ;
+        mtp:hasParticipant   meetup:4dc02b0a22c507706de554c01f7f76eb ;
+        mtp:hasPurpose       meetup:13c3a8bcb6089bee686e7025e68ee1cf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Hazel> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Eddie_Hazel>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/106450/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in Brooklyn, New York in 1950, Hazel grew up in Plainfield, New Jersey because his mother, Grace Cook, wanted her son to grow up in an environment without the pressures of drugs and crime that she felt pervaded New York City." ;
+        mtp:hasParticipant   meetup:0fefe82a49c1ef83b914bfb0c6fcc7be ;
+        mtp:hasPurpose       meetup:433801659b68cde6cd3a2e7a7c5f884c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Hazel> ;
+        mtp:hasType          "HT" .
+
+meetup:433801659b68cde6cd3a2e7a7c5f884c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about upbringing and education" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:62f891ceb149f56060b0203c93c0103b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92564523" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07390112" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Alison_Murray>
+        rdf:type  core:Person .
+
+meetup:f73d06b4469a2e4c7e35db5e7c93ffed
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alison_Murray> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alison Murray" .
+
+<http://dbpedia.org/resource/Elliot_Page>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/19784896/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is well-known for writing and directing Mouth to Mouth (2005) starring Elliot Page, and documentaries such as Carny (2008) and Train on the Brain (2000)." ;
+        mtp:hasParticipant   meetup:f73d06b4469a2e4c7e35db5e7c93ffed , meetup:db503308599edbfa569b731fff266553 ;
+        mtp:hasPurpose       meetup:62f891ceb149f56060b0203c93c0103b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alison_Murray> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:db503308599edbfa569b731fff266553
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elliot_Page> ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elliot Page" .

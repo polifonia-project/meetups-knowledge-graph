@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1125348/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band Cult Heroes was formed in 1977 by Tim Worman (known as Tim Polecat, vocalist), Boz Boorer (guitarist and vocalist), Phil Bloomberg (bassist), and Chris Hawkes (drummer)." ;
+        mtp:hasParticipant   meetup:8564843efce30b0e2752b02be9cebe8e , meetup:15884c8498f3e7bcd9bf2455bfd1c7de , meetup:eb54443e5173ff3d228307c3bb13ddb7 ;
+        mtp:hasPurpose       meetup:5c4bdaeeea031f1db43c67855cd369ed ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Boz_Boorer> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:a54c5ba4d9bc46964239f1c862d2a9be
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Boz_Boorer> ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Boz Boorer" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Boz_Boorer>
+        rdf:type  core:Person .
+
+meetup:5c4bdaeeea031f1db43c67855cd369ed
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.89018816" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09768181" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Chris_Hawkes>
+        rdf:type  core:Person .
+
+meetup:3f23a616c12fcda6498b57546a956bc7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999087" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.105434e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1125348/2/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Raucous Records released a compilation album of Boz Boorer's work entitled Between The Polecats in early 2001." ;
+        mtp:hasParticipant   meetup:a54c5ba4d9bc46964239f1c862d2a9be ;
+        mtp:hasPurpose       meetup:3f23a616c12fcda6498b57546a956bc7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Boz_Boorer> ;
+        mtp:hasType          "HT" .
+
+meetup:eb54443e5173ff3d228307c3bb13ddb7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Hawkes> ;
+        mtp:hasOffset           "155" ;
+        mtp:hasSimilarityScore  "0.9999999998445332" ;
+        mtp:hasTextEvidence     "Chris Hawkes" .
+
+meetup:15884c8498f3e7bcd9bf2455bfd1c7de
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Boz_Boorer> ;
+        mtp:hasOffset           "88" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Boz Boorer" .
+
+meetup:8564843efce30b0e2752b02be9cebe8e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tim Worman" .

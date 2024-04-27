@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:f3a1b1a1c28ab1d6311805c3e0ccbd5f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99781007" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0019379831" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2385767/53/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2019 CD / Warner Bros. (Fazil Say plays Say: Troy Sonata, Yürüyen Köşk, two pieces from Art of Piano)" ;
+        mtp:hasParticipant   meetup:238931a632d17c19901381501cc6fa3c , meetup:b0f9e87ba7e7e19f4877ca84f8a60d50 ;
+        mtp:hasPurpose       meetup:f3a1b1a1c28ab1d6311805c3e0ccbd5f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fazıl_Say> ;
+        mtp:hasType          "HM" .
+
+meetup:238931a632d17c19901381501cc6fa3c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Troy Sonata" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Fazıl_Say>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2385767/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 1 June 2012, an Istanbul court indicted Say with the crime of \"publicly insulting religious values that are adopted by a part of the nation\", a crime that carries a penalty of up to 18 months in prison. According to Anatolia news agency, Say told the Istanbul court he did not seek to insult anybody, but was merely expressing his uneasiness." ;
+        mtp:hasPurpose       meetup:1371d6eece4b2286f537de546786e0f1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fazıl_Say> ;
+        mtp:hasType          "HT" .
+
+meetup:b0f9e87ba7e7e19f4877ca84f8a60d50
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fazıl_Say> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "0.9999999973455828" ;
+        mtp:hasTextEvidence     "Fazil Say" .
+
+meetup:1371d6eece4b2286f537de546786e0f1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Expression of personal uneasiness" ;
+        mtp:hasEvidencePurposeSecond  "Involvement of court and legal proceedings" ;
+        mtp:hasSourcePurpose          "LLM" .

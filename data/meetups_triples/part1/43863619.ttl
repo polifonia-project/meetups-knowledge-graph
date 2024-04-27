@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d4b89024dec72b649ec902e7271c519e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions the person's involvement in music and playing with various musicians." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the person's move to Chicago and forming a band with Earl Hooker." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Kansas_City_Red>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Earl_Hooker>
+        rdf:type  core:Person .
+
+meetup:8d33347d567c1f1c3444c7208596d18b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Earl_Hooker> ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Earl Hooker" .
+
+<http://w3id.org/polifonia/pilot/meetups/43863619/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He moved to Chicago in the 1950s and was a regular performer in Chicago blues clubs, playing with Johnny Shines, Walter Horton, Sunnyland Slim, Earl Hooker, Blind John Davis, Johnny \"Man\" Young, Robert Lockwood, Jr., Eddie Taylor, Floyd Jones, Elmore James, and Easy Baby (Alex Randall), among others. He briefly played with Honeyboy Edwards, and in the 1950s he formed a band with Earl Hooker." ;
+        mtp:hasParticipant   meetup:8d33347d567c1f1c3444c7208596d18b ;
+        mtp:hasPurpose       meetup:d4b89024dec72b649ec902e7271c519e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kansas_City_Red> ;
+        mtp:hasType          "HT" .

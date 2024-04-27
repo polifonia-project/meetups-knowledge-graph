@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4e2fdbe258880695c6c98aaa4f10f216
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dag_Stokke> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dag Stokke" .
+
+meetup:fbb1f4205eed9e68d0d24a7713d724b7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Individual's perspective and attitude towards their position" ;
+        mtp:hasEvidencePurposeSecond  "Discussion about the individual's role in a professional setting" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9d8bc15ce54cbfde2ebe763793c07e0e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence refers to the experience of a rockstar existence." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the personal fulfillment of a dream." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/25835212/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dag Stokke (1 April 1967 – 27 April 2011) was a Norwegian keyboardist, church organist and mastering engineer best known for his work with the Norwegian rock bands TNT and Vagabond." ;
+        mtp:hasParticipant   meetup:4e2fdbe258880695c6c98aaa4f10f216 ;
+        mtp:hasPurpose       meetup:afb711649c817206c762f6db63a63029 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dag_Stokke> ;
+        mtp:hasType          "HT" .
+
+meetup:afb711649c817206c762f6db63a63029
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.72381043" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23727739" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Dag_Stokke>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/25835212/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "I got to experience the rockstar existence so much in 1987 and especially in 1989 and a little bit into 1992, so that dream has been realized. If I'm not upfront, that's totally cool, because I know I've been a part of all this.\"" ;
+        mtp:hasPurpose       meetup:9d8bc15ce54cbfde2ebe763793c07e0e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dag_Stokke> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/25835212/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"I'm cool with my position in TNT,\" he said in a 2010 interview, \"Some people ask me why I'm not in the pictures and why I'm not profiled. That's just the way it is, and I'm completely laidback with that." ;
+        mtp:hasPurpose       meetup:fbb1f4205eed9e68d0d24a7713d724b7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dag_Stokke> ;
+        mtp:hasType          "HT" .

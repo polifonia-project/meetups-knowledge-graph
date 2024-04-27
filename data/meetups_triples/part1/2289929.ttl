@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:faa50ffe3ec22e2a54593b888eebb446
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.71188164" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28591743" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/2289929/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Crossingham is a Canadian indie rock singer-songwriter based in Toronto, Ontario." ;
+        mtp:hasParticipant   meetup:2dd837e80eb370af9d288ce79a7200d5 ;
+        mtp:hasPurpose       meetup:faa50ffe3ec22e2a54593b888eebb446 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Crossingham> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/John_Crossingham>
+        rdf:type  core:Person .
+
+meetup:2dd837e80eb370af9d288ce79a7200d5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Crossingham> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Crossingham" .

@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Marilynne_Robinson>
+        rdf:type  core:Person .
+
+meetup:1e7363b87640e4cb5cb1cabcf67e5403
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marilynne_Robinson> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marilynne Robinson" .
+
+meetup:d44fa9f13e341c855c3c4868d6a7be80
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a music premiere and composition." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions personal experiences and influences of the composer." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Caroline_Shaw>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/39254203/6/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "These received their world premiere, performed by the Calidore String Quartet, at the Cadogan Hall, London on 16 July 2018 in the BBC Proms, where they followed her 2016 work First Essay, Nimrod. According to Shaw, Nimrod was composed while listening to a recording of Marilynne Robinson's book The Givenness of Things and then in the 2016 US presidential election, which she stated accounted for the \"disintegration of elements\" in the piece." ;
+        mtp:hasParticipant   meetup:1e7363b87640e4cb5cb1cabcf67e5403 ;
+        mtp:hasPurpose       meetup:d44fa9f13e341c855c3c4868d6a7be80 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Caroline_Shaw> ;
+        mtp:hasType          "HT" .

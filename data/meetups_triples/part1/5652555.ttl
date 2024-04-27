@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b5470f45e6b6dda34de2baa68adb85b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daddy_Long_Legs_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daddy Long Legs" .
+
+meetup:053e6298c72d1db8002a3a09fd03389b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daddy_Long_Legs_(musician)> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "0.9999872030848262" ;
+        mtp:hasTextEvidence     "Michael Bowe" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:ff6d12aeea82f8d8174e1ff074f70e30
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daddy_Long_Legs_(musician)> ;
+        mtp:hasOffset           "162" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daddy Long Legs" .
+
+meetup:165d2777913b71c20cbe4aca8581895e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99961144" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00028876975" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Daddy_Long_Legs_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5652555/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Daddy Long Legs (born Michael Bowe on May 3, 1971 in Long Island, New York)went to high school at Perkiomen Valley high School in Graterford PA." ;
+        mtp:hasParticipant   meetup:b5470f45e6b6dda34de2baa68adb85b6 , meetup:053e6298c72d1db8002a3a09fd03389b ;
+        mtp:hasPurpose       meetup:912c1599c30926b93064d994f11d2f81 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daddy_Long_Legs_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:912c1599c30926b93064d994f11d2f81
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about Daddy Long Legs' personal life" ;
+        mtp:hasEvidencePurposeSecond  "Information about Daddy Long Legs' education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/5652555/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They produced six volumes of the DVD series, two of which were nominated for AVN Awards (2008 for Best Pro-Am Release and in 2009 for Most Outrageous Sex Scene)." ;
+        mtp:hasParticipant   meetup:ff6d12aeea82f8d8174e1ff074f70e30 ;
+        mtp:hasPurpose       meetup:165d2777913b71c20cbe4aca8581895e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daddy_Long_Legs_(musician)> ;
+        mtp:hasType          "HT" .

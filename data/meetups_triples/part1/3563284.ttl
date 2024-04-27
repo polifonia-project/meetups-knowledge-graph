@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Sergei_Rachmaninoff>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/3563284/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Constance Keene (9 February 1921 – 24 December 2005) was an American pianist, who was renowned for her 1964 recording of Sergei Rachmaninoff's Preludes and won critical acclaim for her recordings of the works of Johann Nepomuk Hummel, Carl Maria von Weber and Felix Mendelssohn, as well as Rachmaninoff's Études-Tableaux, Op." ;
+        mtp:hasParticipant   meetup:6a211eaa0b6fd6aa8d405423991e584a , meetup:5a6179773f28a1fdfa5d38bf6bf0c771 ;
+        mtp:hasPurpose       meetup:67c08d7580334eab9de0330da2669d78 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Constance_Keene> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Constance_Keene>
+        rdf:type  core:Person .
+
+meetup:67c08d7580334eab9de0330da2669d78
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99598205" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0039218618" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5a6179773f28a1fdfa5d38bf6bf0c771
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sergei_Rachmaninoff> ;
+        mtp:hasOffset           "123" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sergei Rachmaninoff" .
+
+meetup:6a211eaa0b6fd6aa8d405423991e584a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Constance_Keene> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Constance Keene" .

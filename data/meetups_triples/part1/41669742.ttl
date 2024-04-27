@@ -1,0 +1,59 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/41669742/5/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her brother, Rudolf, had fled to Britain in 1933, where his mother followed in 1939. Otto Aschaffenburg died in 1933." ;
+        mtp:hasParticipant   meetup:ab8040b76be0dd3d0a6691d23c9906f9 ;
+        mtp:hasPurpose       meetup:03051ef245654aa5fe6f70b1bda23b06 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Katja_Andy> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/41669742/7/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 1960, she lived in New York City, before she moved to Boston in 1964. There she first taught at the Boston Conservatory, and later took up a professorship at Boston's New England Conservatory." ;
+        mtp:hasPurpose       meetup:0611b897d8b2a77ee55657f68db9a43e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Katja_Andy> ;
+        mtp:hasType          "HT" .
+
+meetup:03051ef245654aa5fe6f70b1bda23b06
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to individuals" ;
+        mtp:hasEvidencePurposeSecond  "Unplanned occurrences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0611b897d8b2a77ee55657f68db9a43e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Teaching at music conservatories" ;
+        mtp:hasEvidencePurposeSecond  "Living in New York City" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ab8040b76be0dd3d0a6691d23c9906f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Otto Aschaffenburg" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Katja_Andy>
+        rdf:type  core:Person .

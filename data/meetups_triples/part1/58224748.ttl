@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/58224748/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Edis Görgülü was born on 28 November 1990 in London, England. Prior to his birth, his parents had moved to London to work and finish their studies." ;
+        mtp:hasParticipant   meetup:82419ad75f890830f21248b2ded3f9aa ;
+        mtp:hasPurpose       meetup:b7a961559fa24a165e323cdd38a6828e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Edis_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b7a961559fa24a165e323cdd38a6828e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about someone's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Edis_(singer)>
+        rdf:type  core:Person .
+
+meetup:82419ad75f890830f21248b2ded3f9aa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andrew_Edis> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Edis" .
+
+<http://dbpedia.org/resource/Andrew_Edis>
+        rdf:type  core:Person .

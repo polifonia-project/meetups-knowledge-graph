@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/12154685/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mika Kristian Karppinen (born 8 February 1971), better known as Gas Lipstick, is a Swedish-Finnish musician, best known as the previous drummer of the Finnish gothic rock band HIM." ;
+        mtp:hasParticipant   meetup:59c88c4ab76bd5a67835482cbc20eb78 , meetup:6d5dba0bf6305a20b9515e59dab70490 , meetup:cdfee94be47e0043d19997258e702b18 ;
+        mtp:hasPurpose       meetup:7572f25f986223e2bd535d4a0af3e984 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gas_Lipstick> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:cdfee94be47e0043d19997258e702b18
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gas_Lipstick> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gas Lipstick" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:7572f25f986223e2bd535d4a0af3e984
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8299806" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16995816" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:59c88c4ab76bd5a67835482cbc20eb78
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pertti_Karppinen> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.9999998560883332" ;
+        mtp:hasTextEvidence     "Karppinen" .
+
+<http://dbpedia.org/resource/Pertti_Karppinen>
+        rdf:type  core:Person .
+
+meetup:6d5dba0bf6305a20b9515e59dab70490
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mika Kristian Karppinen" .
+
+<http://dbpedia.org/resource/Gas_Lipstick>
+        rdf:type  core:Person .

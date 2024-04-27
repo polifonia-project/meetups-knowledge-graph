@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/48566114/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was survived by his son Bobby Espinosa Jr. and daughter Reyna Espinosa, six grandchildren as well as other family members that include a brother and sister." ;
+        mtp:hasParticipant   meetup:056c76d2c00debfbdbd591749e7a7252 , meetup:dd658b18be39f7c1f7bf95efb229284f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bobby_Espinosa> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/48566114/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bobby Espinosa was an influential and important part of the Latin rock scene in Los Angeles from the late 1960s to the 2000s." ;
+        mtp:hasParticipant   meetup:446bf509de80bec1d4439eb5ea5e1f09 ;
+        mtp:hasPurpose       meetup:4805161258c7dc085a9e0e7817b0c019 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bobby_Espinosa> ;
+        mtp:hasType          "HT" .
+
+meetup:056c76d2c00debfbdbd591749e7a7252
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Claudio_Reyna> ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "0.9828689665716698" ;
+        mtp:hasTextEvidence     "Reyna" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Claudio_Reyna>
+        rdf:type  core:Person .
+
+meetup:dd658b18be39f7c1f7bf95efb229284f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Espinosa> ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bobby Espinosa" .
+
+meetup:4805161258c7dc085a9e0e7817b0c019
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.58114827" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4101723" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:446bf509de80bec1d4439eb5ea5e1f09
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Espinosa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "Bobby Espinosa" .
+
+<http://dbpedia.org/resource/Bobby_Espinosa>
+        rdf:type  core:Person .

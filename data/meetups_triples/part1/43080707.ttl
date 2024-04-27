@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Greg_Hambleton>
+        rdf:type  core:Person .
+
+meetup:6e1781496b9781fa49c1794e8c6954ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Greg_Hambleton> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Greg Hambleton" .
+
+meetup:8409e2f51bad22ce976703cb6ed49d49
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9837922" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.016207373" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/43080707/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Over the years he has been a record producer, recording engineer, songwriter and music label executive with Axe Records." ;
+        mtp:hasParticipant   meetup:6e1781496b9781fa49c1794e8c6954ad ;
+        mtp:hasPurpose       meetup:8409e2f51bad22ce976703cb6ed49d49 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Greg_Hambleton> ;
+        mtp:hasType          "HT" .

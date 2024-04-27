@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a3ab4b8481efa7bddaf7a737c33849bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9673292" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.032670714" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/51244757/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ernest Cahen (18 August 1828, Paris – 8 November 1893, Paris) was a 19th-century French pianist, organist, music teacher and composer." ;
+        mtp:hasParticipant   meetup:5753ec158fd6344f145c6a81268ceb64 ;
+        mtp:hasPurpose       meetup:a3ab4b8481efa7bddaf7a737c33849bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ernest_Cahen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ernest_Cahen>
+        rdf:type  core:Person .
+
+meetup:5753ec158fd6344f145c6a81268ceb64
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ernest_Cahen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ernest Cahen" .

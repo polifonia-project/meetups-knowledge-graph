@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:cbcb25cacc9a60673908b3b9fc940983
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995454" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0004306326" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/60212050/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Julie Greenwald was born to a Jewish family in Catskill Mountains, New York." ;
+        mtp:hasParticipant   meetup:c95406e8b938c032d423c644c0dd82af ;
+        mtp:hasPurpose       meetup:52bec92f5027c46f0c1f0bcc460dc608 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Julie_Greenwald> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Julie_Greenwald>
+        rdf:type  core:Person .
+
+meetup:c95406e8b938c032d423c644c0dd82af
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Julie_Greenwald> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999996387317" ;
+        mtp:hasTextEvidence     "Julie Greenwald" .
+
+<http://w3id.org/polifonia/pilot/meetups/60212050/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She graduated from Tulane University in 1992, double majoring in Political Science and English." ;
+        mtp:hasParticipant   meetup:e8cebb73ade3f11a7d296593f5c98b1d ;
+        mtp:hasPurpose       meetup:cbcb25cacc9a60673908b3b9fc940983 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Julie_Greenwald> ;
+        mtp:hasType          "HT" .
+
+meetup:e8cebb73ade3f11a7d296593f5c98b1d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Julie_Greenwald> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Julie Greenwald" .
+
+meetup:52bec92f5027c46f0c1f0bcc460dc608
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9965886" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0024824657" ;
+        mtp:hasSourcePurpose          "ML" .

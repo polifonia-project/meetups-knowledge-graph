@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:020cc60fb8f809c1c4c534ba644d6295
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andy_Wallace_(producer)> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Andy Wallace" .
+
+<http://w3id.org/polifonia/pilot/meetups/1673773/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andy Wallace (born 1947 in New Jersey) is an American music studio producer, audio and mixing engineer with a long track record of productions." ;
+        mtp:hasParticipant   meetup:1f012eab90986dd52b785b3c77863036 ;
+        mtp:hasPurpose       meetup:e1af27d9354c77560b1b907b91d1d33a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Wallace_(producer)> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Andy_Wallace_(producer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1673773/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Over the years, he focused exclusively on mixing." ;
+        mtp:hasParticipant   meetup:020cc60fb8f809c1c4c534ba644d6295 ;
+        mtp:hasPurpose       meetup:ec9155ffdd5559aeffc07d4931412c95 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Wallace_(producer)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:1f012eab90986dd52b785b3c77863036
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andy_Wallace_(producer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9392171199711832" ;
+        mtp:hasTextEvidence     "Andy Wallace" .
+
+meetup:e1af27d9354c77560b1b907b91d1d33a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5386009" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.39365265" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ec9155ffdd5559aeffc07d4931412c95
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99633896" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0036497426" ;
+        mtp:hasSourcePurpose          "ML" .

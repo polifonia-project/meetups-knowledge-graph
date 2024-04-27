@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Gail_Greenwood>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5738165/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gail Greenwood (born March 10, 1960) is an American musician and illustrator most notable for performing bass guitar and guitar with the bands Belly and L7." ;
+        mtp:hasParticipant   meetup:ac589173d3501ab97dc686b80142976f ;
+        mtp:hasPurpose       meetup:fb1fde1a5a0c9f4b8f6cbfc333c95b02 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gail_Greenwood> ;
+        mtp:hasType          "HT" .
+
+meetup:ac589173d3501ab97dc686b80142976f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gail_Greenwood> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gail Greenwood" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:fb1fde1a5a0c9f4b8f6cbfc333c95b02
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7611563" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12734936" ;
+        mtp:hasSourcePurpose          "ML" .

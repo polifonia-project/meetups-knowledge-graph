@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1512975/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sir William Henry Harris  (28 March 1883 - 6 September 1973) was an English organist, choral trainer and composer, affectionately nicknamed \"Doc H\" by his choristers." ;
+        mtp:hasParticipant   meetup:3a0976e5ad15a8c5cb8deaa59eef75a3 , meetup:80bdc24979e302a79bfe9683181a28f9 ;
+        mtp:hasPurpose       meetup:00feca4886a29c50b0da81df3f591f60 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_Henry_Harris> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:3a0976e5ad15a8c5cb8deaa59eef75a3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doc_Watson> ;
+        mtp:hasOffset           "141" ;
+        mtp:hasSimilarityScore  "0.9994445003363756" ;
+        mtp:hasTextEvidence     "Doc" .
+
+meetup:80bdc24979e302a79bfe9683181a28f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Henry_Harris> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "William Henry Harris" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:00feca4886a29c50b0da81df3f591f60
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7295595" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2210046" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/William_Henry_Harris>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Doc_Watson>
+        rdf:type  core:Person .

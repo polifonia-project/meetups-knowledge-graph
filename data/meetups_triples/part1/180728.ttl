@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/180728/11/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "One was named Si Betty for the art patron Betty Freeman; the other, built at Mills College, was named Si Darius/Si Madeliene." ;
+        mtp:hasParticipant   meetup:adcb58499653eb66341a7e82407659f3 , meetup:cec9ed5185182e62e4444835ae439ba4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lou_Harrison> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/180728/14/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Harrison lived for many years with William Colvig in Aptos, California. He and Colvig purchased land in Joshua Tree, California, where they designed and built the Harrison House Retreat, a straw bale house." ;
+        mtp:hasParticipant   meetup:84f7acb2f7ada1f9ccaec7fbf2a0c505 , meetup:f62c19d1f60916530e6ec7ea1a9e9ece ;
+        mtp:hasPurpose       meetup:9bbf41782ad2f64eefb3479908df242b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lou_Harrison> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f62c19d1f60916530e6ec7ea1a9e9ece
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Colvig> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "William Colvig" .
+
+<http://dbpedia.org/resource/George_Harrison>
+        rdf:type  core:Person .
+
+meetup:adcb58499653eb66341a7e82407659f3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Betty_Freeman> ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Betty Freeman" .
+
+<http://dbpedia.org/resource/Betty_Freeman>
+        rdf:type  core:Person .
+
+meetup:cec9ed5185182e62e4444835ae439ba4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lou_Harrison> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Si Betty" .
+
+meetup:9bbf41782ad2f64eefb3479908df242b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Details about Harrison's personal life and living arrangements." ;
+        mtp:hasEvidencePurposeSecond  "Harrison and Colvig purchasing land and building a house together." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:84f7acb2f7ada1f9ccaec7fbf2a0c505
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Harrison> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Harrison" .
+
+<http://dbpedia.org/resource/Lou_Harrison>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/William_Colvig>
+        rdf:type  core:Person .

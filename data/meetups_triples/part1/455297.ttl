@@ -1,0 +1,88 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:4f0b1bc325973bf179542e4b78503f17
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Entertainment industry involvement" ;
+        mtp:hasEvidencePurposeSecond  "Professional achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6603739a84e8672e504b229677415504
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Takako_Matsu> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Takako Matsu" .
+
+<http://w3id.org/polifonia/pilot/meetups/455297/4/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the same year, she starred in the drama Love Generation in a leading role. She starred in Hero." ;
+        mtp:hasPurpose       meetup:4f0b1bc325973bf179542e4b78503f17 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Takako_Matsu> ;
+        mtp:hasType          "HT" .
+
+meetup:725323ec45642845050ef5b298615b87
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Takako Fujima" .
+
+meetup:9e8218a322602b353665d27c33e19ba3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Takako Sahashi" .
+
+meetup:7a38f854086de462846f605dfb29178b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9974068" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0019351292" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:eb3ea867a3fafa39ce248574fb910e1a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Involvement in the music industry" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Takako_Matsu>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/455297/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She married guitarist and record producer Yoshiyuki Sahashi on December 28, 2007. Her married name is Takako Sahashi (佐橋隆子, Sahashi Takako)." ;
+        mtp:hasParticipant   meetup:9e8218a322602b353665d27c33e19ba3 ;
+        mtp:hasPurpose       meetup:eb3ea867a3fafa39ce248574fb910e1a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Takako_Matsu> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/455297/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Takako Matsu (松 たか子, Matsu Takako) (born June 10, 1977) also known as Takako Fujima (藤間 隆子, Fujima Takako) is a Japanese actress and pop singer." ;
+        mtp:hasParticipant   meetup:6603739a84e8672e504b229677415504 , meetup:725323ec45642845050ef5b298615b87 ;
+        mtp:hasPurpose       meetup:7a38f854086de462846f605dfb29178b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Takako_Matsu> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Galo_Ochoa>
+        rdf:type  core:Person .
+
+meetup:4bc40171f53d174d89fce52e4ed2a3e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Galo_Ochoa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Galo Ochoa" .
+
+<http://w3id.org/polifonia/pilot/meetups/19981912/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Galo Ochoa was born in 1967 in Los Angeles, California, is the guitarist for the bands Cuca and Nata." ;
+        mtp:hasParticipant   meetup:4bc40171f53d174d89fce52e4ed2a3e7 ;
+        mtp:hasPurpose       meetup:677b581cf839c85b3d9846a4aad2a7e4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Galo_Ochoa> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:677b581cf839c85b3d9846a4aad2a7e4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.71555406" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13775313" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/623083/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Piotr Zak, who is of Polish extraction but lives in Germany, was born in 1939." ;
+        mtp:hasParticipant   meetup:d9b8073b284a75d1512947c122e63309 ;
+        mtp:hasPurpose       meetup:d58d3cd0c6faf68a4365b9bc618d84b4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Piotr_Zak> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:d58d3cd0c6faf68a4365b9bc618d84b4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99997544" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.447196e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d9b8073b284a75d1512947c122e63309
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Piotr_Zak> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Piotr Zak" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Piotr_Zak>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/623083/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His earliest works are conservative, but he has recently come under the influence of Stockhausen and John Cage." ;
+        mtp:hasParticipant   meetup:2c4d9c62d70c5e91571f99c76b95deae , meetup:1fb0aeff307e7cba9f6ea3080345ca25 , meetup:85edf89430755cd5b0f3f217bd1e763f ;
+        mtp:hasPurpose       meetup:aec57065444aacce6f9f8a4d634bea83 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Piotr_Zak> ;
+        mtp:hasType          "HM" .
+
+meetup:2c4d9c62d70c5e91571f99c76b95deae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Cage> ;
+        mtp:hasOffset           "101" ;
+        mtp:hasSimilarityScore  "0.999998933494226" ;
+        mtp:hasTextEvidence     "John Cage" .
+
+<http://dbpedia.org/resource/John_Cage>
+        rdf:type  core:Person .
+
+meetup:85edf89430755cd5b0f3f217bd1e763f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Piotr_Zak> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Piotr Zak" .
+
+meetup:aec57065444aacce6f9f8a4d634bea83
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5782929" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.32150915" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1fb0aeff307e7cba9f6ea3080345ca25
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "85" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Stockhausen" .

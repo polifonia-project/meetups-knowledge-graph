@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Overweight_Pooch>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/CeCe_Peniston>
+        rdf:type  core:Person .
+
+meetup:9be793370f12e7639dbd6fa78cf87b1d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Overweight_Pooch> ;
+        mtp:hasOffset           "126" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Overweight Pooch" .
+
+meetup:047d7bf676c97fa0700e7d7d21c3bb31
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Malaika_(singer)> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Malaika" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2193690/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During her short lived music career she recorded only one album  entitled Sugar Time, which managed two Top 5 hits on the US Billboard Hot Dance Music/Club Play chart, including her number #1 single, \"Gotta Know (Your Name)\" in 1993." ;
+        mtp:hasParticipant   meetup:047d7bf676c97fa0700e7d7d21c3bb31 ;
+        mtp:hasPurpose       meetup:193002491a97772cbb253101d38cf118 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Malaika_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:e2774d8810b6e14818d25f94d76ab446
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/CeCe_Peniston> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "CeCe Peniston" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:15daaabbc7bb849060a590107c31996a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.72295856" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24242625" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:d34cb3c34532e81bd64b62e3a5de79ce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Malaika_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Malaika" .
+
+<http://w3id.org/polifonia/pilot/meetups/2193690/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sallard is tied with another A&M recording artist, CeCe Peniston, who took her own chances by performing backup vocals on the Overweight Pooch's album record Female Preacher in 1991, originally intended for Malaika." ;
+        mtp:hasParticipant   meetup:d34cb3c34532e81bd64b62e3a5de79ce , meetup:e2774d8810b6e14818d25f94d76ab446 , meetup:9be793370f12e7639dbd6fa78cf87b1d ;
+        mtp:hasPurpose       meetup:15daaabbc7bb849060a590107c31996a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Malaika_(singer)> ;
+        mtp:hasType          "HM" .
+
+meetup:193002491a97772cbb253101d38cf118
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9968702" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.002890548" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Malaika_(singer)>
+        rdf:type  core:Person .

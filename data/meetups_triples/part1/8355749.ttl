@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/8355749/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Klaus Harmony is a comic fictional composer of music for 1970s European adult movies, and couturier." ;
+        mtp:hasParticipant   meetup:cb35a73706d1a131bfe3f1e907f96faa ;
+        mtp:hasPurpose       meetup:089ceec51562ab0d03daf1bfd360b730 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Klaus_Harmony> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:45a17a78f86e4826a20c2e72f9911b7a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matthew_Strachan> ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Matthew Strachan" .
+
+meetup:cb35a73706d1a131bfe3f1e907f96faa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Klaus_Harmony> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Klaus Harmony" .
+
+<http://dbpedia.org/resource/Klaus_Harmony>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/8355749/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Created by UK soundtrack composer, Matthew Strachan (also creator of the soundtrack of Who Wants to Be a Millionaire), the character's life story is told through music, images and an extensive series of spoof biographical entries on a multimedia website." ;
+        mtp:hasParticipant   meetup:9d3cd4f9c0a0832bb478aa7c42434b6b , meetup:45a17a78f86e4826a20c2e72f9911b7a ;
+        mtp:hasPurpose       meetup:fe63b00d8a453cb6c69b88413656544b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Klaus_Harmony> ;
+        mtp:hasType          "HM" .
+
+meetup:9d3cd4f9c0a0832bb478aa7c42434b6b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Klaus_Harmony> ;
+        mtp:hasOffset           "119" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Klaus Harmony" .
+
+<http://dbpedia.org/resource/Matthew_Strachan>
+        rdf:type  core:Person .
+
+meetup:fe63b00d8a453cb6c69b88413656544b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6630223" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16945371" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:089ceec51562ab0d03daf1bfd360b730
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998784" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.0599932e-05" ;
+        mtp:hasSourcePurpose          "ML" .

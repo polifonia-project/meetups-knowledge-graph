@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2086362/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christopher George Manak (born October 8, 1969 ), better known by his stage name Peanut Butter Wolf, is an American disc jockey and record producer from San Jose, California." ;
+        mtp:hasParticipant   meetup:e69929992381fad0f4d8fb1a099e03a4 , meetup:6db7346d762aeb535a91371a1055649d , meetup:bae39192570e463d501a089b9e9adf48 ;
+        mtp:hasPurpose       meetup:1c678452132abefb322fe50164483f55 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peanut_Butter_Wolf> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Peanut_Butter_Wolf>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6db7346d762aeb535a91371a1055649d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peanut_Butter_Wolf> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peanut Butter Wolf" .
+
+<http://w3id.org/polifonia/pilot/meetups/2086362/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Peanut Butter Wolf's Jukebox 45's (2002)" ;
+        mtp:hasParticipant   meetup:530b5af8e3f0da7fdaef22d801ebed4f ;
+        mtp:hasPurpose       meetup:91cb5179f2ec02d07cd9f7108b177894 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peanut_Butter_Wolf> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:1c678452132abefb322fe50164483f55
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7273673" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2705082" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:bae39192570e463d501a089b9e9adf48
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kuldeep_Manak> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.9604334412002952" ;
+        mtp:hasTextEvidence     "Manak" .
+
+meetup:e69929992381fad0f4d8fb1a099e03a4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christopher_George> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999995822" ;
+        mtp:hasTextEvidence     "Christopher George" .
+
+<http://dbpedia.org/resource/Christopher_George>
+        rdf:type  core:Person .
+
+meetup:530b5af8e3f0da7fdaef22d801ebed4f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peanut_Butter_Wolf> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peanut Butter Wolf" .
+
+<http://dbpedia.org/resource/Kuldeep_Manak>
+        rdf:type  core:Person .
+
+meetup:91cb5179f2ec02d07cd9f7108b177894
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9655885" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01570324" ;
+        mtp:hasSourcePurpose          "ML" .

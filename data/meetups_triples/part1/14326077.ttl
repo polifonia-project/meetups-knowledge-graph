@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jimmy_Haslip>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Nelson_Rangell>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:582f3b0536d1fc2b8058725fd039669f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Haslip> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jimmy Haslip" .
+
+meetup:e8ebce1f879c65fa57523dbc176cf5da
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9326792" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.049365785" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:76b005c703febc4f6d23f18bea993748
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nelson_Rangell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nelson Rangell" .
+
+meetup:f628add6d482c1a7b026a2369ea5b480
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nelson_Rangell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nelson Rangell" .
+
+<http://w3id.org/polifonia/pilot/meetups/14326077/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has at times worked with Jimmy Haslip and Russ Ferrante." ;
+        mtp:hasParticipant   meetup:f628add6d482c1a7b026a2369ea5b480 , meetup:582f3b0536d1fc2b8058725fd039669f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nelson_Rangell> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/14326077/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nelson Rangell (born March 26, 1960) is an American smooth jazz musician and composer from Castle Rock, Colorado." ;
+        mtp:hasParticipant   meetup:76b005c703febc4f6d23f18bea993748 ;
+        mtp:hasPurpose       meetup:e8ebce1f879c65fa57523dbc176cf5da ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nelson_Rangell> ;
+        mtp:hasType          "HT" .

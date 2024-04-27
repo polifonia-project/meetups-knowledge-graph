@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/14285698/3/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 1957 to 1974, Wilder did studio work for ABC-TV, New York City, and in the pit orchestras for Broadway musicals, while building his reputation as a soloist with his albums for Savoy (1956) and Columbia (1959). His Jazz from Peter Gunn (1959), features ten songs from Henry Mancini (\"Peter Gunn\") television score in melodic and swinging fashion with a quartet." ;
+        mtp:hasParticipant   meetup:6ac998f0259dc9d96d5c328e89870de5 ;
+        mtp:hasPurpose       meetup:b746c6e09c7597f54c7333a9cdb8a4b0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Wilder> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Henry_Mancini>
+        rdf:type  core:Person .
+
+meetup:6ac998f0259dc9d96d5c328e89870de5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Mancini> ;
+        mtp:hasOffset           "57" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Henry Mancini" .
+
+meetup:b746c6e09c7597f54c7333a9cdb8a4b0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Wilder's work as a soloist and studio musician" ;
+        mtp:hasEvidencePurposeSecond  "Wilder's personal career and reputation" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Joe_Wilder>
+        rdf:type  core:Person .

@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Tommy_Cash>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fcc0d7bee1e30096565594ab5723ea81
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tommy_Cash> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999916040796" ;
+        mtp:hasTextEvidence     "Tommy Cash" .
+
+<http://dbpedia.org/resource/Johnny_Cash>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/2365819/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tommy Cash (born April 5, 1940) is an American musician, singer and songwriter." ;
+        mtp:hasParticipant   meetup:fcc0d7bee1e30096565594ab5723ea81 ;
+        mtp:hasPurpose       meetup:33dba5eb1827f77a58b68e266b1a16d6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Cash> ;
+        mtp:hasType          "HT" .
+
+meetup:c8597a658abc1272cf08b2f128b39c83
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tommy_Cash> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tommy Cash" .
+
+meetup:33dba5eb1827f77a58b68e266b1a16d6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8444132" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09681293" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3005cae0ef9ffedab4e2707dbd4c1471
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Cash> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "0.9999999991441512" ;
+        mtp:hasTextEvidence     "Johnny Cash" .
+
+<http://w3id.org/polifonia/pilot/meetups/2365819/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His elder brother was Johnny Cash." ;
+        mtp:hasParticipant   meetup:3005cae0ef9ffedab4e2707dbd4c1471 , meetup:c8597a658abc1272cf08b2f128b39c83 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Cash> ;
+        mtp:hasType          "HM" .

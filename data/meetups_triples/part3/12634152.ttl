@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Toby_Smith>
+        rdf:type  core:Person .
+
+meetup:437a7f7ffc8c10c26a7365c43a3ccfa4
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2002" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2002-01-01"^^xsd:date ;
+        time:hasEnd          "2002-12-31"^^xsd:date .
+
+meetup:3bcf9092a45ff953e874150a9e75cca3
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1992" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1992-01-01"^^xsd:date ;
+        time:hasEnd          "1992-12-31"^^xsd:date .
+
+meetup:bdd0c0381a74ffb95aecaff92b8918b3
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "29 October 1970 – 11 April 2017" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/12634152/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:3bcf9092a45ff953e874150a9e75cca3 , meetup:437a7f7ffc8c10c26a7365c43a3ccfa4 , meetup:bdd0c0381a74ffb95aecaff92b8918b3 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Toby_Smith> ;
+        mtp:hasType     "HM" .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e2ec51164897ac05a8abdba9428ad1a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sulamita_Aronovsky> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sulamita Aronovsky" .
+
+<http://dbpedia.org/resource/Sulamita_Aronovsky>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/15516899/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sulamita Aronovsky, born in Lithuania in 1929, is a classical pianist and piano teacher who spent her formative years in Russia, moving to London in 1971." ;
+        mtp:hasParticipant   meetup:e2ec51164897ac05a8abdba9428ad1a7 ;
+        mtp:hasPurpose       meetup:15539b3590a8c934a05f833b31c2d259 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sulamita_Aronovsky> ;
+        mtp:hasType          "HT" .
+
+meetup:15539b3590a8c934a05f833b31c2d259
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92977667" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06996749" ;
+        mtp:hasSourcePurpose          "ML" .

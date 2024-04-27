@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/2250995/114/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In Her Dream: Bob Wiseman Sings Wrench Tuttle (1989)" ;
+        mtp:hasParticipant   meetup:be750470f56e261d44db454a145c6214 ;
+        mtp:hasPurpose       meetup:489189fcd80a15fe7012dd6efec95bf9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Wiseman> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bob_Wiseman>
+        rdf:type  core:Person .
+
+meetup:be750470f56e261d44db454a145c6214
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Wiseman> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Wiseman" .
+
+meetup:489189fcd80a15fe7012dd6efec95bf9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8119692" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12066345" ;
+        mtp:hasSourcePurpose          "ML" .

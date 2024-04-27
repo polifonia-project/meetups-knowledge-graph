@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Hayk_Gyolchanyan>
+        rdf:type  core:Person .
+
+meetup:a67f9771fffbd374a09f82d6215192cb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hayk_Gyolchanyan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hayk Gyolchanyan" .
+
+meetup:be5868c2e70e93f40f57435a44c6f951
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.83129174" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16819079" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/31917278/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hayk Gyolchanyan (born November 22, 1982) is an Armenian-American record producer, musician, singer and songwriter." ;
+        mtp:hasParticipant   meetup:a67f9771fffbd374a09f82d6215192cb ;
+        mtp:hasPurpose       meetup:be5868c2e70e93f40f57435a44c6f951 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hayk_Gyolchanyan> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:de81770fe3d5445fa284c8ba9615de56
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chuck_Prophet> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Chuck Prophet" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c5e6c3735cbdaac12dbdf7fbac4cd519
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Bands playing in San Francisco" ;
+        mtp:hasEvidencePurposeSecond  "Mallon's personal health issue" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1649607/6/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Each piece was lovingly printed and numbered by hand on a circa 1930's printing press. Dreaming Waylon's Dreams is one of the rarest and most sought-after items in Prophet's discography." ;
+        mtp:hasPurpose       meetup:6622f607cbcf4da2b92e6732073b4f7c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Prophet> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1649607/10/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "(Mallon at that time had a brain tumor, which he died of in 2014.) Members of many seminal San Francisco bands played as well including members of American Music Club, Frightwig, Ugly Stick, Flying Color." ;
+        mtp:hasPurpose       meetup:c5e6c3735cbdaac12dbdf7fbac4cd519 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Prophet> ;
+        mtp:hasType          "HT" .
+
+meetup:0e48426073ea87396326873a6f5c9e9a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.992386" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0061597726" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Chuck_Prophet>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:6622f607cbcf4da2b92e6732073b4f7c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creation and production of music" ;
+        mtp:hasEvidencePurposeSecond  "Demand and value of a rare item" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1649607/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chuck Prophet was born in Whittier, California, United States, and calls San Francisco home." ;
+        mtp:hasParticipant   meetup:de81770fe3d5445fa284c8ba9615de56 ;
+        mtp:hasPurpose       meetup:0e48426073ea87396326873a6f5c9e9a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Prophet> ;
+        mtp:hasType          "HT" .

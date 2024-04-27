@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Doc_Scott>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/41256946/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Scott McIlroy (born 1971, Coventry, England), better known as Doc Scott or Nasty Habits, is a British drum and bass DJ and producer." ;
+        mtp:hasParticipant   meetup:10179fb3fcf569dd9ede9d1bb88cefbc , meetup:f66a9a542a8fc8af7884fa36ce072855 ;
+        mtp:hasPurpose       meetup:9439746572f8a062390c7d13e1e00aaf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Doc_Scott> ;
+        mtp:hasType          "HM" .
+
+meetup:f66a9a542a8fc8af7884fa36ce072855
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Douglas_McIlroy> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.7123220821379085" ;
+        mtp:hasTextEvidence     "McIlroy" .
+
+<http://dbpedia.org/resource/Douglas_McIlroy>
+        rdf:type  core:Person .
+
+meetup:9439746572f8a062390c7d13e1e00aaf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Doc Scott is a British DJ and producer" ;
+        mtp:hasEvidencePurposeSecond  "Scott McIlroy was born in Coventry, England" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:10179fb3fcf569dd9ede9d1bb88cefbc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doc_Scott> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Doc Scott" .

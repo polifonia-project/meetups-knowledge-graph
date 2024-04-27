@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Sigrid_Bernson>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/30170010/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bernson began her career as one of the professional dancers on the TV4 series Let's Dance in 2011. She won the competition's seventh and ninth seasons, performing with Anton Hysén and Benjamin Ingrosso, respectively." ;
+        mtp:hasParticipant   meetup:456ee9c69d7461a4166946a021d62e97 ;
+        mtp:hasPurpose       meetup:4e48b4d47806e71c100a23034960f971 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sigrid_Bernson> ;
+        mtp:hasType          "HT" .
+
+meetup:4e48b4d47806e71c100a23034960f971
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Dancing on Let's Dance" ;
+        mtp:hasEvidencePurposeSecond  "Career and competition wins" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Benjamin_Ingrosso>
+        rdf:type  core:Person .
+
+meetup:456ee9c69d7461a4166946a021d62e97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Benjamin_Ingrosso> ;
+        mtp:hasOffset           "86" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Benjamin Ingrosso" .

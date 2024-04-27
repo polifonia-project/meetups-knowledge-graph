@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Khalid_of_Saudi_Arabia>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Khaled_El_Sheikh>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:9056143e0cb76bf6f68f4ad5d8feb7e8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Khalid Al-Shaikh" .
+
+<http://w3id.org/polifonia/pilot/meetups/9837267/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Khaled El Sheikh (Arabic: خالد الشيخ, or Khalid Al-Shaikh; born 23 September 1958) is a Bahraini singer." ;
+        mtp:hasParticipant   meetup:9056143e0cb76bf6f68f4ad5d8feb7e8 , meetup:dd0183614eda22476f96431d0075674a , meetup:2e5c9f7bfaa8da35a47645ccba75e970 ;
+        mtp:hasPurpose       meetup:a5a0640f8b7fdce65821e0025b51f368 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Khaled_El_Sheikh> ;
+        mtp:hasType          "HM" .
+
+meetup:dd0183614eda22476f96431d0075674a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Khaled_El_Sheikh> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Khaled El Sheikh" .
+
+meetup:2e5c9f7bfaa8da35a47645ccba75e970
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Khalid_of_Saudi_Arabia> ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "0.8088179601496371" ;
+        mtp:hasTextEvidence     "Khalid" .
+
+meetup:a5a0640f8b7fdce65821e0025b51f368
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9792813" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02071781" ;
+        mtp:hasSourcePurpose          "ML" .

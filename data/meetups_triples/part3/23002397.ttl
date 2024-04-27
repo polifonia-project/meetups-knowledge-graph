@@ -1,0 +1,54 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/23002397/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:3f90923c826a8d0401b990b70de029cd ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mike_Elliott_(saxophonist)> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Mike_Elliott_(saxophonist)>
+        rdf:type  core:Person .
+
+meetup:a1bfec128bb2d94399b6bf8d0e72d327
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "6 August 1929" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1929-08-06"^^xsd:date ;
+        time:hasEnd          "1929-08-06"^^xsd:date .
+
+meetup:26c2be7a29dd45309b2eabedac2ac470
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "Now" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/23002397/0/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:26c2be7a29dd45309b2eabedac2ac470 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mike_Elliott_(saxophonist)> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/23002397/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:a1bfec128bb2d94399b6bf8d0e72d327 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mike_Elliott_(saxophonist)> ;
+        mtp:hasType     "HT" .
+
+meetup:3f90923c826a8d0401b990b70de029cd
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the early 1960s" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1960-01-01"^^xsd:date ;
+        time:hasEnd          "1969-12-31"^^xsd:date .

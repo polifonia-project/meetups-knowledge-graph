@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/55865393/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ruth Hertz Weber aka Ruth Lopez-Yañez is a San Diego based composer, conductor, and pianist." ;
+        mtp:hasParticipant   meetup:25d551e417c963cc6cf10aa0b74d4d4a , meetup:c8abbd3e4ef59d1d120705b13d3a0261 ;
+        mtp:hasPurpose       meetup:0c686c30fecec2ab97b5fdd50fe88e01 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruth_Hertz_Weber> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Ruth_Hertz_Weber>
+        rdf:type  core:Person .
+
+meetup:0c686c30fecec2ab97b5fdd50fe88e01
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.62969404" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28996265" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c8abbd3e4ef59d1d120705b13d3a0261
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruth_Hertz_Weber> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99999999997587" ;
+        mtp:hasTextEvidence     "Ruth Hertz Weber" .
+
+meetup:25d551e417c963cc6cf10aa0b74d4d4a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ruth Lopez-Yañez" .

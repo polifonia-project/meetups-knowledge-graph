@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Lucy_Neale>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/66546092/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lucy Neale (also known as Lucy O'Day) is an American-German artist, notable for being one of the vocalists of the 1970s Silver Convention disco group." ;
+        mtp:hasParticipant   meetup:6c6604f3352bcd93c4aff75ede384dfe ;
+        mtp:hasPurpose       meetup:2949a9782f6b5d846e69f08a858b6a98 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucy_Neale> ;
+        mtp:hasType          "HT" .
+
+meetup:6c6604f3352bcd93c4aff75ede384dfe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lucy_Neale> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lucy Neale" .
+
+meetup:2949a9782f6b5d846e69f08a858b6a98
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98111767" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009513204" ;
+        mtp:hasSourcePurpose          "ML" .

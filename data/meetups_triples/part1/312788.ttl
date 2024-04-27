@@ -1,0 +1,80 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:0f5b1297fc2735c3fe388e1eda912297
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Myra_Hess> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dame Myra Hess" .
+
+<http://w3id.org/polifonia/pilot/meetups/312788/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dame Julia Myra Hess,  (25 February 1890 – 25 November 1965) was an English pianist best known for her performances of the works of Bach, Mozart, Beethoven and Schumann." ;
+        mtp:hasParticipant   meetup:1ca73c7e176fea271fffada2bb61ac26 ;
+        mtp:hasPurpose       meetup:93a069e3cfa54abbb07b2912647d83b0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Myra_Hess> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Myra_Hess>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1ca73c7e176fea271fffada2bb61ac26
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Myra_Hess> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Myra Hess" .
+
+<http://w3id.org/polifonia/pilot/meetups/312788/16/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 25 November 1965, Hess died at the age of 75 of a heart attack in her London home. A blue plaque marks her residence at 48 Wildwood Road in London." ;
+        mtp:hasPurpose       meetup:ae639dc74a2d971776c83b88c6f209f2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Myra_Hess> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:9e379004840ed217f743f4171f3ea04c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98617095" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013158624" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/312788/18/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chicago Dame Myra Hess Memorial Concerts ==" ;
+        mtp:hasParticipant   meetup:0f5b1297fc2735c3fe388e1eda912297 ;
+        mtp:hasPurpose       meetup:9e379004840ed217f743f4171f3ea04c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Myra_Hess> ;
+        mtp:hasType          "HT" .
+
+meetup:93a069e3cfa54abbb07b2912647d83b0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8842009" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11579899" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ae639dc74a2d971776c83b88c6f209f2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about a person's life" ;
+        mtp:hasEvidencePurposeSecond  "A notable event related to the person's residence" ;
+        mtp:hasSourcePurpose          "LLM" .

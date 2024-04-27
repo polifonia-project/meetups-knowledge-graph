@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/15732023/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Georgie Shaw, born George Shoester (1930 - September 1, 2006) in Philadelphia, Pennsylvania, was an American popular musician." ;
+        mtp:hasParticipant   meetup:ceb2e5b10faef9b96b119d5d9b37837d , meetup:7072c8e482f5f31d445b46fe0df7c55d ;
+        mtp:hasPurpose       meetup:21e921c67965c90d94f9a2dd60f645d3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Georgie_Shaw> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Georgie_Shaw>
+        rdf:type  core:Person .
+
+meetup:7072c8e482f5f31d445b46fe0df7c55d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Georgie_Shaw> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999997442" ;
+        mtp:hasTextEvidence     "Georgie Shaw" .
+
+meetup:21e921c67965c90d94f9a2dd60f645d3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Georgie Shaw was a popular musician" ;
+        mtp:hasEvidencePurposeSecond  "Georgie Shaw was born in Philadelphia" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ceb2e5b10faef9b96b119d5d9b37837d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "George Shoester" .

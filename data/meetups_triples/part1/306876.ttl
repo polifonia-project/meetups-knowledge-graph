@@ -1,0 +1,82 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:30e3fd54782b0ec2c99d3b5a429a795e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Clark_(placekicker)> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Clark" .
+
+<http://w3id.org/polifonia/pilot/meetups/306876/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wishing to return to the east coast, Clark served as accompanist for singer Dinah Washington in February 1957 in order to relocate to New York City. In New York, Clark was often requested as a sideman by many musicians, partly because of his rhythmic comping." ;
+        mtp:hasParticipant   meetup:30e3fd54782b0ec2c99d3b5a429a795e ;
+        mtp:hasPurpose       meetup:76eba305dc30d466de22716175fc1dc4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sonny_Clark> ;
+        mtp:hasType          "HT" .
+
+meetup:5cd61ffa03f1db0d6c9aa2f7a6cbda60
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sonny_Clark> ;
+        mtp:hasOffset           "106" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sonny Clark" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/306876/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Close friend and fellow jazz pianist Bill Evans dedicated the composition \"NYC's No Lark\" (an anagram of \"Sonny Clark\") to him after his death, included on Evans' Conversations with Myself (1963)." ;
+        mtp:hasParticipant   meetup:5cd61ffa03f1db0d6c9aa2f7a6cbda60 , meetup:005f007a774d9881e33563971460f14a ;
+        mtp:hasPurpose       meetup:5548a8b6980589f1cfb299a24768191a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sonny_Clark> ;
+        mtp:hasType          "HM" .
+
+meetup:005f007a774d9881e33563971460f14a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Evans> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bill Evans" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mike_Clark_(placekicker)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Bill_Evans>
+        rdf:type  core:Person .
+
+meetup:76eba305dc30d466de22716175fc1dc4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music as a sideman" ;
+        mtp:hasEvidencePurposeSecond  "Desire to relocate to New York City" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:5548a8b6980589f1cfb299a24768191a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7059297" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24155992" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Sonny_Clark>
+        rdf:type  core:Person .

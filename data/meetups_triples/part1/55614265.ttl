@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/55614265/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rebecca Louise \"Bex\" Chilcott, known professionally as Ruby Boots, (born October 20, 1981) is an Australian singer-songwriter who sings country and americana music." ;
+        mtp:hasParticipant   meetup:6e8aa0f3c3bb4271444c7d85e2a8748a , meetup:f91210184a6051537c6665cf4ba259e7 ;
+        mtp:hasPurpose       meetup:ca61b4d10bf22ba7c8b25774b7308e71 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruby_Boots> ;
+        mtp:hasType          "HM" .
+
+meetup:f91210184a6051537c6665cf4ba259e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruby_Boots> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Ruby Boots" .
+
+meetup:6e8aa0f3c3bb4271444c7d85e2a8748a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rebecca Louise \"Bex\" Chilcott" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ca61b4d10bf22ba7c8b25774b7308e71
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9979954" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0019963018" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Ruby_Boots>
+        rdf:type  core:Person .

@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/4475547/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paul Arma (Hungarian: Arma Pál, aka Amrusz Pál; né Weisshaus Imre; 22 November 1905, in Budapest – 28 November 1987, in Paris) was a Hungarian-French pianist, composer, and ethnomusicologist." ;
+        mtp:hasParticipant   meetup:fc73c1fd35744637dc8f41742fa896fc , meetup:d621793f6118864ba75bfa4d46ae7ac4 ;
+        mtp:hasPurpose       meetup:66e099eaf28c9a0985e497b0c068ad7b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Arma> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fc73c1fd35744637dc8f41742fa896fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Arma> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999948272" ;
+        mtp:hasTextEvidence     "Paul Arma" .
+
+meetup:d621793f6118864ba75bfa4d46ae7ac4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Arma Pál" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:66e099eaf28c9a0985e497b0c068ad7b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Pianist and composer" ;
+        mtp:hasEvidencePurposeSecond  "Ethnomusicologist" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Paul_Arma>
+        rdf:type  core:Person .

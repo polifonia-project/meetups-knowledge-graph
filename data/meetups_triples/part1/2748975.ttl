@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jean-Baptiste_Biot>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/2748975/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Félix Savart (; French: [savaʁ]; 30 June 1791, Mézières – 16 March 1841, Paris) was a physicist and mathematician who is primarily known for the Biot–Savart law of electromagnetism, which he discovered together with his colleague Jean-Baptiste Biot." ;
+        mtp:hasParticipant   meetup:1f7db97b4a1c11947822605ef2bc7f82 , meetup:83636cdee1e6a48a65e50ae6441df3b6 ;
+        mtp:hasPurpose       meetup:cb01cf727c61996b9bf06baaf0db5abe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Félix_Savart> ;
+        mtp:hasType          "HM" .
+
+meetup:cb01cf727c61996b9bf06baaf0db5abe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Study and dissemination of knowledge" ;
+        mtp:hasEvidencePurposeSecond  "Systematic study of the physical and natural world" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Félix_Savart>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:83636cdee1e6a48a65e50ae6441df3b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jean-Baptiste_Biot> ;
+        mtp:hasOffset           "238" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jean-Baptiste Biot" .
+
+meetup:1f7db97b4a1c11947822605ef2bc7f82
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Félix_Savart> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Félix Savart" .

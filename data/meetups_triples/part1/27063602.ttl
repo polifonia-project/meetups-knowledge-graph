@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1a09bd56403500362ad48d36b8998d29
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Playing saxophone in a regimental band" ;
+        mtp:hasEvidencePurposeSecond  "Serving in the Canadian Army" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:33a0ecfa6435dc5eaf0882c92caa3cf9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions winning scholarships and a national competition." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions becoming an organist-choirmaster at a church." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Walter_MacNutt>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/27063602/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1938 his Suite for Piano was awarded the first Vogt Society prize for Canadian composition. One of his more popular works, the secular song Take Me to a Green Isle, is taken from a poem by H.E. Foster." ;
+        mtp:hasParticipant   meetup:c0d9b27f46962177e2f58d08fd3220fa ;
+        mtp:hasPurpose       meetup:3ef810c0fd950d1d3c8c4dd92128b9f8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Walter_MacNutt> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/27063602/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He notably won the TCM's Vogt Memorial and Marion Ferguson scholarships and won a national competition in 1931. In 1931 MacNutt became organist-choirmaster at Trinity Church in Barrie, Ontario, a post he held through 1935." ;
+        mtp:hasPurpose       meetup:33a0ecfa6435dc5eaf0882c92caa3cf9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Walter_MacNutt> ;
+        mtp:hasType          "HT" .
+
+meetup:3ef810c0fd950d1d3c8c4dd92128b9f8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Composition and piano" ;
+        mtp:hasEvidencePurposeSecond  "Recognition and awards" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/27063602/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 1942-1946 he served in the Canadian Army where he was stationed on Prince Edward Island. During that time he played saxophone in a regimental band and was the organist at St. Peter's Pro-Cathedral in his native city." ;
+        mtp:hasPurpose       meetup:1a09bd56403500362ad48d36b8998d29 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Walter_MacNutt> ;
+        mtp:hasType          "HT" .
+
+meetup:c0d9b27f46962177e2f58d08fd3220fa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "97" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "H.E. Foster" .

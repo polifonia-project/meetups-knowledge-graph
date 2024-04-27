@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/16837366/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Madeleine Sibille (25 February 1895 – 19 July 1984) was a French operatic soprano." ;
+        mtp:hasParticipant   meetup:d98e8bc3704ab4d27182bdd0e73d88d8 ;
+        mtp:hasPurpose       meetup:24d6ab623f42c00f687a2c41b73d937e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Madeleine_Sibille> ;
+        mtp:hasType          "HT" .
+
+meetup:24d6ab623f42c00f687a2c41b73d937e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6481769" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.34005955" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Madeleine_Sibille>
+        rdf:type  core:Person .
+
+meetup:d98e8bc3704ab4d27182bdd0e73d88d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Madeleine_Sibille> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999998904211484" ;
+        mtp:hasTextEvidence     "Madeleine Sibille" .

@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Kessler_Twins>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:92a52da28ec7299c3bdedc0026a341f3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kessler_Twins> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "Kessler Twins" .
+
+meetup:cefc7549d0f62fa8223563cca10e7cf9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93533176" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.059480414" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/5827224/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alice and Ellen Kessler (born 20 August 1936 in Nerchau, Saxony, Germany) are twin entertainers known in Europe, especially Germany and Italy, from the 1950s and 1960s and until today for their singing, dancing, and acting." ;
+        mtp:hasParticipant   meetup:8d1ff4b4ad906e85f53c26e2825b9e33 ;
+        mtp:hasPurpose       meetup:cefc7549d0f62fa8223563cca10e7cf9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kessler_Twins> ;
+        mtp:hasType          "HT" .
+
+meetup:8d1ff4b4ad906e85f53c26e2825b9e33
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kessler_Twins> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ellen Kessler" .
+
+meetup:6697e1bfd26bcc2119a1af22731fb235
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Known for singing and dancing" ;
+        mtp:hasEvidencePurposeSecond  "Twin entertainers with a long-lasting career" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/5827224/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They are usually credited as the Kessler Twins (Die Kessler-Zwillinge in Germany and Le Gemelle Kessler in Italy), and remain popular today." ;
+        mtp:hasParticipant   meetup:92a52da28ec7299c3bdedc0026a341f3 ;
+        mtp:hasPurpose       meetup:6697e1bfd26bcc2119a1af22731fb235 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kessler_Twins> ;
+        mtp:hasType          "HT" .

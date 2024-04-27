@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/6094299/2/11>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His 1973 Harry Mudie-produced album, Time Is The Master, was successful, with orchestral arrangements recorded in London by Tony Ashfield. The success of the string-laden reggae led to Trojan Records issuing a series of similarly arranged albums produced by Ashfield starting with the 1,000 Volts of Holt in 1973, a compilation of Holt's reggae cover versions of popular hits (and later followed by similarly named releases up to the Lee-produced 3,000 Volts of Holt)." ;
+        mtp:hasPurpose       meetup:6a77900da2c906c8aff3a25d2f46188c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Holt_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/John_Holt_(singer)>
+        rdf:type  core:Person .
+
+meetup:6a77900da2c906c8aff3a25d2f46188c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Album production and orchestral arrangements" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration between Harry Mudie and Tony Ashfield" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6b5149faa6aba6e5bde19d89457bad59
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Holt_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Kenneth Holt" .
+
+meetup:e9de9d49282e3c9e7760a55ccf43c195
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8763112" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.123687714" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6094299/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Kenneth Holt CD (11 July 1947 – 19 October 2014) was a Jamaican reggae singer and songwriter who first found fame as a member of The Paragons, before establishing himself as a solo artist." ;
+        mtp:hasParticipant   meetup:6b5149faa6aba6e5bde19d89457bad59 ;
+        mtp:hasPurpose       meetup:e9de9d49282e3c9e7760a55ccf43c195 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Holt_(singer)> ;
+        mtp:hasType          "HT" .

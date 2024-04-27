@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:4103d09c5879dea48906eaf73d4e9003
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating and performing music" ;
+        mtp:hasEvidencePurposeSecond  "Balancing personal and professional life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:f9b380fcdb8bfd8aae044423f2936cfc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mira_Aroyo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mira Aroyo" .
+
+meetup:74a9002336889cbb66e36666d774d78e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions the band Ladytron and their career progression." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the personal career choices of one of the band members." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mira_Aroyo>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4769806/5/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In an interview with The Sunday Mail, she explained that, \"We all had jobs when we started Ladytron then little by little we ditched them. I was a geneticist doing a PhD and realizing lab work wasn't for me." ;
+        mtp:hasPurpose       meetup:74a9002336889cbb66e36666d774d78e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mira_Aroyo> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4769806/5/14>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "For the first 3 years of Ladytron I was juggling both, until it became apparent that I would be compromising both if I continued that way. I was young and it seemed a lot more fun at the time to travel the world playing music\"." ;
+        mtp:hasPurpose       meetup:4103d09c5879dea48906eaf73d4e9003 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mira_Aroyo> ;
+        mtp:hasType          "HT" .
+
+meetup:fbb7682ff43d1049fbcb56db87e5d4ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98014235" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01982175" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4769806/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mira Aroyo (Bulgarian: Мира Аройо, [ˈmirə ɐˈrɔjo]; born 11 July 1977) is a Bulgarian singer, musician, songwriter, DJ, and geneticist." ;
+        mtp:hasParticipant   meetup:f9b380fcdb8bfd8aae044423f2936cfc ;
+        mtp:hasPurpose       meetup:fbb7682ff43d1049fbcb56db87e5d4ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mira_Aroyo> ;
+        mtp:hasType          "HT" .

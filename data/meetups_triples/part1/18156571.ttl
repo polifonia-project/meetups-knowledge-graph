@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/18156571/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dave Georgeff (born February 28, 1968 in Naperville, Illinois) is an American musician. Born in Naperville, Illinois, and raised in nearby Downers Grove, Georgeff is a graduate of the Musicians Institute in Los Angeles, California." ;
+        mtp:hasParticipant   meetup:0900602af5a82bd30b909c742d7b079a ;
+        mtp:hasPurpose       meetup:7a1a3005cfd3b7e3c9105e40cbc5a771 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Georgeff> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/18156571/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He previously played bass guitar with mid-1990s Interscope-signed California pop punk band, Wax. Wax gained notoriety for their music videos, directed by Spike Jonze, which received considerable play on MTV in the mid-1990s." ;
+        mtp:hasParticipant   meetup:a63ed98f7d60388f3d56cde9b3050889 ;
+        mtp:hasPurpose       meetup:8ffdaf54617451f05f407a25af600c9d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Georgeff> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Spike_Jonze>
+        rdf:type  core:Person .
+
+meetup:c9c7a503693d90bf42cec9ef90d679df
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Georgeff> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999973259941276" ;
+        mtp:hasTextEvidence     "Dave Georgeff" .
+
+meetup:8ffdaf54617451f05f407a25af600c9d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the band and their music videos." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the person's previous involvement in a band." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:7a1a3005cfd3b7e3c9105e40cbc5a771
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Dave Georgeff is a musician" ;
+        mtp:hasEvidencePurposeSecond  "He graduated from Musicians Institute" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:a4605626a91ba90ee0cb0b019a3299ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999647" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.4733363e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:a63ed98f7d60388f3d56cde9b3050889
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Spike_Jonze> ;
+        mtp:hasOffset           "57" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Spike Jonze" .
+
+<http://w3id.org/polifonia/pilot/meetups/18156571/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dave Georgeff (born February 28, 1968 in Naperville, Illinois) is an American musician." ;
+        mtp:hasParticipant   meetup:c9c7a503693d90bf42cec9ef90d679df ;
+        mtp:hasPurpose       meetup:a4605626a91ba90ee0cb0b019a3299ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Georgeff> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Dave_Georgeff>
+        rdf:type  core:Person .
+
+meetup:0900602af5a82bd30b909c742d7b079a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Georgeff> ;
+        mtp:hasOffset           "66" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dave Georgeff" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/D._James_Goodwin>
+        rdf:type  core:Person .
+
+meetup:05648e2eb8fa456352c5c879e68e38e2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The facility is a private studio for music production." ;
+        mtp:hasEvidencePurposeSecond  "The studio can be rented out for business meetings." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/41689077/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The facility was finished in Spring of 2010, and will be Goodwin's homebase for the foreseeable future. While the studio is private, it is occasionally available to rent out on a limited basis, when Goodwin is working elsewhere or away." ;
+        mtp:hasParticipant   meetup:2c1d3659d46e0da0a5873b9803ef68af ;
+        mtp:hasPurpose       meetup:05648e2eb8fa456352c5c879e68e38e2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/D._James_Goodwin> ;
+        mtp:hasType          "HT" .
+
+meetup:2c1d3659d46e0da0a5873b9803ef68af
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "95" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Goodwin" .

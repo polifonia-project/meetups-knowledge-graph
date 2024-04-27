@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ae0ca8e9be634317c0da35c66f9b627d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9081169" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09042976" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/7014637/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dawn Penn (born 1952 in Kingston, Jamaica) is a Jamaican reggae singer." ;
+        mtp:hasParticipant   meetup:42c9e5caba8a1d57b15acc324b1d6cb3 ;
+        mtp:hasPurpose       meetup:ae0ca8e9be634317c0da35c66f9b627d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dawn_Penn> ;
+        mtp:hasType          "HT" .
+
+meetup:42c9e5caba8a1d57b15acc324b1d6cb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dawn_Penn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dawn Penn" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:bcd433ac4e262ad4ef2d68a91ed55bbd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dawn_Penn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dawn Penn" .
+
+meetup:20d1b7a2f6d84fb2c77d0174525ab653
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97806746" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01867359" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Dawn_Penn>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/7014637/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She first had a short career during the rocksteady era, between 1967 and 1969, but is most known for her single \"You Don't Love Me (No, No, No)\" which became a worldwide hit in 1994." ;
+        mtp:hasParticipant   meetup:bcd433ac4e262ad4ef2d68a91ed55bbd ;
+        mtp:hasPurpose       meetup:20d1b7a2f6d84fb2c77d0174525ab653 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dawn_Penn> ;
+        mtp:hasType          "HT" .

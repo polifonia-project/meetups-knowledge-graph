@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gordon_Hayward>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3204508/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Richie Hayward died on August 12, 2010 from complications due to liver cancer." ;
+        mtp:hasParticipant   meetup:4a21d0da66d86059d5283ba259ff9f29 ;
+        mtp:hasPurpose       meetup:dd808ae05ea236fae31e459e414147da ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richie_Hayward> ;
+        mtp:hasType          "HT" .
+
+meetup:dd808ae05ea236fae31e459e414147da
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "This sentence is related to the personal life of Richie Hayward, specifically his death from liver cancer." ;
+        mtp:hasEvidencePurposeSecond  "The mention of the date of his death, August 12, 2010, can be seen as a coincidence in relation to the topic of his personal life." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4a21d0da66d86059d5283ba259ff9f29
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richie_Hayward> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Richie Hayward" .
+
+meetup:0e8e3a5ef0a9e1930c05a1acd2ab0892
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gordon_Hayward> ;
+        mtp:hasOffset           "156" ;
+        mtp:hasSimilarityScore  "0.9222887216539128" ;
+        mtp:hasTextEvidence     "Hayward" .
+
+<http://w3id.org/polifonia/pilot/meetups/3204508/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The day after his death Little Feat played a gig at Fairport's Cropredy Convention festival in Cropredy (UK), and spoke of their sadness performing without Hayward, Paul Barrere starting the gig with the words \"Let's Rock For Richie\"." ;
+        mtp:hasParticipant   meetup:41cfc2b4a0aee5f0c0e164e41e90e22c , meetup:0e8e3a5ef0a9e1930c05a1acd2ab0892 , meetup:c5f2e0185cfc6a9468a5c115a8a44be7 ;
+        mtp:hasPurpose       meetup:59b8271a23c376a5cb22569a1a4fbca4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richie_Hayward> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Richie_Hayward>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Paul_Barrere>
+        rdf:type  core:Person .
+
+meetup:41cfc2b4a0aee5f0c0e164e41e90e22c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richie_Hayward> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Richie Hayward" .
+
+meetup:c5f2e0185cfc6a9468a5c115a8a44be7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Barrere> ;
+        mtp:hasOffset           "165" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Paul Barrere" .
+
+meetup:59b8271a23c376a5cb22569a1a4fbca4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to a music event, specifically a gig performed by the band Little Feat." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the death of someone named Richie, which is a personal life event." ;
+        mtp:hasSourcePurpose          "LLM" .

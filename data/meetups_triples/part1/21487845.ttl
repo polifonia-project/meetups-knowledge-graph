@@ -1,0 +1,77 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/21487845/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Molly Bee (born Mollie Gene Beachboard; August 18, 1939 – February 7, 2009), was an American country music singer famous for her 1952 recording of the early perennial \"I Saw Mommy Kissing Santa Claus\" and as Pinky Lee's sidekick on The Pinky Lee Show." ;
+        mtp:hasParticipant   meetup:71eb95c38aa556af261a8e83016a6fe2 , meetup:bb35b701ab0ead1b74b974a9c4ff964f , meetup:cd68e91fabbdcc8b81386f05e3db157a ;
+        mtp:hasPurpose       meetup:090a00032c21715ece5bb5cbc737a77d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Molly_Bee> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Molly_Bee>
+        rdf:type  core:Person .
+
+meetup:090a00032c21715ece5bb5cbc737a77d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99901605" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0009813316" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Pinky_Lee>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/21487845/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She became a regular on Hometown Jamboree during the next two years, a KTLA-TV program produced at the American Legion Stadium in El Monte, California. It later was moved to the then-famous Harmony Park Ballroom in Anaheim, California." ;
+        mtp:hasPurpose       meetup:21768195728e022fe075d5e57e41501f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Molly_Bee> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:71eb95c38aa556af261a8e83016a6fe2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pinky_Lee> ;
+        mtp:hasOffset           "210" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pinky Lee" .
+
+meetup:cd68e91fabbdcc8b81386f05e3db157a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "208" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pinky Lee's" .
+
+meetup:21768195728e022fe075d5e57e41501f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performing on Hometown Jamboree" ;
+        mtp:hasEvidencePurposeSecond  "Broadcasting from Harmony Park Ballroom" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:bb35b701ab0ead1b74b974a9c4ff964f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Molly_Bee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Molly Bee" .

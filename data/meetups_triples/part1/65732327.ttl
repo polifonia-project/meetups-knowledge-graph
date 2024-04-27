@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/65732327/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2017, Hurley released the album, Anthology Resource Vol. 1, which featured original material created for Twin Peaks and in 2019, Anthology Resource Vol." ;
+        mtp:hasParticipant   meetup:cd08554813b32c68eeb56deb68d09e6d ;
+        mtp:hasPurpose       meetup:c194d504790603937857c3db8fc7df2d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dean_Hurley> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:f951c598ff49ab30ae590b42612efde0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Lynch> ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "0.9999999982550918" ;
+        mtp:hasTextEvidence     "David Lynch" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cd08554813b32c68eeb56deb68d09e6d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dean_Hurley> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dean Hurley" .
+
+<http://w3id.org/polifonia/pilot/meetups/65732327/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known for his frequent collaborations with director David Lynch." ;
+        mtp:hasParticipant   meetup:3b086294152a1bc3dc07e859cce8171b , meetup:f951c598ff49ab30ae590b42612efde0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dean_Hurley> ;
+        mtp:hasType          "HM" .
+
+meetup:3b086294152a1bc3dc07e859cce8171b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dean_Hurley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dean Hurley" .
+
+meetup:c194d504790603937857c3db8fc7df2d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6368906" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3165108" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Dean_Hurley>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/David_Lynch>
+        rdf:type  core:Person .

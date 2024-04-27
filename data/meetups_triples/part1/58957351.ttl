@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/DJ_Q>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:3d40f0e643c1db9cc2d6b994f74f96b8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Music production and record labels" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration and partnership" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:479f38f831940fe395f24b0105fa8335
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the artist's musical career." ;
+        mtp:hasEvidencePurposeSecond  "The artist learned how to DJ and gained radio airplay through her affiliation with Butterz." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/58957351/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The duo signed her up to the label to make her first real release \"Hold On/Home\" in 2011. This affiliation with Butterz would continue indefinitely and was the catalyst in her becoming a major musical artist, as it was with this connection that she learned how to DJ and gained regular radio airplay on established radio stations like Rinse FM and Kiss FM on which she at one point hosted a weekly show." ;
+        mtp:hasPurpose       meetup:479f38f831940fe395f24b0105fa8335 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Flava_D> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/58957351/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was previously signed to the Butterz record label and is now signed to Hospital Records . She is one third of the UK garage act TQD, alongside fellow producers Royal-T and DJ Q." ;
+        mtp:hasParticipant   meetup:3329dba1f1ff949693db5eb4aa26997e ;
+        mtp:hasPurpose       meetup:3d40f0e643c1db9cc2d6b994f74f96b8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Flava_D> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/58957351/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After messaging Wiley multiple times on Myspace in 2008, he asked her to send him some music. She sent him \"Twenty-odd Beats\", to which he replied that he was interested in some of them." ;
+        mtp:hasPurpose       meetup:6bbff0eaaa2681872d9f3ddf7b419bfd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Flava_D> ;
+        mtp:hasType          "HT" .
+
+meetup:3329dba1f1ff949693db5eb4aa26997e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DJ_Q> ;
+        mtp:hasOffset           "82" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "DJ Q" .
+
+<http://dbpedia.org/resource/Flava_D>
+        rdf:type  core:Person .
+
+meetup:6bbff0eaaa2681872d9f3ddf7b419bfd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The conversation is about music exchange." ;
+        mtp:hasEvidencePurposeSecond  "The conversation involves personal interaction on Myspace." ;
+        mtp:hasSourcePurpose          "LLM" .

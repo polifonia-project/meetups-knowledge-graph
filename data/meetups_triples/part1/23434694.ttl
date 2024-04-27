@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jackson_Berkey>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/23434694/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After graduating from high school in 1960, Berkey briefly attended the Eastman School of Music in Rochester, New York. Unfortunately, because scholarships did not adequately cover all expenses, he dropped out of school and got a job as a programming director and announcer at the classical music station, WBBF-FM in Rochester." ;
+        mtp:hasPurpose       meetup:a8f942bea13cc7ec935756b614f1b95b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jackson_Berkey> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:20ff9307d961862c20c720b50eeffff3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chip_Davis> ;
+        mtp:hasOffset           "156" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chip Davis" .
+
+meetup:70a8e195f36f93650a1f7c19cd08679b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jackson_Berkey> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jackson Berkey" .
+
+meetup:a8f942bea13cc7ec935756b614f1b95b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involves attending music school" ;
+        mtp:hasEvidencePurposeSecond  "Involves dropping out of school" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4fb6b8183752b12c9960c47c63ce1969
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9168062" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07591761" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Chip_Davis>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/23434694/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jackson Berkey (born May 24, 1942) is an American composer, pianist and singer, best known for his work with Mannheim Steamroller, which he co-founded with Chip Davis in 1974." ;
+        mtp:hasParticipant   meetup:70a8e195f36f93650a1f7c19cd08679b , meetup:20ff9307d961862c20c720b50eeffff3 ;
+        mtp:hasPurpose       meetup:4fb6b8183752b12c9960c47c63ce1969 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jackson_Berkey> ;
+        mtp:hasType          "HM" .

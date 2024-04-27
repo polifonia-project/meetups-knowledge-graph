@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11269544/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tommy Onyx (born May 7, 1972) is a musician from Detroit, Michigan." ;
+        mtp:hasParticipant   meetup:e39e989fd478e0f60d4c9c15b71ae193 ;
+        mtp:hasPurpose       meetup:6d372b6f348f31c01433123ca66b5841 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Onyx> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6d372b6f348f31c01433123ca66b5841
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8650675" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13491338" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:39500f6c5ea983a39fd365829f3ae4c3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tommy_Onyx> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tommy Onyx" .
+
+meetup:e39e989fd478e0f60d4c9c15b71ae193
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tommy_Onyx> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999892135904191" ;
+        mtp:hasTextEvidence     "Tommy Onyx" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/11269544/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known as the producer of Inner City's 1999 remix of Good Life, which made #10 on the UK Singles Chart." ;
+        mtp:hasParticipant   meetup:39500f6c5ea983a39fd365829f3ae4c3 ;
+        mtp:hasPurpose       meetup:9fae97b3da288008006cba1a23b420eb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Onyx> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:9fae97b3da288008006cba1a23b420eb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9868729" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011435328" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Tommy_Onyx>
+        rdf:type  core:Person .

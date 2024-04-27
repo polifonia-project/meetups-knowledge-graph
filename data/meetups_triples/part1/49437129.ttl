@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Georges_Lonque>
+        rdf:type  core:Person .
+
+meetup:d503138245ad45c4966b77b933bcf720
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Séraphin Lonque" .
+
+<http://w3id.org/polifonia/pilot/meetups/49437129/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Georges Lonque (Ghent, 8 November 1900 – Brussels, 3 March 1967) was a Belgian composer, music teacher, conductor and violinist. His father was Séraphin Lonque and his younger brother was Armand Lonque." ;
+        mtp:hasParticipant   meetup:d503138245ad45c4966b77b933bcf720 ;
+        mtp:hasPurpose       meetup:0d4217cfe8adae0e2ff4d33d4ae2caac ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Georges_Lonque> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:0d4217cfe8adae0e2ff4d33d4ae2caac
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Composer and violinist" ;
+        mtp:hasEvidencePurposeSecond  "Music teacher and conductor" ;
+        mtp:hasSourcePurpose          "LLM" .

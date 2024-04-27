@@ -1,0 +1,81 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:25b55f7573b76d13613989b2b6a73ad0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7233" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21588579" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:482ff9718c563130e1802ec331945512
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Theo_Adam> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Theo Adam" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/2223477/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Theo Adam (1 August 1926 – 10 January 2019) was a German operatic bass-baritone and bass singer who had an international career in opera, concert and recital from 1949." ;
+        mtp:hasParticipant   meetup:e62b80102624cd5d23f684699687ad55 ;
+        mtp:hasPurpose       meetup:25b55f7573b76d13613989b2b6a73ad0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Theo_Adam> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2223477/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was a member of the Staatsoper Dresden for his entire career, and sang at the Bayreuth Festival from 1952 to 1980." ;
+        mtp:hasParticipant   meetup:482ff9718c563130e1802ec331945512 ;
+        mtp:hasPurpose       meetup:a11a87f7a20afd892066b4e842af8439 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Theo_Adam> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2223477/2/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He returned annually to Bayreuth for many years, taking on the role of Heinrich der Vogler in Lohengrin in 1954, Titurel (and one of the Gralsritter) in Parsifal the same year, Fasolt in Das Rheingold in 1958, and Wotan in Der Ring des Nibelungen in 1963. He eventually added Amfortas in Parsifal, Hans Sachs and Veit Pogner in Die Meistersinger von Nürnberg, and the title role in Der fliegende Holländer to his Bayreuth performance credits." ;
+        mtp:hasPurpose       meetup:ccde7b1c3d130cbda7647b7bd5b611dc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Theo_Adam> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Theo_Adam>
+        rdf:type  core:Person .
+
+meetup:e62b80102624cd5d23f684699687ad55
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Theo_Adam> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Theo Adam" .
+
+meetup:a11a87f7a20afd892066b4e842af8439
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998915" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 8.9744035e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ccde7b1c3d130cbda7647b7bd5b611dc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing in Bayreuth" ;
+        mtp:hasEvidencePurposeSecond  "Annual return to Bayreuth" ;
+        mtp:hasSourcePurpose          "LLM" .

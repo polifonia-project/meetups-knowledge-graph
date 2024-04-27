@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5c586858b00483861d5cecc971e16bd5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "The song's success on music charts" ;
+        mtp:hasEvidencePurposeSecond  "Recognition and popularity of the song" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d0ca2fdb48f1c3879969ca3158dee077
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bruce_Channel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bruce Channel" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:653108ff3efaea64cad82f7c35901d11
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9986822" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013048064" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1164669/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bruce Channel (, shə-NEL; born November 28, 1940) is an American singer-songwriter best known for his 1962 million-selling number-one hit record, \"Hey!" ;
+        mtp:hasParticipant   meetup:d0ca2fdb48f1c3879969ca3158dee077 ;
+        mtp:hasPurpose       meetup:653108ff3efaea64cad82f7c35901d11 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bruce_Channel> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1164669/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The song went to number one in the US in March 1962 and held that position for three weeks. Besides topping the U.S. popular music charts, it also became number two in the United Kingdom." ;
+        mtp:hasPurpose       meetup:5c586858b00483861d5cecc971e16bd5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bruce_Channel> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bruce_Channel>
+        rdf:type  core:Person .

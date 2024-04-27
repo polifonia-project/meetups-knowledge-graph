@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bob_Margolin>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/8811753/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Margolin (born May 9, 1949) is an American electric blues guitarist." ;
+        mtp:hasParticipant   meetup:40c95e49b6de92c3796f8b85c3ca64dd ;
+        mtp:hasPurpose       meetup:9eea4bb311ad8162abad5690ba82b23e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Margolin> ;
+        mtp:hasType          "HT" .
+
+meetup:40c95e49b6de92c3796f8b85c3ca64dd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Margolin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Margolin" .
+
+meetup:9eea4bb311ad8162abad5690ba82b23e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.82483053" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17085136" ;
+        mtp:hasSourcePurpose          "ML" .

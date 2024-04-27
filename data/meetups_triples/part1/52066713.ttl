@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Joseph_Dougherty_Carter>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/52066713/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joe Carter performed with the Carter family from 1939 to 1940 on Border Radio and with his sister Janette and his parents Sara and A.P. Carter from 1952 till 1956 on a program called Acme Sessions." ;
+        mtp:hasParticipant   meetup:a2269ce44b9ff9aeb8e362384d7e346a , meetup:259646fd19b2d4aaa23448f62c8b3584 ;
+        mtp:hasPurpose       meetup:fd2301230c91e44d3829c7ca0771193e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joseph_Dougherty_Carter> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Sara_Dylan>
+        rdf:type  core:Person .
+
+meetup:259646fd19b2d4aaa23448f62c8b3584
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sara_Dylan> ;
+        mtp:hasOffset           "122" ;
+        mtp:hasSimilarityScore  "0.4159578973908451" ;
+        mtp:hasTextEvidence     "Sara" .
+
+meetup:a2269ce44b9ff9aeb8e362384d7e346a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joseph_Dougherty_Carter> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999602" ;
+        mtp:hasTextEvidence     "Joe Carter" .
+
+meetup:fd2301230c91e44d3829c7ca0771193e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.50497466" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.49483192" ;
+        mtp:hasSourcePurpose          "ML" .

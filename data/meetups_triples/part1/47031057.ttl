@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Michael_Dion>
+        rdf:type  core:Person .
+
+meetup:504ebe1b00d7394d934d1f85064e034e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael Grantham" .
+
+<http://w3id.org/polifonia/pilot/meetups/47031057/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was announced in the October 8, 1983 issue of Cashbox Michael Dion and Michael Grantham had formed a production company to produce jazz and classical artists." ;
+        mtp:hasParticipant   meetup:504ebe1b00d7394d934d1f85064e034e , meetup:850a7ffbdc8a35cbc2eeb5bff7e6aaa6 ;
+        mtp:hasPurpose       meetup:2f90c31829f1d57ea7ac0ec0205043cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Dion> ;
+        mtp:hasType          "HM" .
+
+meetup:2f90c31829f1d57ea7ac0ec0205043cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.89324635" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10385089" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:850a7ffbdc8a35cbc2eeb5bff7e6aaa6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Dion> ;
+        mtp:hasOffset           "57" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Michael Dion" .

@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:07c62941d31a7361901b4cf77377f61a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Bozzio's personal and professional life in Los Angeles" ;
+        mtp:hasEvidencePurposeSecond  "Interviewing for a position at Playboy Mansion" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Dale_Bozzio>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:01a6adf4e69be865fa631a10662c24e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Terry_Bozzio> ;
+        mtp:hasOffset           "135" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bozzio" .
+
+<http://w3id.org/polifonia/pilot/meetups/2170624/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1976, Bozzio traveled to Playboy Mansion West in Los Angeles at the request of Hugh Hefner, to interview for a position as a Valentine party hostess.: 07:35  The opportunity provided for both a continuing relationship with Playboy and for living arrangements in Los Angeles, from which she could pursue an acting career." ;
+        mtp:hasParticipant   meetup:01a6adf4e69be865fa631a10662c24e6 ;
+        mtp:hasPurpose       meetup:07c62941d31a7361901b4cf77377f61a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dale_Bozzio> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Terry_Bozzio>
+        rdf:type  core:Person .

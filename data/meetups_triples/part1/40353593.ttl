@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/40353593/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Delafose died in 1994." ;
+        mtp:hasParticipant   meetup:fee7f6fadcb5b3bdf8867c8aca0ab104 ;
+        mtp:hasPurpose       meetup:03de399a6b9feea6279545fa641f1f35 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Delafose> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:fee7f6fadcb5b3bdf8867c8aca0ab104
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Delafose> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999823928" ;
+        mtp:hasTextEvidence     "John Delafose" .
+
+<http://dbpedia.org/resource/John_Delafose>
+        rdf:type  core:Person .
+
+meetup:03de399a6b9feea6279545fa641f1f35
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99992335" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.446207e-05" ;
+        mtp:hasSourcePurpose          "ML" .

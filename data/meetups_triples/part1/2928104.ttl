@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8e74cd8f095812927540709ae1678d62
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Her_Space_Holiday> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Marc Bianchi" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/2928104/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marc Bianchi began as a musician in the California hardcore scene." ;
+        mtp:hasParticipant   meetup:8e74cd8f095812927540709ae1678d62 ;
+        mtp:hasPurpose       meetup:8cf69a1a7f823511cb2fe9d9dc73573c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Her_Space_Holiday> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Her_Space_Holiday>
+        rdf:type  core:Person .
+
+meetup:8cf69a1a7f823511cb2fe9d9dc73573c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9992053" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00060805597" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/31311464/30/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2003 - \"Martin Gerschwitz & friends\" (Martin Gerschwitz & friends/CD)" ;
+        mtp:hasParticipant   meetup:181157ab1f00578ad8bd9af5acf237d7 ;
+        mtp:hasPurpose       meetup:1cf7543323b82f26e76cc48a6b5e89f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martin_Gerschwitz> ;
+        mtp:hasType          "HT" .
+
+meetup:1cf7543323b82f26e76cc48a6b5e89f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9700679" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011725192" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:181157ab1f00578ad8bd9af5acf237d7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martin_Gerschwitz> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Martin Gerschwitz" .
+
+<http://dbpedia.org/resource/Martin_Gerschwitz>
+        rdf:type  core:Person .

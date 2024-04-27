@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f714e39a4d0373edf71399d500ee9927
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_de_la_Piere> ;
+        mtp:hasOffset           "96" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Robert de la Piere" .
+
+meetup:128f14fb9f3fe5bb626bc4084ff29e92
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mahieu_de_Gant> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mahieu de Gant" .
+
+<http://dbpedia.org/resource/Robert_de_la_Piere>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/22661152/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His career can only be dated because of those with whom he composed jeux partis, which includes Robert de la Piere, who died in 1258." ;
+        mtp:hasParticipant   meetup:128f14fb9f3fe5bb626bc4084ff29e92 , meetup:f714e39a4d0373edf71399d500ee9927 ;
+        mtp:hasPurpose       meetup:4044c4f11a1e38a496896ef1362e41d6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mahieu_de_Gant> ;
+        mtp:hasType          "HM" .
+
+meetup:06d072adf81ecd919022670e2f16f435
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9921272" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0060898033" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Mahieu_de_Gant>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/22661152/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "mid–late 13th century) was a Flemish trouvère (poet-composer) from Ghent associated with the so-called \"school of Arras\"." ;
+        mtp:hasParticipant   meetup:675e998d336530ae4d287960d77c9167 ;
+        mtp:hasPurpose       meetup:06d072adf81ecd919022670e2f16f435 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mahieu_de_Gant> ;
+        mtp:hasType          "HT" .
+
+meetup:675e998d336530ae4d287960d77c9167
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mahieu_de_Gant> ;
+        mtp:hasOffset           "122" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mahieu de Gant" .
+
+meetup:4044c4f11a1e38a496896ef1362e41d6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.681734" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2960567" ;
+        mtp:hasSourcePurpose          "ML" .

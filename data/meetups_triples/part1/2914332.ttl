@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2914332/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Friedrich Hollaender (in exile also Frederick Hollander; 18 October 1896 – 18 January 1976) was a German film composer and author." ;
+        mtp:hasParticipant   meetup:80796738dc1c60e9198f2eaa62a0bbd5 ;
+        mtp:hasPurpose       meetup:663dcf4ad7897d3e789f69bd5c8a31c1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Friedrich_Hollaender> ;
+        mtp:hasType          "HT" .
+
+meetup:663dcf4ad7897d3e789f69bd5c8a31c1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.88482535" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06032073" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:05adb0e3b2c30bc34340907e4488b862
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Composer Frederick Hollander" ;
+        mtp:hasEvidencePurposeSecond  "Flight from Germany" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Friedrich_Hollaender>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:80796738dc1c60e9198f2eaa62a0bbd5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Friedrich_Hollaender> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Friedrich Hollaender" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:6fc8c230ebe9a35c8472c8c1d9cbb244
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Friedrich_Hollaender> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "0.9999999999993748" ;
+        mtp:hasTextEvidence     "Frederick Hollander" .
+
+<http://w3id.org/polifonia/pilot/meetups/2914332/5/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As \"Frederick Hollander\", he also wrote the semi-autobiographical novel Those Torn From Earth, released in 1941, which details the flight from Germany that many Jewish members of the film industry embarked on after the Nazis came to power and instituted the Nuremberg Laws." ;
+        mtp:hasParticipant   meetup:6fc8c230ebe9a35c8472c8c1d9cbb244 ;
+        mtp:hasPurpose       meetup:05adb0e3b2c30bc34340907e4488b862 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Friedrich_Hollaender> ;
+        mtp:hasType          "HT" .

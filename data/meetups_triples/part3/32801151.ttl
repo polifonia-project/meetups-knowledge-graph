@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_Szwed>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/32801151/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:2fdb90daf2affc76f6dcf96abb24b884 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/John_Szwed> ;
+        mtp:hasType     "HM" .
+
+meetup:9aeb5cd9508b5dc38b09295f10e295fe
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "previously" ;
+        mtp:hasSource        "ML" .
+
+meetup:2fdb90daf2affc76f6dcf96abb24b884
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "of Sun" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:3ef3264b40f4e747d1fd00da8368959a
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1936" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1936-01-01"^^xsd:date ;
+        time:hasEnd          "1936-12-31"^^xsd:date .
+
+meetup:57a82f8070a376d51ad4f3e3f8e718ac
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1970" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1970-01-01"^^xsd:date ;
+        time:hasEnd          "1970-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/32801151/6/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:57a82f8070a376d51ad4f3e3f8e718ac ;
+        mtp:hasSubject  <http://dbpedia.org/resource/John_Szwed> ;
+        mtp:hasType     "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/32801151/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:9aeb5cd9508b5dc38b09295f10e295fe , meetup:3ef3264b40f4e747d1fd00da8368959a ;
+        mtp:hasSubject  <http://dbpedia.org/resource/John_Szwed> ;
+        mtp:hasType     "HT" .

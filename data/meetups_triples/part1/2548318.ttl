@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ike_Turner>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:162290216c74e88f52666b6507f57914
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ike_Turner> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ike" .
+
+<http://w3id.org/polifonia/pilot/meetups/2548318/7/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the summer of 1975, he organized a multi-band tour of European music festivals, named Startruckin' 75, which featured several BTM bands as well as Soft Machine, the Mahavishnu Orchestra and Lou Reed (replaced by Ike & Tina Turner). However, Reed's failure to appear at any of the shows and other logistical issues resulted in significant losses for Startruckin 75', and ultimately to the failure of BTM." ;
+        mtp:hasParticipant   meetup:162290216c74e88f52666b6507f57914 ;
+        mtp:hasPurpose       meetup:e0b905e046bb53a3a59bd9fd304a2603 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miles_Copeland_III> ;
+        mtp:hasType          "HT" .
+
+meetup:e0b905e046bb53a3a59bd9fd304a2603
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Organizing a music tour" ;
+        mtp:hasEvidencePurposeSecond  "Logistical issues and financial losses" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Miles_Copeland_III>
+        rdf:type  core:Person .

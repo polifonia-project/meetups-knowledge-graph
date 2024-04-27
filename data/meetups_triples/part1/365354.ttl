@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f9c30b66d7bf69b9756c23d07ad3961c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Austin_Clarke_(poet)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7880720678051061" ;
+        mtp:hasTextEvidence     "Austin Clarke" .
+
+meetup:004aa655f534886b126f419fbf550914
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Austin Clarke's life" ;
+        mtp:hasEvidencePurposeSecond  "His contribution to Irish poetry" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:134de03ba8bce24b7a34406d7e38785c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aibhistín Ó Cléirigh" .
+
+<http://w3id.org/polifonia/pilot/meetups/365354/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Austin Clarke (Irish: Aibhistín Ó Cléirigh) (9 May 1896 – 19 March 1974), born in 83 Manor Street, Stoneybatter, Dublin, was one of the leading Irish poets of the generation after W. B. Yeats." ;
+        mtp:hasParticipant   meetup:134de03ba8bce24b7a34406d7e38785c , meetup:f9c30b66d7bf69b9756c23d07ad3961c ;
+        mtp:hasPurpose       meetup:004aa655f534886b126f419fbf550914 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Austin_Clarke_(poet)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Austin_Clarke_(poet)>
+        rdf:type  core:Person .

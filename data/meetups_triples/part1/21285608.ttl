@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/21285608/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "An eight-song digital EP, Quarter of a Century, was released in late 2008." ;
+        mtp:hasParticipant   meetup:500a68cd982faa70da979d51f93a688c ;
+        mtp:hasPurpose       meetup:c973ce1deb09fc6b8551a9d6c647389f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_Jenkins> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/21285608/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Signed to Universal South Records in 2003, he released two singles in 2005, including \"King of the Castle\", which reached number 51 on the Hot Country Songs charts, but did not release an album." ;
+        mtp:hasParticipant   meetup:c4f1baff2dc08b0009f50b7d7c7473b0 ;
+        mtp:hasPurpose       meetup:20957ae1273f8958ac9b039cfb25baf1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_Jenkins> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:500a68cd982faa70da979d51f93a688c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Jenkins> ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Matt Jenkins" .
+
+meetup:c4f1baff2dc08b0009f50b7d7c7473b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Jenkins> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Matt Jenkins" .
+
+<http://dbpedia.org/resource/Matt_Jenkins>
+        rdf:type  core:Person .
+
+meetup:c973ce1deb09fc6b8551a9d6c647389f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98059744" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.019402197" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:20957ae1273f8958ac9b039cfb25baf1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9813198" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018644432" ;
+        mtp:hasSourcePurpose          "ML" .

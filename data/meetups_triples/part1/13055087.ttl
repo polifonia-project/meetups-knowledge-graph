@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/13055087/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kurt Hellmer (26 December 1909 – 11 May 1975) was a literatus who, as a New York literary agent represented Max Frisch and Friedrich Dürrenmatt, amongst others." ;
+        mtp:hasParticipant   meetup:5cb2a6e16ca243e09b1d972c3fc1e147 ;
+        mtp:hasPurpose       meetup:eae74e076e7eeb48796a1312f3fb274e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kurt_Hellmer> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Kurt_Hellmer>
+        rdf:type  core:Person .
+
+meetup:eae74e076e7eeb48796a1312f3fb274e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Representation of authors" ;
+        mtp:hasEvidencePurposeSecond  "Biographical information" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:5cb2a6e16ca243e09b1d972c3fc1e147
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kurt_Hellmer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999885194591434" ;
+        mtp:hasTextEvidence     "Kurt Hellmer" .

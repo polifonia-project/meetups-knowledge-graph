@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:6afa2f6723edd71e62aa8248746cd99f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9387141" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.060144648" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:79670831506187435b27f3e12471ddb2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richie_Malone> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Richie Malone" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Richie_Malone>
+        rdf:type  core:Person .
+
+meetup:244ed5bbb57fd65f9d0f1a36999605dc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97866744" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0213198" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/53315736/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Richie Malone (born 18 March 1986) is an Irish musician who plays rhythm guitar for English rock band Status Quo." ;
+        mtp:hasParticipant   meetup:39662f42680bf69201874af3b1094a54 ;
+        mtp:hasPurpose       meetup:6afa2f6723edd71e62aa8248746cd99f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richie_Malone> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/53315736/4/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Parfitt died on 24 December 2016, and Richie Malone became the band's new rhythm guitarist." ;
+        mtp:hasParticipant   meetup:79670831506187435b27f3e12471ddb2 , meetup:8dc7b38c545df57f7851553f8f8c2d72 ;
+        mtp:hasPurpose       meetup:244ed5bbb57fd65f9d0f1a36999605dc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richie_Malone> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Rick_Parfitt>
+        rdf:type  core:Person .
+
+meetup:8dc7b38c545df57f7851553f8f8c2d72
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rick_Parfitt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Parfitt" .
+
+meetup:39662f42680bf69201874af3b1094a54
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richie_Malone> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Richie Malone" .

@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Paul_Anka>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/29126353/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sunday Sharpe is an American country music singer." ;
+        mtp:hasParticipant   meetup:8357bc165c3b113aad184408f36a8090 ;
+        mtp:hasPurpose       meetup:946975bae8ef12a909d6a1d358a1424a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sunday_Sharpe> ;
+        mtp:hasType          "HT" .
+
+meetup:946975bae8ef12a909d6a1d358a1424a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.47033426" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4462862" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0dee58048df46a345519f5b82b43a410
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sunday_Sharpe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sunday Sharpe" .
+
+meetup:8357bc165c3b113aad184408f36a8090
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sunday_Sharpe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999982664" ;
+        mtp:hasTextEvidence     "Sunday Sharpe" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/29126353/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She charted seven times on the Hot Country Songs chart in the 1970s, reaching the Top 20 with \"I'm Having Your Baby\" (a female version of Paul Anka's \"(You're)" ;
+        mtp:hasParticipant   meetup:469d2cddc4b0b34b440b3ab07ec484aa , meetup:0dee58048df46a345519f5b82b43a410 ;
+        mtp:hasPurpose       meetup:84576aebb675285a0c4d5ae243c5c8cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sunday_Sharpe> ;
+        mtp:hasType          "HM" .
+
+meetup:84576aebb675285a0c4d5ae243c5c8cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9994832" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000426414" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Sunday_Sharpe>
+        rdf:type  core:Person .
+
+meetup:469d2cddc4b0b34b440b3ab07ec484aa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Anka> ;
+        mtp:hasOffset           "138" ;
+        mtp:hasSimilarityScore  "0.999996574976432" ;
+        mtp:hasTextEvidence     "Paul Anka" .

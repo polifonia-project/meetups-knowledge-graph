@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:d2223456e6c472a1bf3fded3f33af41c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blair_Thornton> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Blair Thornton" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/12872626/1/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In interviews years later, Randy noted that Blair Thornton was a welcome addition:" ;
+        mtp:hasParticipant   meetup:d2223456e6c472a1bf3fded3f33af41c ;
+        mtp:hasPurpose       meetup:6fe605c4dda7915b68507c0c35543aff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blair_Thornton> ;
+        mtp:hasType          "HT" .
+
+meetup:6fe605c4dda7915b68507c0c35543aff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995943" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00040569325" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Blair_Thornton>
+        rdf:type  core:Person .

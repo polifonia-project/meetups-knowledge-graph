@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:82a8e130ba63a606c7ed75da7e37cc05
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Mark Vincent is a tenor" ;
+        mtp:hasEvidencePurposeSecond  "Mark Vincent was born in Caringbah, New South Wales" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/22526049/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mark Vincent (born 4 September 1993 in Caringbah, New South Wales) is an Australian tenor." ;
+        mtp:hasParticipant   meetup:1a62b7c4960c8565dab6550ff8cc9b0a ;
+        mtp:hasPurpose       meetup:82a8e130ba63a606c7ed75da7e37cc05 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Vincent> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mark_Vincent>
+        rdf:type  core:Person .
+
+meetup:1a62b7c4960c8565dab6550ff8cc9b0a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Vincent> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Mark Vincent" .

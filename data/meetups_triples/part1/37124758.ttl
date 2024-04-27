@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/37124758/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1997, when he was nine, he moved with his mother, his stepfather, and two of his sisters to Bahrain. In Bahrain, he studied at the local British School of Bahrain." ;
+        mtp:hasPurpose       meetup:46cd1185ec153d81d993989e23eaae32 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Arthur> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:46cd1185ec153d81d993989e23eaae32
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions studying at a school" ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the person's personal life and relocation" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/James_Arthur>
+        rdf:type  core:Person .

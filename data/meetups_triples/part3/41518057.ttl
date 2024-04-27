@@ -1,0 +1,54 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:777985b959d21bef028afcd568775036
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "9 February 1928 – 1 January 2014" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1928-02-09"^^xsd:date ;
+        time:hasEnd          "2014-01-01"^^xsd:date .
+
+meetup:e3ed80e35b47a64e0649a4727813cfdd
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1956" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1956-01-01"^^xsd:date ;
+        time:hasEnd          "1956-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/41518057/1/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:e3ed80e35b47a64e0649a4727813cfdd ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Herman_Pieter_de_Boer> ;
+        mtp:hasType     "HT" .
+
+meetup:54a7a75817a623a5cc4fb1f30ec7f8ab
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the early hours" ;
+        mtp:hasSource        "LLM" .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/41518057/1/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:54a7a75817a623a5cc4fb1f30ec7f8ab ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Herman_Pieter_de_Boer> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/41518057/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:777985b959d21bef028afcd568775036 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Herman_Pieter_de_Boer> ;
+        mtp:hasType     "HM" .
+
+<http://dbpedia.org/resource/Herman_Pieter_de_Boer>
+        rdf:type  core:Person .

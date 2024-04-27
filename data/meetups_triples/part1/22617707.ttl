@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:85c4ccf290e4891af944417089788f11
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tue_West> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tue West" .
+
+meetup:6655d6d03f3ca9d542c66d55997a42bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9990268" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0006938853" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:502d6439130d982e37b7efe94518209b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9881374" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0113873705" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/22617707/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2003: Tue West (Universal)" ;
+        mtp:hasParticipant   meetup:85c4ccf290e4891af944417089788f11 ;
+        mtp:hasPurpose       meetup:6655d6d03f3ca9d542c66d55997a42bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tue_West> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Tue_West>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/22617707/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tue West  (born 1977) is a Danish composer and musician." ;
+        mtp:hasParticipant   meetup:63470924781d4cfd5619ed035e4da76b ;
+        mtp:hasPurpose       meetup:502d6439130d982e37b7efe94518209b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tue_West> ;
+        mtp:hasType          "HT" .
+
+meetup:63470924781d4cfd5619ed035e4da76b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tue_West> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tue West" .

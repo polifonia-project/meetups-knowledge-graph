@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/33215980/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yuko Kawai (河合優子, Kawai Yūko, born in Nagoya, 20 October) is a Japanese classical pianist." ;
+        mtp:hasParticipant   meetup:ea46c05a793a746ef271398cd77a9a74 , meetup:bede49a396f02ec95325d97347537741 ;
+        mtp:hasPurpose       meetup:e31d273df47d4e935f5716f09dc43e56 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuko_Kawai> ;
+        mtp:hasType          "HM" .
+
+meetup:bede49a396f02ec95325d97347537741
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kawai Yūko" .
+
+meetup:ea46c05a793a746ef271398cd77a9a74
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yuko_Kawai> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999997617593976" ;
+        mtp:hasTextEvidence     "Yuko Kawai" .
+
+<http://dbpedia.org/resource/Yuko_Kawai>
+        rdf:type  core:Person .
+
+meetup:e31d273df47d4e935f5716f09dc43e56
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9449514" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.055023417" ;
+        mtp:hasSourcePurpose          "ML" .

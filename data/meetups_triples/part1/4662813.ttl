@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e91fd67385013ed0ee88cfb781163135
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Snoop_Dogg> ;
+        mtp:hasOffset           "201" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Snoop Dogg" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/4662813/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jerry Buddy Long Jr. (born March 10, 1969), better known by his stage name Kokane, is an American recording artist best known for his distinctive vocal style and numerous guest appearances, such as on Snoop Dogg's Tha Last Meal." ;
+        mtp:hasParticipant   meetup:e91fd67385013ed0ee88cfb781163135 , meetup:f4624cc6cdf2c2a4f5edb5b65e7485ea ;
+        mtp:hasPurpose       meetup:195db5a8f5caa53018d185d307222912 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kokane> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Snoop_Dogg>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Kokane>
+        rdf:type  core:Person .
+
+meetup:f4624cc6cdf2c2a4f5edb5b65e7485ea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kokane> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kokane" .
+
+meetup:195db5a8f5caa53018d185d307222912
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92619956" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.037368387" ;
+        mtp:hasSourcePurpose          "ML" .

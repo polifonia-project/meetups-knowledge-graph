@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Len_Spencer>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Ada_Jones>
+        rdf:type  core:Person .
+
+meetup:cb24583ce93795be57f02e81a5ad32e4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Len_Spencer> ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Len Spencer" .
+
+<http://w3id.org/polifonia/pilot/meetups/2686769/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"Peaches and Cream\", Ada Jones and Len Spencer (Lowitz cylinder 1906)" ;
+        mtp:hasParticipant   meetup:cb24583ce93795be57f02e81a5ad32e4 , meetup:fb8952854ebce88524d90a84ae5acf50 ;
+        mtp:hasPurpose       meetup:03922e821df84fbb1b8427ba4ea7b360 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ada_Jones> ;
+        mtp:hasType          "HM" .
+
+meetup:fb8952854ebce88524d90a84ae5acf50
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ada_Jones> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ada Jones" .
+
+meetup:03922e821df84fbb1b8427ba4ea7b360
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99973005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00026235712" ;
+        mtp:hasSourcePurpose          "ML" .

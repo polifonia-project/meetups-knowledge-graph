@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/19630711/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jaques le Vinier (fl. 1240–60) was a trouvère probably from the region around Arras and associated with the trouvères of that city." ;
+        mtp:hasParticipant   meetup:c442824637d19f359bb14b7209764847 ;
+        mtp:hasPurpose       meetup:cb2f48fa11d2a6459eaf2c3442c3499b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jaques_le_Vinier> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jaques_le_Vinier>
+        rdf:type  core:Person .
+
+meetup:cb2f48fa11d2a6459eaf2c3442c3499b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999469" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00029963642" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:c442824637d19f359bb14b7209764847
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jaques_le_Vinier> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999997442" ;
+        mtp:hasTextEvidence     "Jaques le Vinier" .

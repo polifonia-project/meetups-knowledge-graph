@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:2428e50018e5c5a9de3bea775c996cc5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8057505" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13460808" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:49039e3271a85527380a50a8e820bb00
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.86205137" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13794748" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:baa6247e64bbedb94d37280b9d3288e3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gail_Robinson_(soprano)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gail Robinson" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/19883649/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After her performance career ended she taught singing to young artists and also directed the Metropolitan Opera's Young Artist Program for over ten years." ;
+        mtp:hasParticipant   meetup:dd2f13c766a934027c81660a67263e9f ;
+        mtp:hasPurpose       meetup:49039e3271a85527380a50a8e820bb00 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gail_Robinson_(soprano)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Gail_Robinson_(soprano)>
+        rdf:type  core:Person .
+
+meetup:dd2f13c766a934027c81660a67263e9f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gail_Robinson_(soprano)> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gail Robinson" .
+
+<http://w3id.org/polifonia/pilot/meetups/19883649/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gail Robinson (7 August 1946 – 19 October 2008) was an American operatic soprano who sang with many of the world's leading opera companies during the 1970s and 1980s." ;
+        mtp:hasParticipant   meetup:baa6247e64bbedb94d37280b9d3288e3 ;
+        mtp:hasPurpose       meetup:2428e50018e5c5a9de3bea775c996cc5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gail_Robinson_(soprano)> ;
+        mtp:hasType          "HT" .

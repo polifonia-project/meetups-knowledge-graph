@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jimmy_Dale_(musician)>
+        rdf:type  core:Person .
+
+meetup:ad03a9712f8b3fcac809278347994b65
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dale_Jarrett> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dale" .
+
+<http://dbpedia.org/resource/Dale_Jarrett>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/26890981/2/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1969 Dale relocated to Hollywood where he worked as a music director for both CBS and NBC. Among the shows that he worked in this capacity for were The Smothers Brothers Show (1969, CBS), The Andy Williams Show (1969-1971, NBC), and The Sonny and Cher Comedy Hour (1971-1973, CBS)." ;
+        mtp:hasParticipant   meetup:ad03a9712f8b3fcac809278347994b65 ;
+        mtp:hasPurpose       meetup:fe92a4d2b35e477d1f75a468c4e1c1e0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Dale_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:fe92a4d2b35e477d1f75a468c4e1c1e0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Working as a music director" ;
+        mtp:hasEvidencePurposeSecond  "Relocating to Hollywood" ;
+        mtp:hasSourcePurpose          "LLM" .

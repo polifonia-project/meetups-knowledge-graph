@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Rabindranath_Tagore>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Sailajaranjan_Majumdar>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/26410657/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Towards the end of her life, in 1979, she enthralled the audience with her rendering of songs at Rabindra Sadan in Calcutta. Sailajaranjan Majumdar, the universal teacher of music at Santiniketan writes in his memoirs that once when he expressed his desire to go to Calcutta to learn the song Mori lo mori amay banshite dekechhe ke from Amiya Tagore." ;
+        mtp:hasParticipant   meetup:068c4d2d5d696257311afdb02cc4ccc8 , meetup:5ed73f0ed221ec0fa0fd0c1195a829a5 ;
+        mtp:hasPurpose       meetup:afc1379bcb168fb3fd216a69799906ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amiya_Tagore> ;
+        mtp:hasType          "HT" .
+
+meetup:5ed73f0ed221ec0fa0fd0c1195a829a5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rabindranath_Tagore> ;
+        mtp:hasOffset           "218" ;
+        mtp:hasSimilarityScore  "0.9999993518845368" ;
+        mtp:hasTextEvidence     "Tagore" .
+
+meetup:068c4d2d5d696257311afdb02cc4ccc8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sailajaranjan_Majumdar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sailajaranjan Majumdar" .
+
+meetup:afc1379bcb168fb3fd216a69799906ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performance of songs" ;
+        mtp:hasEvidencePurposeSecond  "Personal experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Amiya_Tagore>
+        rdf:type  core:Person .

@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:fbc3e44288b3f4f7ecd82dfe852c8dc5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Damien_O'Kane> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Damien O'Kane" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/25902692/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He lives in Yorkshire with his wife, musician Kate Rusby, and their two daughters." ;
+        mtp:hasParticipant   meetup:fbc3e44288b3f4f7ecd82dfe852c8dc5 , meetup:d060a0c3ac2a90182c5c0d275f493d95 ;
+        mtp:hasPurpose       meetup:a583435119a34a3f71a16252aa3e8aee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damien_O'Kane> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Kate_Rusby>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Damien_O'Kane>
+        rdf:type  core:Person .
+
+meetup:d060a0c3ac2a90182c5c0d275f493d95
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kate_Rusby> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kate Rusby" .
+
+meetup:6e52522049dfba3677af44aabc43d50d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Damien_O'Kane> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Damien O'Kane" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/25902692/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Damien O'Kane (born 1 September 1978) is an Irish musician, born in Coleraine." ;
+        mtp:hasParticipant   meetup:6e52522049dfba3677af44aabc43d50d ;
+        mtp:hasPurpose       meetup:ca1053a74f2da41b8f99104cc7ba7c7a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damien_O'Kane> ;
+        mtp:hasType          "HT" .
+
+meetup:a583435119a34a3f71a16252aa3e8aee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94761217" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0523786" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ca1053a74f2da41b8f99104cc7ba7c7a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.46640825" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3193361" ;
+        mtp:hasSourcePurpose          "ML" .

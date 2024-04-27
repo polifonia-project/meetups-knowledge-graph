@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/T-Mo>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/24768282/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert Terrance Barnett (born February 2, 1972, in Fairburn, Georgia), professionally known by his stage name T-Mo Goodie (or simply T-Mo), is an American rapper from Atlanta." ;
+        mtp:hasParticipant   meetup:472805b7350c6196e1f5998a5ca11dff , meetup:8af97981608ef9adba00756bf3fcc682 , meetup:ed18e83644c9ee56835e043aca126cc3 ;
+        mtp:hasPurpose       meetup:2ef53804cbd66005d5cbb7aaa0d3f346 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/T-Mo> ;
+        mtp:hasType          "HM" .
+
+meetup:2ef53804cbd66005d5cbb7aaa0d3f346
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "T-Mo Goodie is a rapper from Atlanta" ;
+        mtp:hasEvidencePurposeSecond  "Robert Barnett's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8af97981608ef9adba00756bf3fcc682
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Terrance_Bullitt> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9995949782018386" ;
+        mtp:hasTextEvidence     "Terrance" .
+
+meetup:ed18e83644c9ee56835e043aca126cc3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/T-Mo> ;
+        mtp:hasOffset           "110" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "T-Mo" .
+
+meetup:472805b7350c6196e1f5998a5ca11dff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Robert Terrance Barnett" .
+
+<http://dbpedia.org/resource/Terrance_Bullitt>
+        rdf:type  core:Person .

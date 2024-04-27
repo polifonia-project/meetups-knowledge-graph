@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/37521331/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Torgrim Sollid (born 17 June 1942) is a Norwegian self-taught traditional folk musician, composer and jazz musician (trumpet, flugelhorn, and drums), known for combining folk music with jazz, and for playing in the Jan Garbarek Quartet and Warne Marsh Sextet." ;
+        mtp:hasParticipant   meetup:01c6c87f9e91fbb0ffa726a5f4c66643 ;
+        mtp:hasPurpose       meetup:1b98916abbd622084c6917a4a560bd43 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Torgrim_Sollid> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Torgrim_Sollid>
+        rdf:type  core:Person .
+
+meetup:1b98916abbd622084c6917a4a560bd43
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999993" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.1214614e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:01c6c87f9e91fbb0ffa726a5f4c66643
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Torgrim_Sollid> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Torgrim Sollid" .

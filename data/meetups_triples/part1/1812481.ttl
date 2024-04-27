@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1812481/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Arthur Fields (August 6, 1884 – March 29, 1953) was an American singer (baritone) and songwriter." ;
+        mtp:hasParticipant   meetup:aed05f4cc45e8f1cd63ee3ef9571d7ee ;
+        mtp:hasPurpose       meetup:2b6287c42d072bfcc3d95336a630dc2b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Fields> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:aed05f4cc45e8f1cd63ee3ef9571d7ee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arthur_Fields> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999994568782" ;
+        mtp:hasTextEvidence     "Arthur Fields" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:2b6287c42d072bfcc3d95336a630dc2b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999864" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.161424e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Arthur_Fields>
+        rdf:type  core:Person .

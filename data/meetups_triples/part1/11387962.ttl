@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e790cedac16234b25c9920f60055d5db
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Shaw's decision to leave school" ;
+        mtp:hasEvidencePurposeSecond  "Shaw's choice to continue performing" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/11387962/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shaw would have graduated from Mount Carmel Academy in New Orleans in 2008 but she opted instead to continue traveling around the country to perform. She called her decision to leave Mount Carmel a difficult one." ;
+        mtp:hasPurpose       meetup:e790cedac16234b25c9920f60055d5db ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amanda_Shaw> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Amanda_Shaw>
+        rdf:type  core:Person .

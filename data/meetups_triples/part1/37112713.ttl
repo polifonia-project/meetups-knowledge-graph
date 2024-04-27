@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/37112713/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Lorenz (born 18 July 1958) is an Austrian musicologist, music teacher, musician, chess historian and photographer, noted as a Mozart scholar and for his archival work combining music history and genealogical research." ;
+        mtp:hasParticipant   meetup:34be7cec0ed3647718fbc0e3d181bf57 ;
+        mtp:hasPurpose       meetup:256ed51b412b2b7012b8586f86e9ff7d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Lorenz_(musicologist)> ;
+        mtp:hasType          "HT" .
+
+meetup:34be7cec0ed3647718fbc0e3d181bf57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Lorenz_(musicologist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.984918809510319" ;
+        mtp:hasTextEvidence     "Michael Lorenz" .
+
+<http://dbpedia.org/resource/Michael_Lorenz_(musicologist)>
+        rdf:type  core:Person .
+
+meetup:256ed51b412b2b7012b8586f86e9ff7d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999981" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.90804e-07" ;
+        mtp:hasSourcePurpose          "ML" .

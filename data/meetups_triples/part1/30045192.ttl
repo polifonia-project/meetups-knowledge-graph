@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/30045192/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She married Louis Arthur Goodeve (1841–1888) on 23 November 1869 at Christ Church, Clifton Down, wearing \"a simple tulle veil\" and attended by seventeen bridesmaids. She accompanied her husband to Calcutta, where he was an advocate in the High Court; they had five children." ;
+        mtp:hasPurpose       meetup:e5a342571d4c3b9db52df482e69234d0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Florence_Everilda_Goodeve> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e328257e7d18831b087ab707a943236d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94533557" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.037642494" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Florence_Everilda_Goodeve>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/30045192/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Florence Everilda Goodeve (24 May 1848 – 15 January 1916) was an English composer and lyricist, often credited as Mrs Arthur Goodeve." ;
+        mtp:hasParticipant   meetup:2fd98583579acd2a566837e0d65ac8bd ;
+        mtp:hasPurpose       meetup:e328257e7d18831b087ab707a943236d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Florence_Everilda_Goodeve> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e5a342571d4c3b9db52df482e69234d0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about the person's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Mention of accompanying husband to Calcutta" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:2fd98583579acd2a566837e0d65ac8bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Florence_Everilda_Goodeve> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Florence Everilda Goodeve" .

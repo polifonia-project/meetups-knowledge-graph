@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Brandi_Disterheft>
+        rdf:type  core:Person .
+
+meetup:bc2e75ac579697d55e1febc6c4f4616b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brandi_Disterheft> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999993456241194" ;
+        mtp:hasTextEvidence     "Brandi Disterheft" .
+
+meetup:d759f772b4fa1b7af15c54be8129eaf3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9911361" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008845238" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/20060681/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brandi Disterheft (born 1980) is a Canadian bassist and composer." ;
+        mtp:hasParticipant   meetup:bc2e75ac579697d55e1febc6c4f4616b ;
+        mtp:hasPurpose       meetup:d759f772b4fa1b7af15c54be8129eaf3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brandi_Disterheft> ;
+        mtp:hasType          "HT" .

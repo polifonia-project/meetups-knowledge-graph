@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Geoff_Taylor_(singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/27059298/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Geoff Taylor (born May 26, 1986) is a Filipino singer, model and actor." ;
+        mtp:hasParticipant   meetup:cc35ca90448c71c071835b5a7c69d775 ;
+        mtp:hasPurpose       meetup:aa3b66264dce09292407c35b23d9fb3e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Geoff_Taylor_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:cc35ca90448c71c071835b5a7c69d775
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Geoff_Taylor_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.6685079680050913" ;
+        mtp:hasTextEvidence     "Geoff Taylor" .
+
+meetup:aa3b66264dce09292407c35b23d9fb3e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99717367" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0020000509" ;
+        mtp:hasSourcePurpose          "ML" .

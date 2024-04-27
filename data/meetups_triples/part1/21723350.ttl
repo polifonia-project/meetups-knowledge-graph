@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/21723350/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Willem Rogier van Otterloo (11 December 1941 – 29 January 1988) was a Dutch composer and conductor." ;
+        mtp:hasParticipant   meetup:c9760829fa31e633c853cc58058be51b , meetup:db91cb32a25bd23e91206b1205f32173 ;
+        mtp:hasPurpose       meetup:9518c3c862faf377da21708bfd6235a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rogier_van_Otterloo> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Rogier_van_Otterloo>
+        rdf:type  core:Person .
+
+meetup:9518c3c862faf377da21708bfd6235a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9935998" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.006301079" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:db91cb32a25bd23e91206b1205f32173
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Willem Rogier van Otterloo" .
+
+meetup:c9760829fa31e633c853cc58058be51b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rogier_van_Otterloo> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rogier van Otterloo" .

@@ -1,0 +1,59 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:4523641099794c504546b098b75155c4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Watson> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9999986789206532" ;
+        mtp:hasTextEvidence     "Michael Watson" .
+
+meetup:3e7388c98baba06856fb209cb59fce99
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Robert Michael Watson Jr." .
+
+meetup:738a0f5c0e27aade19233dbd5e675499
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Watson> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "0.999994812331023" ;
+        mtp:hasTextEvidence     "Bobby Watson" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:669c80200aae22091d6ab0ed324b65bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98650867" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007880907" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4530285/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert Michael Watson Jr. (born August 23, 1953), known professionally as Bobby Watson, is an American saxophonist, composer, and educator." ;
+        mtp:hasParticipant   meetup:3e7388c98baba06856fb209cb59fce99 , meetup:738a0f5c0e27aade19233dbd5e675499 , meetup:4523641099794c504546b098b75155c4 ;
+        mtp:hasPurpose       meetup:669c80200aae22091d6ab0ed324b65bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bobby_Watson> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Bobby_Watson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Michael_Watson>
+        rdf:type  core:Person .

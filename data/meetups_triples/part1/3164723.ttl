@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Liz_Phair>
+        rdf:type  core:Person .
+
+meetup:38459b367d2c10fbbc33a441310c6461
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Liz_Phair> ;
+        mtp:hasOffset           "156" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Liz Phair" .
+
+<http://w3id.org/polifonia/pilot/meetups/3164723/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A lecturer at Stanford University and an adjunct professor at the University of San Francisco, she is the author of four books, including the 33⅓ book on Liz Phair, Exile in Guyville." ;
+        mtp:hasParticipant   meetup:7fc474d2d648a0ce9fa5ef2d383f094f , meetup:38459b367d2c10fbbc33a441310c6461 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gina_Arnold> ;
+        mtp:hasType          "HM" .
+
+meetup:ae1b1488c0f8c10940a98bdca864a30e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5148051" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.25477824" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1fce4e69ed7bfe5fdc0468817100ffc0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gina_Arnold> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "Gina Arnold" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:7fc474d2d648a0ce9fa5ef2d383f094f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gina_Arnold> ;
+        mtp:hasOffset           "95" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gina Arnold" .
+
+<http://dbpedia.org/resource/Gina_Arnold>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3164723/1/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"In the ten years that Gina Arnold wrote for this paper, no one received more hate mail,\" the East Bay Express wrote in 2003." ;
+        mtp:hasParticipant   meetup:1fce4e69ed7bfe5fdc0468817100ffc0 ;
+        mtp:hasPurpose       meetup:ae1b1488c0f8c10940a98bdca864a30e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gina_Arnold> ;
+        mtp:hasType          "HT" .

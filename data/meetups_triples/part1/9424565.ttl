@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:69e30dfbf9557df3f8734a21c020121c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a band and their achievements." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the replacement of the lead singer." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/9424565/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band, with lead singer Magnus Carlsson, became widely known after their second place in Melodifestivalen 2000. The band has replaced lead singer three times." ;
+        mtp:hasPurpose       meetup:69e30dfbf9557df3f8734a21c020121c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barbados_(band)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:95b87793318bb223921b71413b1af24a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Björn Lagerström" .
+
+meetup:33731bb03b2077345c26c1873c9f2f87
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the band and its members." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the personal life of the band members." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Barbados_(band)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/9424565/0/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chris Lindh replaced him, before leaving the band in 2007. The current lead singer is Björn Lagerström." ;
+        mtp:hasParticipant   meetup:95b87793318bb223921b71413b1af24a ;
+        mtp:hasPurpose       meetup:33731bb03b2077345c26c1873c9f2f87 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barbados_(band)> ;
+        mtp:hasType          "HT" .

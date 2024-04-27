@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:826a567e221c173b1164adab02469e61
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8452451" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15419169" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:711e18f2c8eb069f3e94a5389deb6a55
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ramzan_Paskayev> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999100168152" ;
+        mtp:hasTextEvidence     "Ramzan Paskayev" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:2198cbdaa1815ce16a633f22cee7eb69
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a talented accordionist" ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the personal life of the son" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Ruslan_Yamadayev>
+        rdf:type  core:Person .
+
+meetup:905e4e66c471091580281e40f8d24cc3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ramzan_Paskayev> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ramzan Paskayev" .
+
+<http://w3id.org/polifonia/pilot/meetups/12423224/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He had groomed his son Ruslan, also a talented accordionist, to follow in his footsteps, but on October 12, 2004, Ruslan, a university student in Grozny, was found dead in the nearby village of Kalinina." ;
+        mtp:hasParticipant   meetup:905e4e66c471091580281e40f8d24cc3 , meetup:109650aa278c8c4ce918c318653deaf8 ;
+        mtp:hasPurpose       meetup:2198cbdaa1815ce16a633f22cee7eb69 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ramzan_Paskayev> ;
+        mtp:hasType          "HM" .
+
+meetup:109650aa278c8c4ce918c318653deaf8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruslan_Yamadayev> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.9564686717084832" ;
+        mtp:hasTextEvidence     "Ruslan" .
+
+<http://w3id.org/polifonia/pilot/meetups/12423224/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ramzan Paskayev (Chechen: Рамзан Паскаев) (born March 16, 1947 in Taraz, Kazakhstan) is a Chechen accordionist and folk musician." ;
+        mtp:hasParticipant   meetup:711e18f2c8eb069f3e94a5389deb6a55 ;
+        mtp:hasPurpose       meetup:826a567e221c173b1164adab02469e61 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ramzan_Paskayev> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ramzan_Paskayev>
+        rdf:type  core:Person .

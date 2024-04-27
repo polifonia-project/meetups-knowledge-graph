@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4462567/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "George Cates (October 19, 1911 – May 10, 2002) was an American music arranger, conductor, songwriter and record executive known for his work with Lawrence Welk and his orchestra." ;
+        mtp:hasParticipant   meetup:2240891c76c0fe777d41802fabc5faa4 , meetup:1161f503504f138dfed6d4ace9d66b20 ;
+        mtp:hasPurpose       meetup:796e1ebf04ba58075a3607c0832a53de ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Cates> ;
+        mtp:hasType          "HM" .
+
+meetup:1161f503504f138dfed6d4ace9d66b20
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Cates> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "George Cates" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:2240891c76c0fe777d41802fabc5faa4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lawrence_Welk> ;
+        mtp:hasOffset           "148" ;
+        mtp:hasSimilarityScore  "0.9999509555236424" ;
+        mtp:hasTextEvidence     "Lawrence Welk" .
+
+meetup:796e1ebf04ba58075a3607c0832a53de
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8880559" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.104186356" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Lawrence_Welk>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/George_Cates>
+        rdf:type  core:Person .

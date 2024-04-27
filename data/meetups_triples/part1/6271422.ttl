@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7f6c66442505eed272c3b25639f29ab0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing in operas" ;
+        mtp:hasEvidencePurposeSecond  "Career achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:54189aa0b10ca25e544e6659f3083a98
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Giuseppe_De_Luca> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Giuseppe De Luca" .
+
+meetup:debea882da35cbb80874f91c72b2d1e9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Giuseppe De Luca's greatest triumphs were in music making at the Metropolitan Opera." ;
+        mtp:hasEvidencePurposeSecond  "Giuseppe De Luca's personal life is mentioned in the sentence." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Giacomo_Puccini>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/6271422/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Giuseppe De Luca (25 December 1876 – 26 August 1950), was an Italian baritone who achieved his greatest triumphs at the Metropolitan Opera in New York City." ;
+        mtp:hasParticipant   meetup:154b07e73103105d0b182b69dd9c7c6c ;
+        mtp:hasPurpose       meetup:debea882da35cbb80874f91c72b2d1e9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Giuseppe_De_Luca> ;
+        mtp:hasType          "HT" .
+
+meetup:2ee6d9cfdfce211694cc9006c885c583
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Giacomo_Puccini> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "0.999992488330254" ;
+        mtp:hasTextEvidence     "Giacomo Puccini" .
+
+meetup:154b07e73103105d0b182b69dd9c7c6c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Giuseppe_De_Luca> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Giuseppe De Luca" .
+
+<http://w3id.org/polifonia/pilot/meetups/6271422/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He notably created roles in the world premieres of two operas by Giacomo Puccini: Sharpless in Madama Butterfly (at La Scala, Milan, 1904) and the title role in Gianni Schicchi (Metropolitan Opera, 1918)." ;
+        mtp:hasParticipant   meetup:2ee6d9cfdfce211694cc9006c885c583 , meetup:54189aa0b10ca25e544e6659f3083a98 ;
+        mtp:hasPurpose       meetup:7f6c66442505eed272c3b25639f29ab0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Giuseppe_De_Luca> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Giuseppe_De_Luca>
+        rdf:type  core:Person .

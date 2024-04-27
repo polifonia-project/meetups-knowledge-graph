@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Georg_Wadenius>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a7757d82a4002d511c816cb701ac21cf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Georg_Wadenius> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Georg \"Jojje\" Wadenius" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/11702222/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Georg \"Jojje\" Wadenius (born 4 May 1945) is a Swedish multi-instrumentalist, singer, and composer who was particularly active during the 1970s and 1980s as a studio and session guitarist and bassist, as well as for a series of albums of children's songs in Sweden." ;
+        mtp:hasParticipant   meetup:a7757d82a4002d511c816cb701ac21cf ;
+        mtp:hasPurpose       meetup:334c54b233000b2d7879f035a4c0366c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Georg_Wadenius> ;
+        mtp:hasType          "HT" .
+
+meetup:334c54b233000b2d7879f035a4c0366c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92605263" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.052630074" ;
+        mtp:hasSourcePurpose          "ML" .

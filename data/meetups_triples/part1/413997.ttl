@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Max_Rudolf_(conductor)>
+        rdf:type  core:Person .
+
+meetup:8ef7c358dc5ab0288cc0f23a8e090bfb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999566" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.9278645e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0bd6ec2989d942bbb0997a14554fea66
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Max_Rudolf_(conductor)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999983999317988" ;
+        mtp:hasTextEvidence     "Max Rudolf" .
+
+meetup:f262f290272e524b18c234978d086362
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bernhard_Sekles> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bernhard Sekles" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:65c8589bc5547bd77e0a8fb40f2f7917
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Rudolf's musical education." ;
+        mtp:hasEvidencePurposeSecond  "Rudolf studied music at the Hoch Conservatory in Frankfurt." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Bernhard_Sekles>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/413997/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Max Rudolf (June 15, 1902 — February 28, 1995) was a German conductor and music institute teacher." ;
+        mtp:hasParticipant   meetup:0bd6ec2989d942bbb0997a14554fea66 ;
+        mtp:hasPurpose       meetup:8ef7c358dc5ab0288cc0f23a8e090bfb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Max_Rudolf_(conductor)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/413997/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rudolf was born in Frankfurt am Main, where he studied cello, piano, organ and trumpet. He was a  composition student of Bernhard Sekles at the Hoch Conservatory in Frankfurt." ;
+        mtp:hasParticipant   meetup:f262f290272e524b18c234978d086362 ;
+        mtp:hasPurpose       meetup:65c8589bc5547bd77e0a8fb40f2f7917 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Max_Rudolf_(conductor)> ;
+        mtp:hasType          "HT" .

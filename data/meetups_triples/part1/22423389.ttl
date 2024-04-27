@@ -1,0 +1,54 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Conor_Oberst>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:2abd140c9df1f8fe77450fcb57bb1c00
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eric_Clapton> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "0.8637560082668554" ;
+        mtp:hasTextEvidence     "Conor" .
+
+<http://dbpedia.org/resource/Mars_Black_(musician)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Eric_Clapton>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c8757636dde51de1230a1581bb63324b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Conor_Oberst> ;
+        mtp:hasOffset           "78" ;
+        mtp:hasSimilarityScore  "0.999920492263884" ;
+        mtp:hasTextEvidence     "Oberst" .
+
+meetup:315f7897ea80c4c9b2b7521708de307f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the release of a debut album." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a record label and its association with indie rock." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/22423389/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His debut album, Folks Music, was released on Team Love Records in 2004 to mixed reviews. Black is the only rapper signed to Team Love, which is a label owned by Conor Oberst primarily associated with indie rock." ;
+        mtp:hasParticipant   meetup:c8757636dde51de1230a1581bb63324b , meetup:2abd140c9df1f8fe77450fcb57bb1c00 ;
+        mtp:hasPurpose       meetup:315f7897ea80c4c9b2b7521708de307f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mars_Black_(musician)> ;
+        mtp:hasType          "HT" .

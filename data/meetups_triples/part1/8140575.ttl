@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Tom_Lord-Alge>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:026e83b1d51fb2d3ef23c67d6613855a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998796" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.0193788e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0ef594a082b137a4ab803e0911897147
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Lord-Alge> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tom Lord-Alge" .
+
+<http://w3id.org/polifonia/pilot/meetups/8140575/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tom Lord-Alge (born January 17, 1963) is an American music engineer and mixer." ;
+        mtp:hasParticipant   meetup:0ef594a082b137a4ab803e0911897147 ;
+        mtp:hasPurpose       meetup:026e83b1d51fb2d3ef23c67d6613855a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Lord-Alge> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:6981bec0453a2fe8c510b89f970bfc2b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Lord-Alge> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tom Lord-Alge" .
+
+meetup:0ce1107fa15b297d2bd0a1ac60851b83
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99944586" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0005539128" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/8140575/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He began his career at The Hit Factory in New York." ;
+        mtp:hasParticipant   meetup:6981bec0453a2fe8c510b89f970bfc2b ;
+        mtp:hasPurpose       meetup:0ce1107fa15b297d2bd0a1ac60851b83 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Lord-Alge> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:211f88a6397b2d9a88b20626af18fedb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shane_Theriot> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Shane Theriot" .
+
+meetup:8116c08b9bbe8435c959b65e34ce2822
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99892527" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00038375353" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a3fe04466c512dcfe21a533e6e5cbdff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6080184" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3198816" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/13924862/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mark Egan (born January 14, 1951 in Brockton, Massachusetts, United States) is an American jazz bassist and trumpeter known for his membership in the Pat Metheny Group and the Gil Evans Orchestra." ;
+        mtp:hasParticipant   meetup:c5454188fbbde605bad3c67ec3316615 ;
+        mtp:hasPurpose       meetup:a3fe04466c512dcfe21a533e6e5cbdff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Egan> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/13924862/16/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2017 \"Dreaming Spirits\" Mark Egan and Arjun Bruggeman featuring Shane Theriot (Wavetone)" ;
+        mtp:hasParticipant   meetup:7de842b8e29c03b19e0b3711975f04a1 , meetup:211f88a6397b2d9a88b20626af18fedb , meetup:a94ae0beee5422f1c33d25df1eda16b3 ;
+        mtp:hasPurpose       meetup:8116c08b9bbe8435c959b65e34ce2822 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Egan> ;
+        mtp:hasType          "HM" .
+
+meetup:7de842b8e29c03b19e0b3711975f04a1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Egan> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "0.9999999999801616" ;
+        mtp:hasTextEvidence     "Mark Egan" .
+
+<http://dbpedia.org/resource/Shane_Theriot>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Arjun_Sarja>
+        rdf:type  core:Person .
+
+meetup:a94ae0beee5422f1c33d25df1eda16b3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arjun_Sarja> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "0.9978663430389912" ;
+        mtp:hasTextEvidence     "Arjun" .
+
+meetup:c5454188fbbde605bad3c67ec3316615
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Egan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mark Egan" .
+
+<http://dbpedia.org/resource/Mark_Egan>
+        rdf:type  core:Person .

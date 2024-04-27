@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Toni_Garrido>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/38875809/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Antônio Bento da Silva Filho (born September 7, 1967, in Rio de Janeiro), known as Toni Garrido, is a Brazilian singer, TV presenter and actor." ;
+        mtp:hasParticipant   meetup:36634f485cf5e49d04c654c4ff1bb43b , meetup:feef2ba616633652a53f7bc840118fc1 , meetup:4ba6d8eff01b2ebaedd0e4d4c85c5ce4 ;
+        mtp:hasPurpose       meetup:c1939b67d95b7ed6380dfeea1cddeb3c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Toni_Garrido> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Stunt_Silva>
+        rdf:type  core:Person .
+
+meetup:4ba6d8eff01b2ebaedd0e4d4c85c5ce4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stunt_Silva> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.9999984764545172" ;
+        mtp:hasTextEvidence     "Silva" .
+
+meetup:36634f485cf5e49d04c654c4ff1bb43b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Toni_Garrido> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "0.9999999999980672" ;
+        mtp:hasTextEvidence     "Toni Garrido" .
+
+meetup:feef2ba616633652a53f7bc840118fc1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Antônio Bento da Silva Filho" .
+
+meetup:c1939b67d95b7ed6380dfeea1cddeb3c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Toni Garrido is a Brazilian singer" ;
+        mtp:hasEvidencePurposeSecond  "Toni Garrido is a TV presenter and actor" ;
+        mtp:hasSourcePurpose          "LLM" .

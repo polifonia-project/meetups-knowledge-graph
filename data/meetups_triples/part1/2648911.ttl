@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Robert_Maxwell_(songwriter)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:35299ac3fda9adb873ddf9cc6a1a5a4a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.91653806" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08265039" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8f41a1f3f6656bc30774522563bf43c8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Maxwell_(songwriter)> ;
+        mtp:hasOffset           "173" ;
+        mtp:hasSimilarityScore  "0.9152528801561812" ;
+        mtp:hasTextEvidence     "Bobby Maxwell" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/2648911/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the early '70s, he changed his first name to Bobby to avoid confusion with the British publisher of the same name and issued LPs as such for the Command/ABC label under \"Bobby Maxwell\"." ;
+        mtp:hasParticipant   meetup:8f41a1f3f6656bc30774522563bf43c8 ;
+        mtp:hasPurpose       meetup:35299ac3fda9adb873ddf9cc6a1a5a4a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_Maxwell_(songwriter)> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Ian_Masters_(songwriter)>
+        rdf:type  core:Person .
+
+meetup:1f91d7bb46d040f21ad5b5f34b59071b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ian_Masters_(songwriter)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8235265472858069" ;
+        mtp:hasTextEvidence     "Ian Masters" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:fe1602846faef4b9474912d5e7312f0a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998915" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00010472448" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6960331/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ian Masters (born 4 January 1964) is a multi-instrumentalist/songwriter/producer." ;
+        mtp:hasParticipant   meetup:1f91d7bb46d040f21ad5b5f34b59071b ;
+        mtp:hasPurpose       meetup:fe1602846faef4b9474912d5e7312f0a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ian_Masters_(songwriter)> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ronald_%22Slim%22_Williams>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:efa39d09f62ff6fb39b9ffaca462713e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the influence of New Orleans' musical culture on Williams." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions Williams' personal life as a musician." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/4754563/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The rich musical history and culture within New Orleans is the primary influence that moulded Williams into the world-renowned musician that he is today. The New Orleans musical culture is based on the habits and livelihoods of the people that reside within the city." ;
+        mtp:hasPurpose       meetup:efa39d09f62ff6fb39b9ffaca462713e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ronald_%22Slim%22_Williams> ;
+        mtp:hasType          "HT" .

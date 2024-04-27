@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:e476a66eb4eb8f74a826695646de4329
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Relating to family and personal history" ;
+        mtp:hasEvidencePurposeSecond  "Involving the learning and knowledge acquisition" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:7f0242eec6e1d6fd20c2a310f9cb0f3c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Franklyn_Baur> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Franklyn Baur" .
+
+meetup:cc44663ad368ccddc40ae97ae0d14148
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Franklyn_Baur> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Franklyn Baur" .
+
+<http://w3id.org/polifonia/pilot/meetups/29763653/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Franklyn Baur (April 5, 1903 – February 24, 1950) was a popular tenor vocal recording artist." ;
+        mtp:hasParticipant   meetup:7f0242eec6e1d6fd20c2a310f9cb0f3c ;
+        mtp:hasPurpose       meetup:d0108ded864d7dce1c30871f1d20fa52 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Franklyn_Baur> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/29763653/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His grandfather on the maternal side held the same position for many years in Henry Ward Beecher's Brooklyn church." ;
+        mtp:hasParticipant   meetup:cc44663ad368ccddc40ae97ae0d14148 ;
+        mtp:hasPurpose       meetup:e476a66eb4eb8f74a826695646de4329 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Franklyn_Baur> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Franklyn_Baur>
+        rdf:type  core:Person .
+
+meetup:d0108ded864d7dce1c30871f1d20fa52
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7791156" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14009084" ;
+        mtp:hasSourcePurpose          "ML" .

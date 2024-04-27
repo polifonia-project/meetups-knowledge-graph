@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/45600907/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rozsi Varady (March 4, 1902 − December 19, 1933) was a concert cellist who was popular in both the United States and Europe." ;
+        mtp:hasParticipant   meetup:d99d553dda563216faabdaf4c4cb8526 ;
+        mtp:hasPurpose       meetup:d99cd847d53f0e1131b8b34b55f0cb3a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rozsi_Varady> ;
+        mtp:hasType          "HT" .
+
+meetup:d99cd847d53f0e1131b8b34b55f0cb3a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9778633" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013040259" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Rozsi_Varady>
+        rdf:type  core:Person .
+
+meetup:d99d553dda563216faabdaf4c4cb8526
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rozsi_Varady> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999992892868" ;
+        mtp:hasTextEvidence     "Rozsi Varady" .

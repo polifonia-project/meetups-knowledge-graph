@@ -1,0 +1,49 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:18a2d39ad09de26bf949999d83fc808c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about the family and birth date" ;
+        mtp:hasEvidencePurposeSecond  "Information related to census records" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Blind_Lemon_Jefferson>
+        rdf:type  core:Person .
+
+meetup:688e629273ab0ac8f0b7c022f5c1e302
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Jefferson's involvement in the blues movement" ;
+        mtp:hasEvidencePurposeSecond  "Jefferson's frequent travels and meeting with Lead Belly" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/4569/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the early 1910s, Jefferson began traveling frequently to Dallas, where he met and played with the blues musician Lead Belly. Jefferson was one of the earliest and most prominent figures in the blues movement developing in the Deep Ellum section of Dallas." ;
+        mtp:hasPurpose       meetup:688e629273ab0ac8f0b7c022f5c1e302 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blind_Lemon_Jefferson> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4569/4/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By 1900, the family was farming southeast of Streetman, Texas. Jefferson's birth date was recorded as September 1893 in the 1900 census." ;
+        mtp:hasPurpose       meetup:18a2d39ad09de26bf949999d83fc808c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blind_Lemon_Jefferson> ;
+        mtp:hasType          "HT" .

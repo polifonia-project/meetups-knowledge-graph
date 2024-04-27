@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/32565824/2/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1953 Guarnera called it quits and left the military service, and moved to Paris, France. While in Paris he played with René Thomas and André Hodeir, recording a couple of albums with them." ;
+        mtp:hasParticipant   meetup:39a6f6c99318b9f5662509c0d0143882 ;
+        mtp:hasPurpose       meetup:ffb533f8c2331dd81aec22c2052910dd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Buzz_Gardner> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ffb533f8c2331dd81aec22c2052910dd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Playing music with René Thomas and André Hodeir" ;
+        mtp:hasEvidencePurposeSecond  "Leaving military service and moving to Paris" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Buzz_Gardner>
+        rdf:type  core:Person .
+
+meetup:39a6f6c99318b9f5662509c0d0143882
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Guarnera" .

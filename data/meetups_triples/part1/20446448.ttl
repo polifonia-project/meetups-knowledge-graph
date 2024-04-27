@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Frankie_Bridge>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:99a83a3d7401039a4581fec2b417758f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vanessa_White> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Vanessa White" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:c184c27a84a2ca3a0bb17c8fe76c0c1d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frankie_Bridge> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Frankie Bridge" .
+
+meetup:f8038dac89bf948175784e6097c581ff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6312863" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2739066" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Vanessa_White>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/20446448/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Like The Saturdays bandmate, Frankie Bridge, White enrolled at the Sylvia Young Theatre School based in West London where she was chosen for West End theatre productions, including The Lion King and The King and I. When she was 13, she also appeared on the kids version of Stars in Their Eyes in 2003, performing as Beyoncé." ;
+        mtp:hasParticipant   meetup:99a83a3d7401039a4581fec2b417758f , meetup:c184c27a84a2ca3a0bb17c8fe76c0c1d ;
+        mtp:hasPurpose       meetup:f8038dac89bf948175784e6097c581ff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vanessa_White> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/20446448/5/21>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In summer 2010, the Saturdays released their first mini album (their third album overall) Headlines!, which charted at number 3 in the UK and number 10 in Ireland. The band released their eighth single, \"Missing You\", which charted at number three in the UK and number six in Ireland." ;
+        mtp:hasPurpose       meetup:4c049ddbc70b0cb455c14cdc7a983c8d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vanessa_White> ;
+        mtp:hasType          "HT" .
+
+meetup:4c049ddbc70b0cb455c14cdc7a983c8d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "The Saturdays releasing albums and singles" ;
+        mtp:hasEvidencePurposeSecond  "Charting in the UK and Ireland" ;
+        mtp:hasSourcePurpose          "LLM" .

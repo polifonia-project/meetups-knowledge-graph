@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/17684264/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paul Gildea (born November 1957) is an Australian musician, music educator and talent manager." ;
+        mtp:hasParticipant   meetup:d268f2b755f3ed42cc0db5cf1df3faab ;
+        mtp:hasPurpose       meetup:6f0883e7377b83645e06b9f7e0321b05 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Gildea> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Paul_Gildea>
+        rdf:type  core:Person .
+
+meetup:6f0883e7377b83645e06b9f7e0321b05
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8185187" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11383205" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d268f2b755f3ed42cc0db5cf1df3faab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Gildea> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999987494" ;
+        mtp:hasTextEvidence     "Paul Gildea" .

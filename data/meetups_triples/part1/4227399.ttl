@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4227399/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Eddie Fontaine (March 6, 1927 – April 13, 1992) was an American actor and singer, best known for television roles in the 1960s and 1970s." ;
+        mtp:hasParticipant   meetup:22fb4d1d6305e0f0e2ff0c48786991ee ;
+        mtp:hasPurpose       meetup:60aae7f869aed8a1b3a86ace612e7d39 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Fontaine> ;
+        mtp:hasType          "HT" .
+
+meetup:60aae7f869aed8a1b3a86ace612e7d39
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5355672" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.46024546" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:22fb4d1d6305e0f0e2ff0c48786991ee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Fontaine> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Eddie Fontaine" .
+
+<http://dbpedia.org/resource/Eddie_Fontaine>
+        rdf:type  core:Person .

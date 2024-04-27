@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Ma_Rainey>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Tampa_Red>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lee_Dorsey>
+        rdf:type  core:Person .
+
+meetup:8a0a4b2bbeef9d2319eab76d29308f92
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Dorsey's involvement in marketing his songs" ;
+        mtp:hasEvidencePurposeSecond  "Working with musicians to sell sheet music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:024cb586aeb34db431787578d776d7a0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ma_Rainey> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "0.9996150147758848" ;
+        mtp:hasTextEvidence     "Rainey" .
+
+meetup:e2838a62df28da8f13a1a763a2cc63a0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tampa_Red> ;
+        mtp:hasOffset           "111" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tampa Red" .
+
+<http://dbpedia.org/resource/Thomas_A._Dorsey>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/181009/11/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Now at the center of gospel music activity in Chicago, Dorsey countered his bereavement by immersing himself in marketing his songs. An unintended consequence of his sales strategy helped spread gospel blues, as he worked with numerous musicians who assisted in selling his sheet music traveling to churches in and around Chicago." ;
+        mtp:hasParticipant   meetup:7adb53b8ff8585bc243699608790eca0 ;
+        mtp:hasPurpose       meetup:8a0a4b2bbeef9d2319eab76d29308f92 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Thomas_A._Dorsey> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/181009/0/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He gained fame accompanying blues belter Ma Rainey on tour and, billed as \"Georgia Tom\", joined with guitarist Tampa Red in a successful recording career." ;
+        mtp:hasParticipant   meetup:024cb586aeb34db431787578d776d7a0 , meetup:595b5827c0214509a78ec4a6ec6fd4f3 , meetup:e2838a62df28da8f13a1a763a2cc63a0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Thomas_A._Dorsey> ;
+        mtp:hasType          "HM" .
+
+meetup:595b5827c0214509a78ec4a6ec6fd4f3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Thomas_A._Dorsey> ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Georgia Tom" .
+
+meetup:7adb53b8ff8585bc243699608790eca0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_Dorsey> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dorsey" .

@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jackson_Corpuz>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4417420/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Theodore M. Corpuz Sr., better known as Teddy Corpuz, is a Filipino singer, television presenter, actor and comedian." ;
+        mtp:hasParticipant   meetup:173055a91e4c078e216ac483fc2cdfd3 , meetup:12f81499c5d0086aa2e1dbb80560e1da , meetup:f6f0c5d2e3b20955e9b478b80e40c514 ;
+        mtp:hasPurpose       meetup:155a513b61e730d1ec5f9fb1b74e3f25 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Teddy_Corpuz> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:155a513b61e730d1ec5f9fb1b74e3f25
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9699284" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018297147" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Teddy_Corpuz>
+        rdf:type  core:Person .
+
+meetup:f6f0c5d2e3b20955e9b478b80e40c514
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Teddy_Corpuz> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Teddy Corpuz" .
+
+meetup:12f81499c5d0086aa2e1dbb80560e1da
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Theodore M. Corpuz Sr." .
+
+meetup:173055a91e4c078e216ac483fc2cdfd3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jackson_Corpuz> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.99999999999946" ;
+        mtp:hasTextEvidence     "Corpuz" .

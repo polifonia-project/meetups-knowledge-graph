@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Will_Smith_(pitcher)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:25af75252b6b4924a2b94fffbdbc2fc8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.78396827" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21544783" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/7946587/9/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On May 11, 2004, Zach released a self-titled EP from this project on Ace Fu Records, playing all instruments himself (including drums)." ;
+        mtp:hasParticipant   meetup:24e26ec10bf3b070f7b3770ce1909579 ;
+        mtp:hasPurpose       meetup:25af75252b6b4924a2b94fffbdbc2fc8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Armistead_Burwell_Smith_IV> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Armistead_Burwell_Smith_IV>
+        rdf:type  core:Person .
+
+meetup:d2c6b4cf95b24f03c571dded6dc86115
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Armistead_Burwell_Smith_IV> ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Zach Smith" .
+
+meetup:24e26ec10bf3b070f7b3770ce1909579
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Armistead_Burwell_Smith_IV> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Zach Smith" .
+
+meetup:8ae44119e9d45e5b3fb1e7e65516cd76
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Will_Smith_(pitcher)> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Smith" .
+
+<http://w3id.org/polifonia/pilot/meetups/7946587/9/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "However, listeners will find this sound fairly similar to his work with Pinback." ;
+        mtp:hasParticipant   meetup:8ae44119e9d45e5b3fb1e7e65516cd76 , meetup:d2c6b4cf95b24f03c571dded6dc86115 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Armistead_Burwell_Smith_IV> ;
+        mtp:hasType          "HM" .

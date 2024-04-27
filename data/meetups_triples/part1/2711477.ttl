@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2558878522b96cbc6ae45f41f7b2c0d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Recording live shows for an album" ;
+        mtp:hasEvidencePurposeSecond  "Booking local shows for promotion" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b9b8d58d78ee8b3e9fde0da1076a3007
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Adam_Hamilton> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Adam Hamilton" .
+
+<http://dbpedia.org/resource/Adam_Hamilton>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2711477/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After graduating from high school in 1988, Hamilton moved to Dallas, Texas and then to Austin to pursue music. While Hamilton was performing at a club in Austin, he met Poison guitarist C.C. DeVille, who invited Hamilton to move to Los Angeles." ;
+        mtp:hasParticipant   meetup:b9b8d58d78ee8b3e9fde0da1076a3007 ;
+        mtp:hasPurpose       meetup:b6948f2ba09c70a7c5d65cadfe30d904 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Adam_Hamilton_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2711477/8/15>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In early 2006, the band booked some local L.A. shows and recorded them for a live album entitled Loud and Dangerous: Live from Hollywood; this album was released in late August 2006. Each of these albums was supported with a world tour." ;
+        mtp:hasPurpose       meetup:2558878522b96cbc6ae45f41f7b2c0d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Adam_Hamilton_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Adam_Hamilton_(musician)>
+        rdf:type  core:Person .
+
+meetup:b6948f2ba09c70a7c5d65cadfe30d904
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Pursuing music career" ;
+        mtp:hasEvidencePurposeSecond  "Relocating for personal reasons" ;
+        mtp:hasSourcePurpose          "LLM" .

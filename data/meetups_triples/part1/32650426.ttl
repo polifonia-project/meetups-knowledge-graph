@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/32650426/13/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in Brazil he was adopted by a Swedish father and an American mother." ;
+        mtp:hasParticipant   meetup:325808fe03fa65e3cbad609836c58c2b ;
+        mtp:hasPurpose       meetup:13ca8d045db49cc52cdbef4de6a009f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Edward_af_Sillén> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Edward_af_Sillén>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:325808fe03fa65e3cbad609836c58c2b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Edward_af_Sillén> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Edward af Sillén" .
+
+meetup:13ca8d045db49cc52cdbef4de6a009f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.984447" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.014411983" ;
+        mtp:hasSourcePurpose          "ML" .

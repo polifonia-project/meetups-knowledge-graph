@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/33948077/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brother Tom (ブラザー・トム, Burazā Tomu) (born February 23, 1956) is a Japanese singer and tarento." ;
+        mtp:hasParticipant   meetup:c9c2a3b80212a8e45dbbfc5ce3ddc267 ;
+        mtp:hasPurpose       meetup:7e28d7ded78ee45fc87129b1d3e3924a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brother_Tom> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Brother_Tom>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:82656a1c1a650f66d47a624016d959eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tomu Koyanagi" .
+
+meetup:c9c2a3b80212a8e45dbbfc5ce3ddc267
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brother_Tom> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999212474260134" ;
+        mtp:hasTextEvidence     "Brother Tom" .
+
+<http://w3id.org/polifonia/pilot/meetups/33948077/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His birth name and former stage name is Tomu Koyanagi (小栁 富, Koyanagi Tomu), though he also goes by the English-language name of Thomas Akiona Akima Junior (トーマス・アキオナ・アキマ・ジュニア, Tōmasu Akiona Akima Junia)." ;
+        mtp:hasParticipant   meetup:82656a1c1a650f66d47a624016d959eb , meetup:e483961d944c9ca3733be5aae6b0c69b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brother_Tom> ;
+        mtp:hasType          "HM" .
+
+meetup:e483961d944c9ca3733be5aae6b0c69b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brother_Tom> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Brother Tom" .
+
+meetup:7e28d7ded78ee45fc87129b1d3e3924a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99921775" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007647486" ;
+        mtp:hasSourcePurpose          "ML" .

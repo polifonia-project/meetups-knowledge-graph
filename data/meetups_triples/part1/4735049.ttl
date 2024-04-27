@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:abfe7e31eab1773e39d59af932495ab1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eric_Heatherly> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999881624" ;
+        mtp:hasTextEvidence     "Eric Heatherly" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d5cad30f28fdce430b17a4ce2cc55c1e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5754154" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.42238936" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4735049/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Throughout his teenage years, Heatherly played guitar in several bands in the Chattanooga area." ;
+        mtp:hasParticipant   meetup:b33ada7f9016ab34038f19adc195059c , meetup:b4854a884023cf7e00f67a24eee20463 ;
+        mtp:hasPurpose       meetup:1a6de53c15052baa9165f9ca3e7c407f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eric_Heatherly> ;
+        mtp:hasType          "HM" .
+
+meetup:b4854a884023cf7e00f67a24eee20463
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eric_Heatherly> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Eric Heatherly" .
+
+<http://dbpedia.org/resource/Eric_Heatherly>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4735049/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Eric Heatherly was born February 21, 1970, in Chattanooga, Tennessee." ;
+        mtp:hasParticipant   meetup:abfe7e31eab1773e39d59af932495ab1 ;
+        mtp:hasPurpose       meetup:d5cad30f28fdce430b17a4ce2cc55c1e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eric_Heatherly> ;
+        mtp:hasType          "HT" .
+
+meetup:b33ada7f9016ab34038f19adc195059c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Heatherly" .
+
+meetup:1a6de53c15052baa9165f9ca3e7c407f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Playing guitar in bands" ;
+        mtp:hasEvidencePurposeSecond  "Teenage years" ;
+        mtp:hasSourcePurpose          "LLM" .

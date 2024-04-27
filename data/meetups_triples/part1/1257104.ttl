@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Bjarne_Liller>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Herb_Pedersen>
+        rdf:type  core:Person .
+
+meetup:47aa04bce6f5cc1c9c7499695f05fb44
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Herb_Pedersen> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.792433525940115" ;
+        mtp:hasTextEvidence     "Pedersen" .
+
+meetup:0751131536d5379f8528bd3c2df15983
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.70104885" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2043105" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1257104/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bjarne Bent Rønne Pedersen, known as Bjarne Liller (25 September 1935 – 6 September 1993), was a Danish jazz musician and singer-songwriter." ;
+        mtp:hasParticipant   meetup:47aa04bce6f5cc1c9c7499695f05fb44 , meetup:96a15290c5bbf2777f991705e943f2a7 ;
+        mtp:hasPurpose       meetup:0751131536d5379f8528bd3c2df15983 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bjarne_Liller> ;
+        mtp:hasType          "HM" .
+
+meetup:96a15290c5bbf2777f991705e943f2a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bjarne_Liller> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "0.999999960318406" ;
+        mtp:hasTextEvidence     "Bjarne Liller" .

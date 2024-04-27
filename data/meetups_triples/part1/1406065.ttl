@@ -1,0 +1,100 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1406065/2/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has been living in the Southern California area for some time." ;
+        mtp:hasParticipant   meetup:9f32b5ea403a28e6ed2cade24d598a1b ;
+        mtp:hasPurpose       meetup:e10ac3d44650819db866d6009a209f67 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Donald_Glaude> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<https://www.wikidata.org/wiki/Q5294423>
+        rdf:type  core:Person .
+
+meetup:9f32b5ea403a28e6ed2cade24d598a1b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Donald_Glaude> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Donald Glaude" .
+
+<http://dbpedia.org/resource/Bass_guitar>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4634033733c118db7166ffe9c5c1441d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q5294423> ;
+        mtp:hasOffset           "130" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Glaude" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:2fc458f94e8aa860f6daa048cc981c44
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bass_guitar> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "0.9350962321183848" ;
+        mtp:hasTextEvidence     "bass" .
+
+meetup:e10ac3d44650819db866d6009a209f67
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99789786" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0014864643" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1406065/2/14>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Donald and his night were showcased regularly on the Spike TV reality show 'The Club'." ;
+        mtp:hasParticipant   meetup:f811efb0397eb03a17e04882298f16da ;
+        mtp:hasPurpose       meetup:885569a88125e742a2344ccc749e450e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Donald_Glaude> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Donald_Glaude>
+        rdf:type  core:Person .
+
+meetup:f811efb0397eb03a17e04882298f16da
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Donald_Glaude> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Donald Glaude" .
+
+<http://w3id.org/polifonia/pilot/meetups/1406065/2/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Donald Glaude is a pioneer of House Music with a very distinctive deep bass rhythm sound and occasional breaks in the music where Glaude shouts enthusiastically, getting the crowd pumped up." ;
+        mtp:hasParticipant   meetup:4634033733c118db7166ffe9c5c1441d , meetup:73f18065247c65c32dc13d656dc67bb7 , meetup:2fc458f94e8aa860f6daa048cc981c44 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Donald_Glaude> ;
+        mtp:hasType          "HM" .
+
+meetup:73f18065247c65c32dc13d656dc67bb7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Donald_Glaude> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Donald Glaude" .
+
+meetup:885569a88125e742a2344ccc749e450e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996438" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00035492145" ;
+        mtp:hasSourcePurpose          "ML" .

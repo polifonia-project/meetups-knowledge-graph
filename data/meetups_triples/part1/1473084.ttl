@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:16f4cd919b4489f18b75078f016e6008
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Meisa Kuroki is a singer" ;
+        mtp:hasEvidencePurposeSecond  "Meisa Kuroki is a Japanese actress and model" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:229b0c50a10a44687d1b916c4a635640
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Satsuki Shimabukuro" .
+
+meetup:d550eb31c81ae4eca4a96475acd1a22f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Meisa_Kuroki> ;
+        mtp:hasOffset           "147" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Meisa Kuroki" .
+
+<http://dbpedia.org/resource/Meisa_Kuroki>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1473084/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Satsuki Shimabukuro (Japanese: 島袋 さつき, Shimabukuro Satsuki, b. 28 May 1988 in Okinawa Prefecture, Japan), better known by her stage name Meisa Kuroki (Japanese: 黒木 メイサ, Kuroki Meisa), is a Japanese actress, model and singer." ;
+        mtp:hasParticipant   meetup:229b0c50a10a44687d1b916c4a635640 , meetup:d550eb31c81ae4eca4a96475acd1a22f ;
+        mtp:hasPurpose       meetup:16f4cd919b4489f18b75078f016e6008 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Meisa_Kuroki> ;
+        mtp:hasType          "HM" .

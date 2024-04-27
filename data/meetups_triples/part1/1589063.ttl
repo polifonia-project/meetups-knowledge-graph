@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:f3b04bf0f0970ca7624ab1a12de91444
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999851" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.492977e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Nicole_Wray>
+        rdf:type  core:Person .
+
+meetup:d1270c471cbbd9d304114692394f4b72
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Monique_Lamoureux> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9376496355387244" ;
+        mtp:hasTextEvidence     "Monique" .
+
+<http://w3id.org/polifonia/pilot/meetups/1589063/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nicole Monique Wray (born May 2, 1979), also known as Lady Wray, is an American singer and songwriter." ;
+        mtp:hasParticipant   meetup:d1270c471cbbd9d304114692394f4b72 , meetup:5f3d91396ac05a3a89404b825833c79d , meetup:254fff9ff69fe6f839aab6ac13f1f9fb ;
+        mtp:hasPurpose       meetup:f3b04bf0f0970ca7624ab1a12de91444 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicole_Wray> ;
+        mtp:hasType          "HM" .
+
+meetup:254fff9ff69fe6f839aab6ac13f1f9fb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicole_Wray> ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lady Wray" .
+
+<http://dbpedia.org/resource/Monique_Lamoureux>
+        rdf:type  core:Person .
+
+meetup:5f3d91396ac05a3a89404b825833c79d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nicole Monique Wray" .

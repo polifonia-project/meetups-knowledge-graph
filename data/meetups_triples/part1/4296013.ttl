@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:18d93ac97c0aa307428ecb22381d53e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anya Gillinson" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:76a2031fe1c0179c0247571ccf00f95a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clive_Gillinson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Clive Gillinson" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:74cb8de7445eaaf2a1c1aac85763d574
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.65984726" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15589975" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:efe78da261b525bc001980a428530223
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clive_Gillinson> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Clive Daniel Gillinson" .
+
+<http://dbpedia.org/resource/Clive_Gillinson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4296013/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sir Clive Daniel Gillinson, CBE (born 7 March 1946) is a British cellist and arts administrator." ;
+        mtp:hasParticipant   meetup:efe78da261b525bc001980a428530223 ;
+        mtp:hasPurpose       meetup:5133ed53af58fe8888af851863560661 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Clive_Gillinson> ;
+        mtp:hasType          "HT" .
+
+meetup:5133ed53af58fe8888af851863560661
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8220631" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17767674" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4296013/12/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Clive Gillinson is married to New York attorney Anya Gillinson." ;
+        mtp:hasParticipant   meetup:18d93ac97c0aa307428ecb22381d53e0 , meetup:76a2031fe1c0179c0247571ccf00f95a ;
+        mtp:hasPurpose       meetup:74cb8de7445eaaf2a1c1aac85763d574 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Clive_Gillinson> ;
+        mtp:hasType          "HM" .

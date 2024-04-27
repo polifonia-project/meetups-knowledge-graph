@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/57434049/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Notably, O'Brien was pianist, composer, and arranger with the Ted Weems orchestra from 1925 through 1941." ;
+        mtp:hasParticipant   meetup:7326383415aa66f2d76be947e684f63f ;
+        mtp:hasPurpose       meetup:7ef87f540f79e5c542d2037cef688f4d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_O'Brien_(jazz_pianist)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jack_O'Brien_(jazz_pianist)>
+        rdf:type  core:Person .
+
+meetup:73eb19b76cf0eb3bbcdd53166994c40a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Roger O'Brien" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:cdb280e591478bb19ff0b2890df50d2d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99955505" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00043615524" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:dc25571b0c80be54cdd7519d32190e81
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_O'Brien_(jazz_pianist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jack \"Bones\" O'Brien" .
+
+<http://w3id.org/polifonia/pilot/meetups/57434049/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jack \"Bones\" O'Brien (né John Roger O'Brien; 16 October 1903 – 12 October 1982) was an American jazz pianist and songwriter from Allentown, Pennsylvania." ;
+        mtp:hasParticipant   meetup:dc25571b0c80be54cdd7519d32190e81 , meetup:73eb19b76cf0eb3bbcdd53166994c40a ;
+        mtp:hasPurpose       meetup:cdb280e591478bb19ff0b2890df50d2d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_O'Brien_(jazz_pianist)> ;
+        mtp:hasType          "HM" .
+
+meetup:7326383415aa66f2d76be947e684f63f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_O'Brien_(jazz_pianist)> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jack \"Bones\" O'Brien" .
+
+meetup:7ef87f540f79e5c542d2037cef688f4d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9971794" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001864648" ;
+        mtp:hasSourcePurpose          "ML" .

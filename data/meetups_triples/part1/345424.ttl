@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/David_C._Evans>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:b60614e8d5badd642e225b92beaece72
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9970155" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.002907868" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3b0b0744c3edc43982c1ad74cce3ea51
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_C._Evans> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "0.6656228270988339" ;
+        mtp:hasTextEvidence     "David Evans" .
+
+<http://dbpedia.org/resource/Taj_Mahal_(musician)>
+        rdf:type  core:Person .
+
+meetup:609e5be0d3cd41400aa1e3a353f2e379
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Taj Mahal's music style and versatility" ;
+        mtp:hasEvidencePurposeSecond  "Description of Taj Mahal's voice" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3448f6eb3918a5568fbdbd750ad34932
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Taj_Mahal_(musician)> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Taj Mahal Trio" .
+
+meetup:43e730532a8f8fa8e443b65f4a45824b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in film scores" ;
+        mtp:hasEvidencePurposeSecond  "Acting and composing career" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/345424/5/16>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1972, he acted in and wrote the film score for the movie Sounder, which starred Cicely Tyson. He reprised his role and returned as composer in the sequel, Part 2, Sounder." ;
+        mtp:hasPurpose       meetup:43e730532a8f8fa8e443b65f4a45824b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taj_Mahal_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/345424/66/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2004 – Taj Mahal Trio - Live Catch" ;
+        mtp:hasParticipant   meetup:3448f6eb3918a5568fbdbd750ad34932 ;
+        mtp:hasPurpose       meetup:b60614e8d5badd642e225b92beaece72 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taj_Mahal_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/345424/15/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Even the blues he was playing in the early 70s – Recycling The Blues & Other Related Stuff (1972), Mo' Roots (1974) – showed an aptitude for spicing the mix with flavours that always kept him a yard or so distant from being an out-and-out blues performer.\" Concerning his voice, author David Evans writes that Mahal has \"an extraordinary voice that ranges from gruff and gritty to smooth and sultry.\"" ;
+        mtp:hasParticipant   meetup:3b0b0744c3edc43982c1ad74cce3ea51 ;
+        mtp:hasPurpose       meetup:609e5be0d3cd41400aa1e3a353f2e379 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taj_Mahal_(musician)> ;
+        mtp:hasType          "HT" .

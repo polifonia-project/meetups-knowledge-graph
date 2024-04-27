@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d63913e4560acb2870bdb3eeda945742
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92220855" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04834014" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b32e0f534fdd42efb63d90530cbff1e2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Juan_Magán> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Juan Magán" .
+
+<http://w3id.org/polifonia/pilot/meetups/24857306/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2004, he launched his own music in the Latin register and with experience, he formed a group called Guajiros del Puerto two years later." ;
+        mtp:hasParticipant   meetup:b32e0f534fdd42efb63d90530cbff1e2 ;
+        mtp:hasPurpose       meetup:d63913e4560acb2870bdb3eeda945742 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Juan_Magán> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/24857306/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Juan Magán became interested in music in 1994, when he began to frequent the discothèques." ;
+        mtp:hasParticipant   meetup:d680ca7415a855a3e3e3f758c4143f7e ;
+        mtp:hasPurpose       meetup:6d2307fbe650ead9d743b56403a948ba ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Juan_Magán> ;
+        mtp:hasType          "HT" .
+
+meetup:6d2307fbe650ead9d743b56403a948ba
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99988663" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00010855736" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d680ca7415a855a3e3e3f758c4143f7e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Juan_Magán> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Juan Magán" .
+
+<http://dbpedia.org/resource/Juan_Magán>
+        rdf:type  core:Person .

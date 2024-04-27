@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/36653890/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1982, Mensch formed the management company Q Prime with Cliff Burnstein." ;
+        mtp:hasParticipant   meetup:95cf3ef16b35957ae568b08fa6b611a8 , meetup:e699e919040ffe7458ce4d3b06226c91 ;
+        mtp:hasPurpose       meetup:af01d1f3a04e02f25dc87d711fcdb433 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Mensch> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:f2627c3f61a1dd6b698540444bf80542
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Mensch> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999997442" ;
+        mtp:hasTextEvidence     "Peter Mensch" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/36653890/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Peter Mensch (born March 28, 1953) is an American music manager." ;
+        mtp:hasParticipant   meetup:f2627c3f61a1dd6b698540444bf80542 ;
+        mtp:hasPurpose       meetup:0031e2708fdaa3888aa67dc1002e7851 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Mensch> ;
+        mtp:hasType          "HT" .
+
+meetup:0031e2708fdaa3888aa67dc1002e7851
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93472415" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.034151338" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Peter_Mensch>
+        rdf:type  core:Person .
+
+meetup:e699e919040ffe7458ce4d3b06226c91
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Mensch> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Mensch" .
+
+meetup:af01d1f3a04e02f25dc87d711fcdb433
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8083068" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.103026345" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:95cf3ef16b35957ae568b08fa6b611a8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cliff Burnstein" .

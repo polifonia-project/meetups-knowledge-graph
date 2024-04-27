@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/3502867/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is a classically trained three-octave vocalist and pianist who studied at the New England Conservatory in Boston, Massachusetts, in theory and composition." ;
+        mtp:hasParticipant   meetup:5152935ce98fde1ceb20be495d4f9145 ;
+        mtp:hasPurpose       meetup:0da5c1b4e29340ef156df13ef565c31a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jenna_Drey> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/3502867/8/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Drey has been the headliner at some of the biggest Pride events in the U.S., including the Washington, D.C., 2012 Seattle, Chicago, Providence, Houston, Ft. Lauderdale, Phoenix, 2010 Flagstaff, and Minneapolis." ;
+        mtp:hasParticipant   meetup:b09fc01dd96dfbf63508411f19d3571a ;
+        mtp:hasPurpose       meetup:4dc31b0d2bfecb41a69fe6f258f2c61e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jenna_Drey> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:4dc31b0d2bfecb41a69fe6f258f2c61e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9986864" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0009051906" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1f9f75be3d9521ec103e0906e23e8b45
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jenna_Drey> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jenna Drey" .
+
+meetup:b09fc01dd96dfbf63508411f19d3571a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jenna_Drey> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jenna Drey" .
+
+meetup:0da5c1b4e29340ef156df13ef565c31a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999939" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.957842e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fa7f0b2cda0c90432edbba0fdd1f7564
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.66007394" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3187024" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5152935ce98fde1ceb20be495d4f9145
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jenna_Drey> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jenna Drey" .
+
+<http://w3id.org/polifonia/pilot/meetups/3502867/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was born in Los Angeles, California, and resides in Miami, Florida." ;
+        mtp:hasParticipant   meetup:1f9f75be3d9521ec103e0906e23e8b45 ;
+        mtp:hasPurpose       meetup:fa7f0b2cda0c90432edbba0fdd1f7564 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jenna_Drey> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jenna_Drey>
+        rdf:type  core:Person .

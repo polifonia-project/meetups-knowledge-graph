@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/57930259/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Both Pat and his brother Candido \"Lolly\" Vasquez-Vegas played in local bands." ;
+        mtp:hasParticipant   meetup:3734ae2a2c7fc5749481628ac0944f39 , meetup:ff7388ba6a794f3ce2920269a1a14a54 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pat_Vegas> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/57930259/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pat Vegas was born in Coalinga, California." ;
+        mtp:hasParticipant   meetup:d97fc16bf903c4ca6263ec34d261aaac ;
+        mtp:hasPurpose       meetup:f474e8bd645507f14f2d509c6063e293 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pat_Vegas> ;
+        mtp:hasType          "HT" .
+
+meetup:ff7388ba6a794f3ce2920269a1a14a54
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pat_Vegas> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pat Vegas" .
+
+meetup:3734ae2a2c7fc5749481628ac0944f39
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lolly_Vegas> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Candido \"Lolly\" Vasquez-Vegas" .
+
+<http://dbpedia.org/resource/Lolly_Vegas>
+        rdf:type  core:Person .
+
+meetup:f474e8bd645507f14f2d509c6063e293
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.35834828" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3564592" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d97fc16bf903c4ca6263ec34d261aaac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pat_Vegas> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999992776764" ;
+        mtp:hasTextEvidence     "Pat Vegas" .
+
+<http://dbpedia.org/resource/Pat_Vegas>
+        rdf:type  core:Person .

@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:8eaab39a12af463d44908d0e86adeccd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Darren> ;
+        mtp:hasOffset           "67" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "James Darren" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/578635/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James William Ercolani (born June 8, 1936) known by his stage name James Darren, is an American television and film actor, television director, and singer." ;
+        mtp:hasParticipant   meetup:8eaab39a12af463d44908d0e86adeccd , meetup:985ebea8f346479f40149b06516c90c6 ;
+        mtp:hasPurpose       meetup:8ef951197a8925ffe5164693d7908288 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Darren> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:985ebea8f346479f40149b06516c90c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9597158603342122" ;
+        mtp:hasTextEvidence     "James" .
+
+<http://dbpedia.org/resource/James_Darren>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .
+
+meetup:8ef951197a8925ffe5164693d7908288
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99912995" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0006977638" ;
+        mtp:hasSourcePurpose          "ML" .

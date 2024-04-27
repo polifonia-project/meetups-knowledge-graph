@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b99583a393f36ead771d3310724e1bae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Family connections" ;
+        mtp:hasEvidencePurposeSecond  "Shared ancestry" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Joseph_Lockwood>
+        rdf:type  core:Person .
+
+meetup:163c8abed0cada92ed54ac523c5ffb0a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Margaret_Lockwood> ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Margaret Lockwood" .
+
+meetup:c1181503aff8c5a2a31fe4918f493ea3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joseph_Lockwood> ;
+        mtp:hasOffset           "149" ;
+        mtp:hasSimilarityScore  "0.9999999999953388" ;
+        mtp:hasTextEvidence     "Joseph Lockwood" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:9f07a0202330b6f51064ac7b4155c6e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joseph_Lockwood> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999798888" ;
+        mtp:hasTextEvidence     "Joseph Lockwood" .
+
+meetup:2eda5cc239cd62f1f9a20023ccfe6022
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98105377" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.014615101" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/42933323/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Through his father he was a distant cousin to the actress Margaret Lockwood and to Solicitor General Sir Frank Lockwood, their common ancestor being Joseph Lockwood (c. 1758 – 1837), a former Mayor of Doncaster, Yorkshire." ;
+        mtp:hasParticipant   meetup:163c8abed0cada92ed54ac523c5ffb0a , meetup:c1181503aff8c5a2a31fe4918f493ea3 ;
+        mtp:hasPurpose       meetup:b99583a393f36ead771d3310724e1bae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joseph_Lockwood> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/42933323/6/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joseph Lockwood was appointed Knight Bachelor in the 1960 New Year Honours list." ;
+        mtp:hasParticipant   meetup:9f07a0202330b6f51064ac7b4155c6e7 ;
+        mtp:hasPurpose       meetup:2eda5cc239cd62f1f9a20023ccfe6022 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joseph_Lockwood> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Margaret_Lockwood>
+        rdf:type  core:Person .

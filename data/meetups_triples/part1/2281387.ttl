@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/2281387/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mary MacGregor (born May 6, 1948) is an American singer, best known for singing the 1976 song \"Torn Between Two Lovers\", which topped the Billboard charts for two weeks." ;
+        mtp:hasParticipant   meetup:78d07b5af0a8a1aeba3fe686ef390a1b ;
+        mtp:hasPurpose       meetup:b5db73654f021d36f551be758f131cf2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mary_MacGregor> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:78d07b5af0a8a1aeba3fe686ef390a1b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mary_MacGregor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mary MacGregor" .
+
+meetup:b5db73654f021d36f551be758f131cf2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9993351" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00043759609" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Mary_MacGregor>
+        rdf:type  core:Person .

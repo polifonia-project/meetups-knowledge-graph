@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/6727553/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alemayehu Eshete Andarge (Amharic: ዓለማየሁ እሸቴ አንዳርጌ; French pronunciation: Alèmayèhu Eshèté; June 1941 – 2 September 2021) was an Ethiopian singer." ;
+        mtp:hasParticipant   meetup:1b92031680857d3dddcf464a065593c6 ;
+        mtp:hasPurpose       meetup:69539e906299205cfcb1b67c0102b198 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alemayehu_Eshete> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:efe2b63ba0aaa6d6a60b96a7d3bbd4dc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Alemayehu's talent in music" ;
+        mtp:hasEvidencePurposeSecond  "Alemayehu's personal background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Retta>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Alemayehu_Eshete>
+        rdf:type  core:Person .
+
+meetup:187e39058d5f4696f100b272eee4629d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alemayehu_Eshete> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alemayehu Eshete" .
+
+meetup:3e1cf0f724e811b9c001190d0ff7f439
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Retta> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "Retta" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/6727553/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He had performed since the 1960s and primarily in Amharic." ;
+        mtp:hasParticipant   meetup:187e39058d5f4696f100b272eee4629d ;
+        mtp:hasPurpose       meetup:66314eb0405553e07afb2526c9c14de5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alemayehu_Eshete> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/6727553/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alemayehu was born in June 1941 in Addis Ababa, where his father worked as a taxi driver. Alemayehu talent was recognized by Colonel Retta Demeqe, who invited the young singer to perform with Addis Ababa's famous Police Orchestra." ;
+        mtp:hasParticipant   meetup:3e1cf0f724e811b9c001190d0ff7f439 ;
+        mtp:hasPurpose       meetup:efe2b63ba0aaa6d6a60b96a7d3bbd4dc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alemayehu_Eshete> ;
+        mtp:hasType          "HT" .
+
+meetup:66314eb0405553e07afb2526c9c14de5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9957793" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0023532787" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1b92031680857d3dddcf464a065593c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alemayehu_Eshete> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alemayehu Eshete" .
+
+meetup:69539e906299205cfcb1b67c0102b198
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999019" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.891934e-05" ;
+        mtp:hasSourcePurpose          "ML" .

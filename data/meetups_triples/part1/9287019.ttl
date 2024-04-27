@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:5204f34e43236fc28a55bfd09f32a2ba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aki_Misato> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aki Misato" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:15db484409da468d076a91aefd15946f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aki_Misato> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aki Misato" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:9d25d2a64e640f2a427f24f767cb19d2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9825948" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01720085" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/9287019/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She made her debut in 2004 with her first single Kimi ga Sora Datta (君が空だった), which was featured as the ending theme of the anime Mai-HiME." ;
+        mtp:hasParticipant   meetup:15db484409da468d076a91aefd15946f ;
+        mtp:hasPurpose       meetup:20c28aec793fd47619eac3a660cfabde ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aki_Misato> ;
+        mtp:hasType          "HT" .
+
+meetup:20c28aec793fd47619eac3a660cfabde
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999925" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.446986e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Aki_Misato>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/9287019/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aki Misato (美郷 あき, Misato Aki, born September 2, 1981) is a female Japanese J-pop singer from Saitama, Japan." ;
+        mtp:hasParticipant   meetup:5204f34e43236fc28a55bfd09f32a2ba ;
+        mtp:hasPurpose       meetup:9d25d2a64e640f2a427f24f767cb19d2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aki_Misato> ;
+        mtp:hasType          "HT" .

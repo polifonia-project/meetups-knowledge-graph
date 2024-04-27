@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Tom_Kellichan>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/19529265/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tom Kellichan (born c. 1954) was the original drummer of The Skids, from 1977 to 1979." ;
+        mtp:hasParticipant   meetup:2d660f24629e86eb908005e69406710a ;
+        mtp:hasPurpose       meetup:0042ba5ecbc1d3ebf35137bf9b4929c0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Kellichan> ;
+        mtp:hasType          "HT" .
+
+meetup:2d660f24629e86eb908005e69406710a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Kellichan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Tom Kellichan" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0042ba5ecbc1d3ebf35137bf9b4929c0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998641" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000105848674" ;
+        mtp:hasSourcePurpose          "ML" .

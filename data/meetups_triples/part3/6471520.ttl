@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/6471520/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:ad05b22e511fba36dd3bd0995882208b ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Derek_Forbes> ;
+        mtp:hasType     "HT" .
+
+meetup:ad05b22e511fba36dd3bd0995882208b
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "22 June 1956" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1956-06-22"^^xsd:date ;
+        time:hasEnd          "1956-06-22"^^xsd:date .
+
+meetup:49d462c14b5676206f42df12d214ddb9
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1978" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1978-01-01"^^xsd:date ;
+        time:hasEnd          "1978-12-31"^^xsd:date .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:90d1d6ff4e264fcbe2699dae452ee7b4
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "their 1985" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6471520/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:90d1d6ff4e264fcbe2699dae452ee7b4 , meetup:49d462c14b5676206f42df12d214ddb9 , meetup:e726b85a841c146b00b71c73a29b23dc ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Derek_Forbes> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Derek_Forbes>
+        rdf:type  core:Person .
+
+meetup:e726b85a841c146b00b71c73a29b23dc
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "1995 to 1998" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1995-01-01"^^xsd:date ;
+        time:hasEnd          "1998-12-31"^^xsd:date .

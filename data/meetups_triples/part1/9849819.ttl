@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:09e01e22a7d8852f89505dfe84ffe87a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999969" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.5322748e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:889300f369377f42511a47a51b04d9d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicki_Minaj> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nicki Minaj" .
+
+<http://dbpedia.org/resource/Nicki_Minaj>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Blackout_(musician)>
+        rdf:type  core:Person .
+
+meetup:d88b11c7b00a45ac3ec20343fe1508e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blackout_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "BlackOut Movement" .
+
+<http://w3id.org/polifonia/pilot/meetups/9849819/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Blackout is signed to Nicki Minaj's recording company Pink Friday Records." ;
+        mtp:hasParticipant   meetup:889300f369377f42511a47a51b04d9d8 , meetup:d88b11c7b00a45ac3ec20343fe1508e1 ;
+        mtp:hasPurpose       meetup:09e01e22a7d8852f89505dfe84ffe87a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blackout_(musician)> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:3f089942d78fa54556cc1216aef0254d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Idol singer from Tsinchu" ;
+        mtp:hasEvidencePurposeSecond  "Born in Taipei, Taiwan" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:88bbc49fa1a8c0f33c3ac57cb179fb60
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Qiū Xīnyí" .
+
+<http://w3id.org/polifonia/pilot/meetups/50526630/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Qiu Xinyi (Chinese: 邱欣怡; pinyin: Qiū Xīnyí; born January 11, 1997, in Taipei, Taiwan) is an idol singer from Tsinchu based in Shanghai." ;
+        mtp:hasParticipant   meetup:88bbc49fa1a8c0f33c3ac57cb179fb60 , meetup:de5248ca9ad8e31be41a8a9a3bba02ce ;
+        mtp:hasPurpose       meetup:3f089942d78fa54556cc1216aef0254d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Qiu_Xinyi> ;
+        mtp:hasType          "HM" .
+
+meetup:de5248ca9ad8e31be41a8a9a3bba02ce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Qiu_Xinyi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999672948942" ;
+        mtp:hasTextEvidence     "Qiu Xinyi" .
+
+<http://dbpedia.org/resource/Qiu_Xinyi>
+        rdf:type  core:Person .

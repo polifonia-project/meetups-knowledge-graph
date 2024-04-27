@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bill_White_(first_baseman)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0aeebb19017187fc25381cdad18ed169
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rick_Lober> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999995375446964" ;
+        mtp:hasTextEvidence     "Rick Lober" .
+
+meetup:364a7480eb05b45743d29dcb22b934c3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ted_Nugent> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.9999999999997442" ;
+        mtp:hasTextEvidence     "Ted Nugent" .
+
+<http://dbpedia.org/resource/Steve_Farmer_(musician)>
+        rdf:type  core:Person .
+
+meetup:578636a62114a73e804775a3daccebaf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dee_Palmer> ;
+        mtp:hasOffset           "57" ;
+        mtp:hasSimilarityScore  "0.9985995776541962" ;
+        mtp:hasTextEvidence     "Dave Palmer" .
+
+meetup:423fde7886ca7795a56b97b6ac8993c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_White_(first_baseman)> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "0.6180493159310877" ;
+        mtp:hasTextEvidence     "Bill White" .
+
+<http://w3id.org/polifonia/pilot/meetups/23456509/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His bandmates were Ted Nugent, Steve Farmer, John Drake, Dave Palmer and Bill White." ;
+        mtp:hasParticipant   meetup:f980d20b8d4e3e8808020b461f69af74 , meetup:578636a62114a73e804775a3daccebaf , meetup:364a7480eb05b45743d29dcb22b934c3 , meetup:423fde7886ca7795a56b97b6ac8993c1 , meetup:4a26b2a38d4c07111f5826fbb1da417d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rick_Lober> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Ted_Nugent>
+        rdf:type  core:Person .
+
+meetup:4a26b2a38d4c07111f5826fbb1da417d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rick_Lober> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rick Lober" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:f980d20b8d4e3e8808020b461f69af74
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Farmer_(musician)> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "0.6327080812546002" ;
+        mtp:hasTextEvidence     "Steve Farmer" .
+
+<http://dbpedia.org/resource/Rick_Lober>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/23456509/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rick Lober (born 1941) is an American musician and keyboardist who was the original keyboardist for the American psychedelic rock band The Amboy Dukes in the 1960s." ;
+        mtp:hasParticipant   meetup:0aeebb19017187fc25381cdad18ed169 ;
+        mtp:hasPurpose       meetup:ec396aa2949d6e4b742f1836c26a0b75 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rick_Lober> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Dee_Palmer>
+        rdf:type  core:Person .
+
+meetup:ec396aa2949d6e4b742f1836c26a0b75
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9777141" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018049536" ;
+        mtp:hasSourcePurpose          "ML" .

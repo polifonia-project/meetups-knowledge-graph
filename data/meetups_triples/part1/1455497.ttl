@@ -1,0 +1,59 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5d7ed507fbb093248d1411bd101632d7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a hardcore band" ;
+        mtp:hasEvidencePurposeSecond  "Personal musical journey" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1455497/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lisa Marx (born August 21, 1981) is an American guitarist and classically trained pianist from California." ;
+        mtp:hasParticipant   meetup:e9e629118846491630ca70ced41e02a2 ;
+        mtp:hasPurpose       meetup:ebe70f00c91d98a7f4052a93c5fa7b5a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lisa_Marx> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:e9e629118846491630ca70ced41e02a2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lisa_Marx> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "Lisa Marx" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1455497/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2002, Marx joined the Seattle hardcore band To See You Broken as guitarist. This underground group was an all-female ensemble and shared the stage with many northwest hardcore bands such as Himsa, Champion, the Blood Brothers, Hardesty, Staygold, and Book of Black Earth." ;
+        mtp:hasPurpose       meetup:5d7ed507fbb093248d1411bd101632d7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lisa_Marx> ;
+        mtp:hasType          "HT" .
+
+meetup:ebe70f00c91d98a7f4052a93c5fa7b5a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9923005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00758451" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Lisa_Marx>
+        rdf:type  core:Person .

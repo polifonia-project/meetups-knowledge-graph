@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/31538871/19/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Livin Foul (October 23, 2015; Scrublife)" ;
+        mtp:hasParticipant   meetup:9adae68f0f3be4ffc60cd047452dfbfb ;
+        mtp:hasPurpose       meetup:53e08113089f35f87f67ccebd77c7ea5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wax_(rapper)> ;
+        mtp:hasType          "HT" .
+
+meetup:9adae68f0f3be4ffc60cd047452dfbfb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wax_(rapper)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999824838428" ;
+        mtp:hasTextEvidence     "Livin Foul" .
+
+meetup:53e08113089f35f87f67ccebd77c7ea5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9676193" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.019512517" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Wax_(rapper)>
+        rdf:type  core:Person .

@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:162f992fe7fd8a7f0ed84ac9855bb7d9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's personal activities." ;
+        mtp:hasEvidencePurposeSecond  "Acquiring knowledge or skills through training." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Collen>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Phil_Collen>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1630407/15/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Collen has been training extensively in martial arts for over 20 years. He began his martial arts training in Kempo Karate, earning a black belt." ;
+        mtp:hasParticipant   meetup:fcd1485e497e16ede8982c1251c4b2d5 ;
+        mtp:hasPurpose       meetup:162f992fe7fd8a7f0ed84ac9855bb7d9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Collen> ;
+        mtp:hasType          "HT" .
+
+meetup:fcd1485e497e16ede8982c1251c4b2d5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Collen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Collen" .

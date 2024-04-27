@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Walter_Beasley>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/16457357/20/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Live in the Club (Walter Beasley, 2013)" ;
+        mtp:hasParticipant   meetup:58e06e4f390a4b13644c8e582032abe6 ;
+        mtp:hasPurpose       meetup:c96b72c04fede9fcc84c829c4a302753 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Walter_Beasley> ;
+        mtp:hasType          "HT" .
+
+meetup:f519afd4211e323ff520d6c6345dfdde
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Walter_Beasley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999952394" ;
+        mtp:hasTextEvidence     "Walter Beasley" .
+
+<http://w3id.org/polifonia/pilot/meetups/16457357/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Walter Beasley presents Vocal Performance" ;
+        mtp:hasParticipant   meetup:f519afd4211e323ff520d6c6345dfdde ;
+        mtp:hasPurpose       meetup:f203a082cdc23a3cb1f38208ac7bd61b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Walter_Beasley> ;
+        mtp:hasType          "HT" .
+
+meetup:c96b72c04fede9fcc84c829c4a302753
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7318656" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17295125" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f203a082cdc23a3cb1f38208ac7bd61b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999666" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.831909e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:58e06e4f390a4b13644c8e582032abe6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Walter_Beasley> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.9999999999955662" ;
+        mtp:hasTextEvidence     "Walter Beasley" .

@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Firudin_Shushinski>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6ef8bf2a20dd67a6c905b04b3d56e93d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9732881" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.016306723" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:06d8b26c159bcc17f49b3b3086e1ac54
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Firudin Mammad oglu Hasanov" .
+
+<http://w3id.org/polifonia/pilot/meetups/48307257/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Firudin Shushinski (born Firudin Mammad oglu Hasanov, 20 October, 1925 – 25 October, 1997) was an Azerbaijani scholar and musicologist who researched Azerbaijani folk music." ;
+        mtp:hasParticipant   meetup:06d8b26c159bcc17f49b3b3086e1ac54 , meetup:a98a14392a0fc055fd23c1428eef9a8d ;
+        mtp:hasPurpose       meetup:6ef8bf2a20dd67a6c905b04b3d56e93d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Firudin_Shushinski> ;
+        mtp:hasType          "HM" .
+
+meetup:a98a14392a0fc055fd23c1428eef9a8d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Firudin_Shushinski> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999952026996" ;
+        mtp:hasTextEvidence     "Firudin Shushinski" .

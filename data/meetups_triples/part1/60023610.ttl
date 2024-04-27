@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Duke_Ellington>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Max_Roach>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1dc16b8c00ebede2f628f4f9fa8517d7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Related to the creation of music" ;
+        mtp:hasEvidencePurposeSecond  "Related to professional work" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d835cfc54fd41322be45e1756ceaf7b4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Duke_Ellington> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "0.9999999999935484" ;
+        mtp:hasTextEvidence     "Duke Ellington" .
+
+<http://dbpedia.org/resource/Bill_Schwartau>
+        rdf:type  core:Person .
+
+meetup:39a072452a95e2a3c7d9160c2bc23762
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_Mingus> ;
+        mtp:hasOffset           "78" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charles Mingus" .
+
+<http://w3id.org/polifonia/pilot/meetups/60023610/6/11>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1962, he was named production supervisor and chief engineer of Sound Maker's Studio. He also engineer the influential jazz album Money Jungle with Duke Ellington, Charles Mingus and Max Roach." ;
+        mtp:hasParticipant   meetup:168bb96a83af60844c5149f3f59d4922 , meetup:39a072452a95e2a3c7d9160c2bc23762 , meetup:d835cfc54fd41322be45e1756ceaf7b4 ;
+        mtp:hasPurpose       meetup:1dc16b8c00ebede2f628f4f9fa8517d7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_Schwartau> ;
+        mtp:hasType          "HT" .
+
+meetup:168bb96a83af60844c5149f3f59d4922
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Max_Roach> ;
+        mtp:hasOffset           "97" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Max Roach" .
+
+<http://dbpedia.org/resource/Charles_Mingus>
+        rdf:type  core:Person .

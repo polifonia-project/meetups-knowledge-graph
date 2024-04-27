@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:8ea30022fc474a962f130a6a925f9d69
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Recording and releasing a hit single" ;
+        mtp:hasEvidencePurposeSecond  "Protest against the song's lyrics" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6a8866a2eb1e6e6a6c6d144748b800b6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95389533" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.030121328" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1694502/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1939 they recorded their first single, \"Hamtramck Mama,\" which became a hit on the Detroit-based Universal label – selling some 300,000 copies in the Detroit area alone. The song's bawdy lyrics raised some protest among the politicians of the city of Hamtramck (within Detroit's borders)." ;
+        mtp:hasPurpose       meetup:8ea30022fc474a962f130a6a925f9d69 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/The_York_Brothers> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/The_York_Brothers>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:baf41a8426c61851f69eb28cfdc85c7b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/The_York_Brothers> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "The York Brothers" .
+
+<http://w3id.org/polifonia/pilot/meetups/1694502/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By the start of 1944, however, both brothers were in the Navy, with George serving in the Pacific and Leslie in Europe." ;
+        mtp:hasParticipant   meetup:baf41a8426c61851f69eb28cfdc85c7b ;
+        mtp:hasPurpose       meetup:6a8866a2eb1e6e6a6c6d144748b800b6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/The_York_Brothers> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .

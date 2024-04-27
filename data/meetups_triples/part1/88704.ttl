@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/88704/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sandra Bernhard (born June 6, 1955) is an American actress." ;
+        mtp:hasParticipant   meetup:9f8d8bb41d83b1f0174d66b133441104 ;
+        mtp:hasPurpose       meetup:398e9fba6eaf02008c946129325a2bc2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sandra_Bernhard> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Sandra_Bernhard>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:9f8d8bb41d83b1f0174d66b133441104
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sandra_Bernhard> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sandra Bernhard" .
+
+<http://w3id.org/polifonia/pilot/meetups/88704/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She first gained attention in the late 1970s with her stand-up comedy, where she often critiqued celebrity culture and political figures." ;
+        mtp:hasParticipant   meetup:19173566f450d57e14b63912ffa0d474 ;
+        mtp:hasPurpose       meetup:8be26bde8ca048fed03bd420f0ea5904 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sandra_Bernhard> ;
+        mtp:hasType          "HT" .
+
+meetup:8be26bde8ca048fed03bd420f0ea5904
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9318153" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05470829" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:398e9fba6eaf02008c946129325a2bc2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.59488773" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.36129868" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:19173566f450d57e14b63912ffa0d474
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sandra_Bernhard> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sandra Bernhard" .

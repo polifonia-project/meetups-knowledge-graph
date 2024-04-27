@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2808b33644dca639be46b70fc0bc970b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music performances" ;
+        mtp:hasEvidencePurposeSecond  "Personal activities and relationships" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/11935570/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the early 1960s, he began performing with musicians like Cat Anderson, among others. He also appears on the album Mingus at Monterey by Charles Mingus." ;
+        mtp:hasParticipant   meetup:bc0eb98487e97f8e2de5162e02f3700f ;
+        mtp:hasPurpose       meetup:2808b33644dca639be46b70fc0bc970b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lou_Blackburn> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lou_Blackburn>
+        rdf:type  core:Person .
+
+meetup:bc0eb98487e97f8e2de5162e02f3700f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_Mingus> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "0.999999999999929" ;
+        mtp:hasTextEvidence     "Charles Mingus" .
+
+<http://dbpedia.org/resource/Charles_Mingus>
+        rdf:type  core:Person .

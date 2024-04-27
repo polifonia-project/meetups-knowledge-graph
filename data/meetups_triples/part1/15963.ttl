@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1ae5e7203e09ef75ff7cc7b1672a0102
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999491" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.092794e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/15963/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johann Friedrich Agricola (4 January 1720 – 2 December 1774) was a German composer, organist, singer, pedagogue, and writer on music." ;
+        mtp:hasParticipant   meetup:98439c281e83d0002dfb17a843b64b64 ;
+        mtp:hasPurpose       meetup:1ae5e7203e09ef75ff7cc7b1672a0102 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johann_Friedrich_Agricola> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Johann_Friedrich_Agricola>
+        rdf:type  core:Person .
+
+meetup:98439c281e83d0002dfb17a843b64b64
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johann_Friedrich_Agricola> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johann Friedrich Agricola" .

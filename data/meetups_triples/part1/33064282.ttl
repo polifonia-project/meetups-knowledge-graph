@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Takeshi_Senoo>
+        rdf:type  core:Person .
+
+meetup:17ec0cd5ce8e0576b0284c351e75d192
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7792343" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18035646" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:d32e9d643dbc50ed31eab2d918e82b40
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Shigeharu Sasago" .
+
+<http://w3id.org/polifonia/pilot/meetups/33064282/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Along with Shigeharu Sasago he was music director of the Aria soundtracks, which he composed with Choro Club." ;
+        mtp:hasParticipant   meetup:d32e9d643dbc50ed31eab2d918e82b40 , meetup:19497472099a390065533b90f43d97bd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Takeshi_Senoo> ;
+        mtp:hasType          "HM" .
+
+meetup:19497472099a390065533b90f43d97bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Takeshi_Senoo> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Takeshi Senoo" .
+
+<http://w3id.org/polifonia/pilot/meetups/33064282/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Takeshi Senoo (妹尾 武) (born December 26, 1969) is a Japanese composer." ;
+        mtp:hasParticipant   meetup:946f971cdc8637d48490c460b92b7033 ;
+        mtp:hasPurpose       meetup:17ec0cd5ce8e0576b0284c351e75d192 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Takeshi_Senoo> ;
+        mtp:hasType          "HT" .
+
+meetup:946f971cdc8637d48490c460b92b7033
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Takeshi_Senoo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Takeshi Senoo" .

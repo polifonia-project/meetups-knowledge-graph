@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:39ee1785661ac23abc5254188a0781a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.949742" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.039658695" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1056505/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Raymond Gallois-Montbrun (15 August 1918, Saigon – 13 August 1994, Paris) was a French violinist and composer." ;
+        mtp:hasParticipant   meetup:7885e2a311e3e6e7dd0f2068557c656c ;
+        mtp:hasPurpose       meetup:39ee1785661ac23abc5254188a0781a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Raymond_Gallois-Montbrun> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Raymond_Gallois-Montbrun>
+        rdf:type  core:Person .
+
+meetup:7885e2a311e3e6e7dd0f2068557c656c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Raymond_Gallois-Montbrun> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Raymond Gallois-Montbrun" .

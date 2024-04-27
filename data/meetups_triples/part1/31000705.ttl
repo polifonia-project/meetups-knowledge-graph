@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/31000705/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pia Toscano (born October 14, 1988) is an American singer." ;
+        mtp:hasParticipant   meetup:b9a9d44496a64ff7a94dd96ad0871e8d ;
+        mtp:hasPurpose       meetup:27bcf701bfe4a6868e678b4b3c619a61 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pia_Toscano> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c1e0e56b33a1d0c034ee16a7d3499922
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99959105" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0003074321" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:27bcf701bfe4a6868e678b4b3c619a61
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.78090495" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19516107" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6448cf4b8d5d8e3d03934809cb1ea4e1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about attending a performing arts school." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a fellow contestant from a music competition." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b9a9d44496a64ff7a94dd96ad0871e8d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pia_Toscano> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pia Toscano" .
+
+<http://dbpedia.org/resource/Pia_Toscano>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/31000705/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She attended LaGuardia High School of the Performing Arts in New York City and graduated in 2006. Fellow Idol contestant Karen Rodriguez also attended this school." ;
+        mtp:hasPurpose       meetup:6448cf4b8d5d8e3d03934809cb1ea4e1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pia_Toscano> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/31000705/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2016, she released the EP Belong." ;
+        mtp:hasParticipant   meetup:fab85b397001e85bc14707d44b3b4ad9 ;
+        mtp:hasPurpose       meetup:c1e0e56b33a1d0c034ee16a7d3499922 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pia_Toscano> ;
+        mtp:hasType          "HT" .
+
+meetup:fab85b397001e85bc14707d44b3b4ad9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pia_Toscano> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pia Toscano" .

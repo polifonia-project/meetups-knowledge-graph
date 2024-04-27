@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Raoul_de_Beauvais>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:0eb7267a78d23c4fc5e42a0de9387a45
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95712894" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04262997" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1b15bbc6ba3bdf97009698ab656a16e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jehan_Erart> ;
+        mtp:hasOffset           "88" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jehan Erart" .
+
+meetup:03dab17ef7b4ca6cb10facfe67de802b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Raoul_de_Beauvais> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999867272" ;
+        mtp:hasTextEvidence     "Raoul de Beauvais" .
+
+<http://dbpedia.org/resource/Jehan_Erart>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/21128585/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Six songs are attributed to him, with three also being (probably wrongly) attributed to Jehan Erart." ;
+        mtp:hasParticipant   meetup:c028fd9f2123d4a62957a701b2a0dde2 , meetup:1b15bbc6ba3bdf97009698ab656a16e7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Raoul_de_Beauvais> ;
+        mtp:hasType          "HM" .
+
+meetup:c028fd9f2123d4a62957a701b2a0dde2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Raoul_de_Beauvais> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Raoul de Beauvais" .
+
+<http://w3id.org/polifonia/pilot/meetups/21128585/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Raoul de Beauvais (fl. mid-13th century) was a trouvère from northeast of Paris." ;
+        mtp:hasParticipant   meetup:03dab17ef7b4ca6cb10facfe67de802b ;
+        mtp:hasPurpose       meetup:0eb7267a78d23c4fc5e42a0de9387a45 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Raoul_de_Beauvais> ;
+        mtp:hasType          "HT" .

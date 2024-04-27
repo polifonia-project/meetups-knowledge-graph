@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:a24d2ec4f16e432c925bdd75ea9b5f73
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Averill> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Steve Averill" .
+
+meetup:06037a77cd06dfdf4808569a8891e410
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Averill> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Averill" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/44025147/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His last gig (during this period of the Radiators) was at Ireland's first outdoor rock concert in Dalymount Park on August 21 with Thin Lizzy. He designed the Radiator's first single cover that helped them secure a record deal with Chiswick Records." ;
+        mtp:hasPurpose       meetup:ab8680b7219b2f192f7f2da349d95b09 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Averill> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/44025147/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steve Averill (born 1950) is an Irish graphic artist, art director, writer, musician, and former punk rock vocalist." ;
+        mtp:hasParticipant   meetup:a24d2ec4f16e432c925bdd75ea9b5f73 ;
+        mtp:hasPurpose       meetup:64279797e5ac4b751bd20488a0dc276c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Averill> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Steve_Averill>
+        rdf:type  core:Person .
+
+meetup:64279797e5ac4b751bd20488a0dc276c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9989354" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00058211084" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ab8680b7219b2f192f7f2da349d95b09
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a rock concert and a record deal." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a record deal with Chiswick Records." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:89dde109f0ed03b2ad4c08d0b82ac01f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99837923" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001494403" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/44025147/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He, along with his company, AMP Visual (previously Four5One Creative), has designed all the album covers for the Irish band U2." ;
+        mtp:hasParticipant   meetup:06037a77cd06dfdf4808569a8891e410 ;
+        mtp:hasPurpose       meetup:89dde109f0ed03b2ad4c08d0b82ac01f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Averill> ;
+        mtp:hasType          "HT" .

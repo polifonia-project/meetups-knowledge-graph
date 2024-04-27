@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:cdeed16a3fcaffb0917c94fe33b614a0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.71519536" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2825973" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b89fd33ca9e64d5639ce527d2a1fcbde
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wouter_Kellerman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wouter Kellerman" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Wouter_Kellerman>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/37270791/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wouter Kellerman (born 20 September 1961) is a Grammy Award-winning South African flautist, producer and composer who has won seven South African Music Awards." ;
+        mtp:hasParticipant   meetup:b89fd33ca9e64d5639ce527d2a1fcbde ;
+        mtp:hasPurpose       meetup:cdeed16a3fcaffb0917c94fe33b614a0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wouter_Kellerman> ;
+        mtp:hasType          "HT" .

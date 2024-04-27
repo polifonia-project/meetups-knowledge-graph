@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:0612830b3b41bf3e3a8b31756d35c7b1
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1979–1994" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1979-01-01"^^xsd:date ;
+        time:hasEnd          "1994-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/39386795/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Norbert_Daum> ;
+        mtp:hasType     "HM" .
+
+meetup:eabe9bca20a771822f9a17a5438ebf75
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "6 September 1948" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1948-09-06"^^xsd:date ;
+        time:hasEnd          "1948-09-06"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/39386795/0/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:04ae47f2213f5b83957ee5b7ae5a731d , meetup:0612830b3b41bf3e3a8b31756d35c7b1 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Norbert_Daum> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Norbert_Daum>
+        rdf:type  core:Person .
+
+meetup:04ae47f2213f5b83957ee5b7ae5a731d
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "7 years" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/39386795/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:eabe9bca20a771822f9a17a5438ebf75 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Norbert_Daum> ;
+        mtp:hasType     "HT" .

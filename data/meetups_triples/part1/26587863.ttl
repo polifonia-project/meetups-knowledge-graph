@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/26587863/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lars Eikind, also known as Lars Eric Si, has been a part of the Scandinavian rock/metal scene for many years both as musician and producer." ;
+        mtp:hasParticipant   meetup:b8db0e720fa4af8c371371c59265bbf5 ;
+        mtp:hasPurpose       meetup:bb379cc5a9d8538955270b0ff734a098 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lars_Eikind> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:bb379cc5a9d8538955270b0ff734a098
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96109134" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.023085622" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b8db0e720fa4af8c371371c59265bbf5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lars_Eikind> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lars Eikind" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f1f7a08e16b87e20febf743d4835f80a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997923" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00019039967" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:63b299255b548901b15d7661158e7fe5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.82660294" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17293464" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/26587863/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2004, they released the EP \"Vargtime\" on Selbstmord Services." ;
+        mtp:hasParticipant   meetup:fa709609e3b21f8837b7a941564dad00 ;
+        mtp:hasPurpose       meetup:f1f7a08e16b87e20febf743d4835f80a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lars_Eikind> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/26587863/3/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The future of the band, or if the album ever will be released, is unknown." ;
+        mtp:hasParticipant   meetup:f68483c0af104ef1da668032142d14d5 ;
+        mtp:hasPurpose       meetup:63b299255b548901b15d7661158e7fe5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lars_Eikind> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:fa709609e3b21f8837b7a941564dad00
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lars_Eikind> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Eikind" .
+
+meetup:f68483c0af104ef1da668032142d14d5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lars_Eikind> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Eikind" .
+
+<http://dbpedia.org/resource/Lars_Eikind>
+        rdf:type  core:Person .

@@ -1,0 +1,99 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1272308/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ray Ellington died of cancer on 27 February 1985." ;
+        mtp:hasParticipant   meetup:fcf8e689678c0b487077d3d9cf44c936 ;
+        mtp:hasPurpose       meetup:0200753e3ea41d437d5654d9a6db87a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ray_Ellington> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:61e2f75d8b3b38d678949b213c1341f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Henry Pitts Brown" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fcf8e689678c0b487077d3d9cf44c936
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ray_Ellington> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999971152" ;
+        mtp:hasTextEvidence     "Ray Ellington" .
+
+<http://w3id.org/polifonia/pilot/meetups/1272308/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known for his appearances on The Goon Show from 1951 to 1960." ;
+        mtp:hasParticipant   meetup:5e0051134d99f76fb4355282b071089c ;
+        mtp:hasPurpose       meetup:17fc48286c508cfc21b5fcec8beb4e6a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ray_Ellington> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:b3bfc5cb754a5db5016d49b1e8f2024b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8541295" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.082825415" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:17fc48286c508cfc21b5fcec8beb4e6a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.870884" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.119176656" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5e0051134d99f76fb4355282b071089c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ray_Ellington> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ray Ellington" .
+
+meetup:56d148bf6a485633bf2a40292c89e718
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ray_Ellington> ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ray Ellington" .
+
+<http://dbpedia.org/resource/Ray_Ellington>
+        rdf:type  core:Person .
+
+meetup:0200753e3ea41d437d5654d9a6db87a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999356" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.349678e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1272308/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Henry Pitts Brown (17 March 1916 – 27 February 1985), known professionally as Ray Ellington, was a popular English singer, drummer and bandleader." ;
+        mtp:hasParticipant   meetup:61e2f75d8b3b38d678949b213c1341f2 , meetup:56d148bf6a485633bf2a40292c89e718 ;
+        mtp:hasPurpose       meetup:b3bfc5cb754a5db5016d49b1e8f2024b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ray_Ellington> ;
+        mtp:hasType          "HM" .

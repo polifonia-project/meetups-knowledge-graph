@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:c619b3607d699ceb782cc1e0d205e09f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Business venture failure" ;
+        mtp:hasEvidencePurposeSecond  "Personal investment" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:2302b89c2ee611abc5bdf6708cddd93a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tyler_Anderson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.701572525124347" ;
+        mtp:hasTextEvidence     "Anderson" .
+
+<http://dbpedia.org/resource/Tyler_Anderson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1411584/35/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1975, he bought a radio station in Provo, Utah, called KIXX. Anderson was unable to have enough advertisers support his radio station, causing it to fail." ;
+        mtp:hasParticipant   meetup:2302b89c2ee611abc5bdf6708cddd93a ;
+        mtp:hasPurpose       meetup:c619b3607d699ceb782cc1e0d205e09f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_Anderson_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bill_Anderson_(singer)>
+        rdf:type  core:Person .

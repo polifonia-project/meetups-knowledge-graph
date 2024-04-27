@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Anna_Markland>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7cb2d91c1bb173e02d6e185d94713828
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99984443" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0001550957" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/66283840/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anna Markland (born 23 May 1964) is a British pianist who won the BBC Young Musician of the Year competition in 1982, playing Rachmaninov’s Second Piano Concerto and subsequently pursued a dual performing career as pianist and soprano." ;
+        mtp:hasParticipant   meetup:24422e5b8bc201d38df2676bb988c5da ;
+        mtp:hasPurpose       meetup:7cb2d91c1bb173e02d6e185d94713828 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna_Markland> ;
+        mtp:hasType          "HT" .
+
+meetup:24422e5b8bc201d38df2676bb988c5da
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna_Markland> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999835873214512" ;
+        mtp:hasTextEvidence     "Anna Markland" .

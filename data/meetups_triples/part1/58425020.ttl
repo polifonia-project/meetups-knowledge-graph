@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:89e3e9b1d613360ce5a6d7b6657477b8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Boris_Brejcha> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Boris Brejcha" .
+
+meetup:dd940105a1995362d0c8a51b102c9c9f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9951102" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004805691" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/58425020/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Boris Brejcha (Czech pronunciation: [ˈbrɛjxaː]; born November 26, 1981 in Ludwigshafen am Rhein) is a German DJ and record producer." ;
+        mtp:hasParticipant   meetup:89e3e9b1d613360ce5a6d7b6657477b8 ;
+        mtp:hasPurpose       meetup:dd940105a1995362d0c8a51b102c9c9f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Boris_Brejcha> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Boris_Brejcha>
+        rdf:type  core:Person .

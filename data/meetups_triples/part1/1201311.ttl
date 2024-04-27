@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Mickey_Gilley>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1201311/15/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The incident left him temporarily paralyzed from the neck down, but after intense physical therapy he was able to walk again and return to the stage a year later. However, he still lacks the hand coordination necessary to play the piano." ;
+        mtp:hasPurpose       meetup:a29e0bca7a0858c632c483492ab94cdc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mickey_Gilley> ;
+        mtp:hasType          "HT" .
+
+meetup:a29e0bca7a0858c632c483492ab94cdc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Recovery from paralysis" ;
+        mtp:hasEvidencePurposeSecond  "Inability to play piano" ;
+        mtp:hasSourcePurpose          "LLM" .

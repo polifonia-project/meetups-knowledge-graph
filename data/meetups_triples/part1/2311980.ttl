@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:5e8f78ffe4074856b7e416c04a9a41f2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999777" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.8678202e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1c372ef600cfe3ed4217d44ff6a553b0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Relating to someone's personal relationships" ;
+        mtp:hasEvidencePurposeSecond  "A meeting between individuals for business purposes" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6caf91833276d1746db38fed48a6b611
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dolores_Gray> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Dolores Gray" .
+
+<http://w3id.org/polifonia/pilot/meetups/2311980/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dolores Gray (born Sylvia Dolores Finkelstein; June 7, 1924 – June 26, 2002) was an American actress and singer." ;
+        mtp:hasParticipant   meetup:bb25045211c89f53d1702a1e13d0f642 , meetup:bcf3e248d03463b5b1c5b6f38f30f474 ;
+        mtp:hasPurpose       meetup:5e8f78ffe4074856b7e416c04a9a41f2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dolores_Gray> ;
+        mtp:hasType          "HM" .
+
+meetup:bcf3e248d03463b5b1c5b6f38f30f474
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sylvia Dolores Finkelstein" .
+
+meetup:bb25045211c89f53d1702a1e13d0f642
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dolores_Gray> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dolores Gray" .
+
+<http://w3id.org/polifonia/pilot/meetups/2311980/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On September 24, 1966, Dolores Gray married  Andrew J. Crevolin, a California businessman and Thoroughbred racehorse owner who won the 1954 Kentucky Derby." ;
+        mtp:hasParticipant   meetup:6caf91833276d1746db38fed48a6b611 ;
+        mtp:hasPurpose       meetup:1c372ef600cfe3ed4217d44ff6a553b0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dolores_Gray> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Dolores_Gray>
+        rdf:type  core:Person .

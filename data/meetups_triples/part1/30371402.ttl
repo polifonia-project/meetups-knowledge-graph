@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/30371402/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Blas de Laserna Nieva (1751 in Corella, Navarra – 1816 in Madrid) was a Spanish composer." ;
+        mtp:hasParticipant   meetup:b2c446458c0322b3a6921b2cff662917 ;
+        mtp:hasPurpose       meetup:3d6e6300fb921c2bf6addbf605395ed4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blas_de_Laserna> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3d6e6300fb921c2bf6addbf605395ed4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Blas de Laserna was a composer" ;
+        mtp:hasEvidencePurposeSecond  "He may have had a musical education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Blas_de_Laserna>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b2c446458c0322b3a6921b2cff662917
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blas_de_Laserna> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Blas de Laserna" .

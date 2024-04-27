@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:18ebf466ef43fea752b8f6d987b1050a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9990759" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0008450989" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:745ed35d2db63f668caf7e03b61b9a63
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Musician who plays traditional instruments" ;
+        mtp:hasEvidencePurposeSecond  "Born in Manchester, England" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/John_Doyle_(critic)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/405594/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael McGoldrick (born 26 November 1971, Manchester, England) is a folk musician who plays Irish flute, uilleann pipes, low whistle and bodhran." ;
+        mtp:hasParticipant   meetup:c555ec3bbde22018b8ca91ed5c1605e8 ;
+        mtp:hasPurpose       meetup:745ed35d2db63f668caf7e03b61b9a63 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_McGoldrick> ;
+        mtp:hasType          "HT" .
+
+meetup:effa97bd9fd946e0026971a4a58366cf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Doyle_(critic)> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.4418393149982741" ;
+        mtp:hasTextEvidence     "John Doyle" .
+
+<http://dbpedia.org/resource/Michael_McGoldrick>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/405594/20/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mike McGoldrick & John Doyle - Boxroom Music (2020)" ;
+        mtp:hasParticipant   meetup:effa97bd9fd946e0026971a4a58366cf , meetup:d9b7e08def20ba16605c4c1da0744963 ;
+        mtp:hasPurpose       meetup:18ebf466ef43fea752b8f6d987b1050a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_McGoldrick> ;
+        mtp:hasType          "HM" .
+
+meetup:d9b7e08def20ba16605c4c1da0744963
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_McGoldrick> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mike McGoldrick" .
+
+meetup:c555ec3bbde22018b8ca91ed5c1605e8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_McGoldrick> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Michael McGoldrick" .

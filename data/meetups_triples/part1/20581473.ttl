@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:858a900a84313079dcee7cce1da7d6b3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dina Emerson" .
+
+meetup:7397182b5dc3422e55fcfc493235305c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ken_Butler> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Ken Butler" .
+
+<http://w3id.org/polifonia/pilot/meetups/20581473/21/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Improvisations, Ken Butler and Dina Emerson, Gargoyle Mechanique, New York, sampler cassette, 1990." ;
+        mtp:hasParticipant   meetup:858a900a84313079dcee7cce1da7d6b3 , meetup:7397182b5dc3422e55fcfc493235305c ;
+        mtp:hasPurpose       meetup:def5b0bd57c41d2af86d6073b4346742 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ken_Butler> ;
+        mtp:hasType          "HM" .
+
+meetup:def5b0bd57c41d2af86d6073b4346742
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating music through improvisation" ;
+        mtp:hasEvidencePurposeSecond  "Personal experiences and relationships" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Ken_Butler>
+        rdf:type  core:Person .

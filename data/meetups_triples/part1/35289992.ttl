@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Otto_IV,_Margrave_of_Brandenburg-Stendal>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Ottokar_II_of_Bohemia>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:f38d4e2f903c92e60c442ef3dac90ea4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Unforeseen occurrence" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:fde33b47258cdf494605fe503936caf3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ottokar_II_of_Bohemia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999370786148" ;
+        mtp:hasTextEvidence     "Ottokar II" .
+
+<http://w3id.org/polifonia/pilot/meetups/35289992/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1278 he joined his uncle, King Ottokar II of Bohemia on a campaign in Hungary, where they clashed with Rudolph I of Germany. Ottokar II fell during the Battle on the Marchfeld in 1278." ;
+        mtp:hasParticipant   meetup:fde33b47258cdf494605fe503936caf3 ;
+        mtp:hasPurpose       meetup:f38d4e2f903c92e60c442ef3dac90ea4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Otto_IV,_Margrave_of_Brandenburg-Stendal> ;
+        mtp:hasType          "HT" .

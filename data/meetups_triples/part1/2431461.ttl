@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/2431461/22/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Canadian Composer Portrait: Phil Nimmons (CMC, 2009)" ;
+        mtp:hasParticipant   meetup:06c52f17ae9475456a785ef1ac2672f1 ;
+        mtp:hasPurpose       meetup:e118c4dc01973636acf87d54c2fdafa8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Nimmons> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2431461/4/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1993, he was made an Officer of the Order of Canada. He is also a recipient of the Order of Ontario." ;
+        mtp:hasPurpose       meetup:8ef5b025d4e1640ec00851ca6f98813f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Nimmons> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e118c4dc01973636acf87d54c2fdafa8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The main topic of the sentence is music making, specifically the Canadian composer Phil Nimmons." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the Canadian Music Centre (CMC), which suggests an educational aspect related to music." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:06c52f17ae9475456a785ef1ac2672f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Nimmons> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Phil Nimmons" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:8ef5b025d4e1640ec00851ca6f98813f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to the personal life of the person mentioned." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also indicates that the person has received recognition in the field of education." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Phil_Nimmons>
+        rdf:type  core:Person .

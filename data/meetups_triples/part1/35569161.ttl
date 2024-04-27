@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bob_James_(musician)>
+        rdf:type  core:Person .
+
+meetup:1194668010cece68914dcdc9adde4259
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_James_(musician)> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "0.9978408971558632" ;
+        mtp:hasTextEvidence     "Bob James" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:897d61b608999baf6af36093a79dc546
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Formation of a music group" ;
+        mtp:hasEvidencePurposeSecond  "Changes in band members" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:4dfafd5b85d7aba3f75e1d16cd75fc38
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Van Name" .
+
+<http://w3id.org/polifonia/pilot/meetups/35569161/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Circa 1981, following the dissolution of Magnet, James formed the Los Angeles based group Private Army featuring former Cheap Trick member Pete Comita on guitar and the future Quiet Riot rhythm section of bassist Rudy Sarzo and drummer Frankie Banali. When Pete Comita left the band, Bob James replaced him with guitarist Peter Van Name." ;
+        mtp:hasParticipant   meetup:1194668010cece68914dcdc9adde4259 , meetup:4dfafd5b85d7aba3f75e1d16cd75fc38 ;
+        mtp:hasPurpose       meetup:897d61b608999baf6af36093a79dc546 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_James_(rock_singer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bob_James_(rock_singer)>
+        rdf:type  core:Person .

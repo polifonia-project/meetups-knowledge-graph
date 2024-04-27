@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/26714752/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Darrell Puckett (born August 10, 1956), known professionally as Darrell Clanton, is an American country music artist." ;
+        mtp:hasParticipant   meetup:f2dfb5a945fb7f1273f237fa67816c6c , meetup:700fda1529f0cb18e77956e3e568d0da ;
+        mtp:hasPurpose       meetup:6f0f5120e798a9d7ed4e2bfeb91d09d9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Darrell_Clanton> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/26714752/2/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In March 1984, he charted his second single, \"I'll Take as Much of You as I Can Get\", which peaked at No. 75, followed by \"I Forgot that I Don't Live Here Anymore\" at No. 56. The latter song was boycotted by Mothers Against Drunk Driving, and he exited the label." ;
+        mtp:hasPurpose       meetup:be8dfd63d6fcbf96b203fbb5744eb375 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Darrell_Clanton> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Darrell_Clanton>
+        rdf:type  core:Person .
+
+meetup:f2dfb5a945fb7f1273f237fa67816c6c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Darrell Puckett" .
+
+meetup:be8dfd63d6fcbf96b203fbb5744eb375
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the charting of singles" ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a boycott and label exit" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6f0f5120e798a9d7ed4e2bfeb91d09d9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999907" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.0240283e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:700fda1529f0cb18e77956e3e568d0da
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Darrell_Clanton> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "0.9999992055897196" ;
+        mtp:hasTextEvidence     "Darrell Clanton" .

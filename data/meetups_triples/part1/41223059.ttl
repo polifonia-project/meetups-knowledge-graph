@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Sohn_(musician)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Christopher_Michael>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:241f72eb00ce16beb50bc2d0857cc35f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christopher_Michael> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999995864072" ;
+        mtp:hasTextEvidence     "Christopher Michael" .
+
+meetup:ce26abedf9413851f284e8e346c8a8ed
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sohn_(musician)> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "0.9780481410971557" ;
+        mtp:hasTextEvidence     "SOHN" .
+
+<http://w3id.org/polifonia/pilot/meetups/41223059/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christopher Michael Taylor, professionally known as Sohn (stylised as SOHN), is an English singer, songwriter and record producer." ;
+        mtp:hasParticipant   meetup:241f72eb00ce16beb50bc2d0857cc35f , meetup:ce26abedf9413851f284e8e346c8a8ed ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sohn_(musician)> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/41223059/3/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2015, Taylor moved to Los Angeles where he worked as a producer for Aquilo, Banks and Kwabs, before moving to Sonoma where he began work on his second album. In 2015, Taylor released the song \"Carry Me Home\" as part of the Insurgent soundtrack." ;
+        mtp:hasPurpose       meetup:a74c35d2a29d295b3476f7dc423acbe8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sohn_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:a74c35d2a29d295b3476f7dc423acbe8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Taylor's work as a producer and releasing songs" ;
+        mtp:hasEvidencePurposeSecond  "Taylor's move to Los Angeles and Sonoma" ;
+        mtp:hasSourcePurpose          "LLM" .

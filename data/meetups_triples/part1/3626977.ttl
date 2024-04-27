@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:2c538ae9a6f49ef5707eaf2b64e0c783
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.66657925" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.33294457" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:616db1d2a868318d8b1576bc76f60dc2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rosie_Thomas_(singer-songwriter)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9668031070233164" ;
+        mtp:hasTextEvidence     "Rosie Thomas" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Rosie_Thomas_(singer-songwriter)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3626977/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rosie Thomas is an American singer-songwriter and comedian, originally from Michigan." ;
+        mtp:hasParticipant   meetup:616db1d2a868318d8b1576bc76f60dc2 ;
+        mtp:hasPurpose       meetup:2c538ae9a6f49ef5707eaf2b64e0c783 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rosie_Thomas_(singer-songwriter)> ;
+        mtp:hasType          "HT" .

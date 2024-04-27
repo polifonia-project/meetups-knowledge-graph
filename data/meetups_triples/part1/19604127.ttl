@@ -1,0 +1,52 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:bbabf835e9b95b6638524571e2810d91
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Ilıcalı's international media projects" ;
+        mtp:hasEvidencePurposeSecond  "Television programs produced by Acun Medya" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:55b4cefe511208ef96f0bf0928af6910
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Information about Acun Ilıcalı's personal background." ;
+        mtp:hasEvidencePurposeSecond  "The coincidence of having Azerbaijani ancestry." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Acun_Ilıcalı>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/19604127/11/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ilıcalı's first foray into the international media sector began with projects he produced in 2016 in Greece. Acun Medya produced a number of television programs in Greece, including The Voice, Survivor, Got Talent and My Style Rocks." ;
+        mtp:hasPurpose       meetup:bbabf835e9b95b6638524571e2810d91 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Acun_Ilıcalı> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/19604127/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Acun Ilıcalı, whose family comes from Turkey's northeast Erzurum province, was born in Edirne on 29 May 1969. He has paternal Azerbaijani ancestry." ;
+        mtp:hasPurpose       meetup:55b4cefe511208ef96f0bf0928af6910 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Acun_Ilıcalı> ;
+        mtp:hasType          "HT" .

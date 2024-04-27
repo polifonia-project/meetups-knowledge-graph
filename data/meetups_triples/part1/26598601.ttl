@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:18438f092a50e56950d9a327db9b3b1c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9164946" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.059629858" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/26598601/11/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The True False Identity was his first album of new songs since 1992, and Twenty Twenty – The Essential T Bone Burnett was a 40-song career retrospective." ;
+        mtp:hasParticipant   meetup:8e9a8eadbb663ad74cb83544122b28a1 ;
+        mtp:hasPurpose       meetup:18438f092a50e56950d9a327db9b3b1c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/T_Bone_Burnett> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:8e9a8eadbb663ad74cb83544122b28a1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/T_Bone_Burnett> ;
+        mtp:hasOffset           "105" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "T Bone Burnett" .
+
+<http://dbpedia.org/resource/T_Bone_Burnett>
+        rdf:type  core:Person .

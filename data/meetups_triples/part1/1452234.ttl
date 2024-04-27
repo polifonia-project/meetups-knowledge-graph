@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/1452234/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was the first of the rock poster artists of the 1960s era with formal academic training and experience." ;
+        mtp:hasParticipant   meetup:177d339d2b03a8fd868aa21e77996c5d ;
+        mtp:hasPurpose       meetup:4ec6e790d7344275d77164d994237afb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Victor_Moscoso> ;
+        mtp:hasType          "HT" .
+
+meetup:4ec6e790d7344275d77164d994237afb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9785234" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02145184" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e9dabdfae8a6b50232f4133323f62455
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.60435605" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2625862" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:ac2460493e508351b2f55ea621387234
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Victor_Moscoso> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Victor Moscoso" .
+
+<http://w3id.org/polifonia/pilot/meetups/1452234/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Victor Moscoso (born July 28, 1936) is a Spanish artist best known for producing psychedelic rock posters, advertisements, and underground comix in San Francisco during the 1960s and 1970s." ;
+        mtp:hasParticipant   meetup:ac2460493e508351b2f55ea621387234 ;
+        mtp:hasPurpose       meetup:e9dabdfae8a6b50232f4133323f62455 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Victor_Moscoso> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Victor_Moscoso>
+        rdf:type  core:Person .
+
+meetup:177d339d2b03a8fd868aa21e77996c5d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Victor_Moscoso> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Victor Moscoso" .

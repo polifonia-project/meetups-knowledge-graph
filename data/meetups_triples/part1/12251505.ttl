@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:9c7ee44a608a61b6be72b9bca8463af3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Conducting debut at Carnegie Hall" ;
+        mtp:hasEvidencePurposeSecond  "Ives' Fourth Symphony premiere" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/José_Serebrier>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7634237dc7092c2bb0fd43cf06ad000c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995505" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00042937128" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/12251505/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Serebrier's New York conducting debut with the American Symphony Orchestra was at Carnegie Hall in 1965. At the time, Ives' Fourth Symphony had been considered so difficult that it was performed using three conductors at its premiere in 1965, almost 50 years after its composition." ;
+        mtp:hasPurpose       meetup:9c7ee44a608a61b6be72b9bca8463af3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/José_Serebrier> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:3dc405afa1efb909b827e8931f4fa417
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/José_Serebrier> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "José Serebrier" .
+
+<http://w3id.org/polifonia/pilot/meetups/12251505/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "José Serebrier (born 3 December 1938)" ;
+        mtp:hasParticipant   meetup:3dc405afa1efb909b827e8931f4fa417 ;
+        mtp:hasPurpose       meetup:7634237dc7092c2bb0fd43cf06ad000c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/José_Serebrier> ;
+        mtp:hasType          "HT" .

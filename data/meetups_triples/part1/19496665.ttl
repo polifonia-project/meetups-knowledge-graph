@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/19496665/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andonov was born on 28 August 1994 in Melbourne, from Macedonian parents originating from Strumica, Macedonia. He has performed since the age of six, when he started dancing and singing in his hometown of Melbourne." ;
+        mtp:hasPurpose       meetup:6dc6abebe8bcee6638a708f1ba09989c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bobby_Andonov> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:61b9b1679032a488b2bdac9044e90a37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Andonov> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bobby Andonov" .
+
+<http://w3id.org/polifonia/pilot/meetups/19496665/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bobby Andonov (Macedonian: Боби Андонов; born 28 August 1994), known by his stage name BOBI, is an Australian-Macedonian singer, songwriter and producer." ;
+        mtp:hasParticipant   meetup:61b9b1679032a488b2bdac9044e90a37 ;
+        mtp:hasPurpose       meetup:b955aa3a5c0f76a2fade2dde3b375f8b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bobby_Andonov> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:6dc6abebe8bcee6638a708f1ba09989c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Andonov's performance career" ;
+        mtp:hasEvidencePurposeSecond  "Andonov's personal background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b955aa3a5c0f76a2fade2dde3b375f8b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98930347" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010533772" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Bobby_Andonov>
+        rdf:type  core:Person .

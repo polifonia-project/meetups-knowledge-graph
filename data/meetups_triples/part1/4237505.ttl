@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:dc6690eb971da7ff0f0b0bd43a01f802
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gianandrea_Gavazzeni> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gianandrea Gavazzeni" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4237505/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gianandrea Gavazzeni died on 5 February 1996." ;
+        mtp:hasParticipant   meetup:41ff298f3bb4189445f37538923b35f4 ;
+        mtp:hasPurpose       meetup:9c347cd185554aaebac1a5f17521c555 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gianandrea_Gavazzeni> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4237505/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gianandrea Gavazzeni (25 July 1909 – 5 February 1996) was an Italian pianist, conductor (especially of opera), composer and musicologist." ;
+        mtp:hasParticipant   meetup:dc6690eb971da7ff0f0b0bd43a01f802 ;
+        mtp:hasPurpose       meetup:b062e0f9cf0be377ce198ef4a1fc3987 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gianandrea_Gavazzeni> ;
+        mtp:hasType          "HT" .
+
+meetup:9c347cd185554aaebac1a5f17521c555
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999785" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.040536e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b062e0f9cf0be377ce198ef4a1fc3987
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92579806" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.051439628" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:41ff298f3bb4189445f37538923b35f4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gianandrea_Gavazzeni> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gianandrea Gavazzeni" .
+
+<http://dbpedia.org/resource/Gianandrea_Gavazzeni>
+        rdf:type  core:Person .

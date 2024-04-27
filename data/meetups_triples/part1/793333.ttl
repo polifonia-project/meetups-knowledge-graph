@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:fb08bc7779fbda24080934b3043b44da
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Heath> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999801" ;
+        mtp:hasTextEvidence     "Jimmy Heath" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f178a6b21140cdc8c4ac629edea78a89
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Jimmy Heath composing and recording music." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions Jimmy Heath's album, which is related to his personal life as a musician." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:dea429517eacb5f93f4adcfb15619f57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Heath> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Heath, Jimmy" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/793333/3/20>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jimmy Heath composed \"For Minors Only\", \"Picture of Heath\", \"Bruh' Slim\", and \"CTA\" and recorded them on his 1975 album Picture of Heath." ;
+        mtp:hasParticipant   meetup:fb08bc7779fbda24080934b3043b44da ;
+        mtp:hasPurpose       meetup:f178a6b21140cdc8c4ac629edea78a89 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Heath> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/793333/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Heath, Jimmy; McLaren, Joseph (2010)." ;
+        mtp:hasParticipant   meetup:dea429517eacb5f93f4adcfb15619f57 ;
+        mtp:hasPurpose       meetup:dc91b9d167034551cb1b8c554f0e5f74 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Heath> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jimmy_Heath>
+        rdf:type  core:Person .
+
+meetup:dc91b9d167034551cb1b8c554f0e5f74
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The main topic of the sentence is education, referring to the authors Heath, Jimmy and McLaren, Joseph and their work in 2010." ;
+        mtp:hasEvidencePurposeSecond  "There is also a secondary topic of coincidence, as the mention of both authors in the same sentence may be seen as a chance occurrence." ;
+        mtp:hasSourcePurpose          "LLM" .

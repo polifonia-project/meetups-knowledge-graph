@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1479380/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1996 during Italian singing contests, she was discovered by Italian manager/producer Vince Tempera (Kill Bill) who invited her to work alongside some of the most respected and talented producers and musicians from La Scala Milano. Maestro Tempera invited Sarina to collaborate in music festivals across Italy where Sarina sang songs from soundtracks backed by twelve piece orchestra." ;
+        mtp:hasPurpose       meetup:27dc0a19af19afd8392e33bb58c123fa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sarina_Paris> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Sarina_Paris>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1479380/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sarina Paris (born December 22, 1973) is a Canadian singer, best known for her international dance-club hits \"Look at Us\" (2000) and \"Just About Enough\" (2001)." ;
+        mtp:hasParticipant   meetup:f595cdfe7f3ed5b41dd3ed6e4a717184 ;
+        mtp:hasPurpose       meetup:b120b08f407afaf81b7ac542277e8a52 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sarina_Paris> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b120b08f407afaf81b7ac542277e8a52
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7081894" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2597265" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:27dc0a19af19afd8392e33bb58c123fa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music festivals and collaborations with producers and musicians" ;
+        mtp:hasEvidencePurposeSecond  "Learning and development through working with talented professionals" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f595cdfe7f3ed5b41dd3ed6e4a717184
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sarina_Paris> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999977264" ;
+        mtp:hasTextEvidence     "Sarina Paris" .

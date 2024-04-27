@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/22915851/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chris Joyce (born 11 October 1957, Manchester, England) is known for being drummer with various groups, and with Simply Red in the 1980s." ;
+        mtp:hasParticipant   meetup:239235db27fba6979dc1db2a065a76fa ;
+        mtp:hasPurpose       meetup:f0ff65b418beda36ee6e5878077e481b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Joyce> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Chris_Joyce>
+        rdf:type  core:Person .
+
+meetup:f0ff65b418beda36ee6e5878077e481b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9970118" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.002236443" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:239235db27fba6979dc1db2a065a76fa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Joyce> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999979536" ;
+        mtp:hasTextEvidence     "Chris Joyce" .

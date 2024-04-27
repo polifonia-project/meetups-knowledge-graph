@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:42f1bbe6b914a7153d82590cf4acd686
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9989722" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0009018116" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/42944472/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joe Doerr (born November 15, 1961) a.k.a." ;
+        mtp:hasParticipant   meetup:64de9082af74a0e39a83e1081b0e0efd ;
+        mtp:hasPurpose       meetup:42f1bbe6b914a7153d82590cf4acd686 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Doerr> ;
+        mtp:hasType          "HT" .
+
+meetup:64de9082af74a0e39a83e1081b0e0efd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Doerr> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999946568" ;
+        mtp:hasTextEvidence     "Joe Doerr" .
+
+<http://dbpedia.org/resource/Joe_Doerr>
+        rdf:type  core:Person .

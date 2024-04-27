@@ -1,0 +1,54 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/2992934/20/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Goldberg was a prominent presence on the conservative website, Free Republic in the late 1990s, posting under the name \"Trixie\". She and other conservatives, including Matt Drudge, left the site when the webmaster, in Goldberg's words, \"let all the Y2K, gun-nut, Jew-baiting crazies take over [the forum] and flame the plain-old conservatives\"." ;
+        mtp:hasParticipant   meetup:bb1dace6a33a5f3ebd395030ebcc6857 , meetup:21fd88ce5b4aec836ba82ca391b3fbb1 ;
+        mtp:hasPurpose       meetup:f303b4c9ea4dd45e26f1266f3c280c54 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucianne_Goldberg> ;
+        mtp:hasType          "HT" .
+
+meetup:bb1dace6a33a5f3ebd395030ebcc6857
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Drudge> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Matt Drudge" .
+
+meetup:21fd88ce5b4aec836ba82ca391b3fbb1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Goldberg> ;
+        mtp:hasOffset           "89" ;
+        mtp:hasSimilarityScore  "0.989874548114715" ;
+        mtp:hasTextEvidence     "Goldberg" .
+
+meetup:f303b4c9ea4dd45e26f1266f3c280c54
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Details about an individual's online presence" ;
+        mtp:hasEvidencePurposeSecond  "Discussion about the management of a website" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Matt_Drudge>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Bill_Goldberg>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Lucianne_Goldberg>
+        rdf:type  core:Person .

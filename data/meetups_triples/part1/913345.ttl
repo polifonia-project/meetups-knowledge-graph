@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a560b50c167f724f02b08a814341bfcc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9832749" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.012585071" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7ef15c8c1d699e08b0678d628470c03b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tasmin_Archer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tasmin Archer" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:acaad3214d5bf6ad871a3eddb622556a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tasmin_Archer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tasmin Archer" .
+
+<http://dbpedia.org/resource/Tasmin_Archer>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/913345/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her first album, Great Expectations, spawned the hit \"Sleeping Satellite,\" which reached number one in the United Kingdom and Ireland." ;
+        mtp:hasParticipant   meetup:acaad3214d5bf6ad871a3eddb622556a ;
+        mtp:hasPurpose       meetup:01aa19b78ee6dce155ff352bf703ca85 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tasmin_Archer> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:1d0a0618aff85250167f8a8049bc0cb0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6722964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24021095" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:01aa19b78ee6dce155ff352bf703ca85
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999218" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.020187e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/913345/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She won the Brit Award for British Breakthrough Act in 1993 and went on to release other albums." ;
+        mtp:hasParticipant   meetup:7ef15c8c1d699e08b0678d628470c03b ;
+        mtp:hasPurpose       meetup:a560b50c167f724f02b08a814341bfcc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tasmin_Archer> ;
+        mtp:hasType          "HT" .
+
+meetup:009ba8126ff8d2e5938bf03893108410
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tasmin_Archer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tasmin Archer" .
+
+<http://w3id.org/polifonia/pilot/meetups/913345/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tasmin Archer (born 3 August 1963) is a British pop singer from Bradford." ;
+        mtp:hasParticipant   meetup:009ba8126ff8d2e5938bf03893108410 ;
+        mtp:hasPurpose       meetup:1d0a0618aff85250167f8a8049bc0cb0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tasmin_Archer> ;
+        mtp:hasType          "HT" .

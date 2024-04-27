@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/13727642/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James A. Drake in March 2007, was named president of Brevard Community College (Eastern Florida State College), a public college with campuses in Palm Bay, Melbourne, Cocoa, and Titusville, Florida. With average annual enrollments of averaging nearly 30,000 students, the multi-campus institution remains one of the 100 largest community colleges in the U.S.  Prior to his appointment at Brevard, Drake served as associate vice president for academic affairs and director of the University of Central Florida's Southern Region campuses, through a partnership with Brevard Community College." ;
+        mtp:hasParticipant   meetup:efce269ef88052fdbd3a56d25368726e ;
+        mtp:hasPurpose       meetup:81d9ad1a630b373a29655a6f5b75a74d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_A._Drake> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:efce269ef88052fdbd3a56d25368726e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "170" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James" .
+
+meetup:81d9ad1a630b373a29655a6f5b75a74d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a college and its president." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a partnership between two institutions." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/James_A._Drake>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .

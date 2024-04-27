@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1368482/12/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They sold a million records in the first two and a half months after it come out, so that's twenty-six million verses I got out into the world in two and a half months!\"The classification of his creations overlap folk art and outsider art for the origin, naïve art and visionary art for the content." ;
+        mtp:hasParticipant   meetup:a4ed468fdda034a9741b1fc462487d24 ;
+        mtp:hasPurpose       meetup:2a6434a7c3fde147ec1a4b67943ce3ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Howard_Finster> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Howard_Finster>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e2d5a390a5453b222fa58dad761fc31e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Howard_Finster> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Howard Finster" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a4ed468fdda034a9741b1fc462487d24
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Howard_Finster> ;
+        mtp:hasOffset           "118" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Howard Finster" .
+
+meetup:d60f629ec4c9f64b5580a75c292fe4f9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9985642" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0014072787" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1368482/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Howard Finster (December 2, 1916 – October 22, 2001) was an American artist and Baptist minister from Georgia." ;
+        mtp:hasParticipant   meetup:e2d5a390a5453b222fa58dad761fc31e ;
+        mtp:hasPurpose       meetup:d60f629ec4c9f64b5580a75c292fe4f9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Howard_Finster> ;
+        mtp:hasType          "HT" .
+
+meetup:2a6434a7c3fde147ec1a4b67943ce3ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9541584" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03646707" ;
+        mtp:hasSourcePurpose          "ML" .

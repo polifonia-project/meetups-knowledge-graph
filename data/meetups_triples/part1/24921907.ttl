@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:b441542b086d81f3a8edcd534c00f163
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_Wehrkamp> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gary Wehrkamp" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Gary_Wehrkamp>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/24921907/21/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "These bands have played regularly over 100 shows per year over the past two decades, performing at venues such as Yankee Stadium, Highline Ballroom, Central Park Boathouse, World Trade Center,  The Red Lion, The Players Club, The Ritz-Carlton, The Waldorf-Astoria (NYC), and Met Life Tailgate events (East Rutherford, NJ). “With more than 8,000 collective shows between them, the MAYBABIES have all the experience to deliver a professional and entertaining show where their evolving set-list includes music from all eras, suitable for the crowd in front of them.”" ;
+        mtp:hasPurpose       meetup:29cc36145ceacb758583f694e48d448b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Wehrkamp> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/24921907/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gary Wehrkamp (born May 11, 1970 in Butler, New Jersey) is an American musician, songwriter and producer." ;
+        mtp:hasParticipant   meetup:b441542b086d81f3a8edcd534c00f163 ;
+        mtp:hasPurpose       meetup:b950381bd2dd5f13459db5c02181c998 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Wehrkamp> ;
+        mtp:hasType          "HT" .
+
+meetup:29cc36145ceacb758583f694e48d448b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about bands performing at various venues." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the number of shows and experience of the bands." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b950381bd2dd5f13459db5c02181c998
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8793811" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12060155" ;
+        mtp:hasSourcePurpose          "ML" .

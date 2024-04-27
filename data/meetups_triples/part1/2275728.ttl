@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/George_Coleman>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Vic_Juris>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:ea003ee672d9a29e7572f7549c2b003c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.878212e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2275728/17/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Groovin' with Big G (Steeplechase, 2018) – with Vic Juris, George Coleman Jr." ;
+        mtp:hasParticipant   meetup:b99b4a8f784bd3528a532b0e0b81013c , meetup:6038fe8cb887588ec78b1020a2d91504 , meetup:790f421a01874bf11314bae4240afdd4 ;
+        mtp:hasPurpose       meetup:ea003ee672d9a29e7572f7549c2b003c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Coleman> ;
+        mtp:hasType          "HM" .
+
+meetup:b99b4a8f784bd3528a532b0e0b81013c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "George Coleman Jr." .
+
+meetup:790f421a01874bf11314bae4240afdd4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Coleman> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "0.9999739174713268" ;
+        mtp:hasTextEvidence     "George Coleman" .
+
+meetup:6038fe8cb887588ec78b1020a2d91504
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vic_Juris> ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "0.999999999999602" ;
+        mtp:hasTextEvidence     "Vic Juris" .

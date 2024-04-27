@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/22226138/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nicolai Berendt   (27 July 1826 – 1889) was a Danish pianist and composer." ;
+        mtp:hasParticipant   meetup:2e907457ffbd1050652c65c30e6ada83 ;
+        mtp:hasPurpose       meetup:38fee2b289690371f4eb04fc71268d54 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicolai_Berendt> ;
+        mtp:hasType          "HT" .
+
+meetup:38fee2b289690371f4eb04fc71268d54
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9982911" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0017069441" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Nicolai_Berendt>
+        rdf:type  core:Person .
+
+meetup:2e907457ffbd1050652c65c30e6ada83
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicolai_Berendt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999994898399388" ;
+        mtp:hasTextEvidence     "Nicolai Berendt" .

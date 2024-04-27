@@ -1,0 +1,87 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/21087929/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Raoul de Soissons (1210x15 – 1270, or shortly thereafter) was a French nobleman, Crusader, and trouvère." ;
+        mtp:hasParticipant   meetup:87ec9e8152d792dc82b7065b710904bb ;
+        mtp:hasPurpose       meetup:d01abf6f18f0e1df5a106e17ea827e01 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Raoul_de_Soissons> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d01abf6f18f0e1df5a106e17ea827e01
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94214845" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05649868" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/21087929/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was the second son of Raoul le Bon, Count of Soissons, and became the Sire de Coeuvres in 1232." ;
+        mtp:hasParticipant   meetup:f8d82321067931023bb452e6e0ca6575 , meetup:5ef4d57b066d60df2357df6cb8c80603 ;
+        mtp:hasPurpose       meetup:dbdd50c0ff8be26555df5626c4140a44 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Raoul_de_Soissons> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:f8d82321067931023bb452e6e0ca6575
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "69" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "the Sire de Coeuvres" .
+
+meetup:5ef4d57b066d60df2357df6cb8c80603
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Raoul_de_Soissons> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Raoul de Soissons" .
+
+<http://w3id.org/polifonia/pilot/meetups/21087929/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1239, Raoul joined his lord Peter I, Duke of Brittany, on the crusade of Theobald I of Navarre. There, he and Peter split off from the main army, split their force in half, and successfully conducted a cattle raid against a Muslim caravan." ;
+        mtp:hasPurpose       meetup:1cb62bb511be28e650799230f1eb5206 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Raoul_de_Soissons> ;
+        mtp:hasType          "HT" .
+
+meetup:87ec9e8152d792dc82b7065b710904bb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Raoul_de_Soissons> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Raoul de Soissons" .
+
+meetup:dbdd50c0ff8be26555df5626c4140a44
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6753767" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.195419" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1cb62bb511be28e650799230f1eb5206
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Activities and experiences of an individual" ;
+        mtp:hasEvidencePurposeSecond  "Unplanned and unexpected events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Raoul_de_Soissons>
+        rdf:type  core:Person .

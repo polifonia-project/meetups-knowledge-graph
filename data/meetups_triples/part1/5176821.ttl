@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:b5f87f09703295a596c6b2292f9efe16
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnathan_Aitken> ;
+        mtp:hasOffset           "132" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johnathan Aitken" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:cf7b6fae6a7791316d9f55d7c3155589
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "T.S.R. Boase" .
+
+meetup:3702c80fa2cf5710b03199c21365ad31
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Iain_Macmillan> ;
+        mtp:hasOffset           "159" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Iain Macmillan" .
+
+<http://w3id.org/polifonia/pilot/meetups/5176821/23/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Sculpture of David Wynne, 1949–1967 by T.S.R. Boase (Author), Iain Macmillan (Photographer)" ;
+        mtp:hasParticipant   meetup:c89c441ffca575653fbda78cf963f211 , meetup:cf7b6fae6a7791316d9f55d7c3155589 ;
+        mtp:hasPurpose       meetup:bd9ff619895a700d1122baa75ab2d0cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Iain_Macmillan> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Iain_Macmillan>
+        rdf:type  core:Person .
+
+meetup:3b5990a7db66f4a160eaf9c4538c81fa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93225175" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03567904" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c89c441ffca575653fbda78cf963f211
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Iain_Macmillan> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Iain Macmillan" .
+
+meetup:bd9ff619895a700d1122baa75ab2d0cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5479194" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.45066857" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/5176821/25/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Young Meteors: an Inside Report on the Rising Stars of London in Fashion, Entertainment, Modeling, Art, Politics, Journalism by Johnathan Aitken (Author), Iain Macmillan (Illustrator)" ;
+        mtp:hasParticipant   meetup:b5f87f09703295a596c6b2292f9efe16 , meetup:3702c80fa2cf5710b03199c21365ad31 ;
+        mtp:hasPurpose       meetup:3b5990a7db66f4a160eaf9c4538c81fa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Iain_Macmillan> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Johnathan_Aitken>
+        rdf:type  core:Person .

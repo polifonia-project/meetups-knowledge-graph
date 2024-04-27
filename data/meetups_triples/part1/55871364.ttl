@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:74b2c98a055c9563f922469f9314e1ee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99925905" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00036279156" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Fernando_Daniel>
+        rdf:type  core:Person .
+
+meetup:b99e14f991a79027caa4effef5e16665
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7939652" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14587688" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f5f95b96d923b219d87e3b3c185ccc0a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fernando_Daniel> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.9999999999636486" ;
+        mtp:hasTextEvidence     "Fernando Daniel" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/55871364/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fernando Daniel (born 11 May 1996) is a Portuguese singer-songwriter." ;
+        mtp:hasParticipant   meetup:5ee1e87d9c51df40f8a0b8dea198cc48 ;
+        mtp:hasPurpose       meetup:74b2c98a055c9563f922469f9314e1ee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fernando_Daniel> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:5ee1e87d9c51df40f8a0b8dea198cc48
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fernando_Daniel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999636486" ;
+        mtp:hasTextEvidence     "Fernando Daniel" .
+
+meetup:da7b3d8efe7d4dc4e602f131a6923759
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fernando_Daniel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Fernando Daniel" .
+
+<http://w3id.org/polifonia/pilot/meetups/55871364/7/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In July 2017, Fernando Daniel released his first original single, \"Espera\", which was included in the soundtrack for the Portuguese telenovela \"A Herdeira\"." ;
+        mtp:hasParticipant   meetup:f5f95b96d923b219d87e3b3c185ccc0a ;
+        mtp:hasPurpose       meetup:85fe01900089caeaf57261aafc7db58a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fernando_Daniel> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/55871364/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He won the fourth edition of The Voice Portugal in 2016." ;
+        mtp:hasParticipant   meetup:da7b3d8efe7d4dc4e602f131a6923759 ;
+        mtp:hasPurpose       meetup:b99e14f991a79027caa4effef5e16665 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fernando_Daniel> ;
+        mtp:hasType          "HT" .
+
+meetup:85fe01900089caeaf57261aafc7db58a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.996687" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0029780625" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/3700980/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shirley Clamp's career began as a backing singer for various singers and groups, including Antique during their Eurovision Song Contest 2001 performance to name one." ;
+        mtp:hasParticipant   meetup:b5d693097fd2359478156bea28bda4c1 ;
+        mtp:hasPurpose       meetup:ea98df80badf68ea06cd7e2f952767e4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shirley_Clamp> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b5d693097fd2359478156bea28bda4c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shirley_Clamp> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Shirley Clamp" .
+
+<http://dbpedia.org/resource/Shirley_Clamp>
+        rdf:type  core:Person .
+
+meetup:ea98df80badf68ea06cd7e2f952767e4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99961346" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00038371477" ;
+        mtp:hasSourcePurpose          "ML" .

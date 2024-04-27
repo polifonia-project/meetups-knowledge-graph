@@ -1,0 +1,98 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Adam_Carson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Jade_Puget>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Davey_Havok>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Geoff_Kresge>
+        rdf:type  core:Person .
+
+meetup:5b4b3dded31b802cf051903c982c6083
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jade_Puget> ;
+        mtp:hasOffset           "91" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jade Puget" .
+
+meetup:aa42c4a4efdf566b33d16ffd3197b6da
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Davey_Havok> ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Davey Havok" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:b474e06567d77aea3cf2fa2a08e18ef5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Geoff_Kresge> ;
+        mtp:hasOffset           "122" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Geoff Kresge" .
+
+meetup:bca8af54c966b272df79a7a330d16632
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8310432" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13697784" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1006647/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Adam Carson was raised in Ukiah, California, along with fellow AFI members Davey Havok and Jade Puget, and former members Geoff Kresge and Mark Stopholese." ;
+        mtp:hasParticipant   meetup:b474e06567d77aea3cf2fa2a08e18ef5 , meetup:5b4b3dded31b802cf051903c982c6083 , meetup:0736b8678ec64f36c17dc5d292ca6f5f , meetup:aa42c4a4efdf566b33d16ffd3197b6da ;
+        mtp:hasPurpose       meetup:bca8af54c966b272df79a7a330d16632 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Adam_Carson> ;
+        mtp:hasType          "HM" .
+
+meetup:7d72a22db6784c6f2fa3322034c9dc37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Adam_Carson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Adam Carson" .
+
+meetup:0736b8678ec64f36c17dc5d292ca6f5f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Adam_Carson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Adam Carson" .
+
+<http://w3id.org/polifonia/pilot/meetups/1006647/2/22>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "I remember my dad was in the garage and spent like an hour trying to get the bass and guitar in tune." ;
+        mtp:hasParticipant   meetup:7d72a22db6784c6f2fa3322034c9dc37 ;
+        mtp:hasPurpose       meetup:7f02c0e4c7d5639c3c1f9f6bebf09f9f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Adam_Carson> ;
+        mtp:hasType          "HT" .
+
+meetup:7f02c0e4c7d5639c3c1f9f6bebf09f9f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9451041" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.032367222" ;
+        mtp:hasSourcePurpose          "ML" .

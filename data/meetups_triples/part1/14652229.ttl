@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:9ab3fb09890fec551186eeb21c7f5fae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rudolf August Ordnung" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Peter_Igelhoff>
+        rdf:type  core:Person .
+
+meetup:bb18954e886f3861a4dff3b063f5f74b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Pianist and composer" ;
+        mtp:hasEvidencePurposeSecond  "Name change for career" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a6ff0ceb5c7510775873a6f146254fb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Igelhoff> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peter Igelhoff" .
+
+<http://w3id.org/polifonia/pilot/meetups/14652229/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Peter Igelhoff (born Rudolf August Ordnung, 22 July 1904 in Vienna – 8 April 1978 in Bad Reichenhall) was an Austrian pianist, light music and film composer, arranger and entertainer; he took his mother's maiden name as soon as he resolved on a career in light entertainment." ;
+        mtp:hasParticipant   meetup:a6ff0ceb5c7510775873a6f146254fb3 , meetup:9ab3fb09890fec551186eeb21c7f5fae ;
+        mtp:hasPurpose       meetup:bb18954e886f3861a4dff3b063f5f74b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Igelhoff> ;
+        mtp:hasType          "HM" .

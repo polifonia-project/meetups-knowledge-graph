@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Don_Martin_(cartoonist)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/535647/9/0>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Don_Martin_(cartoonist)> ;
+        mtp:hasType     "HM" .
+
+meetup:9804a0b844e9edb69edfc731c95b347a
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "May 18 , 1931 – January 6 , 2000" ;
+        mtp:hasSource        "ML" .
+
+meetup:c017f447a583a0bef14d652d33949995
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "1956 to 1988" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1956-01-01"^^xsd:date ;
+        time:hasEnd          "1988-12-31"^^xsd:date .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+meetup:b2b11396a5556b38c7556adf6c061ee1
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "The Day" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:a69370197056b28e6adc182c8d0aa0bb
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2001" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2001-01-01"^^xsd:date ;
+        time:hasEnd          "2001-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/535647/23/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:a69370197056b28e6adc182c8d0aa0bb , meetup:b2b11396a5556b38c7556adf6c061ee1 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Don_Martin_(cartoonist)> ;
+        mtp:hasType     "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/535647/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:9804a0b844e9edb69edfc731c95b347a , meetup:c017f447a583a0bef14d652d33949995 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Don_Martin_(cartoonist)> ;
+        mtp:hasType     "HT" .

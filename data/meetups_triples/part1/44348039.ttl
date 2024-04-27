@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/44348039/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dawid Kwiatkowski (born 1 January 1996) is a Polish singer-songwriter." ;
+        mtp:hasParticipant   meetup:512052c86d5b6d780ac605fec69c0dfd ;
+        mtp:hasPurpose       meetup:de7efee2ad54c1ec9ef69b6ba6d5ff56 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dawid_Kwiatkowski> ;
+        mtp:hasType          "HT" .
+
+meetup:de7efee2ad54c1ec9ef69b6ba6d5ff56
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9174661" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.059603002" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Dawid_Kwiatkowski>
+        rdf:type  core:Person .
+
+meetup:512052c86d5b6d780ac605fec69c0dfd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dawid_Kwiatkowski> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dawid Kwiatkowski" .

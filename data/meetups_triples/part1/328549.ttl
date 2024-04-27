@@ -1,0 +1,77 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jimmy_Driftwood>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Marcus_Morris>
+        rdf:type  core:Person .
+
+meetup:0363dedad75375e9d88ba8c84c9f0287
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Driftwood> ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jimmy Driftwood" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:79018d904085f1f32cf496e60bceb2ab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marcus_Morris> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.411286120852931" ;
+        mtp:hasTextEvidence     "Morris" .
+
+meetup:b591f4ea4ae800aa8dd1741317489163
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Driftwood> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "0.9999999999999004" ;
+        mtp:hasTextEvidence     "Jimmy Driftwood" .
+
+<http://w3id.org/polifonia/pilot/meetups/328549/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the 1950s, he changed his name to Jimmy Driftwood, both publicly and legally." ;
+        mtp:hasParticipant   meetup:b591f4ea4ae800aa8dd1741317489163 ;
+        mtp:hasPurpose       meetup:da217e3cdeaeb0861a85429856379fd9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Driftwood> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/328549/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Corbitt Morris (June 20, 1907 – July 12, 1998), known professionally as Jimmy Driftwood or Jimmie Driftwood, was an American folk music songwriter and musician, most famous for his songs \"The Battle of New Orleans\" and \"Tennessee Stud\"." ;
+        mtp:hasParticipant   meetup:79018d904085f1f32cf496e60bceb2ab , meetup:0363dedad75375e9d88ba8c84c9f0287 ;
+        mtp:hasPurpose       meetup:176157874ccd1e2972ce77be8d9de8f0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Driftwood> ;
+        mtp:hasType          "HM" .
+
+meetup:da217e3cdeaeb0861a85429856379fd9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.726347" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2432884" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:176157874ccd1e2972ce77be8d9de8f0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9435598" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.056307185" ;
+        mtp:hasSourcePurpose          "ML" .

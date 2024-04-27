@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:11c9f9f11ddc0f77a189c87153530dfa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Toño_Rosario> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999950046856" ;
+        mtp:hasTextEvidence     "Tono Rosario" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Toño_Rosario>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:ce63cdcd354834a77eda0b8351ba0d77
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marilyn Brenes" .
+
+meetup:2f355f722771d3bbdec304b958fd2152
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "A public celebration of a marriage" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/3597058/6/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tono Rosario married Marilyn Brenes in 1983, at Marriage Palace, in New York City." ;
+        mtp:hasParticipant   meetup:ce63cdcd354834a77eda0b8351ba0d77 , meetup:11c9f9f11ddc0f77a189c87153530dfa ;
+        mtp:hasPurpose       meetup:2f355f722771d3bbdec304b958fd2152 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Toño_Rosario> ;
+        mtp:hasType          "HM" .

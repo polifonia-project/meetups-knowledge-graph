@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Daniel_Johns>
+        rdf:type  core:Person .
+
+meetup:bb89d5e000708864a87e297a64c7478c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Johns' personal life and defamation lawsuit" ;
+        mtp:hasEvidencePurposeSecond  "False story and its impact on Johns and his family" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/184996/18/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"On 11 August 2019, The Sunday Telegraph and the Daily Mail published a false story about Johns alleging that he had been spending his time at a notorious Sydney S&M brothel and bondage club called The Kastle. Johns sued The Sunday Telegraph and the Daily Mail for defamation and denied the allegations, describing them as \"simply untrue\" and \"hurtful, humiliating, and damaging to me and my family\"." ;
+        mtp:hasParticipant   meetup:8b6c402aa06ed1beabb7a7eaa2edd100 ;
+        mtp:hasPurpose       meetup:bb89d5e000708864a87e297a64c7478c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daniel_Johns> ;
+        mtp:hasType          "HT" .
+
+meetup:8b6c402aa06ed1beabb7a7eaa2edd100
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doug_Johns> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johns" .
+
+<http://dbpedia.org/resource/Doug_Johns>
+        rdf:type  core:Person .

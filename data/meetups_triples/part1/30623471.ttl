@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/30623471/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christabel Baxendale (1886–after 1953?) was an English violinist and composer \"of considerable talent.\"" ;
+        mtp:hasParticipant   meetup:091b0be4cdcfb7c6da8cba2dc4d9bd7d ;
+        mtp:hasPurpose       meetup:31d76a5fe7091af12f9b404a1da81259 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christabel_Baxendale> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Christabel_Baxendale>
+        rdf:type  core:Person .
+
+meetup:091b0be4cdcfb7c6da8cba2dc4d9bd7d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christabel_Baxendale> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999348362985" ;
+        mtp:hasTextEvidence     "Christabel Baxendale" .
+
+<http://dbpedia.org/resource/Kathleen_Garman>
+        rdf:type  core:Person .
+
+meetup:a0b828fc1cc91ab166aecfa615900fba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christabel_Baxendale> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Christabel Baxendale" .
+
+<http://w3id.org/polifonia/pilot/meetups/30623471/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was active in the early 1900s until at least 1921 and gave concerts in the London area, sometimes with her older sister, Kathleen Baxendale, who was a soprano opera singer." ;
+        mtp:hasParticipant   meetup:f00dc0ac9a44529e9160855b48b8643c , meetup:a0b828fc1cc91ab166aecfa615900fba ;
+        mtp:hasPurpose       meetup:beadbb91cad042dec791c047ab28f1e8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christabel_Baxendale> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:beadbb91cad042dec791c047ab28f1e8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing concerts in London" ;
+        mtp:hasEvidencePurposeSecond  "Family relationship with sister" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f00dc0ac9a44529e9160855b48b8643c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kathleen_Garman> ;
+        mtp:hasOffset           "125" ;
+        mtp:hasSimilarityScore  "0.9811891053748896" ;
+        mtp:hasTextEvidence     "Kathleen" .
+
+meetup:31d76a5fe7091af12f9b404a1da81259
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9994017" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00052145007" ;
+        mtp:hasSourcePurpose          "ML" .

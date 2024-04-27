@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/16287117/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jon Mayer (born September 7, 1938 in New York City) is an American jazz pianist and composer." ;
+        mtp:hasParticipant   meetup:b1257666a0ae64b106345f1edd8d0be5 ;
+        mtp:hasPurpose       meetup:68cee96c3f1261fd8ceba980408e4a60 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jon_Mayer> ;
+        mtp:hasType          "HT" .
+
+meetup:68cee96c3f1261fd8ceba980408e4a60
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9217962" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07759742" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jon_Mayer>
+        rdf:type  core:Person .
+
+meetup:b1257666a0ae64b106345f1edd8d0be5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jon_Mayer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999958172303646" ;
+        mtp:hasTextEvidence     "Jon Mayer" .

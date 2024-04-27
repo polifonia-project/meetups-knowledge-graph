@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1524170/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Between 1993 and April 30, 2010, she was the co-host of CBC Radio One's As It Happens." ;
+        mtp:hasParticipant   meetup:e811c8acee2f0a8a43d7c4c351fd7784 ;
+        mtp:hasPurpose       meetup:4aa6cac59730e1824ea7fbd24dd31690 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barbara_Budd> ;
+        mtp:hasType          "HT" .
+
+meetup:e811c8acee2f0a8a43d7c4c351fd7784
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barbara_Budd> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Barbara Budd" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:80059c5270cee6784082e4a8ce22f3cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barbara_Budd> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Barbara Budd" .
+
+meetup:4aa6cac59730e1824ea7fbd24dd31690
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.884077" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05273781" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1524170/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Barbara Budd (born May 23, 1951) is a Canadian actress, narrator and radio announcer." ;
+        mtp:hasParticipant   meetup:80059c5270cee6784082e4a8ce22f3cc ;
+        mtp:hasPurpose       meetup:3a4712ed1a350e1cb6c16aa208895aaa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barbara_Budd> ;
+        mtp:hasType          "HT" .
+
+meetup:3a4712ed1a350e1cb6c16aa208895aaa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5639984" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.37539923" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Barbara_Budd>
+        rdf:type  core:Person .

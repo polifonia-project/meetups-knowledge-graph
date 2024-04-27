@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:fe1654c9a161f124d85a0a74b25023ef
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7193158" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.27275378" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:dd04a0093130d614be14f7f19b345e70
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Stanley_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bob Stanley" .
+
+meetup:94a82d3d4c8e2ff461c4fbfba77ad5bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Stanley_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7792387822704064" ;
+        mtp:hasTextEvidence     "Bob Stanley" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3e6a5c3485801f62190a157a188749b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Robert Andrew Shukman" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/3627214/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also has a career as a DJ and as a producer of record labels, and has collaborated on a series of films about London." ;
+        mtp:hasParticipant   meetup:dd04a0093130d614be14f7f19b345e70 ;
+        mtp:hasPurpose       meetup:41137e404dbd6ae791a3550b2d2adc89 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Stanley_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/3627214/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Stanley (born Robert Andrew Shukman; 25 December 1964) is a British musician, journalist, author, and film producer." ;
+        mtp:hasParticipant   meetup:94a82d3d4c8e2ff461c4fbfba77ad5bd , meetup:3e6a5c3485801f62190a157a188749b7 ;
+        mtp:hasPurpose       meetup:fe1654c9a161f124d85a0a74b25023ef ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Stanley_(musician)> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/3627214/14/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While recording the album Finisterre in 2002, Stanley, Pete Wiggs and frequent collaborator Paul Kelly made a film to accompany the record, also titled Finisterre, which was described by The Observer as a \"cinematic hymn to London\". It premiered at the Institute of Contemporary Arts in London and was screened around the world by one dot zero." ;
+        mtp:hasPurpose       meetup:f67ccdf590304781757c2a445d9377ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Stanley_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bob_Stanley_(musician)>
+        rdf:type  core:Person .
+
+meetup:41137e404dbd6ae791a3550b2d2adc89
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999932" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.7096453e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f67ccdf590304781757c2a445d9377ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Creating a film to accompany an album" ;
+        mtp:hasEvidencePurposeSecond  "Premiere and global screenings of the film" ;
+        mtp:hasSourcePurpose          "LLM" .

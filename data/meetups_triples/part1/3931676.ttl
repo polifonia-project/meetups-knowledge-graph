@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Dave_Pell>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:249524a0e259f8b99502474a2ed8844a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.989151" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009217853" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Bob_Florence>
+        rdf:type  core:Person .
+
+meetup:8791fd4dd91928fe280329df62166fa4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Pell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dave Pell" .
+
+meetup:a0b534fc9f47d8f01b2a51275fa2e7ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creating music arrangements" ;
+        mtp:hasEvidencePurposeSecond  "Professional collaboration" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:60f19493c1bfe6ac01c21623dca5a949
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Florence> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Florence" .
+
+<http://w3id.org/polifonia/pilot/meetups/3931676/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Florence (May 20, 1932 – May 15, 2008) was an American pianist, composer, arranger, and big band leader." ;
+        mtp:hasParticipant   meetup:60f19493c1bfe6ac01c21623dca5a949 ;
+        mtp:hasPurpose       meetup:249524a0e259f8b99502474a2ed8844a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Florence> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/3931676/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His arrangement of \"(Up A) Lazy River\" for Si Zentner was a hit in 1960, and won a Grammy Award. Dave Pell hired him to work full-time as an arranger for Liberty Records." ;
+        mtp:hasParticipant   meetup:8791fd4dd91928fe280329df62166fa4 ;
+        mtp:hasPurpose       meetup:a0b534fc9f47d8f01b2a51275fa2e7ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Florence> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1e2ef49faa4c230411fd95bed619dfb7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9053625" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09458723" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/33988045/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Manning (February 1, 1926 – October 23, 1997) was an American big band singer who was popular in the 1950s, and well known through his radio and television appearances." ;
+        mtp:hasParticipant   meetup:ff03f135764760204dbf16ac7f669e9f ;
+        mtp:hasPurpose       meetup:1e2ef49faa4c230411fd95bed619dfb7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Manning_(pop_singer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bob_Manning_(pop_singer)>
+        rdf:type  core:Person .
+
+meetup:ff03f135764760204dbf16ac7f669e9f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Manning_(pop_singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.4897851880215585" ;
+        mtp:hasTextEvidence     "Bob Manning" .

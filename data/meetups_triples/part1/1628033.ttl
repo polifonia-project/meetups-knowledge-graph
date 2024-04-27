@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ernie_C>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1628033/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ernie Cunnigan (born June 10, 1959), better known by his stage name Ernie C, is an American musician best known as the guitarist of heavy metal band Body Count." ;
+        mtp:hasParticipant   meetup:17c21167d656f0a866085e13738d1e49 , meetup:81312a69a1e0685fdd60ec5becaaa7b9 ;
+        mtp:hasPurpose       meetup:f2db213b3dd12834b843ef93048e899c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ernie_C> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:81312a69a1e0685fdd60ec5becaaa7b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ernie Cunnigan" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:17c21167d656f0a866085e13738d1e49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ernie_C> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ernie C" .
+
+meetup:f2db213b3dd12834b843ef93048e899c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998332" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00013255811" ;
+        mtp:hasSourcePurpose          "ML" .

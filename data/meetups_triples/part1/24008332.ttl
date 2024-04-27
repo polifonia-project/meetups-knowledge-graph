@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:79b72d78031a47a1526348feb8381d36
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Advocacy for animal welfare" ;
+        mtp:hasEvidencePurposeSecond  "Involvement in a campaign" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Xian_Lim>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Susan_Lim_(parasitologist)>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/24008332/12/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During 2013, Lim joined the PETA Free Mali campaign along with Kim Chiu. Lim made a video plea for Mali asking that she be moved to a sanctuary for the sake of her well-being." ;
+        mtp:hasPurpose       meetup:79b72d78031a47a1526348feb8381d36 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Xian_Lim> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/24008332/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in San Francisco, California, Lim and his family moved back to Manila, Philippines six months after his birth. Following his parent's separation, he (age 10) and his mother relocated to Daly City, California." ;
+        mtp:hasParticipant   meetup:6daea0983e1bff8df6cc953512cfa776 ;
+        mtp:hasPurpose       meetup:edc46b859a74fa2512e48eace5f41062 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Xian_Lim> ;
+        mtp:hasType          "HT" .
+
+meetup:edc46b859a74fa2512e48eace5f41062
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about schooling or learning" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6daea0983e1bff8df6cc953512cfa776
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Susan_Lim_(parasitologist)> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lim" .

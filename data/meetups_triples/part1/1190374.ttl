@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1190374/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy Beck, who changed his name to Johnny Sandon (born William Beck, 27 May 1941, Liverpool - died 23 December 1996) became the lead singer. The band had regular bookings at Liverpool's Iron Door Club as \"Johnny Sandon and The Searchers\"." ;
+        mtp:hasPurpose       meetup:a65b4b409c65970f0d6d293368bf4ec1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/The_Searchers_(band)> ;
+        mtp:hasType          "HT" .
+
+meetup:a65b4b409c65970f0d6d293368bf4ec1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a band and their lead singer." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the birth and death dates of the lead singer." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/The_Searchers_(band)>
+        rdf:type  core:Person .

@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Hans_Zimmer>
+        rdf:type  core:Person .
+
+meetup:ecc6ea822244623f64424bea860dffc7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hans_Zimmer> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hans Zimmer" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:986fe223d031d09cec7186015b81a895
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Mancina> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mark Mancina" .
+
+<http://w3id.org/polifonia/pilot/meetups/1046161/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A veteran of Hans Zimmer's Media Ventures, Mancina has scored over sixty films and television series including Speed, Bad Boys, Twister, Tarzan, Training Day, Brother Bear, Criminal Minds, Blood+, and Moana." ;
+        mtp:hasParticipant   meetup:986fe223d031d09cec7186015b81a895 , meetup:ecc6ea822244623f64424bea860dffc7 ;
+        mtp:hasPurpose       meetup:7fef04d0c4556c2fa5f51e6761ed08ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Mancina> ;
+        mtp:hasType          "HM" .
+
+meetup:7fef04d0c4556c2fa5f51e6761ed08ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9948833" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0023596645" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Mark_Mancina>
+        rdf:type  core:Person .

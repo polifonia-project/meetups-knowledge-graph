@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/36212122/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009, JP moved to Tokyo, Japan and began collaborating with R&B singer Misia. The first song he wrote for her was \"Work It Out\", which was included on her 2009 album Just Ballade." ;
+        mtp:hasPurpose       meetup:7682d39fe8d0a9b579e1bdf5dc55dc2e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/JP_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/36212122/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Paul \"JP\" Lam (born April 20, 1984 in Honolulu, Hawaii) is an American singer and songwriter. He is notable for his collaborations with R&B singer Misia, which have found widespread popularity in  South Korea and Japan." ;
+        mtp:hasParticipant   meetup:628f4ddda0e3f801817f8d4cfeecf8f7 ;
+        mtp:hasPurpose       meetup:0dbab5ba5077551f0d648c1c1643f5b3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/JP_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/JP_(musician)>
+        rdf:type  core:Person .
+
+meetup:0dbab5ba5077551f0d648c1c1643f5b3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "JP Lam is a singer and songwriter" ;
+        mtp:hasEvidencePurposeSecond  "JP Lam's collaborations with Misia are popular in South Korea and Japan" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:7682d39fe8d0a9b579e1bdf5dc55dc2e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Collaborating with R&B singer" ;
+        mtp:hasEvidencePurposeSecond  "Moving to Tokyo, Japan" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:628f4ddda0e3f801817f8d4cfeecf8f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Misia> ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "0.9999978200020964" ;
+        mtp:hasTextEvidence     "Misia" .
+
+<http://dbpedia.org/resource/Misia>
+        rdf:type  core:Person .

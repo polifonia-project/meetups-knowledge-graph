@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Claude_Jones>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:99f1980f02949e8a501c4c641c7e1020
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999827" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.7005013e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/16360339/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Claude Jones (February 11, 1901 – January 17, 1962) was an American jazz trombonist." ;
+        mtp:hasParticipant   meetup:8b9bf64c2255d6767355e2cae4d52b2d ;
+        mtp:hasPurpose       meetup:99f1980f02949e8a501c4c641c7e1020 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Claude_Jones> ;
+        mtp:hasType          "HT" .
+
+meetup:8b9bf64c2255d6767355e2cae4d52b2d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Claude_Jones> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999482724" ;
+        mtp:hasTextEvidence     "Claude Jones" .

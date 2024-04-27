@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/1548306/10/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has appeared on various TV shows such as Good Morning America and Live with Regis and Kathie Lee." ;
+        mtp:hasParticipant   meetup:5ab20dd387f62ae27a4d3310ecc73fc3 ;
+        mtp:hasPurpose       meetup:a85d095eb7f0dcd7c486e383f0ed4f86 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jim_Brickman> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:a85d095eb7f0dcd7c486e383f0ed4f86
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7290271" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2387328" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fb8382c295b471385691af539aaa0a9f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jim_Brickman> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jim Brickman" .
+
+<http://dbpedia.org/resource/Jim_Brickman>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1548306/8/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Two years later, his podcast moved to Spotify as The Brickman Bedtime Story." ;
+        mtp:hasParticipant   meetup:fb8382c295b471385691af539aaa0a9f ;
+        mtp:hasPurpose       meetup:e2e9b9befbc9f5326d7847eac313108d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jim_Brickman> ;
+        mtp:hasType          "HT" .
+
+meetup:5ab20dd387f62ae27a4d3310ecc73fc3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jim_Brickman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jim Brickman" .
+
+meetup:e2e9b9befbc9f5326d7847eac313108d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7337915" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13654585" ;
+        mtp:hasSourcePurpose          "ML" .

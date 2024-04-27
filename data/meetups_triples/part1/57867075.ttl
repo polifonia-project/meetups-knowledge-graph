@@ -1,0 +1,104 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Jon_Randall>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/57867075/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Travis Denning (born December 1, 1992) is an American country music singer and songwriter signed to UMG Nashville's Mercury Nashville label." ;
+        mtp:hasParticipant   meetup:c8e6afd8942fd3538abc78ad21e69da1 ;
+        mtp:hasPurpose       meetup:ea1be8cab731cab5d422dce5ecb25d31 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Travis_Denning> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:54d2acfe817fd5349c54cc275ee93d83
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.69204515" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.25945437" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:559277e18d995df2a0408b3d8acd8b85
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Travis_Denning> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Travis Denning" .
+
+meetup:d486ccce959b64996dd7fcc95129c279
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Songwriting collaboration" ;
+        mtp:hasEvidencePurposeSecond  "Identity forgery" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/57867075/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has charted with the singles \"David Ashley Parker from Powder Springs\" and \"After a Few\", the latter of which has reached number one on the United States Country Airplay chart." ;
+        mtp:hasParticipant   meetup:559277e18d995df2a0408b3d8acd8b85 ;
+        mtp:hasPurpose       meetup:54d2acfe817fd5349c54cc275ee93d83 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Travis_Denning> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:19b8045f5c28d6af8d24596a2bf1c07b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jon_Randall> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jon Randall" .
+
+meetup:74eef2e72cc197bcd45df76bc3e1e2a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jessi_Alexander> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jessi Alexander" .
+
+<http://dbpedia.org/resource/Travis_Denning>
+        rdf:type  core:Person .
+
+meetup:ea1be8cab731cab5d422dce5ecb25d31
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8563831" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10412118" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jessi_Alexander>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/57867075/2/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"David Ashley Parker from Powder Springs\" is based on Denning's real-life experiences with identity document forgery when he was underaged, and David Ashley Parker is a real person whose identity Denning used to buy beer and cigarettes when he was not old enough to do so legally. Denning wrote the song with Jon Randall and Jessi Alexander." ;
+        mtp:hasParticipant   meetup:19b8045f5c28d6af8d24596a2bf1c07b , meetup:74eef2e72cc197bcd45df76bc3e1e2a7 ;
+        mtp:hasPurpose       meetup:d486ccce959b64996dd7fcc95129c279 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Travis_Denning> ;
+        mtp:hasType          "HT" .
+
+meetup:c8e6afd8942fd3538abc78ad21e69da1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Travis_Denning> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Travis Denning" .

@@ -1,0 +1,37 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/24823344/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:3d7ef543de9eb3b2ae6ba5f11dffef50 , meetup:9174eb592e183fbefd74d0b8351f6e82 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ben_Cramer> ;
+        mtp:hasType     "HM" .
+
+<http://dbpedia.org/resource/Ben_Cramer>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:9174eb592e183fbefd74d0b8351f6e82
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "17 February 1947" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1947-02-17"^^xsd:date ;
+        time:hasEnd          "1947-02-17"^^xsd:date .
+
+meetup:3d7ef543de9eb3b2ae6ba5f11dffef50
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1973" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1973-01-01"^^xsd:date ;
+        time:hasEnd          "1973-12-31"^^xsd:date .

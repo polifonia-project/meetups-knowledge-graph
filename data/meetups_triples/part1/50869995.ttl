@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/50869995/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Noah Solomon Chase (born 1973) is an Israeli–American musician, best known as the lead singer, guitarist, and mandolinist for the Jewish rock band Soulfarm." ;
+        mtp:hasParticipant   meetup:d31be3689ee11e2843efe68e5c211288 ;
+        mtp:hasPurpose       meetup:4c04a5816175340096a2fa8364b8ddc3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Noah_Solomon> ;
+        mtp:hasType          "HT" .
+
+meetup:4c04a5816175340096a2fa8364b8ddc3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Noah Solomon Chase is a musician" ;
+        mtp:hasEvidencePurposeSecond  "Noah Solomon Chase is an Israeli-American" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d31be3689ee11e2843efe68e5c211288
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Noah_Solomon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Noah Solomon" .
+
+<http://dbpedia.org/resource/Noah_Solomon>
+        rdf:type  core:Person .

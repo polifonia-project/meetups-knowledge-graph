@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5d9316797bad851cd88c298f67525ece
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yuki_Matsuzawa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999990146830576" ;
+        mtp:hasTextEvidence     "Yuki Matsuzawa" .
+
+meetup:55c1ee477d097fe00102fae568ba85f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6544779" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.33944637" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/21006959/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yuki Matsuzawa (born 1960 in Tokyo) is a Japanese pianist." ;
+        mtp:hasParticipant   meetup:5d9316797bad851cd88c298f67525ece ;
+        mtp:hasPurpose       meetup:55c1ee477d097fe00102fae568ba85f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuki_Matsuzawa> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Yuki_Matsuzawa>
+        rdf:type  core:Person .

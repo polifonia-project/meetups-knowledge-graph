@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/27470180/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "René Gagnier (30 May 1892 – 25 May 1951) was a Canadian conductor, composer, euphonium player, violinist, and music educator." ;
+        mtp:hasParticipant   meetup:e120eaf41d5af0141e243c824e2c4a5b ;
+        mtp:hasPurpose       meetup:b9ca088eb4de5d3ef8b181161aae3628 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/René_Gagnier> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e120eaf41d5af0141e243c824e2c4a5b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/René_Gagnier> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "René Gagnier" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b9ca088eb4de5d3ef8b181161aae3628
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9759151" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.019787336" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/René_Gagnier>
+        rdf:type  core:Person .

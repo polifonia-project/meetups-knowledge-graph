@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/DJ_Webstar>
+        rdf:type  core:Person .
+
+meetup:854faf932c0e44a20fd9b0fb1c8864bb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DJ_Webstar> ;
+        mtp:hasOffset           "66" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "DJ Webstar" .
+
+<http://w3id.org/polifonia/pilot/meetups/8338988/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Troy Ryan (born October 25, 1986), better known by his stage name DJ Webstar (or simply Webstar) is an American DJ and record producer." ;
+        mtp:hasParticipant   meetup:fc0545cfbffd4e60226463b73a8f96e0 , meetup:854faf932c0e44a20fd9b0fb1c8864bb ;
+        mtp:hasPurpose       meetup:c1df92ae55be1756d6f76de4f91c29ad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Webstar> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:c1df92ae55be1756d6f76de4f91c29ad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5584412" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.43149066" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fc0545cfbffd4e60226463b73a8f96e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Troy_Ryan_(ice_hockey)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999973908432696" ;
+        mtp:hasTextEvidence     "Troy Ryan" .
+
+<http://dbpedia.org/resource/Troy_Ryan_(ice_hockey)>
+        rdf:type  core:Person .

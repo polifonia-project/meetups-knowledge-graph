@@ -1,0 +1,102 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jimi_Hendrix>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:296b964bada43cc57784e5be51196359
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimi_Hendrix> ;
+        mtp:hasOffset           "124" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Jimi Hendrix" .
+
+<http://dbpedia.org/resource/David_Redfern>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/9364369/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked as a photographer for 45 years and had over 10,000 pictures in his collection including photos of the Beatles and Jimi Hendrix." ;
+        mtp:hasParticipant   meetup:296b964bada43cc57784e5be51196359 , meetup:6ea061d5a5ecaf6945e17f8615dc0586 ;
+        mtp:hasPurpose       meetup:51f149bba8235b95651775c6ff370382 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Redfern> ;
+        mtp:hasType          "HM" .
+
+meetup:e3338fed5c063a3b05687668eb23ea33
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Redfern> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David Redfern" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:6f909ec0ebc577670309bf34a1cad407
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9989819" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010107146" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:51f149bba8235b95651775c6ff370382
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9571464" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0427483" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6ea061d5a5ecaf6945e17f8615dc0586
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Redfern> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David Redfern" .
+
+meetup:5aea6e992beb54c350b90335519065c4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92864716" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07110296" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3b74226b6ac5c776c822013a30715d80
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Redfern> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Redfern" .
+
+<http://w3id.org/polifonia/pilot/meetups/9364369/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1999 he published a book about his life called The Unclosed Eye." ;
+        mtp:hasParticipant   meetup:e3338fed5c063a3b05687668eb23ea33 ;
+        mtp:hasPurpose       meetup:5aea6e992beb54c350b90335519065c4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Redfern> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/9364369/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Redfern (7 June 1936 – 22 October 2014) was an English photographer specialising in music photography." ;
+        mtp:hasParticipant   meetup:3b74226b6ac5c776c822013a30715d80 ;
+        mtp:hasPurpose       meetup:6f909ec0ebc577670309bf34a1cad407 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Redfern> ;
+        mtp:hasType          "HT" .

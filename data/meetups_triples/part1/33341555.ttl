@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:c4154bcef565e24f96b4469f0546dc6a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/PJ_Bianco> ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "PJ Bianco" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:74455a820687d30c88bacad750aacb48
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "0.8613186813104123" ;
+        mtp:hasTextEvidence     "James" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9d75f4b611b9d142668a0485bd66b675
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Music production and songwriting" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration and professional work" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/33341555/10/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He produced and co-wrote \"Please Don't Let Go\" and \"Like a Rock\" for RCA Records recording artist BC Jean. He produced and co-wrote \"Breath\" for singer-songwriter and producer Drew Ryan Scott." ;
+        mtp:hasPurpose       meetup:9d75f4b611b9d142668a0485bd66b675 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/PJ_Bianco> ;
+        mtp:hasType          "HT" .
+
+meetup:89dcf91ffe5046bb6676deb3867c3d83
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "PJ Bianco is a songwriter and record producer." ;
+        mtp:hasEvidencePurposeSecond  "PJ Bianco is an artist developer." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/33341555/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Patrick James Bianco (born February 26, 1981), better known as PJ Bianco, is an American songwriter, record producer and artist developer from New Jersey." ;
+        mtp:hasParticipant   meetup:74455a820687d30c88bacad750aacb48 , meetup:c4154bcef565e24f96b4469f0546dc6a ;
+        mtp:hasPurpose       meetup:89dcf91ffe5046bb6676deb3867c3d83 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/PJ_Bianco> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/PJ_Bianco>
+        rdf:type  core:Person .

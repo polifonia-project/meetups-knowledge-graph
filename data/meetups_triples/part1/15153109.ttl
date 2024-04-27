@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Donna_Henes>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/15153109/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Henes is originally from Cleveland, Ohio." ;
+        mtp:hasParticipant   meetup:737d5aaef661be8638b203d8f6812540 ;
+        mtp:hasPurpose       meetup:25a1a97e7bfc0ec7fb7d8bc39b4b6656 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Donna_Henes> ;
+        mtp:hasType          "HT" .
+
+meetup:25a1a97e7bfc0ec7fb7d8bc39b4b6656
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998283" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.6362299e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:06648310ab1cf4afd9fe9248fb4f2198
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Donna_Henes> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Donna Henes" .
+
+meetup:b1e661de3c4671a74e0d04aded142edc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9647271" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.026190303" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/15153109/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Donna Henes (born September 19, 1945) is a ceremonial artist, urban shaman, ritual expert and consultant, speaker, workshop leader and award-winning writer." ;
+        mtp:hasParticipant   meetup:06648310ab1cf4afd9fe9248fb4f2198 ;
+        mtp:hasPurpose       meetup:b1e661de3c4671a74e0d04aded142edc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Donna_Henes> ;
+        mtp:hasType          "HT" .
+
+meetup:737d5aaef661be8638b203d8f6812540
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Donna_Henes> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Donna Henes" .

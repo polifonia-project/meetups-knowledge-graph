@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Corrinne_May>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:39cb4305db24885cb41f7e6ceb9d10f4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Corrinne Foo May Ying" .
+
+meetup:bb8854db27ca37e6a554f61539d1311f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.76350236" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22698407" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/38483445/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Corrinne May (born Corrinne Foo May Ying; 19 January 1973) is a Los Angeles-based Singaporean musician, singer, and songwriter." ;
+        mtp:hasParticipant   meetup:39cb4305db24885cb41f7e6ceb9d10f4 , meetup:f5ee4be0e99c29e02ab2d58da75fb681 ;
+        mtp:hasPurpose       meetup:bb8854db27ca37e6a554f61539d1311f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Corrinne_May> ;
+        mtp:hasType          "HM" .
+
+meetup:f5ee4be0e99c29e02ab2d58da75fb681
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Corrinne_May> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Corrinne May" .

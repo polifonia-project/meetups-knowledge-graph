@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/John_Handy>
+        rdf:type  core:Person .
+
+meetup:6a12c8d82f6693463839c97d3f6d532e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Handy> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "0.9999524639536302" ;
+        mtp:hasTextEvidence     "John Handy" .
+
+meetup:5e455ed6d920b0e48e538d3792b6c761
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99988914" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00010900101" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0b4d9a617225f68d309fd9f6e96dc50e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97945136" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01895204" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f387fc7456b2b415f8080942ae5ee7ea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Handy> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9993474165683176" ;
+        mtp:hasTextEvidence     "John Handy" .
+
+<http://w3id.org/polifonia/pilot/meetups/3954218/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The 2nd John Handy Album (Columbia, 1966)" ;
+        mtp:hasParticipant   meetup:6a12c8d82f6693463839c97d3f6d532e ;
+        mtp:hasPurpose       meetup:0b4d9a617225f68d309fd9f6e96dc50e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Handy> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/3954218/23/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Handy's Musical Dreamland (Boulevard, 1996)" ;
+        mtp:hasParticipant   meetup:f387fc7456b2b415f8080942ae5ee7ea ;
+        mtp:hasPurpose       meetup:5e455ed6d920b0e48e538d3792b6c761 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Handy> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:06e4f69ef3224f84733106c550ff2ae7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about leading a band in Cleveland." ;
+        mtp:hasEvidencePurposeSecond  "The band's longest engagement was at a hotel in Cleveland." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Sammy_Watkins_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2100842/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He continued to lead a band, based primarily in Cleveland, into the 1960s. The band's longest engagement was at Hollenden Hotel's Vogue Room in Cleveland, Ohio." ;
+        mtp:hasParticipant   meetup:be878d6c3f54536becfe70422b8ffd89 ;
+        mtp:hasPurpose       meetup:06e4f69ef3224f84733106c550ff2ae7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sammy_Watkins_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Sammy_Watkins>
+        rdf:type  core:Person .
+
+meetup:be878d6c3f54536becfe70422b8ffd89
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sammy_Watkins> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sammy Watkins" .

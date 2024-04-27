@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/42091779/13/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His original, \"Dan Smith Piano\" was stolen in 2010." ;
+        mtp:hasParticipant   meetup:e8a6b98db95e219c399a88e2e23951ef ;
+        mtp:hasPurpose       meetup:2d3d39c1a50a9d310476cfd8fb916c86 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Smith_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:2d3d39c1a50a9d310476cfd8fb916c86
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9885737" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011376801" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a8ac2f3ef2fcf4d16c4e73b57fd8109d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.56904197" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19537413" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Dan_Smith_(singer)>
+        rdf:type  core:Person .
+
+meetup:e8a6b98db95e219c399a88e2e23951ef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dan_Smith_(singer)> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "0.700966074890382" ;
+        mtp:hasTextEvidence     "Dan Smith" .
+
+<http://w3id.org/polifonia/pilot/meetups/42091779/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2014, Dan Smith took part in the Band Aid charity single, \"Do They Know It's Christmas?\"." ;
+        mtp:hasParticipant   meetup:16002e9f115c1406806897c7e689e032 ;
+        mtp:hasPurpose       meetup:a8ac2f3ef2fcf4d16c4e73b57fd8109d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Smith_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:16002e9f115c1406806897c7e689e032
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dan_Smith_(singer)> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.7009653404860527" ;
+        mtp:hasTextEvidence     "Dan Smith" .

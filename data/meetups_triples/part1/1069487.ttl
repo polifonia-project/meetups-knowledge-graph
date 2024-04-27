@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1069487/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jimmy Deuchar (Discovery, 1953)" ;
+        mtp:hasParticipant   meetup:ce7ca604f741a2bc34bf638a2cffdaab ;
+        mtp:hasPurpose       meetup:a03740e24d743835eda6cc225609077f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Deuchar> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jimmy_Deuchar>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a03740e24d743835eda6cc225609077f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9967205" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0026911132" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ce7ca604f741a2bc34bf638a2cffdaab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Deuchar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Jimmy Deuchar" .
+
+meetup:d372bb53309e7d8c4cd996025b5e4501
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music as a profession" ;
+        mtp:hasEvidencePurposeSecond  "Personal experiences and health" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1069487/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He returned to London around 1971, working freelance, and then to Dundee in the mid-1970s. He continued to arrange, play and guest in a number of settings, including the BBC Big Band in London and the BBC Scottish Radio Orchestra in Glasgow, until his health deteriorated." ;
+        mtp:hasPurpose       meetup:d372bb53309e7d8c4cd996025b5e4501 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Deuchar> ;
+        mtp:hasType          "HT" .

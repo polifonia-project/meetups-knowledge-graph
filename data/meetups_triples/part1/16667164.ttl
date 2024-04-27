@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Preston_Jackson>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f5fcdd50c38b738e61e8421ffcb12e41
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9905425" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009398963" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/16667164/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Preston McDonald, better known by his stage name Preston Jackson (January 3, 1902 – November 12, 1983) was an American jazz trombonist." ;
+        mtp:hasParticipant   meetup:3152fd4c5c6a662be84e1c6ecdb91b68 ;
+        mtp:hasPurpose       meetup:f5fcdd50c38b738e61e8421ffcb12e41 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Preston_Jackson> ;
+        mtp:hasType          "HT" .
+
+meetup:3152fd4c5c6a662be84e1c6ecdb91b68
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Preston_Jackson> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "0.9999999998908038" ;
+        mtp:hasTextEvidence     "Preston Jackson" .

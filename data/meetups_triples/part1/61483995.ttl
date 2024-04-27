@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:36147c6d3ef8fadfe6b4156292354d8e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.4061266" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.34529352" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:23f9f5f830c7eb474630964fe3b6b153
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simone_Menezes> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999801046764532" ;
+        mtp:hasTextEvidence     "Simone Menezes" .
+
+<http://dbpedia.org/resource/Simone_Menezes>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/61483995/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Simone Menezes (born 22 January 1977) is an Italo-Brazilian conductor based in France." ;
+        mtp:hasParticipant   meetup:23f9f5f830c7eb474630964fe3b6b153 ;
+        mtp:hasPurpose       meetup:36147c6d3ef8fadfe6b4156292354d8e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simone_Menezes> ;
+        mtp:hasType          "HT" .

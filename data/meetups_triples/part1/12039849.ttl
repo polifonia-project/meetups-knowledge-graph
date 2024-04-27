@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Don_Preston_(guitarist)>
+        rdf:type  core:Person .
+
+meetup:79b3514f212caa9198b5ae4f159803fb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Art_Laboe> ;
+        mtp:hasOffset           "149" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Art Laboe" .
+
+<http://w3id.org/polifonia/pilot/meetups/12039849/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Within a few years, Preston would be playing the same bills with them as they headlined in the Los Angeles area. He had the opportunity to play his guitar with many other icons in clubs, halls, and historic L.A. venues like El Monte Legion Stadium, emcee’d by Art Laboe." ;
+        mtp:hasParticipant   meetup:79b3514f212caa9198b5ae4f159803fb ;
+        mtp:hasPurpose       meetup:838538dc1ed3193a65788181dd33ca9d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Don_Preston_(guitarist)> ;
+        mtp:hasType          "HT" .
+
+meetup:838538dc1ed3193a65788181dd33ca9d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Playing guitar with icons" ;
+        mtp:hasEvidencePurposeSecond  "Opportunities in Los Angeles" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Art_Laboe>
+        rdf:type  core:Person .

@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gustavo_Dudamel>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c825e05c8b6c057a841503aefd396532
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gustavo_Dudamel> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gustavo Dudamel" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Juan_Diego_Flórez>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2888294/88/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Celebración – 2010 Opening night concert at Walt Disney Concert Hall, Los Angeles, Rossini, Donizetti and Verdi arias and Latin American songs. Conductor: Gustavo Dudamel, DVD: Deutsche Grammophon 2010" ;
+        mtp:hasParticipant   meetup:c825e05c8b6c057a841503aefd396532 ;
+        mtp:hasPurpose       meetup:321a98147819aa1eed300a2531b14ad4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Juan_Diego_Flórez> ;
+        mtp:hasType          "HT" .
+
+meetup:321a98147819aa1eed300a2531b14ad4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Concert at Walt Disney Concert Hall" ;
+        mtp:hasEvidencePurposeSecond  "Opening night celebration" ;
+        mtp:hasSourcePurpose          "LLM" .

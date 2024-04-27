@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_Power_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/32512315/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Following his departure, Pilgrim has established a career as a singer-songwriter, releasing four solo albums to date: Lover, Love Her (2007), Sunshine (2009), Pixels and Paper (2011) and Morning Skies (2017). He has also drummed for several artists including John Power and Paul Weller." ;
+        mtp:hasParticipant   meetup:b9e2127b039efeea94854c562905c7c1 , meetup:707a1cb2799ffe442e8b7255e9910f73 ;
+        mtp:hasPurpose       meetup:8df82ae5522326cdc5ab4af6935070d7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Pilgrim_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Steve_Pilgrim_(musician)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Paul_Weller>
+        rdf:type  core:Person .
+
+meetup:b9e2127b039efeea94854c562905c7c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Power_(musician)> ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "0.9081289637335414" ;
+        mtp:hasTextEvidence     "John Power" .
+
+meetup:8df82ae5522326cdc5ab4af6935070d7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Pilgrim's career as a singer-songwriter and drummer" ;
+        mtp:hasEvidencePurposeSecond  "Pilgrim's personal life and career choices" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:707a1cb2799ffe442e8b7255e9910f73
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Weller> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "0.9999999998688196" ;
+        mtp:hasTextEvidence     "Paul Weller" .

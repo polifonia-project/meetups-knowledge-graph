@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:41c895b31ceb9b7fb317691f3826ee10
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "MC Dricka is a Brazilian singer-songwriter" ;
+        mtp:hasEvidencePurposeSecond  "She earned the nickname 'Rainha dos Fluxos'" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/68038126/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fernanda Andrielli Nascimento Dos Santos (born in São Paulo, October 7, 1998), known professionally as MC Dricka, is a Brazilian singer-songwriter whose music consists mostly of dirty funk genre. She earned the nickname \"Rainha dos Fluxos (Queen of Flows)\" for her success at favelas parties in SP." ;
+        mtp:hasParticipant   meetup:b589ccb63f1dff3db4c266117b16fd10 ;
+        mtp:hasPurpose       meetup:41c895b31ceb9b7fb317691f3826ee10 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/MC_Dricka> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/MC_Dricka>
+        rdf:type  core:Person .
+
+meetup:b589ccb63f1dff3db4c266117b16fd10
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rainha dos Fluxos" .

@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Toto_Wolff>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:59063a765f7c42d762b4ce40fbe82735
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Toto_Wolff> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Toto Wolff" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e5f253feec2198f927d250e1856ffee5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lawrence_Stroll> ;
+        mtp:hasOffset           "122" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lawrence Stroll" .
+
+<http://dbpedia.org/resource/Lawrence_Stroll>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/25076742/18/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In August 2021, it was incorrectly speculated by tabloid Le Journal de Montréal that Toto Wolff and Aston Martin F1 boss Lawrence Stroll were involved in insider trading with respect to Aston Martin shares, something Wolff contradicted in comments provided to the same newspaper." ;
+        mtp:hasParticipant   meetup:e5f253feec2198f927d250e1856ffee5 , meetup:84526e28a46cb645712e7184ca5a54ae ;
+        mtp:hasPurpose       meetup:a2d0571a5249b5e6adf5620d2cfc3996 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Toto_Wolff> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/25076742/14/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As of 2021, Toto Wolff's net worth is estimated at CHF 1.25 billion (2021)." ;
+        mtp:hasParticipant   meetup:59063a765f7c42d762b4ce40fbe82735 ;
+        mtp:hasPurpose       meetup:a6127d90787f4f292d41bf93c6b32c1d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Toto_Wolff> ;
+        mtp:hasType          "HT" .
+
+meetup:a2d0571a5249b5e6adf5620d2cfc3996
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9857443" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.012895546" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a6127d90787f4f292d41bf93c6b32c1d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9126076" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.067962475" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:84526e28a46cb645712e7184ca5a54ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Toto_Wolff> ;
+        mtp:hasOffset           "86" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Toto Wolff" .

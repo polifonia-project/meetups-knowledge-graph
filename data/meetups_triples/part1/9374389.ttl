@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ab0826bd087300f6799b96d937a67c5d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99929285" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0006780686" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b27c4d83f3922ce8f30e01028d729f90
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99126524" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0067309546" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/9374389/1/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A prominent artist of French popular music since the 1970s, William Sheller has the particularity of being one of the few singers of French chanson who has benefited from a solid background in classical music." ;
+        mtp:hasParticipant   meetup:ecc4c71417931e83a748d0c82911dee4 ;
+        mtp:hasPurpose       meetup:ab0826bd087300f6799b96d937a67c5d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_Sheller> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/William_Sheller>
+        rdf:type  core:Person .
+
+meetup:ecc4c71417931e83a748d0c82911dee4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Sheller> ;
+        mtp:hasOffset           "60" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "William Sheller" .
+
+meetup:691231f369d3f42702d73fb0a68535d3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Sheller> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "William Sheller" .
+
+meetup:1e6852078f63dede97c317f0f01e2546
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "William Desboeuf" .
+
+<http://w3id.org/polifonia/pilot/meetups/9374389/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "William Sheller (born William Desboeuf on 9 July 1946) is a French classical composer and singer-songwriter." ;
+        mtp:hasParticipant   meetup:691231f369d3f42702d73fb0a68535d3 , meetup:1e6852078f63dede97c317f0f01e2546 ;
+        mtp:hasPurpose       meetup:b27c4d83f3922ce8f30e01028d729f90 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_Sheller> ;
+        mtp:hasType          "HM" .

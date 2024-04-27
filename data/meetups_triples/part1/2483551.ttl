@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2483551/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On June 25, 2019, The New York Times Magazine listed Ben Sidran among hundreds of artists whose material was reportedly destroyed in the 2008 Universal fire." ;
+        mtp:hasParticipant   meetup:fe6e95d2e671f525b4a96c9b7ebf4d69 ;
+        mtp:hasPurpose       meetup:91632240a93e165e6676b8ccc14e5cd0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ben_Sidran> ;
+        mtp:hasType          "HT" .
+
+meetup:fe6e95d2e671f525b4a96c9b7ebf4d69
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ben_Sidran> ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ben Sidran" .
+
+meetup:aa66b4a78bdda31ef44e0e8200c7bb65
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Sidran's involvement in The Ardells" ;
+        mtp:hasEvidencePurposeSecond  "Sidran's degree in English literature" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Boz_Scaggs>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ben_Sidran>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4e239f0a13d0699606cf1c45422ec31b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Miller_(musician)> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Miller" .
+
+meetup:3357189714c25a0864f9299b8378a929
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Boz_Scaggs> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Boz Scaggs" .
+
+<http://w3id.org/polifonia/pilot/meetups/2483551/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sidran was raised in Racine, Wisconsin, and attended the University of Wisconsin–Madison in 1961, where he became a member of The Ardells with Steve Miller and Boz Scaggs. When Miller and Scaggs left Wisconsin for the West Coast, Sidran stayed behind to earn a degree in English literature." ;
+        mtp:hasParticipant   meetup:4e239f0a13d0699606cf1c45422ec31b , meetup:3357189714c25a0864f9299b8378a929 ;
+        mtp:hasPurpose       meetup:aa66b4a78bdda31ef44e0e8200c7bb65 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ben_Sidran> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Steve_Miller_(musician)>
+        rdf:type  core:Person .
+
+meetup:91632240a93e165e6676b8ccc14e5cd0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9838254" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008411899" ;
+        mtp:hasSourcePurpose          "ML" .

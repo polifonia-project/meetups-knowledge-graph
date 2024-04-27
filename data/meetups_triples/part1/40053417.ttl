@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:c6c11d013874a1a8306057e5f308032f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Promoting a music performance" ;
+        mtp:hasEvidencePurposeSecond  "Live performance on a TV show" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b4829d8728813f1b69e7e1fd43f428c1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about music releases and chart positions." ;
+        mtp:hasEvidencePurposeSecond  "There is no indication of a business meeting in the sentence." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/40053417/14/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Monkey Business was preceded by the single \"What You Do\", which was released in May and reached number 14 on Poland's singles chart. Margaret's collaboration with the Swedish group VAX, titled \"6 in the Morning\", was also released in May." ;
+        mtp:hasParticipant   meetup:8a6a7498b8cbfc55e2f0106f7293cad1 ;
+        mtp:hasPurpose       meetup:b4829d8728813f1b69e7e1fd43f428c1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Margaret_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:8a6a7498b8cbfc55e2f0106f7293cad1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Margaret" .
+
+<http://dbpedia.org/resource/Margaret_(singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/40053417/16/24>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was promoted with nine singles: \"Nowe Plemię\", \"Przebiśniegi\" (\"Snowdrops\"), \"Reksiu\" with Otsochodzi, \"Roadster\" with Kizo, \"Fotel\" (\"Armchair\"), \"Xanax\", \"No Future\" with Kukon which she released in recognition of the 2020 women's strike protests in Poland, \"Antipop\" with Kara, and \"Sold Out\" with Natalia Szroeder. Both \"Reksiu\" and \"Roadster\" have been certified gold in Poland, and the former's music video also earned a Fryderyk nomination." ;
+        mtp:hasPurpose       meetup:ac49b517c9c0f4e06b391a936cdd72e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Margaret_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/40053417/9/14>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In June 2013, Margaret travelled to Germany to promote \"Thank You Very Much\" with a live performance on ZDF Fernsehgarten (\"ZDF Television Garden\"). After her appearance on the show, the single peaked at number 38 in Austria and at number 41 in Germany." ;
+        mtp:hasPurpose       meetup:c6c11d013874a1a8306057e5f308032f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Margaret_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:ac49b517c9c0f4e06b391a936cdd72e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Promotion of music singles" ;
+        mtp:hasEvidencePurposeSecond  "Recognition of women's strike protests" ;
+        mtp:hasSourcePurpose          "LLM" .

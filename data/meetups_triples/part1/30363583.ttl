@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:186c923f3b54f31e5dbc98006b35aa94
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ann_Mounsey> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ann Mounsey" .
+
+meetup:c7d6544cee554fbc30bac47651e145e4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Details about Ann Mounsey's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Mention of her father's occupation as a licensed victualler" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/30363583/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ann Sheppard Mounsey, or Ann Mounsey Bartholomew on marriage (17 April 1811 – 24 June 1891), was born at 21 Old Compton Street, Soho, London, the eldest child of Thomas Mounsey, a licensed victualler, and his wife, Mary, née Briggs." ;
+        mtp:hasParticipant   meetup:0f03b78b3bc2f17b965dc5e47f3d38e9 , meetup:186c923f3b54f31e5dbc98006b35aa94 ;
+        mtp:hasPurpose       meetup:c7d6544cee554fbc30bac47651e145e4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ann_Mounsey> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Ann_Mounsey>
+        rdf:type  core:Person .
+
+meetup:0f03b78b3bc2f17b965dc5e47f3d38e9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ann Sheppard Mounsey" .

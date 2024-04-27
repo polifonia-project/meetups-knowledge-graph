@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/31496742/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1959, he began military service in the U.S. Army and was stationed in West Germany. Along with Elvis Presley, who was at the same time a G.I. stationed in West Germany, he wrote the song \"Mississippi River\"." ;
+        mtp:hasParticipant   meetup:2a11da03c9dfa60a94dbfde829ed883c ;
+        mtp:hasPurpose       meetup:ca6a9dc91b4b84d53b015344455a934e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Terry_Fell> ;
+        mtp:hasType          "HT" .
+
+meetup:2a11da03c9dfa60a94dbfde829ed883c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elvis_Presley> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "0.9999996651539212" ;
+        mtp:hasTextEvidence     "Elvis Presley" .
+
+<http://w3id.org/polifonia/pilot/meetups/31496742/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Terry Fell (May 13, 1921 – April 4, 2007) was an American country musician." ;
+        mtp:hasParticipant   meetup:32b7db4465b9b06a89e3022c14576ada ;
+        mtp:hasPurpose       meetup:ffdb9e026d24ad70dd0ccb52ad3f6521 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Terry_Fell> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:32b7db4465b9b06a89e3022c14576ada
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Terry_Fell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999988205" ;
+        mtp:hasTextEvidence     "Terry Fell" .
+
+<http://dbpedia.org/resource/Elvis_Presley>
+        rdf:type  core:Person .
+
+meetup:ffdb9e026d24ad70dd0ccb52ad3f6521
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8528802" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10817962" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Terry_Fell>
+        rdf:type  core:Person .
+
+meetup:ca6a9dc91b4b84d53b015344455a934e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating music" ;
+        mtp:hasEvidencePurposeSecond  "Individual experiences" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ben_Kweller>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:4e7215620a66cfbd9f10dd1f4d4774ad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97516835" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.024616728" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/26043360/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Brobecks opened for bands such as Fall Out Boy, Phantom Planet, Ben Kweller, and The Bravery." ;
+        mtp:hasParticipant   meetup:997d33a6d16efefa1a9176a6f90da976 , meetup:2ac4e5a3bfb9114f8db178c724ac457d ;
+        mtp:hasPurpose       meetup:4e7215620a66cfbd9f10dd1f4d4774ad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dallon_Weekes> ;
+        mtp:hasType          "HM" .
+
+meetup:09ed55968a6319396425d9bbda14c53f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7740998" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15764713" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:997d33a6d16efefa1a9176a6f90da976
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ben_Kweller> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "0.9999999999920136" ;
+        mtp:hasTextEvidence     "Ben Kweller" .
+
+meetup:6a551ecec8855eb44a73147628ef1c2e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dallon_Weekes> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "The Brobecks" .
+
+<http://dbpedia.org/resource/Dallon_Weekes>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/26043360/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Brobecks (2002–2013) ===" ;
+        mtp:hasParticipant   meetup:ac7e136bbe7ac1d7790ccd0c669ca475 , meetup:6a551ecec8855eb44a73147628ef1c2e ;
+        mtp:hasPurpose       meetup:09ed55968a6319396425d9bbda14c53f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dallon_Weekes> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:2ac4e5a3bfb9114f8db178c724ac457d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dallon_Weekes> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "The Brobecks" .
+
+meetup:ac7e136bbe7ac1d7790ccd0c669ca475
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Brobecks" .

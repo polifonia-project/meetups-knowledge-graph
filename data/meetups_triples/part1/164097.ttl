@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:39ccc16ce5330c53ad56354ca179da67
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Music as a medium for expressing emotions" ;
+        mtp:hasEvidencePurposeSecond  "Music as a form of public expression" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/164097/2/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The agony, conflict, and exploitation faced by South Africa during the 1950s and 1960s inspired and influenced him to make music and also spread political change. He was an artist who in his music vividly portrayed the struggles and sorrows, as well as the joys and passions of his country." ;
+        mtp:hasPurpose       meetup:39ccc16ce5330c53ad56354ca179da67 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hugh_Masekela> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Hugh_Masekela>
+        rdf:type  core:Person .

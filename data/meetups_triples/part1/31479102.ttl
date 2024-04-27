@@ -1,0 +1,59 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/31479102/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "William M. Goodrich of Boston, Massachusetts, was an important American builder of a large number of notable pipe organs from its inception in 1805 until its closure in 1833. Goodrich had a major part in introducing free reeds." ;
+        mtp:hasPurpose       meetup:b7e6424a47a1243845b630aaf1cd9fa8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_M._Goodrich> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/William_M._Goodrich>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/31479102/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "William Marcellus Goodrich (* 21 July 1777 in Templeton, Worcester County, Massachusetts; † 15 September 1833) was an organ builder in the United States." ;
+        mtp:hasParticipant   meetup:b5a331d5ef393eefe7395a1d04768f33 ;
+        mtp:hasPurpose       meetup:4a984e9c3b41c308d4035235b64b5504 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_M._Goodrich> ;
+        mtp:hasType          "HT" .
+
+meetup:b7e6424a47a1243845b630aaf1cd9fa8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Building notable pipe organs" ;
+        mtp:hasEvidencePurposeSecond  "Introducing free reeds" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:4a984e9c3b41c308d4035235b64b5504
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999919" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.175103e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b5a331d5ef393eefe7395a1d04768f33
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_M._Goodrich> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "William Marcellus Goodrich" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .

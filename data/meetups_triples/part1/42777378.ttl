@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jeffrey_Kruger>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/42777378/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Flamingo Club became established as a venue for leading American and British jazz performers, and in the early 1960s jazz-influenced rhythm and blues bands such as Georgie Fame and the Blue Flames performed there regularly. The club became a centre of the mod subculture, and by the mid-1960s a regular venue for emerging rock bands." ;
+        mtp:hasPurpose       meetup:0da05862ac7ee812238a7ff859ec1961 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeffrey_Kruger> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0da05862ac7ee812238a7ff859ec1961
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "The Flamingo Club was a popular venue for jazz and rock bands." ;
+        mtp:hasEvidencePurposeSecond  "The club became a center of the mod subculture." ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Musical_keyboard>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3c6460f2fa5a2b3269774a804f91839b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Musical_keyboard> ;
+        mtp:hasOffset           "52" ;
+        mtp:hasSimilarityScore  "0.983682975102318" ;
+        mtp:hasTextEvidence     "keyboard" .
+
+<http://w3id.org/polifonia/pilot/meetups/47290330/17/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "(1997) Edward Kottick and George Lucktenberg, Early keyboard instruments in European museums." ;
+        mtp:hasParticipant   meetup:3c6460f2fa5a2b3269774a804f91839b , meetup:8de296cae77be49ee3af132028d8c9f0 , meetup:31a608991c0f01e975e34048e513c500 ;
+        mtp:hasPurpose       meetup:7fe518bd5ce5c48e37ee275a585ef9c7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Edward_Kottick> ;
+        mtp:hasType          "HM" .
+
+meetup:31a608991c0f01e975e34048e513c500
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Edward_Kottick> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Edward Kottick" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Edward_Kottick>
+        rdf:type  core:Person .
+
+meetup:7fe518bd5ce5c48e37ee275a585ef9c7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9993755" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0005372244" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8de296cae77be49ee3af132028d8c9f0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "George Lucktenberg" .

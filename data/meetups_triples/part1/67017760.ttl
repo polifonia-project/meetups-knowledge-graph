@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Djamila_(singer)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0d9eaedb511df778b033f1369f6b4ffe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Djamila_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Djamila" .
+
+<http://w3id.org/polifonia/pilot/meetups/67017760/1/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Djamila performed a pilgrimage from Medina to Mecca, which was a musical event which attracted great attention and extensively commented on by contemporary accounts." ;
+        mtp:hasParticipant   meetup:884a05885eb2b40c7791259b2a47b36f ;
+        mtp:hasPurpose       meetup:5a226750acf8fe3782710dbdbd559ee8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Djamila_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:884a05885eb2b40c7791259b2a47b36f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Djamila_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Djamila" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/67017760/1/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her cortege included all the principal musicians of the time, as well as 50 singing girls, was detained because of the attention from the onlookers, and her return was the occasion of three days of musical feasts." ;
+        mtp:hasParticipant   meetup:0d9eaedb511df778b033f1369f6b4ffe ;
+        mtp:hasPurpose       meetup:091c762396b166a9602ef67d9bb6bc03 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Djamila_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:091c762396b166a9602ef67d9bb6bc03
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.839242" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15934603" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5a226750acf8fe3782710dbdbd559ee8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9310284" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05919616" ;
+        mtp:hasSourcePurpose          "ML" .

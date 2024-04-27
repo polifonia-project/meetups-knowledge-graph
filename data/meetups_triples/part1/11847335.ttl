@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2846a96e0c49cd9a283e24269a2fba01
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yasser_Arafat> ;
+        mtp:hasOffset           "159" ;
+        mtp:hasSimilarityScore  "0.9999999910854456" ;
+        mtp:hasTextEvidence     "financial dealings" .
+
+meetup:bbe7824d8aed3a779f6e7156469ea25b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to her singing tour" ;
+        mtp:hasEvidencePurposeSecond  "Financial troubles due to her husband" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Ann_Richards_(singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/11847335/11/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her last major singing tour was in Japan in December 1981. She had lost her regular singing engagement at the Hotel Bel-Air after coming home from Japan and was in serious financial straits due to her second husband's financial dealings." ;
+        mtp:hasParticipant   meetup:2846a96e0c49cd9a283e24269a2fba01 ;
+        mtp:hasPurpose       meetup:bbe7824d8aed3a779f6e7156469ea25b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ann_Richards_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Yasser_Arafat>
+        rdf:type  core:Person .

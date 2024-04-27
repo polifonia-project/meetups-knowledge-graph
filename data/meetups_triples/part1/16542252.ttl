@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Carl_Kress>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1fe9f73f4a2e264a12ec6e9369c3f202
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998677" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.2572288e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/George_Barnes_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/16542252/2/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carl Kress died of a heart attack in 1965 while he was on tour with George Barnes (musician) in Reno, Nevada." ;
+        mtp:hasParticipant   meetup:745c02745f981c9e6fd224c6a6c5a159 , meetup:db8626023f5fd0ade1143715d33c80c6 ;
+        mtp:hasPurpose       meetup:368cd5aee88a5752206f984a30c96488 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carl_Kress> ;
+        mtp:hasType          "HM" .
+
+meetup:745c02745f981c9e6fd224c6a6c5a159
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carl_Kress> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999062" ;
+        mtp:hasTextEvidence     "Carl Kress" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/16542252/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carl Kress (October 20, 1907 – June 10, 1965) was an American jazz guitarist." ;
+        mtp:hasParticipant   meetup:40a556109b4bbd44d94fdde256b4f99f ;
+        mtp:hasPurpose       meetup:1fe9f73f4a2e264a12ec6e9369c3f202 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carl_Kress> ;
+        mtp:hasType          "HT" .
+
+meetup:40a556109b4bbd44d94fdde256b4f99f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carl_Kress> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999992042" ;
+        mtp:hasTextEvidence     "Carl Kress" .
+
+meetup:db8626023f5fd0ade1143715d33c80c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Barnes_(musician)> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "George Barnes (musician)" .
+
+meetup:368cd5aee88a5752206f984a30c96488
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99997497" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.4020662e-05" ;
+        mtp:hasSourcePurpose          "ML" .

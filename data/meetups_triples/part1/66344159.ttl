@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:d0a042c0edf116a3c30ecb622ec5ac50
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999344" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.0385183e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/66344159/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In January 2021, she signed to Warner Records, on which \"Buss It\" was reissued." ;
+        mtp:hasParticipant   meetup:eeed81d824ebfe398ab68350d048806d ;
+        mtp:hasPurpose       meetup:d0a042c0edf116a3c30ecb622ec5ac50 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erica_Banks> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:94321ae57b9bc160333a623438e1fa46
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erica_Banks> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Erica Banks" .
+
+meetup:eeed81d824ebfe398ab68350d048806d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erica_Banks> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Erica Banks" .
+
+<http://w3id.org/polifonia/pilot/meetups/66344159/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Following the release of her first three mixtapes, she signed to 1501 Certified Entertainment, who released her self-titled mixtape in June 2020." ;
+        mtp:hasParticipant   meetup:94321ae57b9bc160333a623438e1fa46 ;
+        mtp:hasPurpose       meetup:e617f4af15be1bcc0da51107b07209f2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erica_Banks> ;
+        mtp:hasType          "HT" .
+
+meetup:e617f4af15be1bcc0da51107b07209f2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9983676" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0016242926" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:859cc8ec4317b44fb4f117033ce53604
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99962056" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00036478517" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Erica_Banks>
+        rdf:type  core:Person .
+
+meetup:c4af84f532adb692fd852acb2ee61bdd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erica_Banks> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Erica Banks" .
+
+<http://w3id.org/polifonia/pilot/meetups/66344159/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Erica Banks is an American rapper from DeSoto, Texas." ;
+        mtp:hasParticipant   meetup:c4af84f532adb692fd852acb2ee61bdd ;
+        mtp:hasPurpose       meetup:859cc8ec4317b44fb4f117033ce53604 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erica_Banks> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/32005912/28/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009, Boucher and a friend attempted to sail down the Mississippi River to New Orleans from Minneapolis in a houseboat they built. Following several mishaps, including engine trouble and encounters with law enforcement, the houseboat was impounded by the city of Minneapolis." ;
+        mtp:hasPurpose       meetup:987f279978b5ff820480877bc074d504 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Grimes_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:987f279978b5ff820480877bc074d504
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to someone's personal experiences" ;
+        mtp:hasEvidencePurposeSecond  "Unforeseen events happening by chance" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Grimes_(musician)>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .

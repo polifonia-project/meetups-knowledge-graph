@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Anne_Dudley>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:38c5fadea382fa6e5b4632dca78451c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Trevor_Horn> ;
+        mtp:hasOffset           "146" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Trevor Horn" .
+
+meetup:61b9badaed008bbdb57366051e8a4865
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music as a composer and band member" ;
+        mtp:hasEvidencePurposeSecond  "Career and personal achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/261835/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was the first BBC Concert Orchestra's Composer in Association in 2001. She has worked in the classical and pop genres, as a film composer, and was one of the core members of the synthpop band Art of Noise." ;
+        mtp:hasPurpose       meetup:61b9badaed008bbdb57366051e8a4865 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anne_Dudley> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/261835/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She graduated with a master's in music from King's College London in 1978. Trained as a classical performer, she moved into the competitive commercial field as a session musician, where her professional relationship with Trevor Horn began." ;
+        mtp:hasParticipant   meetup:38c5fadea382fa6e5b4632dca78451c6 ;
+        mtp:hasPurpose       meetup:5166314a4c6087171175ad34741c9634 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anne_Dudley> ;
+        mtp:hasType          "HT" .
+
+meetup:5166314a4c6087171175ad34741c9634
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about music education and career." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions a professional relationship." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Trevor_Horn>
+        rdf:type  core:Person .

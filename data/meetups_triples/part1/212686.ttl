@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1fff1c0376e12579a6add85d69aef073
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about album sales and chart positions." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions officials from Universal Records." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6d74f1d88e15db40817ed8f4f9e9426a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_Barlow> ;
+        mtp:hasOffset           "160" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gary Barlow" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Agnetha_Fältskog>
+        rdf:type  core:Person .
+
+meetup:cf783f13d7380f5b62e4fc77fa2cceca
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Fältskog" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/212686/21/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In June 2013, officials from Universal Records in the Netherlands said that 600,000 copies of 'A' were sold in the first two months after its release. The album managed Top 5 placings in many territories, including Sweden, Norway, Germany, Denmark, Switzerland, The Netherlands, Belgium, Austria, New Zealand and Australia." ;
+        mtp:hasPurpose       meetup:1fff1c0376e12579a6add85d69aef073 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Agnetha_Fältskog> ;
+        mtp:hasType          "HT" .
+
+meetup:e5e9a8ad29de1d401c40e6f663392e0d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Agnetha Fältskog's music career" ;
+        mtp:hasEvidencePurposeSecond  "Awards and live performances" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/212686/21/15>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 17 May 2013, Fältskog was awarded the SKAP 2013 Kai Gullmar Memorial Award at the Stockholm release party for 'A'. On 12 November 2013, Fältskog sang live on stage for the first time in 25 years at the BBC Children in Need Rocks 2013 concert in London; she sang a duet with Gary Barlow, the organiser of the event, performing the single \"I Should've Followed You Home\" from Agnetha's album 'A'." ;
+        mtp:hasParticipant   meetup:6d74f1d88e15db40817ed8f4f9e9426a , meetup:cf783f13d7380f5b62e4fc77fa2cceca ;
+        mtp:hasPurpose       meetup:e5e9a8ad29de1d401c40e6f663392e0d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Agnetha_Fältskog> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Gary_Barlow>
+        rdf:type  core:Person .

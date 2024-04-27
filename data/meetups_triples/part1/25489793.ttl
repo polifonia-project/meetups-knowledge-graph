@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e7d2c1e910c5266b6ba6f62f66de2fd3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Thal's solo music career" ;
+        mtp:hasEvidencePurposeSecond  "Thal's personal relationship with Dennis Leeflang" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Dennis_Leeflang>
+        rdf:type  core:Person .
+
+meetup:c9826ed1e8e4f7f686b0ae12c3821671
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dennis_Leeflang> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dennis Leeflang" .
+
+<http://w3id.org/polifonia/pilot/meetups/25489793/4/25>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Thal toured Europe as a solo act in 2002, using members from bands he was touring with, including Sun Caged & Plug-In. Sun Caged drummer Dennis Leeflang would later befriend Thal and work extensively with him in his solo career." ;
+        mtp:hasParticipant   meetup:c9826ed1e8e4f7f686b0ae12c3821671 ;
+        mtp:hasPurpose       meetup:e7d2c1e910c5266b6ba6f62f66de2fd3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ron_%22Bumblefoot%22_Thal> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ron_%22Bumblefoot%22_Thal>
+        rdf:type  core:Person .

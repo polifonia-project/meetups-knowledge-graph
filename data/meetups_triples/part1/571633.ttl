@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Jordan_Norberto>
+        rdf:type  core:Person .
+
+meetup:30c8a3633cfc1e46121764d549c71979
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jordan_Norberto> ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "0.9999336972529028" ;
+        mtp:hasTextEvidence     "Norberto" .
+
+meetup:388cd7db92002e361522cd5a1acdc93f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tito_Nieves> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tito Nieves" .
+
+<http://dbpedia.org/resource/Tito_Nieves>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/571633/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tito married Janette Figueroa on January 29, 2017, in Puerto Rico" ;
+        mtp:hasParticipant   meetup:f2cc915fc0e2b06cd6ae2968e7213fe0 , meetup:388cd7db92002e361522cd5a1acdc93f ;
+        mtp:hasPurpose       meetup:79e30ae70a9f7a1dc635c372c5627766 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tito_Nieves> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/571633/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In August 12, 2021, Tito Nieves was the featured singer on Norberto Vélez's YouTube channel titled \"Sesiones Desde La Loma Ep." ;
+        mtp:hasParticipant   meetup:30c8a3633cfc1e46121764d549c71979 , meetup:984d8f2a2329c35a4592163282260596 ;
+        mtp:hasPurpose       meetup:7c179dac97dd3d37d388d8e4fc879479 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tito_Nieves> ;
+        mtp:hasType          "HM" .
+
+meetup:79e30ae70a9f7a1dc635c372c5627766
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99868745" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013029593" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f2cc915fc0e2b06cd6ae2968e7213fe0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Janette Figueroa" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:984d8f2a2329c35a4592163282260596
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tito_Nieves> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tito Nieves" .
+
+meetup:7c179dac97dd3d37d388d8e4fc879479
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5694483" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40405455" ;
+        mtp:hasSourcePurpose          "ML" .

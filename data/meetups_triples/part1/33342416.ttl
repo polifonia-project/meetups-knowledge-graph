@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Hans_Swarowsky>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:eb39d625a2915c7dbb5046e729efbeba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pollack" .
+
+<http://w3id.org/polifonia/pilot/meetups/33342416/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pollack was born in Vienna, Austria, in 1946, where he studied violon, viola, piano and composition at the Conservatory and Musikhochschule. He trained as a conductor with Hans Swarowsky in Vienna, and, later, with Sergiu Celibidache in Munich." ;
+        mtp:hasParticipant   meetup:eb39d625a2915c7dbb5046e729efbeba , meetup:39352a8728948f490fada93bd344709e , meetup:ceb5db8fd65f1029e237dc3a6709486f ;
+        mtp:hasPurpose       meetup:14ade540baef1c7bce3c8e8371ac9011 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christian_Pollack> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Christian_Pollack>
+        rdf:type  core:Person .
+
+meetup:ceb5db8fd65f1029e237dc3a6709486f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sergiu_Celibidache> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sergiu Celibidache" .
+
+<http://dbpedia.org/resource/Sergiu_Celibidache>
+        rdf:type  core:Person .
+
+meetup:39352a8728948f490fada93bd344709e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hans_Swarowsky> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hans Swarowsky" .
+
+meetup:14ade540baef1c7bce3c8e8371ac9011
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Pollack's musical training." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions his studies at the Conservatory and Musikhochschule." ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:451bc838496dc54ccf60c04eab71dcc5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Unintentional occurrence of events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Phil_Davis_(actor)>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:46ae7b60ac6dd241f32831b838c69c04
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Amy Elisabeth" .
+
+<http://w3id.org/polifonia/pilot/meetups/2869286/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Davis married actress Eve Matheson in Hackney, London in 2002. They have a daughter, Amy Elisabeth (born 2002)." ;
+        mtp:hasParticipant   meetup:46ae7b60ac6dd241f32831b838c69c04 ;
+        mtp:hasPurpose       meetup:451bc838496dc54ccf60c04eab71dcc5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Davis_(actor)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2869286/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Philip Davis (born 30 July 1953) is an English actor, writer, director and narrator." ;
+        mtp:hasParticipant   meetup:c9ecf5b39763295a3e7aa7e3dbdc1d63 ;
+        mtp:hasPurpose       meetup:c97a7b7047dc0c1b8ce321a03977756b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Davis_(actor)> ;
+        mtp:hasType          "HT" .
+
+meetup:c9ecf5b39763295a3e7aa7e3dbdc1d63
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Davis_(actor)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8347063482984101" ;
+        mtp:hasTextEvidence     "Philip Davis" .
+
+meetup:c97a7b7047dc0c1b8ce321a03977756b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93555397" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06135934" ;
+        mtp:hasSourcePurpose          "ML" .

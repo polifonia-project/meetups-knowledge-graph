@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/19591244/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She won the Busoni competition in 1992 and has been a piano teacher at the Conservatorio della Svizzera Italiana in Lugano since 2013." ;
+        mtp:hasParticipant   meetup:4b1a8687d7686ee7b4ac52b25911abfe ;
+        mtp:hasPurpose       meetup:16d45361bb03c94fab52b1286a61a905 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna_Kravtchenko> ;
+        mtp:hasType          "HT" .
+
+meetup:4b1a8687d7686ee7b4ac52b25911abfe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna_Kravtchenko> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anna Kravtchenko" .
+
+meetup:fa3ed4aefb9b9d2a9ee24733a6ba5723
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6607279" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3392567" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Anna_Kravtchenko>
+        rdf:type  core:Person .
+
+meetup:70a4dfb71854fa2853df797b521be1d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna_Kravtchenko> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Anna Kravtchenko" .
+
+<http://w3id.org/polifonia/pilot/meetups/19591244/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anna Kravtchenko (born 1976) is an Italian classical pianist." ;
+        mtp:hasParticipant   meetup:70a4dfb71854fa2853df797b521be1d2 ;
+        mtp:hasPurpose       meetup:fa3ed4aefb9b9d2a9ee24733a6ba5723 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna_Kravtchenko> ;
+        mtp:hasType          "HT" .
+
+meetup:16d45361bb03c94fab52b1286a61a905
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6415332" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35218155" ;
+        mtp:hasSourcePurpose          "ML" .

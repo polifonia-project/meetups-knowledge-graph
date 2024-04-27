@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Anna_Clyne>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/30774389/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anna Clyne (born 9 March 1980, in London) is an English composer, now resident in the US." ;
+        mtp:hasParticipant   meetup:39dc667b852dc3eadb6e8b7e33e2d70b ;
+        mtp:hasPurpose       meetup:f430b9cdf212ab5eee0f72df954e5a7c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna_Clyne> ;
+        mtp:hasType          "HT" .
+
+meetup:39dc667b852dc3eadb6e8b7e33e2d70b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna_Clyne> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Anna Clyne" .
+
+meetup:f430b9cdf212ab5eee0f72df954e5a7c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9797346" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.016950613" ;
+        mtp:hasSourcePurpose          "ML" .

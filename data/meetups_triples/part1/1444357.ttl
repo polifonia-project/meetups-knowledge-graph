@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1444357/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leo Rowsome (5 April 1903 - 20 September 1970) was the third generation of an unbroken line of uilleann pipers." ;
+        mtp:hasParticipant   meetup:0b6ea05c190697432972ef7088978266 ;
+        mtp:hasPurpose       meetup:9c0005d3e4df54cb36724cbc4bf7fbce ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leo_Rowsome> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1444357/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leo Rowsome died suddenly whilst adjudicating ‘The Fiddler of Dooney Competition’ in Riverstown, County Sligo on 20 September 1970." ;
+        mtp:hasParticipant   meetup:4176a34593ae2b761fd8a4b5edf00d31 ;
+        mtp:hasPurpose       meetup:93117cc0f9decffb7a9739714616b032 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leo_Rowsome> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Leo_Rowsome>
+        rdf:type  core:Person .
+
+meetup:0b6ea05c190697432972ef7088978266
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leo_Rowsome> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Leo Rowsome" .
+
+meetup:93117cc0f9decffb7a9739714616b032
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.77253157" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15457536" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9c0005d3e4df54cb36724cbc4bf7fbce
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9982267" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0017371435" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4176a34593ae2b761fd8a4b5edf00d31
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leo_Rowsome> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Leo Rowsome" .

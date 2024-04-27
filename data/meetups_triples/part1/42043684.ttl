@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/42043684/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Miori Ichikawa (市川 美織, Ichikawa Miori, born February 12, 1994 in Saitama Prefecture) is Japanese actress and former member of Japanese idol groups AKB48 and NMB48." ;
+        mtp:hasParticipant   meetup:b78a956e55227c0f8f73b3958753b557 ;
+        mtp:hasPurpose       meetup:45873c2786e3e433b96fa8382535b12a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miori_Ichikawa> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Miori_Ichikawa>
+        rdf:type  core:Person .
+
+meetup:b78a956e55227c0f8f73b3958753b557
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miori_Ichikawa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Miori Ichikawa" .
+
+meetup:45873c2786e3e433b96fa8382535b12a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9992016" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007765061" ;
+        mtp:hasSourcePurpose          "ML" .

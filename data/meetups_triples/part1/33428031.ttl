@@ -1,0 +1,49 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Siavash_Shams>
+        rdf:type  core:Person .
+
+meetup:9a950364fa51616668b92685f9c227c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Siavash Sahne" .
+
+meetup:f09b8e3e4ea2f715679ed29aa1bd47f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Siavash_Shams> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Siavash Shams" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/33428031/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Siavash Shams (Persian: سیاوش شمس) (also known as Siavash Sahne (Persian: سیاوش صحنه) due to his hit song Sahneh) (born 26 January 1963) is an Iranian singer, songwriter, record producer." ;
+        mtp:hasParticipant   meetup:f09b8e3e4ea2f715679ed29aa1bd47f2 , meetup:9a950364fa51616668b92685f9c227c6 ;
+        mtp:hasPurpose       meetup:d6f38eb524506434cfa00ac3fd743985 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Siavash_Shams> ;
+        mtp:hasType          "HM" .
+
+meetup:d6f38eb524506434cfa00ac3fd743985
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8640237" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.070081286" ;
+        mtp:hasSourcePurpose          "ML" .

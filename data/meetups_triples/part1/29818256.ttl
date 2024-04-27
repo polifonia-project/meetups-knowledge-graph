@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:09776b832fb7b3d6cb7984049a812561
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rick_Wakeman> ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rick Wakeman" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3f653905e017dfbfb3e19f7c2047177f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99695754" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0021546306" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4fcdb1c342d03e52a26ed78d786812bd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9952603" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004563955" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Tony_Fernandez_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/29818256/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tony Fernandez (born 15 May 1946) is an English drummer for the folk rock band Strawbs." ;
+        mtp:hasParticipant   meetup:aa32c5bb5291b9aaf670f28960251391 ;
+        mtp:hasPurpose       meetup:4fcdb1c342d03e52a26ed78d786812bd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Fernandez_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:30877ff803350de040268c1ba6c112de
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tony_Fernandez_(musician)> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tony Fernandez" .
+
+<http://dbpedia.org/resource/Rick_Wakeman>
+        rdf:type  core:Person .
+
+meetup:aa32c5bb5291b9aaf670f28960251391
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tony_Fernandez_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tony Fernandez" .
+
+<http://w3id.org/polifonia/pilot/meetups/29818256/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Since 1975, he has played the drums with keyboardist Rick Wakeman in his band The English Rock Ensemble." ;
+        mtp:hasParticipant   meetup:09776b832fb7b3d6cb7984049a812561 , meetup:30877ff803350de040268c1ba6c112de ;
+        mtp:hasPurpose       meetup:3f653905e017dfbfb3e19f7c2047177f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Fernandez_(musician)> ;
+        mtp:hasType          "HM" .

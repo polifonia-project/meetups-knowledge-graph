@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Sam_Lay>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/28605808/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sam Lay in Bluesland (Blue Thumb Records, 1969 [BTS 14])With Paul Butterfield" ;
+        mtp:hasParticipant   meetup:a160530e4b68b9edace01f5225a1baef , meetup:6449b5b02fca15c1af1361521190d23d ;
+        mtp:hasPurpose       meetup:5c0c885a3684e9434d2db604b7a01b60 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sam_Lay> ;
+        mtp:hasType          "HM" .
+
+meetup:6449b5b02fca15c1af1361521190d23d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sam_Lay> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sam Lay" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Paul_Butterfield>
+        rdf:type  core:Person .
+
+meetup:a160530e4b68b9edace01f5225a1baef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Butterfield> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Paul Butterfield" .
+
+meetup:5c0c885a3684e9434d2db604b7a01b60
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Sam Lay's music career" ;
+        mtp:hasEvidencePurposeSecond  "Sam Lay's personal relationship with Paul Butterfield" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,101 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:b13bd1ab04b3a47dfcb7ef2b0f52c6e5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Information about Mat Kearney's personal life." ;
+        mtp:hasEvidencePurposeSecond  "Mention of music supervisor work in Nashville." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cc7ce96e1a4795f2cfe419151e54adc1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mat_Kearney> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mat Kearney" .
+
+<http://w3id.org/polifonia/pilot/meetups/2615719/30/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mat Kearney: Live at The Fillmore, San Francisco (2010)" ;
+        mtp:hasParticipant   meetup:942a40655710f564bef53f57678b544a ;
+        mtp:hasPurpose       meetup:430b0f649c9ea0b1c6e5925230876d02 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mat_Kearney> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ken_Kearney>
+        rdf:type  core:Person .
+
+meetup:430b0f649c9ea0b1c6e5925230876d02
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8987711" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.074714676" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6a774536ce800feb4b1fe4a1fe581eb2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ken_Kearney> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "0.9502355167951362" ;
+        mtp:hasTextEvidence     "Kearney" .
+
+meetup:46150dda8ebaba4be9e57a9ef0876e3e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5913513" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4070628" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/2615719/24/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kearney currently resides in Nashville, Tennessee with his wife Annie, whom he married in 2010. Mat's niece, Michaela Kearney, also lives in Nashville and has worked as music supervisor on several network shows like AFV, Jeopardy, and The Great British Bakeoff." ;
+        mtp:hasParticipant   meetup:6a774536ce800feb4b1fe4a1fe581eb2 , meetup:c134f32617feacc8c6b1899ec2bf4987 ;
+        mtp:hasPurpose       meetup:b13bd1ab04b3a47dfcb7ef2b0f52c6e5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mat_Kearney> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mat_Kearney>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2615719/9/11>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mat Kearney released his sixth album, Crazytalk, May 4, 2018 to average reviews." ;
+        mtp:hasParticipant   meetup:cc7ce96e1a4795f2cfe419151e54adc1 ;
+        mtp:hasPurpose       meetup:46150dda8ebaba4be9e57a9ef0876e3e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mat_Kearney> ;
+        mtp:hasType          "HT" .
+
+meetup:c134f32617feacc8c6b1899ec2bf4987
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michaela Kearney" .
+
+meetup:942a40655710f564bef53f57678b544a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mat_Kearney> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mat Kearney" .

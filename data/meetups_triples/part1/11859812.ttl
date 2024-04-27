@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Nancy_Alexiadi>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/11859812/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She has released two albums, the most recent of which was released in October 2007." ;
+        mtp:hasParticipant   meetup:b8f92d14a8294a54e9f4856d589f7c18 ;
+        mtp:hasPurpose       meetup:f58dd00306a850220efb232ce408168a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nancy_Alexiadi> ;
+        mtp:hasType          "HT" .
+
+meetup:b8f92d14a8294a54e9f4856d589f7c18
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nancy_Alexiadi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nancy Alexiadi" .
+
+meetup:f58dd00306a850220efb232ce408168a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.59173477" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40630043" ;
+        mtp:hasSourcePurpose          "ML" .

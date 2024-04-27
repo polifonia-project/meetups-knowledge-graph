@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Burton_(musician)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:7b9a01db9bebb3fc6ec9d9838fac9e4d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Burton_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Janne \"Burton\" Puurtinen" .
+
+meetup:8bf8519fe255479bf33156fb8cb48989
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Puurtinen" .
+
+<http://w3id.org/polifonia/pilot/meetups/12466624/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Janne \"Burton\" Puurtinen was born on 17 October 1974, in Helsinki, Finland." ;
+        mtp:hasParticipant   meetup:7b9a01db9bebb3fc6ec9d9838fac9e4d ;
+        mtp:hasPurpose       meetup:c2f76236a8df949f365eb845177f1d27 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Burton_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/12466624/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During his civilian service, Puurtinen worked as a lighting engineer at the Alexander Theater in Helsinki." ;
+        mtp:hasParticipant   meetup:578d3bf87adbbb64c3965fa1e1af8c9b , meetup:8bf8519fe255479bf33156fb8cb48989 ;
+        mtp:hasPurpose       meetup:dbe9291fc654f81bf3ae79fe39ecc4a1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Burton_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:578d3bf87adbbb64c3965fa1e1af8c9b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Burton_(musician)> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Janne \"Burton\" Puurtinen" .
+
+meetup:dbe9291fc654f81bf3ae79fe39ecc4a1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9970925" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.002059787" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c2f76236a8df949f365eb845177f1d27
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99921036" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007894482" ;
+        mtp:hasSourcePurpose          "ML" .

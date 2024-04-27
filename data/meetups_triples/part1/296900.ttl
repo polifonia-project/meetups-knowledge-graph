@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/William_Ackerman>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0b1296a6b3cf67a91cdd91d1c990acb0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99994266" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.710393e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Michael_Hedges>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/296900/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The son of Thayne Alden Hedges and Ruth Evelyn Hedges Ipsen, Michael Hedges was born in Sacramento, California." ;
+        mtp:hasParticipant   meetup:05745a56fb7000c29ad801a37a74dbfc ;
+        mtp:hasPurpose       meetup:0b1296a6b3cf67a91cdd91d1c990acb0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Hedges> ;
+        mtp:hasType          "HT" .
+
+meetup:f166d54156e387ea00d8b562d3de252c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Ackerman> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "William Ackerman" .
+
+meetup:ba0cb61b5b24acd98089428a1fb1cb64
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a recording contract" ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a meeting between Hedges and Ackerman" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/296900/2/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hedges was contacted in February 1981 by William Ackerman who heard him perform at the Varsity Theater in Palo Alto. On a napkin, Ackerman signed Hedges to a recording contract with Windham Hill Records." ;
+        mtp:hasParticipant   meetup:f166d54156e387ea00d8b562d3de252c ;
+        mtp:hasPurpose       meetup:ba0cb61b5b24acd98089428a1fb1cb64 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Hedges> ;
+        mtp:hasType          "HT" .
+
+meetup:05745a56fb7000c29ad801a37a74dbfc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Hedges> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "0.9999999625354128" ;
+        mtp:hasTextEvidence     "Michael Hedges" .

@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:8bc8bef6a72878f903f631fab5d15b83
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Patrick Strait" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b4369a485bb5c1aff7d5ea8a537bc094
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Knutson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999688229028766" ;
+        mtp:hasTextEvidence     "Chris Knutson" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/67576066/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Patrick Strait of City Pages said that \"Knutson has established himself as one of the most consistently funny performers\" in the Midwest." ;
+        mtp:hasParticipant   meetup:8bc8bef6a72878f903f631fab5d15b83 , meetup:83c17e8de2be0e0f720a4451cc427d5f ;
+        mtp:hasPurpose       meetup:32d5838936feed69987d025c2e86bac4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Knutson> ;
+        mtp:hasType          "HM" .
+
+meetup:aa0d3126b84da5bf8bd1ce433f7d7dd3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.59838563" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2710473" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Chris_Knutson>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/67576066/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chris Knutson is an American stand-up comedian from Minneapolis, Minnesota." ;
+        mtp:hasParticipant   meetup:b4369a485bb5c1aff7d5ea8a537bc094 ;
+        mtp:hasPurpose       meetup:aa0d3126b84da5bf8bd1ce433f7d7dd3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Knutson> ;
+        mtp:hasType          "HT" .
+
+meetup:83c17e8de2be0e0f720a4451cc427d5f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Knutson> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chris Knutson" .
+
+meetup:32d5838936feed69987d025c2e86bac4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9685823" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02715406" ;
+        mtp:hasSourcePurpose          "ML" .

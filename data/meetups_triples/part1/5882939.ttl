@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:de4a614ff475b51a45afd5a3f245e447
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99793005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.002060214" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/5882939/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Estus' single \"Heaven Help Me\", with additional vocals by George Michael, reached No. 5 on the Billboard Hot 100 chart in 1989." ;
+        mtp:hasParticipant   meetup:a8e0afb2bbb40470c5dedcc443e9744f , meetup:fd7984f03c90ace8eff3425bf0dac30e ;
+        mtp:hasPurpose       meetup:813085daf079ce81eb9bd59cc877f3b8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Deon_Estus> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Deon_Estus>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5882939/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeffery Deon Estus (July 4, 1956 – October 11, 2021) was an American musician and singer, best known as the bass player of Wham!" ;
+        mtp:hasParticipant   meetup:f93f947a4a42e5a8058b467440d0e3d4 , meetup:0881a1f0e5af2bdde9e8e897f6a408a7 ;
+        mtp:hasPurpose       meetup:de4a614ff475b51a45afd5a3f245e447 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Deon_Estus> ;
+        mtp:hasType          "HM" .
+
+meetup:fd7984f03c90ace8eff3425bf0dac30e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Michael> ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "George Michael" .
+
+meetup:0881a1f0e5af2bdde9e8e897f6a408a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Deon_Estus> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Deon Estus" .
+
+meetup:f93f947a4a42e5a8058b467440d0e3d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jeffery Deon Estus" .
+
+meetup:a8e0afb2bbb40470c5dedcc443e9744f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Deon_Estus> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Deon Estus" .
+
+meetup:813085daf079ce81eb9bd59cc877f3b8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.67771566" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.32225618" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/George_Michael>
+        rdf:type  core:Person .

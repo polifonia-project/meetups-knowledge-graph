@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:84673dbe7b0520a0fa9f412a17d4fc8b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.995291" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0042498154" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8a4b9f9673844d0de62aba07913c6d09
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Karwan> ;
+        mtp:hasOffset           "76" ;
+        mtp:hasSimilarityScore  "0.9999999999995453" ;
+        mtp:hasTextEvidence     "Karwan" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/2497159/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The group's Billboard Hot 100 hits were \"Simon Says\", \"May I Take a Giant Step\", \"1, 2, 3, Red Light\", \"Goody Goody Gumdrops\", \"Indian Giver\", \"Special Delivery\", and \"The Train\"." ;
+        mtp:hasParticipant   meetup:34eae70725b74c2a53bc943eda8c0c0c ;
+        mtp:hasPurpose       meetup:84673dbe7b0520a0fa9f412a17d4fc8b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/1910_Fruitgum_Company> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4e7605db1910c0fe2b0d1df5d6bc401f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the formation of a band." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the original members' personal details." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2497159/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band began as Jeckell and The Hydes in New Jersey in 1966. The original  members were Frank Jeckell, Mark Gutkowski, Floyd Marcus, Pat Karwan and Steve Mortkowitz - all from Linden, New Jersey." ;
+        mtp:hasParticipant   meetup:8a4b9f9673844d0de62aba07913c6d09 , meetup:d8a62915baea9c2f0fd8f6b456907f49 ;
+        mtp:hasPurpose       meetup:4e7605db1910c0fe2b0d1df5d6bc401f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/1910_Fruitgum_Company> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/1910_Fruitgum_Company>
+        rdf:type  core:Person .
+
+meetup:d8a62915baea9c2f0fd8f6b456907f49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Frank Jeckell" .
+
+<http://dbpedia.org/resource/Karwan>
+        rdf:type  core:Person .
+
+meetup:34eae70725b74c2a53bc943eda8c0c0c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/1910_Fruitgum_Company> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "1910 Fruitgum Company" .

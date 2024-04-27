@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/James_Vivian>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:9d63beeec4cf86c8ed977c268f8731a1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Vivian> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James Vivian" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/46318483/0/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They toured both nationally and internationally including through the United States, where they supported Bachman–Turner Overdrive (July 1975) at a stadium concert with an audience of 35,000 people in Seattle. For the group's third album, Hotspell, Doyle wrote or co-wrote four tracks." ;
+        mtp:hasParticipant   meetup:9d63beeec4cf86c8ed977c268f8731a1 ;
+        mtp:hasPurpose       meetup:a01754e5478c27951b5de9a8d2b4a6d1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Doyle_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:a01754e5478c27951b5de9a8d2b4a6d1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions touring and supporting another band." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions writing tracks for an album." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Jimmy_Doyle_(musician)>
+        rdf:type  core:Person .

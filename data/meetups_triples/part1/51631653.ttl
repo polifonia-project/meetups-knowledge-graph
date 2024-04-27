@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:544981db34336900b51571e0cdc1f42f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hans Hartvig Otto Seedorff Pedersen eller" .
+
+meetup:9ade4f2a697701fcbc0657bedab22a2a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Lyricist and poet" ;
+        mtp:hasEvidencePurposeSecond  "Birth and death" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/51631653/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hans Hartvig Otto Seedorff Pedersen eller Hans Hartvig Seedorff (12 August 1892 in Aarhus – 19 January 1986 in Frederiksberg) was a Danish lyricist and poet." ;
+        mtp:hasParticipant   meetup:046b13478be9bd809b3b77330ad5f2d1 , meetup:544981db34336900b51571e0cdc1f42f ;
+        mtp:hasPurpose       meetup:9ade4f2a697701fcbc0657bedab22a2a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hans_Hartvig_Seedorff> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Hans_Hartvig_Seedorff>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/51631653/1/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hans Hartvig Seedorff received the literary prize Drachmannlegatet in 1925, the award Ingenio et arti in 1933 and was made a Knight af Dannebrog in 1947." ;
+        mtp:hasParticipant   meetup:5068e954fe033325d1f0a0e725ac2fd4 ;
+        mtp:hasPurpose       meetup:ed7f847f3dcd6e6f079d7fd82e526bdf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hans_Hartvig_Seedorff> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:ed7f847f3dcd6e6f079d7fd82e526bdf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9681525" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02046714" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5068e954fe033325d1f0a0e725ac2fd4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hans_Hartvig_Seedorff> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hans Hartvig Seedorff" .
+
+meetup:046b13478be9bd809b3b77330ad5f2d1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hans_Hartvig_Seedorff> ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hans Hartvig Seedorff" .

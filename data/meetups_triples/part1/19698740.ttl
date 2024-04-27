@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/19698740/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Three years later, her exceptional talent was discovered by the famous professor Irina Bochkova, who was a student and follower of the legendary Yuri Yankelevich." ;
+        mtp:hasParticipant   meetup:2b6b437a92905b9899b836b04a3a2581 , meetup:78888965ec5b14ba228efbf76aa7e438 ;
+        mtp:hasPurpose       meetup:662e7f624096f7b7c78a94f3c164504e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anastasia_Chebotareva> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Irina_Nijinska>
+        rdf:type  core:Person .
+
+meetup:78888965ec5b14ba228efbf76aa7e438
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anastasia_Chebotareva> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anastasia Chebotareva" .
+
+<http://w3id.org/polifonia/pilot/meetups/19698740/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anastasia Chebotareva (born in Odessa, Ukraine) is a Ukrainian violinist." ;
+        mtp:hasParticipant   meetup:5340734168f86f78c72f4a58ebb3b0e6 ;
+        mtp:hasPurpose       meetup:e63b09fbc413208378ccf6edfa4c2955 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anastasia_Chebotareva> ;
+        mtp:hasType          "HT" .
+
+meetup:e63b09fbc413208378ccf6edfa4c2955
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9913118" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.006483862" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:662e7f624096f7b7c78a94f3c164504e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9994603" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0005001301" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2b6b437a92905b9899b836b04a3a2581
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Irina_Nijinska> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "0.9094335357915376" ;
+        mtp:hasTextEvidence     "Irina" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:5340734168f86f78c72f4a58ebb3b0e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anastasia_Chebotareva> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999981005281732" ;
+        mtp:hasTextEvidence     "Anastasia Chebotareva" .
+
+<http://dbpedia.org/resource/Anastasia_Chebotareva>
+        rdf:type  core:Person .

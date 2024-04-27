@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/60596395/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His first assignment was to review the 1975 Bachman–Turner Overdrive album Four Wheel Drive. \"Unfortunately, the [album] was their worst to date, but Christgau and I had sort of a working class bond over the band\", he recalls." ;
+        mtp:hasParticipant   meetup:c337f5f83f8fec6f4b073c85e7942295 ;
+        mtp:hasPurpose       meetup:37e635f39f1b5726b05d01846d3d980e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Hull_(critic)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Robert_Christgau>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/60596395/3/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He left the newspaper around 1980, but would later serve as a resource for Christgau's decade-encompassing \"Consumer Guide\" collection Christgau's Record Guide: The '80s (1990). Beginning in 1980, Hull worked in software engineering and design, which would earn him most of his life's income." ;
+        mtp:hasPurpose       meetup:9de2904decda20e99fdc9dc05258f929 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Hull_(critic)> ;
+        mtp:hasType          "HT" .
+
+meetup:37e635f39f1b5726b05d01846d3d980e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Reviewing an album" ;
+        mtp:hasEvidencePurposeSecond  "Bond over a band" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c337f5f83f8fec6f4b073c85e7942295
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Christgau> ;
+        mtp:hasOffset           "57" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Robert Christgau" .
+
+meetup:9de2904decda20e99fdc9dc05258f929
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence does not relate to music making." ;
+        mtp:hasEvidencePurposeSecond  "The sentence does not relate to a business meeting." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Tom_Hull_(critic)>
+        rdf:type  core:Person .

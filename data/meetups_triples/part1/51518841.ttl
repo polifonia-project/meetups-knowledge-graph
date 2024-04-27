@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:dffe2d9fb335847bb5e5a83efaaec5d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99771416" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0018630342" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Lotten_Edholm>
+        rdf:type  core:Person .
+
+meetup:42963936f0f27ad48d00c5a89b284533
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lotten_Edholm> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lotten Edholm" .
+
+meetup:2019ca0d6367412e6850151d162aed6a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98533154" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.014488229" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:767697784a7f6c6e8b3867461ed25b4e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lotten_Edholm> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999982528324" ;
+        mtp:hasTextEvidence     "Lotten Edholm" .
+
+<http://w3id.org/polifonia/pilot/meetups/51518841/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lotten Edholm initiated the participation of women in Sweden in the Swedish Red Cross and served as chair of the women's section of the Swedish Red Cross in 1865-1906." ;
+        mtp:hasParticipant   meetup:767697784a7f6c6e8b3867461ed25b4e ;
+        mtp:hasPurpose       meetup:2019ca0d6367412e6850151d162aed6a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lotten_Edholm> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/51518841/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She also started a cooking school in Stockholm." ;
+        mtp:hasParticipant   meetup:42963936f0f27ad48d00c5a89b284533 ;
+        mtp:hasPurpose       meetup:dffe2d9fb335847bb5e5a83efaaec5d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lotten_Edholm> ;
+        mtp:hasType          "HT" .

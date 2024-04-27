@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1655706/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anna Marie Wooldridge  (August 6, 1930 – August 14, 2010), known professionally as Abbey Lincoln, was an American jazz vocalist, songwriter, and actress." ;
+        mtp:hasParticipant   meetup:f0a57083eae4f824e8f8cfbea888bfe7 ;
+        mtp:hasPurpose       meetup:21370fd0731114c30d665fff15b91ba5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abbey_Lincoln> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1655706/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the 1990 Spike Lee movie Mo' Better Blues, Abbey Lincoln played the young Bleek's mother, Lillian." ;
+        mtp:hasParticipant   meetup:9c0761cf8a02ad717f4432aa1b2160f4 , meetup:d6aa316beba3897fe5975aae3d2ce452 ;
+        mtp:hasPurpose       meetup:741f1a4ac372361b85c4420cde99e7a6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abbey_Lincoln> ;
+        mtp:hasType          "HM" .
+
+meetup:741f1a4ac372361b85c4420cde99e7a6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7043384" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2243944" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Spike_Lee>
+        rdf:type  core:Person .
+
+meetup:9c0761cf8a02ad717f4432aa1b2160f4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Abbey_Lincoln> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "0.9999999999992896" ;
+        mtp:hasTextEvidence     "Abbey Lincoln" .
+
+meetup:d6aa316beba3897fe5975aae3d2ce452
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Spike_Lee> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Spike Lee" .
+
+meetup:21370fd0731114c30d665fff15b91ba5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9988871" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010578868" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f0a57083eae4f824e8f8cfbea888bfe7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Abbey_Lincoln> ;
+        mtp:hasOffset           "85" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Abbey Lincoln" .
+
+<http://dbpedia.org/resource/Abbey_Lincoln>
+        rdf:type  core:Person .

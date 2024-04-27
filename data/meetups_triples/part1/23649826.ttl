@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:aeb786c486b38231a3c6748d5e0eac37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jaroslav_Vogel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jaroslav Vogel" .
+
+<http://dbpedia.org/resource/Jaroslav_Vogel>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:eb27fd9e90298679989c7b4c0d7f0ad0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jaroslav_Vogel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jaroslav Vogel" .
+
+<http://w3id.org/polifonia/pilot/meetups/23649826/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was principal conductor of the Brno Philharmonic Orchestra from 1959 to 1962." ;
+        mtp:hasParticipant   meetup:aeb786c486b38231a3c6748d5e0eac37 ;
+        mtp:hasPurpose       meetup:6cc4352969f8886db88fc2006841be22 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jaroslav_Vogel> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:6cc4352969f8886db88fc2006841be22
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.4475195" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.33179858" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:8d0ac25a945c765e891c4331b0846252
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999905" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.8217545e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/23649826/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jaroslav Vogel (11 January 1894 – 2 February 1970) was a Czech conductor, composer and writer." ;
+        mtp:hasParticipant   meetup:eb27fd9e90298679989c7b4c0d7f0ad0 ;
+        mtp:hasPurpose       meetup:8d0ac25a945c765e891c4331b0846252 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jaroslav_Vogel> ;
+        mtp:hasType          "HT" .

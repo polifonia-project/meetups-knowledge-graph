@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Marcia_Strassman>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:bfe793a641a3d9ae6ffc01d35302900a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the success of a debut single" ;
+        mtp:hasEvidencePurposeSecond  "The single's performance in different markets is coincidental" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/983751/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her debut single, \"The Flower Children\", was a top-40 hit in many West Coast U.S. markets, hitting #4 in San Diego and #2 in San Francisco; the track also hit #3 in Vancouver, British Columbia (both at CKLG 730 AM and CFUN 1410 AM in July 1967). However, the single failed to break out nationally in either country; the record stalled at #105 in the United States, and just sneaked into RPM's Top 100 for Canada, peaking at #95." ;
+        mtp:hasPurpose       meetup:bfe793a641a3d9ae6ffc01d35302900a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marcia_Strassman> ;
+        mtp:hasType          "HT" .

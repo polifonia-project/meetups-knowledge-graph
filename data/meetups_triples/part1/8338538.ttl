@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/8338538/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anna Yesipova (born Anna Nikolayevna Yesipova" ;
+        mtp:hasParticipant   meetup:f97d6cc45ccea509d5b70c302e9dcadf , meetup:4c1b8d1f7dc20c1c87fdd614cba1516d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna_Yesipova> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:664f26752104fa5065ed9fea502432a2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna_Yesipova> ;
+        mtp:hasOffset           "138" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anna Yesipova" .
+
+<http://w3id.org/polifonia/pilot/meetups/8338538/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "[Russian: Анна Николаевна Есипова], 12 February [O.S. 31 January] 1851 — 18" ;
+        mtp:hasParticipant   meetup:664f26752104fa5065ed9fea502432a2 ;
+        mtp:hasPurpose       meetup:fc79e672f5ee0d0aaaf4dab96fbdd855 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna_Yesipova> ;
+        mtp:hasType          "HT" .
+
+meetup:fc79e672f5ee0d0aaaf4dab96fbdd855
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997569" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00017668284" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f97d6cc45ccea509d5b70c302e9dcadf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anna Nikolayevna Yesipova" .
+
+meetup:4c1b8d1f7dc20c1c87fdd614cba1516d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna_Yesipova> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Anna Yesipova" .
+
+<http://dbpedia.org/resource/Anna_Yesipova>
+        rdf:type  core:Person .

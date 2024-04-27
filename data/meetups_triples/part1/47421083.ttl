@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a35c34d69f19ebec22077ba05d77fadd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Meredith Schweig" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/47421083/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2010, Miss Ko was regarded as a \"newcomer to the scene,\" and Meredith Schweig observed that there were no other professional women rappers in Taiwan at the time." ;
+        mtp:hasParticipant   meetup:a35c34d69f19ebec22077ba05d77fadd , meetup:530ab675befd29866026758eba09aa49 ;
+        mtp:hasPurpose       meetup:499ad86b75514dc6ff1f19488981698b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miss_Ko> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/47421083/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ko has released three studio albums and is the winner of Best New Artist of 24th Golden Melody Award in Taiwan, the first rapper/hip-hop artist to win the award." ;
+        mtp:hasParticipant   meetup:2d97b4ed6a40900285eccb48ed41d171 ;
+        mtp:hasPurpose       meetup:94d936a5acc348886456f128b789069b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miss_Ko> ;
+        mtp:hasType          "HT" .
+
+meetup:499ad86b75514dc6ff1f19488981698b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Pursuing music career" ;
+        mtp:hasEvidencePurposeSecond  "Leaving master's program" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:94d936a5acc348886456f128b789069b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.91551423" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.077734746" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2d97b4ed6a40900285eccb48ed41d171
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miss_Ko> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Miss Ko" .
+
+meetup:530ab675befd29866026758eba09aa49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miss_Ko> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9999999751996714" ;
+        mtp:hasTextEvidence     "Miss Ko" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Miss_Ko>
+        rdf:type  core:Person .

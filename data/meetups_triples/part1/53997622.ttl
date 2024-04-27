@@ -1,0 +1,101 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ba5d309b1d8ee47b222fef521e4dbede
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Carly Cristyne Slusser" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/53997622/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pearce began performing professionally in her teens, appearing on several albums of bluegrass material in the 2000s." ;
+        mtp:hasParticipant   meetup:73eab3b3bfe7f9c586f4af1c0e862e34 ;
+        mtp:hasPurpose       meetup:7449b1c41dfe024823daed74ce09fc18 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carly_Pearce> ;
+        mtp:hasType          "HT" .
+
+meetup:20866b762a0dfcc8a681b9363ace6cc5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carly_Pearce> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999313616" ;
+        mtp:hasTextEvidence     "Carly Pearce" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/53997622/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carly Pearce (born Carly Cristyne Slusser; April 24, 1990) is an American country music singer and songwriter." ;
+        mtp:hasParticipant   meetup:ba5d309b1d8ee47b222fef521e4dbede , meetup:20866b762a0dfcc8a681b9363ace6cc5 ;
+        mtp:hasPurpose       meetup:76c576d9223a3ad4e2150c5807a9c9b6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carly_Pearce> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:73eab3b3bfe7f9c586f4af1c0e862e34
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carly_Pearce> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Carly Pearce" .
+
+<http://w3id.org/polifonia/pilot/meetups/53997622/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After moving to Nashville, Tennessee, she began gaining more widespread notice." ;
+        mtp:hasParticipant   meetup:e8bf63765af5523e52ec87e8f8020750 ;
+        mtp:hasPurpose       meetup:f77ef1b88c8190c3ca815685ec24f7bd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carly_Pearce> ;
+        mtp:hasType          "HT" .
+
+meetup:f77ef1b88c8190c3ca815685ec24f7bd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97938365" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.015896615" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e8bf63765af5523e52ec87e8f8020750
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carly_Pearce> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Carly Pearce" .
+
+<http://dbpedia.org/resource/Carly_Pearce>
+        rdf:type  core:Person .
+
+meetup:76c576d9223a3ad4e2150c5807a9c9b6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8791423" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08696183" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7449b1c41dfe024823daed74ce09fc18
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99850225" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0012783948" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,88 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/31869768/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On January 24, 2019, Yang began his mandatory military service as a conscripted police officer and was discharged on August 30, 2020." ;
+        mtp:hasParticipant   meetup:1670370adc20f6855b02c02b0d775ee4 ;
+        mtp:hasPurpose       meetup:6bc842e83456640f7530ef2b57e5238a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yang_Yo-seob> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Yang_Yo-seob>
+        rdf:type  core:Person .
+
+meetup:1670370adc20f6855b02c02b0d775ee4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yang_Yo-seob> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Yoseob" .
+
+meetup:a926a01259a5a3b9802ced1077310807
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yang_Yo-seob> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9999999938240478" ;
+        mtp:hasTextEvidence     "yoseob" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/31869768/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His name yoseob was the hanja version of the name joseph, which was later sinized by the  decision of his grand father." ;
+        mtp:hasParticipant   meetup:a926a01259a5a3b9802ced1077310807 , meetup:84e819d2dd0949eee909b1cc042aec0b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yang_Yo-seob> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1253a5386f1e0489dcf9c5b419e7568f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yang_Yo-seob> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "0.9999999999645866" ;
+        mtp:hasTextEvidence     "Yoseob" .
+
+<http://w3id.org/polifonia/pilot/meetups/31869768/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yang Yoseob attended Dong-ah Institute of Media and Arts, formerly known as Dong-Ah Broadcasting College, and graduated in 2014." ;
+        mtp:hasParticipant   meetup:1253a5386f1e0489dcf9c5b419e7568f ;
+        mtp:hasPurpose       meetup:8d245aca40f06d9fa4b9063743199149 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yang_Yo-seob> ;
+        mtp:hasType          "HT" .
+
+meetup:6bc842e83456640f7530ef2b57e5238a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998578" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.083119e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:84e819d2dd0949eee909b1cc042aec0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "joseph" .
+
+meetup:8d245aca40f06d9fa4b9063743199149
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999958" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.6750282e-06" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Nobuhiko_Okamoto>
+        rdf:type  core:Person .
+
+meetup:55459ceefbd2c4b04070f2c7f7b9e122
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9389063" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05739904" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:490747e186c75851e088e45bec9e6b33
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nobuhiko_Okamoto> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nobuhiko Okamoto" .
+
+meetup:141a82f5b119dab1880e51d838e32fac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Okamoto Nobuhiko" .
+
+<http://w3id.org/polifonia/pilot/meetups/9566772/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nobuhiko Okamoto (岡本 信彦, Okamoto Nobuhiko, born October 24, 1986) is a Japanese voice actor and singer affiliated with Pro-Fit." ;
+        mtp:hasParticipant   meetup:141a82f5b119dab1880e51d838e32fac , meetup:490747e186c75851e088e45bec9e6b33 ;
+        mtp:hasPurpose       meetup:55459ceefbd2c4b04070f2c7f7b9e122 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nobuhiko_Okamoto> ;
+        mtp:hasType          "HM" .

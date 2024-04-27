@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e7f47bf479e83db8a923700e7e87e496
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.50973594" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.46776876" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:cd235c3dbd5503256e8b7b2914610478
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tommy_Duncan> ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tommy Duncan" .
+
+<http://w3id.org/polifonia/pilot/meetups/7073523/12/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He organized another Western swing band called 'Tommy Duncan and His Western All Stars' featuring his younger brother Glynn (1921–2013), a Western swing pioneer, on bass (who would later become Wills' lead vocalist in the late 1950s)." ;
+        mtp:hasParticipant   meetup:cd235c3dbd5503256e8b7b2914610478 , meetup:23f500885339047157a1c83a6b410c4b ;
+        mtp:hasPurpose       meetup:e7f47bf479e83db8a923700e7e87e496 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Duncan> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Tommy_Duncan>
+        rdf:type  core:Person .
+
+meetup:23f500885339047157a1c83a6b410c4b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnnie_Lee_Wills> ;
+        mtp:hasOffset           "194" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johnnie Lee Wills" .
+
+<http://dbpedia.org/resource/Johnnie_Lee_Wills>
+        rdf:type  core:Person .

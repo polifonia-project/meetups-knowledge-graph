@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/7251423/24/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Live at the Public Theater (New York 1980) Vol.1 (Trio, 1980)" ;
+        mtp:hasPurpose       meetup:a9498574dee28f87a1db2bb82a2416e6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Clark_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:a9498574dee28f87a1db2bb82a2416e6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performance at the Public Theater" ;
+        mtp:hasEvidencePurposeSecond  "Live music event" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/John_Clark_(musician)>
+        rdf:type  core:Person .

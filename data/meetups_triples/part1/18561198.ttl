@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/James_Brown>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lloyd_Green>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18561198/15/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1984: \"The Celestial Sounds of Steel Guitars (VGK) with JB Van - produced by Robin Vosbury and Lloyd Green" ;
+        mtp:hasParticipant   meetup:8a2612416c42993f742759066d131ab2 , meetup:4dbca721f47ea2ddf4286b05cba1b8e6 ;
+        mtp:hasPurpose       meetup:4641e50f7205901149156d18b0c6520b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lloyd_Green> ;
+        mtp:hasType          "HM" .
+
+meetup:8a2612416c42993f742759066d131ab2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lloyd_Green> ;
+        mtp:hasOffset           "95" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lloyd Green" .
+
+meetup:4dbca721f47ea2ddf4286b05cba1b8e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Brown> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "0.705469511117568" ;
+        mtp:hasTextEvidence     "JB" .
+
+meetup:4641e50f7205901149156d18b0c6520b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9969777" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0017330921" ;
+        mtp:hasSourcePurpose          "ML" .

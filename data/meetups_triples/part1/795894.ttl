@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/795894/12/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Burnside began recording for the Oxford, Mississippi, label Fat Possum Records in 1991. The label, dedicated to recording aging north Mississippi bluesmen such as Burnside and Junior Kimbrough, was founded by two students who had been attending their performances for some years—Peter Redvers-Lee, editor of Living Blues magazine, and Matthew Johnson, a writer for the magazine." ;
+        mtp:hasParticipant   meetup:c22998645a2130480543177aef4d2a3f , meetup:18827b078b8f05c25b61d9c8084a19ad , meetup:a4d1e44ae49ea0894180b82f13adadf5 ;
+        mtp:hasPurpose       meetup:98f3ad7bc81ff430ea364507a5b6196d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/R._L._Burnside> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:c22998645a2130480543177aef4d2a3f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "191" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Redvers-Lee" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lyndon_B._Johnson>
+        rdf:type  core:Person .
+
+meetup:98f3ad7bc81ff430ea364507a5b6196d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Recording for a blues label" ;
+        mtp:hasEvidencePurposeSecond  "Founding a record label" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a4d1e44ae49ea0894180b82f13adadf5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Junior_Kimbrough> ;
+        mtp:hasOffset           "88" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Junior Kimbrough" .
+
+meetup:18827b078b8f05c25b61d9c8084a19ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lyndon_B._Johnson> ;
+        mtp:hasOffset           "257" ;
+        mtp:hasSimilarityScore  "0.6040631673452931" ;
+        mtp:hasTextEvidence     "Johnson" .
+
+<http://dbpedia.org/resource/R._L._Burnside>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Junior_Kimbrough>
+        rdf:type  core:Person .

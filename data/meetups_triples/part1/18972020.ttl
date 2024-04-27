@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:081e4e7f102b672e03e53a643d59df98
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "123" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ben Rafter" .
+
+<http://w3id.org/polifonia/pilot/meetups/18972020/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hugh Sheridan (born 30 June 1985) is an Australian actor, musician and television presenter who is known for their role as Ben Rafter in the television series Packed to the Rafters." ;
+        mtp:hasParticipant   meetup:081e4e7f102b672e03e53a643d59df98 , meetup:e96c5412a7c4b9d4341e134f3f1117b9 ;
+        mtp:hasPurpose       meetup:e6302c21bf7fe40f0e881a0a8e0bda63 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hugh_Sheridan> ;
+        mtp:hasType          "HM" .
+
+meetup:e96c5412a7c4b9d4341e134f3f1117b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hugh_Sheridan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hugh Sheridan" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:e6302c21bf7fe40f0e881a0a8e0bda63
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87589103" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09367807" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Hugh_Sheridan>
+        rdf:type  core:Person .

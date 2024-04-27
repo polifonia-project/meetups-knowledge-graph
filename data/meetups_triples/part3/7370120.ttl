@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Richard_Harvey>
+        rdf:type  core:Person .
+
+meetup:de5e0b09278ccdf826761f603063a21b
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "April 2012" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2012-04-01"^^xsd:date ;
+        time:hasEnd          "2012-04-30"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:c8b1a9b9a09c40446ae50c2b4486bfb9
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1251" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1251-01-01"^^xsd:date ;
+        time:hasEnd          "1251-12-31"^^xsd:date .
+
+meetup:bd8e52ee4eef3cc203eebae4f53e822f
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1981" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1981-01-01"^^xsd:date ;
+        time:hasEnd          "1981-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/7370120/1/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:de5e0b09278ccdf826761f603063a21b ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Richard_Harvey> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/7370120/8/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:c8b1a9b9a09c40446ae50c2b4486bfb9 , meetup:bd8e52ee4eef3cc203eebae4f53e822f ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Richard_Harvey> ;
+        mtp:hasType     "HT" .

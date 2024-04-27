@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a3f126a38518354140453ba7134ea130
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Neil_Tennant> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Neil Tennant" .
+
+<http://dbpedia.org/resource/Neil_Tennant>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Chris_Lowe>
+        rdf:type  core:Person .
+
+meetup:58e6531a149fbb85b32103a6954fc8ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Meeting with Neil Tennant" ;
+        mtp:hasEvidencePurposeSecond  "Designing a staircase" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3d99992e9bd80a48c1560b688b9175b4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lowe" .
+
+<http://w3id.org/polifonia/pilot/meetups/716743/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During a work placement in 1981 at a London architectural practice, he designed a staircase for an industrial estate in Milton Keynes. It was at this time that he met Neil Tennant in a hi-fi shop on the Kings Road in London." ;
+        mtp:hasParticipant   meetup:a3f126a38518354140453ba7134ea130 , meetup:3d99992e9bd80a48c1560b688b9175b4 ;
+        mtp:hasPurpose       meetup:58e6531a149fbb85b32103a6954fc8ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Lowe> ;
+        mtp:hasType          "HT" .

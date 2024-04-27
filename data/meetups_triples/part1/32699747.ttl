@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/32699747/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He received recognition and media attention across The United States and Canada in December 2008 after putting up a billboard on Nashville, Tennessee's music row asking Taylor Swift to produce his album." ;
+        mtp:hasParticipant   meetup:8e3e3c2140ddcec02eda9e4aa31b9996 , meetup:0bc55c8cc394134e8dd6d2fce2370c8a ;
+        mtp:hasPurpose       meetup:914f5603492a2740fd285bd3727a0177 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ryan_Laird> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:14e23820b0d1a9737d98c23298b503ce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ryan_Laird> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999863623413866" ;
+        mtp:hasTextEvidence     "Ryan Laird" .
+
+meetup:8e3e3c2140ddcec02eda9e4aa31b9996
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Taylor_Swift> ;
+        mtp:hasOffset           "169" ;
+        mtp:hasSimilarityScore  "0.9999999999995736" ;
+        mtp:hasTextEvidence     "Taylor Swift" .
+
+<http://dbpedia.org/resource/Ryan_Laird>
+        rdf:type  core:Person .
+
+meetup:914f5603492a2740fd285bd3727a0177
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to the production of an album" ;
+        mtp:hasEvidencePurposeSecond  "Involves personal actions and aspirations" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:4adb79cff01f5378ee79220314ee76f0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995091" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0003331458" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0bc55c8cc394134e8dd6d2fce2370c8a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ryan_Laird> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ryan Laird" .
+
+<http://dbpedia.org/resource/Taylor_Swift>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/32699747/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ryan Laird (born March 8, 1984) is a Canadian country music singer-songwriter." ;
+        mtp:hasParticipant   meetup:14e23820b0d1a9737d98c23298b503ce ;
+        mtp:hasPurpose       meetup:4adb79cff01f5378ee79220314ee76f0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ryan_Laird> ;
+        mtp:hasType          "HT" .

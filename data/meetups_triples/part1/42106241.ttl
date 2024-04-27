@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Joe_Saylor>
+        rdf:type  core:Person .
+
+meetup:4bf3389dd18914d74aae37990219e171
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Drum> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "0.5609131063887562" ;
+        mtp:hasTextEvidence     "drums" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/42106241/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joe Saylor began playing drums at age three." ;
+        mtp:hasParticipant   meetup:4bf3389dd18914d74aae37990219e171 , meetup:1fd443acf35f0a159c5eb1220766a98b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Saylor> ;
+        mtp:hasType          "HM" .
+
+meetup:1fd443acf35f0a159c5eb1220766a98b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Saylor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99999999999973" ;
+        mtp:hasTextEvidence     "Joe Saylor" .
+
+meetup:e2113265d5c474a6f56d8fa92b6586c4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Phil Kuehn" .
+
+<http://dbpedia.org/resource/Drum>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/42106241/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was in a jazz trio called Paj 3 with bassist Phil Kuehn (a fellow Indiana native) and pianist Angelo Versace throughout high school." ;
+        mtp:hasParticipant   meetup:e2113265d5c474a6f56d8fa92b6586c4 , meetup:a787d6fdee319936f2b8621261f7d3a7 ;
+        mtp:hasPurpose       meetup:4e92db621217da2082316de7644b7ad5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Saylor> ;
+        mtp:hasType          "HM" .
+
+meetup:4e92db621217da2082316de7644b7ad5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9413516" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.058639076" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a787d6fdee319936f2b8621261f7d3a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Saylor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joe Saylor" .

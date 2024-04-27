@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/17459293/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johnny \"Man\" Young (January 1, 1918 – April 18, 1974) was an American blues singer, mandolin player and guitarist, significant as one of the first of the new generation of electric blues artists to record in Chicago after the Second World War." ;
+        mtp:hasParticipant   meetup:477a6fbaa9bf3d11dab3cd2a5ee7fc2d ;
+        mtp:hasPurpose       meetup:10e712c9fd018f56c64ff13452973cac ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_%22Man%22_Young> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Johnny_%22Man%22_Young>
+        rdf:type  core:Person .
+
+meetup:477a6fbaa9bf3d11dab3cd2a5ee7fc2d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_%22Man%22_Young> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johnny \"Man\" Young" .
+
+meetup:10e712c9fd018f56c64ff13452973cac
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Blues singer and musician" ;
+        mtp:hasEvidencePurposeSecond  "Biographical information" ;
+        mtp:hasSourcePurpose          "LLM" .

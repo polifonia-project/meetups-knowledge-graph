@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b8ba874737d774393129fc5559c86137
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dave \"Curlee\" Williams" .
+
+meetup:8d51498c84b76826089a674c676efeec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99861825" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0009664094" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:dd663142ce46aa4387e3058afb8207a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.41564494" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.38393903" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/47743662/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1954, Hall met black musician Dave \"Curlee\" Williams and while on vacation in the Everglades Hall co-wrote, under the pseudonym \"Sunny David\", the song \"Whole Lotta Shakin' Goin' On\"." ;
+        mtp:hasParticipant   meetup:5cb980eafb5013839fef6a867dfe4c93 , meetup:b8ba874737d774393129fc5559c86137 ;
+        mtp:hasPurpose       meetup:8d51498c84b76826089a674c676efeec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roy_Hall_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:5cb980eafb5013839fef6a867dfe4c93
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roy_Hall_(musician)> ;
+        mtp:hasOffset           "132" ;
+        mtp:hasSimilarityScore  "0.9999965785339084" ;
+        mtp:hasTextEvidence     "Sunny David" .
+
+meetup:945779a535ac8a3b3590d972b824593a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roy_Hall_(musician)> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "0.9999965785339084" ;
+        mtp:hasTextEvidence     "Sunny David" .
+
+<http://w3id.org/polifonia/pilot/meetups/47743662/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Faye \"Roy\" Hall (May 7, 1922 – March 3, 1984), also known by his pseudonym \"Sunny David\", was an American rockabilly pianist and songwriter." ;
+        mtp:hasParticipant   meetup:945779a535ac8a3b3590d972b824593a ;
+        mtp:hasPurpose       meetup:dd663142ce46aa4387e3058afb8207a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roy_Hall_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Roy_Hall_(musician)>
+        rdf:type  core:Person .

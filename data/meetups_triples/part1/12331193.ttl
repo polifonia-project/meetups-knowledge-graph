@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/12331193/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She graduated from Horlick High School in 1969. She started her music career by singing commercial jingles for many popular TV and radio commercials." ;
+        mtp:hasPurpose       meetup:979f045ce907cc9c705c17e290acfd48 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lane_Brody> ;
+        mtp:hasType          "HT" .
+
+meetup:979f045ce907cc9c705c17e290acfd48
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Singing commercial jingles" ;
+        mtp:hasEvidencePurposeSecond  "High school graduation" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e3e803c51a869dc3b18b9bb8111fb98d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5811784" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40715235" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:68eee691e993a2a0d24aea8d3bf6f5fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lane_Brody> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lane Brody" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Lane_Brody>
+        rdf:type  core:Person .
+
+meetup:aedb5f81f75bf51f33392302e92e2420
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lynn Voorlas" .
+
+<http://w3id.org/polifonia/pilot/meetups/12331193/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lynn Voorlas (born September 24, 1955), known professionally as Lane Brody, is an American country music singer-songwriter, active since the early 1980s, best known for her 1984 Billboard-topping country hit \"The Yellow Rose\" (a duet with country music singer Johnny Lee), and for the Oscar-nominated song \"Over You\" from the 1983 film Tender Mercies." ;
+        mtp:hasParticipant   meetup:aedb5f81f75bf51f33392302e92e2420 , meetup:68eee691e993a2a0d24aea8d3bf6f5fe ;
+        mtp:hasPurpose       meetup:e3e803c51a869dc3b18b9bb8111fb98d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lane_Brody> ;
+        mtp:hasType          "HM" .

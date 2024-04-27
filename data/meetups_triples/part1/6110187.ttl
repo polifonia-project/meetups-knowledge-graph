@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Tom_Meighan>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/6110187/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Thomas Peter Meighan was born on 11 January 1981 in Blaby, Leicestershire, the son of Irish window cleaner Tom Meighan Sr." ;
+        mtp:hasParticipant   meetup:67a2c4da5b85fd13469adefa7f9a884a ;
+        mtp:hasPurpose       meetup:189241f9ec5be874154b532e4dd93096 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Meighan> ;
+        mtp:hasType          "HT" .
+
+meetup:189241f9ec5be874154b532e4dd93096
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Unintentional connection or occurrence" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:67a2c4da5b85fd13469adefa7f9a884a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Meighan> ;
+        mtp:hasOffset           "107" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tom Meighan" .

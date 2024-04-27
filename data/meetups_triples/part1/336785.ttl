@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/336785/8/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the late 1940s and early1950s, his recordings reached the UK and influenced clarinetists Monty Sunshine and Acker Bilk. They became important contributors to the traditional jazz scene in the UK and accompanied Lewis when he toured the country." ;
+        mtp:hasParticipant   meetup:4b284697f4ab76264a655426aa74cf37 ;
+        mtp:hasPurpose       meetup:cf355f7032ec9b2ef6e18cb9c83298fe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Lewis_(clarinetist)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/336785/9/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Beginning in the 1960s, he played regularly at Preservation Hall in New Orleans as leader of the Preservation Hall Jazz Band until shortly before his death. His performances were painted by artists in the city." ;
+        mtp:hasPurpose       meetup:5b8f74516cadf6ae4b7bf46ab73f07b9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Lewis_(clarinetist)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/336785/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His band was profiled in the June 6, 1950 issue of Look magazine with photographs by Stanley Kubrick. His reputation grew and he became a leader of the New Orleans revival." ;
+        mtp:hasPurpose       meetup:564536e9ea06e9b35d4eb67ce734a34e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Lewis_(clarinetist)> ;
+        mtp:hasType          "HT" .
+
+meetup:cf355f7032ec9b2ef6e18cb9c83298fe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Influence on clarinetists" ;
+        mtp:hasEvidencePurposeSecond  "Contributors to jazz scene" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Monty_Sunshine>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4b284697f4ab76264a655426aa74cf37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Monty_Sunshine> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Monty Sunshine" .
+
+<http://dbpedia.org/resource/George_Lewis_(clarinetist)>
+        rdf:type  core:Person .
+
+meetup:5b8f74516cadf6ae4b7bf46ab73f07b9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Playing jazz at Preservation Hall" ;
+        mtp:hasEvidencePurposeSecond  "Being painted by artists in New Orleans" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:564536e9ea06e9b35d4eb67ce734a34e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Band profiled in magazine" ;
+        mtp:hasEvidencePurposeSecond  "Became a leader in music revival" ;
+        mtp:hasSourcePurpose          "LLM" .

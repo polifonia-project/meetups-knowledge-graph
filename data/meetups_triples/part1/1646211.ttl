@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/James_Cotton>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:dc978fee1bece22ac32e804de255c442
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Cotton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James Cotton Blues Band" .
+
+meetup:f8d6bcba1bb3cbb4ee3ca54df18e12b6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.68009585" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.25884694" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c5689cc7f1da25e42c92db1bcd87762c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Barber> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chris Barber" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/1646211/5/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band mainly performed its own arrangements of popular blues and R&B from the 1950s and 1960s." ;
+        mtp:hasParticipant   meetup:dc978fee1bece22ac32e804de255c442 ;
+        mtp:hasPurpose       meetup:d5df2410931ba369c750c284ab90d05f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Cotton> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Chris_Barber>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1646211/13/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chris Barber Presents Jimmy Cotton, and Chris Barber Presents Jimmy Cotton – 2 (two separate 45rpm EPs with Barber's British jazz and blues band)" ;
+        mtp:hasParticipant   meetup:c5689cc7f1da25e42c92db1bcd87762c , meetup:2293fdb2678b1bdbf28c119296312fdd ;
+        mtp:hasPurpose       meetup:f8d6bcba1bb3cbb4ee3ca54df18e12b6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Cotton> ;
+        mtp:hasType          "HM" .
+
+meetup:2293fdb2678b1bdbf28c119296312fdd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Cotton> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jimmy Cotton" .
+
+meetup:d5df2410931ba369c750c284ab90d05f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999998" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.0174077e-06" ;
+        mtp:hasSourcePurpose          "ML" .

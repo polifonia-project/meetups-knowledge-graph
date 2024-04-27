@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:3eb93a2147c9e6806adb00223d650dc3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6111337" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3888418" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Albert_West>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/46920011/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Albertus Petrus Enricus Gerardus Westelaken (2 September 1949 – 4 June 2015), better known by his stage name Albert West, was a Dutch pop singer and record producer." ;
+        mtp:hasParticipant   meetup:0dc25b629c0804117980931a99e08f08 , meetup:436ca21a0dafda656d07b36d9b5f9e59 ;
+        mtp:hasPurpose       meetup:3eb93a2147c9e6806adb00223d650dc3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Albert_West> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:436ca21a0dafda656d07b36d9b5f9e59
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Albertus Petrus Enricus Gerardus Westelaken" .
+
+meetup:0dc25b629c0804117980931a99e08f08
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Albert_West> ;
+        mtp:hasOffset           "111" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Albert West" .

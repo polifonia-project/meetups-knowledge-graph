@@ -1,0 +1,59 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/63772630/8/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On June 18, 1954 MGM issued the album Manhattan Serenade by Joe Lipman and his Orchestra." ;
+        mtp:hasParticipant   meetup:b9b7f8416ba3956a8a6cdc654323f544 ;
+        mtp:hasPurpose       meetup:0e458e458c688e0fae285b5940fd1561 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Lipman> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/63772630/13/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "With different guest hosts every week, the show competed with The Ed Sullivan Show. The Hollywood Palace mimicked a vaudeville variety stage production being done live to tape at The Hollywood Palace Theater." ;
+        mtp:hasPurpose       meetup:edded709dde88eaeba87a3ad990a22a9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Lipman> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:b9b7f8416ba3956a8a6cdc654323f544
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Lipman> ;
+        mtp:hasOffset           "60" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joe Lipman" .
+
+meetup:edded709dde88eaeba87a3ad990a22a9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Live variety stage production" ;
+        mtp:hasEvidencePurposeSecond  "Competition with The Ed Sullivan Show" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:0e458e458c688e0fae285b5940fd1561
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996774" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0003224389" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Joe_Lipman>
+        rdf:type  core:Person .

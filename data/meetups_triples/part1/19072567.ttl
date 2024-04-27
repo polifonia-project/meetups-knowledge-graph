@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/19072567/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He previously worked with Brett Johnson, bass player for Atmosphere, in the band Ten-fold Hate, in Minneapolis." ;
+        mtp:hasParticipant   meetup:1c31f12cf89211ea1665c75cec8b7896 , meetup:04200db8e05ddb6a4f89bfb34d006670 , meetup:77c614f1062831df515f68bf512cd9a1 ;
+        mtp:hasPurpose       meetup:6aad0ee052bbfe0ab47d47a59581c8d3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tad_Kubler> ;
+        mtp:hasType          "HM" .
+
+meetup:1c31f12cf89211ea1665c75cec8b7896
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tad_Kubler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tad Kubler" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Brett_Johnson_(writer)>
+        rdf:type  core:Person .
+
+meetup:6aad0ee052bbfe0ab47d47a59581c8d3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a band" ;
+        mtp:hasEvidencePurposeSecond  "Personal connection with a musician" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Bass_guitar>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/19072567/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He grew up in Janesville, Wisconsin and currently lives in Brooklyn, New York." ;
+        mtp:hasParticipant   meetup:9b84b5f68517ef1f07ab5b722e611150 ;
+        mtp:hasPurpose       meetup:ef409073862f1b6df1a97188ead1efcc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tad_Kubler> ;
+        mtp:hasType          "HT" .
+
+meetup:9b84b5f68517ef1f07ab5b722e611150
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tad_Kubler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tad Kubler" .
+
+meetup:77c614f1062831df515f68bf512cd9a1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brett_Johnson_(writer)> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.8749990600661695" ;
+        mtp:hasTextEvidence     "Brett Johnson" .
+
+meetup:04200db8e05ddb6a4f89bfb34d006670
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bass_guitar> ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "0.9492115450479908" ;
+        mtp:hasTextEvidence     "bass" .
+
+<http://dbpedia.org/resource/Tad_Kubler>
+        rdf:type  core:Person .
+
+meetup:ef409073862f1b6df1a97188ead1efcc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97969705" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.020265063" ;
+        mtp:hasSourcePurpose          "ML" .

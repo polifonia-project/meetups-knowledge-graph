@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/CeCe_Rogers>
+        rdf:type  core:Person .
+
+meetup:f02181d52361a4d92a6de0007e69c329
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "CeCe Rogers is a singer and songwriter." ;
+        mtp:hasEvidencePurposeSecond  "CeCe Rogers is from Cleveland, Ohio." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:c66d1e7a6d5363637eac8de6bee6e9be
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kenneth Jesse Rogers III" .
+
+meetup:2a8be07979061528c317f5912921b82c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/CeCe_Rogers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "CeCe Rogers" .
+
+<http://w3id.org/polifonia/pilot/meetups/11541750/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "CeCe Rogers - Atlantic 82021 (1989)" ;
+        mtp:hasParticipant   meetup:b04c7104a6532ea63e5cd5adc4728525 ;
+        mtp:hasPurpose       meetup:1f0ccd4ae487f7850910c48270e47bbf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/CeCe_Rogers> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/11541750/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "CeCe Rogers (born Kenneth Jesse Rogers III, April 30, 1962), is an American singer, songwriter and record producer from Cleveland, Ohio, United States." ;
+        mtp:hasParticipant   meetup:c66d1e7a6d5363637eac8de6bee6e9be , meetup:2a8be07979061528c317f5912921b82c ;
+        mtp:hasPurpose       meetup:f02181d52361a4d92a6de0007e69c329 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/CeCe_Rogers> ;
+        mtp:hasType          "HM" .
+
+meetup:1f0ccd4ae487f7850910c48270e47bbf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9525899" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.046704452" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b04c7104a6532ea63e5cd5adc4728525
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/CeCe_Rogers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "CeCe Rogers" .

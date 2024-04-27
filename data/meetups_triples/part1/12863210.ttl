@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Marié_Digby>
+        rdf:type  core:Person .
+
+meetup:3429d024a0aa7af37d29012d47e38ad8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9941347" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0050219116" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:63871bc57e7e3b12521ae9ced7860461
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involvement in songwriting contest" ;
+        mtp:hasEvidencePurposeSecond  "Supporting education through charity" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/12863210/26/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009, she sponsored a songwriting contest for Bronx teenagers through \"The Generation Project\", a non-profit organization that facilitates donor-designed charitable gifts to children in low-income areas. The winner of Digby's contest—a special education student from the Bronx—received a brand-new guitar with accessories." ;
+        mtp:hasPurpose       meetup:63871bc57e7e3b12521ae9ced7860461 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marié_Digby> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/12863210/17/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Winter Fields ===" ;
+        mtp:hasParticipant   meetup:a2aef575befd072ffa2d303c511fb741 ;
+        mtp:hasPurpose       meetup:3429d024a0aa7af37d29012d47e38ad8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marié_Digby> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:a2aef575befd072ffa2d303c511fb741
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marié_Digby> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999970578551548" ;
+        mtp:hasTextEvidence     "Winter Fields" .

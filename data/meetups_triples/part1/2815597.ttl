@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Fraser_MacPherson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Don_Thompson_(musician)>
+        rdf:type  core:Person .
+
+meetup:38005e43fc11209447a51ba931285ec2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fraser_MacPherson> ;
+        mtp:hasOffset           "98" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fraser MacPherson" .
+
+<http://w3id.org/polifonia/pilot/meetups/2815597/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He lived in Vancouver from 1960 to 1965, working as a freelance musician primarily on bass. He has appeared with jazz troupes led by Vancouver musicians such as Dave Robbins, Chris Gage and Fraser MacPherson, as well as leading his own musical groups." ;
+        mtp:hasParticipant   meetup:00eebabcaacf70e881280621a92b9214 , meetup:38005e43fc11209447a51ba931285ec2 ;
+        mtp:hasPurpose       meetup:65d3299f28b426fa53bbe5b4dade3cf2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Don_Thompson_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:65d3299f28b426fa53bbe5b4dade3cf2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "This sentence is about the person's involvement in music making, specifically with jazz troupes and leading his own musical groups." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the person's personal life by listing the names of Vancouver musicians he has appeared with." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:00eebabcaacf70e881280621a92b9214
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Thompson" .

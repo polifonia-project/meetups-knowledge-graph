@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Ayrton_Senna>
+        rdf:type  core:Person .
+
+meetup:120d828608f0eadea9d56a580be47afb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Guemmour" .
+
+<http://w3id.org/polifonia/pilot/meetups/11887892/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Senna Gammour (née Guemmour; born 28 December 1979), also known mononymously as Senna, is a German singer, television personality and presenter." ;
+        mtp:hasParticipant   meetup:120d828608f0eadea9d56a580be47afb , meetup:8c2af5bad8e32779cd9209ee51aeec5a , meetup:9e6b52210037ac4882985da809846434 ;
+        mtp:hasPurpose       meetup:c4c74ac2bfbf591657c211cc95596137 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Senna_Gammour> ;
+        mtp:hasType          "HM" .
+
+meetup:9e6b52210037ac4882985da809846434
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ayrton_Senna> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "0.7419963908254045" ;
+        mtp:hasTextEvidence     "Senna" .
+
+<http://dbpedia.org/resource/Senna_Gammour>
+        rdf:type  core:Person .
+
+meetup:8c2af5bad8e32779cd9209ee51aeec5a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Senna_Gammour> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Senna Gammour" .
+
+meetup:c4c74ac2bfbf591657c211cc95596137
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9664266" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.017506342" ;
+        mtp:hasSourcePurpose          "ML" .

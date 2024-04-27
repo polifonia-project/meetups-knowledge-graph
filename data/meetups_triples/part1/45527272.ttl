@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/George_Fenton>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Elijah_Blake>
+        rdf:type  core:Person .
+
+meetup:221e61684c739070e7e0cff4a36a2674
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.41670412" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.32147798" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/45527272/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sean Fenton (born June 4, 1992), better known by the stage name Elijah Blake, is a Dominican-American singer, songwriter and record producer." ;
+        mtp:hasParticipant   meetup:77b58d1491fa1bc2ba5b9dc8b62b4c99 , meetup:869675e2b7c0ca20ea04edad2a247d14 , meetup:d411fa239ffb273fd1bb526bd128922d ;
+        mtp:hasPurpose       meetup:221e61684c739070e7e0cff4a36a2674 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elijah_Blake> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Sean_Astin>
+        rdf:type  core:Person .
+
+meetup:869675e2b7c0ca20ea04edad2a247d14
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Fenton> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "0.9854282117187114" ;
+        mtp:hasTextEvidence     "Fenton" .
+
+meetup:d411fa239ffb273fd1bb526bd128922d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elijah_Blake> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elijah Blake" .
+
+meetup:77b58d1491fa1bc2ba5b9dc8b62b4c99
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sean_Astin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.6224637670779583" ;
+        mtp:hasTextEvidence     "Sean" .

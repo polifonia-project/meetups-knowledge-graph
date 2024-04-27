@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/18001114/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Clive Chaman (born 5 September 1949) was born in Trinidad and is a UK-based bass guitarist and session musician." ;
+        mtp:hasParticipant   meetup:b1208674c7e77485fc3d2b32c0507512 ;
+        mtp:hasPurpose       meetup:567576d7044c1ff3133a8b63faea6e03 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Clive_Chaman> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:567576d7044c1ff3133a8b63faea6e03
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Clive Chaman is a bass guitarist and session musician." ;
+        mtp:hasEvidencePurposeSecond  "Clive Chaman was born in Trinidad." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b1208674c7e77485fc3d2b32c0507512
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clive_Chaman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Clive Chaman" .
+
+<http://dbpedia.org/resource/Clive_Chaman>
+        rdf:type  core:Person .

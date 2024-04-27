@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:d2df109fcbdcbb18b1c8e71384a3f53e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8751634" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12468403" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/45102983/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Clare Loveday (born 22 March 1967)" ;
+        mtp:hasParticipant   meetup:4484e233f8cd13a014fffaf9fa5aa15b ;
+        mtp:hasPurpose       meetup:d2df109fcbdcbb18b1c8e71384a3f53e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Clare_Loveday> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Clare_Loveday>
+        rdf:type  core:Person .
+
+meetup:4484e233f8cd13a014fffaf9fa5aa15b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clare_Loveday> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999996874" ;
+        mtp:hasTextEvidence     "Clare Loveday" .

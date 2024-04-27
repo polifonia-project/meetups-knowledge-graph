@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:aa8ba58959c9adbb3320596d7bd40875
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about Quartuccio's family" ;
+        mtp:hasEvidencePurposeSecond  "Details about Quartuccio's father's profession" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3a6a567f82058c903645a362df801305
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anthony_Quartuccio> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Anthony Quartuccio, Sr" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/31560875/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Quartuccio's father, Anthony Quartuccio, Sr. (November 1922 - October 16, 2011) was a locally renowned author and illustrator in Northern California." ;
+        mtp:hasParticipant   meetup:e184a67dc9cdd3a0f9a4c01824f232cd , meetup:3a6a567f82058c903645a362df801305 ;
+        mtp:hasPurpose       meetup:aa8ba58959c9adbb3320596d7bd40875 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anthony_Quartuccio> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Anthony_Quartuccio>
+        rdf:type  core:Person .
+
+meetup:e184a67dc9cdd3a0f9a4c01824f232cd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Quartuccio" .

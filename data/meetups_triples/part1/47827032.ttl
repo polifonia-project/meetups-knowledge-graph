@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Angelika_Bachmann>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/47827032/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2016 saw their debut in New York City in a concert of their program \"Carnival of the Animals and Other Phantasies\" at the Michael Schimmel Center." ;
+        mtp:hasParticipant   meetup:ce52a38488c87f27bf621b62150fb2c3 ;
+        mtp:hasPurpose       meetup:96572d9a8d3be5d8f239508f5833d67a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Salut_Salon> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ff4559867eb373c1b2dd95b925f4c644
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6744646" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29916844" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Salut_Salon>
+        rdf:type  core:Person .
+
+meetup:149544466630828625564603cab7ca4a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sigurd> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "0.9378200760951156" ;
+        mtp:hasTextEvidence     "Siegfried" .
+
+meetup:9d9a5b430291abdde5ce2cf4f6d34f7f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Salut_Salon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Salut Salon" .
+
+meetup:ce52a38488c87f27bf621b62150fb2c3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Salut_Salon> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Salut Salon" .
+
+<http://dbpedia.org/resource/Sigurd>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/47827032/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was founded in 2002 by violinists Angelika Bachmann and Iris Siegfried." ;
+        mtp:hasParticipant   meetup:594fa61a9afefa3c5f9dc58cb2f98de0 , meetup:149544466630828625564603cab7ca4a , meetup:9d9a5b430291abdde5ce2cf4f6d34f7f , meetup:d6c39a447a9c1303c010b392d70ebfaa ;
+        mtp:hasPurpose       meetup:ff4559867eb373c1b2dd95b925f4c644 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Salut_Salon> ;
+        mtp:hasType          "HM" .
+
+meetup:96572d9a8d3be5d8f239508f5833d67a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93858993" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06124103" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:594fa61a9afefa3c5f9dc58cb2f98de0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Angelika_Bachmann> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Angelika Bachmann" .
+
+meetup:d6c39a447a9c1303c010b392d70ebfaa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Iris Siegfried" .

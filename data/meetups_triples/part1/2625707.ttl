@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1e2f037b4e43edb116b7fb8e7e9e3127
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "James MacDonough is a professional bass guitarist" ;
+        mtp:hasEvidencePurposeSecond  "James MacDonough was born on April 3, 1970 in Jacksonville, Florida" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/James_MacDonough>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2625707/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James MacDonough (born on April 3, 1970 in Jacksonville, Florida) is a professional bass guitarist." ;
+        mtp:hasParticipant   meetup:3d5eac897848462047d30f2b7c9901cf ;
+        mtp:hasPurpose       meetup:1e2f037b4e43edb116b7fb8e7e9e3127 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_MacDonough> ;
+        mtp:hasType          "HT" .
+
+meetup:3d5eac897848462047d30f2b7c9901cf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_MacDonough> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "James MacDonough" .

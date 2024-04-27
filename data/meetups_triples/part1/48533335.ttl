@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Ahmad_Naser_Sarmast>
+        rdf:type  core:Person .
+
+meetup:72228c10143c4a03ce86394f0b065893
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7349209" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26079944" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/48533335/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ahmad Naser Sarmast is an Afghan-Australian ethnomusicologist." ;
+        mtp:hasParticipant   meetup:2da7618ab14daa1d9ed648883d6fe714 ;
+        mtp:hasPurpose       meetup:72228c10143c4a03ce86394f0b065893 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ahmad_Naser_Sarmast> ;
+        mtp:hasType          "HT" .
+
+meetup:2da7618ab14daa1d9ed648883d6fe714
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ahmad_Naser_Sarmast> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ahmad Naser Sarmast" .

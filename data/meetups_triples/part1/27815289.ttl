@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Rose_Cannabich>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/27815289/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mozart dedicated a piano sonata to her when he was her teacher in Mannheim, where her father led the well-known orchestra." ;
+        mtp:hasParticipant   meetup:1e6194d1fa34bb856758262cacf53e3d , meetup:d8d1737e6844dfeed03931b8df003777 ;
+        mtp:hasPurpose       meetup:91cc80a152c0718ae3646c5f2f23be6f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rose_Cannabich> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:91cc80a152c0718ae3646c5f2f23be6f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98826283" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010665007" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e2570b8f205ec7e2de151b45d4caee1c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6238133" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2941092" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>
+        rdf:type  core:Person .
+
+meetup:1e6194d1fa34bb856758262cacf53e3d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999318" ;
+        mtp:hasTextEvidence     "Mozart" .
+
+meetup:d8d1737e6844dfeed03931b8df003777
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rose_Cannabich> ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rose Cannabich" .
+
+meetup:ed4072291d5e13e9ebccb9ca74ed9993
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rose_Cannabich> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999995453" ;
+        mtp:hasTextEvidence     "Rose Cannabich" .
+
+<http://w3id.org/polifonia/pilot/meetups/27815289/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rose Cannabich (1764–1839) was a German classical pianist." ;
+        mtp:hasParticipant   meetup:ed4072291d5e13e9ebccb9ca74ed9993 ;
+        mtp:hasPurpose       meetup:e2570b8f205ec7e2de151b45d4caee1c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rose_Cannabich> ;
+        mtp:hasType          "HT" .

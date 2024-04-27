@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/30228840/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2017, Mat Sinner released the album Tequila Suicide with his band Sinner with a Top 50 chart entry in Germany." ;
+        mtp:hasParticipant   meetup:ec23dac09cd75ac7f5f8e20260763c13 ;
+        mtp:hasPurpose       meetup:55c7f5f7761c0f778137c83beecd77e7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mat_Sinner> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Mat_Sinner>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7cc00b2dc4d5df1e4fe09edd78f23527
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Mat Sinner is a musician" ;
+        mtp:hasEvidencePurposeSecond  "Mat Sinner's personal background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ec23dac09cd75ac7f5f8e20260763c13
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mat_Sinner> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mat Sinner" .
+
+meetup:d6e5102696bf13e3840f83b31d387303
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mat_Sinner> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mat Sinner" .
+
+<http://w3id.org/polifonia/pilot/meetups/30228840/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mat Sinner (born Matthias Lasch;  16 October 1964 in Stuttgart, West Germany) is a bassist, vocalist, and record producer from Stuttgart, Germany." ;
+        mtp:hasParticipant   meetup:d6e5102696bf13e3840f83b31d387303 ;
+        mtp:hasPurpose       meetup:7cc00b2dc4d5df1e4fe09edd78f23527 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mat_Sinner> ;
+        mtp:hasType          "HT" .
+
+meetup:55c7f5f7761c0f778137c83beecd77e7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99813336" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001217468" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/625393/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Darren Arthur Reed (born June 18, 1963), better known by his stage name Dizzy Reed, is an American musician and occasional actor." ;
+        mtp:hasParticipant   meetup:cbc75ce5c7c3a5a4bd2425b19dc2a4ea , meetup:5fb963c6cb9f22f8ce5efaf04da0bdc4 ;
+        mtp:hasPurpose       meetup:085b55ab343478c02c19b4c1ee6308e8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dizzy_Reed> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Dizzy_Reed>
+        rdf:type  core:Person .
+
+meetup:085b55ab343478c02c19b4c1ee6308e8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997899" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00015414604" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:cbc75ce5c7c3a5a4bd2425b19dc2a4ea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Darren Arthur Reed" .
+
+meetup:5fb963c6cb9f22f8ce5efaf04da0bdc4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dizzy_Reed> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Dizzy Reed" .

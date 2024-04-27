@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:573e914a3a8eda43821cac1404ded0d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99982184" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00017787765" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/15380601/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wyngard Tracy (February 7, 1952 – November 16, 2010) was a Filipino talent manager who had represented various actors and music artists, such as Side A in the Philippines through his office, Artiststation, Inc.  From June 2008, he was one of three judges in Pinoy Idol on GMA Network." ;
+        mtp:hasParticipant   meetup:7e8360fc60a4037a53de6c82139dcdfb ;
+        mtp:hasPurpose       meetup:573e914a3a8eda43821cac1404ded0d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wyngard_Tracy> ;
+        mtp:hasType          "HT" .
+
+meetup:7e8360fc60a4037a53de6c82139dcdfb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wyngard_Tracy> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wyngard Tracy" .
+
+<http://dbpedia.org/resource/Wyngard_Tracy>
+        rdf:type  core:Person .

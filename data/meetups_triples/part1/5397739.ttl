@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/5397739/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In September 2010 he reunited with Chicago on the occasion of the band's concert at the HSBC Arena in Rio de Janeiro, performing \"Happy Man\". The event marked the first time any former member of Chicago performed again with the band's new line-up." ;
+        mtp:hasPurpose       meetup:3bb9c6b3c681d8e33828dbef343da223 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laudir_de_Oliveira> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Laudir_de_Oliveira>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:3bb9c6b3c681d8e33828dbef343da223
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Reunion and performance with Chicago" ;
+        mtp:hasEvidencePurposeSecond  "Band's concert at HSBC Arena" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2038117/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her musical talent emerged at the age of five years, when she joined her church choir at New Hope Baptist Church (the same church where Whitney Houston performed in her youth) in Newark, New Jersey. She attended St. Joseph's Catholic school and Immaculate Conception High School in Montclair, New Jersey." ;
+        mtp:hasPurpose       meetup:f416c4af4bc6f5df20b0ad8baac49e3f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Naturi_Naughton> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:14819d4b23ef70ccb4f448d32dc15b9c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99278307" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0052301097" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Naturi_Naughton>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f416c4af4bc6f5df20b0ad8baac49e3f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions her musical talent and joining a church choir." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions her attendance at Catholic school and high school." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8dd16ff55a8f13e17cbc065ee7ce8189
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Naturi_Naughton> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Naturi Naughton" .
+
+<http://w3id.org/polifonia/pilot/meetups/2038117/22/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fame Presents Naturi Naughton as Denise: Didn't I Tell You (2010)" ;
+        mtp:hasParticipant   meetup:8dd16ff55a8f13e17cbc065ee7ce8189 ;
+        mtp:hasPurpose       meetup:14819d4b23ef70ccb4f448d32dc15b9c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Naturi_Naughton> ;
+        mtp:hasType          "HT" .

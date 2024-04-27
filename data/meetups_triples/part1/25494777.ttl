@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/25494777/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jung Hye-young (born December 14, 1973) is a South Korean actress." ;
+        mtp:hasParticipant   meetup:11a2f53c5e16c8f08153df1e4bae9f80 ;
+        mtp:hasPurpose       meetup:3487ddaf14a00c6697b14355ecfa751c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jung_Hye-young> ;
+        mtp:hasType          "HT" .
+
+meetup:3487ddaf14a00c6697b14355ecfa751c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99914944" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00082950376" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Jung_Hye-young>
+        rdf:type  core:Person .
+
+meetup:11a2f53c5e16c8f08153df1e4bae9f80
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jung_Hye-young> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jung Hye-young" .

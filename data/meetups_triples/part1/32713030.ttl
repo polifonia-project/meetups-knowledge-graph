@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/32713030/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was also a librettist, having written the libretto for Zygmunt Krause's Balthazar." ;
+        mtp:hasParticipant   meetup:15a4fa51fbe72af50a6fb4329ae8d6ea , meetup:0c7351d75af74511a78a25a6a3ac60b1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ryszard_Peryt> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Ryszard_Peryt>
+        rdf:type  core:Person .
+
+meetup:15a4fa51fbe72af50a6fb4329ae8d6ea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Zygmunt Krause's" .
+
+<http://w3id.org/polifonia/pilot/meetups/32713030/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ryszard Peryt (9 March 1947 in Zielona Góra – 23 January 2019) was a Polish opera director, conductor, producer and actor." ;
+        mtp:hasParticipant   meetup:a22fdabb725c83653d90214c38858abb ;
+        mtp:hasPurpose       meetup:38fd43fc5b28a17c476e1d13911f5aa3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ryszard_Peryt> ;
+        mtp:hasType          "HT" .
+
+meetup:a22fdabb725c83653d90214c38858abb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ryszard_Peryt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999928995126" ;
+        mtp:hasTextEvidence     "Ryszard Peryt" .
+
+meetup:0c7351d75af74511a78a25a6a3ac60b1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ryszard_Peryt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ryszard Peryt" .
+
+meetup:38fd43fc5b28a17c476e1d13911f5aa3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99992466" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.896594e-05" ;
+        mtp:hasSourcePurpose          "ML" .

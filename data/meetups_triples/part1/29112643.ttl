@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:c31aa0a64a6fc6e810601aca087f62f4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Meeting between Lipkowska and Schepps over diamonds" ;
+        mtp:hasEvidencePurposeSecond  "Coincidental involvement of Lipkowska and Schepps" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ef8eada2efc04be7b3e3a61bce01bf9a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lipkowska" .
+
+<http://w3id.org/polifonia/pilot/meetups/29112643/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1912, Lipkowska charged New York gangster Sam Schepps with usury over his refusal to return two diamonds worth $80,000 that she'd pawned to him. Lipkowska said that she'd borrowed $12,000 from Schepps, had left the diamonds with him as security, and that he sought $5000 in interest before he would return the jewels." ;
+        mtp:hasParticipant   meetup:ef8eada2efc04be7b3e3a61bce01bf9a ;
+        mtp:hasPurpose       meetup:c31aa0a64a6fc6e810601aca087f62f4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lydia_Lipkowska> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lydia_Lipkowska>
+        rdf:type  core:Person .

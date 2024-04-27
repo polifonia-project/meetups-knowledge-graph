@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:60d6f1bccd8a0733c599aa5aac6ce6c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "This sentence is related to the personal life of Sidney Sheinberg, specifically his death." ;
+        mtp:hasEvidencePurposeSecond  "The mention of his death could be seen as a coincidence in relation to the topic of personal life." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3b36019fb455789ccae6a896a275103a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sidney_Sheinberg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Sidney Sheinberg" .
+
+<http://dbpedia.org/resource/Sidney_Sheinberg>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3136059/16/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sidney Sheinberg died in Beverly Hills, California on March 7, 2019 at the age of 84 from Parkinson's disease." ;
+        mtp:hasParticipant   meetup:3b36019fb455789ccae6a896a275103a ;
+        mtp:hasPurpose       meetup:60d6f1bccd8a0733c599aa5aac6ce6c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sidney_Sheinberg> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .

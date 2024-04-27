@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/12265213/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mark Nauseef (born June 11, 1953), in Cortland, New York, is a drummer and percussionist who has enjoyed a varied career, ranging from rock music during the 1970s with his time as a member of the Ian Gillan Band and, temporarily with Thin Lizzy when Brian Downey left for a short time, to a wide range of musical styles in more recent times, playing with many notable musicians from all over the world." ;
+        mtp:hasParticipant   meetup:082878b7a1062e91d292bfa80bca71fe , meetup:764cdd9c2bd1d5a70ea3bae6ae6ad2c3 ;
+        mtp:hasPurpose       meetup:d5ea67073c85bacad7aee781f9fd2b49 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Nauseef> ;
+        mtp:hasType          "HM" .
+
+meetup:764cdd9c2bd1d5a70ea3bae6ae6ad2c3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Downey_(drummer)> ;
+        mtp:hasOffset           "250" ;
+        mtp:hasSimilarityScore  "0.9857561634479864" ;
+        mtp:hasTextEvidence     "Brian Downey" .
+
+<http://dbpedia.org/resource/Mark_Nauseef>
+        rdf:type  core:Person .
+
+meetup:d5ea67073c85bacad7aee781f9fd2b49
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Mark Nauseef's career as a drummer and percussionist" ;
+        mtp:hasEvidencePurposeSecond  "Mark Nauseef's personal background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:082878b7a1062e91d292bfa80bca71fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Nauseef> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mark Nauseef" .
+
+<http://dbpedia.org/resource/Brian_Downey_(drummer)>
+        rdf:type  core:Person .

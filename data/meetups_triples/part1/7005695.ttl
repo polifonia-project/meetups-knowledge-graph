@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f9396a331a98f80c1c2bcc5773dcf9a9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.892986" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06423975" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d908e08447878f017fd744798bd629e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Formula> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dave Formula" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e4b8bcfb82c8a57a0aaf178224e2688f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Formula> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "0.999999999999872" ;
+        mtp:hasTextEvidence     "Dave Formula" .
+
+<http://w3id.org/polifonia/pilot/meetups/7005695/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Magazine reformed in February 2009 with Dave Formula returning to play keyboards." ;
+        mtp:hasParticipant   meetup:e4b8bcfb82c8a57a0aaf178224e2688f ;
+        mtp:hasPurpose       meetup:f9396a331a98f80c1c2bcc5773dcf9a9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Formula> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Dave_Formula>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/7005695/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dave Formula (born David Tomlinson 11 August 1946, Whalley Range, Manchester, England), is an English keyboardist and film-soundtrack composer from Manchester, who played with the post-punk bands Magazine and Visage during the end of the 1970s and the beginning of the 1980s and in the \"world music\" band The Angel Brothers." ;
+        mtp:hasParticipant   meetup:d908e08447878f017fd744798bd629e0 ;
+        mtp:hasPurpose       meetup:0a6c15f6c59b844e984851342a4fcfae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Formula> ;
+        mtp:hasType          "HT" .
+
+meetup:0a6c15f6c59b844e984851342a4fcfae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9989617" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010124991" ;
+        mtp:hasSourcePurpose          "ML" .

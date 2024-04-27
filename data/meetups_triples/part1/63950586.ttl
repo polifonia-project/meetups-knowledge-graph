@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/63950586/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Myrtezaj was born on 9 April 1993 in Tirana, Albania, to Albanian parents, who divorced when she was a child. At an early age, she attended the Jordan Misja Lyceum in Tirana." ;
+        mtp:hasParticipant   meetup:0c4dd6f722146cff0bed5412fd785307 ;
+        mtp:hasPurpose       meetup:fa7f806b6188eb770b20f5446373a220 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Xhensila_Myrtezaj> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/63950586/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Xhensila Myrtezaj (Albanian: [dʒɛnˈsila myɾˈtɛzaj]; born 9 April 1993), also known mononymously as Xhensila, is an Albanian singer, model and entrepreneur." ;
+        mtp:hasParticipant   meetup:7bb04d2bfb8d0b8cf4a796ade3177eb8 , meetup:010e60b0360def60633fb0e61f0c3671 ;
+        mtp:hasPurpose       meetup:ff2706b2b5a4b3d633b016fb8c5341be ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Xhensila_Myrtezaj> ;
+        mtp:hasType          "HM" .
+
+meetup:ff2706b2b5a4b3d633b016fb8c5341be
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99921787" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00070280314" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0c4dd6f722146cff0bed5412fd785307
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Myrtezaj" .
+
+meetup:010e60b0360def60633fb0e61f0c3671
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "99" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Xhensila" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Xhensila_Myrtezaj>
+        rdf:type  core:Person .
+
+meetup:7bb04d2bfb8d0b8cf4a796ade3177eb8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Xhensila_Myrtezaj> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Xhensila Myrtezaj" .
+
+meetup:fa7f806b6188eb770b20f5446373a220
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Education in Tirana" ;
+        mtp:hasEvidencePurposeSecond  "Personal life and family" ;
+        mtp:hasSourcePurpose          "LLM" .

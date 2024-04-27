@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/8250786/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ivan Neville (born August 19, 1959) is an American multi-instrumentalist musician, singer, and songwriter." ;
+        mtp:hasParticipant   meetup:619426a2e1c64e564ecbf32fd7880bdb ;
+        mtp:hasPurpose       meetup:80b9bb8d3e1726d7e6ddb537b4f86bfa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ivan_Neville> ;
+        mtp:hasType          "HT" .
+
+meetup:619426a2e1c64e564ecbf32fd7880bdb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ivan_Neville> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ivan Neville" .
+
+<http://dbpedia.org/resource/Tony_Hall,_Baron_Hall_of_Birkenhead>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/8250786/6/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2007, with Dumpstaphunk and B.B. King, he participated in a tribute album to fellow New Orleans musician Fats Domino, contributing his version of the title song to Goin' Home: A Tribute to Fats Domino (Vanguard Records). Through the Tipitina's Foundation, along with other New Orleans musicians, Neville has been active in performing benefit shows in support of Hurricane Katrina charities." ;
+        mtp:hasPurpose       meetup:90f944083dc53cd747fd41b31095c029 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ivan_Neville> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ivan_Neville>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:86611ab6221d6235b71672a2ae3a1264
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ivan_Neville> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ivan Neville" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/8250786/6/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ivan Neville's band includes Nick Daniels and Tony Hall, both on bass (with Hall sometimes on guitar); Ian Neville (Ivan's cousin) playing guitar; Raymond Weber on drums." ;
+        mtp:hasParticipant   meetup:707a56f82d77a6eaecb14d0a3dafc413 , meetup:86611ab6221d6235b71672a2ae3a1264 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ivan_Neville> ;
+        mtp:hasType          "HM" .
+
+meetup:707a56f82d77a6eaecb14d0a3dafc413
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tony_Hall,_Baron_Hall_of_Birkenhead> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tony Hall" .
+
+meetup:90f944083dc53cd747fd41b31095c029
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Participating in tribute albums and performing benefit shows" ;
+        mtp:hasEvidencePurposeSecond  "Supporting Hurricane Katrina charities" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:80b9bb8d3e1726d7e6ddb537b4f86bfa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5269311" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.38634458" ;
+        mtp:hasSourcePurpose          "ML" .

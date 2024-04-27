@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a326e4bcfca894bc25b76ebd275c6aa7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Recording and signing with record labels" ;
+        mtp:hasEvidencePurposeSecond  "Having a hit single" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:cbcc26409b26b6347cdd7db75b1c3178
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99948835" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0003615211" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/18586466/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Frederick Knight (born August 15, 1944, Birmingham, Alabama, United States) is an American R&B singer, songwriter and record producer." ;
+        mtp:hasParticipant   meetup:761939a688962626916f9d332c634692 ;
+        mtp:hasPurpose       meetup:cbcc26409b26b6347cdd7db75b1c3178 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frederick_Knight_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:761939a688962626916f9d332c634692
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frederick_Knight_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9432295803183028" ;
+        mtp:hasTextEvidence     "Frederick Knight" .
+
+<http://w3id.org/polifonia/pilot/meetups/18586466/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Knight recorded with Mercury and Capitol in New York before signing with Stax Records in 1972. He had his only UK hit single, \"I've Been Lonely for So Long\", in 1972." ;
+        mtp:hasPurpose       meetup:a326e4bcfca894bc25b76ebd275c6aa7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frederick_Knight_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Frederick_Knight_(singer)>
+        rdf:type  core:Person .

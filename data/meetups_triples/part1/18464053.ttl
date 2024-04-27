@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Johnnie_Allan>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/John_R._Allen>
+        rdf:type  core:Person .
+
+meetup:befb49319af5f9f2d81d1b520c036fe9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnnie_Allan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johnnie Allan" .
+
+<http://w3id.org/polifonia/pilot/meetups/18464053/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johnnie Allan (born John Allen Guillot, March 10, 1938) is an American pioneer of the swamp pop musical genre." ;
+        mtp:hasParticipant   meetup:4cde5f45b87e03deed223474b5460d2b , meetup:befb49319af5f9f2d81d1b520c036fe9 ;
+        mtp:hasPurpose       meetup:92ba275c077d9db3432a6c38c3bc10c9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnnie_Allan> ;
+        mtp:hasType          "HM" .
+
+meetup:4cde5f45b87e03deed223474b5460d2b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_R._Allen> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "0.9937554025340032" ;
+        mtp:hasTextEvidence     "John Allen" .
+
+meetup:92ba275c077d9db3432a6c38c3bc10c9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5933756" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.32256714" ;
+        mtp:hasSourcePurpose          "ML" .

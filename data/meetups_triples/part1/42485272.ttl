@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Kim_Jung-hwan_(fencer)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/42485272/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kim Jung-hwan (Korean: 김정환; born November 23, 1990), known professionally as Eddy Kim (Korean: 에디 킴), is a South Korean singer, songwriter, and guitarist." ;
+        mtp:hasParticipant   meetup:adc284d61a736474e3211a7fbbda1969 , meetup:a8f726f01d31efb6ba798437bb384a4f ;
+        mtp:hasPurpose       meetup:b7b5462d21d66fd775ec213ff545bedf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddy_Kim> ;
+        mtp:hasType          "HM" .
+
+meetup:a8f726f01d31efb6ba798437bb384a4f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddy_Kim> ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "0.9999999999964756" ;
+        mtp:hasTextEvidence     "Eddy Kim" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:adc284d61a736474e3211a7fbbda1969
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kim_Jung-hwan_(fencer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999983821443847" ;
+        mtp:hasTextEvidence     "Kim Jung-hwan" .
+
+<http://dbpedia.org/resource/Eddy_Kim>
+        rdf:type  core:Person .
+
+meetup:b7b5462d21d66fd775ec213ff545bedf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.70643705" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28221932" ;
+        mtp:hasSourcePurpose          "ML" .

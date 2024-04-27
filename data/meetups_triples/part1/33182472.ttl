@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:86767b38b236f92af8935db0da6cf18d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andreas_Ottensamer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Andreas Ottensamer" .
+
+meetup:97bb6f2d7e30152e58d2772de52be409
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.885378e-08" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/33182472/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andreas Ottensamer (born 4 April 1989) is an Austrian clarinettist and is one of the solo clarinettists of the Berlin Philharmonic." ;
+        mtp:hasParticipant   meetup:86767b38b236f92af8935db0da6cf18d ;
+        mtp:hasPurpose       meetup:97bb6f2d7e30152e58d2772de52be409 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andreas_Ottensamer> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Andreas_Ottensamer>
+        rdf:type  core:Person .

@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e60fda269c8087c29496da14e1a5f5e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Zappa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999973453414548" ;
+        mtp:hasTextEvidence     "Zappa" .
+
+meetup:4c1ebaabd097c8a50bff5beb3099a666
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions the creation and popularity of a music single." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the personal life of musician Motorhead Sherwood." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:147cc94168f87f906a862908492b3836
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chuck_Higgins> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "0.999999999995481" ;
+        mtp:hasTextEvidence     "Chuck Higgins" .
+
+<http://dbpedia.org/resource/Frank_Zappa>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/6730584/1/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Zappa listed Chuck Higgins as a reference in his influence list accompanying his album Freak Out! (1966)." ;
+        mtp:hasParticipant   meetup:147cc94168f87f906a862908492b3836 , meetup:e60fda269c8087c29496da14e1a5f5e1 ;
+        mtp:hasPurpose       meetup:529000c64a31d800acfad17c12863b52 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Higgins> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/6730584/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Later switching to saxophone, he penned the single \"Pachuko Hop\" (1952), which became popular among American Latinos on the West Coast. The \"Pachuko Hop\" single's B-side, \"Motorhead Baby\", was the inspiration for the nickname of musician Motorhead Sherwood, who played with Frank Zappa." ;
+        mtp:hasParticipant   meetup:e3f8b62f8f69d3963bb0056423231996 ;
+        mtp:hasPurpose       meetup:4c1ebaabd097c8a50bff5beb3099a666 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chuck_Higgins> ;
+        mtp:hasType          "HT" .
+
+meetup:529000c64a31d800acfad17c12863b52
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90582967" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09417023" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Chuck_Higgins>
+        rdf:type  core:Person .
+
+meetup:e3f8b62f8f69d3963bb0056423231996
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Zappa> ;
+        mtp:hasOffset           "138" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Frank Zappa" .

@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/20984557/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Rae was born in Edinburgh on 8th June 1966 to Scottish parents Margaret and Ronnie Rae. Rae was brought up in the Sighthill area of the city before moving to Livingston as a teenager." ;
+        mtp:hasParticipant   meetup:fe394c862d56dbd7ec8863e392e678ae ;
+        mtp:hasPurpose       meetup:1ca2ed62a3dd056b9f735539ff09a59a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Rae_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Johnny_Rae>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:fe394c862d56dbd7ec8863e392e678ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Rae> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Rae" .
+
+meetup:1ca2ed62a3dd056b9f735539ff09a59a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about John Rae's background and upbringing" ;
+        mtp:hasEvidencePurposeSecond  "Information about John Rae's education and schooling" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/John_Rae_(musician)>
+        rdf:type  core:Person .

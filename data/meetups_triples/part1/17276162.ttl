@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/17276162/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Benny Krueger (June 17, 1899 – April 29, 1967) was an American jazz saxophonist." ;
+        mtp:hasParticipant   meetup:064f6be9f6f91299e74d45fd11b0ab29 ;
+        mtp:hasPurpose       meetup:323c85927db8ff10657d80834c52adc0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Benny_Krueger> ;
+        mtp:hasType          "HT" .
+
+meetup:323c85927db8ff10657d80834c52adc0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999691" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.5471163e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:064f6be9f6f91299e74d45fd11b0ab29
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Benny_Krueger> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Benny Krueger" .
+
+<http://dbpedia.org/resource/Benny_Krueger>
+        rdf:type  core:Person .

@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/1367095/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She began her career as a member of the girl group Sakurakko Club from 1991 to 1993, wherein she formed the duo Key West Club with member Keiko Azuma." ;
+        mtp:hasParticipant   meetup:7d0a985e585e0d65824484b2fc98c7fe , meetup:d4b93f60ea19289182330f3ffba2e405 , meetup:2348ba4a0b69832c4466c6b7a92fa565 ;
+        mtp:hasPurpose       meetup:60d1bfa6567bbb256683062f2e0a0adb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miki_Nakatani> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Keiko_Fujimori>
+        rdf:type  core:Person .
+
+meetup:60d1bfa6567bbb256683062f2e0a0adb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99992144" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.101379e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Miki_Nakatani>
+        rdf:type  core:Person .
+
+meetup:a938640f8d1b8fa2b648f6a2d6017111
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7535559" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2460503" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1367095/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Miki Nakatani (中谷 美紀, Nakatani Miki, born 12 January 1976) is a Japanese actress and singer." ;
+        mtp:hasParticipant   meetup:3f813362f5de50eef3879718fb3d2a46 ;
+        mtp:hasPurpose       meetup:a938640f8d1b8fa2b648f6a2d6017111 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miki_Nakatani> ;
+        mtp:hasType          "HT" .
+
+meetup:3f813362f5de50eef3879718fb3d2a46
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miki_Nakatani> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Miki Nakatani" .
+
+meetup:7d0a985e585e0d65824484b2fc98c7fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Keiko_Fujimori> ;
+        mtp:hasOffset           "138" ;
+        mtp:hasSimilarityScore  "0.869103071839773" ;
+        mtp:hasTextEvidence     "Keiko" .
+
+<http://dbpedia.org/resource/Kiyohiko_Azuma>
+        rdf:type  core:Person .
+
+meetup:d4b93f60ea19289182330f3ffba2e405
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miki_Nakatani> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Miki Nakatani" .
+
+meetup:2348ba4a0b69832c4466c6b7a92fa565
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kiyohiko_Azuma> ;
+        mtp:hasOffset           "144" ;
+        mtp:hasSimilarityScore  "0.9216972221215936" ;
+        mtp:hasTextEvidence     "Azuma" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4ed7637de500ea3882173bde640e6f33
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6244909" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.36044997" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Koen_Kessels>
+        rdf:type  core:Person .
+
+meetup:c935d7912270d8e5d79f93413baf401c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Koen_Kessels> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Koen Kessels" .
+
+<http://w3id.org/polifonia/pilot/meetups/50559084/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Koen Kessels (born 1961) is a Belgian conductor and music director of The Royal Ballet and Birmingham Royal Ballet." ;
+        mtp:hasParticipant   meetup:c935d7912270d8e5d79f93413baf401c ;
+        mtp:hasPurpose       meetup:4ed7637de500ea3882173bde640e6f33 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Koen_Kessels> ;
+        mtp:hasType          "HT" .

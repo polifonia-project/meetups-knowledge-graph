@@ -1,0 +1,52 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gary_Nuttall>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:44c73e9702cf6d01261e79bc9ca9a5de
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_Nuttall> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999915731864704" ;
+        mtp:hasTextEvidence     "Gary Nuttall" .
+
+meetup:d90ad40ef7c74699970b7f430d6a8c2a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robbie_Williams> ;
+        mtp:hasOffset           "98" ;
+        mtp:hasSimilarityScore  "0.9999994776463212" ;
+        mtp:hasTextEvidence     "Robbie Williams" .
+
+<http://w3id.org/polifonia/pilot/meetups/48894597/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gary Nuttall  is an English musician  and vocalist, best known for his long-time affiliation with Robbie Williams, spanning from 1997 to the present day." ;
+        mtp:hasParticipant   meetup:d90ad40ef7c74699970b7f430d6a8c2a , meetup:44c73e9702cf6d01261e79bc9ca9a5de ;
+        mtp:hasPurpose       meetup:ac815ca6fddb140f89e014b79c22cd86 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Nuttall> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:ac815ca6fddb140f89e014b79c22cd86
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999238" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00034305084" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Robbie_Williams>
+        rdf:type  core:Person .

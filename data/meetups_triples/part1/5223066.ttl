@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:42a868bcbe7e906c76844a3b84f5c313
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99943525" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0003076751" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/5223066/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His career started in the late 1950s, but his biggest success came in the 1980s." ;
+        mtp:hasParticipant   meetup:cd601f8c1eded021b6d3893e097fcb9f ;
+        mtp:hasPurpose       meetup:42a868bcbe7e906c76844a3b84f5c313 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Frizzell> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Lefty_Frizzell>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5223066/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Frizzell (born September 26, 1941) is an American country music singer." ;
+        mtp:hasParticipant   meetup:f7351b5fcc9213ad70568300aeadf446 ;
+        mtp:hasPurpose       meetup:305bb309e9f8e07e580ff9ec277d2eb4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Frizzell> ;
+        mtp:hasType          "HT" .
+
+meetup:f7351b5fcc9213ad70568300aeadf446
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Frizzell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Frizzell" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:1989e8e23f7eff9586508db75a695f78
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lefty_Frizzell> ;
+        mtp:hasOffset           "47" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lefty Frizzell" .
+
+<http://dbpedia.org/resource/David_Frizzell>
+        rdf:type  core:Person .
+
+meetup:305bb309e9f8e07e580ff9ec277d2eb4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99985695" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00012896484" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/5223066/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is the younger brother of country musician, Lefty Frizzell." ;
+        mtp:hasParticipant   meetup:1989e8e23f7eff9586508db75a695f78 , meetup:09a2a3d80438c099fcaa072e3c35cb38 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Frizzell> ;
+        mtp:hasType          "HM" .
+
+meetup:cd601f8c1eded021b6d3893e097fcb9f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Frizzell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David Frizzell" .
+
+meetup:09a2a3d80438c099fcaa072e3c35cb38
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Frizzell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David Frizzell" .

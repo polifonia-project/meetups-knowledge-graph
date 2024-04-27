@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:51bbf768d5b4aca9726c6431c109c66f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "the \"Hillbilly Waltz King\"" .
+
+<http://dbpedia.org/resource/Clyde_Moody>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3579219/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Clyde Moody (September 19, 1915 – April 7, 1989), also known as the \"Hillbilly Waltz King\" and sometimes as \"The Genial Gentleman of Country Music\" was one of the great founders of American Bluegrass music." ;
+        mtp:hasParticipant   meetup:9b638f232ca42cba69c8bef56bd089d4 , meetup:51bbf768d5b4aca9726c6431c109c66f ;
+        mtp:hasPurpose       meetup:0aec9badbf02a97ce6132c7ece6737ba ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Clyde_Moody> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0aec9badbf02a97ce6132c7ece6737ba
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.81286585" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16933925" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9b638f232ca42cba69c8bef56bd089d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clyde_Moody> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999952252" ;
+        mtp:hasTextEvidence     "Clyde Moody" .

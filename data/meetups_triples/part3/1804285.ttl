@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:876440e6c8a98ccf9938332f513d0b0f
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "26 July 1972" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1972-07-26"^^xsd:date ;
+        time:hasEnd          "1972-07-26"^^xsd:date .
+
+meetup:844bc0b2d32eb5f171adec34d673721c
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 2003" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2003-01-01"^^xsd:date ;
+        time:hasEnd          "2003-12-31"^^xsd:date .
+
+<http://dbpedia.org/resource/Wayne_Wonder>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/1804285/0/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:844bc0b2d32eb5f171adec34d673721c ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Wayne_Wonder> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1804285/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:876440e6c8a98ccf9938332f513d0b0f ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Wayne_Wonder> ;
+        mtp:hasType     "HM" .

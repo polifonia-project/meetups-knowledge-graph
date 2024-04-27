@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2835312/90/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chris Adler and Jason Bittner: Live at Modern Drummer Festival 2005 DVD (2006, Hudson Music)" ;
+        mtp:hasParticipant   meetup:0d12e45b7c3ff175a77cd8db2d50a69f , meetup:f921ecc01a33d0e6cc866738ab5dd4a1 ;
+        mtp:hasPurpose       meetup:e7401278d87f8cb37922f3b16c0e5a24 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Adler> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Jason_Bittner>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Chris_Adler>
+        rdf:type  core:Person .
+
+meetup:f921ecc01a33d0e6cc866738ab5dd4a1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jason_Bittner> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jason Bittner" .
+
+meetup:e7401278d87f8cb37922f3b16c0e5a24
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99878794" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0005374382" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0d12e45b7c3ff175a77cd8db2d50a69f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Adler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chris Adler" .

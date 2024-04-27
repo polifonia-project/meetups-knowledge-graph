@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Seiichi_Yamamoto>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5684015/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Seiichi Yamamoto (山本 精一, Yamamoto Seiichi, born July 16, 1958) is a Japanese musician." ;
+        mtp:hasParticipant   meetup:9af1ef516569c9f81db2165f2ba408e6 ;
+        mtp:hasPurpose       meetup:2d23d4150ee389c5cb43ff1a69f08fcb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Seiichi_Yamamoto> ;
+        mtp:hasType          "HT" .
+
+meetup:9af1ef516569c9f81db2165f2ba408e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Seiichi_Yamamoto> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Seiichi Yamamoto" .
+
+meetup:2d23d4150ee389c5cb43ff1a69f08fcb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9418191" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05036513" ;
+        mtp:hasSourcePurpose          "ML" .

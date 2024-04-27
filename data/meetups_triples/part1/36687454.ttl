@@ -1,0 +1,63 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3cc944607fba0a1ad429a4265a1a70d0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ralph_Patt> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ralph Patt" .
+
+meetup:4271c00739327f42183024f52fef9d00
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about a person's hometown" ;
+        mtp:hasEvidencePurposeSecond  "Mention of a location near Portland" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:2e3f6dffbb57fce22f0cbba680511ef6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Pursuing doctoral degree" ;
+        mtp:hasEvidencePurposeSecond  "Extensive travels" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Ralph_Patt>
+        rdf:type  core:Person .
+
+meetup:f0166ad50c95f1de1c88d0a3eae7af5d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Patt" .
+
+<http://w3id.org/polifonia/pilot/meetups/36687454/15/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In  2002 and 2010, Patt's hometown was listed as Canby, Oregon, near Portland." ;
+        mtp:hasParticipant   meetup:3cc944607fba0a1ad429a4265a1a70d0 ;
+        mtp:hasPurpose       meetup:4271c00739327f42183024f52fef9d00 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ralph_Patt> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/36687454/13/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Around 1975 he began working on his doctoral degree in hydrogeology. Employed by the US Department of Energy, he specialized in groundwater contamination from nuclear waste; as a research hydrogeologist, he accepted assignments worldwide and had extensive travels in Ukraine and Russia." ;
+        mtp:hasParticipant   meetup:f0166ad50c95f1de1c88d0a3eae7af5d ;
+        mtp:hasPurpose       meetup:2e3f6dffbb57fce22f0cbba680511ef6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ralph_Patt> ;
+        mtp:hasType          "HT" .

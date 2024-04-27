@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:82e490f3e4d772ed0b37c60578194aaf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Howard_S._Becker> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Becker, Howard S" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:515aa18b8d2b38571b18e24008d5318c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Howard S.  (" .
+
+<http://w3id.org/polifonia/pilot/meetups/1561641/20/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Becker, Howard S.  (New York:The Free Press, 1964)." ;
+        mtp:hasParticipant   meetup:515aa18b8d2b38571b18e24008d5318c , meetup:82e490f3e4d772ed0b37c60578194aaf ;
+        mtp:hasPurpose       meetup:a4710e3cc7c1396353c27e2180ae8208 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Howard_S._Becker> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Howard_S._Becker>
+        rdf:type  core:Person .
+
+meetup:a4710e3cc7c1396353c27e2180ae8208
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The main topic of the sentence is education, specifically referring to the book 'Becker, Howard S. (New York:The Free Press, 1964)' which is likely related to educational research or literature." ;
+        mtp:hasEvidencePurposeSecond  "The second most probable topic is a business meeting, possibly indicating a discussion or presentation about the book or its author." ;
+        mtp:hasSourcePurpose          "LLM" .

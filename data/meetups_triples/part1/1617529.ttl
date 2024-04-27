@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1617529/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Philip Joel Urry (born 5 January 1973), known by his stage name Phil Joel, is a New Zealand musician and  former bassist for the Christian rock group Newsboys." ;
+        mtp:hasParticipant   meetup:e6a4ef5850a8c2010ca18e643ba9fd97 , meetup:a68e279c77da638529c65ad67fb6fcc1 ;
+        mtp:hasPurpose       meetup:d9001dc737c8742633fb51c04f8e186d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Joel> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Phil_Joel>
+        rdf:type  core:Person .
+
+meetup:a68e279c77da638529c65ad67fb6fcc1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Joel> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Phil Joel" .
+
+meetup:d9001dc737c8742633fb51c04f8e186d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8856571" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.081291065" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e6a4ef5850a8c2010ca18e643ba9fd97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Philip Joel Urry" .

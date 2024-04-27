@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f9ee6cb41b34bc721f1a64422ef126a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Barbara Mayfield" .
+
+<http://w3id.org/polifonia/pilot/meetups/666937/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the mid-1960s he began researching the use of brain-waves to control musical events and, as a result, he brought the first Moog synthesizer to Europe in 1967. His piece In Tune was first performed with Barbara Mayfield in late 1967." ;
+        mtp:hasParticipant   meetup:f9ee6cb41b34bc721f1a64422ef126a7 , meetup:cf9f9272eefc2ea6ffa2011ecb18c787 ;
+        mtp:hasPurpose       meetup:50fcdd80192f878e19e9594c2ab86284 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_Teitelbaum> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Richard_Teitelbaum>
+        rdf:type  core:Person .
+
+meetup:cf9f9272eefc2ea6ffa2011ecb18c787
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mashel_Teitelbaum> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Teitelbaum" .
+
+meetup:50fcdd80192f878e19e9594c2ab86284
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Creating music using brain-waves" ;
+        mtp:hasEvidencePurposeSecond  "Researching and introducing Moog synthesizer" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Mashel_Teitelbaum>
+        rdf:type  core:Person .

@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Freddy_Jones_Band>
+        rdf:type  core:Person .
+
+meetup:093e2643709a98402f5c9b55e862dc23
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "113" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Wayne Healy" .
+
+<http://w3id.org/polifonia/pilot/meetups/11185447/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Despite the band's name, none of the bandmembers is named Freddy Jones; according to a 1992 interview, guitarist Wayne Healy stated it was \"inspired by a big fat comic strip character named Freddy.\"" ;
+        mtp:hasParticipant   meetup:093e2643709a98402f5c9b55e862dc23 , meetup:bce9ab9a54c9cd7091a4dddee28669ad ;
+        mtp:hasPurpose       meetup:3ceae55ae92ccd1eb0b8985002c4245c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Freddy_Jones_Band> ;
+        mtp:hasType          "HM" .
+
+meetup:3ceae55ae92ccd1eb0b8985002c4245c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.79919386" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14577194" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:bce9ab9a54c9cd7091a4dddee28669ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Freddy_Jones_Band> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "The Freddy Jones Band" .

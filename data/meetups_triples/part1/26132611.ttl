@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Simon_Gray>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a5765578b2e4df26682f292ce65823bd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8070317" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14337367" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/John_Mayer>
+        rdf:type  core:Person .
+
+meetup:59a5b71be6f6749c5c0e49bb47a95c93
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "113" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Richard Dray" .
+
+meetup:ae099597516cecb811f2aefe89f32a2c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_Gray> ;
+        mtp:hasOffset           "142" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Simon Gray" .
+
+meetup:50147fec04630e75986e958ab6c251d5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Mayer_(composer)> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Indo-Jazz Fusions" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:10d886ec98cd6b1ba4270027dd9f5c85
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Mayer> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Mayer" .
+
+<http://w3id.org/polifonia/pilot/meetups/26132611/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The new incarnation of the band, called John Mayer's Indo Jazz Fusions, was revived in the 1990s by his students Richard Dray, Will Joss, and Simon Gray, then led by Mayer himself, and continued to play live gigs—featuring his son Jonathan Mayer on sitar—until John's death." ;
+        mtp:hasParticipant   meetup:10d886ec98cd6b1ba4270027dd9f5c85 , meetup:50147fec04630e75986e958ab6c251d5 , meetup:ae099597516cecb811f2aefe89f32a2c , meetup:59a5b71be6f6749c5c0e49bb47a95c93 ;
+        mtp:hasPurpose       meetup:a5765578b2e4df26682f292ce65823bd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Mayer_(composer)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/John_Mayer_(composer)>
+        rdf:type  core:Person .

@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/17985845/19/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Directed and produced by Amy McKenzie, it opened on January 2, in the Fish Creek Town Hall Auditorium. Songs included \"Wish\", \"So Blessed\", and \"Oh!, Wisconsin\"." ;
+        mtp:hasPurpose       meetup:4b119b9a59390f254e33bd7f810bd501 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_O'Donnell_(playwright)> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4b119b9a59390f254e33bd7f810bd501
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions songs being performed." ;
+        mtp:hasEvidencePurposeSecond  "The event took place in a town hall auditorium." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:04e68df645be9587846af3b66bc76853
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richard_O'Donnell_(playwright)> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "R. O'Donnell" .
+
+meetup:27694b93b535793893d6727f3caadb76
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9972365" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0026585974" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/17985845/33/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1999, as R. O'Donnell, he executive produced, wrote, and hosted R. Rated, which aired late night on Fox TV in Chicago." ;
+        mtp:hasParticipant   meetup:04e68df645be9587846af3b66bc76853 ;
+        mtp:hasPurpose       meetup:27694b93b535793893d6727f3caadb76 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_O'Donnell_(playwright)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Richard_O'Donnell_(playwright)>
+        rdf:type  core:Person .

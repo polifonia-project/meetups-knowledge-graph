@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5a87df59cd828171f259b5cb44fa9249
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involvement in jazz performances and teaching" ;
+        mtp:hasEvidencePurposeSecond  "Teaching at Jazz & Rock Schulen Freiburg" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1eb9356fd6c57c79db4f2ac224c87796
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "60" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Frank Haunschild" .
+
+<http://w3id.org/polifonia/pilot/meetups/29585129/2/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He served as assistant director and performer at Oregon Public Broadcasting's PDX Jazz Summit in 1991, and since 1995 has been a contributing columnist for a number of magazines, including Down Beat, Guitar Player, Canadian Musician, Soundcheck (Germany), and Guitar Club (Italy). In Germany, he teaches at Jazz & Rock Schulen Freiburg with Frank Haunschild, with whom he plays regularly." ;
+        mtp:hasParticipant   meetup:1eb9356fd6c57c79db4f2ac224c87796 ;
+        mtp:hasPurpose       meetup:5a87df59cd828171f259b5cb44fa9249 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Stowell> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/John_Stowell>
+        rdf:type  core:Person .

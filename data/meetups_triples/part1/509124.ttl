@@ -1,0 +1,89 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jeff_Ament>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Stone_Gossard>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Bruce_Fairweather>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/509124/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shortly after the success of Guns N' Roses, he moved back to Seattle and in the late 1980s Gilmore was a member of the critically acclaimed, seminal Seattle band Mother Love Bone along with bandmates Andrew Wood (vocals), Bruce Fairweather (guitar), Jeff Ament (bass), and Stone Gossard (guitar)." ;
+        mtp:hasParticipant   meetup:c17302869a0cf4da89d8082afda01cf1 , meetup:457e58a56ac7a86266b965584872d180 , meetup:265000e2802014ca835bae79029b4376 ;
+        mtp:hasPurpose       meetup:5458e202336e493b5d3261b34a232a83 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Greg_Gilmore> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:65e027712ee49cb9970ec68017311a38
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Greg_Gilmore> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Greg Gilmore" .
+
+<http://dbpedia.org/resource/Greg_Gilmore>
+        rdf:type  core:Person .
+
+meetup:c17302869a0cf4da89d8082afda01cf1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stone_Gossard> ;
+        mtp:hasOffset           "182" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Stone Gossard" .
+
+meetup:265000e2802014ca835bae79029b4376
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Ament> ;
+        mtp:hasOffset           "159" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jeff Ament" .
+
+meetup:5ebc714250f584fbd682c9d9e004fb4a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8601769" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13892445" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:457e58a56ac7a86266b965584872d180
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bruce_Fairweather> ;
+        mtp:hasOffset           "131" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bruce Fairweather" .
+
+meetup:5458e202336e493b5d3261b34a232a83
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a Seattle band" ;
+        mtp:hasEvidencePurposeSecond  "Moving back to Seattle" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/509124/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Greg Gilmore (born January 3, 1962) is a French born-American musician in Seattle, Washington, and co-founder of the recording label First World Music." ;
+        mtp:hasParticipant   meetup:65e027712ee49cb9970ec68017311a38 ;
+        mtp:hasPurpose       meetup:5ebc714250f584fbd682c9d9e004fb4a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Greg_Gilmore> ;
+        mtp:hasType          "HT" .

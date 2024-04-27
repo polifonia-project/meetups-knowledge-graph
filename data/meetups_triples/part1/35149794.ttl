@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:0977c4f2a1701767f95936f070d7156b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mary_Mack_(comedian)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.6781804540660987" ;
+        mtp:hasTextEvidence     "Mary Mack" .
+
+<http://w3id.org/polifonia/pilot/meetups/35149794/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mary Mack (born July 25, 1975) is an American comedian, musician, and writer." ;
+        mtp:hasParticipant   meetup:0977c4f2a1701767f95936f070d7156b ;
+        mtp:hasPurpose       meetup:c0951ff7557488c88c61bd61daf4348b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mary_Mack_(comedian)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0ece577c1fce883c6b4cda01389866fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Justin_McElroy> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "0.5979778348637566" ;
+        mtp:hasTextEvidence     "Justin" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Justin_McElroy>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/35149794/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mack currently stars as Jesse in the Justin Roiland-produced animated sitcom Solar Opposites, which debuted May 8, 2020 on Hulu." ;
+        mtp:hasParticipant   meetup:0ece577c1fce883c6b4cda01389866fc , meetup:8fedf3888d5877f4e279857731751fb3 ;
+        mtp:hasPurpose       meetup:2c0cf7a090ae9267ca51dff878277d04 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mary_Mack_(comedian)> ;
+        mtp:hasType          "HM" .
+
+meetup:8fedf3888d5877f4e279857731751fb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mary_Mack_(comedian)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mary Mack" .
+
+<http://dbpedia.org/resource/Mary_Mack_(comedian)>
+        rdf:type  core:Person .
+
+meetup:c0951ff7557488c88c61bd61daf4348b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.86639374" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1261218" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2c0cf7a090ae9267ca51dff878277d04
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.772027" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22726957" ;
+        mtp:hasSourcePurpose          "ML" .

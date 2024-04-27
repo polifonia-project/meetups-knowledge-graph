@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:9c15db3d54ecd8244ffc1be02ccb91cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Appointment as music director" ;
+        mtp:hasEvidencePurposeSecond  "First female conductor" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:77f027c399a346e7c0e93a8c899edcc9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99972886" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00020106178" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/7350721/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Maazel subsequently appointed Xian Zhang as the orchestra's associate conductor in 2005, a post she held for several years." ;
+        mtp:hasParticipant   meetup:7e2bb6cadd1a85b57835b1cbf615ed35 ;
+        mtp:hasPurpose       meetup:db98ad0b713b07276027e6fd3248edf9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Xian_Zhang_(conductor)> ;
+        mtp:hasType          "HT" .
+
+meetup:7e2bb6cadd1a85b57835b1cbf615ed35
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Xian_Zhang_(conductor)> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "0.999999867106121" ;
+        mtp:hasTextEvidence     "Xian Zhang" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Xian_Zhang_(conductor)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/7350721/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Xian Zhang (Chinese: 张弦), born in 1973 in Dandong, Liaoning) is a Chinese-American conductor." ;
+        mtp:hasParticipant   meetup:e23158016b1fef8f245f9e93e7e4de3f ;
+        mtp:hasPurpose       meetup:77f027c399a346e7c0e93a8c899edcc9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Xian_Zhang_(conductor)> ;
+        mtp:hasType          "HT" .
+
+meetup:e23158016b1fef8f245f9e93e7e4de3f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Xian_Zhang_(conductor)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999867106121" ;
+        mtp:hasTextEvidence     "Xian Zhang" .
+
+<http://w3id.org/polifonia/pilot/meetups/7350721/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In November 2015, the NJSO announced her appointment as its 14th music director, effective in September 2016, with an initial contract of 4 years. She is the first female conductor to be named music director of the NJSO." ;
+        mtp:hasPurpose       meetup:9c15db3d54ecd8244ffc1be02ccb91cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Xian_Zhang_(conductor)> ;
+        mtp:hasType          "HT" .
+
+meetup:db98ad0b713b07276027e6fd3248edf9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99988437" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.980075e-05" ;
+        mtp:hasSourcePurpose          "ML" .

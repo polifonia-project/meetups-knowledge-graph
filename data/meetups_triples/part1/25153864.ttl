@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:392be4d6f4d43a3d31485cc8de62a474
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9901558" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009029733" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/25153864/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nick Sanderson (22 April 1961 – 8 June 2008) was an English musician, most famous for being the front man in Earl Brutus, and a short-term member of the Scottish alternative rock band The Jesus and Mary Chain." ;
+        mtp:hasParticipant   meetup:92dcdacf3dde18d2c59c8363683148cd ;
+        mtp:hasPurpose       meetup:392be4d6f4d43a3d31485cc8de62a474 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nick_Sanderson_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:92dcdacf3dde18d2c59c8363683148cd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nick_Sanderson_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99999759611426" ;
+        mtp:hasTextEvidence     "Nick Sanderson" .
+
+<http://dbpedia.org/resource/Nick_Sanderson_(musician)>
+        rdf:type  core:Person .

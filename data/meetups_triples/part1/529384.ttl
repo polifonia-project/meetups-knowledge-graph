@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Sascha_Konietzko>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/529384/13/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sascha Konietzko lived in the United States from 1991 to 2007, dividing his time among Chicago, New York City, and Seattle before moving back to his hometown of Hamburg, Germany." ;
+        mtp:hasParticipant   meetup:bcb122d2e0da121a9af899f1835a45e5 ;
+        mtp:hasPurpose       meetup:20e79c449c82928ffa283caeb1bfa795 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sascha_Konietzko> ;
+        mtp:hasType          "HT" .
+
+meetup:20e79c449c82928ffa283caeb1bfa795
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9945791" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0026072338" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b0e1c35ecc5fb3b810912bc719092169
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9751277" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02132047" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/529384/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sascha Konietzko (born 21 June 1961), also known as Sascha K and Käpt'n K, is a German musician and record producer." ;
+        mtp:hasParticipant   meetup:41b4f2e0a90d775f5a5537d3b6a5bd44 ;
+        mtp:hasPurpose       meetup:b0e1c35ecc5fb3b810912bc719092169 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sascha_Konietzko> ;
+        mtp:hasType          "HT" .
+
+meetup:41b4f2e0a90d775f5a5537d3b6a5bd44
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sascha_Konietzko> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sascha Konietzko" .
+
+meetup:bcb122d2e0da121a9af899f1835a45e5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sascha_Konietzko> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sascha Konietzko" .

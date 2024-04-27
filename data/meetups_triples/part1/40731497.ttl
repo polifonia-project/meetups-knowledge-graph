@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/40731497/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rosita Renard (real name Rosa Amelia Renard Artigas, February 8, 1894 in Santiago de Chile – May 24, 1949 in Santiago de Chile) was a Chilean classical pianist." ;
+        mtp:hasParticipant   meetup:ff79f682e9a438849f617d4a7eb17c3b , meetup:db33cfa9f86c2493b7f076fe67a4de9c ;
+        mtp:hasPurpose       meetup:933054c12cec3b3dc6102fa2eea1313d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rosita_Renard> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:933054c12cec3b3dc6102fa2eea1313d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87127745" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1286803" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:db33cfa9f86c2493b7f076fe67a4de9c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rosa Amelia Renard Artigas" .
+
+meetup:ff79f682e9a438849f617d4a7eb17c3b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rosita_Renard> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rosita Renard" .
+
+<http://dbpedia.org/resource/Rosita_Renard>
+        rdf:type  core:Person .

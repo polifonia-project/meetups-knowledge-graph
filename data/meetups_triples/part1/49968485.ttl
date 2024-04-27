@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:00248e7728443526566b7dc90d3be8f3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5383472" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4566222" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:14c46bb60a16d6c9a43de785f8d89015
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95608526" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.043892838" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/49968485/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marcus Shelby (born February 2, 1966, in Anchorage, Alaska) is an American bass player, composer and educator best known for his major works for jazz orchestra, Port Chicago, Harriet Tubman, Soul of the Movement: Meditations on Dr. Martin Luther King Jr., and Beyond the Blues: A Prison Oratorio." ;
+        mtp:hasParticipant   meetup:943698c8278ab607df4be6cf768f5c5c ;
+        mtp:hasPurpose       meetup:00248e7728443526566b7dc90d3be8f3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marcus_Shelby> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/49968485/20/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Midtown Sunset, Marcus Shelby and the Jazzantiqua Music Ensemble (Noir)" ;
+        mtp:hasParticipant   meetup:251b8b0582b679bfdcfa7895b198c169 ;
+        mtp:hasPurpose       meetup:14c46bb60a16d6c9a43de785f8d89015 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marcus_Shelby> ;
+        mtp:hasType          "HT" .
+
+meetup:943698c8278ab607df4be6cf768f5c5c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marcus_Shelby> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marcus Shelby" .
+
+<http://dbpedia.org/resource/Marcus_Shelby>
+        rdf:type  core:Person .
+
+meetup:251b8b0582b679bfdcfa7895b198c169
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marcus_Shelby> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Marcus Shelby" .

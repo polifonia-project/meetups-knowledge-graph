@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_Anthony_Nevin>
+        rdf:type  core:Person .
+
+meetup:f7bc7a875524cdedd09f1a0a2e98fb9c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Anthony_Nevin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nevin" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Arthur_Nevin>
+        rdf:type  core:Person .
+
+meetup:668396964e78c12affdeae0325a459f1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions the performance of a symphony orchestra." ;
+        mtp:hasEvidencePurposeSecond  "The sentence implies the composer's extensive body of work." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/18813558/4/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "According to the legend, Scarface goes in search of the Sun after being rejected by the woman he loves. He eventually makes it to the lodge of the Sun, who is impressed by his bravery and heals his scar." ;
+        mtp:hasPurpose       meetup:3c5b415931059dad3785c838d28b8ffd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Nevin> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/18813558/4/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From there it fell into obscurity; it was only given again in the United States by the Great Falls Symphony Orchestra in 2005. Nevin composed numerous other works besides Poia." ;
+        mtp:hasParticipant   meetup:f7bc7a875524cdedd09f1a0a2e98fb9c ;
+        mtp:hasPurpose       meetup:668396964e78c12affdeae0325a459f1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Nevin> ;
+        mtp:hasType          "HT" .
+
+meetup:3c5b415931059dad3785c838d28b8ffd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Story about Scarface's personal journey" ;
+        mtp:hasEvidencePurposeSecond  "Coincidental meeting with the Sun" ;
+        mtp:hasSourcePurpose          "LLM" .

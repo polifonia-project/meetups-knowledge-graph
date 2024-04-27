@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/31744786/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Friedemann made Bern's civic music well-known; he was on the jury of the Federal Music Festival 1906 in Freiburg, which awarded Bern's band the 1st Gold Medal in the first rank of the first city in that category. With this band he made trips to Germany, France, Italy and Spain." ;
+        mtp:hasParticipant   meetup:3bc276035af85e41d31b3db8bb8883a5 ;
+        mtp:hasPurpose       meetup:6bc2c4e951198cf45bc5f899613a3aff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carl_Friedemann> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Carl_Friedemann>
+        rdf:type  core:Person .
+
+meetup:3bc276035af85e41d31b3db8bb8883a5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Friedemann_Witecka> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Friedemann" .
+
+meetup:6bc2c4e951198cf45bc5f899613a3aff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Friedemann's involvement in music festivals and leading a band" ;
+        mtp:hasEvidencePurposeSecond  "Recognition and awards for Bern's band" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Friedemann_Witecka>
+        rdf:type  core:Person .

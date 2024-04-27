@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f70a49fe6d066753625226747d1a0b60
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8633175" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13595639" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fe9d645bd9896dad7a9ad3f84412b950
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Atrox> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Atrox" .
+
+<http://w3id.org/polifonia/pilot/meetups/12081497/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Formed in 1988, the band released its first material only in 1997, and followed it with two releases on notable French metal label, Season of Mist." ;
+        mtp:hasParticipant   meetup:fe9d645bd9896dad7a9ad3f84412b950 ;
+        mtp:hasPurpose       meetup:f70a49fe6d066753625226747d1a0b60 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Atrox> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Atrox>
+        rdf:type  core:Person .

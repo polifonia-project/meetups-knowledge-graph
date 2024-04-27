@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Scott_Raynor>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/183389/5/24>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"The summer I lived with Mark and his family was probably the greatest summer of my life so far,\" said Raynor in 2001. \"I left home at 17, came to San Diego, we bought a van, finished our first video… I had all kinds of dreams in my head and they were all coming true.\"" ;
+        mtp:hasPurpose       meetup:d2664e33e5204463baa3dc1a0b752cec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Scott_Raynor> ;
+        mtp:hasType          "HT" .
+
+meetup:664e0508746988b19c9d92c915c597b3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "87" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mike Krull" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/183389/5/19>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Raynor stayed with his sister for the summer of 1993 in order to rehearse for the recording of their debut album. Raynor moved to Reno following the recording and was briefly replaced by school friend Mike Krull." ;
+        mtp:hasParticipant   meetup:664e0508746988b19c9d92c915c597b3 ;
+        mtp:hasPurpose       meetup:4bec27bf7f06c9d7164426fc2d2f85bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Scott_Raynor> ;
+        mtp:hasType          "HT" .
+
+meetup:d2664e33e5204463baa3dc1a0b752cec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Raynor's experience living with Mark and his family" ;
+        mtp:hasEvidencePurposeSecond  "Raynor's dreams coming true through music making" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:4bec27bf7f06c9d7164426fc2d2f85bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Rehearsing for debut album" ;
+        mtp:hasEvidencePurposeSecond  "Living with sister and moving to Reno" ;
+        mtp:hasSourcePurpose          "LLM" .

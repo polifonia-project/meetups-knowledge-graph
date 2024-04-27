@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/61624717/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Madeleine Jane Woolley, who performs as Maddy Jane (born 1996), is an Australian singer-songwriter and guitarist from Bruny Island." ;
+        mtp:hasParticipant   meetup:c3d99efee112f00f83b7c664db4ff3b7 , meetup:d44d56a2b65a92650565bd27dddf839a ;
+        mtp:hasPurpose       meetup:d266cb9ad410ccbcfa8f46516abb9768 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maddy_Jane> ;
+        mtp:hasType          "HM" .
+
+meetup:d266cb9ad410ccbcfa8f46516abb9768
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Singer-songwriter and guitarist" ;
+        mtp:hasEvidencePurposeSecond  "Born in 1996" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Maddy_Jane>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Jane_Fonda>
+        rdf:type  core:Person .
+
+meetup:c3d99efee112f00f83b7c664db4ff3b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jane_Fonda> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "0.7038017466276757" ;
+        mtp:hasTextEvidence     "Jane" .
+
+meetup:d44d56a2b65a92650565bd27dddf839a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maddy_Jane> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Maddy Jane" .

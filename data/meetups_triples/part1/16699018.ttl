@@ -1,0 +1,63 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/16699018/4/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Chester died in October 1966, at the age of 58." ;
+        mtp:hasParticipant   meetup:3c07101797997a899778b5b4d22bde60 ;
+        mtp:hasPurpose       meetup:f325d6db82e5f67330cd86fb8b1dece7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Chester> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/16699018/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Chester (March 20, 1908 – October 29, 1966) was an American jazz and pop music bandleader and tenor saxophonist." ;
+        mtp:hasParticipant   meetup:09381f36486953d87893165887926200 ;
+        mtp:hasPurpose       meetup:988a65c76e75ab544a6587953b8e91ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Chester> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f325d6db82e5f67330cd86fb8b1dece7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999045" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.112381e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Bob_Chester>
+        rdf:type  core:Person .
+
+meetup:988a65c76e75ab544a6587953b8e91ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99718225" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0025583026" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:09381f36486953d87893165887926200
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Chester> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Chester" .
+
+meetup:3c07101797997a899778b5b4d22bde60
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Chester> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999524932" ;
+        mtp:hasTextEvidence     "Bob Chester" .

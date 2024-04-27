@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:ce1c7bc62fa67c1da36928325559f67f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.41971105" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3633547" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:05bb47bd456a4e62e6a94030a8b67bad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erik_Friedlander> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Erik Friedlander" .
+
+<http://dbpedia.org/resource/John_Zorn>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Erik_Friedlander>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5660976/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Erik Friedlander is an American cellist and composer based in New York City." ;
+        mtp:hasParticipant   meetup:05bb47bd456a4e62e6a94030a8b67bad ;
+        mtp:hasPurpose       meetup:ebcfdee0b949ed20923e53e8bbf2ab85 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erik_Friedlander> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:ebcfdee0b949ed20923e53e8bbf2ab85
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9984137" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0015078464" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/5660976/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A veteran of New York City's experimental downtown scene, Friedlander has worked in many contexts, but is perhaps best known for his frequent collaborations with saxophonist John Zorn." ;
+        mtp:hasParticipant   meetup:87f437d5a9a75c5fff72ec967ffdccde , meetup:41a1e2f0e5b3575b127efb028eab210f ;
+        mtp:hasPurpose       meetup:ce1c7bc62fa67c1da36928325559f67f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erik_Friedlander> ;
+        mtp:hasType          "HM" .
+
+meetup:87f437d5a9a75c5fff72ec967ffdccde
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Zorn> ;
+        mtp:hasOffset           "174" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Zorn" .
+
+meetup:41a1e2f0e5b3575b127efb028eab210f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erik_Friedlander> ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Erik Friedlander" .

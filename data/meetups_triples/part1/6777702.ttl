@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gil_Goldstein>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9d93389c90e5acf491ddfedd47c509b6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.963346" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.026433526" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6f5751e54754558e87e9ea556c6d99c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gil_Goldstein> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gil Goldstein" .
+
+<http://w3id.org/polifonia/pilot/meetups/6777702/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gil Goldstein (born November 6, 1950 in Baltimore, Maryland) is an American jazz pianist and accordionist." ;
+        mtp:hasParticipant   meetup:6f5751e54754558e87e9ea556c6d99c6 ;
+        mtp:hasPurpose       meetup:9d93389c90e5acf491ddfedd47c509b6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gil_Goldstein> ;
+        mtp:hasType          "HT" .

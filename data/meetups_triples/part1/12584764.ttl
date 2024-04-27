@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Susan_Cowsill>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:55a3e60f0e062564089ebb5aaf92b399
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Cowsill> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Cowsill" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/John_Cowsill>
+        rdf:type  core:Person .
+
+meetup:7b8e484a91bccb2ad3bbfa16c2e87f82
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.73832804" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15599103" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:baf3fa6e0c0b6ffefa81300936eb9f57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Susan_Cowsill> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Susan Cowsill" .
+
+<http://w3id.org/polifonia/pilot/meetups/12584764/9/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "(Peterson subsequently married Susan Cowsill's brother John Cowsill, who currently plays drums for the touring version of The Beach Boys.)" ;
+        mtp:hasParticipant   meetup:55a3e60f0e062564089ebb5aaf92b399 , meetup:baf3fa6e0c0b6ffefa81300936eb9f57 ;
+        mtp:hasPurpose       meetup:7b8e484a91bccb2ad3bbfa16c2e87f82 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Susan_Cowsill> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:6012c23c655922816d775f46cbbe0be1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.82653284" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09711582" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:96a252bdc9fe313bceb96a9122335856
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9979164" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010682351" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/37679574/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Rocking Tenor Sax of Eddie Chamblee (Prestige, 1964)" ;
+        mtp:hasParticipant   meetup:c854df39d82a854d84048119caa97290 ;
+        mtp:hasPurpose       meetup:6012c23c655922816d775f46cbbe0be1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Chamblee> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/37679574/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He played on Sonny Thompson's hit record \"Long Gone\" in 1948, and on its follow-up, \"Late Freight\", credited to the Sonny Thompson Quintet featuring Eddie Chamblee." ;
+        mtp:hasParticipant   meetup:7b87f69c4951375c3a3e9378e18e5b81 , meetup:36b6918cd973e8022cff16d2a0449371 ;
+        mtp:hasPurpose       meetup:96a252bdc9fe313bceb96a9122335856 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Chamblee> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Sonny_Thompson>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Eddie_Chamblee>
+        rdf:type  core:Person .
+
+meetup:c854df39d82a854d84048119caa97290
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Chamblee> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Eddie Chamblee" .
+
+meetup:7b87f69c4951375c3a3e9378e18e5b81
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sonny_Thompson> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sonny Thompson" .
+
+meetup:36b6918cd973e8022cff16d2a0449371
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Chamblee> ;
+        mtp:hasOffset           "149" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Eddie Chamblee" .

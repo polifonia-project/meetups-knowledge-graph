@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:ca5a04642a7de91e2094c1eafb91bf4c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Passion for jazz music" ;
+        mtp:hasEvidencePurposeSecond  "Life events and career" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1192579/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Francis Wolff (April 5, 1907 – March 8, 1971) was a record company executive, photographer and record producer." ;
+        mtp:hasParticipant   meetup:c6d5df0d96f67f4138e4c70d64359661 ;
+        mtp:hasPurpose       meetup:fc74c19ffdae3767cc0ac4da335d558d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Francis_Wolff> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c6d5df0d96f67f4138e4c70d64359661
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Francis_Wolff> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Francis Wolff" .
+
+meetup:fc74c19ffdae3767cc0ac4da335d558d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.4856974" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.33476064" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/1192579/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jakob Franz \"Franny\" Wolff was born in Berlin, Germany, where he became a jazz enthusiast, despite the government ban placed on this type of music after 1933. After a career as a commercial photographer in Germany, Wolff emigrated to the United States." ;
+        mtp:hasPurpose       meetup:ca5a04642a7de91e2094c1eafb91bf4c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Francis_Wolff> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Francis_Wolff>
+        rdf:type  core:Person .

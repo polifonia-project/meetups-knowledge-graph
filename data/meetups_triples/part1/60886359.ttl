@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ligel_Lambert>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/60886359/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In an article written by Nathan Driskell and published in June 2016, Ligel is listed to have taught high school students in the United States, South Korea, Japan and in China. In China, Ligel taught the IBDP Visual Art at Shanghai Shixi High School." ;
+        mtp:hasParticipant   meetup:7c780c4f199cfbad5458765f3251596a ;
+        mtp:hasPurpose       meetup:d0f1ec4dd943e8e5691928917bf5ee73 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ligel_Lambert> ;
+        mtp:hasType          "HT" .
+
+meetup:d0f1ec4dd943e8e5691928917bf5ee73
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Teaching high school students" ;
+        mtp:hasEvidencePurposeSecond  "Personal experience of Ligel" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/60886359/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ligel Lambert (born May 20, 1982) is a Haitian-born American interdisciplinary artist, entrepreneur, educator and graphic designer who primarily works in painting, collage, printmaking, assemblage (art) and sculpture." ;
+        mtp:hasParticipant   meetup:190d0ba6e08fdaa3c80dfcc4293e8710 ;
+        mtp:hasPurpose       meetup:3ac703759660ba87c12617fcd6dc6833 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ligel_Lambert> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:7c780c4f199cfbad5458765f3251596a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ligel" .
+
+meetup:190d0ba6e08fdaa3c80dfcc4293e8710
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ligel_Lambert> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ligel Lambert" .
+
+meetup:3ac703759660ba87c12617fcd6dc6833
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9556346" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.043233622" ;
+        mtp:hasSourcePurpose          "ML" .

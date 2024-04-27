@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Sarah_Neufeld>
+        rdf:type  core:Person .
+
+meetup:aa361a88cce198e96a99ec52996020a9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.79650927" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16592371" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/3115175/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sarah Neufeld (born August 27, 1979) is a Canadian violinist who is known for her work with indie rock band Arcade Fire, with whom she is a former core member and currently a touring member." ;
+        mtp:hasParticipant   meetup:46ef7317f77d5a93e183a2ae6a018931 ;
+        mtp:hasPurpose       meetup:aa361a88cce198e96a99ec52996020a9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sarah_Neufeld> ;
+        mtp:hasType          "HT" .
+
+meetup:46ef7317f77d5a93e183a2ae6a018931
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sarah_Neufeld> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sarah Neufeld" .

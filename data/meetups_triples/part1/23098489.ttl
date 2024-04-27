@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:be42f2fe6fa1de2e39608c965c7aaabd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Dollar_(musician)> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johnny Dollar" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/23098489/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He committed suicide on April 13, 1986." ;
+        mtp:hasParticipant   meetup:d2bc6ba9b8bd0da89bfd0631a25ef085 ;
+        mtp:hasPurpose       meetup:ec2fb123d7d283d6999c1d6d4aa98a3e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Dollar_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:ec2fb123d7d283d6999c1d6d4aa98a3e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9988399" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0011426309" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/23098489/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "For much of the 1970s, Dollar did production work, for the New Coon Creek Girls, Jimmy Dickens, and Teddy Nelson, among others." ;
+        mtp:hasParticipant   meetup:b194ffff2fb35896e5a85b02c813173d , meetup:be42f2fe6fa1de2e39608c965c7aaabd ;
+        mtp:hasPurpose       meetup:57aaa5e428d315800fc9a6be1f3eec57 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Dollar_(musician)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Teddy_Nelson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Johnny_Dollar_(musician)>
+        rdf:type  core:Person .
+
+meetup:d2bc6ba9b8bd0da89bfd0631a25ef085
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Dollar_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johnny Dollar" .
+
+meetup:b194ffff2fb35896e5a85b02c813173d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Teddy_Nelson> ;
+        mtp:hasOffset           "100" ;
+        mtp:hasSimilarityScore  "0.9999999999981526" ;
+        mtp:hasTextEvidence     "Teddy Nelson" .
+
+meetup:57aaa5e428d315800fc9a6be1f3eec57
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9579966" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04198195" ;
+        mtp:hasSourcePurpose          "ML" .

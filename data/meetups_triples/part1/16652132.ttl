@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/16652132/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Watermann (born February 19, 1935 in Berlin; died April 2002 in Brisbane, Australia) was a composer, performer and filmmaker." ;
+        mtp:hasParticipant   meetup:873a6e75e9ddfa3c6280b92797454d08 ;
+        mtp:hasPurpose       meetup:bfc7b7081d906ab18af5d10d32f1d494 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Watermann> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/John_Watermann>
+        rdf:type  core:Person .
+
+meetup:bfc7b7081d906ab18af5d10d32f1d494
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87645835" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12112179" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:873a6e75e9ddfa3c6280b92797454d08
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Watermann> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9998150461206766" ;
+        mtp:hasTextEvidence     "John Watermann" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/36142940/0/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ergün debuted in cinema with director Yilmaz Güney in 1974. Ergün played in many important movies, including Maden, Kuma, Hamam and Kalbin zamanı." ;
+        mtp:hasParticipant   meetup:ad8d04031f32d1ffa8cb18d385ece8f9 ;
+        mtp:hasPurpose       meetup:2a717cd0a49c1e3ba4f8ae00f53a0633 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Halil_Ergün> ;
+        mtp:hasType          "HT" .
+
+meetup:2a717cd0a49c1e3ba4f8ae00f53a0633
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Ergün's career in cinema" ;
+        mtp:hasEvidencePurposeSecond  "Ergün's personal life and achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Halil_Ergün>
+        rdf:type  core:Person .
+
+meetup:ad8d04031f32d1ffa8cb18d385ece8f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kalbin zamanı" .

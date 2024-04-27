@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Peter_Berg>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/6087019/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Some of his frequent collaboration partners include film directors Michael Bay and Peter Berg, and fellow composer Hans Zimmer." ;
+        mtp:hasParticipant   meetup:bdf84f7cab9f3e330ff2030f79895ebe , meetup:18edb814aefe24460468160011f3a0a7 , meetup:421098fb217532e9a73740ff7993af23 , meetup:ab01127e47564147bdbb794878164c7e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Jablonsky> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Hans_Zimmer>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Steve_Jablonsky>
+        rdf:type  core:Person .
+
+meetup:18edb814aefe24460468160011f3a0a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hans_Zimmer> ;
+        mtp:hasOffset           "115" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hans Zimmer" .
+
+meetup:421098fb217532e9a73740ff7993af23
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Jablonsky> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Jablonsky" .
+
+meetup:e3c15364dbf9d0c3364144fb5ad6400f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7982161" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12437675" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6087019/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steve Jablonsky (born October 9, 1970) is an American composer for film, television and video games, best known for his musical scores in the Transformers film series." ;
+        mtp:hasParticipant   meetup:eafb3649b08c78a0e720dd3dbdb2319d ;
+        mtp:hasPurpose       meetup:e3c15364dbf9d0c3364144fb5ad6400f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Jablonsky> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Michael_Bay>
+        rdf:type  core:Person .
+
+meetup:ab01127e47564147bdbb794878164c7e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Berg> ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "0.9999999999608348" ;
+        mtp:hasTextEvidence     "Peter Berg" .
+
+meetup:eafb3649b08c78a0e720dd3dbdb2319d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Jablonsky> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Steve Jablonsky" .
+
+meetup:bdf84f7cab9f3e330ff2030f79895ebe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Bay> ;
+        mtp:hasOffset           "67" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Michael Bay" .

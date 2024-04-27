@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Will_Oldham>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Emmett_Kelly_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/33731032/37/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "You Win 7\" - Bonnie \"Prince\" Billy & The Cairo Gang (Drag City, 2010)" ;
+        mtp:hasParticipant   meetup:3731513c119d06d97ff9851410506a91 , meetup:757d2348f797dd8f938594711c1dc5ca ;
+        mtp:hasPurpose       meetup:94b76dbafeaee40aba4cc251c3c01861 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emmett_Kelly_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:3731513c119d06d97ff9851410506a91
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emmett_Kelly_(musician)> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "0.999999999962256" ;
+        mtp:hasTextEvidence     "The Cairo Gang" .
+
+meetup:757d2348f797dd8f938594711c1dc5ca
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Will_Oldham> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bonnie \"Prince\" Billy" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:94b76dbafeaee40aba4cc251c3c01861
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6208522" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.37537646" ;
+        mtp:hasSourcePurpose          "ML" .

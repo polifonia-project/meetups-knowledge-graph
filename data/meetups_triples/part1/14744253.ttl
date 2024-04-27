@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Shoshichi_Kobayashi>
+        rdf:type  core:Person .
+
+meetup:4d3b64c45809875dbf3787b87d300fca
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aimi_(actress)> ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "0.9342471958508476" ;
+        mtp:hasTextEvidence     "Aimi" .
+
+<http://dbpedia.org/resource/Aimi_(actress)>
+        rdf:type  core:Person .
+
+meetup:2defcb9503f2d1265a1ddcef1e2c2cf1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shoshichi_Kobayashi> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "0.7669911738587283" ;
+        mtp:hasTextEvidence     "Kobayashi" .
+
+meetup:14f0bb647d58e31a0f7d170159cbe37f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aimi_Kobayashi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aimi Kobayashi" .
+
+<http://w3id.org/polifonia/pilot/meetups/14744253/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aimi Kobayashi (小林 愛実, Kobayashi Aimi, born September 23, 1995) is a Japanese classical pianist." ;
+        mtp:hasParticipant   meetup:2defcb9503f2d1265a1ddcef1e2c2cf1 , meetup:14f0bb647d58e31a0f7d170159cbe37f , meetup:6a8911797082042279786860bcd117e0 , meetup:4d3b64c45809875dbf3787b87d300fca ;
+        mtp:hasPurpose       meetup:248284ad3d4628fa3959ab0ac96abfdf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aimi_Kobayashi> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Aimi_Kobayashi>
+        rdf:type  core:Person .
+
+meetup:6a8911797082042279786860bcd117e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kobayashi Aimi" .
+
+meetup:248284ad3d4628fa3959ab0ac96abfdf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9144997" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.085488476" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/57339698/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carlos Sadness (born 31 March 1987) is a Spanish singer, songwriter and illustrator." ;
+        mtp:hasParticipant   meetup:841bf7ab1d5f2da44847ff36769765cd ;
+        mtp:hasPurpose       meetup:e37e072d7b06ba0f80a3379607acbd99 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carlos_Sadness> ;
+        mtp:hasType          "HT" .
+
+meetup:c8f4fc86511e9f27de7bc75a7af21e47
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carlos_Sadness> ;
+        mtp:hasOffset           "87" ;
+        mtp:hasSimilarityScore  "0.9999826710182412" ;
+        mtp:hasTextEvidence     "Carlos Sadness" .
+
+<http://dbpedia.org/resource/Carlos_Sadness>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/57339698/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In April 2012, he released his album Ciencias celestes and he finally used the name of Carlos Sadness." ;
+        mtp:hasParticipant   meetup:c8f4fc86511e9f27de7bc75a7af21e47 ;
+        mtp:hasPurpose       meetup:96dfb8a8db135b1b2f5080866d68ad08 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carlos_Sadness> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:96dfb8a8db135b1b2f5080866d68ad08
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99742377" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0020051566" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:841bf7ab1d5f2da44847ff36769765cd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carlos_Sadness> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999826710182412" ;
+        mtp:hasTextEvidence     "Carlos Sadness" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:e37e072d7b06ba0f80a3379607acbd99
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7151701" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23010366" ;
+        mtp:hasSourcePurpose          "ML" .

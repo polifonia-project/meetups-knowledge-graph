@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/10558682/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is the daughter of fiddler/composer Jay Ungar and singer Lyn Hardy and a graduate of Bard College in Annandale-on-Hudson, New York." ;
+        mtp:hasParticipant   meetup:d086f44aae07bc4bb047ede54ce963c0 , meetup:c51e3ed0bc6a017d665cb2e5cffa061f ;
+        mtp:hasPurpose       meetup:7247d596a970e6b918be847a7796718a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruth_Ungar> ;
+        mtp:hasType          "HM" .
+
+meetup:c51e3ed0bc6a017d665cb2e5cffa061f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruth_Ungar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ruth Ungar Merenda" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/10558682/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ruth Ungar Merenda was born February 19, 1976, in Mount Kisco, New York." ;
+        mtp:hasParticipant   meetup:2692a13df10d1af2699dcdc4c46e0c11 ;
+        mtp:hasPurpose       meetup:c24d2e487b14bf6dc375817729a6d977 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruth_Ungar> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ruth_Ungar>
+        rdf:type  core:Person .
+
+meetup:d086f44aae07bc4bb047ede54ce963c0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jay_Ungar> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jay Ungar" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:c24d2e487b14bf6dc375817729a6d977
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999889" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.587519e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:7247d596a970e6b918be847a7796718a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6522923" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22527795" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2692a13df10d1af2699dcdc4c46e0c11
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruth_Ungar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ruth Ungar Merenda" .
+
+<http://dbpedia.org/resource/Jay_Ungar>
+        rdf:type  core:Person .

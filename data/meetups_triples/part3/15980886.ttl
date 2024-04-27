@@ -1,0 +1,35 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:5baddcd179ad36f5a480d811499a7889
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "1 March 1889" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1889-03-01"^^xsd:date ;
+        time:hasEnd          "1889-03-01"^^xsd:date .
+
+<http://dbpedia.org/resource/Wilibald_Gurlitt>
+        rdf:type  core:Person .
+
+meetup:50a1db8151b8f2c3aa82b2e8809e6924
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "15 December 1963" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1963-12-15"^^xsd:date ;
+        time:hasEnd          "1963-12-15"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/15980886/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:50a1db8151b8f2c3aa82b2e8809e6924 , meetup:5baddcd179ad36f5a480d811499a7889 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Wilibald_Gurlitt> ;
+        mtp:hasType     "HT" .

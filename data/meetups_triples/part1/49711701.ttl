@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Laurel_(musician)>
+        rdf:type  core:Person .
+
+meetup:11ba935a1171ce1db6e91e2ceff155a1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Laurel_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Laurel Arnell-Cullen" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c00e65acbcaf5d4ce877a1ead2678a13
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.3501488" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.31238198" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:46a76fed3e93eee86715e3957e7c0dc4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Laurel_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Laurel Arnell-Cullen" .
+
+<http://w3id.org/polifonia/pilot/meetups/49711701/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Laurel Arnell-Cullen, better known as Laurel, is a British indie musician based in London." ;
+        mtp:hasParticipant   meetup:11ba935a1171ce1db6e91e2ceff155a1 ;
+        mtp:hasPurpose       meetup:c00e65acbcaf5d4ce877a1ead2678a13 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laurel_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/49711701/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Laurel received critical acclaim for writing, recording and producing all her music in her bedroom studio in London." ;
+        mtp:hasParticipant   meetup:46a76fed3e93eee86715e3957e7c0dc4 ;
+        mtp:hasPurpose       meetup:5172fc8fdb91b86f16a81e5558fce898 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laurel_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:5172fc8fdb91b86f16a81e5558fce898
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9949242" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00506356" ;
+        mtp:hasSourcePurpose          "ML" .

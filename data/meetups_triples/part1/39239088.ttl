@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:783a0cc03378d27ecfa6929a7bb976f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about someone's birth" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Cameron_McVey>
+        rdf:type  core:Person .
+
+meetup:96f6413ce34e271d4b3964c8d1f8f829
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mabel_(singer)> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mabel" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:0bed3f73497d20fadc5db7284a579990
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mabel Alabama-Pearl McVey" .
+
+meetup:2806c3f827c4669ca2057122d35b6ef2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cameron_McVey> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "0.9999999998520366" ;
+        mtp:hasTextEvidence     "McVey" .
+
+<http://w3id.org/polifonia/pilot/meetups/39239088/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mabel Alabama-Pearl McVey was born on 19 February 1996 in Alhaurín el Grande, Málaga, Spain." ;
+        mtp:hasParticipant   meetup:96f6413ce34e271d4b3964c8d1f8f829 , meetup:2806c3f827c4669ca2057122d35b6ef2 , meetup:0bed3f73497d20fadc5db7284a579990 ;
+        mtp:hasPurpose       meetup:783a0cc03378d27ecfa6929a7bb976f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mabel_(singer)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Mabel_(singer)>
+        rdf:type  core:Person .

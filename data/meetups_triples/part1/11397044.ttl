@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:e6389a4c1e5b372748a8e80ee7c020a5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Details about personal relationships" ;
+        mtp:hasEvidencePurposeSecond  "Meeting in a business context" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/11397044/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She married furniture-store owner Willard McMurry in 1945. They met when Lillian found a piano in his furniture store and was interested in selling her old piano." ;
+        mtp:hasPurpose       meetup:e6389a4c1e5b372748a8e80ee7c020a5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lillian_McMurry> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/11397044/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the early 1940s, she worked the counter at a pharmacy working from 7 am to 10 pm, seven days a week. She later earned a promotion to manager." ;
+        mtp:hasParticipant   meetup:3bddb96ab9c7460e5fb9e9fcdafebe76 ;
+        mtp:hasPurpose       meetup:a0053cd47460f069f7cd3ba0ea43b341 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lillian_McMurry> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lillian_McMurry>
+        rdf:type  core:Person .
+
+meetup:3bddb96ab9c7460e5fb9e9fcdafebe76
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Willard McMurry" .
+
+meetup:a0053cd47460f069f7cd3ba0ea43b341
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Work-related activities" ;
+        mtp:hasSourcePurpose          "LLM" .

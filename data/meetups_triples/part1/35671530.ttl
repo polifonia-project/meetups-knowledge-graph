@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Massimo_Urbani>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/35671530/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Massimo Urbani (8 May 1957 – 23 June 1993) was an Italian jazz alto saxophonist." ;
+        mtp:hasParticipant   meetup:e7b9b4a35d1332e9ccc0787a88fa4ecd ;
+        mtp:hasPurpose       meetup:b06ce1cd2e316616b10d0ebd0f9badf8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Massimo_Urbani> ;
+        mtp:hasType          "HT" .
+
+meetup:b06ce1cd2e316616b10d0ebd0f9badf8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.71750075" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.27559438" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e7b9b4a35d1332e9ccc0787a88fa4ecd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Massimo_Urbani> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Massimo Urbani" .

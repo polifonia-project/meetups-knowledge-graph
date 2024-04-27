@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/4625208/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bruce Ruffin (born 17 February 1952, St Catherine, Jamaica) is a rocksteady and reggae artist." ;
+        mtp:hasParticipant   meetup:df22ccd91b447d8fcaae82d26e056846 ;
+        mtp:hasPurpose       meetup:b719f776b98dedd5e8742a786892a0fe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bruce_Ruffin> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b719f776b98dedd5e8742a786892a0fe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98354185" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.016262105" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Bruce_Ruffin>
+        rdf:type  core:Person .
+
+meetup:df22ccd91b447d8fcaae82d26e056846
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bruce_Ruffin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999944951128" ;
+        mtp:hasTextEvidence     "Bruce Ruffin" .

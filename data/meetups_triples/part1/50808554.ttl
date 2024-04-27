@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b7027f158fca240a24ff3892fc42db90
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998224" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.5568698e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a238930b4d549aacf4adea9a203b929c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Seamus Rawles Malliagh" .
+
+<http://w3id.org/polifonia/pilot/meetups/50808554/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Seamus Rawles Malliagh, known by his stage name Iglooghost, is an English electronic music producer based in London." ;
+        mtp:hasParticipant   meetup:4366f78e556044b57903da6f89dfc8fd , meetup:a238930b4d549aacf4adea9a203b929c ;
+        mtp:hasPurpose       meetup:b7027f158fca240a24ff3892fc42db90 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Iglooghost> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Iglooghost>
+        rdf:type  core:Person .
+
+meetup:4366f78e556044b57903da6f89dfc8fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Iglooghost> ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Iglooghost" .

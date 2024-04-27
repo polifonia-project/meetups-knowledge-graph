@@ -1,0 +1,98 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Florian_Weber>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Richie_Beirach>
+        rdf:type  core:Person .
+
+meetup:107313850183003d56242c382c7e0d35
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about studying music" ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions attending Berklee College of Music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Joanne_Brackeen>
+        rdf:type  core:Person .
+
+meetup:262d5b66bf5a8e36b22a59096266d4f8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Florian_Weber> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Florian Weber" .
+
+<http://w3id.org/polifonia/pilot/meetups/47003713/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1999, he received a scholarship to attend Berklee College of Music in Boston. Later, he studied with John Taylor in Cologne, Joanne Brackeen and Paul Bley in Boston, and Richie Beirach and Lee Konitz in New York." ;
+        mtp:hasParticipant   meetup:1ee0d7d3fc78f737be6248637c73e6a6 , meetup:e34ad4c9ba7b3650d175cc6073df0076 , meetup:3cdcea81133e30abd886524039f89bbe , meetup:645d3562e12f14676a2c1b30a4dcaa32 ;
+        mtp:hasPurpose       meetup:107313850183003d56242c382c7e0d35 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Florian_Weber> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lee_Konitz>
+        rdf:type  core:Person .
+
+meetup:3cdcea81133e30abd886524039f89bbe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richie_Beirach> ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Richie Beirach" .
+
+meetup:a4226970487f3b793ac5a807bd3c1231
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99583423" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0041195303" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/47003713/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Florian Weber (born 11 November 1977) is a German pianist and composer of modern jazz." ;
+        mtp:hasParticipant   meetup:262d5b66bf5a8e36b22a59096266d4f8 ;
+        mtp:hasPurpose       meetup:a4226970487f3b793ac5a807bd3c1231 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Florian_Weber> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1ee0d7d3fc78f737be6248637c73e6a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Bley> ;
+        mtp:hasOffset           "67" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Paul Bley" .
+
+meetup:645d3562e12f14676a2c1b30a4dcaa32
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joanne_Brackeen> ;
+        mtp:hasOffset           "47" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joanne Brackeen" .
+
+<http://dbpedia.org/resource/Paul_Bley>
+        rdf:type  core:Person .
+
+meetup:e34ad4c9ba7b3650d175cc6073df0076
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_Konitz> ;
+        mtp:hasOffset           "111" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lee Konitz" .

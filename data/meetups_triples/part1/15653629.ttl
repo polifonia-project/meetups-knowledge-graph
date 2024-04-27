@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/15653629/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Susan Cadogan aka Hurt So Good (1976) Trojan" ;
+        mtp:hasParticipant   meetup:c88266de01dd3b71cece393d3b4c8b1e ;
+        mtp:hasPurpose       meetup:799bab4a58d43ca32bd90c7f3c7f3246 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Susan_Cadogan> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c88266de01dd3b71cece393d3b4c8b1e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Susan_Cadogan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Susan Cadogan" .
+
+meetup:799bab4a58d43ca32bd90c7f3c7f3246
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7030787" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29646358" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Alison_Eastwood>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/15653629/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Susan Cadogan (born Alison Anne Cadogan, 2 November 1951 in Kingston, Jamaica) is a reggae singer best known for her hit records in the 1970s." ;
+        mtp:hasParticipant   meetup:290b64822cf9a54e265c102394a94657 , meetup:fdaa9774f9b41a13ad8da3f86a907732 ;
+        mtp:hasPurpose       meetup:1cac9b9cc232355106b10c9a53c255ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Susan_Cadogan> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Susan_Cadogan>
+        rdf:type  core:Person .
+
+meetup:290b64822cf9a54e265c102394a94657
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alison_Eastwood> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "0.5926056911806207" ;
+        mtp:hasTextEvidence     "Alison" .
+
+meetup:1cac9b9cc232355106b10c9a53c255ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99902475" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00078321405" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fdaa9774f9b41a13ad8da3f86a907732
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Susan_Cadogan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Susan Cadogan" .

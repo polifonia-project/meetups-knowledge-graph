@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/31273548/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rodney Rude (born Rodney Malcolm Keft, 29 January 1943 in Nowra, New South Wales, Australia) is an Australian 'blue' stand-up comedian, poet and writer." ;
+        mtp:hasParticipant   meetup:49c3b4758082503b6df7a62fcfa3e06b , meetup:c2dcb57e2dd4f783cda57f5e9d16a43a ;
+        mtp:hasPurpose       meetup:77a954c661f7a1fe26557271b4ac88ff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rodney_Rude> ;
+        mtp:hasType          "HM" .
+
+meetup:49c3b4758082503b6df7a62fcfa3e06b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rodney Malcolm Keft" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:c2dcb57e2dd4f783cda57f5e9d16a43a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rodney_Rude> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rodney Rude" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:77a954c661f7a1fe26557271b4ac88ff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Comedian and poet" ;
+        mtp:hasEvidencePurposeSecond  "Born in Australia" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:0bc5342c0892de6030b2c186a650b464
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rodney_Rude> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rodney Rude" .
+
+<http://w3id.org/polifonia/pilot/meetups/31273548/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Between 1987 and 2009, Rude has been nominated for the ARIA Award for Best Comedy Release nine times." ;
+        mtp:hasParticipant   meetup:0bc5342c0892de6030b2c186a650b464 ;
+        mtp:hasPurpose       meetup:0b86c8bcd2e2b0d67b7e6fc0208fec25 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rodney_Rude> ;
+        mtp:hasType          "HT" .
+
+meetup:0b86c8bcd2e2b0d67b7e6fc0208fec25
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9170325" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06117435" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Rodney_Rude>
+        rdf:type  core:Person .

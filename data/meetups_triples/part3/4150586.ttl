@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://dbpedia.org/resource/Maarja-Liis_Ilus>
+        rdf:type  core:Person .
+
+meetup:d16ac2a5ecb392327967b13b8c7fd3b3
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1996" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1996-01-01"^^xsd:date ;
+        time:hasEnd          "1996-12-31"^^xsd:date .
+
+meetup:202cd81c18087773553c4afdd54568d5
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "24 December 1980" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1980-12-24"^^xsd:date ;
+        time:hasEnd          "1980-12-24"^^xsd:date .
+
+meetup:466194ce28d285d5739c91a602fff970
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "presenter" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4150586/0/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:d16ac2a5ecb392327967b13b8c7fd3b3 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Maarja-Liis_Ilus> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4150586/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:202cd81c18087773553c4afdd54568d5 , meetup:466194ce28d285d5739c91a602fff970 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Maarja-Liis_Ilus> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/4150586/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Maarja-Liis_Ilus> ;
+        mtp:hasType     "HT" .

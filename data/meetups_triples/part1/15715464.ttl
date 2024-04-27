@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Sam_Neely>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/15715464/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sam Neely (August 22, 1948 – July 19, 2006) was an American country and folk music musician, singer-songwriter, recording artist, and performer." ;
+        mtp:hasParticipant   meetup:15fda053239cb19def12ac788e4c6541 ;
+        mtp:hasPurpose       meetup:bf185f51e406ff4602358cac949580b5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sam_Neely> ;
+        mtp:hasType          "HT" .
+
+meetup:bf185f51e406ff4602358cac949580b5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96841276" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.021552855" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:15fda053239cb19def12ac788e4c6541
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sam_Neely> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sam Neely" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c7f372860593dbc7e2face6031fc9b17
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blondel_de_Nesle> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Blondel de Nesle" .
+
+meetup:eab031573658c6158f88f8b74c3b7218
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Blondel de Nesle was a French trouvère" ;
+        mtp:hasEvidencePurposeSecond  "Blondel de Nesle was either Jean I or his son Jean II" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Blondel_de_Nesle>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/352614/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Blondel de Nesle – either Jean I of Nesle (c. 1155 – 1202) or his son Jean II of Nesle (died 1241) – was a French trouvère." ;
+        mtp:hasParticipant   meetup:c7f372860593dbc7e2face6031fc9b17 ;
+        mtp:hasPurpose       meetup:eab031573658c6158f88f8b74c3b7218 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blondel_de_Nesle> ;
+        mtp:hasType          "HT" .

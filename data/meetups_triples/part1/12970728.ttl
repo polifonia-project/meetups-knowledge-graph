@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2f56f2785ea12b3d27e3c3915c8465a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Shimakura Chiyoko" .
+
+meetup:ffeaeb27d2b7afdf9826ca4b27678f41
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chiyoko_Shimakura> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chiyoko Shimakura" .
+
+<http://dbpedia.org/resource/Chiyoko_Shimakura>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/12970728/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chiyoko Shimakura (島倉 千代子, Shimakura Chiyoko) (30 March 1938 – 8 November 2013) was an enka singer and TV presenter in Japan." ;
+        mtp:hasParticipant   meetup:2f56f2785ea12b3d27e3c3915c8465a7 , meetup:ffeaeb27d2b7afdf9826ca4b27678f41 ;
+        mtp:hasPurpose       meetup:41870574c0e916f0ade3e588bd38397b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chiyoko_Shimakura> ;
+        mtp:hasType          "HM" .
+
+meetup:41870574c0e916f0ade3e588bd38397b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Enka singer in Japan" ;
+        mtp:hasEvidencePurposeSecond  "TV presenter" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,88 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:30ffd5fdc09775fbf35003fce902e2da
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sergey_Mavrin> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sergey Mavrin" .
+
+<http://w3id.org/polifonia/pilot/meetups/8925967/18/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2004 Sergey Mavrin reunited his own band." ;
+        mtp:hasParticipant   meetup:30ffd5fdc09775fbf35003fce902e2da ;
+        mtp:hasPurpose       meetup:de159bdbe60a363da6c6a85d86b045be ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sergey_Mavrin> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/8925967/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After the breakup of Aria's original lineup in 1987, Mavrin was invited to replace Andrey Bolshakov." ;
+        mtp:hasParticipant   meetup:cda5187ab9a4affa85ed7185cde0914a , meetup:eeb151bd6ff89740c90906b5cd8b726d ;
+        mtp:hasPurpose       meetup:03c0edb0c2396921737ffd57a0edddd3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sergey_Mavrin> ;
+        mtp:hasType          "HM" .
+
+meetup:ce5fe739a8937f5f88d873d1737dbe45
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Collaborative album release" ;
+        mtp:hasEvidencePurposeSecond  "Personal and professional decision" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/8925967/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1997, Sergey offered Kipelov (who was back in Aria) to record an album together, which could include their songs which did not fit Aria's style. In 1997 they released an LP entitled Kipelov and Mavrin – Smutnoye Vremia (\"Time of Troubles\"), which included 10 tracks." ;
+        mtp:hasPurpose       meetup:ce5fe739a8937f5f88d873d1737dbe45 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sergey_Mavrin> ;
+        mtp:hasType          "HT" .
+
+meetup:cda5187ab9a4affa85ed7185cde0914a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Andrey Bolshakov" .
+
+meetup:eeb151bd6ff89740c90906b5cd8b726d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sergey_Mavrin> ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mavrin" .
+
+meetup:de159bdbe60a363da6c6a85d86b045be
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93929225" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.060494862" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:03c0edb0c2396921737ffd57a0edddd3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998796" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.1491522e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Sergey_Mavrin>
+        rdf:type  core:Person .

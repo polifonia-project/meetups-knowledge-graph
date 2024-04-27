@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/David_Rotheray>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/2113431/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Rotheray (born 9 February 1963, Hull, East Riding of Yorkshire, England) is an English rock and pop musician, best known for being the lead guitarist for The Beautiful South." ;
+        mtp:hasParticipant   meetup:f443384dc5bf75aaff2922341fb9ff5e ;
+        mtp:hasPurpose       meetup:d57e6ec638d786c2a6607b42aa38c791 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Rotheray> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f443384dc5bf75aaff2922341fb9ff5e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Rotheray> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Rotheray" .
+
+meetup:d57e6ec638d786c2a6607b42aa38c791
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9393856" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.060037937" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2534555/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mike Wead (born Mickael Vikström on 6 April 1967), is a Swedish guitarist who lives in Stockholm." ;
+        mtp:hasParticipant   meetup:a45c60be474675348148e4a47e26db1e , meetup:352f44302b5cb41e7c5e0cd66810a06e ;
+        mtp:hasPurpose       meetup:02e60a3c4a4869454e2fcf4daa5188c3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Wead> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a45c60be474675348148e4a47e26db1e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Wead> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mike Wead" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:14ee08e7112c673fb773a7025e81078e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9185489" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0463344" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f73a28ece880b2b0d42c112ae2a8aa60
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Wead> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mike Wead" .
+
+meetup:352f44302b5cb41e7c5e0cd66810a06e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mickael Vikström" .
+
+meetup:02e60a3c4a4869454e2fcf4daa5188c3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Mike Wead is a guitarist" ;
+        mtp:hasEvidencePurposeSecond  "He lives in Stockholm" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Mike_Wead>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2534555/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Currently Wead is the guitarist of Mercyful Fate, King Diamond, and bibleblack." ;
+        mtp:hasParticipant   meetup:f73a28ece880b2b0d42c112ae2a8aa60 ;
+        mtp:hasPurpose       meetup:14ee08e7112c673fb773a7025e81078e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Wead> ;
+        mtp:hasType          "HT" .

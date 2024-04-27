@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jesse_Harms>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/8886032/1/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jesse Harms (born July 6, 1952 in Massachusetts) and raised in Berkeley, California, Jesse began playing the piano at 8 years old and studied classical music until he was 15." ;
+        mtp:hasParticipant   meetup:f787fb5b60110b0e26e85c8b41b2460b ;
+        mtp:hasPurpose       meetup:cd4bb69f0923ddc605c99f102ada8f39 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jesse_Harms> ;
+        mtp:hasType          "HT" .
+
+meetup:cd4bb69f0923ddc605c99f102ada8f39
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Jesse's passion for playing the piano" ;
+        mtp:hasEvidencePurposeSecond  "His classical music studies" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f787fb5b60110b0e26e85c8b41b2460b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jesse_Harms> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999982948" ;
+        mtp:hasTextEvidence     "Jesse Harms" .

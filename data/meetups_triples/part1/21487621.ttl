@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e3c740842ac9c54992b9ad02e3ad887e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7693561" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21001841" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/21487621/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jones was signed to a recording deal with Rising Tide Records and released his debut album, One Night, in 1998." ;
+        mtp:hasParticipant   meetup:c25b25441af0c449880db5a2ea5dd299 ;
+        mtp:hasPurpose       meetup:e3c740842ac9c54992b9ad02e3ad887e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/J.C._Jones> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:810a23c532a58fa39626180728e53be7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/J.C._Jones> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "J. C. Jones" .
+
+meetup:c5a87edb73c2d95f4f150466c20c579d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/J.C._Jones> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "J. C. Jones" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:c25b25441af0c449880db5a2ea5dd299
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/J.C._Jones> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "J. C. Jones" .
+
+<http://w3id.org/polifonia/pilot/meetups/21487621/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "J. C. Jones (born 1973) is an American country music artist." ;
+        mtp:hasParticipant   meetup:810a23c532a58fa39626180728e53be7 ;
+        mtp:hasPurpose       meetup:f92bc8f477aef93686d36c5f21124bab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/J.C._Jones> ;
+        mtp:hasType          "HT" .
+
+meetup:4677f380f023123e787df5978814a6a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.80882734" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.119531594" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f92bc8f477aef93686d36c5f21124bab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998579" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00013430753" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/J.C._Jones>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/21487621/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "When Rising Tide closed in March 1998, he no longer had a record label deal." ;
+        mtp:hasParticipant   meetup:c5a87edb73c2d95f4f150466c20c579d ;
+        mtp:hasPurpose       meetup:4677f380f023123e787df5978814a6a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/J.C._Jones> ;
+        mtp:hasType          "HT" .

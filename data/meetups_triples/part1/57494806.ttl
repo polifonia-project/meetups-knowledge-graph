@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Manuel_de_Falla>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Teresa_Llacuna>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e01eb3356321f69b58955244aab29f4b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Teresa_Llacuna> ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "0.9999981132210288" ;
+        mtp:hasTextEvidence     "Teresa Llacuna" .
+
+meetup:d718ca18798fe0f0803324266780dc10
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Teresa_Llacuna> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999981132210288" ;
+        mtp:hasTextEvidence     "Teresa Llacuna" .
+
+meetup:4229100f845882399468bbc15032b7d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Manuel_de_Falla> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Manuel de Falla" .
+
+meetup:125a56d55175ad747e544588c18bc16d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Catalan classical pianist" ;
+        mtp:hasEvidencePurposeSecond  "Daughter of poet" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/57494806/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Teresa Llacuna i Puig (born 27 May 1935 in Igualada) is a Catalan classical pianist, the only daughter of poet Joan Llacuna." ;
+        mtp:hasParticipant   meetup:d718ca18798fe0f0803324266780dc10 ;
+        mtp:hasPurpose       meetup:125a56d55175ad747e544588c18bc16d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Teresa_Llacuna> ;
+        mtp:hasType          "HT" .
+
+meetup:c5e0ef501b7046f3ce18007051949f23
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.75131786" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2182087" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/57494806/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Besides recording a complete work by Manuel de Falla, Teresa Llacuna gave her name to an international piano competition and counted the pianist Pascal Gallet among her students." ;
+        mtp:hasParticipant   meetup:4229100f845882399468bbc15032b7d2 , meetup:e01eb3356321f69b58955244aab29f4b ;
+        mtp:hasPurpose       meetup:c5e0ef501b7046f3ce18007051949f23 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Teresa_Llacuna> ;
+        mtp:hasType          "HM" .

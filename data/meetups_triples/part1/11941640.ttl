@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/George_Shapiro>
+        rdf:type  core:Person .
+
+meetup:93cddf74d727c8cc1a1f3142f8ee4392
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Shapiro> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "George Shapiro" .
+
+<http://w3id.org/polifonia/pilot/meetups/11941640/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "George Shapiro (born May 18, 1931) is an American talent manager and television producer." ;
+        mtp:hasParticipant   meetup:93cddf74d727c8cc1a1f3142f8ee4392 ;
+        mtp:hasPurpose       meetup:1c7cfe878040e2c04c04b856931ed5f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Shapiro> ;
+        mtp:hasType          "HT" .
+
+meetup:1c7cfe878040e2c04c04b856931ed5f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99945587" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00025318842" ;
+        mtp:hasSourcePurpose          "ML" .

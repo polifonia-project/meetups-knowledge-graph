@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/5313491/12/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dave Kelly Band Live (2002 - Appaloosa)" ;
+        mtp:hasParticipant   meetup:06a91ab3dd0a61b745c44326ff8854f9 ;
+        mtp:hasPurpose       meetup:c145f85d74591eb3963a445253cad551 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Kelly_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Dave_Kelly_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5313491/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dave Kelly (1971 - Mercury)" ;
+        mtp:hasParticipant   meetup:ce633b6a09e4194e4b9a92c0a0092763 ;
+        mtp:hasPurpose       meetup:9b4f84ee71d0c6b40c57edcba6781aba ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Kelly_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:c145f85d74591eb3963a445253cad551
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.995887" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004062246" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:9b4f84ee71d0c6b40c57edcba6781aba
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999827" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.615348e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ce633b6a09e4194e4b9a92c0a0092763
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Kelly_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.467876937707229" ;
+        mtp:hasTextEvidence     "Dave Kelly" .
+
+meetup:06a91ab3dd0a61b745c44326ff8854f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Kelly_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.4678777137793188" ;
+        mtp:hasTextEvidence     "Dave Kelly" .

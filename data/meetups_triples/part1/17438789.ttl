@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Adam_Thompson>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a783848517c1538ab814699d8d9d3a9a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9136506" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.048502594" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:46ba7635432604d6c0221cf17f6ddbd6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9938393" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0061369953" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/17438789/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jamie Borger (born 28 May 1964) is a Swedish drummer who has played in the bands Talisman, Treat and Last Autumn's Dream." ;
+        mtp:hasParticipant   meetup:8aeb7340c446130727b20105c1ca6880 ;
+        mtp:hasPurpose       meetup:a783848517c1538ab814699d8d9d3a9a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jamie_Borger> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jeff_Scott_Soto>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Jamie_Borger>
+        rdf:type  core:Person .
+
+meetup:91d2cee7cc3723e4a014481e042eec57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Scott_Soto> ;
+        mtp:hasOffset           "112" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jeff Scott Soto" .
+
+meetup:510d1630b2f7b771dd0c9b1ab7157816
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Adam_Thompson> ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "0.9999999973063324" ;
+        mtp:hasTextEvidence     "Adam Thompson" .
+
+meetup:e2044346cc535a4dfef75cb150c82ee1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alfonzetti" .
+
+meetup:8aeb7340c446130727b20105c1ca6880
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jamie_Borger> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jamie Borger" .
+
+meetup:31254a1a6906d045fe08d6fec7455a7a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jamie_Borger> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jamie Borger" .
+
+<http://w3id.org/polifonia/pilot/meetups/17438789/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Over the years, he also has recorded with Alfonzetti, Adam Thompson, Baltimore, Human Clay, Swedish Erotica and Jeff Scott Soto." ;
+        mtp:hasParticipant   meetup:31254a1a6906d045fe08d6fec7455a7a , meetup:91d2cee7cc3723e4a014481e042eec57 , meetup:510d1630b2f7b771dd0c9b1ab7157816 , meetup:e2044346cc535a4dfef75cb150c82ee1 ;
+        mtp:hasPurpose       meetup:46ba7635432604d6c0221cf17f6ddbd6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jamie_Borger> ;
+        mtp:hasType          "HM" .

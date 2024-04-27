@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:bd9ef16a9d02eec0724f17ce3025e8ea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jan Edvard Carlsson" .
+
+meetup:4920b05655f28215cfbef4845781d0df
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Janne_Carlsson> ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Janne 'Loffe' Carlsson" .
+
+<http://dbpedia.org/resource/Janne_Carlsson>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f3aced75261d6d274b752c66583b31ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999664" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.2621996e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/28587601/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jan Edvard Carlsson (12 March 1937 – 31 August 2017), known professionally as Janne 'Loffe' Carlsson, was a Swedish actor, musician, composer and artist." ;
+        mtp:hasParticipant   meetup:bd9ef16a9d02eec0724f17ce3025e8ea , meetup:4920b05655f28215cfbef4845781d0df ;
+        mtp:hasPurpose       meetup:f3aced75261d6d274b752c66583b31ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Janne_Carlsson> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_Paris>
+        rdf:type  core:Person .
+
+meetup:b2b21759af20e9d5ae66703f06e8d731
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1995" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1995-01-01"^^xsd:date ;
+        time:hasEnd          "1995-12-31"^^xsd:date .
+
+meetup:47cc4ccd8351dbe3c2b1f1d6389a8932
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "their 1997" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:c68bcf8b0e39b5262fab846cd6b18b41
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1998" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1998-01-01"^^xsd:date ;
+        time:hasEnd          "1998-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/4714508/2/3>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:c68bcf8b0e39b5262fab846cd6b18b41 , meetup:b2b21759af20e9d5ae66703f06e8d731 , meetup:47cc4ccd8351dbe3c2b1f1d6389a8932 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/John_Paris> ;
+        mtp:hasType     "HT" .

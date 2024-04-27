@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Melba_Moore>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:51af83014a176f58941f45a60f82f672
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9504347" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02523467" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/3101067/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Beatrice Melba Hill or Beatrice Melba Smith (sources differ) (born October 29, 1945), known by her stage name Melba Moore, is an American singer, and actress." ;
+        mtp:hasParticipant   meetup:42286359dcdc78a099f4f3c08a3e94ed ;
+        mtp:hasPurpose       meetup:51af83014a176f58941f45a60f82f672 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Melba_Moore> ;
+        mtp:hasType          "HT" .
+
+meetup:ab8eaf86153a101a119ada7766c4f984
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Moore's mother was a singer" ;
+        mtp:hasEvidencePurposeSecond  "Moore's childhood and family" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ba1f0549c483477663de13547715d15e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "99" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Clement Leroy Moorman" .
+
+meetup:42286359dcdc78a099f4f3c08a3e94ed
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Melba_Moore> ;
+        mtp:hasOffset           "110" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Melba Moore" .
+
+<http://w3id.org/polifonia/pilot/meetups/3101067/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Moore was born Beatrice Melba Hill or Beatrice Melba Smith (sources differ) in New York City to Gertrude Melba Smith (1920–1976), who was a singer professionally known as Bonnie Davis and Teddy Hill (1909–1978), a big band leader. Moore grew up in the Harlem section of New York until age 9 when her mother remarried jazz pianist Clement Leroy Moorman and the family relocated to Newark, New Jersey." ;
+        mtp:hasParticipant   meetup:ba1f0549c483477663de13547715d15e ;
+        mtp:hasPurpose       meetup:ab8eaf86153a101a119ada7766c4f984 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Melba_Moore> ;
+        mtp:hasType          "HT" .

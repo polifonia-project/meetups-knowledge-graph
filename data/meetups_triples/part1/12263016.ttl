@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/12263016/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born on a ranch in Susanville, California and grew up in the 1870s observing the animals and birds of the forests and learning outdoor skills. He constructed a mobile home, called the \"Travel Log\", out of a redwood tree and drove it around the country to raise awareness of the plight of the California forests." ;
+        mtp:hasParticipant   meetup:842c59cb0a7a3beae317bc7cc804f249 ;
+        mtp:hasPurpose       meetup:0bf7baf4bf5551f68cf4c6dd9972ec86 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_Kellogg_(naturalist)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:540243c89019e1f174828d348628f4fe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.65861386" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3353063" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Charles_Kellogg_(naturalist)>
+        rdf:type  core:Person .
+
+meetup:0bf7baf4bf5551f68cf4c6dd9972ec86
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about the person's life" ;
+        mtp:hasEvidencePurposeSecond  "Learning outdoor skills and raising awareness" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:842c59cb0a7a3beae317bc7cc804f249
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_Kellogg_(naturalist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charles Kellogg" .
+
+<http://w3id.org/polifonia/pilot/meetups/12263016/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born on a ranch in Susanville, California and grew up in the 1870s observing the animals and birds of the forests and learning outdoor skills." ;
+        mtp:hasParticipant   meetup:d5392ec59da76218f1268ca09ea91f4d ;
+        mtp:hasPurpose       meetup:540243c89019e1f174828d348628f4fe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_Kellogg_(naturalist)> ;
+        mtp:hasType          "HT" .
+
+meetup:d5392ec59da76218f1268ca09ea91f4d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_Kellogg_(naturalist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charles Kellogg" .

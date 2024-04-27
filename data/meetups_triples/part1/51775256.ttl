@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/51775256/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ki Hui-hyeon (Korean: 기희현; Hanja: 奇熙賢; born June 16, 1995), better known by the mononym Huihyeon and former stage name Cathy, is a South Korean singer-songwriter, rapper and actress." ;
+        mtp:hasParticipant   meetup:5621f0ee73fe37de5ff349fe7827b2a7 ;
+        mtp:hasPurpose       meetup:75bccacdd22fb8fabc059e54f973aed9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ki_Hui-hyeon> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ki_Hui-hyeon>
+        rdf:type  core:Person .
+
+meetup:5621f0ee73fe37de5ff349fe7827b2a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ki_Hui-hyeon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ki Hui-hyeon" .
+
+meetup:75bccacdd22fb8fabc059e54f973aed9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8038436" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07916344" ;
+        mtp:hasSourcePurpose          "ML" .

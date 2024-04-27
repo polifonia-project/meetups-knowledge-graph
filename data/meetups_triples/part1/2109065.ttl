@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Donell_Jones>
+        rdf:type  core:Person .
+
+meetup:2dfcf6ee143b5bfe633a34607cb01436
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jon_B.> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jon B." .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:57e0d3cc42c4a952660226cc1f1cdf83
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Donell_Jones> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Donell Jones" .
+
+<http://dbpedia.org/resource/Jon_B.>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/2109065/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2019, Donell Jones collaborated with Jon B. on the duet \"Understand\"." ;
+        mtp:hasParticipant   meetup:57e0d3cc42c4a952660226cc1f1cdf83 , meetup:2dfcf6ee143b5bfe633a34607cb01436 ;
+        mtp:hasPurpose       meetup:6b08faa93c26d0e596a1fa91cf163d22 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Donell_Jones> ;
+        mtp:hasType          "HM" .
+
+meetup:6b08faa93c26d0e596a1fa91cf163d22
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7487275" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.25122198" ;
+        mtp:hasSourcePurpose          "ML" .

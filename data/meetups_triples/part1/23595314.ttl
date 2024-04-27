@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:3a8f4e0aed979e21b6ccbb45be119857
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/The_Jam_(production_team)> ;
+        mtp:hasOffset           "67" ;
+        mtp:hasSimilarityScore  "0.999993084091228" ;
+        mtp:hasTextEvidence     "Mike Mani" .
+
+meetup:1cba0e270885c2ec7eced9a82887c1d7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96005714" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.039874136" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/The_Jam_(production_team)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/23595314/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The JAM is an American-based music production and song writing duo Mike Mani and Jordan Omley, who have been working together since the early 2000s." ;
+        mtp:hasParticipant   meetup:3a8f4e0aed979e21b6ccbb45be119857 ;
+        mtp:hasPurpose       meetup:1cba0e270885c2ec7eced9a82887c1d7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/The_Jam_(production_team)> ;
+        mtp:hasType          "HT" .

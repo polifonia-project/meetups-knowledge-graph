@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Michael_Garrick>
+        rdf:type  core:Person .
+
+meetup:7232787122a99319da486bafcf5cad8f
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "Dusk" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2598998/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:1f5faa8105c232bfff2c405cba24dfba ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Michael_Garrick> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2598998/27/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:7232787122a99319da486bafcf5cad8f ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Michael_Garrick> ;
+        mtp:hasType     "HM" .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:1f5faa8105c232bfff2c405cba24dfba
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "30 May 1933 – 11 November 2011" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1933-05-30"^^xsd:date ;
+        time:hasEnd          "2011-11-11"^^xsd:date .

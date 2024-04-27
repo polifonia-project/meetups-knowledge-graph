@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:6b7dadd90c3e989eab2084c9fd6ba023
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6143052" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.34142905" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:bb78bfbcdf3ab9a384310308ad824026
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/P._J._Crook> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "P J Crook" .
+
+<http://w3id.org/polifonia/pilot/meetups/1615422/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pamela June Crook  (born 1945), known professionally as P J Crook, is an English painter and sculptor." ;
+        mtp:hasParticipant   meetup:97b65db2deb86256064e11c3f52c1b1b , meetup:bb78bfbcdf3ab9a384310308ad824026 ;
+        mtp:hasPurpose       meetup:432836da0516a5156074ffa9f8a25360 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/P._J._Crook> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/P._J._Crook>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:432836da0516a5156074ffa9f8a25360
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95336413" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03754241" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1615422/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her shows have appeared in  London,  France, the United States, Japan, Canada, and Estonia." ;
+        mtp:hasParticipant   meetup:83932a366e06a13b3282b31c1ee683a9 ;
+        mtp:hasPurpose       meetup:6b7dadd90c3e989eab2084c9fd6ba023 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/P._J._Crook> ;
+        mtp:hasType          "HT" .
+
+meetup:83932a366e06a13b3282b31c1ee683a9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/P._J._Crook> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "P J Crook" .
+
+meetup:97b65db2deb86256064e11c3f52c1b1b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pamela June Crook  (" .

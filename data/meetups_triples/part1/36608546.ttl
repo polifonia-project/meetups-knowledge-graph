@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/36608546/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He got a job at Masterdisk in the mail room and making cassettes in 1980. While at Masterdisk, he learned to be a mastering engineer and has since been an extremely notable mastering engineer in the industry, particularly well known for his work with Hip-Hop." ;
+        mtp:hasParticipant   meetup:c12668bd254710b112d135d4a370057e ;
+        mtp:hasPurpose       meetup:750fc0364bd942c6ab85107cdcc60fc9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Dawsey> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Tony_Dawsey>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:750fc0364bd942c6ab85107cdcc60fc9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Mastering engineer in the music industry" ;
+        mtp:hasEvidencePurposeSecond  "Job at Masterdisk in the mail room" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<https://www.wikidata.org/wiki/Q7822185>
+        rdf:type  core:Person .
+
+meetup:c12668bd254710b112d135d4a370057e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q7822185> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tony Dawsey" .

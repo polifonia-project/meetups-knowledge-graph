@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:51da0b8b1d04e1aa6c06e2a3ef4e9c18
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Floy_Joy_(band)> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "0.5286185186496354" ;
+        mtp:hasTextEvidence     "Floy Joy" .
+
+meetup:40123c4b83bbb2e76cfd4dfd52024d29
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Desy Campbell" .
+
+<http://dbpedia.org/resource/Floy_Joy_(band)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/31066534/3/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shortly after this, Floy Joy recruited Desy Campbell on percussion and backing vocals after seeing him perform with another Sheffield band." ;
+        mtp:hasParticipant   meetup:40123c4b83bbb2e76cfd4dfd52024d29 , meetup:51da0b8b1d04e1aa6c06e2a3ef4e9c18 ;
+        mtp:hasPurpose       meetup:b0b072d0b51ec34185853a437aeba0e2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Floy_Joy_(band)> ;
+        mtp:hasType          "HM" .
+
+meetup:b0b072d0b51ec34185853a437aeba0e2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99956745" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00028079207" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .

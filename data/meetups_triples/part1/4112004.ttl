@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:7ca282842729894b2be37f5b5291864e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Benny_Spellman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Benny Spellman" .
+
+<http://dbpedia.org/resource/Benny_Spellman>
+        rdf:type  core:Person .
+
+meetup:22e494529a576bb242e0ce38466015d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Allen_Toussaint> ;
+        mtp:hasOffset           "195" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Allen Toussaint" .
+
+<http://w3id.org/polifonia/pilot/meetups/4112004/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Benny Spellman (December 11, 1931 – June 3, 2011) was an American R&B singer, best known for the 1962 single \"Lipstick Traces (on a Cigarette)\" and its B-side \"Fortune Teller\", both written by Allen Toussaint (credited as Naomi Neville)." ;
+        mtp:hasParticipant   meetup:22e494529a576bb242e0ce38466015d8 , meetup:7ca282842729894b2be37f5b5291864e ;
+        mtp:hasPurpose       meetup:3de839d77536af2ddb5421222a31bf4c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Benny_Spellman> ;
+        mtp:hasType          "HM" .
+
+meetup:3de839d77536af2ddb5421222a31bf4c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.77348465" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22125885" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Allen_Toussaint>
+        rdf:type  core:Person .

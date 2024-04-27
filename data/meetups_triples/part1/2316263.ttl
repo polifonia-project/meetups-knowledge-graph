@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2316263/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Cross (born April 4, 1964) is an American stand-up comedian, actor, director and writer known for his stand-up performances, the HBO sketch comedy series Mr. Show (1995–1999), and his role as Tobias Fünke in the sitcom Arrested Development (2003–2006, 2013, 2019)." ;
+        mtp:hasParticipant   meetup:f6d07bf99b495daed9786729e47b0c61 , meetup:b7d57c7070baca7fc396edbafedaadb3 ;
+        mtp:hasPurpose       meetup:9b97e8f989f77e2630c8ccd5e6c64afa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Cross> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f6d07bf99b495daed9786729e47b0c61
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "198" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tobias Fünke" .
+
+<http://w3id.org/polifonia/pilot/meetups/2316263/21/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "That's where we are as a nation now. We're in a state of vague American values and anti-intellectual pride.\"" ;
+        mtp:hasPurpose       meetup:acc82ea41045ee909e5d68eb6cf59bbd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Cross> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b7d57c7070baca7fc396edbafedaadb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Cross> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Cross" .
+
+meetup:acc82ea41045ee909e5d68eb6cf59bbd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Individual and societal values" ;
+        mtp:hasEvidencePurposeSecond  "Lack of intellectualism" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9b97e8f989f77e2630c8ccd5e6c64afa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9833468" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01229327" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/David_Cross>
+        rdf:type  core:Person .

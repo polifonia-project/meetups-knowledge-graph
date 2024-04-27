@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Tony_Parker>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2470a7e59feb648cf53936422b6f8f1b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Evan_Parker> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999977832" ;
+        mtp:hasTextEvidence     "Evan Parker" .
+
+meetup:3073cbb899ad28f2c22532c299b7d4e6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in improvised music scene" ;
+        mtp:hasEvidencePurposeSecond  "Relocation to London" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:07640a8797d2754745803bb407bd02aa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96497625" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.024780376" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c2c19e5b971b0a7edb41d74e04465ab2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Derek_Bailey_(guitarist)> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "0.9997334401110844" ;
+        mtp:hasTextEvidence     "Derek Bailey" .
+
+<http://dbpedia.org/resource/Derek_Bailey_(guitarist)>
+        rdf:type  core:Person .
+
+meetup:e841513e7e73ea1bc95f9fab1c713079
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tony_Parker> ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Parker" .
+
+<http://w3id.org/polifonia/pilot/meetups/588700/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Parker moved to London in 1966 and quickly became a part of the city’s improvised music scene based around the Little Theatre Club, joining John Stevens’ Spontaneous Music Ensemble. Along with guitarist Derek Bailey, he quickly became a leading figure in the improvised music movement in London and throughout Europe." ;
+        mtp:hasParticipant   meetup:e841513e7e73ea1bc95f9fab1c713079 , meetup:c2c19e5b971b0a7edb41d74e04465ab2 ;
+        mtp:hasPurpose       meetup:3073cbb899ad28f2c22532c299b7d4e6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Evan_Parker> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/588700/17/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Evan Parker playing in Aarhus, Denmark 2010" ;
+        mtp:hasParticipant   meetup:2470a7e59feb648cf53936422b6f8f1b ;
+        mtp:hasPurpose       meetup:07640a8797d2754745803bb407bd02aa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Evan_Parker> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Evan_Parker>
+        rdf:type  core:Person .

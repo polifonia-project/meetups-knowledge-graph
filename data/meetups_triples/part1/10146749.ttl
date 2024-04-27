@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d475d6ea2fa4de82dfa43a32df0d0c64
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9386842" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.049288392" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/10146749/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeff Alexander (born Myer Goodhue Alexander; July 2, 1910 – December 23, 1989) was an American conductor, arranger, and composer of film, radio and television scores." ;
+        mtp:hasParticipant   meetup:d81ffe545a3b1a7c21456f66b0762076 , meetup:ce74619d3651a88baf03507b1b2d9d95 , meetup:93533afa3061a3208784bfccb63cb4f7 ;
+        mtp:hasPurpose       meetup:d475d6ea2fa4de82dfa43a32df0d0c64 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Alexander> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d81ffe545a3b1a7c21456f66b0762076
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Myer Goodhue Alexander" .
+
+<http://dbpedia.org/resource/Jeff_Alexander>
+        rdf:type  core:Person .
+
+meetup:93533afa3061a3208784bfccb63cb4f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bertram_Goodhue> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.999852993891932" ;
+        mtp:hasTextEvidence     "Goodhue" .
+
+<http://dbpedia.org/resource/Bertram_Goodhue>
+        rdf:type  core:Person .
+
+meetup:ce74619d3651a88baf03507b1b2d9d95
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Alexander> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jeff Alexander" .

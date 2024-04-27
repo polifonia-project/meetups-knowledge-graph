@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:223fe56926fdcd9a3d71eb93df1d6319
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing live in Tokyo" ;
+        mtp:hasEvidencePurposeSecond  "Personal experience of the artist" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Amel_Larrieux>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1354030/16/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The duo had their first live show together in years on October 7, 2010 in Tokyo, Japan. Larrieux said of the show, \"Tokyo was too fly, as usual." ;
+        mtp:hasParticipant   meetup:817f6eb19e27e26ed5a193c725fed9c1 ;
+        mtp:hasPurpose       meetup:223fe56926fdcd9a3d71eb93df1d6319 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amel_Larrieux> ;
+        mtp:hasType          "HT" .
+
+meetup:817f6eb19e27e26ed5a193c725fed9c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Larrieux" .

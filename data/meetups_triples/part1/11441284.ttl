@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5acf473f3047a7334bb15f3ad0cc304f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anita_Lasker-Wallfisch> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Anita Lasker-Wallfisch" .
+
+meetup:7cd92e1a323719abc40b77820c91e7f4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emanuel_Lasker> ;
+        mtp:hasOffset           "34" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lasker" .
+
+meetup:02a4e06026d7ab6a6f9e8bf1b555d9f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9586607" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.030684657" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/11441284/12/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paraphrasing the presidential award, Michaelis commented: \"To this day, you have helped keep the memory of the Holocaust alive for future generations. Germany is profoundly grateful to you for this.\"" ;
+        mtp:hasParticipant   meetup:7cd92e1a323719abc40b77820c91e7f4 ;
+        mtp:hasPurpose       meetup:0e4f06dd0ff990e51e57f4a2e6b8e482 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anita_Lasker-Wallfisch> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/11441284/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anita Lasker-Wallfisch (born 17 July 1925) is a German-British cellist, and a surviving member of the Women's Orchestra of Auschwitz." ;
+        mtp:hasParticipant   meetup:5acf473f3047a7334bb15f3ad0cc304f ;
+        mtp:hasPurpose       meetup:02a4e06026d7ab6a6f9e8bf1b555d9f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anita_Lasker-Wallfisch> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Anita_Lasker-Wallfisch>
+        rdf:type  core:Person .
+
+meetup:0e4f06dd0ff990e51e57f4a2e6b8e482
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Recognition of Holocaust memory" ;
+        mtp:hasEvidencePurposeSecond  "Promoting awareness for future generations" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Emanuel_Lasker>
+        rdf:type  core:Person .

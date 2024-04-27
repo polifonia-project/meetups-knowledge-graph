@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Naina_Devi_(singer)>
+        rdf:type  core:Person .
+
+meetup:b88c61d28b974fb7992ee70b6221d638
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nilina Sen" .
+
+meetup:1ba6e8b186aa236cb9376c5562e2eba7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about the person's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Restrictions on singing after marriage" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/39635644/3/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1934, at the age of 16, she married Ripjit Singh (1906- 1953), third son of Raja Charanjit Singh of princely Kapurthala State. After her marriage she moved to Kapurthala in Punjab and wasn't allowed to sing." ;
+        mtp:hasParticipant   meetup:b88c61d28b974fb7992ee70b6221d638 ;
+        mtp:hasPurpose       meetup:1ba6e8b186aa236cb9376c5562e2eba7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Naina_Devi_(singer)> ;
+        mtp:hasType          "HT" .

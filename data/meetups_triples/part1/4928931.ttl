@@ -1,0 +1,54 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/4928931/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The club expanded and relocated in the summer of 2006. According to John Fordham, \"The venue became a spiritual home to many musicians who shared the uncommercial player's perennial need for an intimate space run by, and for, the people who cared.\"" ;
+        mtp:hasParticipant   meetup:8f9f869d4f83106822d1f67931e724ff , meetup:9b2940240256bd61f4c237e8b5105fe3 ;
+        mtp:hasPurpose       meetup:88f6bcc1a261710f8b23a7033d3ba1b1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fred_Anderson_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Fred_Anderson_(musician)>
+        rdf:type  core:Person .
+
+meetup:88f6bcc1a261710f8b23a7033d3ba1b1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The club became a spiritual home for musicians." ;
+        mtp:hasEvidencePurposeSecond  "The club expanded and relocated in 2006." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9b2940240256bd61f4c237e8b5105fe3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chase_Anderson> ;
+        mtp:hasOffset           "91" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anderson" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/John_Fordham>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Chase_Anderson>
+        rdf:type  core:Person .
+
+meetup:8f9f869d4f83106822d1f67931e724ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Fordham> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "0.9902584989963996" ;
+        mtp:hasTextEvidence     "John Fordham" .

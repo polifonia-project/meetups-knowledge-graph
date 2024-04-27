@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/30228819/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Teodor Currentzis (Greek: Θεόδωρος Κουρεντζής; born 24 February 1972) is a Greek-Russian conductor, musician and actor." ;
+        mtp:hasParticipant   meetup:df016ab04aea4b2127a59d32d5fe899d ;
+        mtp:hasPurpose       meetup:59206e2be81802046d9c6e1014a3c343 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Teodor_Currentzis> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Teodor_Currentzis>
+        rdf:type  core:Person .
+
+meetup:df016ab04aea4b2127a59d32d5fe899d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Teodor_Currentzis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Teodor Currentzis" .
+
+meetup:59206e2be81802046d9c6e1014a3c343
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93703276" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06257889" ;
+        mtp:hasSourcePurpose          "ML" .

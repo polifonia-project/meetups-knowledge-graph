@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/38390750/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"Chicken\" John Joseph James Rinaldi (born 1967 or 1968) is a musician, showman, activist, and author living in San Francisco, California. He is involved with the San Francisco arts community as well as the Burning Man community." ;
+        mtp:hasPurpose       meetup:2f9cac619c0c8603db8c559fec4f9c7b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chicken_John> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2f9cac619c0c8603db8c559fec4f9c7b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Chicken John is a musician" ;
+        mtp:hasEvidencePurposeSecond  "Chicken John is a showman and activist" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Chicken_John>
+        rdf:type  core:Person .

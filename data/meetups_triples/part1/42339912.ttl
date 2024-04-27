@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/42339912/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band formed in 2010 from members of Manitoba bands The Waking Eyes, The Liptonians and TELE." ;
+        mtp:hasParticipant   meetup:8bfc5b8cf6b1c6fab6a3f16a94f161db ;
+        mtp:hasPurpose       meetup:14920b1f3118aaf32a28b693d0f96e52 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Royal_Canoe> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Royal_Canoe>
+        rdf:type  core:Person .
+
+meetup:14920b1f3118aaf32a28b693d0f96e52
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99996305" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.689831e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8bfc5b8cf6b1c6fab6a3f16a94f161db
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Royal_Canoe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Royal Canoe" .

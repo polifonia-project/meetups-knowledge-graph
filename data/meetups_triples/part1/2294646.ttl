@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:c43c3ca9040aab5f1a6da283c67f3702
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gustave Molvik" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:16831e08e8b8ae9b9108602bc519c9f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Taime_Downe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Taime Downe" .
+
+meetup:7d6e3888091e02126b4464b1ba922203
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8868184" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.078745574" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Taime_Downe>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2294646/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Taime Downe (; born Gustave Molvik on September 29, 1964) is an American musician who became notable as the lead singer of 1980s hard rock band Faster Pussycat." ;
+        mtp:hasParticipant   meetup:c43c3ca9040aab5f1a6da283c67f3702 , meetup:16831e08e8b8ae9b9108602bc519c9f1 ;
+        mtp:hasPurpose       meetup:7d6e3888091e02126b4464b1ba922203 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taime_Downe> ;
+        mtp:hasType          "HM" .

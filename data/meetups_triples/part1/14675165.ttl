@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Conrad_Ansorge>
+        rdf:type  core:Person .
+
+meetup:a09e95effd70900b0af0f0f04398cd58
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Conrad_Ansorge> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Conrad Ansorge" .
+
+meetup:265dd34373415863bc1f5d41e0af4aa5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Max_Bruch> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Max Bruch" .
+
+<http://w3id.org/polifonia/pilot/meetups/14675165/12/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Simon was born into a Jewish family in Berlin and murdered in Auschwitz in 1944 following his internment at Theresienstadt. He studied at the Musikhochschule in Berlin piano (Conrad Ansorge) and composition (Max Bruch)." ;
+        mtp:hasParticipant   meetup:265dd34373415863bc1f5d41e0af4aa5 , meetup:a09e95effd70900b0af0f0f04398cd58 ;
+        mtp:hasPurpose       meetup:176dddf693f995ad423ed93393b74b80 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Simon_(composer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/James_Simon_(composer)>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:176dddf693f995ad423ed93393b74b80
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "James Simon's education in music" ;
+        mtp:hasEvidencePurposeSecond  "James Simon's personal life and tragic fate" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Max_Bruch>
+        rdf:type  core:Person .

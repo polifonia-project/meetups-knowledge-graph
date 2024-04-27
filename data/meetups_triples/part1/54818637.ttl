@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Joe_Haider>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/54818637/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joe Haider (January 3, 1936 in Darmstadt) is a German pianist and jazz educator." ;
+        mtp:hasParticipant   meetup:70663487de170a6cae17677e31318f6c ;
+        mtp:hasPurpose       meetup:858c12c24c4b7cf43822a565fb2389eb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Haider> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:858c12c24c4b7cf43822a565fb2389eb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99958247" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00018772202" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:70663487de170a6cae17677e31318f6c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Haider> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999997726" ;
+        mtp:hasTextEvidence     "Joe Haider" .

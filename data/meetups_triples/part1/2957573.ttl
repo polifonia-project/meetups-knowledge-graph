@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2957573/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Cardon Debney (born August 18, 1956) is an American composer and conductor of film, television, and video game scores." ;
+        mtp:hasParticipant   meetup:a7a5a0196f92f862c6958accbf29824b ;
+        mtp:hasPurpose       meetup:871af1ce3f0e40ae2fa540af1c207681 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Debney> ;
+        mtp:hasType          "HT" .
+
+meetup:871af1ce3f0e40ae2fa540af1c207681
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5627238" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.37502936" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a7a5a0196f92f862c6958accbf29824b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Debney> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Cardon Debney" .
+
+<http://dbpedia.org/resource/John_Debney>
+        rdf:type  core:Person .

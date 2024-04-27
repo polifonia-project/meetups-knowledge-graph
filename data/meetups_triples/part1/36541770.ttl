@@ -1,0 +1,49 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9f19fe65ff74250091c4bfd6ef652031
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Band formation and re-activation" ;
+        mtp:hasEvidencePurposeSecond  "Similarity with contemporaries" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Vendetta_(German_band)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/36541770/0/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vendetta's bassist Klaus \"Heiner\" Ullrich is currently the only original member present since the band's formation in 1984. The band's lyrical content is connected with everyday topics, such as corruption, politics, violence, and death." ;
+        mtp:hasPurpose       meetup:9f47406b46fdd91dd339deae3641ac2b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vendetta_(German_band)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/36541770/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Founded in 1984, the band dissolved in 1990 and re-activated in 2002. Vendetta's contemporaries include bands such as Exumer and Paradox." ;
+        mtp:hasPurpose       meetup:9f19fe65ff74250091c4bfd6ef652031 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vendetta_(German_band)> ;
+        mtp:hasType          "HT" .
+
+meetup:9f47406b46fdd91dd339deae3641ac2b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a band and its members." ;
+        mtp:hasEvidencePurposeSecond  "The band's lyrical content is connected with everyday topics." ;
+        mtp:hasSourcePurpose          "LLM" .

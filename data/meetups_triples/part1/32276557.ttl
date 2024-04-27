@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:6e891cc395d409232de074fd25cc36fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aime_Kiwakana> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aime Kiwakana" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Aime_Kiwakana>
+        rdf:type  core:Person .
+
+meetup:4725a616b61a49492e0cd7ae4339a6b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aime_Kiwakana> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aime Kiwakana" .
+
+<http://w3id.org/polifonia/pilot/meetups/32276557/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aime Kiwakana Kiala, born Emmanuel Kiala (died 1992), was a soukous recording artist, composer and vocalist, in the Democratic Republic of the Congo (DRC)." ;
+        mtp:hasParticipant   meetup:4725a616b61a49492e0cd7ae4339a6b0 ;
+        mtp:hasPurpose       meetup:172129205b1a328f638ebfc35a35df52 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aime_Kiwakana> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/32276557/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was once a member of the soukous band TPOK Jazz, led by Franco Luambo, which dominated the Congolese music scene from the 1950s through the 1980s." ;
+        mtp:hasParticipant   meetup:6e891cc395d409232de074fd25cc36fe ;
+        mtp:hasPurpose       meetup:724e0dfa33d382f2a4777d8c5a89de8f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aime_Kiwakana> ;
+        mtp:hasType          "HT" .
+
+meetup:724e0dfa33d382f2a4777d8c5a89de8f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.57934606" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.41773224" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:172129205b1a328f638ebfc35a35df52
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9037098" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08301333" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,63 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/B.C._Camplight>
+        rdf:type  core:Person .
+
+meetup:82153667dd644fd77b87576b8782ad07
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Christinzio" .
+
+meetup:b089e8c9286ef1082ffbc3cfdd9aa4af
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Artist establishing himself in the music scene" ;
+        mtp:hasEvidencePurposeSecond  "Relocation and personal background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/7575611/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "BC Camplight (born Brian Christinzio; 31 May 1979) is an American songwriter and multi-instrumentalist." ;
+        mtp:hasParticipant   meetup:50912e6847367205ee84245d38642bb3 ;
+        mtp:hasPurpose       meetup:76d07183d0476926d29e8b4ea2c4974d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/B.C._Camplight> ;
+        mtp:hasType          "HT" .
+
+meetup:76d07183d0476926d29e8b4ea2c4974d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6430195" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17756572" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:50912e6847367205ee84245d38642bb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/B.C._Camplight> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "BC Camplight" .
+
+<http://w3id.org/polifonia/pilot/meetups/7575611/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Originally from Wenonah, New Jersey, Christinzio relocated to Philadelphia, Pennsylvania, United States, in 2003. He soon signed a record deal with One Little Indian and established himself on the city's live music scene." ;
+        mtp:hasParticipant   meetup:82153667dd644fd77b87576b8782ad07 ;
+        mtp:hasPurpose       meetup:b089e8c9286ef1082ffbc3cfdd9aa4af ;
+        mtp:hasSubject       <http://dbpedia.org/resource/B.C._Camplight> ;
+        mtp:hasType          "HT" .

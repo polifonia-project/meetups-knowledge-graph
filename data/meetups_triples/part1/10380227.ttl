@@ -1,0 +1,87 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/10380227/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was best known for her 1957 country-pop crossover hit \"Dark Moon\". She became one of the first female country music singers to have hit songs cross over from the country charts to the pop charts." ;
+        mtp:hasPurpose       meetup:5869f111476450a22e5e4a2482e9b2cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bonnie_Guitar> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Bonnie_Guitar>
+        rdf:type  core:Person .
+
+meetup:11f6d7989b56210ccc90781bb66c1cb3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9605928" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.032163005" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a7fc18ed7dad2cffd01a3eaa10126491
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.4040205" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29425862" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/10380227/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bonnie Buckingham (March 25, 1923 – January 13, 2019), better known as Bonnie Guitar, was an American singer, musician, producer, and businesswoman." ;
+        mtp:hasParticipant   meetup:c0155195256d817e250c49062a958c5a , meetup:6b25ac521e4b5b3186e94bda7b18e486 ;
+        mtp:hasPurpose       meetup:a7fc18ed7dad2cffd01a3eaa10126491 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bonnie_Guitar> ;
+        mtp:hasType          "HM" .
+
+meetup:c0155195256d817e250c49062a958c5a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bonnie_Guitar> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bonnie Guitar" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e0909f41ada6b59fda68b1a153c1d78b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bonnie_Guitar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999995168" ;
+        mtp:hasTextEvidence     "Bonnie Guitar" .
+
+meetup:5869f111476450a22e5e4a2482e9b2cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Country-pop crossover hit" ;
+        mtp:hasEvidencePurposeSecond  "Female country music singer" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6b25ac521e4b5b3186e94bda7b18e486
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bonnie Buckingham" .
+
+<http://w3id.org/polifonia/pilot/meetups/10380227/15/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bonnie Guitar died in Soap Lake, Washington on January 12, 2019, at the age of 95." ;
+        mtp:hasParticipant   meetup:e0909f41ada6b59fda68b1a153c1d78b ;
+        mtp:hasPurpose       meetup:11f6d7989b56210ccc90781bb66c1cb3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bonnie_Guitar> ;
+        mtp:hasType          "HT" .

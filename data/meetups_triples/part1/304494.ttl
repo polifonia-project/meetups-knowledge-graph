@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a9e5d276afd9dd27b911767ad7848d0c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Learning about historical facts" ;
+        mtp:hasEvidencePurposeSecond  "Unexpected similarity in answers" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:966cff2d4291ebd598ad7048993f9857
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Llewelyn-Bowen" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/304494/37/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2004 Llewelyn-Bowen designed the interior of the Inc Bar in Greenwich, England in a former 1830s music hall. The design features Larry's Bar, named after Llewelyn-Bowen and \"the Divan\", a dimly lit nook, a sort of make-out room." ;
+        mtp:hasParticipant   meetup:966cff2d4291ebd598ad7048993f9857 ;
+        mtp:hasPurpose       meetup:6dc6619a67d63fa10f5daa50bba0e430 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laurence_Llewelyn-Bowen> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:fcc01f143b6a1df17e8edced666b8a7b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "101" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Juliet Ashworth" .
+
+<http://w3id.org/polifonia/pilot/meetups/304494/40/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The answer given was \"In God We Trust\" which is originally English and has in fact been the motto of the United States since 1956. The intended answer had been \"Out of Many, One\" which is a translation of the Latin phrase E pluribus unum, which is found on the Great Seal, however it is not actually the current United States motto." ;
+        mtp:hasPurpose       meetup:a9e5d276afd9dd27b911767ad7848d0c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laurence_Llewelyn-Bowen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Laurence_Llewelyn-Bowen>
+        rdf:type  core:Person .
+
+meetup:6dc6619a67d63fa10f5daa50bba0e430
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Designing a music hall interior" ;
+        mtp:hasEvidencePurposeSecond  "Personal life of Llewelyn-Bowen" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:fbbcdffced8a27f2e6ca1f04df46ffab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Comedic advertising campaign" ;
+        mtp:hasEvidencePurposeSecond  "Participation in TV shows" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/304494/47/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2019, he appeared in a comedic advertising campaign for online bathroom retailer Victorian Plumbing in the UK. In 2019, he took part in the BBC series Celebrity Painting Challenge and he became a judge alongside Juliet Ashworth in the Australian programme Instant Hotel." ;
+        mtp:hasParticipant   meetup:fcc01f143b6a1df17e8edced666b8a7b ;
+        mtp:hasPurpose       meetup:fbbcdffced8a27f2e6ca1f04df46ffab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laurence_Llewelyn-Bowen> ;
+        mtp:hasType          "HT" .

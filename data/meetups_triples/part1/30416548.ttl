@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Kikuko_Masumoto>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/30416548/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kikuko Masumoto (増本 伎共子, Masumoto Kikuko, born 2 February 1937) is a Japanese pianist, music educator, composer, and ethnomusicologist." ;
+        mtp:hasParticipant   meetup:5cab432a711ab8514c4140991bb3a9fd , meetup:1e1a680051990ae12f0984c4fb8770e1 ;
+        mtp:hasPurpose       meetup:d4f1a38bd2faaacf29830e8082e490e2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kikuko_Masumoto> ;
+        mtp:hasType          "HM" .
+
+meetup:5cab432a711ab8514c4140991bb3a9fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Masumoto Kikuko" .
+
+meetup:d4f1a38bd2faaacf29830e8082e490e2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Pianist and composer" ;
+        mtp:hasEvidencePurposeSecond  "Music educator and ethnomusicologist" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:1e1a680051990ae12f0984c4fb8770e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kikuko_Masumoto> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999987740182" ;
+        mtp:hasTextEvidence     "Kikuko Masumoto" .

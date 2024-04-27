@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:65c56fe6e192bd5c1ffe50292965409b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Donald Kinsey is a guitarist and singer" ;
+        mtp:hasEvidencePurposeSecond  "He is known for being a member of the Wailers Band" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a62c8214c4b2dde6489829bffdb5feb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Donald_Kinsey> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Donald Kinsey" .
+
+meetup:4cab69d45fdbb0c806604b9164ae756a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Marley> ;
+        mtp:hasOffset           "176" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Marley" .
+
+<http://w3id.org/polifonia/pilot/meetups/23603842/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Donald Kinsey (born May 12, 1953 in Gary, Indiana, United States) is an American guitarist and singer, best known as a member of the Wailers Band, the reggae backing group for Bob Marley and the Wailers." ;
+        mtp:hasParticipant   meetup:a62c8214c4b2dde6489829bffdb5feb3 , meetup:4cab69d45fdbb0c806604b9164ae756a ;
+        mtp:hasPurpose       meetup:65c56fe6e192bd5c1ffe50292965409b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Donald_Kinsey> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Bob_Marley>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Donald_Kinsey>
+        rdf:type  core:Person .

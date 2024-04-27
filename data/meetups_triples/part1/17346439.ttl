@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:2718b5859984a08f7bdd8f58e5ed18d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Unforeseen events happening simultaneously" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Kyle_Gibson>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:010166be022967cf07939c338881676c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kyle_Gibson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.540584221659502" ;
+        mtp:hasTextEvidence     "Gibson" .
+
+<http://dbpedia.org/resource/Laura_Gibson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/17346439/12/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On March 26, 2015 Gibson's Manhattan apartment was destroyed in the 2015 East Village gas explosion which killed two people. Gibson was home at the time of the explosion but escaped unharmed." ;
+        mtp:hasParticipant   meetup:010166be022967cf07939c338881676c ;
+        mtp:hasPurpose       meetup:2718b5859984a08f7bdd8f58e5ed18d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Laura_Gibson> ;
+        mtp:hasType          "HT" .

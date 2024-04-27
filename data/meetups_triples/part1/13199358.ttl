@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:64c3d63f9cf00de3e1028e366dd03bad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999979" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.47231e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/13199358/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jay Migliori (November 14, 1930 – September 2, 2001) was an American saxophonist, best known as a founding member of Supersax, a tribute band to Charlie Parker." ;
+        mtp:hasParticipant   meetup:c87c1ba2d450e473b60cd869144f3bee , meetup:c597891658f115979033a349fee5d8fd ;
+        mtp:hasPurpose       meetup:64c3d63f9cf00de3e1028e366dd03bad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jay_Migliori> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Jay_Migliori>
+        rdf:type  core:Person .
+
+meetup:c87c1ba2d450e473b60cd869144f3bee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jay_Migliori> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jay Migliori" .
+
+meetup:c597891658f115979033a349fee5d8fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charlie_Parker> ;
+        mtp:hasOffset           "147" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charlie Parker" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Charlie_Parker>
+        rdf:type  core:Person .

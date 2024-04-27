@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/22133014/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "With pianist Marilyn Crispell, she serves as one of the co-leaders of the Copenhagen Art Ensemble." ;
+        mtp:hasParticipant   meetup:7d63e5e8ae3ad1042fe73df19fbb1f86 , meetup:9b83024bf46750485d77fa911b407721 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lotte_Anker> ;
+        mtp:hasType          "HM" .
+
+meetup:7d63e5e8ae3ad1042fe73df19fbb1f86
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lotte_Anker> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lotte Anker" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:9b83024bf46750485d77fa911b407721
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marilyn_Crispell> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marilyn Crispell" .
+
+<http://dbpedia.org/resource/Marilyn_Crispell>
+        rdf:type  core:Person .
+
+meetup:5c2f90ff44516190cb8f9161a16e4a2a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9918743" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007896477" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6a964df1316a01720bdf017006308357
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lotte_Anker> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lotte Anker" .
+
+<http://w3id.org/polifonia/pilot/meetups/22133014/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lotte Anker (born 1958 Copenhagen) is a Danish jazz saxophonist, and composer." ;
+        mtp:hasParticipant   meetup:6a964df1316a01720bdf017006308357 ;
+        mtp:hasPurpose       meetup:5c2f90ff44516190cb8f9161a16e4a2a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lotte_Anker> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lotte_Anker>
+        rdf:type  core:Person .

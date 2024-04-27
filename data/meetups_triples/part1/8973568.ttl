@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/8973568/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Terje Gewelt (born 8 June 1960) is a Norwegian jazz musician (upright bass)." ;
+        mtp:hasParticipant   meetup:d41bc3d7db18973452c15fb23914a52f ;
+        mtp:hasPurpose       meetup:1374ce9c08c21129c66f2351e845089b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Terje_Gewelt> ;
+        mtp:hasType          "HT" .
+
+meetup:1374ce9c08c21129c66f2351e845089b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99996614" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.380302e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Terje_Gewelt>
+        rdf:type  core:Person .
+
+meetup:d41bc3d7db18973452c15fb23914a52f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Terje_Gewelt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Terje Gewelt" .

@@ -1,0 +1,90 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/9131715/17/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is currently living in Årsta south of Stockholm with her boyfriend Joakim Ramsell." ;
+        mtp:hasParticipant   meetup:354fdbcb00302493d34635413ec79fe2 , meetup:4b5fc733ff94e4654d11082db7b5588a ;
+        mtp:hasPurpose       meetup:89a9afee951997978665a1396346d11c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sanna_Nielsen> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:354fdbcb00302493d34635413ec79fe2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joakim Ramsell" .
+
+<http://dbpedia.org/resource/Sanna_Nielsen>
+        rdf:type  core:Person .
+
+meetup:4b5fc733ff94e4654d11082db7b5588a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sanna_Nielsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sanna Nielsen" .
+
+meetup:e717c9e565ac2d00aa535f7434ddcda6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sanna_Nielsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sanna Nielsen" .
+
+<http://w3id.org/polifonia/pilot/meetups/9131715/17/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sanna Nielsen got engaged in 2006 in Las Vegas, the couple lived in Lidingö outside of Stockholm before splitting up in 2008." ;
+        mtp:hasParticipant   meetup:e717c9e565ac2d00aa535f7434ddcda6 ;
+        mtp:hasPurpose       meetup:ea5a6a1a86d35e458fadb738656c40c5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sanna_Nielsen> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/9131715/15/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In August 2015 it was announced by SVT that Nielsen would become the new presenter for the all-sing show Allsång på Skansen at Skansen in Stockholm in the summer of 2016. Nielsen returned to Eurovision when she hosted the \"Eurovision The Party\" event that was held at the Tele2 Arena on the night of the Eurovision Song Contest 2016 final." ;
+        mtp:hasPurpose       meetup:fa304caad93ef2798c3fdb562180ab70 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sanna_Nielsen> ;
+        mtp:hasType          "HT" .
+
+meetup:89a9afee951997978665a1396346d11c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Mention of a person's name in the sentence" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ea5a6a1a86d35e458fadb738656c40c5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9187229" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.033878878" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fa304caad93ef2798c3fdb562180ab70
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Hosting music events" ;
+        mtp:hasEvidencePurposeSecond  "Hosting public celebrations" ;
+        mtp:hasSourcePurpose          "LLM" .

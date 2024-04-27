@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/6068076/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She resides in Osaka, and is signed with Tokyo-based AVEX recording label." ;
+        mtp:hasParticipant   meetup:5f4b2ce26806cfb0eaae74f59892e5d9 ;
+        mtp:hasPurpose       meetup:ca9b696f10c28e4525e8d359e9a4d501 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aya_Kamiki> ;
+        mtp:hasType          "HT" .
+
+meetup:ca9b696f10c28e4525e8d359e9a4d501
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9945933" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0042096903" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6068076/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aya Kamiki (上木 彩矢, Kamiki Aya, born September 10, 1985, in Sapporo, Hokkaido) is a Japanese singer, actress and model." ;
+        mtp:hasParticipant   meetup:763385dccb2055887631d287f32be480 , meetup:c39f3639f4f4dfcb69eebfc0c60d5801 ;
+        mtp:hasPurpose       meetup:accea9efb19bcbbfa4ebd1fc9b398bda ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aya_Kamiki> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:5f4b2ce26806cfb0eaae74f59892e5d9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aya_Kamiki> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aya Kamiki" .
+
+<http://dbpedia.org/resource/Aya_Kamiki>
+        rdf:type  core:Person .
+
+meetup:c39f3639f4f4dfcb69eebfc0c60d5801
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aya_Kamiki> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aya Kamiki" .
+
+meetup:accea9efb19bcbbfa4ebd1fc9b398bda
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Aya Kamiki is a Japanese singer" ;
+        mtp:hasEvidencePurposeSecond  "She was born in Sapporo, Hokkaido" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:763385dccb2055887631d287f32be480
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kamiki Aya" .

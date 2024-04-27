@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/33870457/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Atle Pettersen (born September 5, 1989 in Skien) is a Norwegian singer and songwriter from Skien and lead singer of the band The Scheen." ;
+        mtp:hasParticipant   meetup:4ac91744a88460fdaad529c089bab98c ;
+        mtp:hasPurpose       meetup:41426b959a17030f0ecefcdeeede16ac ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Atle_Pettersen> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:4ac91744a88460fdaad529c089bab98c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Atle_Pettersen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Atle Pettersen" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/33870457/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Reaching the live shows, Pettersen was mentored by Marion Ravn." ;
+        mtp:hasParticipant   meetup:ded36693b44c5f7f8b51e94d0c5e6fc2 , meetup:d83fea52295ac72b938ec84dea6ff53e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Atle_Pettersen> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Marion_Raven>
+        rdf:type  core:Person .
+
+meetup:ded36693b44c5f7f8b51e94d0c5e6fc2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marion_Raven> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marion Ravn" .
+
+meetup:d83fea52295ac72b938ec84dea6ff53e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Atle_Pettersen> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Atle Pettersen" .
+
+meetup:41426b959a17030f0ecefcdeeede16ac
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8831816" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.108353496" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Atle_Pettersen>
+        rdf:type  core:Person .

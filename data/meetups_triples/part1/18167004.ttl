@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Rose_Marie_McCoy>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18167004/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Living in Harlem, she supported herself by working at a Chinese laundry and performing at nightclubs on the weekends. McCoy eventually booked gigs at famous venues such as the Baby Grand in Harlem, the Flame Show Bar in Detroit, the Sportsmen's Club in Cincinnati and Basin Street in Toronto." ;
+        mtp:hasPurpose       meetup:cd3e119d554416872a44053b0c3aaf3b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rose_Marie_McCoy> ;
+        mtp:hasType          "HT" .
+
+meetup:cd3e119d554416872a44053b0c3aaf3b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing at nightclubs" ;
+        mtp:hasEvidencePurposeSecond  "Working at a Chinese laundry" ;
+        mtp:hasSourcePurpose          "LLM" .

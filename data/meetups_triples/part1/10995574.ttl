@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/10995574/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2014, she released in Brazil her first live DVD/CD entitled Céu – Ao Vivo, the concert was filmed in August 2014 in São Paulo and contains 15 tracks in total, including the never before released cover versions of all time classics \"Piel Canela\" and \"Mais Uma Noite de Amor\", behind the scenes footage of the band and more." ;
+        mtp:hasParticipant   meetup:69224c437e90b7a8ea9098208a2d2582 ;
+        mtp:hasPurpose       meetup:b48e29a7435358dade8e5a83b086a9bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Céu> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b48e29a7435358dade8e5a83b086a9bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.807412" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16598244" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:69224c437e90b7a8ea9098208a2d2582
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Céu> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Céu" .
+
+<http://dbpedia.org/resource/Céu>
+        rdf:type  core:Person .

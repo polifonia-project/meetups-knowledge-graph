@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/7005695/6/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:238deac482ff97aea4a1d81ad76b8005 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Dave_Formula> ;
+        mtp:hasType     "HT" .
+
+meetup:5d522520a3f517f9cb29a81661648f44
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "11 August 1946" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1946-08-11"^^xsd:date ;
+        time:hasEnd          "1946-08-11"^^xsd:date .
+
+meetup:234ad20449ff62eede380baab9a8152b
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the end of the 1970s" ;
+        mtp:hasSource        "ML" .
+
+<http://dbpedia.org/resource/Dave_Formula>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/7005695/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:5d522520a3f517f9cb29a81661648f44 , meetup:12532419b41b590c6438558a630b5719 , meetup:234ad20449ff62eede380baab9a8152b ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Dave_Formula> ;
+        mtp:hasType     "HT" .
+
+meetup:12532419b41b590c6438558a630b5719
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the beginning of the 1980s" ;
+        mtp:hasSource        "ML" .
+
+meetup:238deac482ff97aea4a1d81ad76b8005
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "February 2009" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2009-02-01"^^xsd:date ;
+        time:hasEnd          "2009-02-28"^^xsd:date .

@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/20749168/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Borjan Canev (born 1973 in Skopje) is a Macedonian conductor trained at the Royal College of Music in London." ;
+        mtp:hasParticipant   meetup:3b97ac5b1677b8de1b51a784ae997f83 ;
+        mtp:hasPurpose       meetup:77429dc69737eb08629821ea4521d3fc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Borjan_Canev> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fca875e881d113880bc8b9f7e8ab772d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Borjan_Canev> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Borjan Canev" .
+
+<http://dbpedia.org/resource/Colin_Davis>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/20749168/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Back then, he served as Sir Colin Davis' assistant conductor at his 2001 production of Wolfgang Amadeus Mozart's Don Giovanni." ;
+        mtp:hasParticipant   meetup:fca875e881d113880bc8b9f7e8ab772d , meetup:0cffd0fcf7e595d3890a1e73d3724be0 ;
+        mtp:hasPurpose       meetup:57cd930ef96559e1f2a5fffcbc47f297 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Borjan_Canev> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:57cd930ef96559e1f2a5fffcbc47f297
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8203395" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16020806" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:77429dc69737eb08629821ea4521d3fc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.78881454" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13220966" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3b97ac5b1677b8de1b51a784ae997f83
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Borjan_Canev> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Borjan Canev" .
+
+<http://dbpedia.org/resource/Borjan_Canev>
+        rdf:type  core:Person .
+
+meetup:0cffd0fcf7e595d3890a1e73d3724be0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Colin_Davis> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Colin Davis" .

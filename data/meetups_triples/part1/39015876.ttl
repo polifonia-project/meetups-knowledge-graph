@@ -1,0 +1,88 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/39015876/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Amy Helm (born December 3, 1970) is an American singer-songwriter and daughter of The Band drummer Levon Helm and singer Libby Titus." ;
+        mtp:hasParticipant   meetup:e16fe3eb5175695e02ea66b5df10db49 , meetup:2f8eae29c1d1f89a340843b418bada8c , meetup:d9670ce0c876a3b7e59f0097483fa03c ;
+        mtp:hasPurpose       meetup:bc06d9e87f9bd9e5f94e501811daf0c5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amy_Helm> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Libby_Titus>
+        rdf:type  core:Person .
+
+meetup:4076026eae6299776393f1c4d3e520d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amy_Helm> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Amy Helm" .
+
+meetup:bc06d9e87f9bd9e5f94e501811daf0c5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.71236444" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2693425" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d9670ce0c876a3b7e59f0097483fa03c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Libby_Titus> ;
+        mtp:hasOffset           "121" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Libby Titus" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/39015876/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is a past member of the Levon Helm's Midnight Ramble Band and Ollabelle, as well as her own touring band." ;
+        mtp:hasParticipant   meetup:4076026eae6299776393f1c4d3e520d4 ;
+        mtp:hasPurpose       meetup:79073a7a02d15e8ae0ffd6430aea4391 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amy_Helm> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e16fe3eb5175695e02ea66b5df10db49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amy_Helm> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Amy Helm" .
+
+<http://dbpedia.org/resource/Levon_Helm>
+        rdf:type  core:Person .
+
+meetup:79073a7a02d15e8ae0ffd6430aea4391
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8523825" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14155737" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Amy_Helm>
+        rdf:type  core:Person .
+
+meetup:2f8eae29c1d1f89a340843b418bada8c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Levon_Helm> ;
+        mtp:hasOffset           "99" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Levon Helm" .

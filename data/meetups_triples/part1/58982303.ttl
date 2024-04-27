@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:46b223624ec0c590baa6f2300b3f457a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.577263e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:82df00f7101f2665fb06e8c96478cda3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Helza_Cameu> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Helza Cameu" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/58982303/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She also gave lectures at the National School of Music and was enrolled in the Brazilian Academy of Music in 1946." ;
+        mtp:hasParticipant   meetup:82df00f7101f2665fb06e8c96478cda3 ;
+        mtp:hasPurpose       meetup:46b223624ec0c590baa6f2300b3f457a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Helza_Cameu> ;
+        mtp:hasType          "HT" .
+
+meetup:cd4386c1f065579a9e801282db4409d5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Helza_Cameu> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999467092" ;
+        mtp:hasTextEvidence     "Helza Cameu" .
+
+meetup:59390bf170a3b46381a0ca75f40c7835
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94420797" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03215537" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/58982303/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Helza Cameu (March 28, 1903 – March 1995) was a Brazilian composer, pianist, musicologist, and author." ;
+        mtp:hasParticipant   meetup:cd4386c1f065579a9e801282db4409d5 ;
+        mtp:hasPurpose       meetup:59390bf170a3b46381a0ca75f40c7835 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Helza_Cameu> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Helza_Cameu>
+        rdf:type  core:Person .

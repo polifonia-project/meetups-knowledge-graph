@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/40345387/12/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While she studied at the Art Students League of New York, she began to serve the club's governing council in 1896. She was a member of the board beginning in 1896." ;
+        mtp:hasPurpose       meetup:e93b76a94485e63fc8425cd1fc176e91 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anne_Evans_(arts_patron)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Anne_Evans_(arts_patron)>
+        rdf:type  core:Person .
+
+meetup:e93b76a94485e63fc8425cd1fc176e91
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Learning at an art school" ;
+        mtp:hasEvidencePurposeSecond  "Participating in club meetings" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/18153635/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was elected a Corresponding Fellow of the Australian Academy of the Humanities in 2018." ;
+        mtp:hasParticipant   meetup:70b8f7e0d5e5e251d32df3f96ef59030 ;
+        mtp:hasPurpose       meetup:447d798e4c37a87c98233d26981caa4d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Burden> ;
+        mtp:hasType          "HT" .
+
+meetup:561f049edfe5408f329e0795c9e9eff9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998456" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0001054232" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:447d798e4c37a87c98233d26981caa4d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8233675" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1758617" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Michael_Burden>
+        rdf:type  core:Person .
+
+meetup:e3ef4acd2e0ff78e8220178cf23da393
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Burden> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999998680948" ;
+        mtp:hasTextEvidence     "Michael Burden" .
+
+meetup:70b8f7e0d5e5e251d32df3f96ef59030
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Burden> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael Burden" .
+
+<http://w3id.org/polifonia/pilot/meetups/18153635/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Burden, FAHA, (born 14 March 1960) is an Australian musicologist, working in the United Kingdom." ;
+        mtp:hasParticipant   meetup:e3ef4acd2e0ff78e8220178cf23da393 ;
+        mtp:hasPurpose       meetup:561f049edfe5408f329e0795c9e9eff9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Burden> ;
+        mtp:hasType          "HT" .

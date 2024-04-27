@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Woody_Herman>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c0adbf6c689bd81e025af413cd50631f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Engagement at Café Carlyle" ;
+        mtp:hasEvidencePurposeSecond  "Moving to New York City" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Howard_Alden>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Joe_Williams_(jazz_singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1584144/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He moved to New York City in 1982 to play an extended engagement at the Café Carlyle with jazz pianist/songwriter Joe Bushkin. Soon afterwards, he was discovered by Joe Williams and Woody Herman." ;
+        mtp:hasParticipant   meetup:af4741a838069d62e88175d697c905a4 , meetup:fbae778aae7eb5723fb0f8e9c66a2f35 ;
+        mtp:hasPurpose       meetup:c0adbf6c689bd81e025af413cd50631f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Howard_Alden> ;
+        mtp:hasType          "HT" .
+
+meetup:af4741a838069d62e88175d697c905a4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Williams_(jazz_singer)> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "0.9920157452163708" ;
+        mtp:hasTextEvidence     "Joe Williams" .
+
+meetup:fbae778aae7eb5723fb0f8e9c66a2f35
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Woody_Herman> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Woody Herman" .

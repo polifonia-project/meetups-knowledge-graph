@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/13060731/26/16>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On December 21, 2013, Gerard Way stated that he and Gabriel Bá will be working on parts three and four of his comic book series Umbrella Academy beginning in the new year." ;
+        mtp:hasParticipant   meetup:54754290c3c4e04d650b0a061a363f33 ;
+        mtp:hasPurpose       meetup:3ebb4acfa942be71917803f3474163a7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gerard_Way> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/13060731/11/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In February and March 2015, Way performed as a solo artist with The Hormones on the main stage of the Australian 2015 Soundwave music festivals, and headlined an additional sideshow in Melbourne. In early 2015, it was announced that he would perform at the Boston Calling Music Festival in May 2015." ;
+        mtp:hasPurpose       meetup:e81e3a8e383204804f48c741d9576e25 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gerard_Way> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e81e3a8e383204804f48c741d9576e25
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performing at music festivals" ;
+        mtp:hasEvidencePurposeSecond  "Boston Calling Music Festival" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:3ebb4acfa942be71917803f3474163a7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84653854" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13882005" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:54754290c3c4e04d650b0a061a363f33
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gerard_Way> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gerard Way" .
+
+<http://dbpedia.org/resource/Gerard_Way>
+        rdf:type  core:Person .

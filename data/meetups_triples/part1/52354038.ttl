@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:9444326abd519167ac2a7d848d0f5c20
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.50909525" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.46211666" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e2537d49be88d464442a075c78c40772
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blanche_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999993577549235" ;
+        mtp:hasTextEvidence     "Ellie Delvaux" .
+
+meetup:4cac9e8c868c3fef3c38d0355ccb2765
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blanche_(singer)> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ellie Delvaux" .
+
+meetup:54bba15a5092d550bc38e61449fcb505
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5639584" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35318884" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Blanche_(singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/52354038/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ellie Delvaux was born in Belgium, on 10 June 1999." ;
+        mtp:hasParticipant   meetup:e2537d49be88d464442a075c78c40772 ;
+        mtp:hasPurpose       meetup:54bba15a5092d550bc38e61449fcb505 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blanche_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/52354038/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After Eurovision, she hoped to complete secondary school in Belgium." ;
+        mtp:hasParticipant   meetup:4cac9e8c868c3fef3c38d0355ccb2765 ;
+        mtp:hasPurpose       meetup:9444326abd519167ac2a7d848d0f5c20 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blanche_(singer)> ;
+        mtp:hasType          "HT" .

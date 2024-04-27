@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/57392348/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pedro Alcalde (born in Barcelona, 1959) is a Spanish composer, conductor, musicologist and pianist." ;
+        mtp:hasParticipant   meetup:4ee462084e2884bacd7f43b1be16b9e0 ;
+        mtp:hasPurpose       meetup:51e3bb84cabcc9513c0efebeb71dc87c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pedro_Alcalde> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/57392348/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He earned a Master of Arts degree from Columbia University in New York in 1984 and a Ph.D. in Musicology and Philosophy from the Free University of Berlin in 1988, with a dissertation on Mozart’s Don Giovanni, directed by Tibor Kneif. At the Vienna University of Music and Performing Arts he specialized in Orchestral Conducting with Professor Karl Österreicher from 1988 until 1990." ;
+        mtp:hasPurpose       meetup:9c07e88399a8d33d67fa6f732532547e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pedro_Alcalde> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9c07e88399a8d33d67fa6f732532547e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Academic achievements" ;
+        mtp:hasEvidencePurposeSecond  "Specialization in music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:51e3bb84cabcc9513c0efebeb71dc87c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99996126" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.3140328e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4ee462084e2884bacd7f43b1be16b9e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pedro_Alcalde> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999937742527968" ;
+        mtp:hasTextEvidence     "Pedro Alcalde" .
+
+<http://dbpedia.org/resource/Pedro_Alcalde>
+        rdf:type  core:Person .

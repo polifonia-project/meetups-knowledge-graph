@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:90b05bf2a1a1cedc49936e7f14228b37
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95200413" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.047332447" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1550994/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joshua Kit Clayton, better known by his stage name Kit Clayton, is a San Francisco-based electronic and digital musician and computer programmer." ;
+        mtp:hasParticipant   meetup:d80bac88f66351b37769689bf21f4265 ;
+        mtp:hasPurpose       meetup:90b05bf2a1a1cedc49936e7f14228b37 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kit_Clayton> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Kit_Clayton>
+        rdf:type  core:Person .
+
+meetup:d80bac88f66351b37769689bf21f4265
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kit_Clayton> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kit Clayton" .

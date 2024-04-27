@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:31bf086f0e5b3cb16fd4465e00407a82
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97149414" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.028434476" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1753f853a22331d1662daa502ea9dcf4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vlado_Meller> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Vlado Meller" .
+
+meetup:2d022a065957bb798721c09ed25f87be
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99337924" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0052693128" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/36666646/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vlado Meller is a Slovak audio mastering engineer, currently with Vlado Meller Mastering in Charleston, South Carolina." ;
+        mtp:hasParticipant   meetup:1753f853a22331d1662daa502ea9dcf4 ;
+        mtp:hasPurpose       meetup:2d022a065957bb798721c09ed25f87be ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vlado_Meller> ;
+        mtp:hasType          "HT" .
+
+meetup:4e2f138dd35ff07618d60aa25f1cb28e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vlado_Meller> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Vlado Meller" .
+
+<http://w3id.org/polifonia/pilot/meetups/36666646/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Meller works across many genres of music, with credits on rock, hip-hop, pop, jazz, metal, dance, opera, Broadway, and classical albums over 50+ year career." ;
+        mtp:hasParticipant   meetup:4e2f138dd35ff07618d60aa25f1cb28e ;
+        mtp:hasPurpose       meetup:31bf086f0e5b3cb16fd4465e00407a82 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vlado_Meller> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Vlado_Meller>
+        rdf:type  core:Person .

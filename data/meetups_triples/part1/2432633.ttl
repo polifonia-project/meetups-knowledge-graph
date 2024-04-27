@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Paul_Anka>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Irvin_Feld>
+        rdf:type  core:Person .
+
+meetup:9a0ffa23810f190239fd01e97e6fdc78
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999968" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.7269054e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8c636855e9461d9034799882cde15ea6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Anka> ;
+        mtp:hasOffset           "57" ;
+        mtp:hasSimilarityScore  "0.9999591181738208" ;
+        mtp:hasTextEvidence     "Paul Anka" .
+
+<http://w3id.org/polifonia/pilot/meetups/2432633/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was a music promoter who is credited with discovering Paul Anka." ;
+        mtp:hasParticipant   meetup:8c405479d74352161be95f374cb9e4ce , meetup:8c636855e9461d9034799882cde15ea6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Irvin_Feld> ;
+        mtp:hasType          "HM" .
+
+meetup:1696c227d77c7f722ea8ad36d5a788b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Irvin_Feld> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Irvin Feld" .
+
+meetup:8c405479d74352161be95f374cb9e4ce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Irvin_Feld> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Irvin Feld" .
+
+<http://w3id.org/polifonia/pilot/meetups/2432633/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Irvin Feld (April 19, 1918 – September 6, 1984) was a business entrepreneur who built a chain of record stores, promoted rock groups, produced concerts involving some of the biggest names in popular music." ;
+        mtp:hasParticipant   meetup:1696c227d77c7f722ea8ad36d5a788b7 ;
+        mtp:hasPurpose       meetup:9a0ffa23810f190239fd01e97e6fdc78 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Irvin_Feld> ;
+        mtp:hasType          "HT" .

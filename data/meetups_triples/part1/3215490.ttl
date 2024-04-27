@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/3215490/14/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ware created a 3D surround sound auditorium for the National Centre for Popular Music in Sheffield – a museum of contemporary music and culture, launched with £15 million of National Lottery money, which opened in March 1999 and closed in July 2000. BBC News described the centre as having been \"shunned\" by visitors, and, despite a £2 million relaunch, the Centre closed." ;
+        mtp:hasPurpose       meetup:80f2cb802599f04f9cf430e8a1913fc7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martyn_Ware> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:85bbe50da31af84feea3f7af335cad5b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martyn_Ware> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Martyn Ware" .
+
+<http://w3id.org/polifonia/pilot/meetups/3215490/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Martyn Ware (born 19 May 1956) is an English musician, composer, arranger, record producer, and music programmer." ;
+        mtp:hasParticipant   meetup:85bbe50da31af84feea3f7af335cad5b ;
+        mtp:hasPurpose       meetup:85e89ed1241da3c6027921563aaf9300 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martyn_Ware> ;
+        mtp:hasType          "HT" .
+
+meetup:80f2cb802599f04f9cf430e8a1913fc7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creation of a music auditorium" ;
+        mtp:hasEvidencePurposeSecond  "Financial challenges and closure" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Martyn_Ware>
+        rdf:type  core:Person .
+
+meetup:85e89ed1241da3c6027921563aaf9300
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94089353" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.059104424" ;
+        mtp:hasSourcePurpose          "ML" .

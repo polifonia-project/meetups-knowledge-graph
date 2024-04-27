@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11296063/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Murray McEachern (August 16, 1915 – April 28, 1982) was a Canadian jazz trombonist and alto saxophonist, perhaps best known for having played trombone for Benny Goodman from 1936 to 1937." ;
+        mtp:hasParticipant   meetup:e116c55f72cd2ba8c83de280fb7af0dc , meetup:23f6ee33bed823b0f7fab01afd2e99e0 ;
+        mtp:hasPurpose       meetup:c2176d174bc20340f08a00c1435c902f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Murray_McEachern> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Benny_Goodman>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Murray_McEachern>
+        rdf:type  core:Person .
+
+meetup:23f6ee33bed823b0f7fab01afd2e99e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Benny_Goodman> ;
+        mtp:hasOffset           "157" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Benny Goodman" .
+
+meetup:c2176d174bc20340f08a00c1435c902f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999219" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.888301e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e116c55f72cd2ba8c83de280fb7af0dc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Murray_McEachern> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Murray McEachern" .

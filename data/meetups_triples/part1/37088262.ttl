@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:3ddce564d6a0b18a4c378c31e1394977
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Stevie Stone is a rapper" ;
+        mtp:hasEvidencePurposeSecond  "Stephen Williams is his real name" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Stephen_F._Williams>
+        rdf:type  core:Person .
+
+meetup:3fdc6e0c5a97abbacc39e507291c007f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stephen_F._Williams> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.907701605259233" ;
+        mtp:hasTextEvidence     "Stephen Williams" .
+
+<http://w3id.org/polifonia/pilot/meetups/37088262/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Stephen Williams (born July 28, 1981), better known by his stage name Stevie Stone, is an American rapper from Columbia, Missouri." ;
+        mtp:hasParticipant   meetup:3fdc6e0c5a97abbacc39e507291c007f , meetup:05285ab24f9fe10dc7b151e17721c3a7 ;
+        mtp:hasPurpose       meetup:3ddce564d6a0b18a4c378c31e1394977 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stevie_Stone> ;
+        mtp:hasType          "HM" .
+
+meetup:05285ab24f9fe10dc7b151e17721c3a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stevie_Stone> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Stevie Stone" .
+
+<http://dbpedia.org/resource/Stevie_Stone>
+        rdf:type  core:Person .

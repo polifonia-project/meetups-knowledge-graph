@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2749181/7/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "However, Ray Ellis was credited with his real name for background music to The Archie Show and Sabrina the Teenage Witch, as well as Star Trek: The Animated Series in the early 1970s." ;
+        mtp:hasParticipant   meetup:ee2975612eb46f57dd7aa650193e9a7a ;
+        mtp:hasPurpose       meetup:6756a926576db31bf01c7217136e93fc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ray_Ellis> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:6756a926576db31bf01c7217136e93fc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999722" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.578807e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ee2975612eb46f57dd7aa650193e9a7a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ray_Ellis> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ray Ellis" .
+
+<http://dbpedia.org/resource/Ray_Ellis>
+        rdf:type  core:Person .

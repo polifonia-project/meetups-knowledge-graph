@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/3805078/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Weinstock (October 2, 1928 – January 14, 2006) was an American record producer best known for his label Prestige Records, established in 1949, which was responsible for many significant jazz recordings during his more than two decades operating the firm." ;
+        mtp:hasParticipant   meetup:4729ba8acd5f12f7d5512390b04755c8 ;
+        mtp:hasPurpose       meetup:cf762082530ab5d27127c570af9c9687 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Weinstock> ;
+        mtp:hasType          "HT" .
+
+meetup:cf762082530ab5d27127c570af9c9687
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7520419" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14483108" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4729ba8acd5f12f7d5512390b04755c8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Weinstock> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Weinstock" .
+
+<http://dbpedia.org/resource/Bob_Weinstock>
+        rdf:type  core:Person .

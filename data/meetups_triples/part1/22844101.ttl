@@ -1,0 +1,89 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:5c6323f6bdc075f6391e6c3d56a23233
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95276207" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.044831265" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/22844101/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kelly Keeling was born on June 25, 1966, and is an American musician and songwriter." ;
+        mtp:hasParticipant   meetup:34dd6e5f4ed419f71652236bf6416173 ;
+        mtp:hasPurpose       meetup:5c6323f6bdc075f6391e6c3d56a23233 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kelly_Keeling> ;
+        mtp:hasType          "HT" .
+
+meetup:03c220c1061cec7e6df56bcd883c8784
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kelly_Keeling> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kelly Keeling" .
+
+meetup:34dd6e5f4ed419f71652236bf6416173
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kelly_Keeling> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999977264" ;
+        mtp:hasTextEvidence     "Kelly Keeling" .
+
+<http://w3id.org/polifonia/pilot/meetups/22844101/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Keeling's whereabouts were still unknown as of early July, 2021." ;
+        mtp:hasParticipant   meetup:03c220c1061cec7e6df56bcd883c8784 ;
+        mtp:hasPurpose       meetup:1a9c51a0c26c523fd03d569c8ff8ac26 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kelly_Keeling> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Kelly_Keeling>
+        rdf:type  core:Person .
+
+meetup:1f86b887e96d9f178d71108577733471
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kelly_Keeling> ;
+        mtp:hasOffset           "101" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Kelly Keeling" .
+
+meetup:1a9c51a0c26c523fd03d569c8ff8ac26
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.78784037" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18766202" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:339c430a8ba56c4a8d7cfb24edbab789
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to individuals" ;
+        mtp:hasEvidencePurposeSecond  "Unlikely occurrence of related events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/22844101/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In June 2021, police in Scott, Louisiana, a city located in Lafayette Parish, obtained a warrant for Kelly Keeling for negligent homicide in connection with the suspicious death of 40-year-old Michael Hebert, a Lafayette Parish resident." ;
+        mtp:hasParticipant   meetup:1f86b887e96d9f178d71108577733471 ;
+        mtp:hasPurpose       meetup:339c430a8ba56c4a8d7cfb24edbab789 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kelly_Keeling> ;
+        mtp:hasType          "HT" .

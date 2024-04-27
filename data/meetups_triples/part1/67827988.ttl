@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:4524aa1538380f893145dbc5f991e49f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92306864" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.048124164" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Kent_Finlay>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:77a2e5c06b09fc9f7c67792fa8e15c62
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kent_Finlay> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kent Finlay" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4f0f8a35931637caa3cb230be93c7561
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions a music venue and musicians performing." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a business partnership and opening a venue." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8d4192f432ef1be9b8aca72d46197387
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.4029056e-09" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a8f7e5dcfaca3755940b74f4ad4b14c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kent_Finlay> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.999999999998721" ;
+        mtp:hasTextEvidence     "Kent Finlay" .
+
+<http://w3id.org/polifonia/pilot/meetups/67827988/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Kent Finlay (February 9, 1938 - March 2, 2015) was an American singer and songwriter." ;
+        mtp:hasParticipant   meetup:a8f7e5dcfaca3755940b74f4ad4b14c1 ;
+        mtp:hasPurpose       meetup:8d4192f432ef1be9b8aca72d46197387 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kent_Finlay> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/67827988/0/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kent Finlay was the recipient of the 2007 Coach Darrell K. Royal Texas Heritage Songwriters' Patron Award from the Texas Heritage Songwriters Association, the Lone Star Award from Lone Star Music in 2014, the 2014 San Marcos Tourism Lifetime Achievement Award, and posthumous induction into the Texas Music Legends Hall of Fame in 2016." ;
+        mtp:hasParticipant   meetup:77a2e5c06b09fc9f7c67792fa8e15c62 ;
+        mtp:hasPurpose       meetup:4524aa1538380f893145dbc5f991e49f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kent_Finlay> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/67827988/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Inspired by time spent in Luckenbach, Texas with friend and mentor Hondo Crouch, in June 1974 Finlay opened his own honky-tonk music venue along the train tracks in San Marcos, Texas with business partner Jim Cunningham. Formerly a grocery warehouse, the music hall known as The Cheatham Street Warehouse would serve as an important outlet for many up-and-coming musicians to perform." ;
+        mtp:hasPurpose       meetup:4f0f8a35931637caa3cb230be93c7561 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kent_Finlay> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,88 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:2c3d6cfda9014f1b4fa91b5774694a46
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99967384" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00017449887" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5ae75762bd1a8c29524acec60119a8b0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creation of music and albums" ;
+        mtp:hasEvidencePurposeSecond  "Personal activities and experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:1e9e93261f243dbb4a2695cc41d18d39
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999774" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.9514189e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Kent_McClard>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/7520718/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kent McClard is a record label owner and zine publisher from Goleta, California." ;
+        mtp:hasParticipant   meetup:63808f09fc93555f3f08d30aaa88a1db ;
+        mtp:hasPurpose       meetup:1e9e93261f243dbb4a2695cc41d18d39 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kent_McClard> ;
+        mtp:hasType          "HT" .
+
+meetup:63808f09fc93555f3f08d30aaa88a1db
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kent_McClard> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kent McClard" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/7520718/5/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The record was not released for another year, after the band had broken up. Inside Out did plan to do a second record called \"Rage Against the Machine\", which was a phrase Kent coined in some writings he did in issue #9 of the zine No Answers." ;
+        mtp:hasPurpose       meetup:5ae75762bd1a8c29524acec60119a8b0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kent_McClard> ;
+        mtp:hasType          "HT" .
+
+meetup:13526cc8d45c11a6d358d046186b1dd0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lisa Oglesby" .
+
+meetup:2f0230a9e23dbc0419a582071aa43bf9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kent_McClard> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Kent McClard" .
+
+<http://w3id.org/polifonia/pilot/meetups/7520718/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was published by Kent McClard and Lisa Oglesby from March 1994 through June 2006." ;
+        mtp:hasParticipant   meetup:2f0230a9e23dbc0419a582071aa43bf9 , meetup:13526cc8d45c11a6d358d046186b1dd0 ;
+        mtp:hasPurpose       meetup:2c3d6cfda9014f1b4fa91b5774694a46 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kent_McClard> ;
+        mtp:hasType          "HM" .

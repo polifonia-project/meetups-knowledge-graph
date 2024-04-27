@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ade0a76c956b3e573f33431d625a3b16
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lester_Melrose> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lester Melrose" .
+
+<http://w3id.org/polifonia/pilot/meetups/188323/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He started to promote many blues artists who became popular, recording them mainly in Chicago." ;
+        mtp:hasParticipant   meetup:ade0a76c956b3e573f33431d625a3b16 ;
+        mtp:hasPurpose       meetup:a3974f70cfa338a8e61cd497adfee323 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lester_Melrose> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:a3974f70cfa338a8e61cd497adfee323
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9524917" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04461887" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:494a6d689ca741ca61f2693f773149ee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84382695" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15580313" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0471348351a9045774550f31b8799a20
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lester_Melrose> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lester Melrose" .
+
+<http://dbpedia.org/resource/Lester_Melrose>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/188323/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1925, Lester Melrose sold his share of the store and became a freelance A&R man, combining the roles of talent scout and record producer." ;
+        mtp:hasParticipant   meetup:0471348351a9045774550f31b8799a20 ;
+        mtp:hasPurpose       meetup:494a6d689ca741ca61f2693f773149ee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lester_Melrose> ;
+        mtp:hasType          "HT" .

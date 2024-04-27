@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:70d5b2a1cd7360a12d58b8b7bdbc6886
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6844911" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29533076" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:40b9c9e0727e4e7d8bbdd71da2d26823
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Peterson_(producer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9853985894002428" ;
+        mtp:hasTextEvidence     "Chris Peterson" .
+
+<http://w3id.org/polifonia/pilot/meetups/13887849/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is married to Kerry Peterson of Stiff Valentine." ;
+        mtp:hasParticipant   meetup:445de232a9160a080569dd28a13676d4 , meetup:a4fb3cb503858f0575f53c279121b08c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Peterson_(producer)> ;
+        mtp:hasType          "HM" .
+
+meetup:a4fb3cb503858f0575f53c279121b08c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Peterson_(producer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chris Peterson" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/13887849/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chris Peterson (born May 14, 1968) is a Canadian producer and electronic musician from Vancouver, British Columbia." ;
+        mtp:hasParticipant   meetup:40b9c9e0727e4e7d8bbdd71da2d26823 ;
+        mtp:hasPurpose       meetup:70d5b2a1cd7360a12d58b8b7bdbc6886 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Peterson_(producer)> ;
+        mtp:hasType          "HT" .
+
+meetup:445de232a9160a080569dd28a13676d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kerry Peterson" .
+
+<http://dbpedia.org/resource/Chris_Peterson_(producer)>
+        rdf:type  core:Person .

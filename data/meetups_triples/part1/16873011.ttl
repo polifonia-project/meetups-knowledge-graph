@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Dan_Maines>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c2ea14e4ad2fac545d41a4da5598f562
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7514217" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24709386" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1dba037000fa73dad8235981526fe020
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dan_Maines> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "Dan Maines" .
+
+meetup:edbcf917cc49ea3d49dc4b0b8ab68d5a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99136317" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0077735772" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/16873011/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dan Maines has remained the bassist for Clutch since the group started in 1990." ;
+        mtp:hasParticipant   meetup:1dba037000fa73dad8235981526fe020 ;
+        mtp:hasPurpose       meetup:edbcf917cc49ea3d49dc4b0b8ab68d5a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Maines> ;
+        mtp:hasType          "HT" .
+
+meetup:c5aed03074e1f54e4eef3ed07868a4cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dan_Maines> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dan Maines" .
+
+<http://w3id.org/polifonia/pilot/meetups/16873011/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dan Maines (born March 10, 1971) is the bassist for the hard rock band Clutch." ;
+        mtp:hasParticipant   meetup:c5aed03074e1f54e4eef3ed07868a4cc ;
+        mtp:hasPurpose       meetup:c2ea14e4ad2fac545d41a4da5598f562 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Maines> ;
+        mtp:hasType          "HT" .

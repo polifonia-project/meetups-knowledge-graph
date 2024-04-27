@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Mike_Baker_(singer)>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:32cf388d4f8f2875524182deb719470a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99986136" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.7942684e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b486f8e6c34bdc1c3a24fe70848f6018
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Baker_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8190967444851479" ;
+        mtp:hasTextEvidence     "Mike Baker" .
+
+<http://w3id.org/polifonia/pilot/meetups/18418856/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mike Baker (September 2, 1963 – October 29, 2008) was the lead vocalist for the American progressive metal band Shadow Gallery." ;
+        mtp:hasParticipant   meetup:b486f8e6c34bdc1c3a24fe70848f6018 ;
+        mtp:hasPurpose       meetup:32cf388d4f8f2875524182deb719470a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Baker_(singer)> ;
+        mtp:hasType          "HT" .

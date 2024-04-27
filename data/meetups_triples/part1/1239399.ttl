@@ -1,0 +1,49 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1239399/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Frühbeck was principal conductor of the Bilbao Symphony Orchestra from 1958 to 1962. During this time, the orchestra's manager persuaded Frühbeck to use a name that would more clearly indicate his Spanish identity." ;
+        mtp:hasPurpose       meetup:61107b4e88f0a978fadac6ee783cb7fc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rafael_Frühbeck_de_Burgos> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1239399/9/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was known as well for his recording of the complete works of Manuel de Falla and a series of complete zarzuela recordings. Frühbeck orchestrated a suite from Isaac Albéniz's Suite española and conducted the New Philharmonia Orchestra in a commercial recording of this arrangement." ;
+        mtp:hasPurpose       meetup:8a8a24cdf3eb21a594fe58d3e75da9e1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rafael_Frühbeck_de_Burgos> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:8a8a24cdf3eb21a594fe58d3e75da9e1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Recording works of Manuel de Falla" ;
+        mtp:hasEvidencePurposeSecond  "Conducting the New Philharmonia Orchestra" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Rafael_Frühbeck_de_Burgos>
+        rdf:type  core:Person .
+
+meetup:61107b4e88f0a978fadac6ee783cb7fc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Frühbeck as a conductor" ;
+        mtp:hasEvidencePurposeSecond  "Identity change" ;
+        mtp:hasSourcePurpose          "LLM" .

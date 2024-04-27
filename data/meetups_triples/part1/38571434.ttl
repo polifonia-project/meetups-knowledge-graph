@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:176a4d9857cf51bc89f8f34f0eb16cfe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96337235" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02800472" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:10b9edf8879729c3b8e7c4bb87f2aafc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jean_Holden> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jean Holden" .
+
+<http://w3id.org/polifonia/pilot/meetups/38571434/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jean Holden (born February 2, 1940 in Masonville, Arkansas) is an American contemporary jazz singer and vocal coach, who has been called Toledo's First Lady of Song." ;
+        mtp:hasParticipant   meetup:10b9edf8879729c3b8e7c4bb87f2aafc ;
+        mtp:hasPurpose       meetup:176a4d9857cf51bc89f8f34f0eb16cfe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jean_Holden> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jean_Holden>
+        rdf:type  core:Person .

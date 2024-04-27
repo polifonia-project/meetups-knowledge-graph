@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Steve_Allen>
+        rdf:type  core:Person .
+
+meetup:6e97fb08e21fa1e0b2ddfdef072f8a01
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Allen> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "0.7277934407811294" ;
+        mtp:hasTextEvidence     "Allen" .
+
+meetup:59d8097a40d09260b981548eb314a2a8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael Joseph \"Mike\" Allen" .
+
+<http://w3id.org/polifonia/pilot/meetups/3097848/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Joseph \"Mike\" Allen (born October 9, 1970), professionally known as DJ Maj, is a Christian music DJ and rapper, contributing to gospel music albums released by tobyMac, GRITS, Ill Harmonics, Carman, dc Talk, and the Newsboys." ;
+        mtp:hasParticipant   meetup:59d8097a40d09260b981548eb314a2a8 , meetup:6e97fb08e21fa1e0b2ddfdef072f8a01 , meetup:771c0594eb4f7fdff55fe75471b6c5d4 ;
+        mtp:hasPurpose       meetup:74f2c9703529db0835ea4f108938ff07 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Maj> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/DJ_Maj>
+        rdf:type  core:Person .
+
+meetup:74f2c9703529db0835ea4f108938ff07
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9201445" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.056034762" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:771c0594eb4f7fdff55fe75471b6c5d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DJ_Maj> ;
+        mtp:hasOffset           "76" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "DJ Maj" .

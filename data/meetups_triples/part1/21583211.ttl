@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/21583211/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Norman Rogers (born August 25, 1966), known professionally as Terminator X, is an American DJ best known for his work with hip hop group Public Enemy, which he left in 1998." ;
+        mtp:hasParticipant   meetup:61164138441ffe368687a26d546cd52b ;
+        mtp:hasPurpose       meetup:318db1508840528c6d765cf35c6c4281 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Terminator_X> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Robert_Dugger>
+        rdf:type  core:Person .
+
+meetup:baec9b0f3619dea247fa36f1fee838e2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Dugger> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "0.9999927849912008" ;
+        mtp:hasTextEvidence     "Dugger" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:61164138441ffe368687a26d546cd52b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Terminator_X> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Terminator X" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Terminator_X>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/21583211/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In November 2018, Terminator X married Robin Dugger in Dayton, Ohio." ;
+        mtp:hasParticipant   meetup:2baa2a57d8bccf75db45d6b5beac9d24 , meetup:baec9b0f3619dea247fa36f1fee838e2 ;
+        mtp:hasPurpose       meetup:8ce2674874b0fdb18c1e3ace0af8e03c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Terminator_X> ;
+        mtp:hasType          "HM" .
+
+meetup:318db1508840528c6d765cf35c6c4281
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99888676" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000938762" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2baa2a57d8bccf75db45d6b5beac9d24
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Terminator_X> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.9999999705713384" ;
+        mtp:hasTextEvidence     "Terminator X" .
+
+meetup:8ce2674874b0fdb18c1e3ace0af8e03c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Relating to someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "An unexpected event or occurrence" ;
+        mtp:hasSourcePurpose          "LLM" .

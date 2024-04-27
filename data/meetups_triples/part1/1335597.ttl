@@ -1,0 +1,96 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Geff_Harrison>
+        rdf:type  core:Person .
+
+meetup:7e43f3250ff6354a4fd313b5c90913f4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Geff_Harrison> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Geff Harrison" .
+
+meetup:fcbbaaa832a9c43a33d3ba00a423161e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tony_Sheridan> ;
+        mtp:hasOffset           "99" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tony Sheridan" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Tony_Sheridan>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1335597/39/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Geff Harrison – Tony Sheridan – this Sheridan version runs 6 min." ;
+        mtp:hasParticipant   meetup:0d2cc71891b3dfe8ca6fe831bc709d42 , meetup:7e43f3250ff6354a4fd313b5c90913f4 ;
+        mtp:hasPurpose       meetup:a337442310c6aa07bdc3b4938e15e69e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Sheridan> ;
+        mtp:hasType          "HM" .
+
+meetup:89636997e0fa786699d4654080fe998d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Sheridan and Crawley performed onstage in Hamburg" ;
+        mtp:hasEvidencePurposeSecond  "Fate led to the formation of 'The Jets'" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0d2cc71891b3dfe8ca6fe831bc709d42
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tony_Sheridan> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tony Sheridan" .
+
+<http://w3id.org/polifonia/pilot/meetups/1335597/2/15>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sheridan and others (including Colin \"Melander\" Crawley) joined an ad hoc group promptly dubbed \"The Jets\" and were put on the ship headed for Hamburg. As fate would have it, legal woes (i.e. lack of proper papers) caused \"The Jets\" to not last long, but Sheridan (and now-friend Crawley) were soon back onstage in Hamburg." ;
+        mtp:hasPurpose       meetup:89636997e0fa786699d4654080fe998d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Sheridan> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1335597/39/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "24 sec." ;
+        mtp:hasParticipant   meetup:fcbbaaa832a9c43a33d3ba00a423161e ;
+        mtp:hasPurpose       meetup:5c04ad9dbabda618efbcf74262ffb8cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Sheridan> ;
+        mtp:hasType          "HT" .
+
+meetup:5c04ad9dbabda618efbcf74262ffb8cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.45436174" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21577293" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a337442310c6aa07bdc3b4938e15e69e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.942593" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.031437837" ;
+        mtp:hasSourcePurpose          "ML" .

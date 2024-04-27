@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Morten_Wedendahl>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/22617705/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Morten Wedendahl (born 29 January 1961 in Virum) is a Danish composer." ;
+        mtp:hasParticipant   meetup:981a860fbfca6453497f34a15c6d3733 ;
+        mtp:hasPurpose       meetup:9c5c0aa985e39473c07b8b3e59a21cad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Morten_Wedendahl> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:981a860fbfca6453497f34a15c6d3733
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Morten_Wedendahl> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999996658195576" ;
+        mtp:hasTextEvidence     "Morten Wedendahl" .
+
+meetup:9c5c0aa985e39473c07b8b3e59a21cad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998863" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001123919" ;
+        mtp:hasSourcePurpose          "ML" .

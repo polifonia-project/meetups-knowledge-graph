@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Santo_Pecora>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/17040453/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Santo Pecora (born Santo Joseph Pecoraro, March 21, 1902 – May 29, 1984) was an American jazz trombonist known for his longtime association with the New Orleans jazz scene." ;
+        mtp:hasParticipant   meetup:819b69368162eafd21d7591ae00cb93d ;
+        mtp:hasPurpose       meetup:93868691cb16e5952b7170883d696ef5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Santo_Pecora> ;
+        mtp:hasType          "HT" .
+
+meetup:93868691cb16e5952b7170883d696ef5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Santo Pecora was a jazz trombonist" ;
+        mtp:hasEvidencePurposeSecond  "He had a longtime association with the New Orleans jazz scene" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:819b69368162eafd21d7591ae00cb93d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Santo_Pecora> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Santo Pecora" .

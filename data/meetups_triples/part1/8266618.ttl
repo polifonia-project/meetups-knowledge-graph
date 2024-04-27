@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:82b15cbeef5a532d81d8e24be769c6a5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9948344" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0030362995" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Austin_Roberts_(singer)>
+        rdf:type  core:Person .
+
+meetup:d75bd614b77ec481aba5ba82b4c0ead6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in the music industry" ;
+        mtp:hasEvidencePurposeSecond  "Relocation and personal relationships" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8e4e9feba403141ca91ed55cdc0c4238
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Hendry Blair" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/8266618/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In early 1969, as the New York recording scene slowed dramatically, Cymbal and his writing/producing partner George Tobin moved their base to California. Initially, Austin Roberts, who was a singer as well as a writer, stayed in New York, but soon after they had settled into the West Coast, he joined them in Los Angeles." ;
+        mtp:hasParticipant   meetup:b76071fc4410c11c0dabe7fe2961b980 ;
+        mtp:hasPurpose       meetup:d75bd614b77ec481aba5ba82b4c0ead6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Cymbal> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/8266618/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johnny Cymbal (born John Hendry Blair; February 3, 1945 – March 16, 1993) was a Scottish-born American songwriter, singer and record producer who had numerous hit records, including his signature song, \"Mr. Bass Man\"." ;
+        mtp:hasParticipant   meetup:8e4e9feba403141ca91ed55cdc0c4238 , meetup:3122ec17fd42400e11d6574ef53e547c ;
+        mtp:hasPurpose       meetup:82b15cbeef5a532d81d8e24be769c6a5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Cymbal> ;
+        mtp:hasType          "HM" .
+
+meetup:3122ec17fd42400e11d6574ef53e547c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Cymbal> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johnny Cymbal" .
+
+<http://dbpedia.org/resource/Johnny_Cymbal>
+        rdf:type  core:Person .
+
+meetup:b76071fc4410c11c0dabe7fe2961b980
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Austin_Roberts_(singer)> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "0.6306590176424993" ;
+        mtp:hasTextEvidence     "Austin Roberts" .

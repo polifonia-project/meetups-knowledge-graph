@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Rick_Trevino>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2408b9ae1bd5682156a387e9ac6e53c9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99782664" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0020918974" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9257c62b2650e3db1f55aae8374c52e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9915092" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0066127055" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:709d8410eaed29f43ecc4c47f459a5a5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rick_Trevino> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rick Trevino" .
+
+<http://w3id.org/polifonia/pilot/meetups/5971507/8/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The album's third single, \"She Can't Say I Didn't Cry\", became Trevino's first chart-topper, spending one week at the top of the Gavin Report country singles charts." ;
+        mtp:hasParticipant   meetup:709d8410eaed29f43ecc4c47f459a5a5 ;
+        mtp:hasPurpose       meetup:2408b9ae1bd5682156a387e9ac6e53c9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rick_Trevino> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/5971507/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Seven months later, in 1994, Sony released his first English album, Rick Trevino." ;
+        mtp:hasParticipant   meetup:5e1cbfdc937a3e7371ae4dcd6541b2ac ;
+        mtp:hasPurpose       meetup:9257c62b2650e3db1f55aae8374c52e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rick_Trevino> ;
+        mtp:hasType          "HT" .
+
+meetup:5e1cbfdc937a3e7371ae4dcd6541b2ac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rick_Trevino> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rick Trevino" .

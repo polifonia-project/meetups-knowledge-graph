@@ -1,0 +1,77 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/3210868/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sir Simon Russell Beale,  (born 12 January 1961) is an English actor known for his appearances in film, television and theatre, and work on radio, on audiobooks and as a narrator." ;
+        mtp:hasParticipant   meetup:c06472f6a59eb7de7fc1f9f568e63d43 ;
+        mtp:hasPurpose       meetup:92556f7a783b2b5a87eb4954fc59084c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_Russell_Beale> ;
+        mtp:hasType          "HT" .
+
+meetup:acfe49fbbe9d58da97784cbd40dc3433
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_Russell_Beale> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Simon Russell Beale" .
+
+meetup:29a6deacc17895b4520d8c86f97f0c49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elizabeth_II> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "0.9999917952782276" ;
+        mtp:hasTextEvidence     "Queen Elizabeth II" .
+
+meetup:92556f7a783b2b5a87eb4954fc59084c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.68961537" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.30601016" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/3210868/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "For his services to drama, he was knighted by Queen Elizabeth II at Buckingham Palace in 2019." ;
+        mtp:hasParticipant   meetup:29a6deacc17895b4520d8c86f97f0c49 , meetup:acfe49fbbe9d58da97784cbd40dc3433 ;
+        mtp:hasPurpose       meetup:b936eb0fdc79c89da2a828f2533fd298 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_Russell_Beale> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Simon_Russell_Beale>
+        rdf:type  core:Person .
+
+meetup:c06472f6a59eb7de7fc1f9f568e63d43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_Russell_Beale> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Simon Russell Beale" .
+
+<http://dbpedia.org/resource/Elizabeth_II>
+        rdf:type  core:Person .
+
+meetup:b936eb0fdc79c89da2a828f2533fd298
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99158734" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.006482462" ;
+        mtp:hasSourcePurpose          "ML" .

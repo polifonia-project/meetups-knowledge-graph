@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/61328464/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Zosha Di Castri (born 1985) is a Canadian composer and pianist living and working in New York." ;
+        mtp:hasParticipant   meetup:80bb33f1dc77c591598247859760bb76 ;
+        mtp:hasPurpose       meetup:d098eeb97c1b5bfb0f21530540d1d324 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zosha_Di_Castri> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:80bb33f1dc77c591598247859760bb76
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Zosha_Di_Castri> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Zosha Di Castri" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/61328464/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her work came to international attention when a specially commissioned piece about the lunar landings opened the BBC Proms 2019." ;
+        mtp:hasParticipant   meetup:929e0e9f081f2d8ecba6b0889f8c59dc ;
+        mtp:hasPurpose       meetup:22984df4890a803c70648d78f82ec38c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zosha_Di_Castri> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:929e0e9f081f2d8ecba6b0889f8c59dc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Zosha_Di_Castri> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Zosha Di Castri" .
+
+meetup:d098eeb97c1b5bfb0f21530540d1d324
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7531528" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24037963" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Zosha_Di_Castri>
+        rdf:type  core:Person .
+
+meetup:22984df4890a803c70648d78f82ec38c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99553347" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0037138953" ;
+        mtp:hasSourcePurpose          "ML" .

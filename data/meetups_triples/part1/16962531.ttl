@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:55c8391a87507e70ded2d8dbda0d6a80
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Takayuki Haga" .
+
+<http://w3id.org/polifonia/pilot/meetups/16962531/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Takayuki Haga (芳賀 隆之, Haga Takayuki, born January 26, 1955), better known by the stage name George Tokoro (所ジョージ, Tokoro Jōji), is a Japanese comedian, TV personality, singer-songwriter, and essayist." ;
+        mtp:hasParticipant   meetup:91b42978c3f55d4294ccc6c2e7f1c192 , meetup:55c8391a87507e70ded2d8dbda0d6a80 ;
+        mtp:hasPurpose       meetup:979fcfbe6c365dfa7edab44e48621e3b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Tokoro> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/George_Tokoro>
+        rdf:type  core:Person .
+
+meetup:91b42978c3f55d4294ccc6c2e7f1c192
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Tokoro> ;
+        mtp:hasOffset           "100" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "George Tokoro" .
+
+meetup:979fcfbe6c365dfa7edab44e48621e3b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999994" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.442441e-07" ;
+        mtp:hasSourcePurpose          "ML" .

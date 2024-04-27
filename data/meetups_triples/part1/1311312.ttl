@@ -1,0 +1,98 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:8b23d842261b34e0da315800992b7814
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.89134187" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10827191" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fa934b7b6cf992aa8950ab74f5efc5f5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5842978" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2978875" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1311312/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Kottak (born December 26, 1962 in Louisville, Kentucky) is an American drummer." ;
+        mtp:hasParticipant   meetup:54b54e71e7bca7f6d2cc287bc6ae4dd3 ;
+        mtp:hasPurpose       meetup:8b23d842261b34e0da315800992b7814 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Kottak> ;
+        mtp:hasType          "HT" .
+
+meetup:54b54e71e7bca7f6d2cc287bc6ae4dd3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Kottak> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "James Kottak" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Herman_Rarebell>
+        rdf:type  core:Person .
+
+meetup:4030054235049b92b7d1d42e25762708
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Kottak> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James Kottak" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/1311312/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kottak is best known for his work with the German hard rock band Scorpions, which he joined in 1996." ;
+        mtp:hasParticipant   meetup:4ddbd134b920edfe24934db1f72cc4ac ;
+        mtp:hasPurpose       meetup:fa934b7b6cf992aa8950ab74f5efc5f5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Kottak> ;
+        mtp:hasType          "HT" .
+
+meetup:4ddbd134b920edfe24934db1f72cc4ac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Kottak> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James Kottak" .
+
+meetup:c99a079edbe7a9f03f5abab7a212373f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to the band's drummer" ;
+        mtp:hasEvidencePurposeSecond  "Relates to the individual's career" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b2f2d286fc92ab546da341ce001382d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Herman_Rarebell> ;
+        mtp:hasOffset           "107" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Herman Rarebell" .
+
+<http://dbpedia.org/resource/James_Kottak>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1311312/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At the time of his firing from the band in 2016, he was their all-time longest-serving drummer, surpassing Herman Rarebell, who spent 18 years in the band." ;
+        mtp:hasParticipant   meetup:4030054235049b92b7d1d42e25762708 , meetup:b2f2d286fc92ab546da341ce001382d2 ;
+        mtp:hasPurpose       meetup:c99a079edbe7a9f03f5abab7a212373f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Kottak> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/54410737/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wolfgang Reisinger (16 July 1955 in Vienna) is an Austrian jazz percussion player." ;
+        mtp:hasParticipant   meetup:f27e83132af69c0fbb361a0b6c66b4c9 ;
+        mtp:hasPurpose       meetup:97308e74f7ebdd3aa2ff69c6c58a0db9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wolfgang_Reisinger> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:97308e74f7ebdd3aa2ff69c6c58a0db9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6135232" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3864663" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f27e83132af69c0fbb361a0b6c66b4c9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wolfgang_Reisinger> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wolfgang Reisinger" .
+
+<http://dbpedia.org/resource/Wolfgang_Reisinger>
+        rdf:type  core:Person .

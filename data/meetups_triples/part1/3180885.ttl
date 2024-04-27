@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:e141dfabc7af132d1899411fcda5a2c8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Bob Franke, who is a folk singer-songwriter." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions Bob Franke's birthdate and birthplace, which are personal details." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:8bc2e2f8f52581e84c9964ca5e7e2ac3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Franke> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Franke" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/3180885/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Franke (born July 25, 1947, in Hamtramck, Michigan) is an American folk singer-songwriter." ;
+        mtp:hasParticipant   meetup:8bc2e2f8f52581e84c9964ca5e7e2ac3 ;
+        mtp:hasPurpose       meetup:e141dfabc7af132d1899411fcda5a2c8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Franke> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bob_Franke>
+        rdf:type  core:Person .

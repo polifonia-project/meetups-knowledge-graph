@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:8e209858927701c6f83ce7639627f7ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.49307662" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.38268137" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/64386767/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Riko Kohara (小原 莉子, Kohara Riko, born February 3, 1990) is a Japanese voice actress and singer from Gifu Prefecture." ;
+        mtp:hasParticipant   meetup:fcd29d8bedab7da6e423888a203d47e6 , meetup:b7639c59e7acad9c4f2f880d37b90020 ;
+        mtp:hasPurpose       meetup:763c011e2a0b7ac5083e206495a46ad0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Riko_Kohara> ;
+        mtp:hasType          "HM" .
+
+meetup:763c011e2a0b7ac5083e206495a46ad0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Riko Kohara is a voice actress and singer" ;
+        mtp:hasEvidencePurposeSecond  "She was born in Gifu Prefecture" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:705e426054a784a5fb4f2ca0c73baeb2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Riko_Kohara> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Riko Kohara" .
+
+<http://w3id.org/polifonia/pilot/meetups/64386767/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is currently affiliated with Object." ;
+        mtp:hasParticipant   meetup:705e426054a784a5fb4f2ca0c73baeb2 ;
+        mtp:hasPurpose       meetup:8e209858927701c6f83ce7639627f7ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Riko_Kohara> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:fcd29d8bedab7da6e423888a203d47e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kohara Riko" .
+
+<http://dbpedia.org/resource/Riko_Kohara>
+        rdf:type  core:Person .
+
+meetup:b7639c59e7acad9c4f2f880d37b90020
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Riko_Kohara> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Riko Kohara" .

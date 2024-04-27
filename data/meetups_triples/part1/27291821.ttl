@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:05c20cf70c39c27ee9d338feafebb3ea
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9817547" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018146925" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/27291821/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kanae Ito (伊藤 かな恵, Itō Kanae, born November 26, 1986) is a Japanese voice actress and singer from Nagano Prefecture." ;
+        mtp:hasParticipant   meetup:f51638596a136be5933fa24ac910606e ;
+        mtp:hasPurpose       meetup:05c20cf70c39c27ee9d338feafebb3ea ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kanae_Itō> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f51638596a136be5933fa24ac910606e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kanae_Itō> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999368242832" ;
+        mtp:hasTextEvidence     "Kanae Ito" .
+
+<http://dbpedia.org/resource/Kanae_Itō>
+        rdf:type  core:Person .

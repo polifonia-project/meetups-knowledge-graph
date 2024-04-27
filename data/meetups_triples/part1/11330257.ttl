@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a81458b51b593af86398f5ba8227a5af
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9567379" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03979411" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/11330257/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "With the Dwarves, he has written and produced nearly a dozen studio records over a span of over 30 years. He has produced albums by Mondo Generator, Dwarves, F.Y.P, Jon Cougar Concentration Camp, Swingin' Utters, and The God Awfuls." ;
+        mtp:hasPurpose       meetup:504f23d32a4572501aa20541f671532c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blag_Dahlia> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:504f23d32a4572501aa20541f671532c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creating and producing music" ;
+        mtp:hasEvidencePurposeSecond  "Collaborating with different artists" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Blag_Dahlia>
+        rdf:type  core:Person .
+
+meetup:3f53d46f533a258c981dbce352cb872b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blag_Dahlia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Paul Cafaro" .
+
+<http://w3id.org/polifonia/pilot/meetups/11330257/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paul Cafaro (born May 8, 1966), known professionally as Blag Dahlia, is an American singer and record producer, best known as the vocalist for punk band Dwarves." ;
+        mtp:hasParticipant   meetup:3f53d46f533a258c981dbce352cb872b ;
+        mtp:hasPurpose       meetup:a81458b51b593af86398f5ba8227a5af ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blag_Dahlia> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/9510442/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A son, Hans Jean Jules Maximilian Navarre Benvenuto Bernard van Dieren (1910–74), was born the same year. In the same year, he took British nationality." ;
+        mtp:hasPurpose       meetup:a1f437e73a89d26690c79a210f54cfc4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bernard_van_Dieren> ;
+        mtp:hasType          "HT" .
+
+meetup:a758f5ca652001ea5b26fcee497a12e4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bernard_van_Dieren> ;
+        mtp:hasOffset           "52" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bernard van Dieren" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Bernard_van_Dieren>
+        rdf:type  core:Person .
+
+meetup:fdd7818fa840626e5d5d1e200e303bd5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Relating to someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "An occurrence of two events happening at the same time" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/9510442/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A son, Hans Jean Jules Maximilian Navarre Benvenuto Bernard van Dieren (1910–74), was born the same year." ;
+        mtp:hasParticipant   meetup:a758f5ca652001ea5b26fcee497a12e4 ;
+        mtp:hasPurpose       meetup:fdd7818fa840626e5d5d1e200e303bd5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bernard_van_Dieren> ;
+        mtp:hasType          "HT" .
+
+meetup:a1f437e73a89d26690c79a210f54cfc4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Relating to someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "An occurrence of two events happening at the same time" ;
+        mtp:hasSourcePurpose          "LLM" .

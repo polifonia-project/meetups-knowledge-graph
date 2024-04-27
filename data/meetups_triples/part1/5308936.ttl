@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/5308936/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2017, he completed a PhD doctorate in Music Production at Leeds Beckett University." ;
+        mtp:hasParticipant   meetup:500b9cd32b884e6c59a72df61285c4cb ;
+        mtp:hasPurpose       meetup:8679cd53fc66f4cf68fa8d90afdbe919 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Harding_(producer)> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/5308936/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Phil Harding (born 1957) is an English music producer, audio engineer, remixer, academic and author." ;
+        mtp:hasParticipant   meetup:775c9f6fa7a1c3b6c15158cccdabc69a ;
+        mtp:hasPurpose       meetup:0194b663be42a117564587b11ba495ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Harding_(producer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Phil_Harding_(producer)>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:500b9cd32b884e6c59a72df61285c4cb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Harding_(producer)> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Phil Harding" .
+
+meetup:0194b663be42a117564587b11ba495ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99909306" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00086333026" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8679cd53fc66f4cf68fa8d90afdbe919
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97074306" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02694383" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:775c9f6fa7a1c3b6c15158cccdabc69a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Harding_(producer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.913151939891228" ;
+        mtp:hasTextEvidence     "Phil Harding" .

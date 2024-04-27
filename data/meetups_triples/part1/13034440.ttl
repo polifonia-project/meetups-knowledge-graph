@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Mike_Flicker>
+        rdf:type  core:Person .
+
+meetup:c1b4c6b6cbfaa9900566a8d2a98f9e72
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99993336" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.486984e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4fd0f83202e8f8c4c44f5c99834d9ee7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Flicker> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Mike Flicker" .
+
+meetup:616f87c1c53e10e9432af145a50ea1aa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "About someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "A chance occurrence" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/13034440/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mike Flicker (born 1950) is an American music producer in Los Angeles who has numerous credits on music and film projects." ;
+        mtp:hasParticipant   meetup:4fd0f83202e8f8c4c44f5c99834d9ee7 ;
+        mtp:hasPurpose       meetup:c1b4c6b6cbfaa9900566a8d2a98f9e72 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Flicker> ;
+        mtp:hasType          "HT" .
+
+meetup:8c07b925d5ee4c0e51c19ae0aa5a3eac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Luda_(singer)> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.9382294392441471" ;
+        mtp:hasTextEvidence     "Luda" .
+
+<http://w3id.org/polifonia/pilot/meetups/13034440/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On June 18, 2006, Flicker was married to Lyudmila Bateryakova, who was born in Penza, Russia. She is called Luda, the Russian diminutive of Lyudmila, by her family and friends." ;
+        mtp:hasParticipant   meetup:8c07b925d5ee4c0e51c19ae0aa5a3eac ;
+        mtp:hasPurpose       meetup:616f87c1c53e10e9432af145a50ea1aa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Flicker> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Luda_(singer)>
+        rdf:type  core:Person .

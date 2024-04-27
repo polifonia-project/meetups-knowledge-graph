@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:cdc588cb40375117e61e85c0a49cf55e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.886072" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.057188336" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/1861335/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kevin McMahon (born September 21, 1953) is a musician, singer, and songwriter for the long-standing bands Lucky Pierre and Prick." ;
+        mtp:hasParticipant   meetup:e0321b8e0bab18e3531b6a89c5148f4e ;
+        mtp:hasPurpose       meetup:cdc588cb40375117e61e85c0a49cf55e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_McMahon_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:e0321b8e0bab18e3531b6a89c5148f4e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_McMahon_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9441208907293346" ;
+        mtp:hasTextEvidence     "Kevin McMahon" .
+
+<http://dbpedia.org/resource/Kevin_McMahon_(musician)>
+        rdf:type  core:Person .

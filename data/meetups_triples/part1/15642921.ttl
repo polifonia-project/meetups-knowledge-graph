@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1696fbc0e997491a3585913876733203
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Justin_McElroy> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "0.4848944596337087" ;
+        mtp:hasTextEvidence     "Justin" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/15642921/1/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1990, Kisor won the Thelonious Monk Institute's trumpet contest at the age of 17; Nicholas Payton and Marcus Printup were among the other contestants that year. HIs younger brother Justin Kisor is also an accomplished jazz artist (trumpet) who he has performed numerous concerts and had record releases with Kisor." ;
+        mtp:hasParticipant   meetup:1696fbc0e997491a3585913876733203 ;
+        mtp:hasPurpose       meetup:e88e27fc19c740832edd2db1d8a0b07e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ryan_Kisor> ;
+        mtp:hasType          "HT" .
+
+meetup:e88e27fc19c740832edd2db1d8a0b07e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions winning a trumpet contest and performing concerts." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the relationship between the two brothers." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/15642921/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ryan Kisor (born April 12, 1973) is an American jazz trumpeter." ;
+        mtp:hasParticipant   meetup:9b809f3932a9b91fda4158c87122ed33 ;
+        mtp:hasPurpose       meetup:19e02257d19c06353133364f656b3ba3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ryan_Kisor> ;
+        mtp:hasType          "HT" .
+
+meetup:9b809f3932a9b91fda4158c87122ed33
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ryan_Kisor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ryan Kisor" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Justin_McElroy>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ryan_Kisor>
+        rdf:type  core:Person .
+
+meetup:19e02257d19c06353133364f656b3ba3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999945" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.2147835e-06" ;
+        mtp:hasSourcePurpose          "ML" .

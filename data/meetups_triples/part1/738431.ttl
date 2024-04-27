@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Matt_Cameron>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6b524a3b751027ae2a9f7ba79b2d52ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Stanley> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.999999400088664" ;
+        mtp:hasTextEvidence     "Paul Stanley" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:dacc86996231788ba79692fd3dd1ed5e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Cameron> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999748108482" ;
+        mtp:hasTextEvidence     "Matt Cameron" .
+
+<http://w3id.org/polifonia/pilot/meetups/738431/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Matt Cameron was born and raised in San Diego, California." ;
+        mtp:hasParticipant   meetup:dacc86996231788ba79692fd3dd1ed5e ;
+        mtp:hasPurpose       meetup:1e6a59be2e4ae7e82198b84781170101 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_Cameron> ;
+        mtp:hasType          "HT" .
+
+meetup:e92284ba872c7c218379b44c3a8b8a1b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Cameron> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Matt Cameron" .
+
+<http://dbpedia.org/resource/Paul_Stanley>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/738431/5/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During this stint, he met Paul Stanley." ;
+        mtp:hasParticipant   meetup:6b524a3b751027ae2a9f7ba79b2d52ff , meetup:e92284ba872c7c218379b44c3a8b8a1b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_Cameron> ;
+        mtp:hasType          "HM" .
+
+meetup:1e6a59be2e4ae7e82198b84781170101
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9993228" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00030331552" ;
+        mtp:hasSourcePurpose          "ML" .

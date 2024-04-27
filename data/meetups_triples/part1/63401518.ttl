@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/63401518/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Maija Sofia Makela is an Irish folk singer-songwriter from County Galway." ;
+        mtp:hasParticipant   meetup:e6f8717ed93f7c93a233db6c28cf505a ;
+        mtp:hasPurpose       meetup:20c0cedee8e64100d9a9a8c2da805cc6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maija_Sofia> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/63401518/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She lived in London for two years before returning to Dublin to study English Literature in Trinity College Dublin." ;
+        mtp:hasParticipant   meetup:cea1932d8ed43aa50bb97b7236dc1547 ;
+        mtp:hasPurpose       meetup:9395d07d5a8f4e9428822d7ad218dcc5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maija_Sofia> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Maija_Sofia>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2fe3afcbd28ce34b223b1e2fc2a06d69
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maija_Sofia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Maija Sofia" .
+
+meetup:e6f8717ed93f7c93a233db6c28cf505a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maija_Sofia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Maija Sofia" .
+
+<http://w3id.org/polifonia/pilot/meetups/63401518/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Maija Sofia Makela was born in County Galway and went to school in Headford." ;
+        mtp:hasParticipant   meetup:2fe3afcbd28ce34b223b1e2fc2a06d69 ;
+        mtp:hasPurpose       meetup:02a321d00b6a16e5b03b51f4f42052e9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maija_Sofia> ;
+        mtp:hasType          "HT" .
+
+meetup:cea1932d8ed43aa50bb97b7236dc1547
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maija_Sofia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Maija Sofia" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:20c0cedee8e64100d9a9a8c2da805cc6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98482656" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009430552" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:02a321d00b6a16e5b03b51f4f42052e9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9983113" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001655757" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9395d07d5a8f4e9428822d7ad218dcc5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99912137" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0008752216" ;
+        mtp:hasSourcePurpose          "ML" .

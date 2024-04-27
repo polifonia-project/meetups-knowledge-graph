@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5d576b41c4047cad77d446cc0bd94d87
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "11 July 1966" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1966-07-11"^^xsd:date ;
+        time:hasEnd          "1966-07-11"^^xsd:date .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:bf984529c8d5435823c96bca592fda04
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "late February and March 2016" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "2016-02-20"^^xsd:date ;
+        time:hasEnd          "2016-03-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/4098219/9/4>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:bf984529c8d5435823c96bca592fda04 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ricky_Warwick> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4098219/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:5d576b41c4047cad77d446cc0bd94d87 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ricky_Warwick> ;
+        mtp:hasType     "HT" .
+
+meetup:1cd7e5a627891d41b62b50ab61fa68b5
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1990s" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1990-01-01"^^xsd:date ;
+        time:hasEnd          "1999-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://dbpedia.org/resource/Ricky_Warwick>
+        rdf:type  core:Person .
+
+meetup:0752111f33959d9d4500163a5e42b2f0
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "currently" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4098219/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:1cd7e5a627891d41b62b50ab61fa68b5 , meetup:0752111f33959d9d4500163a5e42b2f0 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ricky_Warwick> ;
+        mtp:hasType     "HT" .

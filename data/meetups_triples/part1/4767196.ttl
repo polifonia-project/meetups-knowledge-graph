@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/4767196/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her best-known original work is The Garden of Earthly Delights (1984), an exploration in theatre, dance, music and flying of the famous painting of the same name by Hieronymus Bosch." ;
+        mtp:hasParticipant   meetup:8f521b24a959e5ffedddcdf03fbcdb69 ;
+        mtp:hasPurpose       meetup:04e69955b9e12007cdce46a34d39ed9b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martha_Clarke> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:764ffc456d15efeec1c6b43cc0e54c8f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99944454" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00047044325" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cdf98eba792de810076d2e99138922c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.825827" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11417547" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/4767196/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1990, Clarke received a MacArthur Award, better known as the Genius Grant." ;
+        mtp:hasParticipant   meetup:7297ad326a7d2fe0bed896cd21fbadf5 ;
+        mtp:hasPurpose       meetup:764ffc456d15efeec1c6b43cc0e54c8f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martha_Clarke> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Martha_Clarke>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4767196/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Martha Clarke (born June 3, 1944) is an American theater director and choreographer noted for her multidisciplinary approach to theatre, dance, and opera productions." ;
+        mtp:hasParticipant   meetup:1ef71858bb2edc55597cb99d1b05cd39 ;
+        mtp:hasPurpose       meetup:cdf98eba792de810076d2e99138922c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martha_Clarke> ;
+        mtp:hasType          "HT" .
+
+meetup:8f521b24a959e5ffedddcdf03fbcdb69
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martha_Clarke> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Martha Clarke" .
+
+meetup:1ef71858bb2edc55597cb99d1b05cd39
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martha_Clarke> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Martha Clarke" .
+
+meetup:7297ad326a7d2fe0bed896cd21fbadf5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martha_Clarke> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Martha Clarke" .
+
+meetup:04e69955b9e12007cdce46a34d39ed9b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6034121" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29083902" ;
+        mtp:hasSourcePurpose          "ML" .

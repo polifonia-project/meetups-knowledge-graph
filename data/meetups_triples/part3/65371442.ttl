@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ruth_Kemper>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/65371442/6/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:5e5c6fc409c2713d94096c49384bedad , meetup:e52feb3a66374ce80a89af09af2f621b ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ruth_Kemper> ;
+        mtp:hasType     "HT" .
+
+meetup:e52feb3a66374ce80a89af09af2f621b
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "83 years" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:5e5c6fc409c2713d94096c49384bedad
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1985" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1985-01-01"^^xsd:date ;
+        time:hasEnd          "1985-12-31"^^xsd:date .

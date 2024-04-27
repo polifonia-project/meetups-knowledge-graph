@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1354664/15/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2005, Fry embarked on an extensive UK tour with Tony Hadley, former lead singer of popular 1980s new wave band Spandau Ballet. Highlights of the tour were released on CD and DVD compilations, both titled Tony Hadley vs. Martin Fry." ;
+        mtp:hasParticipant   meetup:5d9af5fc3e71ce7a8d336eceb362c457 ;
+        mtp:hasPurpose       meetup:adb9eb8f3adf3b6f8dbbd06894ff6183 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martin_Fry> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5d9af5fc3e71ce7a8d336eceb362c457
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ray_Hadley> ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hadley" .
+
+<http://dbpedia.org/resource/Martin_Fry>
+        rdf:type  core:Person .
+
+meetup:adb9eb8f3adf3b6f8dbbd06894ff6183
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Collaborative music tour" ;
+        mtp:hasEvidencePurposeSecond  "Personal achievements and activities" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Ray_Hadley>
+        rdf:type  core:Person .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:3ee8d5bc53cf8e4559cc9c8fe68127ea
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "6 March 1969" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1969-03-06"^^xsd:date ;
+        time:hasEnd          "1969-03-06"^^xsd:date .
+
+<http://dbpedia.org/resource/Nikolaj_Koppel>
+        rdf:type  core:Person .
+
+meetup:d5168286bf8e6d50eea91b8fd47c50ba
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "presenter" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/41838874/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:d5168286bf8e6d50eea91b8fd47c50ba , meetup:3ee8d5bc53cf8e4559cc9c8fe68127ea ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Nikolaj_Koppel> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/41838874/2/2>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Nikolaj_Koppel> ;
+        mtp:hasType     "HT" .

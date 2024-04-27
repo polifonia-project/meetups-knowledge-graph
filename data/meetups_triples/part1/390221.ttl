@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/390221/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Desiree Rollocks (born 4 September 1970), better known by her stage name Daisy Dee, is a Dutch singer, actress, TV host, stylist, and television producer." ;
+        mtp:hasParticipant   meetup:cb000dc24e2f3570aa46e2cf5700835c , meetup:8785eafd1467b23a8877221d29bbda67 ;
+        mtp:hasPurpose       meetup:e6ec23f4441f85d191442a7195bb1547 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daisy_Dee> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cb000dc24e2f3570aa46e2cf5700835c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daisy_Dee> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Daisy Dee" .
+
+meetup:3cc217a1288a7d8262351699e09ddce8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daisy_Dee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Daisy Dee" .
+
+meetup:a9eaceb8c1fd4ce99d0e5f11078cc05c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7815253" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21440764" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Daisy_Dee>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/390221/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Daisy Dee hosted the German television show Clubrotation on Viva/MTV until 2003." ;
+        mtp:hasParticipant   meetup:3cc217a1288a7d8262351699e09ddce8 ;
+        mtp:hasPurpose       meetup:a9eaceb8c1fd4ce99d0e5f11078cc05c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daisy_Dee> ;
+        mtp:hasType          "HT" .
+
+meetup:8785eafd1467b23a8877221d29bbda67
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Desiree Rollocks" .
+
+meetup:e6ec23f4441f85d191442a7195bb1547
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92755663" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.042603247" ;
+        mtp:hasSourcePurpose          "ML" .

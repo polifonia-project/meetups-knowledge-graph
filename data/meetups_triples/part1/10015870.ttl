@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/10015870/10/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "by Noah Creshevsky, NewMusicBox November 1, 2004" ;
+        mtp:hasParticipant   meetup:f2cdbb7e833270c0028ef28d3f32a18a ;
+        mtp:hasPurpose       meetup:20bdac234d731a5ccc622aa0e8e6232b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Noah_Creshevsky> ;
+        mtp:hasType          "HT" .
+
+meetup:f2cdbb7e833270c0028ef28d3f32a18a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Noah_Creshevsky> ;
+        mtp:hasOffset           "3" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Noah Creshevsky" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:d1d83908f014573b092eae573d74310c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99530447" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0030415542" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/10015870/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Noah Creshevsky (January 31, 1945 – December 3, 2020) was a composer and electronic musician born in Rochester, New York." ;
+        mtp:hasParticipant   meetup:1a1aa934fea618553921ed986955594e ;
+        mtp:hasPurpose       meetup:d1d83908f014573b092eae573d74310c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Noah_Creshevsky> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:1a1aa934fea618553921ed986955594e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Noah_Creshevsky> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Noah Creshevsky" .
+
+<http://dbpedia.org/resource/Noah_Creshevsky>
+        rdf:type  core:Person .
+
+meetup:20bdac234d731a5ccc622aa0e8e6232b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98245484" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010708784" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/5793400/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born in Fürth, in southern Germany, but when he was four, his family moved to the city of Bamberg, today a UNESCO World Heritage Site because of its medieval cathedral and many other gems of art and architecture from the Middle Ages, Renaissance, and Baroque. It was there that he spent his childhood and youth, and the beauty of that city and its surrounding area, the region of Germany known as \"Franconian Switzerland,\" inspired him from his boyhood to the end of his life." ;
+        mtp:hasPurpose       meetup:1ff1896af8dd245818e224597d204ddb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alfred_Zwiebel> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:08c8447c3d90f4fcdcc7c72eac790bd4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alfred_Zwiebel> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alfred Zwiebel" .
+
+<http://w3id.org/polifonia/pilot/meetups/5793400/19/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "But he has achieved, as the paintings exhibited here prove, mastery in this style." ;
+        mtp:hasParticipant   meetup:91eb2f025c0add0e2c5393df8591ee0d , meetup:08c8447c3d90f4fcdcc7c72eac790bd4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alfred_Zwiebel> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:91eb2f025c0add0e2c5393df8591ee0d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "243" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "\"\"Zwiebel" .
+
+<http://dbpedia.org/resource/Alfred_Zwiebel>
+        rdf:type  core:Person .
+
+meetup:1ff1896af8dd245818e224597d204ddb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about the person's life and upbringing" ;
+        mtp:hasEvidencePurposeSecond  "Influence of the city and region on the person's inspiration" ;
+        mtp:hasSourcePurpose          "LLM" .

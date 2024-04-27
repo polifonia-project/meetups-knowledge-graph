@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:62ffdbe739652f12ff93d531a95d7b0f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blind_Leroy_Garnett> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Blind Leroy Garnett" .
+
+meetup:ae81d59d038f37f783f911297e52b477
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Leroy Roscoe Garnett" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Blind_Leroy_Garnett>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/52121572/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leroy Roscoe Garnett, known professionally as Blind Leroy Garnett (August 6, 1897 – January 3, 1933) was an American boogie-woogie and ragtime  pianist and songwriter." ;
+        mtp:hasParticipant   meetup:ae81d59d038f37f783f911297e52b477 , meetup:62ffdbe739652f12ff93d531a95d7b0f ;
+        mtp:hasPurpose       meetup:58e8741c7fa21fd152ba9a94441b1755 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blind_Leroy_Garnett> ;
+        mtp:hasType          "HM" .
+
+meetup:58e8741c7fa21fd152ba9a94441b1755
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8009938" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12247227" ;
+        mtp:hasSourcePurpose          "ML" .

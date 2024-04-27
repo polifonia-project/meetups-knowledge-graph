@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Alice_Svensson>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:b040cf6b23f74bb8afb740d5f3041799
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alice" .
+
+<http://w3id.org/polifonia/pilot/meetups/20391555/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She has participated in a number of talent shows like Super Troupers in 2004, talent show Joker 2006 where Svensson became first-runner up, in Talang show in 2007, and the TV4 children's show Lattjo lajban with live performance in all. She won the talent show Popkorn 2007." ;
+        mtp:hasParticipant   meetup:b040cf6b23f74bb8afb740d5f3041799 ;
+        mtp:hasPurpose       meetup:07dffddcef01e024d0cebbc7f54a9d2c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alice_Svensson> ;
+        mtp:hasType          "HT" .
+
+meetup:07dffddcef01e024d0cebbc7f54a9d2c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Participation in talent shows" ;
+        mtp:hasEvidencePurposeSecond  "Winning a talent show" ;
+        mtp:hasSourcePurpose          "LLM" .

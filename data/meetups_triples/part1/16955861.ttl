@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Angelo_Debarre>
+        rdf:type  core:Person .
+
+meetup:ee9f5f71a77d2d1f9d7866420c456c7e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Angelo_Debarre> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Angelo Debarre" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0c325f69fd48da8fbff0da1b50446d74
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Angelo_Debarre> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Angelo Debarre" .
+
+<http://w3id.org/polifonia/pilot/meetups/16955861/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1985, the group was hired by Serge Camps to play at his Parisian café, La Roue Fleurie, where Debarre was discovered by producer and guitarist Jon Larsen." ;
+        mtp:hasParticipant   meetup:0c325f69fd48da8fbff0da1b50446d74 , meetup:e6b488c9b33f3c6f90ee93da1434b520 , meetup:ec700c3b16fc76532e8714fe9fc30c1a ;
+        mtp:hasPurpose       meetup:0d0459f32f8eeed3679b115d18241a42 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Angelo_Debarre> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/16955861/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Angelo Debarre (French pronunciation: ​[ɑ̃ʒelo dəˈbaʁ] (born on August 19, 1962) is a French Romani gypsy jazz guitarist." ;
+        mtp:hasParticipant   meetup:ee9f5f71a77d2d1f9d7866420c456c7e ;
+        mtp:hasPurpose       meetup:89d34f22145ec16040b25b22cc36e6c7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Angelo_Debarre> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:89d34f22145ec16040b25b22cc36e6c7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9990645" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00041818377" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jon_Larsen>
+        rdf:type  core:Person .
+
+meetup:0d0459f32f8eeed3679b115d18241a42
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998018" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0001379983" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ec700c3b16fc76532e8714fe9fc30c1a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Serge Camps" .
+
+meetup:e6b488c9b33f3c6f90ee93da1434b520
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jon_Larsen> ;
+        mtp:hasOffset           "147" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jon Larsen" .

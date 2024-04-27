@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1ee0cf8cc81818873d3b559256bf1c4e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creation and recording of music" ;
+        mtp:hasEvidencePurposeSecond  "Individual's personal experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/6217879/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Last, a collection of early demos made in Muscle Shoals, the drum parts of some songs recorded in 1971 were played by Rickey Medlocke. That album also contains songs recorded in 1972 which feature Burns on drums, suggesting that Burns left the band in 1971 and had returned by 1972." ;
+        mtp:hasPurpose       meetup:1ee0cf8cc81818873d3b559256bf1c4e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Burns_(drummer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bob_Burns_(drummer)>
+        rdf:type  core:Person .

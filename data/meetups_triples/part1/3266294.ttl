@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/3266294/6/19>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Richard Dobson died in Diessenhofen, Switzerland, of a cancer disease on December 16, 2017, aged 75." ;
+        mtp:hasParticipant   meetup:60911d4e3609b46f72e8459f8784cdb1 ;
+        mtp:hasPurpose       meetup:19f52579376f58d218dff7bf6bf81c38 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Richard_Dobson> ;
+        mtp:hasType          "HT" .
+
+meetup:60911d4e3609b46f72e8459f8784cdb1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richard_Dobson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999998315444" ;
+        mtp:hasTextEvidence     "Richard Dobson" .
+
+<http://dbpedia.org/resource/Richard_Dobson>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:19f52579376f58d218dff7bf6bf81c38
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to the personal life of Richard Dobson, specifically his death." ;
+        mtp:hasEvidencePurposeSecond  "The mention of the location and cause of death may be considered a coincidence in the sentence." ;
+        mtp:hasSourcePurpose          "LLM" .

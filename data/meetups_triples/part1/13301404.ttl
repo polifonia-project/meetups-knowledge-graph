@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/June_Carter_Cash>
+        rdf:type  core:Person .
+
+meetup:909d5b709954269e3d4bd015b0e3ba17
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the process of making music and a producer discovering a song." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions a meeting between the producer and the artist." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d56f36617e99ea90905532acb45073e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/June_Carter_Cash> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "June" .
+
+<http://dbpedia.org/resource/June_(singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/13301404/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "This song reached Matsuo \"KC\" Kiyoshi, a well-known R&B producer, who then flew to Korea to meet June. June studied Japanese for a year to prepare, and then he made his major debut under Sony in November 2006 at the age of 19." ;
+        mtp:hasParticipant   meetup:d56f36617e99ea90905532acb45073e6 ;
+        mtp:hasPurpose       meetup:909d5b709954269e3d4bd015b0e3ba17 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/June_(singer)> ;
+        mtp:hasType          "HT" .

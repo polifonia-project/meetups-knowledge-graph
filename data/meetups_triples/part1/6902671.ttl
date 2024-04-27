@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Dick_Glasser>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/6902671/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Also in 1962, Glasser produced a record by an instrumental band called The Fencemen, composed of Oklahoma expatriates Chuck Blackwell, David Gates, and Leon Russell. Although the musicians went on to individual fame and success,\"Swingin' Gates\" (written by David Gates and Cliff Crofford) b/w \"Bach n' Roll\" (written by Leon Russell [as Russell Bridges]) failed to chart." ;
+        mtp:hasParticipant   meetup:d44da087c9ba68d600553f084b0cabd6 , meetup:9ee0653cacd78b032f46e9d1dc8dfaa1 , meetup:fd0765e9edb27404c982803f730f8f45 ;
+        mtp:hasPurpose       meetup:356677e01939786bee1c1877f46ce057 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dick_Glasser> ;
+        mtp:hasType          "HT" .
+
+meetup:356677e01939786bee1c1877f46ce057
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions the production of a record by a band." ;
+        mtp:hasEvidencePurposeSecond  "The musicians' individual fame and success can be seen as a coincidence." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d44da087c9ba68d600553f084b0cabd6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "107" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cliff Crofford" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9ee0653cacd78b032f46e9d1dc8dfaa1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Gates> ;
+        mtp:hasOffset           "91" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Gates" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/David_Gates>
+        rdf:type  core:Person .
+
+meetup:fd0765e9edb27404c982803f730f8f45
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leon_Russell> ;
+        mtp:hasOffset           "154" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Leon Russell" .
+
+<http://dbpedia.org/resource/Leon_Russell>
+        rdf:type  core:Person .

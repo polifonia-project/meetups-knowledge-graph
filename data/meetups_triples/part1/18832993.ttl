@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:7dc2e465dde9e69811dc1988f04f58f2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6635697" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.32586414" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b3be41aad6ebdb6755475239b48d3643
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Kelley's involvement in Phi Mu Alpha Sinfonia" ;
+        mtp:hasEvidencePurposeSecond  "Kelley's post at the Western College for Women" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Edgar_Stillman_Kelley>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/18832993/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Edgar Stillman Kelley (April 14, 1857 – November 12, 1944) was an American composer, conductor, teacher, and writer on music." ;
+        mtp:hasParticipant   meetup:8808ce39f4111ac546dbed0ae826a3c3 ;
+        mtp:hasPurpose       meetup:7dc2e465dde9e69811dc1988f04f58f2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Edgar_Stillman_Kelley> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/18832993/3/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kelley, though, wished to spend more time composing, and in 1910 took a post at the Western College for Women in Oxford, Ohio, where he remained until his death. While at Western, Kelley became a faculty-level member in Miami University's chapter of Phi Mu Alpha Sinfonia." ;
+        mtp:hasPurpose       meetup:b3be41aad6ebdb6755475239b48d3643 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Edgar_Stillman_Kelley> ;
+        mtp:hasType          "HT" .
+
+meetup:8808ce39f4111ac546dbed0ae826a3c3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Edgar_Stillman_Kelley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Edgar Stillman Kelley" .

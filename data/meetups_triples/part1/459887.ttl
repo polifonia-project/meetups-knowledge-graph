@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Benny_Carter>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Benny_Goodman>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Fletcher_Henderson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/459887/7/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By 1932–33, through his involvement in the UK music paper Melody Maker, Hammond arranged for the faltering US Columbia label to provide recordings for the UK Columbia label, mostly using the specially created Columbia W-265000 matrix series. Hammond recorded Fletcher Henderson, Benny Carter, Joe Venuti, Benny Goodman, and other jazz performers during a time when the economy was bad enough during the Great Depression that many of them would not have otherwise had the opportunity to enter a studio and play real jazz (a handful of these in this special series were issued in the US)." ;
+        mtp:hasParticipant   meetup:df5a0438f33f7e6029fe6672c2d98b70 , meetup:8629788f1d71f0f7cb6f97bb587dd68a , meetup:7d9997c6cff4e68d76b5309dfa5d8157 , meetup:ddb5685e27c4323ce82f448864006389 ;
+        mtp:hasPurpose       meetup:8199c4803cbddc4f8c6384925a9518ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Hammond_(record_producer)> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:df5a0438f33f7e6029fe6672c2d98b70
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Benny_Goodman> ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Benny Goodman" .
+
+meetup:ddb5685e27c4323ce82f448864006389
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Benny_Carter> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Benny Carter" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Joe_Venuti>
+        rdf:type  core:Person .
+
+meetup:7d9997c6cff4e68d76b5309dfa5d8157
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fletcher_Henderson> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fletcher Henderson" .
+
+meetup:8199c4803cbddc4f8c6384925a9518ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The main topic of the sentence is music making, specifically the recording of jazz performers during the Great Depression." ;
+        mtp:hasEvidencePurposeSecond  "There is also an element of coincidence mentioned in the sentence, as it highlights the fortunate timing of the recording opportunity for these jazz performers during a difficult economic period." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8629788f1d71f0f7cb6f97bb587dd68a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Venuti> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joe Venuti" .
+
+<http://dbpedia.org/resource/John_Hammond_(record_producer)>
+        rdf:type  core:Person .

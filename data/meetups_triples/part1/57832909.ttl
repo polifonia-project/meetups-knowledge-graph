@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:47e6da70fa1ea2099f465510de7340ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Walter Aptowitzer" .
+
+meetup:b952d4e990d31061a678084fdc71c657
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9944792" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004108117" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/57832909/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Walter Arlen (born, Walter Aptowitzer; July 31, 1920) is an Austrian-born American composer, specializing mainly in voice and piano scores, having published around 65 works." ;
+        mtp:hasParticipant   meetup:47e6da70fa1ea2099f465510de7340ad , meetup:376265c15fd7ce38c1e5ea2d060d78c6 ;
+        mtp:hasPurpose       meetup:b952d4e990d31061a678084fdc71c657 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Walter_Arlen> ;
+        mtp:hasType          "HM" .
+
+meetup:376265c15fd7ce38c1e5ea2d060d78c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Walter_Arlen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999839474380476" ;
+        mtp:hasTextEvidence     "Walter Arlen" .
+
+<http://dbpedia.org/resource/Walter_Arlen>
+        rdf:type  core:Person .

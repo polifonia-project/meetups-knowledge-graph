@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Lee_Muddy_Baker>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/KK_(composer,_producer)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/2455780/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2004, together with record producer Lee Muddy Baker and songwriter KK (Kevin Kerrigan), he released his first solo album, Bone, to general critical acclaim, though he referred to it as a collaborative effort and preferred to credit the album to 'Tim Booth & the Individuals' as opposed to taking sole credit." ;
+        mtp:hasParticipant   meetup:bd0fa4b505b574017a4736e7db950f83 , meetup:a7b926e8d50ce55d7a4c69aa139cc742 , meetup:40c1e75478a1788b355ad709c431c88c ;
+        mtp:hasPurpose       meetup:bd0aca7dd0d684312b387e92816642dc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tim_Booth> ;
+        mtp:hasType          "HM" .
+
+meetup:a7b926e8d50ce55d7a4c69aa139cc742
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/KK_(composer,_producer)> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "0.999996299594582" ;
+        mtp:hasTextEvidence     "Kevin Kerrigan" .
+
+<http://dbpedia.org/resource/Tim_Booth>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:40c1e75478a1788b355ad709c431c88c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_Muddy_Baker> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lee Muddy Baker" .
+
+meetup:bd0fa4b505b574017a4736e7db950f83
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Booth> ;
+        mtp:hasOffset           "249" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tim Booth" .
+
+meetup:bd0aca7dd0d684312b387e92816642dc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9074058" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0795431" ;
+        mtp:hasSourcePurpose          "ML" .

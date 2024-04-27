@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jimmy_Page>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/22650906/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in Lawrence, Kansas, Moss grew up in Oregon following his family's relocation to Eugene in 1976. Influenced by hard rock and guitarists such as Jimmy Page and Ace Frehley, Moss taught himself guitar at age 14, and spent most of his early music career playing in various Eugene cover bands and a group called The Impostors." ;
+        mtp:hasParticipant   meetup:6eb345f5634b1fcda6e4ec2f22bb32f3 , meetup:e4f0c97069271e0a112db353c63178dc ;
+        mtp:hasPurpose       meetup:40ef0115237759561620b68d6dd3a485 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jason_Moss_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jason_Moss_(musician)>
+        rdf:type  core:Person .
+
+meetup:e4f0c97069271e0a112db353c63178dc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Page> ;
+        mtp:hasOffset           "47" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jimmy Page" .
+
+meetup:6eb345f5634b1fcda6e4ec2f22bb32f3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ace_Frehley> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ace Frehley" .
+
+<http://dbpedia.org/resource/Ace_Frehley>
+        rdf:type  core:Person .
+
+meetup:40ef0115237759561620b68d6dd3a485
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Influenced by rock and guitarists" ;
+        mtp:hasEvidencePurposeSecond  "Grew up in Oregon and played in cover bands" ;
+        mtp:hasSourcePurpose          "LLM" .

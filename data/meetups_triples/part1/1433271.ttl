@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1433271/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She performed several concerts in Los Angeles, California and Royal Albert Hall (London) in 1993, 1994 and 1995. The Paris-based composer Mohammad Shams and the Persian tar soloist Hamid Reza Taherzadeh were the main musicians who worked with Marzieh in exile." ;
+        mtp:hasParticipant   meetup:ba003352de9498756014d4c903b3f966 ;
+        mtp:hasPurpose       meetup:1bde8ad7777c415e790e3c60e9ee0529 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marzieh_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:ba003352de9498756014d4c903b3f966
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mohammad_Shams> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mohammad Shams" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mohammad_Shams>
+        rdf:type  core:Person .
+
+meetup:1bde8ad7777c415e790e3c60e9ee0529
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is primarily about musicians and their work with Marzieh, indicating a topic related to music making." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions Marzieh's exile, which suggests a secondary topic related to her personal life." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Marzieh_(singer)>
+        rdf:type  core:Person .

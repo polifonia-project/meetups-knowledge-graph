@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:8cb7fe8032183c9dd2544451af6968fc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6094803" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2178058" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9ccee5d24ef6d54100a4582005c9078c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Taylor_(comedian)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johnny Taylor, Jr." .
+
+<http://w3id.org/polifonia/pilot/meetups/68478512/5/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2021, he began hosting the talk-show/news-commentary webseries The Nonfiction with Johnny Taylor, Jr." ;
+        mtp:hasParticipant   meetup:df8da3bc1164506efeb166709ad5a586 ;
+        mtp:hasPurpose       meetup:9d7c49368505c37ff89d5aed813e812e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Taylor_(comedian)> ;
+        mtp:hasType          "HT" .
+
+meetup:df8da3bc1164506efeb166709ad5a586
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Taylor_(comedian)> ;
+        mtp:hasOffset           "86" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johnny Taylor, Jr." .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:9d7c49368505c37ff89d5aed813e812e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9236283" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06554299" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Johnny_Taylor_(comedian)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/68478512/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johnny Taylor, Jr. is an American stand-up comedian, writer, actor, and podcaster from Sacramento, California." ;
+        mtp:hasParticipant   meetup:9ccee5d24ef6d54100a4582005c9078c ;
+        mtp:hasPurpose       meetup:8cb7fe8032183c9dd2544451af6968fc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Taylor_(comedian)> ;
+        mtp:hasType          "HT" .

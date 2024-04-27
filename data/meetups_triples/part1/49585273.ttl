@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Marquesa_del_Ter>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f6509414a44e7e60e18d66b35372080a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8356967" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16320953" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:54e16b158763f9bfcf5c71c63d3c4388
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marquesa_del_Ter> ;
+        mtp:hasOffset           "99" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marquesa del Ter" .
+
+meetup:56793412e04c117bf4e36af5abb4e778
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "93" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "the Marquesa del Ter" .
+
+<http://w3id.org/polifonia/pilot/meetups/49585273/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lilly Rose Cabrera, Marquise of Ter and Countess of Morella (1864 – 29 April 1936), known as the Marquesa del Ter, was the wife of the 2nd Marquis of Ter and 2nd Count of Morella, Ramón Cabrera y Richards." ;
+        mtp:hasParticipant   meetup:54e16b158763f9bfcf5c71c63d3c4388 , meetup:56793412e04c117bf4e36af5abb4e778 ;
+        mtp:hasPurpose       meetup:f6509414a44e7e60e18d66b35372080a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marquesa_del_Ter> ;
+        mtp:hasType          "HM" .

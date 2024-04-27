@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jason_Castro_(singer)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Fidel_Castro>
+        rdf:type  core:Person .
+
+meetup:b4d1684c8dbec686f486c8020267c1b4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "A day dedicated to honoring Jason Castro with a parade and ceremony" ;
+        mtp:hasEvidencePurposeSecond  "Jason Castro's return to his hometown" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:79937175a88235e722b60c9b178f16f6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fidel_Castro> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.98991873149169" ;
+        mtp:hasTextEvidence     "Castro" .
+
+<http://w3id.org/polifonia/pilot/meetups/15796100/12/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "When he returned to his hometown of Rockwall, Texas, Thursday, May 29, 2008, he had the experience of having the day declared \"Jason Castro Day\". Castro was honored with a parade and a ceremony/concert, one of the largest events in the city's history." ;
+        mtp:hasParticipant   meetup:79937175a88235e722b60c9b178f16f6 ;
+        mtp:hasPurpose       meetup:b4d1684c8dbec686f486c8020267c1b4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jason_Castro_(singer)> ;
+        mtp:hasType          "HT" .

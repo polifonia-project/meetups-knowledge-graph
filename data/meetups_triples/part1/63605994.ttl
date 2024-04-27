@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:c4f5db6107f4052845a502bd7d310c20
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8422073" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14863245" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5ce56b52e3d1c0e21e9eea0fd05268dd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kiyohiko_Ozaki> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kiyohiko Ozaki" .
+
+<http://dbpedia.org/resource/Kiyohiko_Ozaki>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/63605994/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kiyohiko Ozaki (尾崎紀世彦), (1 January 1943 - 30 May 2012), of Kanagawa Prefecture, Japan, was a Japanese singer." ;
+        mtp:hasParticipant   meetup:5ce56b52e3d1c0e21e9eea0fd05268dd ;
+        mtp:hasPurpose       meetup:c4f5db6107f4052845a502bd7d310c20 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kiyohiko_Ozaki> ;
+        mtp:hasType          "HT" .

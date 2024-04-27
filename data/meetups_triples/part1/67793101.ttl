@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:600550b27f7b8e600cc6b9ab883d254e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The song is inspired by the Me Too movement and personal experiences." ;
+        mtp:hasEvidencePurposeSecond  "The incident of harassment in a nightclub is a personal life event." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:590d597f47845b4d0ffdf6707cae0b3c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8746658" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12005056" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/67793101/7/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The song, which was described by Australian Independent Record Labels Association as a \"raw and formidable rock track\" was inspired by the Me Too movement and his own interactions with misogyny in a night clubs of Melbourne. Organ said \"On a night out with friends, I witnessed a confronting and horrible incident of harassment against one of the female friends I was with." ;
+        mtp:hasParticipant   meetup:1b3b9b126761505a8f45fec9020b457d ;
+        mtp:hasPurpose       meetup:600550b27f7b8e600cc6b9ab883d254e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tyne-James_Organ> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/67793101/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tyne-James Organ is an Australian singer-songwriter from Wollongong, New South Wales, residing in Melbourne, Australia." ;
+        mtp:hasParticipant   meetup:b3e6b0a502c5d4e6aa900f62e0c78d99 ;
+        mtp:hasPurpose       meetup:590d597f47845b4d0ffdf6707cae0b3c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tyne-James_Organ> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b3e6b0a502c5d4e6aa900f62e0c78d99
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tyne-James_Organ> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999555768" ;
+        mtp:hasTextEvidence     "Tyne-James Organ" .
+
+meetup:1b3b9b126761505a8f45fec9020b457d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q1444> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Organ" .
+
+<https://www.wikidata.org/wiki/Q1444>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Tyne-James_Organ>
+        rdf:type  core:Person .

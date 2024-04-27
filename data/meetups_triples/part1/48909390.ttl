@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:9ec9dbc319f68f0f39549ef0d4c3ea34
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9204245" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07788414" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/48909390/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jill Sinclair (5 April 1952 – 22 March 2014) was an English businesswoman and former record company director, a founder of ZTT Records and one of the most influential women in pop music." ;
+        mtp:hasParticipant   meetup:1e0c1fb5060aab33905f960632cfa28c ;
+        mtp:hasPurpose       meetup:9ec9dbc319f68f0f39549ef0d4c3ea34 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jill_Sinclair> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jill_Sinclair>
+        rdf:type  core:Person .
+
+meetup:1e0c1fb5060aab33905f960632cfa28c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jill_Sinclair> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jill Sinclair" .

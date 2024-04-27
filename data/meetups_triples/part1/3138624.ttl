@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/3138624/8/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "AGR, a European record label, acquired the album and issued it in Europe in 2004. Six singles were released from it in Europe, including Peterson's own rendition of \"No More Looking over My Shoulder.\"" ;
+        mtp:hasParticipant   meetup:79647e0b7351d30a53a5aeb70536e363 ;
+        mtp:hasPurpose       meetup:559db7fbfc2ba01b29bf73ef3ee62a7e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Peterson_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/David_Peterson_(baseball)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Michael_Peterson_(singer)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:79647e0b7351d30a53a5aeb70536e363
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Peterson_(baseball)> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peterson" .
+
+meetup:559db7fbfc2ba01b29bf73ef3ee62a7e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a record label acquiring and releasing an album." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the acquisition and release of the album by a business entity." ;
+        mtp:hasSourcePurpose          "LLM" .

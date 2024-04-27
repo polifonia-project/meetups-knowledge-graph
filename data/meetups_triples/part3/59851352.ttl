@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Michael_Wulf>
+        rdf:type  core:Person .
+
+meetup:c521f30183316f97a7b8a0297cb550b6
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1985" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1985-01-01"^^xsd:date ;
+        time:hasEnd          "1985-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/59851352/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:cacaef4f8776573c37870efa5563d869 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Michael_Wulf> ;
+        mtp:hasType     "HT" .
+
+meetup:154a8d6c07701bb0cc7fe7f0065e4644
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "later that year" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:cacaef4f8776573c37870efa5563d869
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "6 December 1963 – 21 July 1993" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1963-12-06"^^xsd:date ;
+        time:hasEnd          "1993-07-21"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/59851352/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:154a8d6c07701bb0cc7fe7f0065e4644 , meetup:c521f30183316f97a7b8a0297cb550b6 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Michael_Wulf> ;
+        mtp:hasType     "HT" .

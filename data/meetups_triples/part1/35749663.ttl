@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/35749663/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Greg Bates (born September 25, 1987) is an American country music singer formerly signed to Republic Nashville." ;
+        mtp:hasParticipant   meetup:6891e498cbb83322c9d665ec0ecaa04e ;
+        mtp:hasPurpose       meetup:012ee363caa6696d23f6673ab37aa2dd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Greg_Bates> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Greg_Bates>
+        rdf:type  core:Person .
+
+meetup:012ee363caa6696d23f6673ab37aa2dd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98486507" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.015003928" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6891e498cbb83322c9d665ec0ecaa04e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Greg_Bates> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999801" ;
+        mtp:hasTextEvidence     "Greg Bates" .

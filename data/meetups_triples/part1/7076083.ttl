@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d5245b898e6e410f465136bba24a0d30
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about the life of Momoko Sakura" ;
+        mtp:hasEvidencePurposeSecond  "Her career as a manga artist" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:976cac64116cb08238fad3493788fd17
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9991787" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0008205357" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Momoko_Sakura>
+        rdf:type  core:Person .
+
+meetup:1c72525fc11fb7f950c36f79edc8a9f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Momoko_Sakura> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Miki Miura" .
+
+<http://w3id.org/polifonia/pilot/meetups/7076083/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Momoko Sakura (さくら ももこ, Sakura Momoko) (8 May 1965 – 15 August 2018) was the pen name of a Japanese manga artist from Shimizu, Shizuoka Prefecture." ;
+        mtp:hasParticipant   meetup:85b811a75a087830d4019786173f7019 ;
+        mtp:hasPurpose       meetup:4d74e83617dd7aac7c74a9ad47d89295 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Momoko_Sakura> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/7076083/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Miki Miura, was born 8 May 1965." ;
+        mtp:hasParticipant   meetup:1c72525fc11fb7f950c36f79edc8a9f7 ;
+        mtp:hasPurpose       meetup:976cac64116cb08238fad3493788fd17 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Momoko_Sakura> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/7076083/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Momoko Sakura (さくら ももこ, Sakura Momoko) (8 May 1965 – 15 August 2018) was the pen name of a Japanese manga artist from Shimizu, Shizuoka Prefecture. She was best known as the creator of the long-running manga Chibi Maruko-chan." ;
+        mtp:hasPurpose       meetup:d5245b898e6e410f465136bba24a0d30 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Momoko_Sakura> ;
+        mtp:hasType          "HT" .
+
+meetup:4d74e83617dd7aac7c74a9ad47d89295
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999785" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.419877e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:85b811a75a087830d4019786173f7019
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Momoko_Sakura> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Momoko Sakura" .

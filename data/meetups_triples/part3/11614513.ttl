@@ -1,0 +1,35 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:9fccf944b627072f2bda613fa2de3971
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "of the 1980s" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/11614513/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:a5fd7cf8716a90355d094fd4f4b44cad , meetup:9fccf944b627072f2bda613fa2de3971 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Adrian_Lee> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Adrian_Lee>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:a5fd7cf8716a90355d094fd4f4b44cad
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "9 September 1957" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1957-09-09"^^xsd:date ;
+        time:hasEnd          "1957-09-09"^^xsd:date .

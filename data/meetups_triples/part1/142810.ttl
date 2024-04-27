@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:09cd2f2e1cf15c73734e75993f7ef3fb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7732117" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21003284" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Mike_Shinoda>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/142810/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joseph Hahn (born March 15, 1977) is an American musician, DJ, director and visual artist best known as the DJ of the American rock band Linkin Park, doing the scratching, turntables, sampling, and programming for all seven of Linkin Park's albums." ;
+        mtp:hasParticipant   meetup:9c833d1c2a671e0e0c6c8b7ec849506b ;
+        mtp:hasPurpose       meetup:460c06808d83c9223fc7ebbed8c308ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Hahn> ;
+        mtp:hasType          "HT" .
+
+meetup:460c06808d83c9223fc7ebbed8c308ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96118385" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0373095" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:37b0a2d4ea4f6a2731976af4dc0ed431
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Shinoda> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mike Shinoda" .
+
+<http://dbpedia.org/resource/Joe_Hahn>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/142810/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hahn, along with bandmate Mike Shinoda, are responsible for most of Linkin Park's album artwork." ;
+        mtp:hasParticipant   meetup:37b0a2d4ea4f6a2731976af4dc0ed431 , meetup:8484bc9d112ce2967625af3e81f4c6c3 ;
+        mtp:hasPurpose       meetup:09cd2f2e1cf15c73734e75993f7ef3fb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Hahn> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:8484bc9d112ce2967625af3e81f4c6c3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Hahn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joseph Hahn" .
+
+meetup:9c833d1c2a671e0e0c6c8b7ec849506b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Hahn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joseph Hahn" .

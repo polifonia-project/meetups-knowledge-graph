@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/18778044/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Craig Gruber died of prostate cancer in Florida on May 5, 2015, aged 63." ;
+        mtp:hasParticipant   meetup:6bb04c7d81971c04d3ade3dab3163a7c ;
+        mtp:hasPurpose       meetup:ffdd5e1b4c348927ada775aefa6c0c80 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Craig_Gruber> ;
+        mtp:hasType          "HT" .
+
+meetup:6bb04c7d81971c04d3ade3dab3163a7c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Craig_Gruber> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999988348" ;
+        mtp:hasTextEvidence     "Craig Gruber" .
+
+<http://dbpedia.org/resource/Craig_Gruber>
+        rdf:type  core:Person .
+
+meetup:ffdd5e1b4c348927ada775aefa6c0c80
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.996012" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0039650146" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6b019d3d16ac188085de3465e1bf0762
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99993646" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.3994703e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:9ed472e47a562f214febb1ded9181713
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kavya_Ajit> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kavya Ajit" .
+
+<http://w3id.org/polifonia/pilot/meetups/55891860/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kavya Ajit (born 17 July 1991) is an Indian singer, violinist and a live performer born in Kozhikode, Kerala." ;
+        mtp:hasParticipant   meetup:9ed472e47a562f214febb1ded9181713 ;
+        mtp:hasPurpose       meetup:6b019d3d16ac188085de3465e1bf0762 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kavya_Ajit> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Kavya_Ajit>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/55891860/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She attended Presentation Higher Secondary School and Silver Hills Public School in Kozhikode. A computer science engineer who graduated from Amrita Vishwa Vidyapeetam, Coimbatore, she has worked at Cognizant Technology Solutions before leaving the job to pursue a career in music." ;
+        mtp:hasPurpose       meetup:b718cfb8eb2f5a7058522e66260a43d7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kavya_Ajit> ;
+        mtp:hasType          "HT" .
+
+meetup:b718cfb8eb2f5a7058522e66260a43d7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Education background and career" ;
+        mtp:hasEvidencePurposeSecond  "Transition to music career" ;
+        mtp:hasSourcePurpose          "LLM" .

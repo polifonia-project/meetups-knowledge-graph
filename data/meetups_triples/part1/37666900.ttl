@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/37666900/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bastien Kaltenbacher (born 20 May 1991 in Lausanne), better known as Bastian Baker, is a Swiss singer, songwriter, performer and ice hockey player." ;
+        mtp:hasParticipant   meetup:5f5629691e0f7f7a623975e5916b564a ;
+        mtp:hasPurpose       meetup:c479c439a69d664917f5a1b985fd4f98 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bastian_Baker> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bastian_Baker>
+        rdf:type  core:Person .
+
+meetup:5f5629691e0f7f7a623975e5916b564a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bastian_Baker> ;
+        mtp:hasOffset           "69" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bastian Baker" .
+
+meetup:c479c439a69d664917f5a1b985fd4f98
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94275546" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.038722936" ;
+        mtp:hasSourcePurpose          "ML" .

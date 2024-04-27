@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f6b413dee25a3a32998e75cf87c020a8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael Andrew \"Duff\" McKagan" .
+
+meetup:5f25b349c9527d0bf7fb458ead7415de
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999968" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.9658237e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Duff_McKagan>
+        rdf:type  core:Person .
+
+meetup:96f3b5190de12f84fa8e9df9480355a4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "McKagan" .
+
+<http://w3id.org/polifonia/pilot/meetups/627701/6/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band released one single, \"School Jerks\", in 1980. In 1980, McKagan joined the pop-punk band The Fastbacks as their drummer." ;
+        mtp:hasParticipant   meetup:96f3b5190de12f84fa8e9df9480355a4 ;
+        mtp:hasPurpose       meetup:cf73cdd9c44276b6d91e197c3f146535 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Duff_McKagan> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/627701/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Andrew \"Duff\" McKagan (born February 5, 1964), sometimes credited as Duff \"Rose\" McKagan, is an American multi-instrumentalist, singer, songwriter and author." ;
+        mtp:hasParticipant   meetup:f6b413dee25a3a32998e75cf87c020a8 , meetup:a9e5a24d18918e8400a3fa37634d4a8c ;
+        mtp:hasPurpose       meetup:5f25b349c9527d0bf7fb458ead7415de ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Duff_McKagan> ;
+        mtp:hasType          "HM" .
+
+meetup:a9e5a24d18918e8400a3fa37634d4a8c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Duff_McKagan> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "0.9999889456867874" ;
+        mtp:hasTextEvidence     "Duff" .
+
+meetup:cf73cdd9c44276b6d91e197c3f146535
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to the band's music career" ;
+        mtp:hasEvidencePurposeSecond  "Related to McKagan's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .

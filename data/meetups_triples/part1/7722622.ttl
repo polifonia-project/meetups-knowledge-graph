@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:0580fdf5d13618c86993171a357741bc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5366415" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40780875" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8a6e1b23598fa227040acb7d27bc9089
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999931" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.5774803e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:df858d8c6cc5ecb9612c3d1f7a9b0512
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kurt_Wagner_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kurt Wagner" .
+
+<http://w3id.org/polifonia/pilot/meetups/7722622/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kurt Wagner (born 1959) is an American musician, and the singer and songwriter of the Nashville-based alternative country band Lambchop." ;
+        mtp:hasParticipant   meetup:df858d8c6cc5ecb9612c3d1f7a9b0512 ;
+        mtp:hasPurpose       meetup:0580fdf5d13618c86993171a357741bc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kurt_Wagner_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:294cd27cefafba74309ee058ebdea64c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kurt_Wagner_(musician)> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kurt Wagner" .
+
+<http://dbpedia.org/resource/Kurt_Wagner_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/7722622/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2015 he launched an electronic music project named HeCTA." ;
+        mtp:hasParticipant   meetup:294cd27cefafba74309ee058ebdea64c ;
+        mtp:hasPurpose       meetup:8a6e1b23598fa227040acb7d27bc9089 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kurt_Wagner_(musician)> ;
+        mtp:hasType          "HT" .

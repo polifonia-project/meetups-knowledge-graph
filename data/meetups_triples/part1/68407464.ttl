@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Prospa_Ochimana>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/68407464/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Prospa Ochimana was born in Northern Nigeria, Kaduna State on 6 November 1988 but originally hails from Kogi State, Nigeria. He spent his childhood in Kogi State and is the fourth child of seven children." ;
+        mtp:hasParticipant   meetup:9d319ff534f7c6fd0310ba6675756019 ;
+        mtp:hasPurpose       meetup:a020feaebacd4d4e29c131482b9cd6ea ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Prospa_Ochimana> ;
+        mtp:hasType          "HT" .
+
+meetup:a020feaebacd4d4e29c131482b9cd6ea
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Prospa Ochimana's personal background" ;
+        mtp:hasEvidencePurposeSecond  "Information about Prospa Ochimana's childhood and family" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9d319ff534f7c6fd0310ba6675756019
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Prospa Ochimana" .

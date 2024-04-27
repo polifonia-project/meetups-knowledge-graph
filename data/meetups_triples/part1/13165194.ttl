@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/13165194/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johnny Watson (April 12, 1867 – November 1, 1963) was an American blues singer, guitarist and harmonica player, best known for his recordings under the name Daddy Stovepipe." ;
+        mtp:hasParticipant   meetup:d699c01941a7b68a51f0fab98eeb041b , meetup:e74f946c34f4b6c2e8ed62e35e21407b ;
+        mtp:hasPurpose       meetup:7fac05ceac7dd73f8cb8cb674180bcdc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daddy_Stovepipe> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/13165194/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By the 1920s, he was working as a one-man band on Maxwell Street in Chicago, where he acquired the name \"Daddy Stovepipe\" from the characteristic top hat he wore." ;
+        mtp:hasParticipant   meetup:8069fe535633e85e9235598ed99f1ee8 ;
+        mtp:hasPurpose       meetup:99dfba983e104aa291ae5107140db84f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daddy_Stovepipe> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7fac05ceac7dd73f8cb8cb674180bcdc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5043819" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.31254506" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8069fe535633e85e9235598ed99f1ee8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daddy_Stovepipe> ;
+        mtp:hasOffset           "105" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Daddy Stovepipe" .
+
+meetup:99dfba983e104aa291ae5107140db84f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Playing music as a one-man band" ;
+        mtp:hasEvidencePurposeSecond  "Acquiring the name 'Daddy Stovepipe'" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Daddy_Stovepipe>
+        rdf:type  core:Person .
+
+meetup:e74f946c34f4b6c2e8ed62e35e21407b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Watson_(baseball)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8999698486570787" ;
+        mtp:hasTextEvidence     "Johnny Watson" .
+
+meetup:d699c01941a7b68a51f0fab98eeb041b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daddy_Stovepipe> ;
+        mtp:hasOffset           "159" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Daddy Stovepipe" .
+
+<http://dbpedia.org/resource/Johnny_Watson_(baseball)>
+        rdf:type  core:Person .

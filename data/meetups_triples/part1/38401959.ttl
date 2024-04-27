@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Ryan_McGinley>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/38401959/0/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2016, Collins was chosen as a face of Gucci. She has been labeled an \"it girl\" by photographer and mentor Ryan McGinley and by Vanity Fair and The New Yorker magazines." ;
+        mtp:hasParticipant   meetup:341f84374e0669a0171f5e210aa05c2c ;
+        mtp:hasPurpose       meetup:6f95307722363c3d797706c457b33ee1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Petra_Collins> ;
+        mtp:hasType          "HT" .
+
+meetup:6f95307722363c3d797706c457b33ee1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Collins' career and public image" ;
+        mtp:hasEvidencePurposeSecond  "Collins' collaboration with Gucci" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:341f84374e0669a0171f5e210aa05c2c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ryan_McGinley> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ryan McGinley" .
+
+<http://dbpedia.org/resource/Petra_Collins>
+        rdf:type  core:Person .

@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d8de0a8a8cf27c965cd778a5f8a6b02c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Harrison_Barnes> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7656829811419691" ;
+        mtp:hasTextEvidence     "Barnes" .
+
+meetup:a170705b23ebcc0284072c691b1cab97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Barnes_(composer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7843505029583946" ;
+        mtp:hasTextEvidence     "Billy Barnes" .
+
+meetup:f600c785ba8c383bf793cd0edf1a2b66
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Barnes_(composer)> ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "0.7843505029583946" ;
+        mtp:hasTextEvidence     "Billy Barnes" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:a31a80f83e91b702312932cbe667f0ee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in musical comedy revues" ;
+        mtp:hasEvidencePurposeSecond  "Career and personal achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Harrison_Barnes>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Billy_Barnes_(composer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4055458/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He started collaborating in college with Bob Rodgers, and their first professional musical comedy revue, a Cabaret Concert Show, was staged in 1956 in Los Angeles. Barnes continued with theatrical revues, including The Billy Barnes Revue, Billy Barnes' People, Billy Barnes' Party, Billy Barnes' L.A., and Billy Barnes' Hollywood." ;
+        mtp:hasParticipant   meetup:d8de0a8a8cf27c965cd778a5f8a6b02c , meetup:f600c785ba8c383bf793cd0edf1a2b66 ;
+        mtp:hasPurpose       meetup:a31a80f83e91b702312932cbe667f0ee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Barnes_(composer)> ;
+        mtp:hasType          "HM" .
+
+meetup:4325250abce51d064c154bd3ef163140
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.85409784" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14567356" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4055458/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy Barnes (January 27, 1927 – September 25, 2012) was a composer, lyricist and actor from Los Angeles, California." ;
+        mtp:hasParticipant   meetup:a170705b23ebcc0284072c691b1cab97 ;
+        mtp:hasPurpose       meetup:4325250abce51d064c154bd3ef163140 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Barnes_(composer)> ;
+        mtp:hasType          "HT" .

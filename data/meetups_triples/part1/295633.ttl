@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1252085ed58297c365a3acbd36f57a85
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9491045" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03411807" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ed91a8f4ba3a13d070418c97e2234c14
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.69555444" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14581189" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/295633/16/14>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Big Mama Thornton was among hundreds of artists whose material was destroyed in the 2008 Universal fire." ;
+        mtp:hasParticipant   meetup:66fa185136566aafe65260d12a6d8b33 ;
+        mtp:hasPurpose       meetup:1252085ed58297c365a3acbd36f57a85 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Big_Mama_Thornton> ;
+        mtp:hasType          "HT" .
+
+meetup:2bf5c301149f67d8090a8aa82e4dcdb6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Big_Mama_Thornton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Willie Mae Thornton" .
+
+<http://w3id.org/polifonia/pilot/meetups/295633/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Willie Mae Thornton (December 11, 1926 – July 25, 1984), better known as Big Mama Thornton, was an American rhythm-and-blues singer and songwriter." ;
+        mtp:hasParticipant   meetup:2bf5c301149f67d8090a8aa82e4dcdb6 ;
+        mtp:hasPurpose       meetup:ed91a8f4ba3a13d070418c97e2234c14 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Big_Mama_Thornton> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Big_Mama_Thornton>
+        rdf:type  core:Person .
+
+meetup:66fa185136566aafe65260d12a6d8b33
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Big_Mama_Thornton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Big Mama Thornton" .

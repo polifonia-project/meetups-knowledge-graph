@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1640333/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His first wife, Adèle Sadie (née Bloom; 1931–1978) – whom he married in 1953 in London, and with whom he had two sons and a daughter – died in 1978. Sadie married Julie Anne Sadie (née Vertrees; born 1948), also a musicologist, in 1978." ;
+        mtp:hasParticipant   meetup:8fb41cbf1f3e3ae840d340a53fe44bed , meetup:7090e35ff27816011ec3fac84dae3faa ;
+        mtp:hasPurpose       meetup:a267773ea346d276ac18444c40f7e502 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stanley_Sadie> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Stanley_Sadie>
+        rdf:type  core:Person .
+
+meetup:8fb41cbf1f3e3ae840d340a53fe44bed
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "36" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Vertrees" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:35ad648a680881a307e67455ff7760ef
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Recognition and awards in academia" ;
+        mtp:hasEvidencePurposeSecond  "Honorary titles and fellowships" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a267773ea346d276ac18444c40f7e502
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about personal relationships" ;
+        mtp:hasEvidencePurposeSecond  "Marriage to another musicologist" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:7090e35ff27816011ec3fac84dae3faa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stanley_Sadie> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Julie Anne Sadie" .
+
+<http://w3id.org/polifonia/pilot/meetups/1640333/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1982, Sadie was appointed CBE (Commander of the Order of the British Empire). He received an honorary Doctor of Letters from the University of Leicester in 1982, and was elected honorary fellow of the Royal College of Music in 1994 and Gonville and Caius College, Cambridge." ;
+        mtp:hasPurpose       meetup:35ad648a680881a307e67455ff7760ef ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stanley_Sadie> ;
+        mtp:hasType          "HT" .

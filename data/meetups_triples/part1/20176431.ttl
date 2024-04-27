@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f76528eb4ccd952ca179dc3823c34b21
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lambert_Ferri> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999790532" ;
+        mtp:hasTextEvidence     "Lambert Ferri" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:c1a7b57e906f6c14018f2335998b406e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.57595646" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.38948274" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/20176431/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lambert Ferri (fl. c. 1250–1300) was a trouvère and cleric at the Benedictine monastery at Saint-Léonard, Pas-de-Calais." ;
+        mtp:hasParticipant   meetup:f76528eb4ccd952ca179dc3823c34b21 ;
+        mtp:hasPurpose       meetup:c1a7b57e906f6c14018f2335998b406e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lambert_Ferri> ;
+        mtp:hasType          "HT" .
+
+meetup:0bdade2b5ecf33399fedff5b6fd67cc5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9672935" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.030258544" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:52328a49eccd6f5d16110c6d6b049c15
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lambert_Ferri> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lambert Ferri" .
+
+<http://dbpedia.org/resource/Lambert_Ferri>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/20176431/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By 1268 he was a canon and a deacon of the monastery; he is last associated with the monastery in 1282." ;
+        mtp:hasParticipant   meetup:52328a49eccd6f5d16110c6d6b049c15 ;
+        mtp:hasPurpose       meetup:0bdade2b5ecf33399fedff5b6fd67cc5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lambert_Ferri> ;
+        mtp:hasType          "HT" .

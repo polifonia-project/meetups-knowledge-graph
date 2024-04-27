@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Johnny_Green>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2782066/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2014, Mike Mogis and Nate Walcott, also of Bright Eyes, composed the soundtrack for The Fault in Our Stars, based on the novel of the same name by John Green." ;
+        mtp:hasParticipant   meetup:30f720363baa85e938bb4fa2de6bfd22 , meetup:e1a683b97c2a4f3d77feaedd2343e3bb , meetup:acbf3f300237a3240aa78e9bddd81800 ;
+        mtp:hasPurpose       meetup:c82d0b0f3fd27187acb2aee3c1f95ac6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Mogis> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Mike_Mogis>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:30f720363baa85e938bb4fa2de6bfd22
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Green> ;
+        mtp:hasOffset           "150" ;
+        mtp:hasSimilarityScore  "0.9938364798105483" ;
+        mtp:hasTextEvidence     "John Green" .
+
+meetup:e1a683b97c2a4f3d77feaedd2343e3bb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nate_Walcott> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nate Walcott" .
+
+meetup:c82d0b0f3fd27187acb2aee3c1f95ac6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98914635" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010853116" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Nate_Walcott>
+        rdf:type  core:Person .
+
+meetup:acbf3f300237a3240aa78e9bddd81800
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Mogis> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mike Mogis" .

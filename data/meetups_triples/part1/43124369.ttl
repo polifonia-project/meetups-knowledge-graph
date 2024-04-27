@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/43124369/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He performed on a worldwide tour and won several musical awards from 2005-2016." ;
+        mtp:hasParticipant   meetup:0af3e110edd4fbac4ce74a04c2ba9061 ;
+        mtp:hasPurpose       meetup:f2a86f8c5a844213521bdf5dea694510 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Deepak_Limbu> ;
+        mtp:hasType          "HT" .
+
+meetup:0af3e110edd4fbac4ce74a04c2ba9061
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Deepak_Limbu> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Deepak Limbu" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/43124369/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Deepak Limbu (Nepali: दिपक लिम्बु): (born 4 May 1983 ) is a playback singer and winner of the first season of Nepali Tara of Nepal." ;
+        mtp:hasParticipant   meetup:851d55e3a82174356a71263f16716955 ;
+        mtp:hasPurpose       meetup:abd849064b8026425a8b01b5389a9940 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Deepak_Limbu> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f2a86f8c5a844213521bdf5dea694510
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.77795947" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21139549" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:851d55e3a82174356a71263f16716955
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Deepak_Limbu> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Deepak Limbu" .
+
+meetup:abd849064b8026425a8b01b5389a9940
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Deepak Limbu is a playback singer" ;
+        mtp:hasEvidencePurposeSecond  "Deepak Limbu won the first season of Nepali Tara" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Deepak_Limbu>
+        rdf:type  core:Person .

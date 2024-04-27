@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/16017533/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ben-Or and her mother pretended to be Roman Catholics and travelled to Warsaw, where her mother worked for a Christian family for a year as a maid. Having missed the last passenger train to Warsaw, they were placed by the German station master on a train reserved for Wehrmacht officers." ;
+        mtp:hasParticipant   meetup:e38654b628dec0b926bbb2f6372cdf88 ;
+        mtp:hasPurpose       meetup:f3c6c046f404b8cb6c22a787ca8de7cf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nelly_Ben-Or> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f3c6c046f404b8cb6c22a787ca8de7cf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Unplanned and unexpected events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Nelly_Ben-Or>
+        rdf:type  core:Person .
+
+meetup:e38654b628dec0b926bbb2f6372cdf88
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nelly_(Egyptian_entertainer)> ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nelly" .
+
+<http://dbpedia.org/resource/Nelly_(Egyptian_entertainer)>
+        rdf:type  core:Person .

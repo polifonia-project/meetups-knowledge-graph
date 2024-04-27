@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/8053266/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nicci Gilbert was born as Nicole Gilbert on July 8, 1970 in Detroit, Michigan, United States to African-American parents." ;
+        mtp:hasParticipant   meetup:ddc93d52d3be689cfd843c9e2d14fb46 , meetup:384f24f73ac5626581b794703a4e6548 ;
+        mtp:hasPurpose       meetup:d26b29de20fd21ab281ffb539ea3fdf2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicci_Gilbert> ;
+        mtp:hasType          "HM" .
+
+meetup:ddc93d52d3be689cfd843c9e2d14fb46
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicci_Gilbert> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99999999678289" ;
+        mtp:hasTextEvidence     "Nicci Gilbert" .
+
+meetup:d26b29de20fd21ab281ffb539ea3fdf2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about a person's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about someone's educational background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0c42d38be4957ad0efb143596d8eb177
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Nicci Gilbert's mother was a jazz singer" ;
+        mtp:hasEvidencePurposeSecond  "Nicci Gilbert's personal background and upbringing" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/8053266/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nicci Gilbert was born as Nicole Gilbert on July 8, 1970 in Detroit, Michigan, United States to African-American parents. Gilbert grew up in Detroit, where her mother Helene was a jazz singer." ;
+        mtp:hasPurpose       meetup:0c42d38be4957ad0efb143596d8eb177 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicci_Gilbert> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Nicci_Gilbert>
+        rdf:type  core:Person .
+
+meetup:384f24f73ac5626581b794703a4e6548
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nicole Gilbert" .

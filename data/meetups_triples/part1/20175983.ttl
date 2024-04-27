@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/20175983/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jack Reno (November 30, 1935 – November 1, 2008) was an American country singer." ;
+        mtp:hasParticipant   meetup:ba5751fc8c5431a4e0c20e05806d534d ;
+        mtp:hasPurpose       meetup:11da41396fdaddecccc1b1350ed7c38b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Reno> ;
+        mtp:hasType          "HT" .
+
+meetup:11da41396fdaddecccc1b1350ed7c38b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9969548" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0021752154" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jack_Reno>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ba5751fc8c5431a4e0c20e05806d534d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Reno> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999808364117568" ;
+        mtp:hasTextEvidence     "Jack Reno" .

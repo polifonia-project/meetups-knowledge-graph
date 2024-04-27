@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Joey_Image>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:12a0f926ce6113a039a92318227cf2d7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joey_Ramone> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9985497387446244" ;
+        mtp:hasTextEvidence     "Joey" .
+
+<http://dbpedia.org/resource/Joey_Ramone>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/4779377/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joey Poole (March 5, 1957 – June 1, 2020), known professionally as Joey Image, was an American punk rock drummer." ;
+        mtp:hasParticipant   meetup:cdbf7f0efa9848ae42115fa3b951d5b7 , meetup:12a0f926ce6113a039a92318227cf2d7 ;
+        mtp:hasPurpose       meetup:4aecadb5bfc9bf036e41c83b999ff927 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joey_Image> ;
+        mtp:hasType          "HM" .
+
+meetup:4aecadb5bfc9bf036e41c83b999ff927
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.992454" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004891815" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:cdbf7f0efa9848ae42115fa3b951d5b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joey_Image> ;
+        mtp:hasOffset           "69" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joey Image" .

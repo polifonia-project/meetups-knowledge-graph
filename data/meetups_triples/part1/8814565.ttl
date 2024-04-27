@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/KC_Porter>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Cole_Porter>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8814565/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1970, at age 7,  his family moved to Guatemala, where they were Baháʼí pioneers. While growing up in Guatemala, Porter learned Spanish and about Latin culture which included spending time with Guatemalan musicians who exposed him to the sounds of marimba, and other Latin musical genres, as well as American pop and rock." ;
+        mtp:hasParticipant   meetup:f6b0301cf3255125580a8454c5b8b4c8 ;
+        mtp:hasPurpose       meetup:ec537bdcf15739c842011ca929cfa676 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/KC_Porter> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:ec537bdcf15739c842011ca929cfa676
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involvement with Guatemalan musicians" ;
+        mtp:hasEvidencePurposeSecond  "Learning Spanish and Latin culture" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f6b0301cf3255125580a8454c5b8b4c8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cole_Porter> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "0.9761325747672616" ;
+        mtp:hasTextEvidence     "Porter" .

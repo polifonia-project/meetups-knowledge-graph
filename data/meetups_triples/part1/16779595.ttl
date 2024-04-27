@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Mack_McCormick>
+        rdf:type  core:Person .
+
+meetup:364dc485d7c60dd9ef1483ab9b8e3179
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9796178" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.020258332" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/16779595/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert \"Mack\" McCormick (August 3, 1930 – November 18, 2015) was an American musicologist and folklorist." ;
+        mtp:hasParticipant   meetup:2ef27aa726f3d48b0dd5dd220f3dbe50 ;
+        mtp:hasPurpose       meetup:364dc485d7c60dd9ef1483ab9b8e3179 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mack_McCormick> ;
+        mtp:hasType          "HT" .
+
+meetup:2ef27aa726f3d48b0dd5dd220f3dbe50
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mack_McCormick> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Robert \"Mack\" McCormick" .

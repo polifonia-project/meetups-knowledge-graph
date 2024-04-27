@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Daniel_Moore_(musician)>
+        rdf:type  core:Person .
+
+meetup:d147ca9c73ec910ee495d1a7b966acfc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9979233" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013776877" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/15074512/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Daniel Moore (born 1941 in Walla Walla, Washington, U.S.) is an American musician, singer and songwriter." ;
+        mtp:hasParticipant   meetup:ed3c26db18cbdf5f0f8d9236344ead97 ;
+        mtp:hasPurpose       meetup:d147ca9c73ec910ee495d1a7b966acfc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daniel_Moore_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ed3c26db18cbdf5f0f8d9236344ead97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daniel_Moore_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.976755117515531" ;
+        mtp:hasTextEvidence     "Daniel Moore" .

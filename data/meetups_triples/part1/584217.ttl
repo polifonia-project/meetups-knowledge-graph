@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:f6cef2b91aaf0886ad600fa4f3b73bc0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Unlikely occurrence of events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/584217/26/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In August 2011, his New Jersey home was damaged by Hurricane Irene and declared uninhabitable. Several Kiss and Skid Row artifacts (including Skid Row master tapes) were in the house, but none were damaged." ;
+        mtp:hasPurpose       meetup:f6cef2b91aaf0886ad600fa4f3b73bc0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sebastian_Bach> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Matt_Fallon>
+        rdf:type  core:Person .
+
+meetup:9fe5a6215e329450720adc8b488fb708
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Formation and changes in the band" ;
+        mtp:hasEvidencePurposeSecond  "Individual decisions and career paths" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/584217/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Skid Row initially formed in the mid-1980s with lead vocalist Matt Fallon fronting the group, and they began playing at various clubs around the New Jersey area. Fallon left the band in 1987, leaving Skid Row in search of a lead vocalist." ;
+        mtp:hasParticipant   meetup:618c0003449e64fad894da838eca0173 ;
+        mtp:hasPurpose       meetup:9fe5a6215e329450720adc8b488fb708 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sebastian_Bach> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Sebastian_Bach>
+        rdf:type  core:Person .
+
+meetup:618c0003449e64fad894da838eca0173
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Fallon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Matt Fallon" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:ee61faadcbc911104ee80db859e6ce1a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99933773" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00044025868" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:88bc5d594da8f35e38033be0ad74c993
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Holmstrom> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Holmstrom" .
+
+<http://w3id.org/polifonia/pilot/meetups/2432431/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Holmstrom (born 1954) is an American underground cartoonist and writer." ;
+        mtp:hasParticipant   meetup:88bc5d594da8f35e38033be0ad74c993 ;
+        mtp:hasPurpose       meetup:1e7327d615fa563b66d28549528dc24a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Holmstrom> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:facfc8ed5c080ab654e859164f86e635
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Holmstrom> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Holmstrom" .
+
+meetup:1e7327d615fa563b66d28549528dc24a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997743" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00011481022" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/John_Holmstrom>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2432431/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known for illustrating the covers of the Ramones albums Rocket to Russia and Road to Ruin, as well as his characters Bosko and Joe (published in Scholastic's Bananas magazine from 1975 to 1984)." ;
+        mtp:hasParticipant   meetup:facfc8ed5c080ab654e859164f86e635 ;
+        mtp:hasPurpose       meetup:ee61faadcbc911104ee80db859e6ce1a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Holmstrom> ;
+        mtp:hasType          "HT" .

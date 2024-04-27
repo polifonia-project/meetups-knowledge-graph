@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:41ad0c4007061f97f0a21546fcdbe6b6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Linda Hargrove was a country songwriter and musician" ;
+        mtp:hasEvidencePurposeSecond  "Linda Hargrove was born in Tallahassee, Florida" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/29854564/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Linda Hargrove (married name Bartholomew, born Tallahassee, Florida February 3, 1949 – October 24, 2010, Tallahassee, Florida) was an American country songwriter and musician." ;
+        mtp:hasParticipant   meetup:1d9dd46f0c6efa6a2c27559751fb6784 , meetup:173e36e03037b1bc42376757a837e06e ;
+        mtp:hasPurpose       meetup:41ad0c4007061f97f0a21546fcdbe6b6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Linda_Hargrove> ;
+        mtp:hasType          "HM" .
+
+meetup:1d9dd46f0c6efa6a2c27559751fb6784
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Bartholomew> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "0.9942221771649516" ;
+        mtp:hasTextEvidence     "Bartholomew" .
+
+<http://dbpedia.org/resource/Dave_Bartholomew>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Linda_Hargrove>
+        rdf:type  core:Person .
+
+meetup:173e36e03037b1bc42376757a837e06e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Linda_Hargrove> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999764668" ;
+        mtp:hasTextEvidence     "Linda Hargrove" .

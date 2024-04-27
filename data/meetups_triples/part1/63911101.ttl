@@ -1,0 +1,82 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jackie_Alway>
+        rdf:type  core:Person .
+
+meetup:3915ebd2420e9e58e7efb8e7da323af8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jacqueline Alway" .
+
+meetup:1b7de3fce92d2cfea9313e8858729b87
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jackie_Alway> ;
+        mtp:hasOffset           "130" ;
+        mtp:hasSimilarityScore  "0.9999911995787578" ;
+        mtp:hasTextEvidence     "Jackie Alway" .
+
+meetup:155bab8b907adce7994ab4ade578cf4c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Recognition in music industry" ;
+        mtp:hasEvidencePurposeSecond  "Personal achievement and surprise" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/63911101/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2019, in recognition of Alway’s contribution to the music industry and her efforts on behalf of creators and rights holders, Jackie Alway was appointed an OBE, Order of The Most Excellent Order of the British Empire in the Queen’s Birthday Honours." ;
+        mtp:hasParticipant   meetup:1b7de3fce92d2cfea9313e8858729b87 ;
+        mtp:hasPurpose       meetup:6b203bac971ab81e7fa44a74d0641043 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jackie_Alway> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/63911101/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jacqueline Alway OBE, professionally known as Jackie Alway, is a British-born music publishing executive." ;
+        mtp:hasParticipant   meetup:3915ebd2420e9e58e7efb8e7da323af8 , meetup:479678087ffd3f650ee56aeeb799b8b3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jackie_Alway> ;
+        mtp:hasType          "HM" .
+
+meetup:479678087ffd3f650ee56aeeb799b8b3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jackie_Alway> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "0.9999911995787578" ;
+        mtp:hasTextEvidence     "Jackie Alway" .
+
+<http://w3id.org/polifonia/pilot/meetups/63911101/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2019, in recognition of Alway’s contribution to the music industry and her efforts on behalf of creators and rights holders, Jackie Alway was appointed an OBE, Order of The Most Excellent Order of the British Empire in the Queen’s Birthday Honours. Upon receiving the OBE, she was quoted as saying, \"This is so unexpected and truly wonderful." ;
+        mtp:hasPurpose       meetup:155bab8b907adce7994ab4ade578cf4c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jackie_Alway> ;
+        mtp:hasType          "HT" .
+
+meetup:6b203bac971ab81e7fa44a74d0641043
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999917" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.8100853e-07" ;
+        mtp:hasSourcePurpose          "ML" .

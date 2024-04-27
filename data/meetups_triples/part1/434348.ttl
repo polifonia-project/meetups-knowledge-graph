@@ -1,0 +1,89 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:4e16bd32990ecd7909e668631acbae0e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7968746" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19022012" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jackie_Wilson>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/434348/14/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1964, Mary Wells was our big, big artist, I don't think there's any audience with an age of 30 through 50 that doesn't know the words to My Guy." ;
+        mtp:hasParticipant   meetup:e48569a1bef9d0cf4d7ece5ef3121e0d ;
+        mtp:hasPurpose       meetup:4e16bd32990ecd7909e668631acbae0e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mary_Wells> ;
+        mtp:hasType          "HT" .
+
+meetup:0ae95a8c62fa3580ae0cd63ce1ad0fc0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Singing and performing at nightclubs" ;
+        mtp:hasEvidencePurposeSecond  "Career change to music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:07468caf3c45b515e81a1e9068894449
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Wells' personal life" ;
+        mtp:hasEvidencePurposeSecond  "Wells' early years and education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:af2a4c0dcac68f44106dfcd6e33f4fa1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jackie_Wilson> ;
+        mtp:hasOffset           "182" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Jackie Wilson" .
+
+<http://dbpedia.org/resource/Mary_Wells>
+        rdf:type  core:Person .
+
+meetup:e48569a1bef9d0cf4d7ece5ef3121e0d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mary_Wells> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9999989321957532" ;
+        mtp:hasTextEvidence     "Mary Wells" .
+
+<http://w3id.org/polifonia/pilot/meetups/434348/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wells used singing as her comfort from her pain and by age 10 had graduated from church choirs to performing at local nightclubs in the Detroit area. Wells graduated from Detroit's Northwestern High School at the age of 17 and set her sights on becoming a scientist, but after hearing about the success of Detroit musicians such as Jackie Wilson and the Miracles, she decided to try her hand at music as a singer-songwriter." ;
+        mtp:hasParticipant   meetup:af2a4c0dcac68f44106dfcd6e33f4fa1 ;
+        mtp:hasPurpose       meetup:0ae95a8c62fa3580ae0cd63ce1ad0fc0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mary_Wells> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/434348/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During her early years, Wells lived in Black Bottom and struggled with poverty. By age 12, she was helping her mother with house cleaning work." ;
+        mtp:hasPurpose       meetup:07468caf3c45b515e81a1e9068894449 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mary_Wells> ;
+        mtp:hasType          "HT" .

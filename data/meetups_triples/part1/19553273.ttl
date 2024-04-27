@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/S._P._Venkatesh>
+        rdf:type  core:Person .
+
+meetup:362a615772186041e4bc774590a9a01e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9989008" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00060976413" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/19553273/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "S. P. Venkatesh (also credited as Sangeetharajan; born 5 March 1955) is an Indian musical director and composer who primarily works in Malayalam films." ;
+        mtp:hasParticipant   meetup:b0ce3678ed1d6423d2ca23018ce925f5 , meetup:8c2462e21323d20190fbe114e5f02dec ;
+        mtp:hasPurpose       meetup:362a615772186041e4bc774590a9a01e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/S._P._Venkatesh> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Venkatesh_Harinathan>
+        rdf:type  core:Person .
+
+meetup:8c2462e21323d20190fbe114e5f02dec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/S._P._Venkatesh> ;
+        mtp:hasOffset           "34" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sangeetharajan" .
+
+meetup:b0ce3678ed1d6423d2ca23018ce925f5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Venkatesh_Harinathan> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.999967619890194" ;
+        mtp:hasTextEvidence     "Venkatesh" .

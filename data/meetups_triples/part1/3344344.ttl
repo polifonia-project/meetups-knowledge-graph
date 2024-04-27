@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/3344344/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Burns was born in Conasauga, Tennessee on March 10, 1920. His family moved to Knoxville, Tennessee when he was three." ;
+        mtp:hasParticipant   meetup:2d7c43cdde56de9f96e77ec2f98d80b6 ;
+        mtp:hasPurpose       meetup:0cb97e60314494e8f2b33f74b2aece7e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kenneth_C._%22Jethro%22_Burns> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Kenneth_C._%22Jethro%22_Burns>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Burns_(musician)>
+        rdf:type  core:Person .
+
+meetup:2d7c43cdde56de9f96e77ec2f98d80b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Burns_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Burns" .
+
+meetup:0cb97e60314494e8f2b33f74b2aece7e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about someone's education" ;
+        mtp:hasSourcePurpose          "LLM" .

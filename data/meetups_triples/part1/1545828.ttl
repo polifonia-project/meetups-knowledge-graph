@@ -1,0 +1,88 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1545828/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Harvey John Andrews (born 7 May 1943 in Stechford, Birmingham) is an English singer-songwriter and poet. Andrews has produced 16 albums singing his own songs, many of which have also been recorded by other artists." ;
+        mtp:hasPurpose       meetup:e6c6006395577097d6605d6543e62a20 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harvey_Andrews> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1545828/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Go Play Up Your Own End has been well received across the Midlands, especially in its production in 2006 featuring Jasper Carrot in a major role, but has yet to make the transfer to London. The musical has played at the Birmingham Repertory Theatre, the Birmingham Hippodrome and the Alexandra Theatre, thus setting a record of having been staged at every one of the second city's major theatres." ;
+        mtp:hasPurpose       meetup:6eaa8a9c888c9314623148a71f0840d8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harvey_Andrews> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:5dfd0f980d10fdd499efc55ae372dd92
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999547" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.4684585e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:70092c2d810ec4bdade8d7afb70ed1a2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Les_Barker> ;
+        mtp:hasOffset           "86" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Les Barker" .
+
+<http://w3id.org/polifonia/pilot/meetups/1545828/30/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Life (Haska Music 2014)Harvey Andrews was referenced (presumably with his consent) by Les Barker's Mrs Ackroyd Band on the album Tubular Dogs, in the song \"The Harvey Andrews Chorus\", using the music of Handel's \"Hallelujah Chorus\"." ;
+        mtp:hasParticipant   meetup:70092c2d810ec4bdade8d7afb70ed1a2 , meetup:deada832bbc37c35ce9e86ffea9da85b ;
+        mtp:hasPurpose       meetup:5dfd0f980d10fdd499efc55ae372dd92 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harvey_Andrews> ;
+        mtp:hasType          "HM" .
+
+meetup:e6c6006395577097d6605d6543e62a20
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Singer-songwriter and poet" ;
+        mtp:hasEvidencePurposeSecond  "Biographical information" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6eaa8a9c888c9314623148a71f0840d8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a well-received musical production" ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the record of being staged at major theatres" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Harvey_Andrews>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Les_Barker>
+        rdf:type  core:Person .
+
+meetup:deada832bbc37c35ce9e86ffea9da85b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Harvey_Andrews> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Harvey Andrews" .

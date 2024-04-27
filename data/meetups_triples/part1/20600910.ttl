@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/20600910/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jean-Pierre Emile Boeres (1890–1944) was a Luxembourg composer, organist and choir master." ;
+        mtp:hasParticipant   meetup:dbb45364b0bebe840e62708660878bf6 ;
+        mtp:hasPurpose       meetup:3cc8c481d46ffd5d04cfb6c62476d6ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emile_Boeres> ;
+        mtp:hasType          "HT" .
+
+meetup:dbb45364b0bebe840e62708660878bf6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emile_Boeres> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Emile Boeres" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Emile_Boeres>
+        rdf:type  core:Person .
+
+meetup:3cc8c481d46ffd5d04cfb6c62476d6ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Composer and choir master" ;
+        mtp:hasEvidencePurposeSecond  "Organist and music education" ;
+        mtp:hasSourcePurpose          "LLM" .

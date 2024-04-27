@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/660753/20/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Best of the Red Garland Quintets (Prestige, 2004)" ;
+        mtp:hasParticipant   meetup:d07f8d8f84e848d4118dac551fe9d652 ;
+        mtp:hasPurpose       meetup:2a52045a0f99e5b3d17c69aa5bc9d7a4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Red_Garland> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/660753/42/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Curtis Fuller with Red Garland (Prestige, 1957)With" ;
+        mtp:hasParticipant   meetup:2ced5cfbcdb45d73d92518b8a74179f7 , meetup:b1702905625284013efcba3237db27bf ;
+        mtp:hasPurpose       meetup:81ab5b3d64f8b3caffa7f73e840d80e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Red_Garland> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2ced5cfbcdb45d73d92518b8a74179f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Red_Garland> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Red Garland" .
+
+meetup:b1702905625284013efcba3237db27bf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Curtis_Fuller> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Curtis Fuller" .
+
+<http://dbpedia.org/resource/Red_Garland>
+        rdf:type  core:Person .
+
+meetup:d07f8d8f84e848d4118dac551fe9d652
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Red_Garland> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Red Garland" .
+
+meetup:2a52045a0f99e5b3d17c69aa5bc9d7a4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8681387" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13183045" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Curtis_Fuller>
+        rdf:type  core:Person .
+
+meetup:81ab5b3d64f8b3caffa7f73e840d80e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9320836" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05291082" ;
+        mtp:hasSourcePurpose          "ML" .

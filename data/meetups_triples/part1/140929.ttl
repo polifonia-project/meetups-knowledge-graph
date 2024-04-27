@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/140929/12/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Webb had a featured role as a crime-lab technician in the 1948 film He Walked by Night, based on the real-life murder of a California Highway Patrolman by Erwin Walker. The film was produced in semidocumentary style with technical assistance provided by Detective Sergeant Marty Wynn of the Los Angeles Police Department (LAPD)." ;
+        mtp:hasParticipant   meetup:21c87229ad70d0b5e7620ee00d498498 ;
+        mtp:hasPurpose       meetup:607b218cfb019bc6e366ca7daedb1d26 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Webb> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:21c87229ad70d0b5e7620ee00d498498
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "104" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marty Wynn" .
+
+meetup:607b218cfb019bc6e366ca7daedb1d26
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a film production." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a real-life murder and technical assistance from the police." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Jack_Webb>
+        rdf:type  core:Person .
+
+meetup:8215a0fd4eaafad0cea3267fa6718c71
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Webb> ;
+        mtp:hasOffset           "125" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jack Webb" .
+
+<http://w3id.org/polifonia/pilot/meetups/140929/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Following his discharge, he moved to San Francisco, where a wartime shortage of announcers led to a temporary appointment to his own radio show on ABC's KGO Radio." ;
+        mtp:hasParticipant   meetup:8215a0fd4eaafad0cea3267fa6718c71 ;
+        mtp:hasPurpose       meetup:98d31e779ea63db4c85c8cf318ac00af ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Webb> ;
+        mtp:hasType          "HT" .
+
+meetup:98d31e779ea63db4c85c8cf318ac00af
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8567627" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.085802615" ;
+        mtp:hasSourcePurpose          "ML" .

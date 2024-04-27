@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:fec8a06fddcd08acf20ab48fa45ffcde
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9832524" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01671231" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Sophia_of_Hanover>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:33b73a8149ae6e0d0487c01ce3660e0a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998111" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0018876828" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/45082340/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was awarded a Grammy in 2004 for his work with Australian singer-songwriter Kylie." ;
+        mtp:hasParticipant   meetup:b361844b10d33fd88df8ceda7edae21f ;
+        mtp:hasPurpose       meetup:33b73a8149ae6e0d0487c01ce3660e0a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bruce_Elliott-Smith> ;
+        mtp:hasType          "HT" .
+
+meetup:b361844b10d33fd88df8ceda7edae21f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bruce_Elliott-Smith> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bruce Elliott-Smith" .
+
+<http://dbpedia.org/resource/Bruce_Elliott-Smith>
+        rdf:type  core:Person .
+
+meetup:707cabf636e9128bb91819a98008592a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sophia_of_Hanover> ;
+        mtp:hasOffset           "166" ;
+        mtp:hasSimilarityScore  "0.5035482697394497" ;
+        mtp:hasTextEvidence     "Sophia" .
+
+<http://w3id.org/polifonia/pilot/meetups/45082340/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also was the co-writer on the 2008 single \"I Can't Help Myself,\" which was a number-one Billboard Dance Airplay single for the British project Bellatrax featuring Sophia May." ;
+        mtp:hasParticipant   meetup:707cabf636e9128bb91819a98008592a , meetup:4a73b479870c4de3862024d8f949e0f8 ;
+        mtp:hasPurpose       meetup:fec8a06fddcd08acf20ab48fa45ffcde ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bruce_Elliott-Smith> ;
+        mtp:hasType          "HM" .
+
+meetup:4a73b479870c4de3862024d8f949e0f8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bruce_Elliott-Smith> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bruce Elliott-Smith" .

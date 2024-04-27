@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_Carroll_Kirby>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/67523753/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Carroll Kirby is an American pianist, record producer and composer based in Los Angeles, California, United States." ;
+        mtp:hasParticipant   meetup:abff9f87848f3f95aef30f1c794f8a04 ;
+        mtp:hasPurpose       meetup:a6d6c043027e90e894e3d12fd2472d06 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Carroll_Kirby> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:abff9f87848f3f95aef30f1c794f8a04
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Carroll_Kirby> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Carroll Kirby" .
+
+meetup:a6d6c043027e90e894e3d12fd2472d06
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9793185" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018498624" ;
+        mtp:hasSourcePurpose          "ML" .

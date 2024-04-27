@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:3e2cc49153f0e1891d508e0642b089e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Rockwell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Rockwell" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/17831410/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Rockwell (born May 1945 in Miami, Oklahoma) is a jazz saxophonist." ;
+        mtp:hasParticipant   meetup:3e2cc49153f0e1891d508e0642b089e0 ;
+        mtp:hasPurpose       meetup:a68c5374e43e04adc9ae7f24ab318247 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Rockwell> ;
+        mtp:hasType          "HT" .
+
+meetup:ceccb5a1cf9adecf0bac0b1524c46980
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90181106" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.097982734" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a68c5374e43e04adc9ae7f24ab318247
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999993" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.5993375e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/17831410/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born in the U.S. but emigrated to Denmark in 1983." ;
+        mtp:hasParticipant   meetup:8a4bb9a1dde1d856f0458a7a1ffdfdf6 ;
+        mtp:hasPurpose       meetup:ceccb5a1cf9adecf0bac0b1524c46980 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Rockwell> ;
+        mtp:hasType          "HT" .
+
+meetup:8a4bb9a1dde1d856f0458a7a1ffdfdf6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Rockwell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bob Rockwell" .
+
+<http://dbpedia.org/resource/Bob_Rockwell>
+        rdf:type  core:Person .

@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:2dad04524a4ea0dcd7f18b18a4f2022d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97343194" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011885338" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:01e91170a50dbe09b3ed491c19417593
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dionne_Farris> ;
+        mtp:hasOffset           "232" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dionne Farris" .
+
+<http://dbpedia.org/resource/Dionne_Farris>
+        rdf:type  core:Person .
+
+meetup:cbb86992410ede3f472f75b6925c83a6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Engaged in various forms of dance and singing" ;
+        mtp:hasEvidencePurposeSecond  "Participated in high school choir" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/801909/3/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She danced ballet, jazz, tap, and toe for 10 years, opting at 13 to sing instead. She sang in her high school's choir." ;
+        mtp:hasPurpose       meetup:cbb86992410ede3f472f75b6925c83a6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dionne_Farris> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/801909/16/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Farris released her official follow-up album Signs of Life  in (2011), named Top 10 soul albums of 2011, a mixtape Lady Dy, the Mixtape Pt 1 (2011) and a live jazz album Dionne Get Your Gunn: Featuring the Russell Gunn Quartet with Dionne Farris (2012) via PledgeMusic crowd funding on her own record label, Free & Clear Records." ;
+        mtp:hasParticipant   meetup:01e91170a50dbe09b3ed491c19417593 ;
+        mtp:hasPurpose       meetup:2dad04524a4ea0dcd7f18b18a4f2022d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dionne_Farris> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/13207457/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Clifford Smith (born 29 September 1974), better known as Mr. Vegas, is a Jamaican dancehall musician." ;
+        mtp:hasParticipant   meetup:263689b8e74903aab1308f4e3c71b729 ;
+        mtp:hasPurpose       meetup:14109a7300053bfd4707b707ab331ead ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mr._Vegas> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mr._Vegas>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:263689b8e74903aab1308f4e3c71b729
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mr._Vegas> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999919134464336" ;
+        mtp:hasTextEvidence     "Clifford Smith" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4d1aa950dea92dc0054d0a7506d66027
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Recognition for music achievements" ;
+        mtp:hasEvidencePurposeSecond  "Celebration of music success" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/13207457/7/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2012, Mr. Vegas received a MOBO Award nomination in the UK. Sweet Jamaica was named by Google Music as one of the 'Top 50 albums of 2012', endorsed by Complex Magazine in the 'Top 100 Albums of 2012' as well as appearing on the 'Best of 2012' in the reggae section of iTunes." ;
+        mtp:hasPurpose       meetup:4d1aa950dea92dc0054d0a7506d66027 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mr._Vegas> ;
+        mtp:hasType          "HT" .
+
+meetup:14109a7300053bfd4707b707ab331ead
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.65501904" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.33944377" ;
+        mtp:hasSourcePurpose          "ML" .

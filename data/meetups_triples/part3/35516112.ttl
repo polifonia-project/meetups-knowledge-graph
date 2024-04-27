@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:0cdcbc81a536316778d462a6f06d6c4e
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1993" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1993-01-01"^^xsd:date ;
+        time:hasEnd          "1993-12-31"^^xsd:date .
+
+meetup:e3e011a7ac8cd23a1811a1d37e739151
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "17 April 1967" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1967-04-17"^^xsd:date ;
+        time:hasEnd          "1967-04-17"^^xsd:date .
+
+<http://dbpedia.org/resource/Fazla>
+        rdf:type  core:Person .
+
+meetup:d2e4a21701fa82c2a76f46ffbdbe6fbe
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1993" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1993-01-01"^^xsd:date ;
+        time:hasEnd          "1993-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/35516112/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:e3e011a7ac8cd23a1811a1d37e739151 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Fazla> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/35516112/2/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:d2e4a21701fa82c2a76f46ffbdbe6fbe , meetup:0cdcbc81a536316778d462a6f06d6c4e ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Fazla> ;
+        mtp:hasType     "HT" .

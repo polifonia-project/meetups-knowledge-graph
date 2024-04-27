@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Art_Hirahara>
+        rdf:type  core:Person .
+
+meetup:da5671dea9251affd9fc7c950938c484
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6402836" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3578828" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/46246257/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Art Hirahara (born 1971) is an American jazz pianist and composer." ;
+        mtp:hasParticipant   meetup:5c5e692017ba2694115d63c568dd466f ;
+        mtp:hasPurpose       meetup:da5671dea9251affd9fc7c950938c484 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Art_Hirahara> ;
+        mtp:hasType          "HT" .
+
+meetup:5c5e692017ba2694115d63c568dd466f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Art_Hirahara> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999933068" ;
+        mtp:hasTextEvidence     "Art Hirahara" .

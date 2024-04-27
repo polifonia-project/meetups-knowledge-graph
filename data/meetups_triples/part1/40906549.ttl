@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:13575449deae757558fddb3d11e2b67d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90900135" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08954136" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3b181e10599fdaa34dd738907e8e4e31
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frans_Helmerson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Frans Helmerson" .
+
+<http://dbpedia.org/resource/Frans_Helmerson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/40906549/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Frans Helmerson (born 1945) is a Swedish cellist, pedagogue, and conductor." ;
+        mtp:hasParticipant   meetup:3b181e10599fdaa34dd738907e8e4e31 ;
+        mtp:hasPurpose       meetup:13575449deae757558fddb3d11e2b67d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frans_Helmerson> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .

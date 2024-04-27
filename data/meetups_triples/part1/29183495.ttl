@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:9ff006a9ca80f3283abba42b7963c30f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7617012" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11814821" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/29183495/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Clyde Lucas, who went on to form his own popular band in the 1930s and 1940s, started out as a singer and trombonist in the Herb Wiedoeft orchestra." ;
+        mtp:hasParticipant   meetup:438c474086004e3b189d2e385496974d ;
+        mtp:hasPurpose       meetup:9ff006a9ca80f3283abba42b7963c30f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Herb_Wiedoeft> ;
+        mtp:hasType          "HT" .
+
+meetup:438c474086004e3b189d2e385496974d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Herb_Wiedoeft> ;
+        mtp:hasOffset           "124" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Herb Wiedoeft" .
+
+<http://dbpedia.org/resource/Herb_Wiedoeft>
+        rdf:type  core:Person .

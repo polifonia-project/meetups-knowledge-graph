@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gary_G-Wiz>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6420043c530b8e831d37e34f323a7212
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_G-Wiz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gary Rinaldo" .
+
+<http://w3id.org/polifonia/pilot/meetups/12272719/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gary Rinaldo (born May 3, 1969), better known by the name Gary G-Wiz, is an American record producer and film score composer." ;
+        mtp:hasParticipant   meetup:6420043c530b8e831d37e34f323a7212 ;
+        mtp:hasPurpose       meetup:6d6a0f6f7e397b0eeb31c994de7644f3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_G-Wiz> ;
+        mtp:hasType          "HT" .
+
+meetup:6d6a0f6f7e397b0eeb31c994de7644f3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9963601" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.003359028" ;
+        mtp:hasSourcePurpose          "ML" .

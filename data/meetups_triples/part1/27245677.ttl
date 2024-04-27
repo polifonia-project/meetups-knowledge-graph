@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Paul_Cook>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ae74e74907dd36a83ed3526a66f8f480
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5628018" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4290814" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/27245677/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paul Thomas Cook (born 20 July 1956) is an English drummer and member of the punk rock band the Sex Pistols." ;
+        mtp:hasParticipant   meetup:55fdafa97cbc88eb219ea8a0a090047f ;
+        mtp:hasPurpose       meetup:387898b051b1099729636cc3858065e0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Cook> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/27245677/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Sex Pistols, including Paul Cook, played a gig for the 30th anniversary of Never Mind The Bollocks at the Brixton Academy on 8 November 2007." ;
+        mtp:hasParticipant   meetup:1a057ac776912806a826d5cb8bfc5fe9 ;
+        mtp:hasPurpose       meetup:ae74e74907dd36a83ed3526a66f8f480 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Cook> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:55fdafa97cbc88eb219ea8a0a090047f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Cook> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Paul Thomas Cook" .
+
+meetup:1a057ac776912806a826d5cb8bfc5fe9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Cook> ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Paul Cook" .
+
+meetup:387898b051b1099729636cc3858065e0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.937489" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04023446" ;
+        mtp:hasSourcePurpose          "ML" .

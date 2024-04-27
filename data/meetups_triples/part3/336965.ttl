@@ -1,0 +1,46 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:3ff9fb9dbbfa07aebdba5852627e5d7e
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "August 5 , 1902 – December 11 , 1963" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1902-08-05"^^xsd:date ;
+        time:hasEnd          "1963-12-11"^^xsd:date .
+
+meetup:4a3f762f2dd3f6034464bfdd48c29dc2
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1935" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1935-01-01"^^xsd:date ;
+        time:hasEnd          "1935-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/336965/4/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:4a3f762f2dd3f6034464bfdd48c29dc2 , meetup:d31cbcb92733efa5eca0bceb4d2b4d9c ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Luis_Russell> ;
+        mtp:hasType     "HT" .
+
+meetup:d31cbcb92733efa5eca0bceb4d2b4d9c
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the next eight years" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/336965/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:3ff9fb9dbbfa07aebdba5852627e5d7e ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Luis_Russell> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Luis_Russell>
+        rdf:type  core:Person .

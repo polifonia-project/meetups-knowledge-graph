@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:7e8b1b948fd1132762896ea6a3209d6f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Big_John_Wrencher> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Big John Wrencher" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/23985098/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Big John Wrencher (February 12, 1923 – July 15, 1977), also known as One Arm John, was an American blues harmonica player and singer, well known for playing at the Maxwell Street Market in Chicago in the 1960s." ;
+        mtp:hasParticipant   meetup:7d02f05369a7c9b3cb706522ca4f78e0 , meetup:7e8b1b948fd1132762896ea6a3209d6f ;
+        mtp:hasPurpose       meetup:0bc9d87e0d5d0bb42eda48ba422bb48e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Big_John_Wrencher> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7d02f05369a7c9b3cb706522ca4f78e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "69" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "One Arm John" .
+
+<http://dbpedia.org/resource/Big_John_Wrencher>
+        rdf:type  core:Person .
+
+meetup:91e333eaa48a338a2fc266fbfc6ae31b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Big_John_Wrencher> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Big John Wrencher" .
+
+<http://w3id.org/polifonia/pilot/meetups/23985098/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He toured Europe in the 1970s." ;
+        mtp:hasParticipant   meetup:91e333eaa48a338a2fc266fbfc6ae31b ;
+        mtp:hasPurpose       meetup:07eea6b5c7e5ec94538cbda75fe142bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Big_John_Wrencher> ;
+        mtp:hasType          "HT" .
+
+meetup:07eea6b5c7e5ec94538cbda75fe142bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7530086" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23705502" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0bc9d87e0d5d0bb42eda48ba422bb48e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Blues harmonica player" ;
+        mtp:hasEvidencePurposeSecond  "Known for performing in Chicago" ;
+        mtp:hasSourcePurpose          "LLM" .

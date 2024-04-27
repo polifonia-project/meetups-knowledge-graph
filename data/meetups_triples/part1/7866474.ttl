@@ -1,0 +1,92 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/7866474/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lee Ayumi (born on August 25, 1984), professionally known as Ayumi (previously Ahyoomee) in South Korea and Yumi Itō (previously ICONIQ) in Japan, is a Japanese-born South Korean singer, actress and entertainer based in Japan and South Korea." ;
+        mtp:hasParticipant   meetup:b8f70e67a1f0157594a20de8234289d2 , meetup:6bc1ea24379c275594f0e4dbb81b28bd ;
+        mtp:hasPurpose       meetup:e272b4ae265a4e67cd581bdc59ee0141 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lee_Ahyumi> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6bc1ea24379c275594f0e4dbb81b28bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cliff_Lee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.965738199384686" ;
+        mtp:hasTextEvidence     "Lee" .
+
+meetup:b8f70e67a1f0157594a20de8234289d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_Ahyumi> ;
+        mtp:hasOffset           "79" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ahyoomee" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Lee_Ahyumi>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/7866474/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band released two albums in Japan and three in South Korea, to only moderate commercial success." ;
+        mtp:hasParticipant   meetup:ce2990f853efe4b268d7ef3ef7ef7565 ;
+        mtp:hasPurpose       meetup:f3975ee6261a8de887c198348a10ad6e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lee_Ahyumi> ;
+        mtp:hasType          "HT" .
+
+meetup:f3975ee6261a8de887c198348a10ad6e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8112284" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.182299" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Cliff_Lee>
+        rdf:type  core:Person .
+
+meetup:ce2990f853efe4b268d7ef3ef7ef7565
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_Ahyumi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ahyoomee" .
+
+<http://w3id.org/polifonia/pilot/meetups/7866474/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lee Ayumi was born in Tottori, Japan on August 25, 1984 to a Korean mother from Chungcheong and a second-generation Zainichi Korean father. She lived in Japan until the age of 15 before moving to South Korea, later attending the Korea Kent Foreign School (ko)." ;
+        mtp:hasPurpose       meetup:d9965fbc01bfcd7e631a3877c8934064 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lee_Ahyumi> ;
+        mtp:hasType          "HT" .
+
+meetup:d9965fbc01bfcd7e631a3877c8934064
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about the person's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:e272b4ae265a4e67cd581bdc59ee0141
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Ayumi is a singer and entertainer" ;
+        mtp:hasEvidencePurposeSecond  "Ayumi has a Japanese and South Korean background" ;
+        mtp:hasSourcePurpose          "LLM" .

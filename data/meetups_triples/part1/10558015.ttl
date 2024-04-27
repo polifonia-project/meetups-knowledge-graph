@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/10558015/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He collaborated with a fellow composer, George Kleinsinger." ;
+        mtp:hasParticipant   meetup:072c6eec66adbab89109c597f3707c0b , meetup:d6818cc4c4be78f1b2a924f50075ff1f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Tripp> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:142f8ace30e611b91f475d92997f99f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Tripp> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Paul Tripp" .
+
+<http://w3id.org/polifonia/pilot/meetups/10558015/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paul Tripp (February 20, 1911 – August 29, 2002) was an American children's musician, author, songwriter, and television and film actor." ;
+        mtp:hasParticipant   meetup:142f8ace30e611b91f475d92997f99f9 ;
+        mtp:hasPurpose       meetup:9f55a6016cfe56299cf1ae73f4e0b6c9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Tripp> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Paul_Tripp>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/George_Kleinsinger>
+        rdf:type  core:Person .
+
+meetup:9f55a6016cfe56299cf1ae73f4e0b6c9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99933594" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00059275073" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:072c6eec66adbab89109c597f3707c0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Tripp> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Paul Tripp" .
+
+meetup:d6818cc4c4be78f1b2a924f50075ff1f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Kleinsinger> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "0.999999999999872" ;
+        mtp:hasTextEvidence     "George Kleinsinger" .

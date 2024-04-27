@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1994923/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jimmy Lyons (December 1, 1931 – May 19, 1986) was an American alto saxophone player." ;
+        mtp:hasParticipant   meetup:a6674341d8fb376b1e00dfaa1b6da89e ;
+        mtp:hasPurpose       meetup:ffa49be59101c101bd08c55bdae8ae05 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Lyons> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e54c22f2dc08198d36d20b408e19209f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charlie_Parker> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "0.9999999999992326" ;
+        mtp:hasTextEvidence     "Charlie Parker" .
+
+meetup:a6674341d8fb376b1e00dfaa1b6da89e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Lyons> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999950115975414" ;
+        mtp:hasTextEvidence     "Jimmy Lyons" .
+
+<http://dbpedia.org/resource/Charlie_Parker>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Jimmy_Lyons>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1994923/0/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lyons' playing, influenced by Charlie Parker, kept Taylor's avant-garde music tethered to the jazz tradition." ;
+        mtp:hasParticipant   meetup:e54c22f2dc08198d36d20b408e19209f , meetup:6b5fbe857d26c909baa779a25497a36c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Lyons> ;
+        mtp:hasType          "HM" .
+
+meetup:6b5fbe857d26c909baa779a25497a36c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Lyons> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jimmy Lyons" .
+
+meetup:ffa49be59101c101bd08c55bdae8ae05
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.71297646" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2717444" ;
+        mtp:hasSourcePurpose          "ML" .

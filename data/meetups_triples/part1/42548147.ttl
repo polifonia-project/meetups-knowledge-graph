@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:6797638e2d57fff6b3b4abcad6111aaa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.82427466" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.088431716" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5545f00800f8c6b958430b471901d66b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dakota_Bradley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999998104272" ;
+        mtp:hasTextEvidence     "Dakota Bradley" .
+
+<http://w3id.org/polifonia/pilot/meetups/42548147/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dakota Bradley (born in St. Louis, Missouri) was the stage name of American pop rock singer and songwriter, Lenny Pey." ;
+        mtp:hasParticipant   meetup:5545f00800f8c6b958430b471901d66b , meetup:4970746cf787b47113e97c6ec88c40f1 ;
+        mtp:hasPurpose       meetup:6797638e2d57fff6b3b4abcad6111aaa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dakota_Bradley> ;
+        mtp:hasType          "HM" .
+
+meetup:4970746cf787b47113e97c6ec88c40f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "108" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lenny Pey" .
+
+<http://dbpedia.org/resource/Dakota_Bradley>
+        rdf:type  core:Person .

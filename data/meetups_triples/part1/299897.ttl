@@ -1,0 +1,105 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/299897/18/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On June 25, 2019, The New York Times Magazine listed Martha Reeves among hundreds of artists whose material was reportedly destroyed in the 2008 Universal fire." ;
+        mtp:hasParticipant   meetup:c1fc9b40945df9eb51563393db213703 ;
+        mtp:hasPurpose       meetup:50dc12c4a371b26fd365c0e78f1b9cb7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martha_Reeves> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Rosalind_Ashford>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/299897/16/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In August 2016, Martha Reeves and the Vandellas were presented in concert at London's Hippodrome, where various Motown artists recorded live albums in the 1960s and 1970s." ;
+        mtp:hasParticipant   meetup:de3c7456b974eaaad6bea53adb3896ab ;
+        mtp:hasPurpose       meetup:c8117759a2700d8b198fd8f27606462b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martha_Reeves> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/299897/10/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1972, after Motown moved from Detroit to Los Angeles, Reeves negotiated out of her contract, ending her tenure with the label. In 1989, Martha, Rosalind Ashford, and Annette Beard filed a lawsuit against Motown Records for royalties on the group's records not received since 1972." ;
+        mtp:hasParticipant   meetup:77d637e6c8c12840c1e03088f32a1b5b , meetup:9148bfe730f2b7e43a2c5a6d662d240c ;
+        mtp:hasPurpose       meetup:2b0483b727cc55f0ad280bcb44f6b511 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martha_Reeves> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Martha_Reeves>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:50dc12c4a371b26fd365c0e78f1b9cb7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8113092" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18602312" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:77d637e6c8c12840c1e03088f32a1b5b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rosalind_Ashford> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rosalind Ashford" .
+
+meetup:2b0483b727cc55f0ad280bcb44f6b511
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Related to the music industry" ;
+        mtp:hasEvidencePurposeSecond  "Legal dispute with a record label" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c8117759a2700d8b198fd8f27606462b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.52169716" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4780666" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:de3c7456b974eaaad6bea53adb3896ab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martha_Reeves> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Martha Reeves" .
+
+<http://dbpedia.org/resource/Annette_Beard>
+        rdf:type  core:Person .
+
+meetup:c1fc9b40945df9eb51563393db213703
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martha_Reeves> ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Martha Reeves" .
+
+meetup:9148bfe730f2b7e43a2c5a6d662d240c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Annette_Beard> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Annette Beard" .

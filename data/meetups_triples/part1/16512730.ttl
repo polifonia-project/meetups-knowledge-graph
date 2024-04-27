@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/16512730/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was at John Adams that he met Lenny Kravitz who was just beginning to study music." ;
+        mtp:hasParticipant   meetup:4f336ea8bb144b61bff848ff463d2825 , meetup:564a79d8e499d80e7f81105b11b46159 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_LeMans> ;
+        mtp:hasType          "HM" .
+
+meetup:4f336ea8bb144b61bff848ff463d2825
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lenny_Kravitz> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lenny Kravitz" .
+
+<http://dbpedia.org/resource/Lenny_Kravitz>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/16512730/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tony LeMans grew up, Tony MansFortier in Santa Monica, California, United States." ;
+        mtp:hasParticipant   meetup:c3c68f5075be6bc1ccb50c319ce1e33e , meetup:6a54102124600d8d86e4858b2825e2e3 ;
+        mtp:hasPurpose       meetup:a64f4e684dd2298de00430adcde242ef ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_LeMans> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:c3c68f5075be6bc1ccb50c319ce1e33e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tony MansFortier" .
+
+meetup:a64f4e684dd2298de00430adcde242ef
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999838" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.368638e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6a54102124600d8d86e4858b2825e2e3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tony_LeMans> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tony LeMans" .
+
+meetup:564a79d8e499d80e7f81105b11b46159
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tony_LeMans> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tony LeMans" .
+
+<http://dbpedia.org/resource/Tony_LeMans>
+        rdf:type  core:Person .

@@ -1,0 +1,63 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Steve_Isaacs>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Sven_Aggesen>
+        rdf:type  core:Person .
+
+meetup:96b0b2c645798561b5351acd449c8118
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Isaacs formed a band in Los Angeles" ;
+        mtp:hasEvidencePurposeSecond  "Isaacs relocated to Los Angeles" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Fidel_Castro>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/37886672/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Isaacs relocated in 1995 to Los Angeles to focus on music. In the fall of 1995, he formed the band Skycycle, which consisted of bassist Kelly Castro, guitarist Sven Shenar, and drummer Rob Brown." ;
+        mtp:hasParticipant   meetup:5ddc82db081a6837860650bccae06877 , meetup:ccd5efe1f58bdeac8efa34f128781353 , meetup:60e0682d7fec382ca4d94e0d095e427e ;
+        mtp:hasPurpose       meetup:96b0b2c645798561b5351acd449c8118 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Isaacs> ;
+        mtp:hasType          "HT" .
+
+meetup:60e0682d7fec382ca4d94e0d095e427e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sven_Aggesen> ;
+        mtp:hasOffset           "101" ;
+        mtp:hasSimilarityScore  "0.5042728572712928" ;
+        mtp:hasTextEvidence     "Sven" .
+
+meetup:ccd5efe1f58bdeac8efa34f128781353
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kelly_Osbourne> ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "0.991179524349714" ;
+        mtp:hasTextEvidence     "Kelly" .
+
+meetup:5ddc82db081a6837860650bccae06877
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fidel_Castro> ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "0.7982819848728027" ;
+        mtp:hasTextEvidence     "Castro" .
+
+<http://dbpedia.org/resource/Kelly_Osbourne>
+        rdf:type  core:Person .

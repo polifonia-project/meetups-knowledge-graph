@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/28716903/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "as part of AholaSolo (as Jarkko Ahola)" ;
+        mtp:hasParticipant   meetup:65efa0bbc4a539b60e0c8686dbf5d5fc , meetup:80827a39da1a460fafac2ba8b4653b0a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jarkko_Ahola> ;
+        mtp:hasType          "HM" .
+
+meetup:80827a39da1a460fafac2ba8b4653b0a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "AholaSolo" .
+
+<http://dbpedia.org/resource/Jarkko_Ahola>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/28716903/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jarkko Kalevi Ahola  (born 24 August 1977, in Toijala) is a performing artist, a composer and a singer. He is the vocalist and bass player and one of the three songwriters of the band Teräsbetoni." ;
+        mtp:hasPurpose       meetup:ea7cfa5c4fa062f2f047466f2c441d61 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jarkko_Ahola> ;
+        mtp:hasType          "HT" .
+
+meetup:ea7cfa5c4fa062f2f047466f2c441d61
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Jarkko Ahola is a performing artist and singer" ;
+        mtp:hasEvidencePurposeSecond  "Jarkko Ahola is a composer and bass player" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:65efa0bbc4a539b60e0c8686dbf5d5fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jarkko_Ahola> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jarkko Ahola" .

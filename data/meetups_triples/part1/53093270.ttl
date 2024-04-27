@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:01dad271d2c8bebc2f1ccd97d8b8f2bb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mitchel Van Dinther" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Jameszoo>
+        rdf:type  core:Person .
+
+meetup:da77ac59a5c774d791fcda58d1fc3dd3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9882682" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011582173" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4739bdb99b2ff7f4b7d6c684dd06101b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jameszoo> ;
+        mtp:hasOffset           "52" ;
+        mtp:hasSimilarityScore  "0.7523396668447232" ;
+        mtp:hasTextEvidence     "Jameszoo" .
+
+<http://w3id.org/polifonia/pilot/meetups/53093270/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mitchel Van Dinther, better known by his stage name Jameszoo, is a record producer from 's-Hertogenbosch, Netherlands." ;
+        mtp:hasParticipant   meetup:4739bdb99b2ff7f4b7d6c684dd06101b , meetup:01dad271d2c8bebc2f1ccd97d8b8f2bb ;
+        mtp:hasPurpose       meetup:da77ac59a5c774d791fcda58d1fc3dd3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jameszoo> ;
+        mtp:hasType          "HM" .

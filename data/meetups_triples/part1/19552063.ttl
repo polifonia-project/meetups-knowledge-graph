@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Zdzisław_Jachimecki>
+        rdf:type  core:Person .
+
+meetup:3ab1df06925bed19b59632d1fafa4dc6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Zdzisław_Jachimecki> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "0.9418656623767536" ;
+        mtp:hasTextEvidence     "Jachimecki" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/19552063/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Zdzisław Jachimecki (Lwów, 7 July 1882 – 27 October 1953, Kraków) was a Polish historian of music, composer, professor at the Jagiellonian University and the Kraków Music Academy, and member of the Polish Academy of Learning." ;
+        mtp:hasParticipant   meetup:3ab1df06925bed19b59632d1fafa4dc6 ;
+        mtp:hasPurpose       meetup:2b7fe9e4939c279e5cbba71b81951420 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zdzisław_Jachimecki> ;
+        mtp:hasType          "HT" .
+
+meetup:2b7fe9e4939c279e5cbba71b81951420
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999994" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.8991484e-07" ;
+        mtp:hasSourcePurpose          "ML" .

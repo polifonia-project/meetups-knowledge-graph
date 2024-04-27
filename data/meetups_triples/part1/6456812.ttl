@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/6456812/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tom Snow  (Capitol, 1976)" ;
+        mtp:hasParticipant   meetup:aceb43d52dcf548692195d1750bed4e8 ;
+        mtp:hasPurpose       meetup:a1d126eced9531a09797634a753fa1a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Snow> ;
+        mtp:hasType          "HT" .
+
+meetup:aceb43d52dcf548692195d1750bed4e8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Snow> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999639044" ;
+        mtp:hasTextEvidence     "Tom Snow" .
+
+meetup:56e0ad958c1d07a68466356bdb96bdf2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9936098" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0059954766" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6456812/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tom Snow was a member of the band Country, which released a sole album on Clean Records, a subsidiary of Atlantic Records in 1971." ;
+        mtp:hasParticipant   meetup:9806cbad26e7ed2e3533d9f3210f62c6 ;
+        mtp:hasPurpose       meetup:56e0ad958c1d07a68466356bdb96bdf2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Snow> ;
+        mtp:hasType          "HT" .
+
+meetup:a1d126eced9531a09797634a753fa1a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9956346" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0043530683" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Tom_Snow>
+        rdf:type  core:Person .
+
+meetup:9806cbad26e7ed2e3533d9f3210f62c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Snow> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "Tom Snow" .

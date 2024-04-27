@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Francis_John_Byrne>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1af42af7555ec7ee5695f40eed637ca9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "156" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aisling Drury Byrne" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Harry_White_(musicologist)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/63527571/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Harry White was born in Dublin to Frank White (1926–2013) and Sheila, née Danaher (1928–1988), the joint eldest (with twin brother, John) of six children. He received his early musical training at the Municipal School of Music, Dublin and at the Royal Irish Academy of Music (RIAM), where he studied cello with Aisling Drury Byrne." ;
+        mtp:hasParticipant   meetup:1af42af7555ec7ee5695f40eed637ca9 , meetup:4b46590fc07aa72f09875abc3510378f ;
+        mtp:hasPurpose       meetup:e46bd1caeff3b86e2e7069aad95c3a3b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harry_White_(musicologist)> ;
+        mtp:hasType          "HT" .
+
+meetup:e46bd1caeff3b86e2e7069aad95c3a3b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Harry White received musical training" ;
+        mtp:hasEvidencePurposeSecond  "He studied cello at RIAM" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:4b46590fc07aa72f09875abc3510378f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Francis_John_Byrne> ;
+        mtp:hasOffset           "170" ;
+        mtp:hasSimilarityScore  "0.8812434336787198" ;
+        mtp:hasTextEvidence     "Byrne" .

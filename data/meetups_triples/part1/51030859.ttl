@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:57bf7c36fe682e1cfddaedcb0e07a986
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sawai Miku" .
+
+meetup:fa624f7968d1229479deeca06af27065
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Miku Sawai is a Japanese musician" ;
+        mtp:hasEvidencePurposeSecond  "She is from Osaka" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/51030859/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She made her debut as a professional artist in 2011 with the release of her first single \"Atashi, Kyō, Shitsuren Shimashita\"." ;
+        mtp:hasParticipant   meetup:88620aa4e0266153fa875033103e7a0f ;
+        mtp:hasPurpose       meetup:d811fd68766132a3f56ac8e16f307508 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miku_Sawai> ;
+        mtp:hasType          "HT" .
+
+meetup:88620aa4e0266153fa875033103e7a0f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miku_Sawai> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Miku Sawai" .
+
+<http://dbpedia.org/resource/Miku_Sawai>
+        rdf:type  core:Person .
+
+meetup:2c0146e22c10b3b4945b18b7a0b311cb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miku_Sawai> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Miku Sawai" .
+
+<http://w3id.org/polifonia/pilot/meetups/51030859/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Miku Sawai (沢井 美空, Sawai Miku, born September 16, 1993) is a Japanese musician from Osaka who is signed to Sony Music Entertainment Japan." ;
+        mtp:hasParticipant   meetup:57bf7c36fe682e1cfddaedcb0e07a986 , meetup:2c0146e22c10b3b4945b18b7a0b311cb ;
+        mtp:hasPurpose       meetup:fa624f7968d1229479deeca06af27065 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miku_Sawai> ;
+        mtp:hasType          "HM" .
+
+meetup:d811fd68766132a3f56ac8e16f307508
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.3854674e-09" ;
+        mtp:hasSourcePurpose          "ML" .

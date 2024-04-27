@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/J._R._Monterose>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5243a10da4364411901458a59f4ff5a1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about music performances and recordings." ;
+        mtp:hasEvidencePurposeSecond  "There is no indication of a business meeting in the sentence." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/14384316/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The last decade and a half of Monterose's life was spent at upstate New York venues, including the Lark Tavern in Albany. Live recordings at the Lark and other upstate New York venues such as Opus 40, have been released by Croscrane Records." ;
+        mtp:hasPurpose       meetup:5243a10da4364411901458a59f4ff5a1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/J._R._Monterose> ;
+        mtp:hasType          "HT" .

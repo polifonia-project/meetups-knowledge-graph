@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:b5610d6563dd4d5bfcb06fc9174e61a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Ridel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kevin Ridel" .
+
+<http://dbpedia.org/resource/Kevin_Ridel>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18649412/12/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cuomo was AM Radio's manager, and the band toured the United States and Japan with Cuomo's band Weezer. In 2001 after signing to Elektra records AM Radio released the album Radioactive." ;
+        mtp:hasPurpose       meetup:ecff6ef7c56d7c344d2c5261bb44e462 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Ridel> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/18649412/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kevin Ridel is an American musician and songwriter most notable for being the lead singer and primary songwriter of 90s powerpop band Ridel High (A&M Records) and 2000s alternative rock band AM Radio (Elektra Records)." ;
+        mtp:hasParticipant   meetup:b5610d6563dd4d5bfcb06fc9174e61a6 ;
+        mtp:hasPurpose       meetup:ee74ec5b155ef78ba0251e66eb7e2b4e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Ridel> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ecff6ef7c56d7c344d2c5261bb44e462
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Cuomo's involvement in music as a manager and band member" ;
+        mtp:hasEvidencePurposeSecond  "Signing to Elektra records and releasing an album" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ee74ec5b155ef78ba0251e66eb7e2b4e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9417908" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.043306783" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Wayne_Wonder>
+        rdf:type  core:Person .
+
+meetup:2abeca3f10da41bfd99bc949ca50db69
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97935164" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.020640751" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3e03cd13b0486252fbba0f0235bd21b3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.65113133" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29790324" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a4696e0b5d3cc55788986a2641ae742c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wayne_Wonder> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Wayne Wonder" .
+
+<http://w3id.org/polifonia/pilot/meetups/1804285/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His most popular single is the 2003 hit \"No Letting Go\"." ;
+        mtp:hasParticipant   meetup:a4696e0b5d3cc55788986a2641ae742c ;
+        mtp:hasPurpose       meetup:3e03cd13b0486252fbba0f0235bd21b3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wayne_Wonder> ;
+        mtp:hasType          "HT" .
+
+meetup:3f8fc3ce1710129af2ecdb3d248f1121
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wayne_Wonder> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wayne Wonder" .
+
+<http://w3id.org/polifonia/pilot/meetups/1804285/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Von Wayne Charles (born 26 July 1972), better known by his stage name Wayne Wonder, is a Jamaican reggae artist." ;
+        mtp:hasParticipant   meetup:3f8fc3ce1710129af2ecdb3d248f1121 , meetup:897fd2c5ff8d6983fe642bfbc4fc8891 ;
+        mtp:hasPurpose       meetup:2abeca3f10da41bfd99bc949ca50db69 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wayne_Wonder> ;
+        mtp:hasType          "HM" .
+
+meetup:897fd2c5ff8d6983fe642bfbc4fc8891
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Von Wayne Charles" .

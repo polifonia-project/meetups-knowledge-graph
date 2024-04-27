@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b8fa4433f8302ef1ab1adc1a7f2cef3b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8515697" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10151886" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7cfe67ed065e22302f9231d9f7f42ed9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mayor_McCA> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999678219571366" ;
+        mtp:hasTextEvidence     "Mayor McCa" .
+
+meetup:7313c2e6acd7c13b1252ba59e85af4d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chase_Anderson> ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "0.6634147382587874" ;
+        mtp:hasTextEvidence     "Anderson" .
+
+<http://w3id.org/polifonia/pilot/meetups/11824322/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mayor McCa currently lives and performs in London, England." ;
+        mtp:hasParticipant   meetup:d05e43178b3ed083c5b55c989f0dfe0a ;
+        mtp:hasPurpose       meetup:b8fa4433f8302ef1ab1adc1a7f2cef3b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mayor_McCA> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Chase_Anderson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/11824322/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mayor McCa (born Christian Anderson Smith) is a Canadian musician, writer, cartoonist, animator, actor and onetime mayoral candidate from Hamilton, Ontario." ;
+        mtp:hasParticipant   meetup:7cfe67ed065e22302f9231d9f7f42ed9 , meetup:7313c2e6acd7c13b1252ba59e85af4d4 , meetup:83ffbab2aa323a089b847b2dc9f67e7d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mayor_McCA> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Mayor_McCA>
+        rdf:type  core:Person .
+
+meetup:d05e43178b3ed083c5b55c989f0dfe0a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mayor_McCA> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999678219571224" ;
+        mtp:hasTextEvidence     "Mayor McCa" .
+
+meetup:83ffbab2aa323a089b847b2dc9f67e7d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Christian Anderson Smith" .

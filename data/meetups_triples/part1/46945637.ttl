@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d56585eba566c9d5ab5da2cb608e5a28
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about someone's educational background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:8b477749563aa458d354ca17e1eb3989
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yuuka_Yano> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999890461028" ;
+        mtp:hasTextEvidence     "Yuuka Yano" .
+
+meetup:4732af032b9fc56ee1e97b47f0eeae56
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Yano Yūka" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/46945637/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yuuka Yano (矢野 優花, Yano Yūka, born January 6, 1998, in Miyazaki Prefecture) is a Japanese actress." ;
+        mtp:hasParticipant   meetup:4732af032b9fc56ee1e97b47f0eeae56 , meetup:8b477749563aa458d354ca17e1eb3989 ;
+        mtp:hasPurpose       meetup:d56585eba566c9d5ab5da2cb608e5a28 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuuka_Yano> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Yuuka_Yano>
+        rdf:type  core:Person .

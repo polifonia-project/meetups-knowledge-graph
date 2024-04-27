@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Bobby_Sherwood>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b4f20d414ade3558683b58a517067742
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Sherwood> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999531" ;
+        mtp:hasTextEvidence     "Bobby Sherwood" .
+
+<http://w3id.org/polifonia/pilot/meetups/7980344/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bobby Sherwood began playing banjo with that group when he was 12 years old." ;
+        mtp:hasParticipant   meetup:b4f20d414ade3558683b58a517067742 ;
+        mtp:hasPurpose       meetup:6ecb818d5a691fc8a80538529f8d3863 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bobby_Sherwood> ;
+        mtp:hasType          "HT" .
+
+meetup:6ecb818d5a691fc8a80538529f8d3863
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9985488" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013961865" ;
+        mtp:hasSourcePurpose          "ML" .

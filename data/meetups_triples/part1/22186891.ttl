@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/22186891/2/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brendan Reed was an early member of Arcade Fire, joining the band in 2001." ;
+        mtp:hasParticipant   meetup:c8fc01471b8b3e208c7f29a9d52686b1 ;
+        mtp:hasPurpose       meetup:91f0e7112fc625559123fbe010604fd6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brendan_Reed> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/22186891/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brendan Reed is an American multi-instrumentalist, composer, artist, and film-maker from Williamsburg, Virginia known for his short films, recordings, compositions, and performances with numerous bands from Montreal, Quebec and Williamsburg, Virginia." ;
+        mtp:hasParticipant   meetup:b2ffee50167d29b35ec0e34a201bf51e ;
+        mtp:hasPurpose       meetup:9fe080c7d6b076e60d0f22ed5178410d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brendan_Reed> ;
+        mtp:hasType          "HT" .
+
+meetup:c8fc01471b8b3e208c7f29a9d52686b1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brendan_Reed> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brendan Reed" .
+
+meetup:9fe080c7d6b076e60d0f22ed5178410d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8779953" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.057280805" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b2ffee50167d29b35ec0e34a201bf51e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brendan_Reed> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brendan Reed" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Brendan_Reed>
+        rdf:type  core:Person .
+
+meetup:91f0e7112fc625559123fbe010604fd6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7984724" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14108634" ;
+        mtp:hasSourcePurpose          "ML" .

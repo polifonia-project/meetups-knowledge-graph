@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/17717333/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Henry Ellis Stewart (May 27, 1923 – August 2, 2003), better known as Redd Stewart, was an American country music songwriter and recording artist who co-wrote \"Tennessee Waltz\" with Pee Wee King in 1948." ;
+        mtp:hasParticipant   meetup:239128683df4cde15b8c7c69748d59b6 , meetup:60d3f386c1746bb82e0d68b08d83ed43 ;
+        mtp:hasPurpose       meetup:413761780af3e3b4001078d538750e35 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Redd_Stewart> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:413761780af3e3b4001078d538750e35
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9917065" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0035458358" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Redd_Stewart>
+        rdf:type  core:Person .
+
+meetup:60d3f386c1746bb82e0d68b08d83ed43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Redd_Stewart> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Redd Stewart" .
+
+meetup:239128683df4cde15b8c7c69748d59b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pee_Wee_King> ;
+        mtp:hasOffset           "183" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pee Wee King" .
+
+<http://dbpedia.org/resource/Pee_Wee_King>
+        rdf:type  core:Person .

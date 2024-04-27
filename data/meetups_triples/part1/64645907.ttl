@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:aa7b8e980043a939887ef1ff977e7f79
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ufland" .
+
+<http://w3id.org/polifonia/pilot/meetups/64645907/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ufland was born in Manhattan on March 12, 1936. He was raised in the uptown neighborhood of Washington Heights, Manhattan." ;
+        mtp:hasParticipant   meetup:aa7b8e980043a939887ef1ff977e7f79 ;
+        mtp:hasPurpose       meetup:a2c8222d72273d97be924673eeae222b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harry_J._Ufland> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Harry_J._Ufland>
+        rdf:type  core:Person .
+
+meetup:a2c8222d72273d97be924673eeae222b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Ufland's birth and upbringing" ;
+        mtp:hasEvidencePurposeSecond  "Information about Ufland's education" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Jack_Schaeffer>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/9027274/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jack Schaeffer (born March 19, 1946 in Los Angeles, California) is an American musician." ;
+        mtp:hasParticipant   meetup:ffa5a0e7e2179ff4b9f9d5c61df6905b ;
+        mtp:hasPurpose       meetup:8fa618e163332036405c0da075d9bf7f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Schaeffer> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:8fa618e163332036405c0da075d9bf7f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9884996" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009667177" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ffa5a0e7e2179ff4b9f9d5c61df6905b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Schaeffer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999949523" ;
+        mtp:hasTextEvidence     "Jack Schaeffer" .

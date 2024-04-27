@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:aa26d7ff7e6252a2ae9a07709f0a5a27
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999831" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.0103621e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a5d18da2cb968f65cbdb05a395f258b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blanche_Winogron> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999986409920464" ;
+        mtp:hasTextEvidence     "Blanche Winogron" .
+
+<http://w3id.org/polifonia/pilot/meetups/13807826/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Blanche Winogron (May 8, 1911 – November 22, 2002) was an American harpsichordist, pianist, virginalist, and teacher." ;
+        mtp:hasParticipant   meetup:a5d18da2cb968f65cbdb05a395f258b6 ;
+        mtp:hasPurpose       meetup:aa26d7ff7e6252a2ae9a07709f0a5a27 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blanche_Winogron> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Blanche_Winogron>
+        rdf:type  core:Person .

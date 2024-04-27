@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Brigitte_Engerer>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e05b6b0256d52d581482273c96311ac3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99771607" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010954918" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:73820496101694834f918c1a5e912bb9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andrea_Quinn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Andrea Quinn" .
+
+meetup:a4d070b4c676c9caa665dc3b1137b260
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andrea_Quinn> ;
+        mtp:hasOffset           "122" ;
+        mtp:hasSimilarityScore  "0.9999999998034356" ;
+        mtp:hasTextEvidence     "Andrea Quin" .
+
+<http://w3id.org/polifonia/pilot/meetups/55934392/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andrea Quinn (born 1964) is an English conductor." ;
+        mtp:hasParticipant   meetup:73820496101694834f918c1a5e912bb9 ;
+        mtp:hasPurpose       meetup:e05b6b0256d52d581482273c96311ac3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andrea_Quinn> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Andrea_Quinn>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/55934392/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Camille Saint-Saëns, Piano concertos n°2 and n°5, Brigitte Engerer, piano - Ensemble orchestral de Paris, conducted by Andrea Quin." ;
+        mtp:hasParticipant   meetup:a4d070b4c676c9caa665dc3b1137b260 , meetup:d5e4a47c4d3c668df8548b24e2a42a11 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andrea_Quinn> ;
+        mtp:hasType          "HM" .
+
+meetup:d5e4a47c4d3c668df8548b24e2a42a11
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brigitte_Engerer> ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brigitte Engerer" .

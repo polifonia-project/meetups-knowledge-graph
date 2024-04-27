@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a122bb90e71f486c74cb29f71e7ea5da
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions enrolling in a school" ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions an earthquake devastating Guatemala City" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:82080d9106d1a73104accbe129b91c96
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "105" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mario Cozzi" .
+
+<http://w3id.org/polifonia/pilot/meetups/36092723/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1928, Sandoval married Fedora Cozzi, who was originally from Florence, Italy. Cozzi was well connected with Italian musical circles in New York and was the sister of famous musician, Mario Cozzi." ;
+        mtp:hasParticipant   meetup:82080d9106d1a73104accbe129b91c96 ;
+        mtp:hasPurpose       meetup:d0bf5df51c6b4f8042a4933b3c1b6537 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miguel_Sandoval_(composer)> ;
+        mtp:hasType          "HT" .
+
+meetup:d0bf5df51c6b4f8042a4933b3c1b6537
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Marriage to a musician's sister" ;
+        mtp:hasEvidencePurposeSecond  "Personal relationship and family" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Miguel_Sandoval_(composer)>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:dac54854713c32814ff9273a8d0c08bb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Fray Cabrera" .
+
+<http://w3id.org/polifonia/pilot/meetups/36092723/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1917, an earthquake devastated Guatemala City, leaving buildings in rubble and thousands of Guatemalans homeless. All schools in Guatemala City were closed, so with the help of Fray Cabrera, Sandoval enrolled in St. John's College, a Jesuit school in the neighboring city of Belice." ;
+        mtp:hasParticipant   meetup:dac54854713c32814ff9273a8d0c08bb ;
+        mtp:hasPurpose       meetup:a122bb90e71f486c74cb29f71e7ea5da ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miguel_Sandoval_(composer)> ;
+        mtp:hasType          "HT" .

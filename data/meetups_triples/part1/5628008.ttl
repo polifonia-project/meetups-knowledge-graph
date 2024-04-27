@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/5628008/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Petr Svoboda (born February 14, 1966) is a Czech former professional ice hockey defenceman who played 17 seasons in the National Hockey League (NHL) for the Montreal Canadiens, Buffalo Sabres, Philadelphia Flyers and Tampa Bay Lightning." ;
+        mtp:hasParticipant   meetup:8e554a23f97f791954c745930cd5858d ;
+        mtp:hasPurpose       meetup:64df5c59117d2771fdc55accf2cbdf70 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Petr_Svoboda> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/5628008/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1984, Svoboda had participated in the world Under-18 ice hockey championships in then-West Germany as a part of the Czechoslovak team, and after playing one game, he defected to the West in order to play hockey at a higher professional level. That spring, he was selected fifth overall in the 1984 NHL Entry Draft by the Montreal Canadiens." ;
+        mtp:hasPurpose       meetup:929a56a5bf2afde5108c2dc8ca370fb9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Petr_Svoboda> ;
+        mtp:hasType          "HT" .
+
+meetup:64df5c59117d2771fdc55accf2cbdf70
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87325174" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06617008" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8e554a23f97f791954c745930cd5858d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Petr_Svoboda> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Petr Svoboda" .
+
+meetup:929a56a5bf2afde5108c2dc8ca370fb9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Details about an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Involvement in sports and hockey" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Petr_Svoboda>
+        rdf:type  core:Person .

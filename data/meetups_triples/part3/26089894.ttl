@@ -1,0 +1,35 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://dbpedia.org/resource/Harry_Brauner>
+        rdf:type  core:Person .
+
+meetup:9f27e2c981e40d421e885c3695bce1eb
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "24 February 1908" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1908-02-24"^^xsd:date ;
+        time:hasEnd          "1908-02-24"^^xsd:date .
+
+meetup:706f2b85c2748971226b213f68f72d60
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "11 March 1988" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1988-03-11"^^xsd:date ;
+        time:hasEnd          "1988-03-11"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/26089894/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:706f2b85c2748971226b213f68f72d60 , meetup:9f27e2c981e40d421e885c3695bce1eb ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Harry_Brauner> ;
+        mtp:hasType     "HT" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1fa761121a9f63030f74992f1988c1e4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Relocation and political opposition" ;
+        mtp:hasEvidencePurposeSecond  "Student activism and imprisonment" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1901795/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In July 1975, Mándoki, along with Gábor Csupó (the creator of Rugrats) and others, fled from Hungary to Munich, West Germany to avoid prosecution by the communist regime for being a member of the student opposition. He had been imprisoned 17 times for his political opposition before he fled into the West." ;
+        mtp:hasParticipant   meetup:8a9127534426eb65a1301831a84e2901 ;
+        mtp:hasPurpose       meetup:1fa761121a9f63030f74992f1988c1e4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leslie_Mándoki> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Leslie_Mándoki>
+        rdf:type  core:Person .
+
+meetup:8a9127534426eb65a1301831a84e2901
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mándoki" .

@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/22150203/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Conrad Johan Bartholdy  (12 March 1853 – 6 December 1904) was a Danish organist, composer, singing teacher, conductor and author of music theory books." ;
+        mtp:hasParticipant   meetup:71626171842fe89ca30e1f670df2ea16 , meetup:b44a97296d793484f75195d8525eff57 ;
+        mtp:hasPurpose       meetup:2a5729613e4b98fd419e392a8ab668e7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johan_Bartholdy> ;
+        mtp:hasType          "HM" .
+
+meetup:71626171842fe89ca30e1f670df2ea16
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johan_Bartholdy> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9999986949951551" ;
+        mtp:hasTextEvidence     "Johan Bartholdy" .
+
+meetup:2a5729613e4b98fd419e392a8ab668e7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95385575" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03139436" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b44a97296d793484f75195d8525eff57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joseph_Conrad> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.937032970040625" ;
+        mtp:hasTextEvidence     "Conrad" .
+
+<http://dbpedia.org/resource/Joseph_Conrad>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Johan_Bartholdy>
+        rdf:type  core:Person .

@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/William_Ackerman>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2865593/34/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2006: Pure Will Ackerman (Windham Hill)" ;
+        mtp:hasParticipant   meetup:1b050e893fe6c119a565ec902fb63b44 ;
+        mtp:hasPurpose       meetup:01b9b691cd5f700e78213f947808b7ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_Ackerman> ;
+        mtp:hasType          "HT" .
+
+meetup:1b050e893fe6c119a565ec902fb63b44
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Ackerman> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Will Ackerman" .
+
+<http://w3id.org/polifonia/pilot/meetups/2865593/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "William Ackerman (born November 16, 1949) is an American guitarist and record producer who founded Windham Hill Records." ;
+        mtp:hasParticipant   meetup:f71781cf9ad38849f7ecfeb4a10a020d ;
+        mtp:hasPurpose       meetup:874a4d7a6eca7e9cded0fc4746b5b252 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_Ackerman> ;
+        mtp:hasType          "HT" .
+
+meetup:01b9b691cd5f700e78213f947808b7ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9082015" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.090236984" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:874a4d7a6eca7e9cded0fc4746b5b252
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9989938" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00081797055" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f71781cf9ad38849f7ecfeb4a10a020d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Ackerman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "William Ackerman" .

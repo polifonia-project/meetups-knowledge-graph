@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:f4ff32e5c4509dd3fe1e2bb7a8d46c06
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.53648806" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.46277896" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5a8fc1c58bf032c78d6a2f5d51e8facc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "134" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Saylors" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/9784258/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Haggerty (born October 17, 1960, Chicago) is an influential Chicago guitarist." ;
+        mtp:hasParticipant   meetup:87bbb6188357811a196648f959addfeb ;
+        mtp:hasPurpose       meetup:b3e9ade7fae95c1b94c2d4083e48446c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Haggerty> ;
+        mtp:hasType          "HT" .
+
+meetup:b3e9ade7fae95c1b94c2d4083e48446c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9336477" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.058005374" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/John_Haggerty>
+        rdf:type  core:Person .
+
+meetup:fd228dd329ee3c78b6d20062736545ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Haggerty> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Haggerty" .
+
+meetup:87bbb6188357811a196648f959addfeb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Haggerty> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999997726" ;
+        mtp:hasTextEvidence     "John Haggerty" .
+
+<http://w3id.org/polifonia/pilot/meetups/9784258/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A key member of Naked Raygun during their heyday (1983–1989), Haggerty formed the band Pegboy, with brother Joe Haggerty on drums and Steve Saylors (bass) and Larry Damore (vocals) of the Bhopal Stiffs, upon leaving Naked Raygun." ;
+        mtp:hasParticipant   meetup:6d8c36cea93245150e60a611fab1be80 , meetup:fd228dd329ee3c78b6d20062736545ff , meetup:5a8fc1c58bf032c78d6a2f5d51e8facc ;
+        mtp:hasPurpose       meetup:f4ff32e5c4509dd3fe1e2bb7a8d46c06 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Haggerty> ;
+        mtp:hasType          "HM" .
+
+meetup:6d8c36cea93245150e60a611fab1be80
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Haggerty> ;
+        mtp:hasOffset           "110" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joe Haggerty" .
+
+<http://dbpedia.org/resource/Joe_Haggerty>
+        rdf:type  core:Person .

@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Anthony_C._Lund>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:21f798ec07df1df4c89584a546aeba1f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the transformation of a department into a school of music." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the role of the head of the music department." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/13484025/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Under his direction it was changed from being a department to being a school of music in 1901. He continued as head of the music department after the school became Brigham Young University." ;
+        mtp:hasPurpose       meetup:21f798ec07df1df4c89584a546aeba1f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anthony_C._Lund> ;
+        mtp:hasType          "HT" .

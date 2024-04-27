@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Noah>
+        rdf:type  core:Person .
+
+meetup:6b50005d389a7cbb9b26b7e52a79ca8b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98843" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004537272" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/35247492/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was an executive producer at Disney Television Animation for the Disney XD show Pickle and Peanut which he helped develop alongside the creator Noah Z. Jones." ;
+        mtp:hasParticipant   meetup:ff60576a9ab4ed220c5e050b09056d7b , meetup:06c266249964385f830fbd910c172176 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joel_Trussell> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Joel_Trussell>
+        rdf:type  core:Person .
+
+meetup:06c266249964385f830fbd910c172176
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Noah> ;
+        mtp:hasOffset           "147" ;
+        mtp:hasSimilarityScore  "0.9779434879019938" ;
+        mtp:hasTextEvidence     "Noah" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:e4785f5e0341748c32a13d94f749853c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joel_Trussell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999574" ;
+        mtp:hasTextEvidence     "Joel Trussell" .
+
+meetup:ff60576a9ab4ed220c5e050b09056d7b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joel_Trussell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joel Trussell" .
+
+<http://w3id.org/polifonia/pilot/meetups/35247492/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joel Trussell is a director and artist based in Los Angeles, California." ;
+        mtp:hasParticipant   meetup:e4785f5e0341748c32a13d94f749853c ;
+        mtp:hasPurpose       meetup:6b50005d389a7cbb9b26b7e52a79ca8b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joel_Trussell> ;
+        mtp:hasType          "HT" .

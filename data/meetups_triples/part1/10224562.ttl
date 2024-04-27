@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:6b5fb84eebac6c6ec0549ca33c641d09
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8722414" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11087314" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8af964d9beba12118a5f00d7e95f123a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Luther_Vandross> ;
+        mtp:hasOffset           "3" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Luther Vandross" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:b5c199eae3dc1cf1ec9dcbc16b97171e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9458441" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03849809" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/10224562/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Linda Clifford (born June 14, 1948) is an American R&B, disco and house music singer and actress, who scored hits from the 1970s to the 1980s, most notably \"If My Friends Could See Me Now\", \"Bridge over Troubled Water\", \"Runaway Love\" and \"Red Light\"." ;
+        mtp:hasParticipant   meetup:3451f246e8feddc1eb77b815a3edd72d ;
+        mtp:hasPurpose       meetup:b5c199eae3dc1cf1ec9dcbc16b97171e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Linda_Clifford> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/10224562/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A year later it was covered by Sister Sledge, in 1990 by Whitney Houston and in 1994 by Luther Vandross, under the name \"All the Woman That I Need\". On his album Songs, Vandross even credited Houston for being the \"artist who did the original version of the song\", forgetting that it was originally Clifford's song and that he was a background vocalist and the vocal arranger of her version." ;
+        mtp:hasParticipant   meetup:8af964d9beba12118a5f00d7e95f123a ;
+        mtp:hasPurpose       meetup:5d022bcee44b115f319829fde844fc50 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Linda_Clifford> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Linda_Clifford>
+        rdf:type  core:Person .
+
+meetup:5d022bcee44b115f319829fde844fc50
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence discusses different artists covering a song." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a mistake made by Luther Vandross in crediting Whitney Houston." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3451f246e8feddc1eb77b815a3edd72d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Linda_Clifford> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Linda Clifford" .
+
+<http://w3id.org/polifonia/pilot/meetups/10224562/3/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2001, she secured her fourth UK Singles Chart entry with \"Ride the Storm\", billed as Akabu featuring Linda Clifford." ;
+        mtp:hasParticipant   meetup:cf7a652256b16926106e7226bfa5d210 ;
+        mtp:hasPurpose       meetup:6b5fb84eebac6c6ec0549ca33c641d09 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Linda_Clifford> ;
+        mtp:hasType          "HT" .
+
+meetup:cf7a652256b16926106e7226bfa5d210
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Linda_Clifford> ;
+        mtp:hasOffset           "104" ;
+        mtp:hasSimilarityScore  "0.9999999999986358" ;
+        mtp:hasTextEvidence     "Linda Clifford" .
+
+<http://dbpedia.org/resource/Luther_Vandross>
+        rdf:type  core:Person .

@@ -1,0 +1,90 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a756fd212a1939fc4b4562150b006691
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.76136357" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22152992" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e97bb2954368316629c450985fb39548
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "102" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nicolás Lamadrid" .
+
+<http://w3id.org/polifonia/pilot/meetups/8891173/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jorge Cafrune was born in the estancia \"La Matilde\" of El Sunchal, Perico Del Carmen, Jujuy in a family of Syrian–Lebanese origin." ;
+        mtp:hasParticipant   meetup:03f8c0d7116311df8e21474cf033c123 ;
+        mtp:hasPurpose       meetup:a756fd212a1939fc4b4562150b006691 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jorge_Cafrune> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:d83113a38df95b26c27d668307f368ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9869287" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0130713135" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jorge_Cafrune>
+        rdf:type  core:Person .
+
+meetup:e695b1fb77a4fa72ad8e33e2505c84b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jorge_Cafrune> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jorge Cafrune" .
+
+meetup:03f8c0d7116311df8e21474cf033c123
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jorge_Cafrune> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jorge Cafrune" .
+
+<http://w3id.org/polifonia/pilot/meetups/8891173/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1977, after several years spent living in Spain, he returned to Argentina which was ruled at the time by the military dictatorship of Jorge Rafael Videla. The government saw a menace in Cafrune's outspoken music, particularly his politically controversial song Zamba de mi esperanza." ;
+        mtp:hasPurpose       meetup:342aa1902707812e38d9110a2b0f3ffb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jorge_Cafrune> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/8891173/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He completed his secondary studies in San Salvador de Jujuy, during which he took guitar classes with Nicolás Lamadrid." ;
+        mtp:hasParticipant   meetup:e97bb2954368316629c450985fb39548 , meetup:e695b1fb77a4fa72ad8e33e2505c84b6 ;
+        mtp:hasPurpose       meetup:d83113a38df95b26c27d668307f368ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jorge_Cafrune> ;
+        mtp:hasType          "HM" .
+
+meetup:342aa1902707812e38d9110a2b0f3ffb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Music and its impact on politics" ;
+        mtp:hasEvidencePurposeSecond  "Cafrune's life and experiences" ;
+        mtp:hasSourcePurpose          "LLM" .

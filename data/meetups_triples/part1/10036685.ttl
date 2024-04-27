@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/10036685/5/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "a Go Go Presents Billy Lee Riley, recorded live at the Whiskey a Go Go." ;
+        mtp:hasParticipant   meetup:058e45aafe7a0b5de7761cfaded48c36 ;
+        mtp:hasPurpose       meetup:22b19ecf2baa5132262b6688f492776e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Lee_Riley> ;
+        mtp:hasType          "HT" .
+
+meetup:39db68e8f5ec3649424d4b6cf7fe20e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Lee_Riley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Billy Lee Riley" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:22b19ecf2baa5132262b6688f492776e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90371615" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09594278" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:058e45aafe7a0b5de7761cfaded48c36
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Lee_Riley> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Billy Lee Riley" .
+
+<http://w3id.org/polifonia/pilot/meetups/10036685/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy Lee Riley (October 5, 1933 – August 2, 2009) was an American rockabilly musician, singer-songwriter, and record producer." ;
+        mtp:hasParticipant   meetup:39db68e8f5ec3649424d4b6cf7fe20e1 ;
+        mtp:hasPurpose       meetup:b18b6bc61a326461e7d128112dae783f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Lee_Riley> ;
+        mtp:hasType          "HT" .
+
+meetup:b18b6bc61a326461e7d128112dae783f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7853396" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.20155776" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Billy_Lee_Riley>
+        rdf:type  core:Person .

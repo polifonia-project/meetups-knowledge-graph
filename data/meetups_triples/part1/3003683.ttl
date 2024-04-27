@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Alex_Turner>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:5db900d2a4d24fca9e22953c517f0553
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Alexander Turner's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Information about his education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/3003683/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alexander David Turner was born in Sheffield on 6 January 1986, the only child of secondary school teachers Penny (née Druce) and David Turner. He was raised in Sheffield's High Green suburb." ;
+        mtp:hasPurpose       meetup:5db900d2a4d24fca9e22953c517f0553 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alex_Turner> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Zuzana_Růžičková>
+        rdf:type  core:Person .
+
+meetup:7f836269e1d8dd14a1acf136680d7f10
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Personal experiences and hardships" ;
+        mtp:hasEvidencePurposeSecond  "Learning from historical events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:470ac313ffce78b8d9ea9b0f9239d08a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Winning music competition" ;
+        mtp:hasEvidencePurposeSecond  "Restrictions on traveling together" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/2345066/13/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At the end of February, Růžičková and the other laborers were transported to Bergen-Belsen concentration camp. She later commented that \"if ever there was Hell, this was the lowest part of Hell." ;
+        mtp:hasParticipant   meetup:c278f9ad9dc00efd23b6e528f461d4ae ;
+        mtp:hasPurpose       meetup:7f836269e1d8dd14a1acf136680d7f10 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zuzana_Růžičková> ;
+        mtp:hasType          "HT" .
+
+meetup:c278f9ad9dc00efd23b6e528f461d4ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Růžičková" .
+
+meetup:849273aff78bdbc5a7bc539f28d6d2d3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Life in a camp" ;
+        mtp:hasEvidencePurposeSecond  "Unexpected event" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2345066/17/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1956 Růžičková won the ARD International Music Competition in Munich, and was offered a scholarship from jury member Marguerite Roesgen-Champion to continue her harpsichord studies in Paris. Kalabis was also invited to study in Paris, but the couple was not allowed to travel abroad together in case they defected." ;
+        mtp:hasPurpose       meetup:470ac313ffce78b8d9ea9b0f9239d08a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zuzana_Růžičková> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2345066/13/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They returned to the camp and woke the next morning to discover the Germans had gone. The guards had abandoned the camp, leaving no food, and had disconnected the water supply." ;
+        mtp:hasPurpose       meetup:849273aff78bdbc5a7bc539f28d6d2d3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zuzana_Růžičková> ;
+        mtp:hasType          "HT" .

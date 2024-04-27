@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a05751ae18b7c799bb124bfad2f224e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Discussion about tax implications" ;
+        mtp:hasEvidencePurposeSecond  "Contract with Houston Symphony" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/2190446/3/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He discovered that under the Internal Revenue Code he would have to declare income earned throughout the world in his US tax return as long as he spent more than 6 months residing in the United States. His contract with the Houston Symphony would have resulted in having his income becoming subject to prohibitive US tax rates." ;
+        mtp:hasParticipant   meetup:f757eeaa963eda23c662e960cd11a67d ;
+        mtp:hasPurpose       meetup:a05751ae18b7c799bb124bfad2f224e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ferenc_Fricsay> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Ferenc_Fricsay>
+        rdf:type  core:Person .
+
+meetup:f757eeaa963eda23c662e960cd11a67d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Fricsay" .
+
+meetup:36d3ab74e17ad1d9dd7d364aeef0d8f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.6645505e-09" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2882d85cbcd4cd49534255dd0e154518
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ferenc_Fricsay> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ferenc Fricsay" .
+
+<http://w3id.org/polifonia/pilot/meetups/2190446/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ferenc Fricsay (Hungarian pronunciation: [ˈfɛrɛnt͡s ˈfrit͡ʃɒi]; 9 August 1914 – 20 February 1963) was a Hungarian conductor." ;
+        mtp:hasParticipant   meetup:2882d85cbcd4cd49534255dd0e154518 ;
+        mtp:hasPurpose       meetup:36d3ab74e17ad1d9dd7d364aeef0d8f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ferenc_Fricsay> ;
+        mtp:hasType          "HT" .

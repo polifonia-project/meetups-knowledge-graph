@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Liz_Anderson>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1695348/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1957, the family moved to Sacramento, California. The limited popularity at the time of country music in California led Anderson to start writing songs." ;
+        mtp:hasParticipant   meetup:5a88512f61b451a6c405a3de5922a99f ;
+        mtp:hasPurpose       meetup:7ab70737f6fbf7e343551ffc11b3af03 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Liz_Anderson> ;
+        mtp:hasType          "HT" .
+
+meetup:7ab70737f6fbf7e343551ffc11b3af03
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating music" ;
+        mtp:hasEvidencePurposeSecond  "Individual experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Chase_Anderson>
+        rdf:type  core:Person .
+
+meetup:3527fdac2e6b1f6401f3a19bf45bab3c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Liz_Anderson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Liz Anderson" .
+
+<http://w3id.org/polifonia/pilot/meetups/1695348/17/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Liz Anderson Sings Her Favorites (1968)" ;
+        mtp:hasParticipant   meetup:3527fdac2e6b1f6401f3a19bf45bab3c ;
+        mtp:hasPurpose       meetup:7341ddc72d6dc7e2b1bed389cff54912 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Liz_Anderson> ;
+        mtp:hasType          "HT" .
+
+meetup:5a88512f61b451a6c405a3de5922a99f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chase_Anderson> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "0.8579840046169095" ;
+        mtp:hasTextEvidence     "Anderson" .
+
+meetup:7341ddc72d6dc7e2b1bed389cff54912
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92715394" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.061093662" ;
+        mtp:hasSourcePurpose          "ML" .

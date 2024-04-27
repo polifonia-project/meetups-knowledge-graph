@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f9db8a2fb62932554b049fffe9525879
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9542869" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.043840032" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:db5321b6a3bfb71ff77b8b50993ef6ef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Al Mohandis" .
+
+<http://w3id.org/polifonia/pilot/meetups/7980403/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Majid Al Mohandis Al-Attabi (Arabic: ماجد المهندس العتابي; born October 25, 1971) is an Iraqi-Saudi singer and composer." ;
+        mtp:hasParticipant   meetup:8301a21a8c237a6645de5f5894169297 ;
+        mtp:hasPurpose       meetup:f9db8a2fb62932554b049fffe9525879 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Majid_Al_Mohandis> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:c69fa5b3f1662283c5046d840ffbb52b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about the person's educational background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Majid_Al_Mohandis>
+        rdf:type  core:Person .
+
+meetup:8301a21a8c237a6645de5f5894169297
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Majid_Al_Mohandis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Majid Al Mohandis" .
+
+<http://w3id.org/polifonia/pilot/meetups/7980403/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Al Mohandis was born 25, October 1971 in Baghdad, Iraq. He studied Engineering in Baghdad, hence the nickname \"Al Mohandis (المهندس),\" which means \"the engineer\" in Arabic." ;
+        mtp:hasParticipant   meetup:db5321b6a3bfb71ff77b8b50993ef6ef ;
+        mtp:hasPurpose       meetup:c69fa5b3f1662283c5046d840ffbb52b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Majid_Al_Mohandis> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Mickey_Finn_(Irish_fiddler)>
+        rdf:type  core:Person .
+
+meetup:94595af7691f560c1aa22981fa135ef5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Playing music in traditional sessions" ;
+        mtp:hasEvidencePurposeSecond  "Influence on contemporary musicians" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Frankie_Gavin_(musician)>
+        rdf:type  core:Person .
+
+meetup:8d23f42dba140a184dbaca843ca57f82
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Participation in music competition" ;
+        mtp:hasEvidencePurposeSecond  "Individual achievements in music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:bc7056ca118671d635cd41854aad7475
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frankie_Gavin_(musician)> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "0.8161095215643999" ;
+        mtp:hasTextEvidence     "Frankie Gavin" .
+
+<http://w3id.org/polifonia/pilot/meetups/30944578/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Ballinrobe trio of Mickey (fiddle), along with Joe Heneghan (piano) and Seamus O'Malley (accordion) finished 2nd in the 1965 All-Ireland Fleadh Cheoil Finals (Under 14 Instrumental Trio) in Thurles. Mickey also came 3rd in Ireland (Under 14 Individual fiddle) at the same Fleadh Cheoil finals." ;
+        mtp:hasPurpose       meetup:8d23f42dba140a184dbaca843ca57f82 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mickey_Finn_(Irish_fiddler)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/30944578/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In Galway in 1970, Finn played in traditional music sessions, particularly at the Cellar Bar, and became popular for his rock/traditional/jazz fusion style, never playing a traditional tune exactly the same way twice. In an interview with Kevin McGuire in the Galway Advertiser, Frankie Gavin told of the Cellar Bar sessions, believing Finn to be an influence on contemporary musicians in Galway." ;
+        mtp:hasParticipant   meetup:bc7056ca118671d635cd41854aad7475 ;
+        mtp:hasPurpose       meetup:94595af7691f560c1aa22981fa135ef5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mickey_Finn_(Irish_fiddler)> ;
+        mtp:hasType          "HT" .

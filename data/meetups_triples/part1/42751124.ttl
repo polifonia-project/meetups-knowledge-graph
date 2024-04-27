@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/42751124/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was previously the president and chief operating officer of RCA Records." ;
+        mtp:hasParticipant   meetup:3c4f0931cd628163b07a41bdf8b62003 ;
+        mtp:hasPurpose       meetup:7899df39bc9c5a2aa86731291728fa5c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Corson> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3c4f0931cd628163b07a41bdf8b62003
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Corson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tom Corson" .
+
+meetup:4a15f97ad5909b35c07da0744bffbb78
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99852544" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001327152" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/42751124/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is the co-chairman and chief operating officer of Warner Records, a position he has held since January 2018." ;
+        mtp:hasParticipant   meetup:79ee344fa15b72466002766ef8910ae0 ;
+        mtp:hasPurpose       meetup:4a15f97ad5909b35c07da0744bffbb78 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Corson> ;
+        mtp:hasType          "HT" .
+
+meetup:7899df39bc9c5a2aa86731291728fa5c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9979752" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0011090357" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Tom_Corson>
+        rdf:type  core:Person .
+
+meetup:79ee344fa15b72466002766ef8910ae0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Corson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tom Corson" .

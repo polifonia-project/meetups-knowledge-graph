@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:8b22964c218f8c301045655059c374ba
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995925" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00014459236" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2e54504c1f6d47fc7cedf84965315504
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Reunion concert announcement" ;
+        mtp:hasEvidencePurposeSecond  "One-off concert in Dublin and London" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/185869/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sean O'Hagan (born 1959) is an Irish singer, songwriter, and arranger who leads the avant-pop band The High Llamas, which he founded in 1992." ;
+        mtp:hasParticipant   meetup:7b103de2cf2abf7ca0bfeea6254a3a21 ;
+        mtp:hasPurpose       meetup:8b22964c218f8c301045655059c374ba ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sean_O'Hagan> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/185869/2/11>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 27 November 2017, it was announced that O'Hagan and Coughlan would reform Microdisney for a one-off concert in the National Concert Hall, Dublin on 2 June 2018. Coughlan subsequently stated on his website that due to the sellout of the Dublin show, they would be performing a one-off in London as well." ;
+        mtp:hasPurpose       meetup:2e54504c1f6d47fc7cedf84965315504 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sean_O'Hagan> ;
+        mtp:hasType          "HT" .
+
+meetup:7b103de2cf2abf7ca0bfeea6254a3a21
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sean_O'Hagan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sean O'Hagan" .
+
+<http://dbpedia.org/resource/Sean_O'Hagan>
+        rdf:type  core:Person .

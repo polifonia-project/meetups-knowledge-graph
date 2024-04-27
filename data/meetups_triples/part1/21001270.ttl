@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:17961de5e56bb43bac88624df659fc41
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.47043917" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.45051643" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:24012e6d1359d2d61db6529104e680c9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The duo signing with RCA Records after a TV appearance" ;
+        mtp:hasEvidencePurposeSecond  "Joe Goday taking an interest in the song" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/21001270/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Bell Sisters were an American singing duo, popular in the 1950s, consisting of the sisters Cynthia and Kay Strother, who adopted their mother's maiden name of Bell." ;
+        mtp:hasParticipant   meetup:fe3b1cca86d48d1b9c33a29f91acbaa3 , meetup:dea75ad3df9856a02677d89c1bb5fb77 , meetup:983f8d05c1c1b4085ae6d553ef766fda ;
+        mtp:hasPurpose       meetup:17961de5e56bb43bac88624df659fc41 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/The_Bell_Sisters> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/The_Bell_Sisters>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:983f8d05c1c1b4085ae6d553ef766fda
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "107" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kay Strother" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Cynthia_Lennon>
+        rdf:type  core:Person .
+
+meetup:ef1f7692b1ad8d8ffdaae1d32c3884e9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joe `Happy' Goday" .
+
+meetup:fe3b1cca86d48d1b9c33a29f91acbaa3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cynthia_Lennon> ;
+        mtp:hasOffset           "95" ;
+        mtp:hasSimilarityScore  "0.900774688318976" ;
+        mtp:hasTextEvidence     "Cynthia" .
+
+<http://w3id.org/polifonia/pilot/meetups/21001270/1/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The duo were discovered and a week later signed by RCA Records after appearing on October 31, 1951 on local Los Angeles television program, \"Peter Potter's Search for a Song,\" singing \"Bermuda\", which was written by Cynthia, who had appeared as a solo artist twice before on the program, singing other self-penned compositions. But it was on October 31, 1951, that Joe `Happy' Goday, owner and founder of music publisher Goday Music took an interest in the song \"Bermuda\"." ;
+        mtp:hasParticipant   meetup:ef1f7692b1ad8d8ffdaae1d32c3884e9 ;
+        mtp:hasPurpose       meetup:24012e6d1359d2d61db6529104e680c9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/The_Bell_Sisters> ;
+        mtp:hasType          "HT" .
+
+meetup:dea75ad3df9856a02677d89c1bb5fb77
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/The_Bell_Sisters> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "The Bell Sisters" .

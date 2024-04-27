@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/1391458/22/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy Gilman (2006)Compilation albumsMy Time On Earth (2006)" ;
+        mtp:hasParticipant   meetup:eef764db18ffd154c02403c8e5bba569 ;
+        mtp:hasPurpose       meetup:d02fb1bc7ef1a808ac3b5aacd833be45 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Gilman> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:eef764db18ffd154c02403c8e5bba569
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Gilman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999961176228" ;
+        mtp:hasTextEvidence     "Billy Gilman" .
+
+<http://w3id.org/polifonia/pilot/meetups/1391458/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gilman was born on May 24, 1988, in Westerly, Rhode Island. He was raised in Hope Valley, Rhode Island, in the town of Richmond." ;
+        mtp:hasPurpose       meetup:c4e4384b2bd3b9b3dc2efb95b77350be ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Gilman> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Billy_Gilman>
+        rdf:type  core:Person .
+
+meetup:c4e4384b2bd3b9b3dc2efb95b77350be
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Gilman's birth and upbringing" ;
+        mtp:hasEvidencePurposeSecond  "Information about Gilman's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:d02fb1bc7ef1a808ac3b5aacd833be45
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9367785" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.063161194" ;
+        mtp:hasSourcePurpose          "ML" .

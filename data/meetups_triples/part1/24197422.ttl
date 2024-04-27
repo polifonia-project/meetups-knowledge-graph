@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/24197422/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ernest Fanelli (29 June 1860 – 24 November 1917) was a French composer of Italian descent who is best known for sparking a controversy about the origins of Impressionist music when his composition Tableaux symphoniques was first performed in 1912." ;
+        mtp:hasParticipant   meetup:e888b6ef12b8fef356b8b57e9b537278 ;
+        mtp:hasPurpose       meetup:6440c1d694efc16a0eb8841d4b9b1224 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ernest_Fanelli> ;
+        mtp:hasType          "HT" .
+
+meetup:d36eef0b9df0d7967f6a3403d7866cde
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ernest_Fanelli> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ernest Fanelli" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:e888b6ef12b8fef356b8b57e9b537278
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ernest_Fanelli> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ernest Fanelli" .
+
+<http://w3id.org/polifonia/pilot/meetups/24197422/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "George Antheil asserted that Fanelli was \"one of the greatest inventors and musical iconoclasts of all time\", but he remains an obscure figure." ;
+        mtp:hasParticipant   meetup:0abccd7d4aee37107e55ff118aabbc65 , meetup:d36eef0b9df0d7967f6a3403d7866cde ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ernest_Fanelli> ;
+        mtp:hasType          "HM" .
+
+meetup:0abccd7d4aee37107e55ff118aabbc65
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Antheil> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "George Antheil" .
+
+meetup:6440c1d694efc16a0eb8841d4b9b1224
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99965894" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00028032943" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Ernest_Fanelli>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/George_Antheil>
+        rdf:type  core:Person .

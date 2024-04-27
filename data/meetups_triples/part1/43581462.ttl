@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/43581462/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Melinda Maxwell (born 1953 in London) is an English oboist and composer." ;
+        mtp:hasParticipant   meetup:040ff6f7e3f987d49e711761f62c87d8 ;
+        mtp:hasPurpose       meetup:9a19357e8038889f6f1c789ef2a01021 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Melinda_Maxwell> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9a19357e8038889f6f1c789ef2a01021
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6096955" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.380262" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:040ff6f7e3f987d49e711761f62c87d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Melinda_Maxwell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Melinda Maxwell" .
+
+<http://dbpedia.org/resource/Melinda_Maxwell>
+        rdf:type  core:Person .

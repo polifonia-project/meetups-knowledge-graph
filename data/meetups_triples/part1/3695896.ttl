@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ab18ad239167da284f2a92b052dbb94c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joseph_Keilberth> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joseph Keilberth" .
+
+<http://w3id.org/polifonia/pilot/meetups/3695896/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joseph Keilberth (19 April 1908 – 20 July 1968) was a German conductor who specialised in opera." ;
+        mtp:hasParticipant   meetup:ab18ad239167da284f2a92b052dbb94c ;
+        mtp:hasPurpose       meetup:a29a521b574d7806fb743a495052e849 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joseph_Keilberth> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Joseph_Keilberth>
+        rdf:type  core:Person .
+
+meetup:a29a521b574d7806fb743a495052e849
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9865398" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013249732" ;
+        mtp:hasSourcePurpose          "ML" .

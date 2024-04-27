@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:6fb62cf1acb6953db55139d58dce2994
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9644172" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.032740567" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Anneke_van_Giersbergen>
+        rdf:type  core:Person .
+
+meetup:4b14c33d18020ec118437c308269d296
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anneke_van_Giersbergen> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Anneke van Giersbergen" .
+
+<http://w3id.org/polifonia/pilot/meetups/724473/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anna Maria van Giersbergen (born 8 March 1973), known artistically as Anneke van Giersbergen, is a Dutch singer, songwriter, guitarist and pianist who became known worldwide as the lead singer and songwriter for the Dutch band The Gathering, between 1994 and 2007." ;
+        mtp:hasParticipant   meetup:4b14c33d18020ec118437c308269d296 ;
+        mtp:hasPurpose       meetup:6fb62cf1acb6953db55139d58dce2994 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anneke_van_Giersbergen> ;
+        mtp:hasType          "HT" .

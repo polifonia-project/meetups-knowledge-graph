@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Mark_Collins_(musician)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/17116111/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mark Collins has three children: Ella (born 1998), Stanley (born 1999) and Lois (born 2003)." ;
+        mtp:hasParticipant   meetup:42fa686e36a091f58027308baadb1f73 , meetup:3ce37b03afbbdf43cb5eb2dddf5060b1 ;
+        mtp:hasPurpose       meetup:da36a1ceec5ccb9dbc0bccab0f55e4bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Collins_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:da36a1ceec5ccb9dbc0bccab0f55e4bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9956388" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.003998853" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:42fa686e36a091f58027308baadb1f73
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Ella> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "0.9127029553003724" ;
+        mtp:hasTextEvidence     "Ella" .
+
+<http://dbpedia.org/resource/Mark_Ella>
+        rdf:type  core:Person .
+
+meetup:3ce37b03afbbdf43cb5eb2dddf5060b1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Collins_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7431084204130615" ;
+        mtp:hasTextEvidence     "Mark Collins" .

@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Guitar>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/35696956/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bill Cheatham was a roadie for the original Stooges, and in 1970 joined the group on second guitar." ;
+        mtp:hasParticipant   meetup:865ac955d7d5fe668f14b525d5a482b9 , meetup:5025892608d26cf264db365f3cc48dbd ;
+        mtp:hasPurpose       meetup:e462eb9632566abf4aeba36c7a84b7e2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_Cheatham> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Bill_Cheatham>
+        rdf:type  core:Person .
+
+meetup:e462eb9632566abf4aeba36c7a84b7e2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9836092" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01187325" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5025892608d26cf264db365f3cc48dbd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Cheatham> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999173938566552" ;
+        mtp:hasTextEvidence     "Bill Cheatham" .
+
+meetup:865ac955d7d5fe668f14b525d5a482b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Guitar> ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "0.9908803100584344" ;
+        mtp:hasTextEvidence     "guitar" .

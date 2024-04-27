@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ca841339f712a6e86621864501ca66a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jay_DeMarcus> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jay DeMarcus" .
+
+meetup:ab6b0f7fa16b254d6823449b41ac0bd8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Stanley Wayne DeMarcus Jr." .
+
+<http://w3id.org/polifonia/pilot/meetups/4750440/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jay DeMarcus (born Stanley Wayne DeMarcus Jr.; on April 26, 1971) is an American bassist, vocalist, pianist, record producer and songwriter." ;
+        mtp:hasParticipant   meetup:ab6b0f7fa16b254d6823449b41ac0bd8 , meetup:ca841339f712a6e86621864501ca66a6 ;
+        mtp:hasPurpose       meetup:379ef098d5356736739c4985b8aa051c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jay_DeMarcus> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Jay_DeMarcus>
+        rdf:type  core:Person .
+
+meetup:379ef098d5356736739c4985b8aa051c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999464" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.306326e-06" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:7045a063559db4b3fd030ac8e1427821
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Her music career and achievements" ;
+        mtp:hasEvidencePurposeSecond  "Her personal life and car accident" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Belinda_Metz>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1456097/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Belinda Metz (born January 4, 1960) is a Canadian solo recording artist from the early to mid-1980s who has since gone into acting." ;
+        mtp:hasParticipant   meetup:7a1a56f68fc9bc8edcf9d73c6645a658 ;
+        mtp:hasPurpose       meetup:aaae21e095c9b9ce8a24af7950b206e9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Belinda_Metz> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1456097/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Signed to a recording contract in 1985 with Attic Records, she released a full-length album, Electric Splash, which contained her only hit single, \"What About Me\", and won her a \"Most Promising Female Vocalist\" award from the U-Knows, CFNY's listener's choice awards. In 1985 Metz was severely injured in a car accident." ;
+        mtp:hasPurpose       meetup:7045a063559db4b3fd030ac8e1427821 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Belinda_Metz> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:aaae21e095c9b9ce8a24af7950b206e9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.73759335" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26117417" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7a1a56f68fc9bc8edcf9d73c6645a658
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Belinda_Metz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Belinda Metz" .

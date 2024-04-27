@@ -1,0 +1,101 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1ddc1353d307fb4d976012bc03c7b80f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999905" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.0003117e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Chris_Grayston>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:94a679290dda88317061b982b98aa042
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6100231" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.38911253" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/31886679/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chris Grayston  (born 1971) is an English music promoter, event organizer, record producer, musician, label owner and talent scout." ;
+        mtp:hasParticipant   meetup:5df1f619cc655890024bc6819182fdd8 ;
+        mtp:hasPurpose       meetup:94a679290dda88317061b982b98aa042 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Grayston> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/31886679/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2007 Grayston organised and co-founded Live and Unsigned, an annual music competition for unsigned acts in the United Kingdom. He has   served as events director and head judge for the competition." ;
+        mtp:hasPurpose       meetup:3f7d53ff0704f73ec6dd98365f89cf74 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Grayston> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:885cfe02219d08c55ca00152c58dbe73
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Discovery of artists and their achievements" ;
+        mtp:hasEvidencePurposeSecond  "Recognition and celebration of their success" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6941b760f8e7eeac1a5b35351aeb1ccb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Grayston> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chris Grayston" .
+
+<http://w3id.org/polifonia/pilot/meetups/31886679/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Grayston discovered participant Josh Dubovie in 2008, who went on to represent the United Kingdom at the 2010 Eurovision Song Contest. In 2008 he also discovered Welsh indie/electronic band Kiddo360, which won the Grand Final and later went on to win a Vodafone Award." ;
+        mtp:hasPurpose       meetup:885cfe02219d08c55ca00152c58dbe73 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Grayston> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/31886679/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is currently employed as a music consultant including working for acts and record labels." ;
+        mtp:hasParticipant   meetup:6941b760f8e7eeac1a5b35351aeb1ccb ;
+        mtp:hasPurpose       meetup:1ddc1353d307fb4d976012bc03c7b80f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Grayston> ;
+        mtp:hasType          "HT" .
+
+meetup:5df1f619cc655890024bc6819182fdd8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Grayston> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chris Grayston" .
+
+meetup:3f7d53ff0704f73ec6dd98365f89cf74
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Organizing music competition" ;
+        mtp:hasEvidencePurposeSecond  "Co-founding Live and Unsigned" ;
+        mtp:hasSourcePurpose          "LLM" .

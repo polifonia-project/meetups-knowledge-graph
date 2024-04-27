@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:94aadd9b30fa425a39df0fb2a84bb9c0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chip_Davis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chip Davis" .
+
+<http://w3id.org/polifonia/pilot/meetups/582776/18/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chip Davis Presents: Renaissance Holiday (1998)As Mannheim Steamroller" ;
+        mtp:hasParticipant   meetup:94aadd9b30fa425a39df0fb2a84bb9c0 ;
+        mtp:hasPurpose       meetup:d14ba73625274bd01a2944100bf30a59 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chip_Davis> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:d14ba73625274bd01a2944100bf30a59
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98856455" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011425489" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Chip_Davis>
+        rdf:type  core:Person .

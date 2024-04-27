@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/39033514/18/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The name of the project was changed to The Uppercut : Matthew Shipp Mat Walerian duo during December 2013 concert tour, and a concert recording of the duo, Live at Okuden, has been released by New York City, Brooklyn based record label ESP-Disk' in April 2015." ;
+        mtp:hasParticipant   meetup:41c8ee0ea28a3f757c398cb9adb1fdfc , meetup:e6df02935cfa85c4206fc4394d1c9d42 ;
+        mtp:hasPurpose       meetup:0e7d98a8236695fa6bfdf7985463bd05 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mat_Walerian> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0e7d98a8236695fa6bfdf7985463bd05
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creating and performing music" ;
+        mtp:hasEvidencePurposeSecond  "Changing project name and releasing a concert recording" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:41c8ee0ea28a3f757c398cb9adb1fdfc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mat_Walerian> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mat Walerian" .
+
+<http://dbpedia.org/resource/Mat_Walerian>
+        rdf:type  core:Person .
+
+meetup:ae2c70d82b6a1f37b80287e6ed84c73c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mat_Walerian> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mat Walerian" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Matthew_Shipp>
+        rdf:type  core:Person .
+
+meetup:2515244a989cfe07c421a89db0ad080f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999959" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.001638e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e6df02935cfa85c4206fc4394d1c9d42
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matthew_Shipp> ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Matthew Shipp" .
+
+<http://w3id.org/polifonia/pilot/meetups/39033514/30/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2010 Mat Walerian started curating his own concert series, Okuden Music, described as \"sound to the deepest\", presenting the mainstream of modern jazz and improvised avant-garde music heritage." ;
+        mtp:hasParticipant   meetup:ae2c70d82b6a1f37b80287e6ed84c73c ;
+        mtp:hasPurpose       meetup:2515244a989cfe07c421a89db0ad080f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mat_Walerian> ;
+        mtp:hasType          "HT" .

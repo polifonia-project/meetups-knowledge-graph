@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Heinrich_Ehrlich>
+        rdf:type  core:Person .
+
+meetup:dbe1f998b00d4368ed9b831bd268abfd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alfred Heinrich Ehrlich" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:eda429896d0d72c195acd04e27b8ec53
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Heinrich_Ehrlich> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Heinrich Ehrlich" .
+
+<http://w3id.org/polifonia/pilot/meetups/42655902/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alfred Heinrich Ehrlich (5 October 1822, in Vienna – 30 December 1899, in Berlin) was a pianist, composer and writer on music." ;
+        mtp:hasParticipant   meetup:dbe1f998b00d4368ed9b831bd268abfd , meetup:eda429896d0d72c195acd04e27b8ec53 ;
+        mtp:hasPurpose       meetup:080a9fa60064363bd98728b94f1c9603 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Heinrich_Ehrlich> ;
+        mtp:hasType          "HM" .
+
+meetup:080a9fa60064363bd98728b94f1c9603
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Alfred Heinrich Ehrlich was a pianist and composer." ;
+        mtp:hasEvidencePurposeSecond  "He also wrote about music." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .

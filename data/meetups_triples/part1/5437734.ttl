@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Elias_Breeskin>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:53d5b45137dc6e3156ede5ecf2be27e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Information about Elias' birth and background" ;
+        mtp:hasEvidencePurposeSecond  "Mention of the city where a famous film scene was shot" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d5f215bd0e9ce2ce7215b9ec748e7580
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elias_Breeskin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elias Breeskin" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:95ac7ea15e08852c8d409239dfcde1fa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996043" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0003438623" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/5437734/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Elias was born on October 25, 1895 in Yekaterinoslav (now Dnipropetrovsk),  a small village in the Yekaterinoslav Governorate of the Russian Empire, now part of Ukraine, which has now morphed into the industrial city of Dnipropetrovsk, with over a million inhabitants. The dam on the Dneiper River, shown on the film Doctor Zhivago, is in this city." ;
+        mtp:hasPurpose       meetup:53d5b45137dc6e3156ede5ecf2be27e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elias_Breeskin> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/5437734/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Elias Breeskin (Russian: Элиас Бреескин; Ukrainian: Еліас Бреескін; 1896 – May 9, 1969) was a violinist, composer and conductor." ;
+        mtp:hasParticipant   meetup:d5f215bd0e9ce2ce7215b9ec748e7580 ;
+        mtp:hasPurpose       meetup:95ac7ea15e08852c8d409239dfcde1fa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elias_Breeskin> ;
+        mtp:hasType          "HT" .

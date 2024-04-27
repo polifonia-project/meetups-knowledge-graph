@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Robbert_Vos>
+        rdf:type  core:Person .
+
+meetup:143d7efeb5770c09cfb0762177c5b59f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9866632" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011849553" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/40399445/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robbert Vos (born 1986), is a euphonium soloist, Besson artist, conductor and tutor from the Netherlands." ;
+        mtp:hasParticipant   meetup:54f05f4ceebeee95c5d6d9dd22d67fea ;
+        mtp:hasPurpose       meetup:143d7efeb5770c09cfb0762177c5b59f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robbert_Vos> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:54f05f4ceebeee95c5d6d9dd22d67fea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robbert_Vos> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999646197189" ;
+        mtp:hasTextEvidence     "Robbert Vos" .

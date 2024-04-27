@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/4004079/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steven Karidoyanes (born November 5, 1957, Boston, Massachusetts to Michael and Tula Karidoyanes) is an American composer, broadcaster and conductor with the Plymouth Philharmonic Orchestra." ;
+        mtp:hasParticipant   meetup:a8d63544efdc669f699793d8e56458ec ;
+        mtp:hasPurpose       meetup:cacdf58748ff79fcafbf5c8a20d87adc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steven_Karidoyanes> ;
+        mtp:hasType          "HT" .
+
+meetup:cacdf58748ff79fcafbf5c8a20d87adc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Steven Karidoyanes is a composer and conductor." ;
+        mtp:hasEvidencePurposeSecond  "He was born in Boston, Massachusetts." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a8d63544efdc669f699793d8e56458ec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steven_Karidoyanes> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999720356234848" ;
+        mtp:hasTextEvidence     "Steven Karidoyanes" .
+
+meetup:16fbdb7832264b78d3edf6e0f2c22fe9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Performances by orchestras" ;
+        mtp:hasEvidencePurposeSecond  "Worked for NPR affiliates" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:388cc686ad76b20d1713f4f517f24f3c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Karidoyanes" .
+
+<http://dbpedia.org/resource/Steven_Karidoyanes>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4004079/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Since its premiere in November 2000, Café Neon has had dozen of performances by orchestras in Massachusetts, Michigan, Wisconsin, California, Indiana, Italy and Greece. A classical music announcer/producer, Mr. Karidoyanes is a frequent fill-in host for Boston's WGBH Radio, and has worked for NPR (National Public Radio) affiliates in North Carolina and Indiana." ;
+        mtp:hasParticipant   meetup:388cc686ad76b20d1713f4f517f24f3c ;
+        mtp:hasPurpose       meetup:16fbdb7832264b78d3edf6e0f2c22fe9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steven_Karidoyanes> ;
+        mtp:hasType          "HT" .

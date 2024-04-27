@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b59ea5f6b21a7f5001e1ab7709fc4d4a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ohanessian" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:55dad19193068d32ec901164ddbf287c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Beatrice_Ohanessian> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999985660673524" ;
+        mtp:hasTextEvidence     "Beatrice Ohanessian" .
+
+meetup:ab91543a23747e527ac5eaa70cb54609
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's background and family" ;
+        mtp:hasEvidencePurposeSecond  "Mention of working with the British in India" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/18767681/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Beatrice Ohanessian (March 15, 1927 – July 17, 2008) was an Iraqi Armenian pianist, notable for being Iraq's first concert pianist and first female composer." ;
+        mtp:hasParticipant   meetup:55dad19193068d32ec901164ddbf287c ;
+        mtp:hasPurpose       meetup:f9c5ca21508d4145d723b9067744ad41 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Beatrice_Ohanessian> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Beatrice_Ohanessian>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18767681/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ohanessian was born in Baghdad in 1927 to a well-to-do Armenian family. Her father, born in Persia, had settled in Baghdad after a time in India working with the British." ;
+        mtp:hasParticipant   meetup:b59ea5f6b21a7f5001e1ab7709fc4d4a ;
+        mtp:hasPurpose       meetup:ab91543a23747e527ac5eaa70cb54609 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Beatrice_Ohanessian> ;
+        mtp:hasType          "HT" .
+
+meetup:f9c5ca21508d4145d723b9067744ad41
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9518048" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.031345926" ;
+        mtp:hasSourcePurpose          "ML" .

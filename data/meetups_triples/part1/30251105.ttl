@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:a119b79785e9837f6c37cfce8f522b2a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.4640534e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:79299d31fe4cc461c5bcae6c043931c0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a production of a Wagner opera." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a personal success of Stefan Anton Reck." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:509f36cb8352b0efb2cee512bd6258b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stefan_Anton_Reck> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Stefan Anton Reck" .
+
+<http://dbpedia.org/resource/Stefan_Anton_Reck>
+        rdf:type  core:Person .
+
+meetup:ca4f28e54e591e12905da36526e61b5c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Yannis Kokkos" .
+
+meetup:8482ca15ba12576d0a1919c37c92efb5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stefan_Anton_Reck> ;
+        mtp:hasOffset           "90" ;
+        mtp:hasSimilarityScore  "0.9999999999228636" ;
+        mtp:hasTextEvidence     "Stefan Anton Reck" .
+
+<http://w3id.org/polifonia/pilot/meetups/30251105/19/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "With the 2013 production by Yannis Kokkos of the Fliegender Höllander by Richard Wagner, Stefan Anton Reck was tributed a special personal success both at  Teatro Comunale of Bologna and at Teatro San Carlo of Naples." ;
+        mtp:hasParticipant   meetup:ca4f28e54e591e12905da36526e61b5c , meetup:8482ca15ba12576d0a1919c37c92efb5 ;
+        mtp:hasPurpose       meetup:79299d31fe4cc461c5bcae6c043931c0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stefan_Anton_Reck> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/30251105/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born on 26 April 1960 in Baden-Baden, Germany." ;
+        mtp:hasParticipant   meetup:509f36cb8352b0efb2cee512bd6258b6 ;
+        mtp:hasPurpose       meetup:a119b79785e9837f6c37cfce8f522b2a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stefan_Anton_Reck> ;
+        mtp:hasType          "HT" .

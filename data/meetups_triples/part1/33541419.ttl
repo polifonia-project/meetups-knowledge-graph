@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Charlie_Watts>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:bbaa348ecb310eb11cc5d1a4df1ddf27
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leo_de_Castro> ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Leo de Castro" .
+
+<http://dbpedia.org/resource/Leo_de_Castro>
+        rdf:type  core:Person .
+
+meetup:d953584fb0fd71f10bf55d856e572800
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Manning_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999992530711044" ;
+        mtp:hasTextEvidence     "Phil Manning" .
+
+meetup:fed3f5168f3c9397dde330df20de61fe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music industry" ;
+        mtp:hasEvidencePurposeSecond  "Career and personal choices" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/33541419/8/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They issued a single, \"Walk in the Light\" in November and supported United Kingdom progressive rock group, Pink Floyd, in September and pop artist, Elton John, in October. He briefly returned to Chain from November for three months before joining Leo de Castro's Friends." ;
+        mtp:hasParticipant   meetup:bbaa348ecb310eb11cc5d1a4df1ddf27 ;
+        mtp:hasPurpose       meetup:fed3f5168f3c9397dde330df20de61fe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Manning_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:13bdf3e9ad7c04c82ed7dd0da8e0f30b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charlie_Watts> ;
+        mtp:hasOffset           "112" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charlie Watts" .
+
+<http://w3id.org/polifonia/pilot/meetups/33541419/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Phil Manning's early bands were Anonymous Incorporated and Cocaine Spell – he was in the latter with drummer, Charlie Watts, and the pianist, John A. Bird." ;
+        mtp:hasParticipant   meetup:d953584fb0fd71f10bf55d856e572800 , meetup:13bdf3e9ad7c04c82ed7dd0da8e0f30b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Manning_(musician)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Phil_Manning_(musician)>
+        rdf:type  core:Person .

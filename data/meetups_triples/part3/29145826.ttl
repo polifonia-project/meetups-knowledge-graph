@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://dbpedia.org/resource/Olaf_Olsen_(drummer)>
+        rdf:type  core:Person .
+
+meetup:de4207bd3bc42253765722fc8bfc6074
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "currently" ;
+        mtp:hasSource        "ML" .
+
+meetup:f5e02c7d61193edddb054b1a6aa16bd8
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "8 August 1976" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1976-08-08"^^xsd:date ;
+        time:hasEnd          "1976-08-08"^^xsd:date .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/29145826/0/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:de4207bd3bc42253765722fc8bfc6074 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Olaf_Olsen_(drummer)> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/29145826/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:cc38931d2ab76a034ff8da3228f532e0 , meetup:f5e02c7d61193edddb054b1a6aa16bd8 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Olaf_Olsen_(drummer)> ;
+        mtp:hasType     "HT" .
+
+meetup:cc38931d2ab76a034ff8da3228f532e0
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "1999–May 2000 , May 2001–current" ;
+        mtp:hasSource        "ML" .

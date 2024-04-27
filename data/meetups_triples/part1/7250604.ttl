@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:f165b8b2c3c5b30d90e16caf19603014
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Albany> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joe Albany" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/7250604/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He returned to jazz in the 1970s and played on more than ten albums. He died of respiratory failure and cardiac arrest in New York City at the age of 63." ;
+        mtp:hasPurpose       meetup:b9b304a0463acc12cb0f0b54f538ab87 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Albany> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Joe_Albany>
+        rdf:type  core:Person .
+
+meetup:c9a023015d707d4f735776f9bea574db
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about personal struggles and relationships" ;
+        mtp:hasEvidencePurposeSecond  "Possible involvement in music during the mentioned period" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/7250604/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Despite that, most of the 1950s and 1960s saw him battling a heroin addiction, or living in seclusion in Europe. He also had several unsuccessful marriages in this period." ;
+        mtp:hasPurpose       meetup:c9a023015d707d4f735776f9bea574db ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Albany> ;
+        mtp:hasType          "HT" .
+
+meetup:b9b304a0463acc12cb0f0b54f538ab87
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "His return to jazz and albums" ;
+        mtp:hasEvidencePurposeSecond  "His death and age" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Charlie_Parker>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/7250604/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joe Albany (born Joseph Albani; January 24, 1924 – January 12, 1988) was an American modern jazz pianist who played bebop with Charlie Parker as well as being a leader on his own recordings." ;
+        mtp:hasParticipant   meetup:7fa92d08ca4c946b56da3269eac3ac12 , meetup:f165b8b2c3c5b30d90e16caf19603014 , meetup:a54e1754b40b66cacb886176b26b62c9 ;
+        mtp:hasPurpose       meetup:a5d321aaadf3827a7a4ed03b4e0d6f3e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Albany> ;
+        mtp:hasType          "HM" .
+
+meetup:a5d321aaadf3827a7a4ed03b4e0d6f3e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5727701" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.42709345" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a54e1754b40b66cacb886176b26b62c9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emma_Albani> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "0.8978950384503096" ;
+        mtp:hasTextEvidence     "Albani" .
+
+<http://dbpedia.org/resource/Emma_Albani>
+        rdf:type  core:Person .
+
+meetup:7fa92d08ca4c946b56da3269eac3ac12
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charlie_Parker> ;
+        mtp:hasOffset           "129" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charlie Parker" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/47887539/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Radcliffe currently releases music under his full name, Spencer Radcliffe." ;
+        mtp:hasParticipant   meetup:6bc9c44eb691e9308277f7c0f61694fd ;
+        mtp:hasPurpose       meetup:47a7783fe6b862d474ea7f240c6e1351 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Spencer_Radcliffe> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Spencer_Radcliffe>
+        rdf:type  core:Person .
+
+meetup:6bc9c44eb691e9308277f7c0f61694fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Spencer_Radcliffe> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Spencer Radcliffe" .
+
+meetup:47a7783fe6b862d474ea7f240c6e1351
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8032421" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19235186" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/James_Mtume>
+        rdf:type  core:Person .
+
+meetup:241328d0254f3fd2685ce9d7888fd068
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99971026" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00024668235" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/James_Forman>
+        rdf:type  core:Person .
+
+meetup:950c19ccd445354e17fdae4c04681d0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Forman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999318" ;
+        mtp:hasTextEvidence     "James Forman" .
+
+<http://w3id.org/polifonia/pilot/meetups/3674290/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Forman (born January 3, 1946), better known by his stage name James Mtume, is an American jazz and R&B musician, songwriter, record producer, activist and radio personality." ;
+        mtp:hasParticipant   meetup:950c19ccd445354e17fdae4c04681d0b , meetup:151ee5f85f850d81b88b08996f81d774 ;
+        mtp:hasPurpose       meetup:241328d0254f3fd2685ce9d7888fd068 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Mtume> ;
+        mtp:hasType          "HM" .
+
+meetup:151ee5f85f850d81b88b08996f81d774
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Mtume> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "James Mtume" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:cd9abd81c26e88439345ca9fef4069fb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about Hülsenbeck's family and name change" ;
+        mtp:hasEvidencePurposeSecond  "Coincidental timing of the move to the USA" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Alexander_Courage>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/827531/11/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hülsenbeck brought his wife (Elisabeth), son (Tom) and step-daughter (Mareile) to the United States in 1938 to avoid the political situation rapidly developing in Europe. After arriving in the USA he changed his last name to Hulbeck." ;
+        mtp:hasParticipant   meetup:9b75db129684772722aab0cf80de57f4 ;
+        mtp:hasPurpose       meetup:cd9abd81c26e88439345ca9fef4069fb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alexander_Courage> ;
+        mtp:hasType          "HT" .
+
+meetup:9b75db129684772722aab0cf80de57f4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hulbeck" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/632683/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gary Bartz (born September 26, 1940) is an American jazz saxophonist." ;
+        mtp:hasParticipant   meetup:d3f7798f6423f1b97acdd40e242e851e ;
+        mtp:hasPurpose       meetup:0b66a727fbbb8aeb3ad542c3e0daa4f2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Bartz> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Gary_Bartz>
+        rdf:type  core:Person .
+
+meetup:d3f7798f6423f1b97acdd40e242e851e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_Bartz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gary Bartz" .
+
+meetup:0b66a727fbbb8aeb3ad542c3e0daa4f2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is mainly about Gary Bartz's career as a jazz saxophonist." ;
+        mtp:hasEvidencePurposeSecond  "The sentence briefly mentions Gary Bartz's personal life by stating his birthdate." ;
+        mtp:hasSourcePurpose          "LLM" .

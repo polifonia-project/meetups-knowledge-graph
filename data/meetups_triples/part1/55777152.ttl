@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/55777152/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Asuka Ōkura (大倉 明日香, Ōkura Asuka, born September 5, 1996), also known by the stage name Asca (stylized as ASCA), is a Japanese singer and musician signed to Sacra Music." ;
+        mtp:hasParticipant   meetup:4347fdb75f7f3041839865ca3a992ede , meetup:24fb2d6ecbac77a54fc28acd78623ea1 ;
+        mtp:hasPurpose       meetup:bb7b5714580b2964d43277733531d148 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Asca_(singer)> ;
+        mtp:hasType          "HM" .
+
+meetup:24fb2d6ecbac77a54fc28acd78623ea1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Asca_(singer)> ;
+        mtp:hasOffset           "100" ;
+        mtp:hasSimilarityScore  "0.8610947343070465" ;
+        mtp:hasTextEvidence     "Asca" .
+
+<http://dbpedia.org/resource/Asca_(singer)>
+        rdf:type  core:Person .
+
+meetup:bb7b5714580b2964d43277733531d148
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7377012" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17486863" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4347fdb75f7f3041839865ca3a992ede
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ōkura Asuka" .

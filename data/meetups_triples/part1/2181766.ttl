@@ -1,0 +1,77 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2181766/16/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The online release was followed by a 1998 UK re-release by independent international distributor Oxygen Music Works. This latter version featured an alternate song sequencing and a new track, \"Alive,\" in place of \"Visions of You.\"" ;
+        mtp:hasPurpose       meetup:5016ca48d24757037c699e251135d68e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vanessa_Daou> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2181766/21/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Daou's next album Make You Love, inspired by the travails of a girlfriend living in Paris, was co-released in 2000 on Daou's own label imprint and EMI in France. Generally positive reviews for Make You Love were featured in Le Monde, Elle, Magic, and Billboard Spotlight Review, and many critics received the album as Daou's most pop-oriented." ;
+        mtp:hasPurpose       meetup:c8d5a9f7ac67b68259bd170348729fb0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vanessa_Daou> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2181766/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vanessa Daou (born October 4, 1967) is an American singer, songwriter, poet, visual artist and dancer." ;
+        mtp:hasParticipant   meetup:59f06ecbc0482f2a2d2e0e43ae659015 ;
+        mtp:hasPurpose       meetup:c0d9f0c5836aecb239c6ab3d3617b380 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vanessa_Daou> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:c8d5a9f7ac67b68259bd170348729fb0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Album release and reviews" ;
+        mtp:hasEvidencePurposeSecond  "Inspiration from personal experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Vanessa_Daou>
+        rdf:type  core:Person .
+
+meetup:5016ca48d24757037c699e251135d68e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions a music release and track sequencing." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions an independent international distributor." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c0d9f0c5836aecb239c6ab3d3617b380
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9908071" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0084358305" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:59f06ecbc0482f2a2d2e0e43ae659015
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vanessa_Daou> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Vanessa Daou" .

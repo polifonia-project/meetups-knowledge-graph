@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1e2b7e40b8f63680a4f618c45773d4a1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92671514" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0727847" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Steven_Wright>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/104987/5/14>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2006 Wright produced his first stand-up special in 16 years, Steven Wright: When the Leaves Blow Away, originally aired on Comedy Central on October 21, 2006." ;
+        mtp:hasParticipant   meetup:54d9808e6cb739c09d53250dcaf5bfd6 , meetup:caa3dff49ddf71bc3c3264a329cf9fb5 ;
+        mtp:hasPurpose       meetup:1e2b7e40b8f63680a4f618c45773d4a1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steven_Wright> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:54d9808e6cb739c09d53250dcaf5bfd6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steven_Wright> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Steven Wright" .
+
+meetup:caa3dff49ddf71bc3c3264a329cf9fb5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Delon_Wright> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "0.9999807328871294" ;
+        mtp:hasTextEvidence     "Wright" .
+
+<http://dbpedia.org/resource/Delon_Wright>
+        rdf:type  core:Person .

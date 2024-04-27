@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Maite_Perroni>
+        rdf:type  core:Person .
+
+meetup:302757c8e54afb35c211444ba4a1bbf0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maite_Perroni> ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Maite Perroni" .
+
+<http://w3id.org/polifonia/pilot/meetups/4133761/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On August 14, 2012, Chávez released the highly anticipated album Esencial, an acoustic compilation of songs performed at his show in São Paulo, Brazil in January 2012." ;
+        mtp:hasParticipant   meetup:d4d1903cacb4fa57955fa9a8588e824f ;
+        mtp:hasPurpose       meetup:9df336fc28c747b67eb141569167cb71 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christian_Chávez> ;
+        mtp:hasType          "HT" .
+
+meetup:be4725e27841975246a1a79024efda10
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christian_Chávez> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Christian Chávez" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/4133761/8/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chávez performed duets with RBD co-star Maite Perroni and Mexican pop/rock singer Ana Victoria." ;
+        mtp:hasParticipant   meetup:302757c8e54afb35c211444ba4a1bbf0 , meetup:be4725e27841975246a1a79024efda10 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christian_Chávez> ;
+        mtp:hasType          "HM" .
+
+meetup:9df336fc28c747b67eb141569167cb71
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8774835" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12234609" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d4d1903cacb4fa57955fa9a8588e824f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christian_Chávez> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Christian Chávez" .
+
+<http://dbpedia.org/resource/Christian_Chávez>
+        rdf:type  core:Person .

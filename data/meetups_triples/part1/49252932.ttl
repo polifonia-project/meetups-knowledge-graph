@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Griff_(singer)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Erica_Campbell>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/49252932/0/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mornings with Erica Campbell with comedian Griff, currently distributed by Reach Media, the syndication arm of Urban One." ;
+        mtp:hasParticipant   meetup:a48c33ac963ab5b79b3f67831b8b0edf , meetup:bca715b83c9423aa3520ed782f385f0f ;
+        mtp:hasPurpose       meetup:d09db603afa084e5bbe1baa460627502 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erica_Campbell> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:a48c33ac963ab5b79b3f67831b8b0edf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Griff_(singer)> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "0.5519170503705103" ;
+        mtp:hasTextEvidence     "Griff" .
+
+meetup:d09db603afa084e5bbe1baa460627502
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99573815" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0020427147" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:bca715b83c9423aa3520ed782f385f0f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erica_Campbell> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.9995351186460154" ;
+        mtp:hasTextEvidence     "Erica Campbell" .

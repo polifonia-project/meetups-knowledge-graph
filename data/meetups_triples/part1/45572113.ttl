@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/45572113/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeon Yoon-han, known as Yoonhan (Korean: 윤한; born October 14, 1983) is a South Korean pianist and singer." ;
+        mtp:hasParticipant   meetup:a4354e09da75d856a55fdbabf607ec8d , meetup:898cb45507c41fc9e686a1eb12a15e0b ;
+        mtp:hasPurpose       meetup:9d133f7df969bc0386c1953ff3f19e3a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yoonhan> ;
+        mtp:hasType          "HM" .
+
+meetup:898cb45507c41fc9e686a1eb12a15e0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jeon Yoon-han" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Yoonhan>
+        rdf:type  core:Person .
+
+meetup:a4354e09da75d856a55fdbabf607ec8d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yoonhan> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "0.9176178860155064" ;
+        mtp:hasTextEvidence     "Yoonhan" .
+
+meetup:9d133f7df969bc0386c1953ff3f19e3a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99868184" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0012415273" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b5e3f6ef0371f48892dd0df83ee90da4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9737154" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.026271958" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/18775134/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lynn Hilary (born 21 April 1982)" ;
+        mtp:hasParticipant   meetup:5427de5b1ccc56e8e18fba0098b0f63d ;
+        mtp:hasPurpose       meetup:b5e3f6ef0371f48892dd0df83ee90da4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lynn_Hilary> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:5427de5b1ccc56e8e18fba0098b0f63d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lynn_Hilary> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999998508" ;
+        mtp:hasTextEvidence     "Lynn Hilary" .
+
+<http://dbpedia.org/resource/Lynn_Hilary>
+        rdf:type  core:Person .

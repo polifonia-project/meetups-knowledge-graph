@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/45138076/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "María Francesca Ancarola Saavedra (born 18 March 1968) is a Chilean singer and songwriter." ;
+        mtp:hasParticipant   meetup:055aa35334704be5f259038ad5e00471 , meetup:7e54d6ff7733d12712c988594c6ae7d7 ;
+        mtp:hasPurpose       meetup:22ffeaa88da27e39a8e989850d42020b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Francesca_Ancarola> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:055aa35334704be5f259038ad5e00471
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Francesca_Ancarola> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9999991568702884" ;
+        mtp:hasTextEvidence     "Francesca Ancarola" .
+
+meetup:22ffeaa88da27e39a8e989850d42020b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.973657" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.023364857" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7e54d6ff7733d12712c988594c6ae7d7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "María Francesca Ancarola Saavedra" .
+
+<http://dbpedia.org/resource/Francesca_Ancarola>
+        rdf:type  core:Person .

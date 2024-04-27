@@ -1,0 +1,92 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:660d823c26734e07077f4acce7ed062b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/A._J._Mogis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "A.J." .
+
+<http://dbpedia.org/resource/Mike_Mogis>
+        rdf:type  core:Person .
+
+meetup:4ea22d10d1c385a4c8ed45a1eaa66713
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/A._J._Mogis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "A.J." .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/4484838/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His brother is Mike Mogis." ;
+        mtp:hasParticipant   meetup:6f578ae62e389da0fd354ad2dc6ae31a , meetup:4ea22d10d1c385a4c8ed45a1eaa66713 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/A._J._Mogis> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/A._J._Mogis>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/4484838/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A.J. Mogis is a musician from North Platte, Nebraska." ;
+        mtp:hasParticipant   meetup:f81e686b16e29a2b4801d38140bd4de3 ;
+        mtp:hasPurpose       meetup:5464e86547a6954688924e3a4d1ef4d2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/A._J._Mogis> ;
+        mtp:hasType          "HT" .
+
+meetup:5464e86547a6954688924e3a4d1ef4d2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.2139613e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:6f578ae62e389da0fd354ad2dc6ae31a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Mogis> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "0.9999999999998151" ;
+        mtp:hasTextEvidence     "Mike Mogis" .
+
+<http://w3id.org/polifonia/pilot/meetups/4484838/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He currently plays bass guitar in the indie-rock band Criteria." ;
+        mtp:hasParticipant   meetup:660d823c26734e07077f4acce7ed062b ;
+        mtp:hasPurpose       meetup:ae6fe4cffbf76d16a7b8f84ea9f0abd3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/A._J._Mogis> ;
+        mtp:hasType          "HT" .
+
+meetup:f81e686b16e29a2b4801d38140bd4de3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/A._J._Mogis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999220432029255" ;
+        mtp:hasTextEvidence     "A.J." .
+
+meetup:ae6fe4cffbf76d16a7b8f84ea9f0abd3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9780366" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013724493" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/24680339/4/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brown released her first solo UK album in 1977, From The Inside, produced by Shel Talmy. The record was released by the Power Exchange Records label." ;
+        mtp:hasPurpose       meetup:1f6aad25bd41e965bf5a5b44cddfc00b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vicki_Brown> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/24680339/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vicki Brown (23 August 1940 – 16 June 1991) was an English pop, rock and contemporary classical singer." ;
+        mtp:hasParticipant   meetup:228b6914a529f69ea7e660eb6487d3ed ;
+        mtp:hasPurpose       meetup:003addeaf5cb103a217dc742635c2ece ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vicki_Brown> ;
+        mtp:hasType          "HT" .
+
+meetup:1f6aad25bd41e965bf5a5b44cddfc00b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the release of a solo album." ;
+        mtp:hasEvidencePurposeSecond  "The album was produced by Shel Talmy." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/24680339/4/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She also featured as one of the soloists on a series of The Young ... created by Tom Parker, with The New London Chorale: The Young Messiah (1979; originally performed as a concert on television in the UK in 1977), The Young Matthew Passion (1986) The Young Wolfgang Amadeus Mozart (1986), The Young Verdi (1988) and The Young Beethoven (1990)." ;
+        mtp:hasPurpose       meetup:7a46ec6646b08e3f9bc19d24d3060235 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vicki_Brown> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:003addeaf5cb103a217dc742635c2ece
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9976712" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0016096544" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Vicki_Brown>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:228b6914a529f69ea7e660eb6487d3ed
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vicki_Brown> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Vicki Brown" .
+
+meetup:7a46ec6646b08e3f9bc19d24d3060235
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music performances" ;
+        mtp:hasEvidencePurposeSecond  "Learning about composers and their works" ;
+        mtp:hasSourcePurpose          "LLM" .

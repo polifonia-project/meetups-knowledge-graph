@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6341b52b322b24d1c4e6efb33c7df797
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Aldous Harding is a folk singer-songwriter" ;
+        mtp:hasEvidencePurposeSecond  "Hannah Sian Topp is her real name" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/53483695/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hannah Sian Topp (born 1990), known professionally as Aldous Harding, is a New Zealand folk singer-songwriter, based in Lyttleton, New Zealand." ;
+        mtp:hasParticipant   meetup:092d714737e721fc18c62e95d6fd2c49 ;
+        mtp:hasPurpose       meetup:6341b52b322b24d1c4e6efb33c7df797 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aldous_Harding> ;
+        mtp:hasType          "HT" .
+
+meetup:092d714737e721fc18c62e95d6fd2c49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aldous_Harding> ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aldous Harding" .
+
+<http://dbpedia.org/resource/Aldous_Harding>
+        rdf:type  core:Person .

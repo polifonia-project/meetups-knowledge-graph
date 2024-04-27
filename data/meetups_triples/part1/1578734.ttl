@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Frank_Gasperik>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Leslie_Fish>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1578734/45/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"To Win the Peace\" (with Frank Gasperik), in War World: TakeoverFanzine articleWriting as F. Sigmund Mead, \"A Summary of the Physiological Roots of Andorian Culture\" (Journal of Xenoanthropology, June 2341), edited by Leslie Fish." ;
+        mtp:hasParticipant   meetup:9b272343ad1acf18466050eadfe929c0 , meetup:5cdeacc38ac930715adf369ff356c8c5 ;
+        mtp:hasPurpose       meetup:961898b8b5dbe775ca68a869f4137331 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leslie_Fish> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:9b272343ad1acf18466050eadfe929c0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Gasperik> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "0.9999751283108572" ;
+        mtp:hasTextEvidence     "Frank Gasperik" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:961898b8b5dbe775ca68a869f4137331
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5398136" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.381012" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5cdeacc38ac930715adf369ff356c8c5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leslie_Fish> ;
+        mtp:hasOffset           "218" ;
+        mtp:hasSimilarityScore  "0.999999999999602" ;
+        mtp:hasTextEvidence     "Leslie Fish" .

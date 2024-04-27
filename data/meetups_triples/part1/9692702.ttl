@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/9692702/12/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On December 18, 1963, Young married her longtime boyfriend Bobby Rogers, a member of the Miracles, in Detroit and became known professionally as Wanda Rogers." ;
+        mtp:hasParticipant   meetup:033686c2dab20adca8e7baf8dc8fca4f , meetup:6e4e9dfa7afcb3172dc4f3d7621e3fef ;
+        mtp:hasPurpose       meetup:355bee7ceca29f1599fa323728ddb517 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wanda_Young> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Bobby_Rogers>
+        rdf:type  core:Person .
+
+meetup:bd35eb152b49478b50e8feb9dedc9c16
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wanda_Young> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wanda Rogers" .
+
+meetup:355bee7ceca29f1599fa323728ddb517
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about personal life" ;
+        mtp:hasEvidencePurposeSecond  "Involvement in the music industry" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6e4e9dfa7afcb3172dc4f3d7621e3fef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Rogers> ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bobby Rogers" .
+
+<http://w3id.org/polifonia/pilot/meetups/9692702/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wanda LaFaye Young (August 9, 1943 – December 15, 2021), also known as Wanda Rogers, was an American singer, known for being a member and, after 1965, the lead singer of the popular Motown all-female singing group the Marvelettes." ;
+        mtp:hasParticipant   meetup:46be4c95cba5ced857324db6d58ce83b , meetup:bd35eb152b49478b50e8feb9dedc9c16 ;
+        mtp:hasPurpose       meetup:406959c0bfc4c2c8f4e290f14bb4262c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wanda_Young> ;
+        mtp:hasType          "HM" .
+
+meetup:46be4c95cba5ced857324db6d58ce83b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Wanda LaFaye Young" .
+
+meetup:033686c2dab20adca8e7baf8dc8fca4f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wanda_Young> ;
+        mtp:hasOffset           "145" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wanda Rogers" .
+
+<http://dbpedia.org/resource/Wanda_Young>
+        rdf:type  core:Person .
+
+meetup:406959c0bfc4c2c8f4e290f14bb4262c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99970454" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00014972288" ;
+        mtp:hasSourcePurpose          "ML" .

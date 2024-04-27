@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:a010c08ab4a5b35acde51b9e0a73cf67
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Soraya_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Soraya" .
+
+<http://dbpedia.org/resource/Soraya_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3888448/13/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was first diagnosed in 2000, at the age of 31, after finding a lump while conducting a routine self-examination." ;
+        mtp:hasParticipant   meetup:a010c08ab4a5b35acde51b9e0a73cf67 ;
+        mtp:hasPurpose       meetup:474a3be281f5ae50f05eb50210014f53 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Soraya_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:474a3be281f5ae50f05eb50210014f53
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9991906" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00080934586" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .

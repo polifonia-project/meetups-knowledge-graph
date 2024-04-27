@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/943484/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andy Stochansky is a musician and songwriter from Toronto, living in Los Angeles." ;
+        mtp:hasParticipant   meetup:4e7ebfd41f3837fcee2638fb764ab7e3 ;
+        mtp:hasPurpose       meetup:6bafd3c1735b53e6db12ecb811c4e196 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Stochansky> ;
+        mtp:hasType          "HT" .
+
+meetup:4e7ebfd41f3837fcee2638fb764ab7e3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andy_Stochansky> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Andy Stochansky" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:6bafd3c1735b53e6db12ecb811c4e196
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99997306" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.1621607e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Andy_Stochansky>
+        rdf:type  core:Person .

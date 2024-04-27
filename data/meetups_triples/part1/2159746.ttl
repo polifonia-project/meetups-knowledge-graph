@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Christian_Olde_Wolbers>
+        rdf:type  core:Person .
+
+meetup:94a807bbe4b65fee8c45c8c628e3f227
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christian_Olde_Wolbers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Christian Olde Wolbers" .
+
+<http://w3id.org/polifonia/pilot/meetups/2159746/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christian Olde Wolbers (born 5 August 1972) is a Belgian musician, songwriter, and producer who is the bassist and backing vocalist of the heavy metal band Powerflo." ;
+        mtp:hasParticipant   meetup:94a807bbe4b65fee8c45c8c628e3f227 ;
+        mtp:hasPurpose       meetup:242ac36ce8f7bd51df18fd316544c52c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christian_Olde_Wolbers> ;
+        mtp:hasType          "HT" .
+
+meetup:242ac36ce8f7bd51df18fd316544c52c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9987948" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0009471118" ;
+        mtp:hasSourcePurpose          "ML" .

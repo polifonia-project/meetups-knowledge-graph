@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/66633350/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Donald Najtellari (Albanian: [dɔ'nald 'najtɛɫaɾi]; born 1 May), known professionally as Young Zerka, is an Albanian singer and songwriter." ;
+        mtp:hasParticipant   meetup:ad61386133f0e9ee32c86c4cdc8a9b16 , meetup:e4de7f5a4e7054b53a8d1cf9f452f3d6 ;
+        mtp:hasPurpose       meetup:0575c5a3f59049eb8469ccd93e54efec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Young_Zerka> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Young_Zerka>
+        rdf:type  core:Person .
+
+meetup:0575c5a3f59049eb8469ccd93e54efec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.831233e-09" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ad61386133f0e9ee32c86c4cdc8a9b16
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Young_Zerka> ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Young Zerka" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:e4de7f5a4e7054b53a8d1cf9f452f3d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Donald Najtellari" .

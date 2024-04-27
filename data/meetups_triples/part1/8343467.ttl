@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f3486c76e471cfaf11292b3e9ab26719
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Miyu Nagase is a Japanese singer and guitarist." ;
+        mtp:hasEvidencePurposeSecond  "She was a former member of the band Zone." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/8343467/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Miyu Nagase (長瀬 実夕, Nagase Miyu, born May 20, 1988, in Hokkaido) is a Japanese singer, guitarist and a former member of all-female pop rock band Zone, which disbanded in 2005." ;
+        mtp:hasParticipant   meetup:d81507e65652370a4106ceaaa185f2b2 , meetup:4fbc0b7a92e2ff11559ccba977415014 ;
+        mtp:hasPurpose       meetup:f3486c76e471cfaf11292b3e9ab26719 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miyu_Nagase> ;
+        mtp:hasType          "HM" .
+
+meetup:d81507e65652370a4106ceaaa185f2b2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miyu_Nagase> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999978745166" ;
+        mtp:hasTextEvidence     "Miyu Nagase" .
+
+<http://dbpedia.org/resource/Miyu_Nagase>
+        rdf:type  core:Person .
+
+meetup:4fbc0b7a92e2ff11559ccba977415014
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nagase Miyu" .

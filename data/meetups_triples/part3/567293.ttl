@@ -1,0 +1,28 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://dbpedia.org/resource/Sonny_Til>
+        rdf:type  core:Person .
+
+meetup:2d85a984700a1386aea220ee413126a2
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "August 18 , 1928 – December 9 , 1981" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1928-08-18"^^xsd:date ;
+        time:hasEnd          "1981-12-09"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/567293/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:2d85a984700a1386aea220ee413126a2 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Sonny_Til> ;
+        mtp:hasType     "HT" .

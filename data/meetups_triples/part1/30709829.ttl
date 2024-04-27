@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/30709829/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During his early college years, he attended Drexel University in Philadelphia where his love for creating hip-hop music began. While in Philadelphia, he started a rap duo with a high school friend - C.U.R.E. (Can't Underestimate Real Emcees), where he took on the alias 'Inkarnation' and played the dual role of emcee/producer." ;
+        mtp:hasParticipant   meetup:568635f8a6fc2fe9b80829f5ccea175c ;
+        mtp:hasPurpose       meetup:9801374f618845ae4688553d219d608d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kato_(producer)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Kato_(producer)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9801374f618845ae4688553d219d608d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating hip-hop music" ;
+        mtp:hasEvidencePurposeSecond  "College years and personal interests" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:568635f8a6fc2fe9b80829f5ccea175c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "144" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Inkarnation" .

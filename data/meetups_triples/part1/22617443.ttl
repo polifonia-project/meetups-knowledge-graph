@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Nicolaj_Hansen>
+        rdf:type  core:Person .
+
+meetup:60abebb6edcdb8b803349f807139d07a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998106" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001888226" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:60915c53e650dab0d51f669c4d39022c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johannes Nicolaj Hansen" .
+
+meetup:64a7cd65b21dd18b9564a4a91dfa5821
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicolaj_Hansen> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.999999992937262" ;
+        mtp:hasTextEvidence     "Nicolaj Hansen" .
+
+<http://w3id.org/polifonia/pilot/meetups/22617443/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johannes Nicolaj Hansen   (20 February 1855 - 25 December 1932) was a Danish composer and violinist." ;
+        mtp:hasParticipant   meetup:60915c53e650dab0d51f669c4d39022c , meetup:64a7cd65b21dd18b9564a4a91dfa5821 ;
+        mtp:hasPurpose       meetup:60abebb6edcdb8b803349f807139d07a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicolaj_Hansen> ;
+        mtp:hasType          "HM" .

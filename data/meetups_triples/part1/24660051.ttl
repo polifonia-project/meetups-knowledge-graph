@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:82d2761ff7b9a16021ab664c2c519642
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Chuck played hip hop music in Japan" ;
+        mtp:hasEvidencePurposeSecond  "Hip-hop artists became known in Japan" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4ae95d17106714e7fad67432c9bcd6b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Busta_Rhymes> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Busta Rhymes" .
+
+<http://dbpedia.org/resource/Busta_Rhymes>
+        rdf:type  core:Person .
+
+meetup:e02d288e0fceb1fe8b1aec8efbf8aea9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DJ_Chuck_Chillout> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "DJ Chuck Chillout" .
+
+<http://dbpedia.org/resource/DJ_Chuck_Chillout>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/24660051/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Charles Turner (born October 21, 1962) better known as DJ Chuck Chillout, is an American hip hop DJ and producer." ;
+        mtp:hasParticipant   meetup:e02d288e0fceb1fe8b1aec8efbf8aea9 ;
+        mtp:hasPurpose       meetup:b6f02b811722bb0f0a6dd4571054681f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Chuck_Chillout> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/24660051/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chuck worked in 1995 by becoming one of the first DJs to play hip hop music in Japan. Hip-hop artists such as Busta Rhymes, A Tribe Called Quest, and Run-D.M.C. became known in Japan as a result." ;
+        mtp:hasParticipant   meetup:4ae95d17106714e7fad67432c9bcd6b0 ;
+        mtp:hasPurpose       meetup:82d2761ff7b9a16021ab664c2c519642 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Chuck_Chillout> ;
+        mtp:hasType          "HT" .
+
+meetup:b6f02b811722bb0f0a6dd4571054681f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9207776" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04173369" ;
+        mtp:hasSourcePurpose          "ML" .

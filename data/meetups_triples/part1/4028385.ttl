@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:ca6db478ed9baf87581053f5cc7c2882
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99992526" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.148548e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:29a62c4c7fecbee59567bd4064878890
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cat_Anderson> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.9999999999825206" ;
+        mtp:hasTextEvidence     "Cat Anderson" .
+
+<http://w3id.org/polifonia/pilot/meetups/4028385/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cat Anderson Plays at 4 AM (Columbia [France, EMI], 1958)" ;
+        mtp:hasParticipant   meetup:6f5cb69ed32d41a7a26394b9b36f0aad ;
+        mtp:hasPurpose       meetup:ca6db478ed9baf87581053f5cc7c2882 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cat_Anderson> ;
+        mtp:hasType          "HT" .
+
+meetup:6f5cb69ed32d41a7a26394b9b36f0aad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cat_Anderson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cat Anderson" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/4028385/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A Chat with Cat Anderson (Columbia [France, EMI], 1963)" ;
+        mtp:hasParticipant   meetup:29a62c4c7fecbee59567bd4064878890 ;
+        mtp:hasPurpose       meetup:b0c8e6a2e8d01d65f032f5f145dc55b4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cat_Anderson> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b0c8e6a2e8d01d65f032f5f145dc55b4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.64688814" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35212004" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Cat_Anderson>
+        rdf:type  core:Person .

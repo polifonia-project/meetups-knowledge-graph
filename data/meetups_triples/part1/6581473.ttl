@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/6581473/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is the brother of singer Karin Glenmark and nephew of band leader Bruno Glenmark." ;
+        mtp:hasParticipant   meetup:cd27ecca0b62642661562d06b346d4c2 , meetup:161ea911a3eb07315d0be11afce56fab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anders_Glenmark> ;
+        mtp:hasType          "HM" .
+
+meetup:cd27ecca0b62642661562d06b346d4c2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Karin_Glenmark> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Karin Glenmark" .
+
+meetup:7ca460978d0ed897dd4b73fe63815cd2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anders_Glenmark> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Anders Glenmark" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:161ea911a3eb07315d0be11afce56fab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anders_Glenmark> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anders Glenmark" .
+
+<http://dbpedia.org/resource/Karin_Glenmark>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:adbd4073c5801dc7eabd7c3a30a6ea93
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gert Anders Glenmark" .
+
+<http://w3id.org/polifonia/pilot/meetups/6581473/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gert Anders Glenmark (born 20 November 1953) is a Swedish singer, songwriter, musician and record producer." ;
+        mtp:hasParticipant   meetup:adbd4073c5801dc7eabd7c3a30a6ea93 , meetup:7ca460978d0ed897dd4b73fe63815cd2 ;
+        mtp:hasPurpose       meetup:3bed7dac853defdf2427c3f2e613027c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anders_Glenmark> ;
+        mtp:hasType          "HM" .
+
+meetup:3bed7dac853defdf2427c3f2e613027c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999999" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.2349955e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Anders_Glenmark>
+        rdf:type  core:Person .

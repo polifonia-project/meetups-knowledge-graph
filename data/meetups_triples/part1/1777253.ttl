@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gregg_Giuffria>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:48f871fea645c9275d07217ae257bbfc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gregg_Giuffria> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gregg Giuffria" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:168b02cfa8b8ebc09c042d4009c6aedb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997148" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00013194019" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1777253/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gregg Giuffria (born July 28, 1951) is an American rock musician and businessman." ;
+        mtp:hasParticipant   meetup:48f871fea645c9275d07217ae257bbfc ;
+        mtp:hasPurpose       meetup:168b02cfa8b8ebc09c042d4009c6aedb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gregg_Giuffria> ;
+        mtp:hasType          "HT" .

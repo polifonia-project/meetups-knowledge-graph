@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/328151/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Paden Marchand (born David Paden Passaro, November 20, 1975), known professionally as Davey Havok, is an American singer and musician who is the lead vocalist of the rock band AFI, the synth-pop band Blaqk Audio, the hardcore punk band XTRMST, the new wave band Dreamcar, and in a fictional rock band My Purple Agony from Harvey Girls Forever!." ;
+        mtp:hasParticipant   meetup:099c4835073b2bfa52880c3ef2b7b414 , meetup:5c3072e6c8c380c9e785339e4400b5a2 ;
+        mtp:hasPurpose       meetup:26f6fd8c539558aa3692f3016f978753 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Davey_Havok> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Davey_Havok>
+        rdf:type  core:Person .
+
+meetup:5c3072e6c8c380c9e785339e4400b5a2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Davey_Havok> ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Davey Havok" .
+
+meetup:099c4835073b2bfa52880c3ef2b7b414
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David Paden Passaro" .
+
+meetup:26f6fd8c539558aa3692f3016f978753
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9343739" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.059062835" ;
+        mtp:hasSourcePurpose          "ML" .

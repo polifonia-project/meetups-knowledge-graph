@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Tom_Clay>
+        rdf:type  core:Person .
+
+meetup:d62f8471bddb981ce0838c1e944b0750
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Thomas Clague" .
+
+<http://w3id.org/polifonia/pilot/meetups/7667936/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tom Clay (born Thomas Clague; August 20, 1929 – November 22, 1995) was an American radio personality and disc jockey." ;
+        mtp:hasParticipant   meetup:d62f8471bddb981ce0838c1e944b0750 , meetup:b71205ec720fd8db9d35696c160f0e15 ;
+        mtp:hasPurpose       meetup:de0903a71ec5bd29f693a8167798ecd8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Clay> ;
+        mtp:hasType          "HM" .
+
+meetup:b71205ec720fd8db9d35696c160f0e15
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Clay> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tom Clay" .
+
+meetup:de0903a71ec5bd29f693a8167798ecd8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999785" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.027029e-06" ;
+        mtp:hasSourcePurpose          "ML" .

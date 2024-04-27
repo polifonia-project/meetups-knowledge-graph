@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b4d51807759e5896c31806d8370f1d55
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999856" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.435106e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4c4cc60e72545ae216ffa7e328e24ba8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Esther_Ofarim> ;
+        mtp:hasOffset           "47" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Esther Ofarim" .
+
+<http://w3id.org/polifonia/pilot/meetups/199563/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"T'en va pas\" was released as single on Philips Records in 1963, reaching No. 39 in Germany. In 1963, Esther had a starring role in the German film Es war mir ein Vergnügen." ;
+        mtp:hasPurpose       meetup:886785e4e32f8427764bafe54487fcf7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Esther_Ofarim> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/199563/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Esther Zaied, better known by her married name Esther Ofarim (Hebrew: אסתר עופרים‎; born June 13, 1941), is an Israeli singer." ;
+        mtp:hasParticipant   meetup:4c4cc60e72545ae216ffa7e328e24ba8 ;
+        mtp:hasPurpose       meetup:b4d51807759e5896c31806d8370f1d55 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Esther_Ofarim> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Esther_Ofarim>
+        rdf:type  core:Person .
+
+meetup:886785e4e32f8427764bafe54487fcf7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The release of 'T'en va pas' as a single" ;
+        mtp:hasEvidencePurposeSecond  "Esther's starring role in a German film" ;
+        mtp:hasSourcePurpose          "LLM" .

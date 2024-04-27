@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:298748362efc4ef70bb319290fe97831
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Rafael's education." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions Rafael's personal life." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ba792433b3c9a2a3cbc8c3077d047ea1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rafael Manzanares" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:798a965f0aa3e8c35def1c32aadeeda4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Japeth_Aguilar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aguilar" .
+
+<http://dbpedia.org/resource/Japeth_Aguilar>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/50380648/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rafael Manzanares was born on July 17, 1918 in La Esperanza, Intibucá, the son of Mr. Santiago Manzanares and Mrs. Maria de los Angeles Aguilar. He spent his early life in La Esperanza and graduated from the Escuela Normal de Occidente in La Esperanza with a degree in primary education." ;
+        mtp:hasParticipant   meetup:ba792433b3c9a2a3cbc8c3077d047ea1 ;
+        mtp:hasPurpose       meetup:298748362efc4ef70bb319290fe97831 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rafael_Manzanares_Aguilar> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/50380648/4/13>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "This initiative now includes 50 schools in the capital and more than 700 in the entire country. Rafael Manzanares is remembered in Honduras as a composer." ;
+        mtp:hasParticipant   meetup:798a965f0aa3e8c35def1c32aadeeda4 ;
+        mtp:hasPurpose       meetup:af75e1d6ff98243b684ed1a5c3b04597 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rafael_Manzanares_Aguilar> ;
+        mtp:hasType          "HT" .
+
+meetup:af75e1d6ff98243b684ed1a5c3b04597
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Initiative involving schools" ;
+        mtp:hasEvidencePurposeSecond  "Composer remembered in Honduras" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Rafael_Manzanares_Aguilar>
+        rdf:type  core:Person .

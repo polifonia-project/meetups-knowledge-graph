@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:111ba0b4b7e53ea53e6e37a92085e97d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.88043725" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11952141" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/40225345/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Frank Bencriscutto (September 21, 1928 – August 28, 1997), nicknamed \"Dr. Ben,\" was an American conductor and composer of concert band music." ;
+        mtp:hasParticipant   meetup:9dbc540e6fc030b16c2441f49882664d ;
+        mtp:hasPurpose       meetup:111ba0b4b7e53ea53e6e37a92085e97d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frank_Bencriscutto> ;
+        mtp:hasType          "HT" .
+
+meetup:9dbc540e6fc030b16c2441f49882664d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Bencriscutto> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Frank Bencriscutto" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Frank_Bencriscutto>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/40225345/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bencriscutto was Director of Bands and Professor of Music at the University of Minnesota for thirty-two years." ;
+        mtp:hasParticipant   meetup:06fa712bb935f18f96694e91d97dc009 ;
+        mtp:hasPurpose       meetup:039bdb37a64263cd435bd1e57bf2ad07 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frank_Bencriscutto> ;
+        mtp:hasType          "HT" .
+
+meetup:039bdb37a64263cd435bd1e57bf2ad07
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99185866" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00800886" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:06fa712bb935f18f96694e91d97dc009
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Bencriscutto> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Frank Bencriscutto" .

@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3d2032c1ac6186bcf1cb53d6aca7fba5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Takeshi_Hayama> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Takeshi Hayama" .
+
+<http://dbpedia.org/resource/Takeshi_Hayama>
+        rdf:type  core:Person .
+
+meetup:66a068131283856ce3a19588bd83c49c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Takeshi_Kitano> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "0.9999999573421984" ;
+        mtp:hasTextEvidence     "Takeshi" .
+
+meetup:42c7392b0cb61b63c766ccf0a6d5c3dd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hayama Takeshi" .
+
+<http://w3id.org/polifonia/pilot/meetups/59304672/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Takeshi Hayama (葉山たけし, Hayama Takeshi, born 16 June 1958) is a Japanese musical arranger and guitarist under Being Inc. records." ;
+        mtp:hasParticipant   meetup:42c7392b0cb61b63c766ccf0a6d5c3dd , meetup:66a068131283856ce3a19588bd83c49c , meetup:3d2032c1ac6186bcf1cb53d6aca7fba5 ;
+        mtp:hasPurpose       meetup:d092452a07500017eb91df57fd3f62a9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Takeshi_Hayama> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Takeshi_Kitano>
+        rdf:type  core:Person .
+
+meetup:d092452a07500017eb91df57fd3f62a9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9563932" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.036859363" ;
+        mtp:hasSourcePurpose          "ML" .

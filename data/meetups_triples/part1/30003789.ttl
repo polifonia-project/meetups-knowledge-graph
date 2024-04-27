@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/30003789/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hedy Frank-Autheried (22 January 1902 – 24 March 1979) was an Austrian composer." ;
+        mtp:hasParticipant   meetup:5da678401032934eec632c88af57b30a ;
+        mtp:hasPurpose       meetup:529207f6f4fb669c2e8f2588e1691b9a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hedy_Frank-Autheried> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Hedy_Frank-Autheried>
+        rdf:type  core:Person .
+
+meetup:5da678401032934eec632c88af57b30a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hedy_Frank-Autheried> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999997608665584" ;
+        mtp:hasTextEvidence     "Hedy Frank-Autheried" .
+
+meetup:529207f6f4fb669c2e8f2588e1691b9a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9987822" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010094732" ;
+        mtp:hasSourcePurpose          "ML" .

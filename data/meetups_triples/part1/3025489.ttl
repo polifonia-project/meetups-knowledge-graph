@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/3025489/11/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Heathen recruited Terry Lauderdale in 2005 to be the second guitarist in the group and toured across Europe. Also in 2005, Lee Altus joined Bay Area thrashers Exodus, but remained a member of Heathen." ;
+        mtp:hasParticipant   meetup:d15f6166e9a99f90756c5af1275c65cb ;
+        mtp:hasPurpose       meetup:3dc7174376bb1d5ef95f84d87aff4a7c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Heathen_(band)> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3dc7174376bb1d5ef95f84d87aff4a7c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a music group" ;
+        mtp:hasEvidencePurposeSecond  "Personal career and commitments" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Heathen_(band)>
+        rdf:type  core:Person .
+
+meetup:d15f6166e9a99f90756c5af1275c65cb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_Altus> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lee Altus" .
+
+<http://dbpedia.org/resource/Lee_Altus>
+        rdf:type  core:Person .

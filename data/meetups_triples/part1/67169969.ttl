@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:576633417c133b572b64d3a6fbf5eef2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9358005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06401086" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/67169969/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Thomas F. McFarland (September 16, 1903 – April 8, 1962), known professionally as Barrelhouse Buck McFarland was an American blues and boogie-woogie pianist, singer and composer." ;
+        mtp:hasParticipant   meetup:ba97008a2624e48910afc564e574998d , meetup:624c7e6273ea6d32c405c9b7765a7491 ;
+        mtp:hasPurpose       meetup:576633417c133b572b64d3a6fbf5eef2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barrelhouse_Buck_McFarland> ;
+        mtp:hasType          "HM" .
+
+meetup:ba97008a2624e48910afc564e574998d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barrelhouse_Buck_McFarland> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "0.999999999999602" ;
+        mtp:hasTextEvidence     "Barrelhouse Buck McFarland" .
+
+meetup:624c7e6273ea6d32c405c9b7765a7491
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Thomas F. McFarland" .
+
+<http://dbpedia.org/resource/Barrelhouse_Buck_McFarland>
+        rdf:type  core:Person .

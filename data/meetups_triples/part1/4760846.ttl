@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4760846/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is currently principal conductor of the NDR Elbphilharmonie Orchestra and music director of Royal Swedish Opera, and was formerly music director of the New York Philharmonic." ;
+        mtp:hasParticipant   meetup:7537265ec447157762391c06cf106950 ;
+        mtp:hasPurpose       meetup:67f469d66af7088903f357f445db8778 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alan_Gilbert_(conductor)> ;
+        mtp:hasType          "HT" .
+
+meetup:52458ff416080deb40c028624076976e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9748053" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.025159325" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7b9596372f288b4736fd27e3286ca8d0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alan_Gilbert_(conductor)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.978840393818996" ;
+        mtp:hasTextEvidence     "Alan Gilbert" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:7537265ec447157762391c06cf106950
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alan_Gilbert_(conductor)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alan Gilbert" .
+
+<http://w3id.org/polifonia/pilot/meetups/4760846/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alan Gilbert (born February 23, 1967) is an American conductor and violinist." ;
+        mtp:hasParticipant   meetup:7b9596372f288b4736fd27e3286ca8d0 ;
+        mtp:hasPurpose       meetup:52458ff416080deb40c028624076976e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alan_Gilbert_(conductor)> ;
+        mtp:hasType          "HT" .
+
+meetup:67f469d66af7088903f357f445db8778
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9984907" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00081839174" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Alan_Gilbert_(conductor)>
+        rdf:type  core:Person .

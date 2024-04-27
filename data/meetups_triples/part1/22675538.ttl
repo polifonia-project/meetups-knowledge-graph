@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gene_Lees>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9c8ab236f6b2df0922386b3f861b1d1a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The creation and recording of music" ;
+        mtp:hasEvidencePurposeSecond  "Lees' personal experiences and career" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9eeee14ed733be9919f3f96e08f45380
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Antônio_Carlos_Jobim> ;
+        mtp:hasOffset           "127" ;
+        mtp:hasSimilarityScore  "0.9999999999962768" ;
+        mtp:hasTextEvidence     "Antonio Carlos Jobim" .
+
+<http://w3id.org/polifonia/pilot/meetups/22675538/7/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"Quiet Nights\" was Lees' first professional lyric, written on a bus going to Belo Horizonte, while Lees was on a United States State Department tour of South America with the Paul Winter Sextet, in 1961. Sinatra recorded four songs by Jobim with lyrics by Lees, Sinatra's recording of \"Quiet Nights\" (from Francis Albert Sinatra & Antonio Carlos Jobim, 1967), is considered by Lees to be definitive." ;
+        mtp:hasParticipant   meetup:9eeee14ed733be9919f3f96e08f45380 ;
+        mtp:hasPurpose       meetup:9c8ab236f6b2df0922386b3f861b1d1a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gene_Lees> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Antônio_Carlos_Jobim>
+        rdf:type  core:Person .

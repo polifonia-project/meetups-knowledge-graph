@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1097222/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mike Pedicin (born Michael L. Pedicine; October 24, 1917 – June 26, 2016) was an American saxophonist and jazz bandleader." ;
+        mtp:hasParticipant   meetup:f7be64d0c7471c649f9f87d23d3050bc , meetup:847527eb12360b559812bf63547a7832 ;
+        mtp:hasPurpose       meetup:ec37c6daab8be2d55f37765676379596 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Pedicin> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f7be64d0c7471c649f9f87d23d3050bc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael L. Pedicine" .
+
+meetup:847527eb12360b559812bf63547a7832
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Pedicin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999861682781472" ;
+        mtp:hasTextEvidence     "Mike Pedicin" .
+
+meetup:ec37c6daab8be2d55f37765676379596
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99975723" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00024153307" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Mike_Pedicin>
+        rdf:type  core:Person .

@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e709fa38ba6f93f96c420d5d22af54ec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gabi_Delgado-López> ;
+        mtp:hasOffset           "76" ;
+        mtp:hasSimilarityScore  "0.9999999325661428" ;
+        mtp:hasTextEvidence     "Gabi Delgado" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:43a1d6a6c01a19290c26a4758f1d884d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gabriel Delgado-López" .
+
+<http://w3id.org/polifonia/pilot/meetups/42084946/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gabriel Delgado-López (18 April 1958 – 22 March 2020), commonly known as Gabi Delgado, was a German composer, lyricist and producer, best known as singer and co-founder, with Robert Görl, of the German electronic band Deutsch Amerikanische Freundschaft." ;
+        mtp:hasParticipant   meetup:43a1d6a6c01a19290c26a4758f1d884d , meetup:e709fa38ba6f93f96c420d5d22af54ec ;
+        mtp:hasPurpose       meetup:ffb2ddbf50d0d54283464716d3c7df70 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gabi_Delgado-López> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Gabi_Delgado-López>
+        rdf:type  core:Person .
+
+meetup:ffb2ddbf50d0d54283464716d3c7df70
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.4260762" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.39213473" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:df20f3e3d3f801f53a6c155777c71b6d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_McFarland> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.9999999999997726" ;
+        mtp:hasTextEvidence     "Gary McFarland" .
+
+<http://w3id.org/polifonia/pilot/meetups/15861366/24/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Requiem for Gary McFarland - Cobblestone Records" ;
+        mtp:hasParticipant   meetup:df20f3e3d3f801f53a6c155777c71b6d ;
+        mtp:hasPurpose       meetup:bd5277698de428ae112cebf122a82046 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_McFarland> ;
+        mtp:hasType          "HT" .
+
+meetup:bd5277698de428ae112cebf122a82046
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5644191" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.42090082" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Gary_McFarland>
+        rdf:type  core:Person .

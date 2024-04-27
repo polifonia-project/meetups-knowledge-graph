@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:feaecb06391f66ca6ce0e0cc9e42019c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a music group performing in a coffeehouse." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions a change in plans and a residency for the group." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/61411313/6/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The 2i's went on to become hugely successful after Lincoln began staging music evenings aimed at teenagers featuring rock and roll and skiffle acts. The 2i's became known as \"a recruiting centre for the first generation of London rockers\" and \"a haven for managers and agents on the hunt for fresh talent\"." ;
+        mtp:hasPurpose       meetup:c9d6dd43ed6937d4ba8b2665e6ba0b5d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Lincoln> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/61411313/6/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In July 1956, The Vipers Skiffle Group took shelter from the rain in the 2i's, whereupon Lincoln suggested they keep playing in the coffeehouse's basement. The success of their impromptu performance made Lincoln reconsider his plans; he made the 2i's a live music venue, and gave The Vipers a residency." ;
+        mtp:hasPurpose       meetup:feaecb06391f66ca6ce0e0cc9e42019c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Lincoln> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Paul_Lincoln>
+        rdf:type  core:Person .
+
+meetup:ab99bd7e0a26bf933778e1f8581a15f6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Meeting to discuss business plans" ;
+        mtp:hasEvidencePurposeSecond  "Personal life and accommodation plans" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/61411313/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In April 1956, Lincoln and his business partner Ray Hunter purchased the lease on the 2i's, a steakhouse in Soho, London, and turned it into a coffeehouse. Lincoln planned to use the rooms above the restaurant as temporary accommodation for foreign wrestlers." ;
+        mtp:hasPurpose       meetup:ab99bd7e0a26bf933778e1f8581a15f6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Lincoln> ;
+        mtp:hasType          "HT" .
+
+meetup:c9d6dd43ed6937d4ba8b2665e6ba0b5d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Music venue for rock and roll acts" ;
+        mtp:hasEvidencePurposeSecond  "Meeting place for managers and agents" ;
+        mtp:hasSourcePurpose          "LLM" .

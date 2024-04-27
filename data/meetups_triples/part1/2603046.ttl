@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:c60890140322a92b70499ecce1ddda60
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6780335" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28264916" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2603046/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeff Neal (born June 15, 1969) is a drummer and vocalist best known for his affiliation with classic rock band Boston from 2002 to present." ;
+        mtp:hasParticipant   meetup:e3098e19216be6bdc961edb3d7b217d8 ;
+        mtp:hasPurpose       meetup:c60890140322a92b70499ecce1ddda60 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Neal> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2603046/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In late 2002, while Boston leader Tom Scholz was vacationing in Maine, he saw Neal play at Sunday River Ski Resort with his then-current band, Punchbug. After introducing himself between sets, Scholz offered Neal an audition." ;
+        mtp:hasPurpose       meetup:b342daaf2ef9df8b0db493c3afd7679e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Neal> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jeff_Neal>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:e3098e19216be6bdc961edb3d7b217d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Neal> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999992326" ;
+        mtp:hasTextEvidence     "Jeff Neal" .
+
+meetup:b342daaf2ef9df8b0db493c3afd7679e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a musician getting an audition opportunity." ;
+        mtp:hasEvidencePurposeSecond  "The meeting between Tom Scholz and Neal was a coincidence." ;
+        mtp:hasSourcePurpose          "LLM" .

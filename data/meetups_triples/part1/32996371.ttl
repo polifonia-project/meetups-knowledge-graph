@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a1322b33172122dabdf9db38adfa4c7d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Playing guitar in a metal band" ;
+        mtp:hasEvidencePurposeSecond  "Personal involvement in a band" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:bfb89215e8c890c3bfedb751505b3f22
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the release of a music album." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the airing of a single/video." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:302abb9f14ade6647fe99a350eb0040b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cédric_%22Cede%22_Dupont> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cédric \"Cede\" Dupont" .
+
+<http://w3id.org/polifonia/pilot/meetups/32996371/6/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Their recent album \"Rise and Fall\" was released 27/01/2017 through Universal Music. Their first single/video \"Inner Voice\" off of the new album aired on 09/12/2016." ;
+        mtp:hasPurpose       meetup:bfb89215e8c890c3bfedb751505b3f22 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cédric_%22Cede%22_Dupont> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/32996371/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Currently he plays guitar in Silent Circus, a modern metal band from Switzerland." ;
+        mtp:hasParticipant   meetup:302abb9f14ade6647fe99a350eb0040b ;
+        mtp:hasPurpose       meetup:a1322b33172122dabdf9db38adfa4c7d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cédric_%22Cede%22_Dupont> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Cédric_%22Cede%22_Dupont>
+        rdf:type  core:Person .

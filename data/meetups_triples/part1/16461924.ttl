@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Simon_Ravn>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/16461924/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Simon Ravn (born 25 January 1974 in Copenhagen, Denmark) is a Danish composer who composes orchestral music for film, television and video games." ;
+        mtp:hasParticipant   meetup:e4c512f6e5da561d9cd7c8662af66f0d ;
+        mtp:hasPurpose       meetup:bbe0cda28b43cc69deb93c6dab42cdd2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_Ravn> ;
+        mtp:hasType          "HT" .
+
+meetup:e4c512f6e5da561d9cd7c8662af66f0d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_Ravn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999988631146744" ;
+        mtp:hasTextEvidence     "Simon Ravn" .
+
+meetup:bbe0cda28b43cc69deb93c6dab42cdd2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999981" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.8051147e-07" ;
+        mtp:hasSourcePurpose          "ML" .

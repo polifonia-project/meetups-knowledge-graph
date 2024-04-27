@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bud_Alper>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:df1831dd1a79a19b60334c9ce1669a39
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bud_Alper> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999951329121396" ;
+        mtp:hasTextEvidence     "Bud Alper" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a14ae52be6a9d21acf3eef1b07a7db8c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87100786" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12374076" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/33305210/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bud Alper (August 24, 1930 – December 19, 2012) was an American sound engineer." ;
+        mtp:hasParticipant   meetup:df1831dd1a79a19b60334c9ce1669a39 ;
+        mtp:hasPurpose       meetup:a14ae52be6a9d21acf3eef1b07a7db8c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bud_Alper> ;
+        mtp:hasType          "HT" .

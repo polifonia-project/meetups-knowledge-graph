@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Cirilo_Vila>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e7692e64ad397725e9e40d367ba16b2d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999856" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 8.298598e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Fidel_Castro>
+        rdf:type  core:Person .
+
+meetup:46c9eacbe41f2bfa0dd71fec15a07013
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cirilo_Vila> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cirilo Vila" .
+
+<http://w3id.org/polifonia/pilot/meetups/47616325/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cirilo Vila died of a heart attack on 23 July 2015 at the age of 77." ;
+        mtp:hasParticipant   meetup:46c9eacbe41f2bfa0dd71fec15a07013 ;
+        mtp:hasPurpose       meetup:e7692e64ad397725e9e40d367ba16b2d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cirilo_Vila> ;
+        mtp:hasType          "HT" .
+
+meetup:dab077ef340787f57049c2362108a81e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fidel_Castro> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.6691147167849483" ;
+        mtp:hasTextEvidence     "Castro" .
+
+<http://w3id.org/polifonia/pilot/meetups/47616325/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cirilo Vila Castro (7 October 1937 – 23 July 2015) was a Chilean composer, pianist, and academic, and the winner of the National Prize for Musical Arts in 2004." ;
+        mtp:hasParticipant   meetup:dab077ef340787f57049c2362108a81e , meetup:1ef790b893b1dfa0d936200187c56afd ;
+        mtp:hasPurpose       meetup:d7dc29450f3f341592f4c4f8c2f2e1d6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cirilo_Vila> ;
+        mtp:hasType          "HM" .
+
+meetup:1ef790b893b1dfa0d936200187c56afd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cirilo_Vila> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cirilo Vila" .
+
+meetup:d7dc29450f3f341592f4c4f8c2f2e1d6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.71887934" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.27545145" ;
+        mtp:hasSourcePurpose          "ML" .

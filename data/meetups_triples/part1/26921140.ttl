@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/26921140/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Natalie Knutsen (born October 29, 1986), known by her stage name Nataly Dawn, is an American singer-songwriter and musician." ;
+        mtp:hasParticipant   meetup:d982effa8fd595bb167c7106558368d9 ;
+        mtp:hasPurpose       meetup:1fa0c7f4e7cff871430e913a3516caf2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nataly_Dawn> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jack_Conte>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Nataly_Dawn>
+        rdf:type  core:Person .
+
+meetup:2a0f36a9eb0856146a2265edc10756dd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Conte> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jack Conte" .
+
+<http://w3id.org/polifonia/pilot/meetups/26921140/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is one half of the duo Pomplamoose with her husband Jack Conte and has released three studio albums and four EPs as of April 2021, in addition to numerous collaborations with other artists." ;
+        mtp:hasParticipant   meetup:2a0f36a9eb0856146a2265edc10756dd , meetup:b92cf31f0b09bf3780665c34567064b9 ;
+        mtp:hasPurpose       meetup:ca95f45cdedce148dae6ec233c3695a7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nataly_Dawn> ;
+        mtp:hasType          "HM" .
+
+meetup:1fa0c7f4e7cff871430e913a3516caf2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84555405" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11933207" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b92cf31f0b09bf3780665c34567064b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nataly_Dawn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nataly Dawn" .
+
+meetup:d982effa8fd595bb167c7106558368d9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nataly_Dawn> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nataly Dawn" .
+
+meetup:ca95f45cdedce148dae6ec233c3695a7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.4846794" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24840453" ;
+        mtp:hasSourcePurpose          "ML" .

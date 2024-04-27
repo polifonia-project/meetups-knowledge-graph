@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Kim_Deal>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/156223/27/3>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Kim_Deal> ;
+        mtp:hasType     "HM" .
+
+meetup:95eecd3fa748f42ad787e9687e80d036
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "2013 and 2014" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2013-01-01"^^xsd:date ;
+        time:hasEnd          "2014-12-31"^^xsd:date .
+
+meetup:2393e077b16563903a2c7908d6fa0864
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "Christmas" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "2012-12-25"^^xsd:date ;
+        time:hasEnd          "2012-12-25"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/156223/27/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:95eecd3fa748f42ad787e9687e80d036 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Kim_Deal> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+meetup:bac433a87f83f597d5cfb10225943b08
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2014" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2014-01-01"^^xsd:date ;
+        time:hasEnd          "2014-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:cc54840477fa6234b83355a9800c6169
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "December 2012" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2012-12-01"^^xsd:date ;
+        time:hasEnd          "2012-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/156223/60/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:bac433a87f83f597d5cfb10225943b08 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Kim_Deal> ;
+        mtp:hasType     "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/156223/27/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:2393e077b16563903a2c7908d6fa0864 , meetup:cc54840477fa6234b83355a9800c6169 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Kim_Deal> ;
+        mtp:hasType     "HT" .

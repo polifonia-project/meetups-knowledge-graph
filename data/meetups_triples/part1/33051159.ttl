@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:500e15fc5ec329ad9a815f83e84b3f34
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90801495" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08406798" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:cb33fd4c3451bd7be5a535ae4de0c2cb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ari_Lasso> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ari Lasso" .
+
+<http://w3id.org/polifonia/pilot/meetups/33051159/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2016, Ari Lasso joined the judging panel of the season 2 of The Voice Indonesia." ;
+        mtp:hasParticipant   meetup:cb33fd4c3451bd7be5a535ae4de0c2cb ;
+        mtp:hasPurpose       meetup:500e15fc5ec329ad9a815f83e84b3f34 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ari_Lasso> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ari_Lasso>
+        rdf:type  core:Person .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:46e8491f767e20859f551eb75e7eb8c7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Francisco José Debali was a composer" ;
+        mtp:hasEvidencePurposeSecond  "He possibly composed the Paraguayan anthem" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:90ae6bf973630419f1cdb689df20800a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7734096" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22359984" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/7083106/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Francisco José Debali (26 July 1791 – 13 January 1859), born Debály Ferenc József, was a Hungarian-born composer who emigrated to Uruguay in 1838." ;
+        mtp:hasParticipant   meetup:467874cdbb829f4d09834227440da85b ;
+        mtp:hasPurpose       meetup:90ae6bf973630419f1cdb689df20800a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Francisco_José_Debali> ;
+        mtp:hasType          "HT" .
+
+meetup:bd8b58b78e029c4b5ec775d37f64d185
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Francisco_José_Debali> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Francisco José Debali" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/7083106/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Francisco José Debali (26 July 1791 – 13 January 1859), born Debály Ferenc József, was a Hungarian-born composer who emigrated to Uruguay in 1838. He authored the national anthem of Uruguay and, possibly, the tune to Paraguayos, República o Muerte, which became the Paraguayan anthem." ;
+        mtp:hasParticipant   meetup:bd8b58b78e029c4b5ec775d37f64d185 ;
+        mtp:hasPurpose       meetup:46e8491f767e20859f551eb75e7eb8c7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Francisco_José_Debali> ;
+        mtp:hasType          "HT" .
+
+meetup:467874cdbb829f4d09834227440da85b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Francisco_José_Debali> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Francisco José Debali" .
+
+<http://dbpedia.org/resource/Francisco_José_Debali>
+        rdf:type  core:Person .

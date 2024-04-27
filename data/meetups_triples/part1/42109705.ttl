@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:33d7633c6f1ed5c21cbf3db2e451be08
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about the person's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about the person's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Taishi_Nakagawa>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/42109705/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Taishi Nakagawa (中川大志, Nakagawa Taishi, born June 14, 1998) is a Japanese actor, host, and model." ;
+        mtp:hasParticipant   meetup:f50701bedef7a79e1d4d28c650f8ac42 ;
+        mtp:hasPurpose       meetup:33d7633c6f1ed5c21cbf3db2e451be08 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taishi_Nakagawa> ;
+        mtp:hasType          "HT" .
+
+meetup:6ba35b46bf1b42b8e3f5b8d1ead75f56
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Taishi_Nakagawa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Taishi Nakagawa" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f50701bedef7a79e1d4d28c650f8ac42
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Taishi_Nakagawa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Taishi Nakagawa" .
+
+<http://w3id.org/polifonia/pilot/meetups/42109705/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known  for his leading role as Yuiji Kira in the live action Closest Love To Heaven, and as Tenma Hase in the second season of Hana Yori Dango." ;
+        mtp:hasParticipant   meetup:6ba35b46bf1b42b8e3f5b8d1ead75f56 , meetup:639c6c91a86e14b5e49a9d5d0055061e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taishi_Nakagawa> ;
+        mtp:hasType          "HM" .
+
+meetup:639c6c91a86e14b5e49a9d5d0055061e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Yuiji Kira" .

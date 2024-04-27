@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/337448/15/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The body features faded fiesta red paint over desert sand paint, based on Palladino's 1961 Precision Bass, while the neck shape and round-lam rosewood fretboard are based on his 1963 sunburst Precision Bass." ;
+        mtp:hasParticipant   meetup:ac42fce6eeda50baad45cc03111ad1aa ;
+        mtp:hasPurpose       meetup:e75c215e4562e76a468a082d472b4995 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pino_Palladino> ;
+        mtp:hasType          "HT" .
+
+meetup:ac42fce6eeda50baad45cc03111ad1aa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pino_Palladino> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pino Palladino" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/337448/8/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "According to Jordan, he had planned to meet up with John Mayer and Willie Weeks in January 2005 to perform Tsunami Aid: A Concert of Hope for victims of the tsunami that struck southeast Asia. Weeks was unable to make the performance, and Jordan suggested Palladino, who had heard some of Mayer's work and was willing to come." ;
+        mtp:hasParticipant   meetup:93ed8711d1f2db53b9de3e5d161c8d0f ;
+        mtp:hasPurpose       meetup:bb41478a329c6b49c88bd29ef7ea853b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pino_Palladino> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Pino_Palladino>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/John_Mayer>
+        rdf:type  core:Person .
+
+meetup:93ed8711d1f2db53b9de3e5d161c8d0f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Mayer> ;
+        mtp:hasOffset           "96" ;
+        mtp:hasSimilarityScore  "0.999995066256367" ;
+        mtp:hasTextEvidence     "Mayer" .
+
+meetup:bb41478a329c6b49c88bd29ef7ea853b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Collaboration for a charity concert" ;
+        mtp:hasEvidencePurposeSecond  "Arranging a meeting with musicians" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:e75c215e4562e76a468a082d472b4995
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99876714" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00072646915" ;
+        mtp:hasSourcePurpose          "ML" .

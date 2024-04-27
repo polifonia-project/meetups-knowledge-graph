@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:b7b03bf7496487a3035cc7a13b3795c5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92901295" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07090936" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/27501289/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Albert Chamberland (12 October 1886 – 4 April 1975) was a Canadian violinist, composer, conductor, music producer, and music educator." ;
+        mtp:hasParticipant   meetup:8009b472d4e0860e088ae8c781c687f5 ;
+        mtp:hasPurpose       meetup:b7b03bf7496487a3035cc7a13b3795c5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Albert_Chamberland> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3377042b6daaa12eb595b5f65d7cc5c1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99389535" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.002834029" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Albert_Chamberland>
+        rdf:type  core:Person .
+
+meetup:c5e4208cdcbfab6fe9702361d4237c85
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Albert_Chamberland> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Albert Chamberland" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:8009b472d4e0860e088ae8c781c687f5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Albert_Chamberland> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Albert Chamberland" .
+
+<http://w3id.org/polifonia/pilot/meetups/27501289/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As a violinist he performed as a chamber musician with a number of ensembles, including the Beethoven Trio with whom he made some early recordings for His Master's Voice during the first decade of the 20th century." ;
+        mtp:hasParticipant   meetup:c5e4208cdcbfab6fe9702361d4237c85 ;
+        mtp:hasPurpose       meetup:3377042b6daaa12eb595b5f65d7cc5c1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Albert_Chamberland> ;
+        mtp:hasType          "HT" .

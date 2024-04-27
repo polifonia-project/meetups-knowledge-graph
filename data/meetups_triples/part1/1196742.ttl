@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1196742/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Grierson (February 19, 1955 – November 20, 2004) was a Canadian radio broadcaster, best known as a host of national and local programming for CBC Radio." ;
+        mtp:hasParticipant   meetup:0e99d0b09d942cbd5162c48ff57ea9ee ;
+        mtp:hasPurpose       meetup:e74920019fbeeb37c815687e0bc1be55 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Grierson> ;
+        mtp:hasType          "HT" .
+
+meetup:f2261b3338240ed986d484c5eb335e6d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Grierson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David Grierson" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/David_Grierson>
+        rdf:type  core:Person .
+
+meetup:1f6a9f428cccb06f21fe0a912dff843a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97173685" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.012046651" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1196742/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was born in Toronto in 1955 and graduated from the broadcasting program at the British Columbia Institute of Technology, as well as training as a classical clarinetist." ;
+        mtp:hasParticipant   meetup:f2261b3338240ed986d484c5eb335e6d ;
+        mtp:hasPurpose       meetup:1f6a9f428cccb06f21fe0a912dff843a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Grierson> ;
+        mtp:hasType          "HT" .
+
+meetup:e74920019fbeeb37c815687e0bc1be55
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.684928" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.31503615" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0e99d0b09d942cbd5162c48ff57ea9ee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Grierson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999575797758552" ;
+        mtp:hasTextEvidence     "David Grierson" .

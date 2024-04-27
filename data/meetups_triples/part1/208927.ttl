@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:0af5c40e4166ff8226fdc28b802d1bfe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Emotional impact on personal relationships" ;
+        mtp:hasEvidencePurposeSecond  "Formation of a band during high school" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3a866a33ec807db9070adb1f6a14834a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performance at benefit show" ;
+        mtp:hasEvidencePurposeSecond  "Family involvement in music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/208927/9/19>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On May 18, 2009 Mike Ness and Social Distortion played a benefit show at the House of Blues in Anaheim, California called \"Rock to Recovery\" and his son joined him on stage and played lead guitar for the song \"Ball and Chain\"." ;
+        mtp:hasParticipant   meetup:385c486498aaefa24d13e4e38ca9d5b1 ;
+        mtp:hasPurpose       meetup:3a866a33ec807db9070adb1f6a14834a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Ness> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mike_Ness>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/208927/4/17>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ness was devastated, stating \"I am saddened beyond any possible form of expression. Dennis and I have been friends since boyhood, starting Social Distortion together while we were in high school." ;
+        mtp:hasPurpose       meetup:0af5c40e4166ff8226fdc28b802d1bfe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_Ness> ;
+        mtp:hasType          "HT" .
+
+meetup:385c486498aaefa24d13e4e38ca9d5b1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Ness> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mike Ness" .

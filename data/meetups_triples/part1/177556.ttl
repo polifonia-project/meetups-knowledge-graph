@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:57ea9ee2eeae042924df75dffc64c506
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cliff_Burton> ;
+        mtp:hasOffset           "163" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cliff Burton" .
+
+meetup:7cfac182cf304029d7d8741714da56e0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Recognition of Cliff Burton's birthday" ;
+        mtp:hasEvidencePurposeSecond  "Fan petition leading to proclamation" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Cliff_Burton>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/177556/21/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2018, the Alameda County, California, Board of Supervisors issued a proclamation declaring February 10, 2018, which would have been Burton's 56th birthday, as \"Cliff Burton Day\" after a fan petition successfully passed." ;
+        mtp:hasParticipant   meetup:57ea9ee2eeae042924df75dffc64c506 ;
+        mtp:hasPurpose       meetup:7cfac182cf304029d7d8741714da56e0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cliff_Burton> ;
+        mtp:hasType          "HT" .

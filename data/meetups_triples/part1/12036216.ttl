@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jimmy_Page>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/12036216/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the 1980s, he worked with many UK artists including The Smiths, Depeche Mode, Eurythmics, Soft Cell, Jimmy Page and The Associates." ;
+        mtp:hasParticipant   meetup:88ad6d6aeff8a9524e739521318cc102 , meetup:14c12429b02e4f0fea2203c1d4c83458 ;
+        mtp:hasPurpose       meetup:75636659b4265b66bcd8479ed806a6b9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Ashworth> ;
+        mtp:hasType          "HM" .
+
+meetup:61e056d35b4f2b2f1ee1af7f09d1bda0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9859249" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009561285" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:88ad6d6aeff8a9524e739521318cc102
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Ashworth> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Ashworth" .
+
+<http://dbpedia.org/resource/Peter_Ashworth>
+        rdf:type  core:Person .
+
+meetup:1de5e972a6b8e6189a1c02f12d85e3ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Ashworth> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Ashworth" .
+
+meetup:75636659b4265b66bcd8479ed806a6b9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Working with UK artists in the 1980s" ;
+        mtp:hasEvidencePurposeSecond  "Professional collaborations" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:14c12429b02e4f0fea2203c1d4c83458
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Page> ;
+        mtp:hasOffset           "104" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "Jimmy Page" .
+
+<http://w3id.org/polifonia/pilot/meetups/12036216/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ashworth initially specialized in music photography, between 1979 and 2000." ;
+        mtp:hasParticipant   meetup:1de5e972a6b8e6189a1c02f12d85e3ad ;
+        mtp:hasPurpose       meetup:61e056d35b4f2b2f1ee1af7f09d1bda0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Ashworth> ;
+        mtp:hasType          "HT" .

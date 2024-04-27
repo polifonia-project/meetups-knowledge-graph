@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/22761673/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Toby Marlow (born 12 October 1994) is an English writer, composer and actor most known for his work as composer and co-writer of the West End musical Six." ;
+        mtp:hasParticipant   meetup:2225c2e40ed438ac6f0be3098e65e42f ;
+        mtp:hasPurpose       meetup:553ebc860c118421d925a001bcee4e86 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Toby_Marlow> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Toby_Marlow>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:553ebc860c118421d925a001bcee4e86
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99997365" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.6069925e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2225c2e40ed438ac6f0be3098e65e42f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Toby_Marlow> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Toby Marlow" .

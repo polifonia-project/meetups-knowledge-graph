@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ac84d5c433deb4994080e96fe2809a06
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.75644046" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12331522" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:47f9c7fe263ebac737e75f66a557eda7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Harvey_Fuqua> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Harvey Fuqua" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:ecaf15ad49bd3407f750b78947a0a436
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Recording and signing with record labels" ;
+        mtp:hasEvidencePurposeSecond  "Negotiating contracts and deals" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/47741879/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Harvey Fuqua (July 27, 1929 – July 6, 2010) was an American rhythm and blues singer, songwriter, record producer, and record label executive." ;
+        mtp:hasParticipant   meetup:47f9c7fe263ebac737e75f66a557eda7 ;
+        mtp:hasPurpose       meetup:ac84d5c433deb4994080e96fe2809a06 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harvey_Fuqua> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Harvey_Fuqua>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/47741879/3/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They then recorded for the Chance label in Chicago, before signing with Chess Records in 1954. Their single \"Sincerely\" reached number 1 on the Billboard R&B chart and number 20 on the Hot 100 in late 1954." ;
+        mtp:hasPurpose       meetup:ecaf15ad49bd3407f750b78947a0a436 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harvey_Fuqua> ;
+        mtp:hasType          "HT" .

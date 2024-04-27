@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Phil_King_(musician)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:449c57dd2db126f44d5aa8b30629a7b9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Phil King is known for his work as a musician" ;
+        mtp:hasEvidencePurposeSecond  "Phil King was born in London, England" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1799117/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Phil King (born Philip King on 29 April 1960 in London, England) is an English musician perhaps best known for being the bassist of Lush." ;
+        mtp:hasParticipant   meetup:7283c4454839c59e80698fdc54c6cef7 ;
+        mtp:hasPurpose       meetup:449c57dd2db126f44d5aa8b30629a7b9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_King_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:7283c4454839c59e80698fdc54c6cef7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_King_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.4603303922416144" ;
+        mtp:hasTextEvidence     "Phil King" .

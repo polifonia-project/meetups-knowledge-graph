@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_Klemmer>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:76747d603dc23c6731dd5545f633ccc7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9938992" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0057023163" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0da5544338f06f1b1e2aada35fc6a406
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9981006" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0018986057" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:98467aa0be6c31fec8e3c47cc51247c3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Klemmer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999959924" ;
+        mtp:hasTextEvidence     "John Klemmer" .
+
+meetup:dc965dc5398bb0549e1a5e843b08edba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Klemmer> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "0.9999999999998436" ;
+        mtp:hasTextEvidence     "John Klemmer" .
+
+<http://w3id.org/polifonia/pilot/meetups/6253031/39/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Klemmer – Priceless Jazz #38 (GRP, 1999)" ;
+        mtp:hasParticipant   meetup:98467aa0be6c31fec8e3c47cc51247c3 ;
+        mtp:hasPurpose       meetup:76747d603dc23c6731dd5545f633ccc7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Klemmer> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/6253031/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Involvement: The John Klemmer Quartets (Cadet, 1967)" ;
+        mtp:hasParticipant   meetup:dc965dc5398bb0549e1a5e843b08edba ;
+        mtp:hasPurpose       meetup:0da5544338f06f1b1e2aada35fc6a406 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Klemmer> ;
+        mtp:hasType          "HT" .

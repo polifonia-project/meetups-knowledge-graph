@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:6f5954435deb19e16e4947b4bf64d4e9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99567586" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004050826" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cbd7e2bcac491bc50e996264c693ebfa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Joseph Alan Gilman is a jazz pianist" ;
+        mtp:hasEvidencePurposeSecond  "He has taught at various educational institutions" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Joe_Gilman>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/14494786/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1987 Joe Gilman (Artful Balance)" ;
+        mtp:hasParticipant   meetup:230592690b68a0538b590b972bfa8a0e ;
+        mtp:hasPurpose       meetup:6f5954435deb19e16e4947b4bf64d4e9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Gilman> ;
+        mtp:hasType          "HT" .
+
+meetup:230592690b68a0538b590b972bfa8a0e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Gilman> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "0.9999999999469082" ;
+        mtp:hasTextEvidence     "Joe Gilman" .
+
+<http://w3id.org/polifonia/pilot/meetups/14494786/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joseph Alan Gilman (born June 27, 1962) is an American jazz pianist from Sacramento, California. He has taught at American River College and Sacramento State University in Sacramento and the Brubeck Institute in Stockton, California." ;
+        mtp:hasPurpose       meetup:cbd7e2bcac491bc50e996264c693ebfa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Gilman> ;
+        mtp:hasType          "HT" .

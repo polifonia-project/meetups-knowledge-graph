@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Dusty_Springfield>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:9eca6aa9de9da699a855facf8c635843
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9961598" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.003634207" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/30847861/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Peggy Little (born August 8, 1942) is an American country music singer best remembered for her country cover version of Dusty Springfield's \"Son of a Preacher Man\"" ;
+        mtp:hasParticipant   meetup:181d2ef064252033c7088ade779474fc , meetup:21d565199316560289a266ad578f752e ;
+        mtp:hasPurpose       meetup:9eca6aa9de9da699a855facf8c635843 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peggy_Little> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Peggy_Little>
+        rdf:type  core:Person .
+
+meetup:181d2ef064252033c7088ade779474fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peggy_Little> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999991854622" ;
+        mtp:hasTextEvidence     "Peggy Little" .
+
+meetup:21d565199316560289a266ad578f752e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dusty_Springfield> ;
+        mtp:hasOffset           "120" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dusty Springfield" .

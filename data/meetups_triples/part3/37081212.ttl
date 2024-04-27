@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Lisy_Fischer>
+        rdf:type  core:Person .
+
+meetup:37604e3998e4bd6791ef00d91f7de5e2
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "1920 and 1922" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1920-01-01"^^xsd:date ;
+        time:hasEnd          "1922-12-31"^^xsd:date .
+
+meetup:f3736a3986147d70cb55c01a34c03d0c
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "now" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/37081212/3/6>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Lisy_Fischer> ;
+        mtp:hasType     "HM" .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/37081212/6/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:37604e3998e4bd6791ef00d91f7de5e2 , meetup:f3736a3986147d70cb55c01a34c03d0c ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Lisy_Fischer> ;
+        mtp:hasType     "HT" .

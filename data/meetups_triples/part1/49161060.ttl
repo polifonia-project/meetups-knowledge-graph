@@ -1,0 +1,63 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/49161060/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was the guitarist of Madball from 2001–2017." ;
+        mtp:hasParticipant   meetup:d012ff33f2af034aac9acc857ee5ab9c ;
+        mtp:hasPurpose       meetup:213a9409f9ca072acfdb99f2231293f3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Daniels_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Brian_Daniels_(musician)>
+        rdf:type  core:Person .
+
+meetup:cb27c3100c116995ab0f25613723e84f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9961195" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.003878773" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/49161060/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brian \"Mitts\" Daniels (born 1971) is an American musician, songwriter, and producer." ;
+        mtp:hasParticipant   meetup:0bfa0087c18af7ee84b89902bb8eeaff ;
+        mtp:hasPurpose       meetup:cb27c3100c116995ab0f25613723e84f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Daniels_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:d012ff33f2af034aac9acc857ee5ab9c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Daniels_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Brian \"Mitts\" Daniels" .
+
+meetup:0bfa0087c18af7ee84b89902bb8eeaff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Daniels_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brian \"Mitts\" Daniels" .
+
+meetup:213a9409f9ca072acfdb99f2231293f3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999917" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.67108e-07" ;
+        mtp:hasSourcePurpose          "ML" .

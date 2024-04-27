@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Run-DMC>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/47567077/24/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On October 30, 2002, Mizell was shot and killed at his recording studio in Queens. Fans and friends set up a memorial outside the studio with Adidas sneakers, albums, and flowers." ;
+        mtp:hasPurpose       meetup:7ddd204cec3136dceeb46907076802d2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Run-DMC> ;
+        mtp:hasType          "HT" .
+
+meetup:7ddd204cec3136dceeb46907076802d2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a recording studio and memorial for a musician." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions fans and friends setting up a memorial." ;
+        mtp:hasSourcePurpose          "LLM" .

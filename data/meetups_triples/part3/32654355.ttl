@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:7342d86b9fa4508ae1fa7dc486fb1818
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1915" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1915-01-01"^^xsd:date ;
+        time:hasEnd          "1915-12-31"^^xsd:date .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:a0062c3acaa669383f696de7355fcdd7
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "12 February 1899" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1899-02-12"^^xsd:date ;
+        time:hasEnd          "1899-02-12"^^xsd:date .
+
+meetup:d8ad4094419b9c36c821c208d2325601
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "21 February 1938" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1938-02-21"^^xsd:date ;
+        time:hasEnd          "1938-02-21"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/32654355/2/1>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Albert_Huybrechts> ;
+        mtp:hasType     "HM" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/32654355/2/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:7342d86b9fa4508ae1fa7dc486fb1818 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Albert_Huybrechts> ;
+        mtp:hasType     "HM" .
+
+<http://dbpedia.org/resource/Albert_Huybrechts>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/32654355/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:a0062c3acaa669383f696de7355fcdd7 , meetup:d8ad4094419b9c36c821c208d2325601 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Albert_Huybrechts> ;
+        mtp:hasType     "HT" .

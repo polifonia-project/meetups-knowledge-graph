@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/491003/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Takahiro Matsumoto (松本 孝弘, Matsumoto Takahiro, born on March 27, 1961 in Toyonaka, Osaka) is a Japanese musician, songwriter and record producer." ;
+        mtp:hasParticipant   meetup:f3b5f8a4b11fea5c3b2b1315330b16ff , meetup:3b9cf5d6575c3a2f6275783aa5da4200 ;
+        mtp:hasPurpose       meetup:5fe880fc0c6450a0063db89a4c51091a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tak_Matsumoto> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Tak_Matsumoto>
+        rdf:type  core:Person .
+
+meetup:3b9cf5d6575c3a2f6275783aa5da4200
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Takahiro_Tamura> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "0.8907423932030072" ;
+        mtp:hasTextEvidence     "Takahiro" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f3b5f8a4b11fea5c3b2b1315330b16ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tak_Matsumoto> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Takahiro Matsumoto" .
+
+meetup:5fe880fc0c6450a0063db89a4c51091a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Takahiro Matsumoto is a musician and songwriter." ;
+        mtp:hasEvidencePurposeSecond  "He was born in Toyonaka, Osaka." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Takahiro_Tamura>
+        rdf:type  core:Person .

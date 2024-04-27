@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/33374703/3/9>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mic_Conway> ;
+        mtp:hasType     "HM" .
+
+<http://dbpedia.org/resource/Mic_Conway>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/33374703/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:6c33ba176fe8b1d7aa0f757bd276d590 , meetup:9ae83ca6f641f8d54c39e4e9d1d824ae ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mic_Conway> ;
+        mtp:hasType     "HM" .
+
+meetup:9ae83ca6f641f8d54c39e4e9d1d824ae
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "of the 1970s" ;
+        mtp:hasSource        "ML" .
+
+meetup:6c33ba176fe8b1d7aa0f757bd276d590
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "15 February 1951" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1951-02-15"^^xsd:date ;
+        time:hasEnd          "1951-02-15"^^xsd:date .

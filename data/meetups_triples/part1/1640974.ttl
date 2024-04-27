@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:4f320c0da165e047cfd1b78a531d2bb3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7662508" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15033963" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Bing_Crosby>
+        rdf:type  core:Person .
+
+meetup:1caf12bd1e0dcafbbc6785effe9ba1b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Buck_Ram> ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Buck Ram" .
+
+<http://dbpedia.org/resource/Buck_Ram>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1640974/5/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The discrepancy arose from the fact that on December 21, 1942, Buck Ram copyrighted a song titled \"I'll Be Home for Christmas (Tho' Just in Memory)\" although that version bore little or no resemblance, other than its title, to the Crosby recording." ;
+        mtp:hasParticipant   meetup:1caf12bd1e0dcafbbc6785effe9ba1b0 , meetup:ad47aebcf164cdb56953419f73997cef ;
+        mtp:hasPurpose       meetup:4f320c0da165e047cfd1b78a531d2bb3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Buck_Ram> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1640974/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was also known as Ande Rand, Lynn Paul or Jean Miles." ;
+        mtp:hasParticipant   meetup:36ee765ed1440f7bbb3c4a86bee1f44f , meetup:340c037a2755626f6525e6103f1feb89 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Buck_Ram> ;
+        mtp:hasType          "HM" .
+
+meetup:36ee765ed1440f7bbb3c4a86bee1f44f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Buck_Ram> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "0.9999999932194612" ;
+        mtp:hasTextEvidence     "Ande Rand" .
+
+meetup:340c037a2755626f6525e6103f1feb89
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Samuel \"Buck\" Ram" .
+
+meetup:ad47aebcf164cdb56953419f73997cef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bing_Crosby> ;
+        mtp:hasOffset           "231" ;
+        mtp:hasSimilarityScore  "0.989271826338326" ;
+        mtp:hasTextEvidence     "Crosby" .

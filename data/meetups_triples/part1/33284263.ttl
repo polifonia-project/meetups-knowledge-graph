@@ -1,0 +1,81 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/33284263/4/18>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2017, Ayres moved back to Australia, to Brisbane,  where he taught cello, violin and viola. In October he spoke with Jon Faine at an event at the Wheeler Centre about his music and personal life and his 2017 book Danger Music." ;
+        mtp:hasParticipant   meetup:ef53604091575fb54203daa53c0432e1 , meetup:022d4f0fd75354072dbb9d6d9227c30e ;
+        mtp:hasPurpose       meetup:916867c34123fa04ea452528fd9af6ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Ayres> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:916867c34123fa04ea452528fd9af6ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is mainly about Ayres' music and book." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions Ayres' personal life and his move to Australia." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3bbfde2dc9d52be84021abb0c24fccd2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sonam_Kapoor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sonam" .
+
+meetup:ede239253f200f508dabd28263cccbd5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Book inspired by teaching experiences" ;
+        mtp:hasEvidencePurposeSecond  "Power of music discovery" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Jon_Faine>
+        rdf:type  core:Person .
+
+meetup:ef53604091575fb54203daa53c0432e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jon_Faine> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jon Faine" .
+
+meetup:022d4f0fd75354072dbb9d6d9227c30e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Orville_Ayres> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ayres" .
+
+<http://w3id.org/polifonia/pilot/meetups/33284263/19/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sonam and the Silence (2018) is a children's book, inspired by Ayres' experiences while teaching music in Afghanistan. It is about a young girl living in Afghanistan when ruled by the Taliban, who forbade music, and her discovery of the power of music." ;
+        mtp:hasParticipant   meetup:3bbfde2dc9d52be84021abb0c24fccd2 ;
+        mtp:hasPurpose       meetup:ede239253f200f508dabd28263cccbd5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Ayres> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Sonam_Kapoor>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Eddie_Ayres>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/William_Orville_Ayres>
+        rdf:type  core:Person .

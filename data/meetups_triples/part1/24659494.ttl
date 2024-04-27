@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_F._Kennedy>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:567d2029abc43e7632e0752b21bf22ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92678374" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.067766435" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e7be0dfeec53f7ba5ed9119d453d089c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_F._Kennedy> ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "0.8985032437768475" ;
+        mtp:hasTextEvidence     "Kennedy" .
+
+<http://dbpedia.org/resource/Raymond_Louis_Kennedy>
+        rdf:type  core:Person .
+
+meetup:e0463c9a500783df0c313504e13e2208
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Raymond_Louis_Kennedy> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ray Kennedy" .
+
+<http://w3id.org/polifonia/pilot/meetups/24659494/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "This album featured the minor hit single \"Just for the Moment\", which would become Kennedy's only Billboard Hot 100 hit under his own name." ;
+        mtp:hasParticipant   meetup:e7be0dfeec53f7ba5ed9119d453d089c , meetup:e0463c9a500783df0c313504e13e2208 ;
+        mtp:hasPurpose       meetup:567d2029abc43e7632e0752b21bf22ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Raymond_Louis_Kennedy> ;
+        mtp:hasType          "HM" .

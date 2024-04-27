@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Joni_Mitchell>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:36aaced6507e47532ca5a42050b21b2b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Neil_Young> ;
+        mtp:hasOffset           "287" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Neil Young" .
+
+meetup:a8494ad9165dfe6b877f348562be8a02
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joni_Mitchell> ;
+        mtp:hasOffset           "344" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joni Mitchell" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Neil_Young>
+        rdf:type  core:Person .
+
+meetup:757948fbc41195fd9bef0c75af536756
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99649906" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0027104355" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/22693541/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Elliot Roberts (born Elliot Rabinowitz, February 25, 1943 – June 21, 2019) was an American music manager and record executive who co-founded Asylum Records, best known for helping to start and develop the careers of singer-songwriters from the late 1960s and 1970s, including those of Neil Young – whom he managed for over 50 years – and Joni Mitchell." ;
+        mtp:hasParticipant   meetup:6de62ba5f5978f46068aa856d5bf6d4c , meetup:772136f97eed5c5211709890a75b17ec , meetup:a8494ad9165dfe6b877f348562be8a02 , meetup:36aaced6507e47532ca5a42050b21b2b ;
+        mtp:hasPurpose       meetup:757948fbc41195fd9bef0c75af536756 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elliot_Roberts> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Elliot_Roberts>
+        rdf:type  core:Person .
+
+meetup:772136f97eed5c5211709890a75b17ec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elliot_Roberts> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elliot Roberts" .
+
+meetup:6de62ba5f5978f46068aa856d5bf6d4c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Elliot Rabinowitz" .

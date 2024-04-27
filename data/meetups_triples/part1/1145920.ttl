@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1145920/1/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sembello was nominated for an Academy Award and a Golden Globe for his 1983 song \"Maniac\", which he sang and co-wrote." ;
+        mtp:hasParticipant   meetup:db11b4eb280ff35eed8ac57043734755 ;
+        mtp:hasPurpose       meetup:186722063d4589a164668fe717a1a8c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Sembello> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:186722063d4589a164668fe717a1a8c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9449626" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04206649" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:db11b4eb280ff35eed8ac57043734755
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Sembello> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sembello" .
+
+<http://dbpedia.org/resource/Michael_Sembello>
+        rdf:type  core:Person .

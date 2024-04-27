@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jeanne_Bamberger>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:7d59e097d8dcb0600be9c6abe70f5dad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9491145" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04836305" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/63247367/19/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She taught briefly at the Harvard Graduate School of Education before moving cross country to Berkeley, California, in 2005, where she has been affiliated with the University of California, Berkeley, since 2010. At Berkeley, she is teaching in the Music Department a course called “Music Cognition.”" ;
+        mtp:hasParticipant   meetup:911f20e545408537053c7f78048f6ac2 ;
+        mtp:hasPurpose       meetup:a48a3754ffc31dd215d786ae65b2e417 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeanne_Bamberger> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Eugen_Bamberger>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:a48a3754ffc31dd215d786ae65b2e417
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Teaching at universities" ;
+        mtp:hasEvidencePurposeSecond  "Teaching music cognition" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/63247367/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeanne Bamberger (née Shapiro, born February 11, 1924) is the American Professor Emerita of Music and Urban Education at the Massachusetts Institute of Technology, and Adjunct Professor of Music at the University of California, Berkeley." ;
+        mtp:hasParticipant   meetup:d5b6f679dd059717bd6a43ef9c6bbf0a ;
+        mtp:hasPurpose       meetup:7d59e097d8dcb0600be9c6abe70f5dad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeanne_Bamberger> ;
+        mtp:hasType          "HT" .
+
+meetup:911f20e545408537053c7f78048f6ac2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eugen_Bamberger> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bamberger" .
+
+meetup:d5b6f679dd059717bd6a43ef9c6bbf0a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeanne_Bamberger> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999982949525232" ;
+        mtp:hasTextEvidence     "Jeanne Bamberger" .

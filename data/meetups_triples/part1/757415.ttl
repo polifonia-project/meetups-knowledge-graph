@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5a7f3f8f3ad1f6069bb6e107b47d2778
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing live tours and winning music awards" ;
+        mtp:hasEvidencePurposeSecond  "Achievements and collaborations of the band members" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Elton_John>
+        rdf:type  core:Person .
+
+meetup:a69585f874e5e8d1f13b1f64853848e8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elton_John> ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "0.9999999994163886" ;
+        mtp:hasTextEvidence     "Elton John" .
+
+meetup:aac1a7c5ab98913d981c5ec20f4bbc9f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "He is a musician and record producer" ;
+        mtp:hasEvidencePurposeSecond  "He has worked with various artists" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/757415/7/19>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From September Empire of the Sun, without Littlemore, performed live tours of Australia. Littlemore's bands have won eight ARIA Music Awards, with one in 2000 for 'Best Dance Release' for Pnau's Sambanova, and seven in 2009 for Empire of the Sun's album Walking on a Dream and the title song." ;
+        mtp:hasPurpose       meetup:5a7f3f8f3ad1f6069bb6e107b47d2778 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nick_Littlemore> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Nick_Littlemore>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/757415/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As a musician, he is the frontman of the electronic duo Pnau, an ex-member of the art-rock band Teenager and one part of the electro pop-project Empire of the Sun. As a record producer, he has worked with Elton John, Lover Lover, Groove Armada and Mika." ;
+        mtp:hasParticipant   meetup:a69585f874e5e8d1f13b1f64853848e8 ;
+        mtp:hasPurpose       meetup:aac1a7c5ab98913d981c5ec20f4bbc9f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nick_Littlemore> ;
+        mtp:hasType          "HT" .

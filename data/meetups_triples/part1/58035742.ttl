@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_Mark_Robinson>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/58035742/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Mark Robinson (born 19 July 1948) is US based entrepreneur, director, and actor." ;
+        mtp:hasParticipant   meetup:e14ddd6fb5bac72d58d3c79a270cce87 ;
+        mtp:hasPurpose       meetup:38af7654474659948acb4e705c795267 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Mark_Robinson> ;
+        mtp:hasType          "HT" .
+
+meetup:38af7654474659948acb4e705c795267
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9438782" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05499991" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e14ddd6fb5bac72d58d3c79a270cce87
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Mark_Robinson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "John Mark Robinson" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .

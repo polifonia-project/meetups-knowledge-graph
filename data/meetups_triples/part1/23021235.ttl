@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<https://www.wikidata.org/wiki/Q109229738>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8ec6740d4bdc2cd63e606ba8fcb67161
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wong_Jinglun> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wong Jinglun" .
+
+meetup:e4d6099eada812e09578978411592bda
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Huáng Jìnglún" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Wong_Jinglun>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/23021235/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wong Jinglun (traditional Chinese: 黃靖倫; simplified Chinese: 黄靖伦; pinyin: Huáng Jìnglún, born 23 July 1983) is a Taiwan-based Singaporean singer and actor." ;
+        mtp:hasParticipant   meetup:e4d6099eada812e09578978411592bda , meetup:8ec6740d4bdc2cd63e606ba8fcb67161 ;
+        mtp:hasPurpose       meetup:c079998b03525ce89d1317420ee3dba2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wong_Jinglun> ;
+        mtp:hasType          "HM" .
+
+meetup:8431d7d7872d04c82f5bc2e11216a85d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q109229738> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Wong" .
+
+<http://w3id.org/polifonia/pilot/meetups/23021235/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wong's debut album, Jing's Note, was released in Taiwan on 14 November 2008. His album was a great success in Taiwan selling over 45,000 copies." ;
+        mtp:hasParticipant   meetup:8431d7d7872d04c82f5bc2e11216a85d ;
+        mtp:hasPurpose       meetup:ae311cac88dd97eee708b8fe1bd0b526 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wong_Jinglun> ;
+        mtp:hasType          "HT" .
+
+meetup:ae311cac88dd97eee708b8fe1bd0b526
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Wong's debut album release" ;
+        mtp:hasEvidencePurposeSecond  "Album's success in Taiwan" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c079998b03525ce89d1317420ee3dba2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99881005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00069062295" ;
+        mtp:hasSourcePurpose          "ML" .

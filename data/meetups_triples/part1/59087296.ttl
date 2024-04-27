@@ -1,0 +1,82 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/59087296/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nazlı Mengi was born on 20 February 1988 in Manchester as the daughter of Ruhat Mengi and Ahmet Biliktan." ;
+        mtp:hasParticipant   meetup:f2c65dcc3915ea93d6ea0d304f256b92 , meetup:9177bf583e7dfb87ab11a99405397faa , meetup:7b8e661460e7eff68dc087d86f022a93 ;
+        mtp:hasPurpose       meetup:c852042adb7c99199f121f5c78a1a8f9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nazlı_(singer)> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7b8e661460e7eff68dc087d86f022a93
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ahmet_Zappa> ;
+        mtp:hasOffset           "91" ;
+        mtp:hasSimilarityScore  "0.6517324523374952" ;
+        mtp:hasTextEvidence     "Ahmet" .
+
+meetup:4916cb67284cdfb881619647a7d8342e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nazlı_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nazlı Mengi" .
+
+<http://w3id.org/polifonia/pilot/meetups/59087296/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She finished her middle and high school education at Saint Michel Fransız High School in Istanbul." ;
+        mtp:hasParticipant   meetup:4916cb67284cdfb881619647a7d8342e ;
+        mtp:hasPurpose       meetup:58ead30598cfdf8b2be2c3e5cd211b3c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nazlı_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Ahmet_Zappa>
+        rdf:type  core:Person .
+
+meetup:58ead30598cfdf8b2be2c3e5cd211b3c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99156606" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0067456802" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f2c65dcc3915ea93d6ea0d304f256b92
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ruhat Mengi" .
+
+meetup:9177bf583e7dfb87ab11a99405397faa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nazlı_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nazlı Mengi" .
+
+<http://dbpedia.org/resource/Nazlı_(singer)>
+        rdf:type  core:Person .
+
+meetup:c852042adb7c99199f121f5c78a1a8f9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about someone's educational background" ;
+        mtp:hasSourcePurpose          "LLM" .

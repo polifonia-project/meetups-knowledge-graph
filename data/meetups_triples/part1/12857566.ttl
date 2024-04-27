@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Nathalie_Stutzmann>
+        rdf:type  core:Person .
+
+meetup:28aa1bfbc929f8fdcbc492e3d5e64d02
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9946402" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004893771" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8f6536df61804ca47413b1034c5b3a43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nathalie_Stutzmann> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nathalie Stutzmann" .
+
+meetup:207732ebbfe56ebd1fdc901fc04d923c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dupuy_and_Berberian> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "0.6571664319568361" ;
+        mtp:hasTextEvidence     "Dupuy" .
+
+<http://w3id.org/polifonia/pilot/meetups/12857566/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nathalie Stutzmann (née Dupuy; born 6 May 1965) is a French contralto and conductor." ;
+        mtp:hasParticipant   meetup:207732ebbfe56ebd1fdc901fc04d923c , meetup:8f6536df61804ca47413b1034c5b3a43 ;
+        mtp:hasPurpose       meetup:28aa1bfbc929f8fdcbc492e3d5e64d02 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nathalie_Stutzmann> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Dupuy_and_Berberian>
+        rdf:type  core:Person .

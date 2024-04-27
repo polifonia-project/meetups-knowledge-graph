@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:86e89f672de3867ec78f7ca11bb92c1d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.46597725" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.32952344" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Pierre_Bastien>
+        rdf:type  core:Person .
+
+meetup:65568139033b5c2ad878b1fe6e401ce9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pierre_Bastien> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pierre Bastien" .
+
+<http://w3id.org/polifonia/pilot/meetups/7512139/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pierre Bastien (born 1953 in Paris) is a French musician, composer, and experimental musical instrument builder." ;
+        mtp:hasParticipant   meetup:65568139033b5c2ad878b1fe6e401ce9 ;
+        mtp:hasPurpose       meetup:86e89f672de3867ec78f7ca11bb92c1d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pierre_Bastien> ;
+        mtp:hasType          "HT" .

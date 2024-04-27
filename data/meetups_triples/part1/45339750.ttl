@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Dwarak_Warrier>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/45339750/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dwarak Warrier, who hails from Thiruvananthapuram, is a 1992 graduate from Film and Television Institute of India, Pune. He is known for his association with director Ram Gopal Varma." ;
+        mtp:hasParticipant   meetup:b3c00ccbbd169a57b8b8f868f7d66b52 ;
+        mtp:hasPurpose       meetup:7a058503b8c4e3f6ae4539736ed59b81 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dwarak_Warrier> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Ram_Gopal_Varma>
+        rdf:type  core:Person .
+
+meetup:b3c00ccbbd169a57b8b8f868f7d66b52
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ram_Gopal_Varma> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ram Gopal Varma" .
+
+meetup:7a058503b8c4e3f6ae4539736ed59b81
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Education in film and television" ;
+        mtp:hasEvidencePurposeSecond  "Personal association with director" ;
+        mtp:hasSourcePurpose          "LLM" .

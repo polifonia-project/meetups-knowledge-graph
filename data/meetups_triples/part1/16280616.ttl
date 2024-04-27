@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/LeRoy_Holmes>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:ce2f57cb078027a93cd1873dfc7d7256
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeRoy_Holmes> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "LeRoy Holmes" .
+
+meetup:2750653dc88c2819b9b6731c48dd4608
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.46987262" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.45918387" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/16280616/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alvin LeRoy Holmes (September 22, 1913 – July 27, 1986) was an American songwriter, composer, arranger, orchestra conductor and record producer." ;
+        mtp:hasParticipant   meetup:ce2f57cb078027a93cd1873dfc7d7256 , meetup:8c9cf7cb8e7ae3af09c53bb294272e99 ;
+        mtp:hasPurpose       meetup:2750653dc88c2819b9b6731c48dd4608 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/LeRoy_Holmes> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:8c9cf7cb8e7ae3af09c53bb294272e99
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alvin LeRoy Holmes" .

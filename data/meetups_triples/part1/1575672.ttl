@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/1575672/5/18>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1990, Austin branched out on his own. His work on Motown led him to work on albums by other acts signed to the label - the first being the little known group Glasswurk." ;
+        mtp:hasPurpose       meetup:f8a19bd5e9950f8641711a5dab0e95e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dallas_Austin> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Dallas_Austin>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1575672/5/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He used to take his keyboard to school with him, but his mother expressed annoyance at this, telling his school guidance counselor that she did not feel his production career would work out, but the counselor told her that because Austin had kept at his hobby for so long (it was his eleventh grade year), then perhaps it would indeed work out, and suggested that Austin's mother back him. His mother, upon hearing this from a third party, agreed to support Austin." ;
+        mtp:hasPurpose       meetup:62acdebdd14e5e62cb5c1f36c52d2416 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dallas_Austin> ;
+        mtp:hasType          "HT" .
+
+meetup:f8a19bd5e9950f8641711a5dab0e95e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Work on albums by other acts" ;
+        mtp:hasEvidencePurposeSecond  "Branching out on his own" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:62acdebdd14e5e62cb5c1f36c52d2416
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Austin's production career" ;
+        mtp:hasEvidencePurposeSecond  "School guidance counselor's suggestion" ;
+        mtp:hasSourcePurpose          "LLM" .

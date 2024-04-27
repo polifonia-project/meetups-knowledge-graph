@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Nicholas_Teo>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:9a048433c55527be7ae3dcccbc085a97
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Concert tour" ;
+        mtp:hasEvidencePurposeSecond  "Government appointment" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:039a7f60117bc1f320974d374b64de95
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Teo Penang's" .
+
+meetup:68b8055a72cdb9fc98d0cfbfaff2de49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicholas_Teo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nicholas Teo" .
+
+<http://w3id.org/polifonia/pilot/meetups/5813629/6/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also successfully completed his From Now On Concert Tour covering stops in Malaysia, Singapore and Indonesia within the first half-year of 2008. The Malaysian government appointed Teo Penang's 'green ambassador' to spread awareness on environmental issues." ;
+        mtp:hasParticipant   meetup:039a7f60117bc1f320974d374b64de95 ;
+        mtp:hasPurpose       meetup:9a048433c55527be7ae3dcccbc085a97 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicholas_Teo> ;
+        mtp:hasType          "HT" .
+
+meetup:76d48f7f9a71d51aa6fdaa65d3b5a7d2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98183846" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.017430719" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/5813629/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nicholas Teo (Chinese: 張棟樑; pinyin: Dòng-Liáng) is a Malaysian Chinese singer signed under Red Bean Entertainment based in Taiwan." ;
+        mtp:hasParticipant   meetup:689e1141a7ca65835ef67724433d729e , meetup:68b8055a72cdb9fc98d0cfbfaff2de49 ;
+        mtp:hasPurpose       meetup:76d48f7f9a71d51aa6fdaa65d3b5a7d2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicholas_Teo> ;
+        mtp:hasType          "HM" .
+
+meetup:689e1141a7ca65835ef67724433d729e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "36" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dòng-Liáng" .

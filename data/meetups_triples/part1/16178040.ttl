@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:ff4ce7fb78ec07619d4689a05cf768b8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Evan_Brewer> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Evan Brewer" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/16178040/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Evan Brewer (born September 23, 1981) is an American bass player from Nashville, Tennessee." ;
+        mtp:hasParticipant   meetup:e58f7023424df88f494d2dfd28671831 ;
+        mtp:hasPurpose       meetup:1551cf765af3565d8e957bcb752d5194 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Evan_Brewer> ;
+        mtp:hasType          "HT" .
+
+meetup:d2db273ba586e2bed99fc0ce59323ec3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.73139113" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24802032" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e58f7023424df88f494d2dfd28671831
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Evan_Brewer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Evan Brewer" .
+
+meetup:1551cf765af3565d8e957bcb752d5194
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Evan Brewer is a bass player" ;
+        mtp:hasEvidencePurposeSecond  "He is from Nashville, Tennessee" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/16178040/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2011, he released his debut solo album titled Alone, and his second solo album, Your Itinerary, was released on July 16, 2013." ;
+        mtp:hasParticipant   meetup:ff4ce7fb78ec07619d4689a05cf768b8 ;
+        mtp:hasPurpose       meetup:d2db273ba586e2bed99fc0ce59323ec3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Evan_Brewer> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Evan_Brewer>
+        rdf:type  core:Person .

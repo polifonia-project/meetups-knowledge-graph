@@ -1,0 +1,89 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:2052232339f616e1ce5835cd982bb284
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Jazz bass player and composer" ;
+        mtp:hasEvidencePurposeSecond  "Born in Nebraska and grew up in Texas" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Marc_Johnson_(musician)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lyndon_B._Johnson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Peter_Erskine>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/John_Abercrombie_(guitarist)>
+        rdf:type  core:Person .
+
+meetup:9a50413cb106dd8f43176f91b1583f0c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Abercrombie_(guitarist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9966816716627654" ;
+        mtp:hasTextEvidence     "John Abercrombie" .
+
+meetup:387afb867be7ee6e12d0a4c2f049a523
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998029" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0001965615" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ac2628f3e62497f0e7127dfe30846661
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Erskine> ;
+        mtp:hasOffset           "34" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peter Erskine" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:7f3452d8d3903c938dcfef861a6c6f7e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lyndon_B._Johnson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.903545408577166" ;
+        mtp:hasTextEvidence     "Johnson" .
+
+<http://w3id.org/polifonia/pilot/meetups/1253409/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marc Alan Johnson (born October 21, 1953, in Omaha, Nebraska) is an American jazz bass player, composer and band leader. Johnson was born in Nebraska and grew up in Texas." ;
+        mtp:hasParticipant   meetup:7f3452d8d3903c938dcfef861a6c6f7e ;
+        mtp:hasPurpose       meetup:2052232339f616e1ce5835cd982bb284 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marc_Johnson_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1253409/17/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Abercrombie / Marc Johnson / Peter Erskine (ECM, 1989)" ;
+        mtp:hasParticipant   meetup:ceae777bbfed103df8e40407202e198d , meetup:ac2628f3e62497f0e7127dfe30846661 , meetup:9a50413cb106dd8f43176f91b1583f0c ;
+        mtp:hasPurpose       meetup:387afb867be7ee6e12d0a4c2f049a523 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marc_Johnson_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:ceae777bbfed103df8e40407202e198d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marc_Johnson_(musician)> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.9830919988251228" ;
+        mtp:hasTextEvidence     "Marc Johnson" .

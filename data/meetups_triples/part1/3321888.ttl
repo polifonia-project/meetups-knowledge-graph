@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Alesha_Dixon>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3321888/33/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009, Dixon climbed Mount Kilimanjaro in Tanzania for Comic Relief with Girls Aloud members Cheryl Cole and Kimberley Walsh, Ben Shephard, Ronan Keating, Fearne Cotton, Denise Van Outen, Chris Moyles and Gary Barlow, who had spearheaded the project. Together they raised over £3,500,000 towards helping combat malaria in Tanzania." ;
+        mtp:hasPurpose       meetup:7b2f73027a2afe4b2a20313452451702 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alesha_Dixon> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:7b2f73027a2afe4b2a20313452451702
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "A public event for a cause" ;
+        mtp:hasEvidencePurposeSecond  "An event organized to raise funds for charity" ;
+        mtp:hasSourcePurpose          "LLM" .

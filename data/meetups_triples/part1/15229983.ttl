@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e5e11fa53b0916df20ec064bf71c19e2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98742956" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011135826" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:69f3b0575fd31f6dd830644dfefd0218
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aref_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999920933078" ;
+        mtp:hasTextEvidence     "Aref Arefkia" .
+
+<http://w3id.org/polifonia/pilot/meetups/15229983/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aref Arefkia (Persian: عارف عارف‌کیا) (Azerbaijani: Arif Arifkiya), known as Aref (Persian: عارف; also Romanized as Āref, born August 10, 1940) is an Iranian pop music singer and former actor." ;
+        mtp:hasParticipant   meetup:69f3b0575fd31f6dd830644dfefd0218 ;
+        mtp:hasPurpose       meetup:e5e11fa53b0916df20ec064bf71c19e2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aref_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Aref_(singer)>
+        rdf:type  core:Person .

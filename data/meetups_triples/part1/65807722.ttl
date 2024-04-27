@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/65807722/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is known for his song \"Get Out My Head\", which reached the top 10 in Ireland and the UK in January 2021." ;
+        mtp:hasParticipant   meetup:c8bc7a6d50c8e67f23bfa6d7189c9d88 ;
+        mtp:hasPurpose       meetup:432b198ece87438c71315ffbebb151c8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shane_Codd> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:432b198ece87438c71315ffbebb151c8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.88452905" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11425841" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c8bc7a6d50c8e67f23bfa6d7189c9d88
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shane_Codd> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Shane Codd" .
+
+meetup:c3e7fe4df02fcbe95628a8c86c2f435d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shane_Codd> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Shane Codd" .
+
+<http://dbpedia.org/resource/Shane_Codd>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/65807722/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shane Codd (born 1997) is an Irish DJ and producer signed to Polydor Records." ;
+        mtp:hasParticipant   meetup:c3e7fe4df02fcbe95628a8c86c2f435d ;
+        mtp:hasPurpose       meetup:d8e64782d6018ce2497ffb87d0365ad7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shane_Codd> ;
+        mtp:hasType          "HT" .
+
+meetup:d8e64782d6018ce2497ffb87d0365ad7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.59636414" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35281265" ;
+        mtp:hasSourcePurpose          "ML" .

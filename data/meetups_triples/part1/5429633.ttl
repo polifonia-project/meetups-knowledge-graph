@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/5429633/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In addition to his solo work, Nelson is known for collaborating since the 1990s with bassist Dave Holland's Quintet and Big Band." ;
+        mtp:hasParticipant   meetup:327232c87d124baaf0f374c10b7f7688 , meetup:8ff123fda65d7ea451ecf0ca2f36725c ;
+        mtp:hasPurpose       meetup:acd799a38a3caab6ef8c2c899192a950 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Nelson_(vibraphonist)> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:327232c87d124baaf0f374c10b7f7688
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Nelson_(vibraphonist)> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Nelson" .
+
+meetup:8ff123fda65d7ea451ecf0ca2f36725c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Holland> ;
+        mtp:hasOffset           "93" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Dave Holland" .
+
+<http://dbpedia.org/resource/Dave_Holland>
+        rdf:type  core:Person .
+
+meetup:acd799a38a3caab6ef8c2c899192a950
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8656724" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10394089" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a3fcaa62b1e7140cdc10623451f3361d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.46586543" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.31417978" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/5429633/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steve Nelson (born August 11, 1954) is an American jazz vibraphonist and marimba player." ;
+        mtp:hasParticipant   meetup:6868c8c9eec2c2790fe16dcddd9fa791 ;
+        mtp:hasPurpose       meetup:a3fcaa62b1e7140cdc10623451f3361d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Nelson_(vibraphonist)> ;
+        mtp:hasType          "HT" .
+
+meetup:6868c8c9eec2c2790fe16dcddd9fa791
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Nelson_(vibraphonist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7004773055938881" ;
+        mtp:hasTextEvidence     "Steve Nelson" .
+
+<http://dbpedia.org/resource/Steve_Nelson_(vibraphonist)>
+        rdf:type  core:Person .

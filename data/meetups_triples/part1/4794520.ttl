@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Paul_Colman>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f14c29f92a1d7f7d1866daedc5acfdbc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Creating and performing music" ;
+        mtp:hasEvidencePurposeSecond  "Public events to promote music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/4794520/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1998, Colman began the Paul Colman Trio, or PC3, in Melbourne; it has been credited as being at the forefront of the Contemporary Christian music scene in Australia. The debut single, \"Fill My Cup\", ranked number three on TRAA, and attracted more than 1,000 people for each CD launch in Sydney, Melbourne, and Brisbane." ;
+        mtp:hasPurpose       meetup:f14c29f92a1d7f7d1866daedc5acfdbc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Colman> ;
+        mtp:hasType          "HT" .

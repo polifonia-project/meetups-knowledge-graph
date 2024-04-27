@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/36792343/2/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "King spent her teenage years in New York City, but she has also lived in Los Angeles, Philadelphia, and Copenhagen, Denmark. Upon graduating from Elisabeth Irwin High School/Little Red School House, she moved to Philadelphia to matriculate at University of the Arts, studying painting and film." ;
+        mtp:hasPurpose       meetup:a93302dbcad9dc07c6976a8b57a88650 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elle_King> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:c62dac2030556386e38311a5998ddde9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tanner Elle Schneider" .
+
+<http://dbpedia.org/resource/Elle_Schneider>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Elle_King>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/36792343/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tanner Elle Schneider (born July 3, 1989), known professionally as Elle King, is an American singer, songwriter, multi-instrumentalist, television personality, and actress." ;
+        mtp:hasParticipant   meetup:c62dac2030556386e38311a5998ddde9 , meetup:ba8e277bbd01b1969a36e1eb3512ab3f , meetup:78add3020d45db420709973558646b05 ;
+        mtp:hasPurpose       meetup:bd5ef6eba7cc033ccd299583bca70426 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elle_King> ;
+        mtp:hasType          "HM" .
+
+meetup:bd5ef6eba7cc033ccd299583bca70426
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.56284225" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21624732" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a93302dbcad9dc07c6976a8b57a88650
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Studying at University of the Arts" ;
+        mtp:hasEvidencePurposeSecond  "Living in different cities" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:78add3020d45db420709973558646b05
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elle_Schneider> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Elle Schneider" .
+
+meetup:ba8e277bbd01b1969a36e1eb3512ab3f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elle_King> ;
+        mtp:hasOffset           "67" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elle King" .

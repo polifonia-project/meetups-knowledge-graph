@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jasper_Høiby>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/40472682/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Høiby started to play the double bass in Denmark before he moved to the U.K. in 2001 to study at the Royal Academy of Music in London, where got into the London jazz scene. Whilst at the RAM he studied with Milton Mermikides." ;
+        mtp:hasParticipant   meetup:aca2fca458268582fe634a37c5db06d9 ;
+        mtp:hasPurpose       meetup:077884bd9eb2777d79f8257ed0ebfb4f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jasper_Høiby> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:aca2fca458268582fe634a37c5db06d9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Høiby" .
+
+meetup:077884bd9eb2777d79f8257ed0ebfb4f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Playing double bass and being part of the jazz scene" ;
+        mtp:hasEvidencePurposeSecond  "Studying at the Royal Academy of Music" ;
+        mtp:hasSourcePurpose          "LLM" .

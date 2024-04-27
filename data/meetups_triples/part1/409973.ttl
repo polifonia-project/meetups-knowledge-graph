@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Amos_Milburn>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ae16e672197e84d76f79454e94bd670d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amos_Milburn> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Amos Milburn" .
+
+<http://w3id.org/polifonia/pilot/meetups/409973/3/26>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Another artist performing and recording as Amos Milburn, Jr. in Texas in the 1960s was a different and unrelated person (James Thomas Russ, Jr.)." ;
+        mtp:hasParticipant   meetup:b9b870cebb1a5c531727a882dad5660e , meetup:9b0d9037c100a0e8e28ed615168a6654 ;
+        mtp:hasPurpose       meetup:79592193ce823f70ee08775204c03396 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amos_Milburn> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:e7820430f726a8dae163b61cd850cb26
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9328527" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06586158" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/409973/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joseph Amos Milburn (April 1, 1927 – January 3, 1980) was an American rhythm-and-blues singer and pianist, popular in the 1940s and 1950s." ;
+        mtp:hasParticipant   meetup:ae16e672197e84d76f79454e94bd670d ;
+        mtp:hasPurpose       meetup:e7820430f726a8dae163b61cd850cb26 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amos_Milburn> ;
+        mtp:hasType          "HT" .
+
+meetup:b9b870cebb1a5c531727a882dad5660e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amos_Milburn> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Amos Milburn" .
+
+meetup:9b0d9037c100a0e8e28ed615168a6654
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Thoma_I> ;
+        mtp:hasOffset           "127" ;
+        mtp:hasSimilarityScore  "0.5739443150212505" ;
+        mtp:hasTextEvidence     "Thomas" .
+
+<http://dbpedia.org/resource/Thoma_I>
+        rdf:type  core:Person .
+
+meetup:79592193ce823f70ee08775204c03396
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Related to the performance and recording of music" ;
+        mtp:hasEvidencePurposeSecond  "Unrelated individuals with similar names" ;
+        mtp:hasSourcePurpose          "LLM" .

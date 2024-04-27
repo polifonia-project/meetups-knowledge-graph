@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2310d21c217c99672f583d601d6ebc0d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.224526e-09" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1428166/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ron Haydock (April 17, 1940, Chicago, Illinois – August 14, 1977, Victorville, California) was an American actor, screenwriter, novelist and rock musician." ;
+        mtp:hasParticipant   meetup:b6e84609d1a33214a02c2e81dff8d1f7 ;
+        mtp:hasPurpose       meetup:2310d21c217c99672f583d601d6ebc0d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ron_Haydock> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1428166/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Haydock's band, Ron Haydock and the Boppers, were heavily influenced by Gene Vincent." ;
+        mtp:hasParticipant   meetup:e41517ff9ac4557405aa8eb63959f520 , meetup:7ed605095685a26edf4cd59851d4f139 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ron_Haydock> ;
+        mtp:hasType          "HM" .
+
+meetup:e41517ff9ac4557405aa8eb63959f520
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gene_Vincent> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Gene Vincent" .
+
+<http://dbpedia.org/resource/Ron_Haydock>
+        rdf:type  core:Person .
+
+meetup:b6e84609d1a33214a02c2e81dff8d1f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ron_Haydock> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ron Haydock" .
+
+<http://w3id.org/polifonia/pilot/meetups/1428166/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As Vin Saxon, he was the author of adult fiction paperbacks during the 1960s and 1970s. As Arnold Hayes, he wrote graphic stories for Warren Publishing." ;
+        mtp:hasPurpose       meetup:9f4de14a1875c4c06720bfa8179ade03 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ron_Haydock> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Gene_Vincent>
+        rdf:type  core:Person .
+
+meetup:7ed605095685a26edf4cd59851d4f139
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ron_Haydock> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Ron Haydock" .
+
+meetup:9f4de14a1875c4c06720bfa8179ade03
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Author of adult fiction" ;
+        mtp:hasEvidencePurposeSecond  "Graphic stories for Warren Publishing" ;
+        mtp:hasSourcePurpose          "LLM" .

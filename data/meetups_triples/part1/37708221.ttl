@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/37708221/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gisella Grosz, originally Gizella Grosz (26 November 1875, Szilágysomlyó, Austria-Hungary – 1942, Riga Ghetto, Latvia) was a Hungarian classical pianist." ;
+        mtp:hasParticipant   meetup:d10e6c01b21b0512556a23a3316e8a8a , meetup:d893b70beb0311ac5bcee9b1b342860a ;
+        mtp:hasPurpose       meetup:692a8eaf13230f18ddab6f3eda9eb82f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gisella_Grosz> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Gisella_Grosz>
+        rdf:type  core:Person .
+
+meetup:d893b70beb0311ac5bcee9b1b342860a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gisella_Grosz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999944919296" ;
+        mtp:hasTextEvidence     "Gisella Grosz" .
+
+meetup:692a8eaf13230f18ddab6f3eda9eb82f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Gisella Grosz was a classical pianist" ;
+        mtp:hasEvidencePurposeSecond  "Gisella Grosz had a personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d10e6c01b21b0512556a23a3316e8a8a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gizella Grosz" .

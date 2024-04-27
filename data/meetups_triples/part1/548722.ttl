@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/548722/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chris Knox (born 2 September 1952) is a New Zealand rock and roll musician, cartoonist and movie reviewer who emerged during the punk rock era with his bands The Enemy and Toy Love." ;
+        mtp:hasParticipant   meetup:dd7c34114fbea8207b167ba47f1917d1 ;
+        mtp:hasPurpose       meetup:4e955c7760660a4f1b62cee3082511cb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Knox> ;
+        mtp:hasType          "HT" .
+
+meetup:352148fe9c498b24265feffc07ecc1ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9422063" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.057763223" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:25cf0d483fe71eb356b1691406e01b35
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alec_Bathgate> ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alec Bathgate" .
+
+meetup:1539e822b98f24ab2b2c34dc0bee1579
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Knox> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chris Knox" .
+
+<http://dbpedia.org/resource/Chris_Knox>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Alec_Bathgate>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/548722/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After Toy Love disbanded in the early 1980s, he formed the group Tall Dwarfs with guitarist Alec Bathgate." ;
+        mtp:hasParticipant   meetup:25cf0d483fe71eb356b1691406e01b35 , meetup:1539e822b98f24ab2b2c34dc0bee1579 ;
+        mtp:hasPurpose       meetup:352148fe9c498b24265feffc07ecc1ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Knox> ;
+        mtp:hasType          "HM" .
+
+meetup:4e955c7760660a4f1b62cee3082511cb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7775634" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16032864" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:dd7c34114fbea8207b167ba47f1917d1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Knox> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chris Knox" .

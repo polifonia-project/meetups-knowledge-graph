@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Fuku_Suzuki>
+        rdf:type  core:Person .
+
+meetup:2c48c41c7d52795e9e0b9bf065bb8d52
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fuku_Suzuki> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fuku Suzuki" .
+
+meetup:7ae5da36735d037ec9cc839065c70757
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about an individual" ;
+        mtp:hasEvidencePurposeSecond  "Details about his educational background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/40267035/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fuku Suzuki (鈴木 福, Suzuki Fuku, born 17 June 2004) is a Japanese actor from Tokyo." ;
+        mtp:hasParticipant   meetup:2c48c41c7d52795e9e0b9bf065bb8d52 ;
+        mtp:hasPurpose       meetup:7ae5da36735d037ec9cc839065c70757 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fuku_Suzuki> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .

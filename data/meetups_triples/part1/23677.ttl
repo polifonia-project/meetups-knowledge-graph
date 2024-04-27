@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/23677/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Poul Anderson was born on November 25, 1926, in Bristol, Pennsylvania to Scandinavian parents." ;
+        mtp:hasParticipant   meetup:a768b6d583fe78adc707c14f66efe11e ;
+        mtp:hasPurpose       meetup:3694c6198555a4a01091b75f1ca86ed8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Poul_Anderson> ;
+        mtp:hasType          "HT" .
+
+meetup:9041a6eab2f8d5b0877fc671144e4408
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chase_Anderson> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "0.6416285356386605" ;
+        mtp:hasTextEvidence     "Anderson" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a768b6d583fe78adc707c14f66efe11e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Poul_Anderson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Poul Anderson" .
+
+<http://dbpedia.org/resource/Chase_Anderson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/23677/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shortly after his birth, his father, Anton Anderson moved the family to Texas, where they lived for over ten years." ;
+        mtp:hasParticipant   meetup:3fbc84d532df983bae31b8300b96e9f1 , meetup:9041a6eab2f8d5b0877fc671144e4408 ;
+        mtp:hasPurpose       meetup:526846f80758f9966c3f30ec8e9e6c3c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Poul_Anderson> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Poul_Anderson>
+        rdf:type  core:Person .
+
+meetup:3694c6198555a4a01091b75f1ca86ed8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98883283" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0102104135" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:526846f80758f9966c3f30ec8e9e6c3c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Family relocation" ;
+        mtp:hasEvidencePurposeSecond  "Childhood in Texas" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:3fbc84d532df983bae31b8300b96e9f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Poul_Anderson> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Poul Anderson" .

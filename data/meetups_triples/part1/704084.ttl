@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:4d6f20aaf3e42cb68049f78a9e093626
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Moore> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999328196" ;
+        mtp:hasTextEvidence     "Kevin Moore" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:10b7e99090116be7c50c71deac9b3102
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating music for a horror film" ;
+        mtp:hasEvidencePurposeSecond  "Relocating to Istanbul and incorporating traditional instruments" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/704084/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kevin Moore (born May 26, 1967) is an American keyboardist, vocalist, composer, and founder of the Chroma Key music project." ;
+        mtp:hasParticipant   meetup:4d6f20aaf3e42cb68049f78a9e093626 ;
+        mtp:hasPurpose       meetup:80f9c388dfd56641efe61f26f3ee4f74 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Moore> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Kevin_Moore>
+        rdf:type  core:Person .
+
+meetup:80f9c388dfd56641efe61f26f3ee4f74
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8912369" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.108760096" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/704084/20/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2004, Moore relocated to Istanbul, Turkey, and composed the soundtrack to the horror film Okul (The School) which was subsequently released as a solo record titled Ghost Book. The music contained many traditional instruments stemming from Moore's stays in Costa Rica and Turkey." ;
+        mtp:hasPurpose       meetup:10b7e99090116be7c50c71deac9b3102 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Moore> ;
+        mtp:hasType          "HT" .

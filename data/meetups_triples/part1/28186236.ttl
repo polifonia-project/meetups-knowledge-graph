@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/28186236/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Camila Moreno (born July 8, 1985 in Santiago) is a Chilean rock and folk singer-songwriter." ;
+        mtp:hasParticipant   meetup:f88a190978fe4ca37440e49c2e16abac ;
+        mtp:hasPurpose       meetup:9c23abefe5a4047697215a36855bbbce ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Camila_Moreno> ;
+        mtp:hasType          "HT" .
+
+meetup:9c23abefe5a4047697215a36855bbbce
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99748874" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013414039" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Camila_Moreno>
+        rdf:type  core:Person .
+
+meetup:f88a190978fe4ca37440e49c2e16abac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Camila_Moreno> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Camila Moreno" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .

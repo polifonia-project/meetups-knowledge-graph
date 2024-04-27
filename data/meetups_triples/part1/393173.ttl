@@ -1,0 +1,96 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:005c777dd8e96b867fa88053625f567f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "185" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marv Halsman" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5098a2a6b1f7c0600df451d3b5c7f4b2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brook_Benton> ;
+        mtp:hasOffset           "79" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brook Benton" .
+
+<http://dbpedia.org/resource/Brook_Benton>
+        rdf:type  core:Person .
+
+meetup:d8fe161fa5daa227db89679ae0d071f0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about Benton's personal life and family" ;
+        mtp:hasEvidencePurposeSecond  "Coincidence of Benton's death from pneumonia after spinal meningitis" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/393173/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Weakened from spinal meningitis, Benton died of pneumonia in Queens, New York City, at the age of 56 on April 9, 1988. He was survived by his wife, Mary Benton, and six children: Brook Jr., Vanessa, Roy, Isreal, Gerald and Benjamin, all of Queens." ;
+        mtp:hasPurpose       meetup:d8fe161fa5daa227db89679ae0d071f0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brook_Benton> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/393173/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1948, he went to New York to pursue his music career, going in and out of gospel groups, such as The Langfordaires, The Jerusalem Stars and The Golden Gate Quartet. Returning to his home state, he joined an R&B singing group, The Sandmen, and went back to New York to get a big break with his group." ;
+        mtp:hasPurpose       meetup:7569cb5990f4ecdbdb8da56aead4be13 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brook_Benton> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:f960dca04d7fd44877068f9d02af7a3a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96225476" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.035069697" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b0430f1dc126863b99a52e830cae1cea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brook_Benton> ;
+        mtp:hasOffset           "123" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brook Benton" .
+
+<http://w3id.org/polifonia/pilot/meetups/393173/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Benjamin Franklin Peay (September 19, 1931 – April 9, 1988), better known as Brook Benton, was an American singer and songwriter who was popular with rock and roll, rhythm and blues, and pop music audiences during the late 1950s and early 1960s, with hits such as \"It's Just a Matter of Time\" and \"Endlessly\", many of which he co-wrote." ;
+        mtp:hasParticipant   meetup:5098a2a6b1f7c0600df451d3b5c7f4b2 ;
+        mtp:hasPurpose       meetup:f960dca04d7fd44877068f9d02af7a3a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brook_Benton> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/393173/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Sandmen had limited success and their label, Okeh Records, decided to push Peay as a solo artist, changing his name to Brook Benton, apparently at the suggestion of label executive Marv Halsman." ;
+        mtp:hasParticipant   meetup:005c777dd8e96b867fa88053625f567f , meetup:b0430f1dc126863b99a52e830cae1cea ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brook_Benton> ;
+        mtp:hasType          "HM" .
+
+meetup:7569cb5990f4ecdbdb8da56aead4be13
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Music career pursuit" ;
+        mtp:hasEvidencePurposeSecond  "Personal journey and experiences" ;
+        mtp:hasSourcePurpose          "LLM" .

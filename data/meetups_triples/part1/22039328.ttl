@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Labrinth>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/22039328/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2016, she released her debut single \"Make Me (Cry)\", featuring vocals from  Labrinth." ;
+        mtp:hasParticipant   meetup:db7dfae17d1fc963e3424743a79da31a , meetup:e2307c6fbaf3dbb39d0cfa264cb00cd3 ;
+        mtp:hasPurpose       meetup:6856bb73180d23c9428ca6600f5962e2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Noah_Cyrus> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Noah_Cyrus>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:db7dfae17d1fc963e3424743a79da31a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Labrinth> ;
+        mtp:hasOffset           "79" ;
+        mtp:hasSimilarityScore  "0.999999999998522" ;
+        mtp:hasTextEvidence     "Labrinth" .
+
+meetup:6856bb73180d23c9428ca6600f5962e2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999565" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.28945e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/22039328/16/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2019, after the release of her single \"Lonely\", Noah teamed up with the Crystal Campaign and released a merchandising collection called The Lonely Collection which funds were collected to The Jed Foundation, a non-profit organization in the United States that exists to protect emotional health and prevent suicide for American teens and young adults. Later, Cyrus joined the mobile app Depop and put on sale her own old clothes and its funds were also donated to The Jed Foundation." ;
+        mtp:hasPurpose       meetup:546e51d03a001d83267206fdd42e3bdd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Noah_Cyrus> ;
+        mtp:hasType          "HT" .
+
+meetup:e2307c6fbaf3dbb39d0cfa264cb00cd3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Noah_Cyrus> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Noah Lindsey Cyrus" .
+
+meetup:f44b063c6f92465d00cf6117cdc2437c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Noah_Cyrus> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Noah Lindsey Cyrus" .
+
+<http://w3id.org/polifonia/pilot/meetups/22039328/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Noah Lindsey Cyrus (born January 8, 2000) is an American singer and actress." ;
+        mtp:hasParticipant   meetup:f44b063c6f92465d00cf6117cdc2437c ;
+        mtp:hasPurpose       meetup:9b4ac4bcfb9ffa33d99e84a6e098fc27 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Noah_Cyrus> ;
+        mtp:hasType          "HT" .
+
+meetup:9b4ac4bcfb9ffa33d99e84a6e098fc27
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99417514" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0044812243" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:546e51d03a001d83267206fdd42e3bdd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Noah's single release and merchandising collection" ;
+        mtp:hasEvidencePurposeSecond  "Donation to The Jed Foundation" ;
+        mtp:hasSourcePurpose          "LLM" .

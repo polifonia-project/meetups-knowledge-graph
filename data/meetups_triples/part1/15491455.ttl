@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Artie_Bernstein>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:031b24f2dac728a5f2cd4bd2cf750596
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Details about the person's life" ;
+        mtp:hasEvidencePurposeSecond  "Work history in the film industry" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/15491455/1/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He later moved to Los Angeles and worked in the film industry for such companies as Universal Studios and Warner Bros., continuing to work for the latter organization until 1963. He died in Los Angeles at the age of 54." ;
+        mtp:hasPurpose       meetup:031b24f2dac728a5f2cd4bd2cf750596 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Artie_Bernstein> ;
+        mtp:hasType          "HT" .

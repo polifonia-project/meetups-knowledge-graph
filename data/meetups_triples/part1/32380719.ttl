@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:dfc0e9d4da0f4e74a4b85472233fbd6b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97054684" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02043846" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:abc954d756dba0d08b6e24e94b041013
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Al Voss" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/32380719/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alain Voss (29 April 1946 – 13 May 2011), also known as Al Voss, was a French-Brazilian comics artist." ;
+        mtp:hasParticipant   meetup:abc954d756dba0d08b6e24e94b041013 , meetup:5a5a684e581b983e23db0522c11cfb71 ;
+        mtp:hasPurpose       meetup:dfc0e9d4da0f4e74a4b85472233fbd6b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alain_Voss> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Alain_Voss>
+        rdf:type  core:Person .
+
+meetup:5a5a684e581b983e23db0522c11cfb71
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alain_Voss> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Alain Voss" .

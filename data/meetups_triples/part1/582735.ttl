@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Tris_McCall>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/C._W._McCall>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/582735/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It sold over two million copies, and was awarded a gold disc by the R.I.A.A. in December 1975. Though McCall is not a one-hit wonder, \"Convoy\" has since become his signature song." ;
+        mtp:hasParticipant   meetup:bbb0aec5633279c89d67501910680a20 ;
+        mtp:hasPurpose       meetup:89ad103572cbe3e31e51db9bf0c77cf9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/C._W._McCall> ;
+        mtp:hasType          "HT" .
+
+meetup:89ad103572cbe3e31e51db9bf0c77cf9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions a song and its success." ;
+        mtp:hasEvidencePurposeSecond  "The sentence refers to the artist's signature song." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:bbb0aec5633279c89d67501910680a20
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tris_McCall> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.5626659545970396" ;
+        mtp:hasTextEvidence     "McCall" .

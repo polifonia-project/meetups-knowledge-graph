@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:0c3ab0e5eeb859caa682145d1c615664
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7948627" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17680354" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/7214790/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anthony Leonard Platt (born November 28, 1981)  commonly known by his stage name Unk, is an American DJ, hype man, and rapper." ;
+        mtp:hasParticipant   meetup:e103a3fc45186c2bf27146e1f87a3178 , meetup:479693b84541a98b5b49e358b4e3deb0 , meetup:a1e91fd042f556e6722d49d56376b615 ;
+        mtp:hasPurpose       meetup:0c3ab0e5eeb859caa682145d1c615664 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Unk> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Unk>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Kawhi_Leonard>
+        rdf:type  core:Person .
+
+meetup:e103a3fc45186c2bf27146e1f87a3178
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anthony Leonard Platt" .
+
+meetup:a1e91fd042f556e6722d49d56376b615
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kawhi_Leonard> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "0.9474407471101752" ;
+        mtp:hasTextEvidence     "Leonard" .
+
+meetup:479693b84541a98b5b49e358b4e3deb0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Unk> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "0.9999999994076632" ;
+        mtp:hasTextEvidence     "Unk" .

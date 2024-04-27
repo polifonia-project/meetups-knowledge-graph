@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:19aed5736385fb7cbc3736c61885fbaa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elgin_James> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "Elgin James" .
+
+<http://dbpedia.org/resource/Elgin_James>
+        rdf:type  core:Person .
+
+meetup:cd4a7b75843ccca16146d102d8ed5746
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93273157" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.047188446" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1de831b4d3405262dc83c6679cb3a492
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7328466" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26031095" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:78c0cb3a313df4700f1b4ad52a7ba3ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elgin_James> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elgin James" .
+
+<http://w3id.org/polifonia/pilot/meetups/11381416/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Elgin James is an American filmmaker, musician and a former member of Friends Stand United (FSU), a Boston, Massachusetts area group in the early 1990s which has been classified by several law enforcement agencies as a gang." ;
+        mtp:hasParticipant   meetup:78c0cb3a313df4700f1b4ad52a7ba3ad ;
+        mtp:hasPurpose       meetup:cd4a7b75843ccca16146d102d8ed5746 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elgin_James> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/11381416/23/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2003: Elgin James \"For Carol..\"" ;
+        mtp:hasParticipant   meetup:19aed5736385fb7cbc3736c61885fbaa ;
+        mtp:hasPurpose       meetup:1de831b4d3405262dc83c6679cb3a492 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elgin_James> ;
+        mtp:hasType          "HT" .

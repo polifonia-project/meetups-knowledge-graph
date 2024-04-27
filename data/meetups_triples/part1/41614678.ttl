@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:77373508ec398c9d0d2847f7bfe94fcd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Evgeny_Brazhnik> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999293549501" ;
+        mtp:hasTextEvidence     "Evgeny Brazhnik" .
+
+<http://dbpedia.org/resource/Evgeny_Brazhnik>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/41614678/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Evgeny Brazhnik (Russian: Евгений Бражник; [sometimes anglicised as Eugene Brazhnik]) is a Russian conductor and both USSR State Prize and People's Artist of Russia recipient." ;
+        mtp:hasParticipant   meetup:77373508ec398c9d0d2847f7bfe94fcd , meetup:2e8989c1e24a08c98a33e71c6b2ec9ad ;
+        mtp:hasPurpose       meetup:a8cd1ac844565db17af39a2e327f5f9c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Evgeny_Brazhnik> ;
+        mtp:hasType          "HM" .
+
+meetup:a8cd1ac844565db17af39a2e327f5f9c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90559316" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07089661" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2e8989c1e24a08c98a33e71c6b2ec9ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Eugene Brazhnik" .

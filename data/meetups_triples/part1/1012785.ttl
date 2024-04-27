@@ -1,0 +1,100 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f4f35203de80c40a5f476e92a37d478c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leland_Hayward> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Leland Hayward" .
+
+meetup:bc8c53f1083093a0590f29d226d0b254
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ethel_Merman> ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ethel Merman" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/1012785/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He produced The Ford 50th Anniversary Show on June 15, 1953, a live two-hour simulcast on CBS and NBC that looked back on the history of the United States and the world up to 1953. The program featured a memorable extended duet by Ethel Merman and Mary Martin." ;
+        mtp:hasParticipant   meetup:bc8c53f1083093a0590f29d226d0b254 ;
+        mtp:hasPurpose       meetup:4d978658c1c89d5195d52862db5f3289 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leland_Hayward> ;
+        mtp:hasType          "HT" .
+
+meetup:e95894a43d529df30b31a8c63b3cfaec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Munn> ;
+        mtp:hasOffset           "136" ;
+        mtp:hasSimilarityScore  "0.9999329306543931" ;
+        mtp:hasTextEvidence     "Jack Munn" .
+
+meetup:4d978658c1c89d5195d52862db5f3289
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "A commemorative show" ;
+        mtp:hasEvidencePurposeSecond  "Musical performance" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:061e0edd0d106c4f158ef0cbff55bf5c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "William Leland Hayward V" .
+
+<http://w3id.org/polifonia/pilot/meetups/1012785/20/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hayward's great-grandchildren include William Leland Hayward V, Amelia James Hayward, Anna and Cooper Thomas, Violet Hayward Goldstone, Jack Munn, Cooper Hayward, and Ryan Hayward." ;
+        mtp:hasParticipant   meetup:f4f35203de80c40a5f476e92a37d478c , meetup:061e0edd0d106c4f158ef0cbff55bf5c , meetup:e95894a43d529df30b31a8c63b3cfaec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leland_Hayward> ;
+        mtp:hasType          "HM" .
+
+meetup:3720a73e7cb379df5723e425009c965c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.69032705" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28742492" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ad8e625ba81c07a05b729c36d6c97ee4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leland_Hayward> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Leland Hayward" .
+
+<http://w3id.org/polifonia/pilot/meetups/1012785/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leland Hayward (September 13, 1902 – March 18, 1971) was a Hollywood and Broadway agent and theatrical producer." ;
+        mtp:hasParticipant   meetup:ad8e625ba81c07a05b729c36d6c97ee4 ;
+        mtp:hasPurpose       meetup:3720a73e7cb379df5723e425009c965c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leland_Hayward> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Leland_Hayward>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ethel_Merman>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Jack_Munn>
+        rdf:type  core:Person .

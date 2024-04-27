@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mausami_Gurung>
+        rdf:type  core:Person .
+
+meetup:12ccd25f03fc2c54629c0c8e63071b3f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8132895" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15309146" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:cae68b480a0fdcc7991e3c4a47f16a8f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Learning music in Nepal" ;
+        mtp:hasEvidencePurposeSecond  "Obtaining citizenship" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/39068803/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Later on she came to Nepal on 2001 and learnt music for four years and later passed a voice test from Radio Nepal. The main reason of her to come Nepal was to make her citizenship." ;
+        mtp:hasPurpose       meetup:cae68b480a0fdcc7991e3c4a47f16a8f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mausami_Gurung> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/39068803/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mausami Gurung, (Nepali: मौसमी गुरुङ) is a popular singer, songwriter of Nepal." ;
+        mtp:hasParticipant   meetup:c6eff0961ea465d4c6f410328fad6672 ;
+        mtp:hasPurpose       meetup:12ccd25f03fc2c54629c0c8e63071b3f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mausami_Gurung> ;
+        mtp:hasType          "HT" .
+
+meetup:c6eff0961ea465d4c6f410328fad6672
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mausami_Gurung> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999378133" ;
+        mtp:hasTextEvidence     "Mausami Gurung" .

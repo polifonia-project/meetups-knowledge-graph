@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Roisin_Dunne>
+        rdf:type  core:Person .
+
+meetup:656521a9af257135f0fac3cb58acd891
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stefanie_Sargent> ;
+        mtp:hasOffset           "93" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Stefanie Sargent" .
+
+meetup:df09f00c215e12654aa8f0ef414f8c2e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roisin_Dunne> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Roisin Dunne" .
+
+meetup:d9e32ed07763ae77dc9fb1480e765215
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.85699517" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1367416" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Stefanie_Sargent>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/41442382/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Roisin Dunne Ross (born 18 September 1965) is an Irish musician." ;
+        mtp:hasParticipant   meetup:e1a6c823a49e42c87244a6f4bd4f973f ;
+        mtp:hasPurpose       meetup:d9e32ed07763ae77dc9fb1480e765215 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roisin_Dunne> ;
+        mtp:hasType          "HT" .
+
+meetup:89b2594635cafa287d7ab1d473d420e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98826337" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011547287" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/41442382/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is best known for being the replacement guitarist of 7 Year Bitch, after their guitarist Stefanie Sargent died in June 1992." ;
+        mtp:hasParticipant   meetup:df09f00c215e12654aa8f0ef414f8c2e , meetup:656521a9af257135f0fac3cb58acd891 ;
+        mtp:hasPurpose       meetup:89b2594635cafa287d7ab1d473d420e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roisin_Dunne> ;
+        mtp:hasType          "HM" .
+
+meetup:e1a6c823a49e42c87244a6f4bd4f973f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roisin_Dunne> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Roisin Dunne" .

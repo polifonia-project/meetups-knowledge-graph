@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gertrude_Stein>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/John_Tavares>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Horace_Silver>
+        rdf:type  core:Person .
+
+meetup:be664c895d2f637e4b1ad41ea56f439c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gertrude_Stein> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.61054570814874" ;
+        mtp:hasTextEvidence     "Gertrude" .
+
+meetup:dd64720c86aa85356c694e112e1b3ea3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "This sentence is related to the personal life of the individual mentioned." ;
+        mtp:hasEvidencePurposeSecond  "This sentence also provides information about the individual's educational background." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6ea3d6d68f0e375eee92749d50509854
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Tavares> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "0.9999995179985628" ;
+        mtp:hasTextEvidence     "John Tavares" .
+
+<http://w3id.org/polifonia/pilot/meetups/238175/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Silver was born on September 2, 1928, in Norwalk, Connecticut. His mother, Gertrude, was from Connecticut; his father, John Tavares Silver, was born on the island of Maio, Cape Verde, and emigrated to the United States as a young man." ;
+        mtp:hasParticipant   meetup:6ea3d6d68f0e375eee92749d50509854 , meetup:be664c895d2f637e4b1ad41ea56f439c ;
+        mtp:hasPurpose       meetup:dd64720c86aa85356c694e112e1b3ea3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Horace_Silver> ;
+        mtp:hasType          "HT" .

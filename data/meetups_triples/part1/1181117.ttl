@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1181117/5/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1991, he released his debut as a leader, Kenny Kirkland, on GRP Records." ;
+        mtp:hasParticipant   meetup:0c0ab89e7fd7a982b8f96e8198e507ff ;
+        mtp:hasPurpose       meetup:3c44473fe98d44f648f7bbbd0e568d56 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kenny_Kirkland> ;
+        mtp:hasType          "HT" .
+
+meetup:f18f16109b141bfb361b54704d965b75
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kenny_Kirkland> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999995455228" ;
+        mtp:hasTextEvidence     "Kenny Kirkland" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0c0ab89e7fd7a982b8f96e8198e507ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kenny_Kirkland> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "0.9999999999940172" ;
+        mtp:hasTextEvidence     "Kenny Kirkland" .
+
+<http://w3id.org/polifonia/pilot/meetups/1181117/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kenny Kirkland (GRP, 1991)" ;
+        mtp:hasParticipant   meetup:f18f16109b141bfb361b54704d965b75 ;
+        mtp:hasPurpose       meetup:e678126e38ddfb19a99c7360b55ab1d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kenny_Kirkland> ;
+        mtp:hasType          "HT" .
+
+meetup:e678126e38ddfb19a99c7360b55ab1d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99916744" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0008260842" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Kenny_Kirkland>
+        rdf:type  core:Person .
+
+meetup:3c44473fe98d44f648f7bbbd0e568d56
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9981797" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0017924336" ;
+        mtp:hasSourcePurpose          "ML" .

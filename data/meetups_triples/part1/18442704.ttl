@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:273085de94caa8bdfe9fae8715dd3e0a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9927585" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.006953162" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jessie_James_Decker>
+        rdf:type  core:Person .
+
+meetup:ab63293e7b5fb1c07675f4ccea52fae0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jessie_James_Decker> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "0.9999999999590728" ;
+        mtp:hasTextEvidence     "Jessie James" .
+
+<http://w3id.org/polifonia/pilot/meetups/18442704/7/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her debut album, Jessie James, was released in August 2009, debuting at number 23 on the Billboard 200." ;
+        mtp:hasParticipant   meetup:ab63293e7b5fb1c07675f4ccea52fae0 ;
+        mtp:hasPurpose       meetup:273085de94caa8bdfe9fae8715dd3e0a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jessie_James_Decker> ;
+        mtp:hasType          "HT" .

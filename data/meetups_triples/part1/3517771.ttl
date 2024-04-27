@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:237114c01f6e64b797c94bb636c43b07
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Al Alberts was a popular singer and composer." ;
+        mtp:hasEvidencePurposeSecond  "Al Alberts was an American individual with a personal life." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Al_Alberts>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3517771/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Al Alberts (born Al Albertini, August 10, 1922 – November 27, 2009) was an American popular singer and composer." ;
+        mtp:hasParticipant   meetup:2a357e4b013b1ab59417cc163f4fb96c , meetup:5489d29c9927bdce28aa405fc8fe5bf2 ;
+        mtp:hasPurpose       meetup:237114c01f6e64b797c94bb636c43b07 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Al_Alberts> ;
+        mtp:hasType          "HM" .
+
+meetup:5489d29c9927bdce28aa405fc8fe5bf2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Al Albertini" .
+
+meetup:2a357e4b013b1ab59417cc163f4fb96c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Al_Alberts> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999989484" ;
+        mtp:hasTextEvidence     "Al Alberts" .

@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e1b15c3cacdd68ab527ee55a5be20801
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Beamish> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Beamish" .
+
+meetup:f7f690180dc597c522451ad46374ed3f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Recognition for services to music" ;
+        mtp:hasEvidencePurposeSecond  "Supporting struggling musicians during Covid 19 lockdown" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/George_Beamish>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5172935/6/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Beamish was appointed Officer of the Order of the British Empire (OBE) in the 2020 Birthday Honours for services to music. In 2020, Beamish composed April for Sound World’s Coronavirus Fund for Freelance Musicians, a project supporting struggling musicians during the UK’s Covid 19 lockdown." ;
+        mtp:hasParticipant   meetup:e1b15c3cacdd68ab527ee55a5be20801 ;
+        mtp:hasPurpose       meetup:f7f690180dc597c522451ad46374ed3f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sally_Beamish> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Sally_Beamish>
+        rdf:type  core:Person .

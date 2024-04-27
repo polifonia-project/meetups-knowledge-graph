@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:96e9d1ea4a38ab8eaffcc092640c8702
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the musician's career in the music industry." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the musician's personal life and his move to London." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/54404546/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He became a full-time musician in 1966, and left Brighton to become part of the music scene in London. He toured Great Britain, playing various folk clubs, including the Troubadour Club in London, sometimes supporting  Fairport Convention." ;
+        mtp:hasPurpose       meetup:96e9d1ea4a38ab8eaffcc092640c8702 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Allan_Taylor_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Allan_Taylor_(musician)>
+        rdf:type  core:Person .

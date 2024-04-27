@@ -1,0 +1,80 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:9f115e2ef77d59b969f56e159fde116c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Academic and professional development" ;
+        mtp:hasEvidencePurposeSecond  "Individual experiences and achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:a3f28ee62e0a4c893eb700e1f6dc7112
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84424436" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1532749" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/447956/10/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In July 2010, Cleopatra Records Los Angeles released an entirely new re-recording of \"Puttin' On the Ritz\". Taco's vocals were recorded in Germany and the backing tracks with top studio musicians in their studio in L.A." ;
+        mtp:hasPurpose       meetup:0844b24ce4ce6c53496b9b120a94fa23 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taco_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:0844b24ce4ce6c53496b9b120a94fa23
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creation of a new recording" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration between musicians and record label" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Taco_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/447956/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He attended the International School of Brussels, Belgium, and graduated in 1973. Afterward, he studied interior decoration and finished acting school in Hamburg." ;
+        mtp:hasPurpose       meetup:9f115e2ef77d59b969f56e159fde116c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taco_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:fd13d58becef5c5945e3731138c11058
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Taco_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999441295432" ;
+        mtp:hasTextEvidence     "Taco Ockerse" .
+
+<http://w3id.org/polifonia/pilot/meetups/447956/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Taco Ockerse (born 21 July 1955), known mononymously as Taco, is an Indonesian-Dutch singer and entertainer who started his career in Germany." ;
+        mtp:hasParticipant   meetup:fd13d58becef5c5945e3731138c11058 ;
+        mtp:hasPurpose       meetup:a3f28ee62e0a4c893eb700e1f6dc7112 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taco_(musician)> ;
+        mtp:hasType          "HT" .

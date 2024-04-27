@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:43bfd011e78f4576c735b9c233b81b5e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creating music album" ;
+        mtp:hasEvidencePurposeSecond  "Meeting with record label owner" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:158a89db71b59ed0fddc24cfd992f377
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kenny_Clarke> ;
+        mtp:hasOffset           "113" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kenny Clarke" .
+
+<http://dbpedia.org/resource/Kenny_Clarke>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Al_Haig>
+        rdf:type  core:Person .
+
+meetup:1b4691ab0164cb8b8ac1d61e96aff62d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "88" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bibi Rovère" .
+
+<http://w3id.org/polifonia/pilot/meetups/588320/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1974, Haig was invited to tour Europe by Tony Williams, owner of Spotlite Records in the United Kingdom. At the end of a very successful tour he recorded the Invitation album for Spotlite with Bibi Rovère on bass and Kenny Clarke on drums." ;
+        mtp:hasParticipant   meetup:158a89db71b59ed0fddc24cfd992f377 , meetup:1b4691ab0164cb8b8ac1d61e96aff62d ;
+        mtp:hasPurpose       meetup:43bfd011e78f4576c735b9c233b81b5e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Al_Haig> ;
+        mtp:hasType          "HT" .

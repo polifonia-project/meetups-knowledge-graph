@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/64082656/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is regarded as a pioneer of Neoperreo, a social-media inspired offshoot of reggaeton." ;
+        mtp:hasParticipant   meetup:cdc4de7e4021b12068ccdf258bceea5a , meetup:79c00fe6e72dd7d282cc093e0532e189 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tomasa_del_Real> ;
+        mtp:hasType          "HM" .
+
+meetup:cdc4de7e4021b12068ccdf258bceea5a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tomasa_del_Real> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tomasa Del Real" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/64082656/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tomasa was born in Iquique, Chile on December 1, 1986, to an upper-class family. She studied design in Santiago, Chile." ;
+        mtp:hasPurpose       meetup:d68047bb53b8e2a0d0fca35a7c695cfb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tomasa_del_Real> ;
+        mtp:hasType          "HT" .
+
+meetup:f13ea16cb718da65fc0ced48c36866cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Valeria Cisternas" .
+
+meetup:79c00fe6e72dd7d282cc093e0532e189
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "121" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "La Reina del Neoperreo" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Tomasa_del_Real>
+        rdf:type  core:Person .
+
+meetup:8eaa95d77021ce5a7f756a7e17e85457
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tomasa_del_Real> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tomasa Del Real" .
+
+<http://w3id.org/polifonia/pilot/meetups/64082656/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Valeria Cisternas (born 1 December 1986), better known by her stage name Tomasa Del Real, is a Chilean singer, composer, and reggaeton artist." ;
+        mtp:hasParticipant   meetup:8eaa95d77021ce5a7f756a7e17e85457 , meetup:f13ea16cb718da65fc0ced48c36866cc ;
+        mtp:hasPurpose       meetup:55d12c18aeeccc2a745b3c06f796dc22 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tomasa_del_Real> ;
+        mtp:hasType          "HM" .
+
+meetup:d68047bb53b8e2a0d0fca35a7c695cfb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about Tomasa's personal background" ;
+        mtp:hasEvidencePurposeSecond  "Details about Tomasa's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:55d12c18aeeccc2a745b3c06f796dc22
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8603637" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11555477" ;
+        mtp:hasSourcePurpose          "ML" .

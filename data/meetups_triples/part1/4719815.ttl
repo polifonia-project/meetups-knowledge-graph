@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Pedro_Lazaga>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:212e92c4e3b108c6b4be87422dc4f710
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5815126" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40484405" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4719815/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rosario del Carmen González Flores better known as Rosario Flores (Spanish pronunciation: [roˈsaɾjo floɾes]; born 4 November 1963) is a two-time Latin Grammy Award-winning Spanish singer." ;
+        mtp:hasParticipant   meetup:e3d6cc706df62437298ed263306f0e60 ;
+        mtp:hasPurpose       meetup:212e92c4e3b108c6b4be87422dc4f710 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rosario_Flores> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4719815/1/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rosario and Pedro Lazaga, her partner and father of her second son, met while filming Pedro Almodóvar's film Hable con ella in 2001." ;
+        mtp:hasParticipant   meetup:991e71cb979111fdaf6970615ba868d6 , meetup:082895b6f58dd6a259d9194ec7e5c0f6 ;
+        mtp:hasPurpose       meetup:d860b2d6406e824dc0cb74a44f8079cd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rosario_Flores> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:991e71cb979111fdaf6970615ba868d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rosario_Flores> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999998240058556" ;
+        mtp:hasTextEvidence     "Rosario" .
+
+meetup:e3d6cc706df62437298ed263306f0e60
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rosario_Flores> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999974320986" ;
+        mtp:hasTextEvidence     "Rosario" .
+
+<http://dbpedia.org/resource/Rosario_Flores>
+        rdf:type  core:Person .
+
+meetup:d860b2d6406e824dc0cb74a44f8079cd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99161255" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007292747" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:082895b6f58dd6a259d9194ec7e5c0f6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pedro_Lazaga> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pedro Lazaga" .

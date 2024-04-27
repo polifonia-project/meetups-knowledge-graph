@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e62f8d39dd0e7da2f679d602a3ff7a59
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Announcement of concert tour" ;
+        mtp:hasEvidencePurposeSecond  "Personal milestone for Hackman" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/41988199/10/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 25 June 2015, Laura Marling announced that Hackman and Johnny Flynn would join her on tour for a series of concerts in North America during July and August 2015. The concerts would be Hackman's first time performing material in North America." ;
+        mtp:hasParticipant   meetup:44f15d10350f3d5bbd1accf7f912fc2e ;
+        mtp:hasPurpose       meetup:e62f8d39dd0e7da2f679d602a3ff7a59 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marika_Hackman> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Luther_Hackman>
+        rdf:type  core:Person .
+
+meetup:44f15d10350f3d5bbd1accf7f912fc2e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Luther_Hackman> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hackman" .
+
+<http://dbpedia.org/resource/Marika_Hackman>
+        rdf:type  core:Person .

@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://dbpedia.org/resource/Shane_Embury>
+        rdf:type  core:Person .
+
+meetup:9cb62de8db4765f9b72f270d90039474
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "recently" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:310ecd9fc75693439eb47c9e684d6d1a
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "27 November 1967" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1967-11-27"^^xsd:date ;
+        time:hasEnd          "1967-11-27"^^xsd:date .
+
+meetup:d8812c29391f62fbf27779338f61d020
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2000" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2000-01-01"^^xsd:date ;
+        time:hasEnd          "2000-12-31"^^xsd:date .
+
+meetup:8df3c7a7932f869cc109715751a21b9a
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1987" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1987-01-01"^^xsd:date ;
+        time:hasEnd          "1987-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/1359184/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:8df3c7a7932f869cc109715751a21b9a , meetup:310ecd9fc75693439eb47c9e684d6d1a ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Shane_Embury> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1359184/8/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:9cb62de8db4765f9b72f270d90039474 , meetup:d8812c29391f62fbf27779338f61d020 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Shane_Embury> ;
+        mtp:hasType     "HT" .

@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/2871353/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In March 2010, an article in The New Yorker touched on visual artist Dan Bejar's elaborate efforts at impersonating the singer of the same name, resulting in confusion and numerous errors in coverage by the media." ;
+        mtp:hasParticipant   meetup:b85a990511f893c68a7f6eb29cbdef15 ;
+        mtp:hasPurpose       meetup:eb740b3cc92e6530d60cab72ecc9bbf9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Bejar> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Dan_Bejar>
+        rdf:type  core:Person .
+
+meetup:c7425c36af9bd3fe7d82bce210117127
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dan_Bejar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Daniel Bejar" .
+
+meetup:eb740b3cc92e6530d60cab72ecc9bbf9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.68421775" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16091084" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/2871353/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Daniel Bejar (; born October 4, 1972) is a Canadian singer-songwriter from Vancouver, British Columbia." ;
+        mtp:hasParticipant   meetup:c7425c36af9bd3fe7d82bce210117127 ;
+        mtp:hasPurpose       meetup:48891f2f4b682c0c460bfe713e912633 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Bejar> ;
+        mtp:hasType          "HT" .
+
+meetup:b85a990511f893c68a7f6eb29cbdef15
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dan_Bejar> ;
+        mtp:hasOffset           "69" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dan Bejar" .
+
+meetup:48891f2f4b682c0c460bfe713e912633
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99323493" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0064900103" ;
+        mtp:hasSourcePurpose          "ML" .

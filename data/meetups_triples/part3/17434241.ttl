@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:e505a67cac24cbd9ea8076d22bcf6967
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "1835 and 1837" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1835-01-01"^^xsd:date ;
+        time:hasEnd          "1837-12-31"^^xsd:date .
+
+<http://dbpedia.org/resource/Issachar_Bates>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/17434241/2/4>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Issachar_Bates> ;
+        mtp:hasType     "HT" .
+
+meetup:712cb0686c517e7f4a68b9836b6739ac
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "January 29 , 1758 – March 17 , 1837" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1758-01-29"^^xsd:date ;
+        time:hasEnd          "1837-03-17"^^xsd:date .
+
+meetup:491e7cdf0011cf835bfee861408435bc
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "Millennial" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/17434241/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:712cb0686c517e7f4a68b9836b6739ac ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Issachar_Bates> ;
+        mtp:hasType     "HT" .
+
+meetup:5b9d75c23caa2d1ae71f486f020f9022
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "around 1808" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1808-01-01"^^xsd:date ;
+        time:hasEnd          "1808-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/17434241/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:e505a67cac24cbd9ea8076d22bcf6967 , meetup:5b9d75c23caa2d1ae71f486f020f9022 , meetup:491e7cdf0011cf835bfee861408435bc ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Issachar_Bates> ;
+        mtp:hasType     "HT" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3389d0f70e9d1fcef874f9507bb4e007
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rena_Jones> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999995970912282" ;
+        mtp:hasTextEvidence     "Rena Jones" .
+
+meetup:b99fd6c61e77c600e193293f3f2baadd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98801416" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0075681317" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e3067a5fabe142fba1530f91020e003a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rena_Jones> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rena Jones" .
+
+<http://w3id.org/polifonia/pilot/meetups/26646119/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rena Jones (born 1977) is an American musician, producer and audio engineer from Portland, Oregon." ;
+        mtp:hasParticipant   meetup:3389d0f70e9d1fcef874f9507bb4e007 ;
+        mtp:hasPurpose       meetup:b99fd6c61e77c600e193293f3f2baadd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rena_Jones> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Rena_Jones>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/26646119/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her latest album titled Echoes was released in April 2013." ;
+        mtp:hasParticipant   meetup:e3067a5fabe142fba1530f91020e003a ;
+        mtp:hasPurpose       meetup:9e2c0c6adedf2b1ac3d77f3a20567233 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rena_Jones> ;
+        mtp:hasType          "HT" .
+
+meetup:9e2c0c6adedf2b1ac3d77f3a20567233
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.47838023" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22368154" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/6778075/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dahl's solo albums received the DMA Jazz Prize for Best Recording in 2004 and 2011." ;
+        mtp:hasParticipant   meetup:c3c25ca57e8946aea1383fab6c20ebc9 ;
+        mtp:hasPurpose       meetup:21bb28af43e29c03123b6b60b9c6c2f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carsten_Dahl> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Carsten_Dahl>
+        rdf:type  core:Person .
+
+meetup:21bb28af43e29c03123b6b60b9c6c2f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9967945" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0022768336" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c3c25ca57e8946aea1383fab6c20ebc9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carsten_Dahl> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.5082115208748328" ;
+        mtp:hasTextEvidence     "Dahl" .

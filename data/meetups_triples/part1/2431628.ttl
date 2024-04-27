@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Eric_Clapton>
+        rdf:type  core:Person .
+
+meetup:79b894285b5e252a1c95d9cbfdee35f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Thrall touring and recording with Jack Bruce" ;
+        mtp:hasEvidencePurposeSecond  "Reunion of Jack Bruce and Eric Clapton" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a4980f573366d131a815a233a55072aa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eric_Clapton> ;
+        mtp:hasOffset           "94" ;
+        mtp:hasSimilarityScore  "0.9999999956265242" ;
+        mtp:hasTextEvidence     "Eric Clapton" .
+
+<http://w3id.org/polifonia/pilot/meetups/2431628/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1988, Thrall toured and recorded with the legendary Jack Bruce of Cream fame. The performance at The Bitter End in New York City was historic as it reunited Jack Bruce and Eric Clapton for the first time since the last Cream concert at the Royal Albert Hall." ;
+        mtp:hasParticipant   meetup:a4980f573366d131a815a233a55072aa , meetup:cc9544fb4814bbc5316e777f477fa12d ;
+        mtp:hasPurpose       meetup:79b894285b5e252a1c95d9cbfdee35f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pat_Thrall> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jack_Bruce>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Pat_Thrall>
+        rdf:type  core:Person .
+
+meetup:cc9544fb4814bbc5316e777f477fa12d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Bruce> ;
+        mtp:hasOffset           "79" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jack Bruce" .

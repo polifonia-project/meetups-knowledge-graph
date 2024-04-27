@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/34942493/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lindsay McCaul Mattingly (née, Pritchett; born March 7, 1984) is an American contemporary Christian singer-songwriter raised in Merritt Island, Florida." ;
+        mtp:hasParticipant   meetup:fe02168e2b09d7ccc3930556f9b1e93f ;
+        mtp:hasPurpose       meetup:e647115cb58142e4cd9fdb85a4f4b306 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lindsay_McCaul> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lindsay_McCaul>
+        rdf:type  core:Person .
+
+meetup:e647115cb58142e4cd9fdb85a4f4b306
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.61301064" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3868265" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:fe02168e2b09d7ccc3930556f9b1e93f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lindsay_McCaul> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lindsay McCaul" .

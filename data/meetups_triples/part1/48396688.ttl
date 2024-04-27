@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/48396688/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While in Germany he also claimed to have studied briefly with Karlheinz Stockhausen." ;
+        mtp:hasParticipant   meetup:f793090db2decb3a1fabd50588d98469 , meetup:f1f556403a618559473e987bcdb4698c ;
+        mtp:hasPurpose       meetup:9c6a3576c67a494a8e88e3b26ddf06a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Irv_Teibel> ;
+        mtp:hasType          "HM" .
+
+meetup:e32725b0d92c237ee54303f65d7656e1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Information about family and children" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Irv_Teibel>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Karlheinz_Stockhausen>
+        rdf:type  core:Person .
+
+meetup:f1f556403a618559473e987bcdb4698c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Karlheinz_Stockhausen> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Karlheinz Stockhausen" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/48396688/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He attended the Rochester Institute of Technology and the Art Center College of Design in Pasadena, California before serving in the army as a public information specialist in Stuttgart, Germany." ;
+        mtp:hasParticipant   meetup:100b8e986f36597b879df059d9442188 ;
+        mtp:hasPurpose       meetup:9fae0940eeb596455eb5053e7dc22f5b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Irv_Teibel> ;
+        mtp:hasType          "HT" .
+
+meetup:100b8e986f36597b879df059d9442188
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Irv_Teibel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Irv Teibel" .
+
+meetup:9fae0940eeb596455eb5053e7dc22f5b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93129086" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06870555" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9c6a3576c67a494a8e88e3b26ddf06a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999944" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.4873885e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/48396688/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1981, Teibel moved to Austin, Texas with his then-wife Rosanne. They had two daughters, Jennifer and Dara." ;
+        mtp:hasPurpose       meetup:e32725b0d92c237ee54303f65d7656e1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Irv_Teibel> ;
+        mtp:hasType          "HT" .
+
+meetup:f793090db2decb3a1fabd50588d98469
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Irv_Teibel> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Irv Teibel" .

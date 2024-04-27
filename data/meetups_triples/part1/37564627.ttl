@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9cf36216f6132cb246d1fa5f74269259
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Songs on the album and musical influences" ;
+        mtp:hasEvidencePurposeSecond  "Scott's travels and time spent in Scotland" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/37564627/21/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Many of the songs on the album were inspired by Scott's travels, especially his time spent in Scotland during 2013. The album mixes worlds music, jazz, and other influences." ;
+        mtp:hasPurpose       meetup:9cf36216f6132cb246d1fa5f74269259 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erik_Scott> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Erik_Scott>
+        rdf:type  core:Person .

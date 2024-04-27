@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Chris_Kavanagh_(musician)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/11290434/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chris Kavanagh (born 4 June 1964) is a British drummer, best known for playing in Sigue Sigue Sputnik and Big Audio Dynamite II." ;
+        mtp:hasParticipant   meetup:a1a456b30f04136691385f3a19392186 ;
+        mtp:hasPurpose       meetup:3bae9a28acf94131bc73e869cfe8bffe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Kavanagh_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:a1a456b30f04136691385f3a19392186
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Kavanagh_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.6122410023485" ;
+        mtp:hasTextEvidence     "Chris Kavanagh" .
+
+meetup:3bae9a28acf94131bc73e869cfe8bffe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.995327" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004369624" ;
+        mtp:hasSourcePurpose          "ML" .

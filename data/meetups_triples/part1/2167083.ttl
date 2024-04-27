@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:cbcbe1ab688a48ea2158e0dc886e2fcb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997148" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00028517298" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2167083/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Harry Adaskin,  (Latvian: Harijs Adaskins; 6 October 1901 – 7 April 1994) was a Canadian violinist, academic, and radio broadcaster." ;
+        mtp:hasParticipant   meetup:aa4768a48288366788e709353f11ed17 , meetup:c6256ead93672cfc6781f965fd215f7f ;
+        mtp:hasPurpose       meetup:cbcbe1ab688a48ea2158e0dc886e2fcb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harry_Adaskin> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Harry_Adaskin>
+        rdf:type  core:Person .
+
+meetup:aa4768a48288366788e709353f11ed17
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Harry_Adaskin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Harry Adaskin" .
+
+meetup:c6256ead93672cfc6781f965fd215f7f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Harijs Adaskins" .

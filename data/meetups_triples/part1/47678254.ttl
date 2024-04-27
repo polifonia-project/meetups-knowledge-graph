@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gert_Verhulst>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/47678254/17/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009 Gert Verhulst bought a Motor Yacht from 36-meter with 8 suites called \"Evanna\"." ;
+        mtp:hasParticipant   meetup:dcfb4a0d8904ae9cf85b555a77ca6174 ;
+        mtp:hasPurpose       meetup:0df6cdc37434863bfc54d71448ecd1e2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gert_Verhulst> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:dcfb4a0d8904ae9cf85b555a77ca6174
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gert_Verhulst> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gert Verhulst" .
+
+meetup:0df6cdc37434863bfc54d71448ecd1e2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.58794355" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.36545432" ;
+        mtp:hasSourcePurpose          "ML" .

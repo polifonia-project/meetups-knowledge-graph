@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Bill_Clifton>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/21406105/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bill Clifton (born William August Marburg; April 5, 1931) is an American bluegrass musician and singer who is credited with having organized one of the first bluegrass festivals in the United States in 1961." ;
+        mtp:hasParticipant   meetup:a0ee2f34fa8e166a83e0b62a0d9fb124 ;
+        mtp:hasPurpose       meetup:b420902c73d4d66bd2adeeefeaabcde6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_Clifton> ;
+        mtp:hasType          "HT" .
+
+meetup:a0ee2f34fa8e166a83e0b62a0d9fb124
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Clifton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bill Clifton" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:b420902c73d4d66bd2adeeefeaabcde6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.85855573" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.109817594" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d41fa4a82c8ca340195874c6dc805eba
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8040847" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19591495" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/39485841/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Franz Xaver Chwatal (19 June 1808 – 24 June 1879) was a Bohemian pianist, composer and music teacher." ;
+        mtp:hasParticipant   meetup:e7724aaa33bfc50da6b9aefdff122b53 ;
+        mtp:hasPurpose       meetup:d41fa4a82c8ca340195874c6dc805eba ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Franz_Xaver_Chwatal> ;
+        mtp:hasType          "HT" .
+
+meetup:e7724aaa33bfc50da6b9aefdff122b53
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Franz_Xaver_Chwatal> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999927808" ;
+        mtp:hasTextEvidence     "Franz Xaver Chwatal" .
+
+<http://dbpedia.org/resource/Franz_Xaver_Chwatal>
+        rdf:type  core:Person .

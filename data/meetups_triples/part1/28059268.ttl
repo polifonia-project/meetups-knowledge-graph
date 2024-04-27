@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Evil_Cowards>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:772ee5132ce58e504d4e1776db45227e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Evil_Cowards> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Evil Cowards" .
+
+meetup:faf6f9f3b62d1bac1a78b5fc69e1c5bd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97254443" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.027455129" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/28059268/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band released their debut album, Covered in Gas, with Metropolis Records in May 2009, shortly before the release of the sixth Electric Six album, KILL." ;
+        mtp:hasParticipant   meetup:772ee5132ce58e504d4e1776db45227e ;
+        mtp:hasPurpose       meetup:faf6f9f3b62d1bac1a78b5fc69e1c5bd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Evil_Cowards> ;
+        mtp:hasType          "HT" .

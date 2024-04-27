@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:96d1b096c5030f0d2671fd27b47d7dc1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99492306" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0050692754" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:efb793935a4c0eb49afbdc6fe3371fa1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9732868" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01573333" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3d1afdfa6454739520180f03e4a216a9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Edwin_Birdsong> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Edwin Birdsong" .
+
+meetup:7c6432a4dfb04da73c70a2a3a7a19164
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Edwin_Birdsong> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Edwin Birdsong" .
+
+<http://w3id.org/polifonia/pilot/meetups/13922624/2/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Birdsong then issued one album for Bamboo, Dance of Survival, in 1975, and recorded Edwin Birdsong for Philadelphia International in 1979, which included the single \"Phiss-Phizz\"." ;
+        mtp:hasParticipant   meetup:3d1afdfa6454739520180f03e4a216a9 ;
+        mtp:hasPurpose       meetup:efb793935a4c0eb49afbdc6fe3371fa1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Edwin_Birdsong> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Edwin_Birdsong>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/13922624/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Edwin Birdsong (1979, Philadelphia International)" ;
+        mtp:hasParticipant   meetup:7c6432a4dfb04da73c70a2a3a7a19164 ;
+        mtp:hasPurpose       meetup:96d1b096c5030f0d2671fd27b47d7dc1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Edwin_Birdsong> ;
+        mtp:hasType          "HT" .

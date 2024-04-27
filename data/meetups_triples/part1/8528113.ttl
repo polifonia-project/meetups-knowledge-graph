@@ -1,0 +1,98 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a69b19f2f15eeaf9c9df36e1611a0e48
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.75982857" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23455207" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/8528113/8/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His funeral was held on 20 August 2013 at the Musicians' Church, St Sepulchre-without-Newgate in London." ;
+        mtp:hasParticipant   meetup:b3e6347ee1d3544f7710885f724884d6 ;
+        mtp:hasPurpose       meetup:9f1074671dce59fc8a699ee45a40ad50 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Amis> ;
+        mtp:hasType          "HT" .
+
+meetup:e0c1e76f0b83c2a2eda904462cf25094
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Amis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Amis" .
+
+meetup:8e1f17e7c99488edb930e1601e2a3f8a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Amis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999993684696" ;
+        mtp:hasTextEvidence     "John Amis" .
+
+<http://w3id.org/polifonia/pilot/meetups/8528113/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Amis died on 1 August 2013." ;
+        mtp:hasParticipant   meetup:8e1f17e7c99488edb930e1601e2a3f8a ;
+        mtp:hasPurpose       meetup:a69b19f2f15eeaf9c9df36e1611a0e48 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Amis> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:9f1074671dce59fc8a699ee45a40ad50
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999926" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.9711828e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2c6bf13de1a2d0072052cf57cfd7066f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.583882" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.27768385" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/John_Amis>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8528113/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was survived by his partner for his last six years, Isla Baring." ;
+        mtp:hasParticipant   meetup:f961f87dcfa54f33575bc3b575702515 , meetup:e0c1e76f0b83c2a2eda904462cf25094 ;
+        mtp:hasPurpose       meetup:2c6bf13de1a2d0072052cf57cfd7066f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Amis> ;
+        mtp:hasType          "HM" .
+
+meetup:b3e6347ee1d3544f7710885f724884d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Amis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Amis" .
+
+meetup:f961f87dcfa54f33575bc3b575702515
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Isla Baring" .

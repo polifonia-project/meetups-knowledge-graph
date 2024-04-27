@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Steve_Walsh_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2634453/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steve Walsh (born June 15, 1951) is an American musician, singer, and songwriter best known for his work as a longtime member of the progressive rock band Kansas; he retired from the band in 2014." ;
+        mtp:hasParticipant   meetup:0a3da29c2a7e7ebf92aff3937d85d922 ;
+        mtp:hasPurpose       meetup:c5262dc15ab7fcc6f756170702c1df11 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Walsh_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:c5262dc15ab7fcc6f756170702c1df11
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9025523" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.077323146" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0a3da29c2a7e7ebf92aff3937d85d922
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Walsh_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8296463452961369" ;
+        mtp:hasTextEvidence     "Steve Walsh" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/32693459/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Homer G. Tasker (February 19, 1899 – January 9, 1990) was an American sound engineer." ;
+        mtp:hasParticipant   meetup:5cf70c77e319608cdff040b64e3c60ab ;
+        mtp:hasPurpose       meetup:fb825d69acab44d70b1c2b60d0aab74e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Homer_G._Tasker> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:fb825d69acab44d70b1c2b60d0aab74e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9992003" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00078668917" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:5cf70c77e319608cdff040b64e3c60ab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Homer_G._Tasker> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Homer G. Tasker" .
+
+<http://dbpedia.org/resource/Homer_G._Tasker>
+        rdf:type  core:Person .

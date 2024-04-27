@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11937847/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Catherine Ringer (French pronunciation: ​[katʁin ʁɛ̃ʒe], born 18 October 1957 in Suresnes, France) is a French singer, songwriter, composer, multi-instrumentalist, dancer, choreographer, actress, and co-founder of the pop rock group Les Rita Mitsouko." ;
+        mtp:hasParticipant   meetup:9d6f3504632a090ed7af0692e3cfdc7a ;
+        mtp:hasPurpose       meetup:152a3d4b9a8cc5a352fc433835dc0486 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Catherine_Ringer> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/11937847/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is also the daughter of French artist Sam Ringer." ;
+        mtp:hasParticipant   meetup:e4e5adc8ee5aed464500173fab8b88d0 , meetup:9b765c70c8480ff4d498e3bb1bdae6b3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Catherine_Ringer> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Catherine_Ringer>
+        rdf:type  core:Person .
+
+meetup:e4e5adc8ee5aed464500173fab8b88d0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sam Ringer" .
+
+meetup:9d6f3504632a090ed7af0692e3cfdc7a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Catherine_Ringer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Catherine Ringer" .
+
+meetup:152a3d4b9a8cc5a352fc433835dc0486
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.66979116" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.32823044" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9b765c70c8480ff4d498e3bb1bdae6b3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Catherine_Ringer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Catherine Ringer" .

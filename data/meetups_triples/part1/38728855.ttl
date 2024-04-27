@@ -1,0 +1,45 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Yuko_Takayama>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:c6faeb0cd39e512fb100768f9e7e4106
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Information about the person's life" ;
+        mtp:hasEvidencePurposeSecond  "Related to acting career" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/38728855/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yuko Takayama (高山 侑子, Takayama Yūko, born October 13, 1992 in Niigata Prefecture) is a Japanese actress known for her role as Rei in Mutant Girls Squad and also Rinko Daimon in the 2012 Kamen Rider series Kamen Rider Wizard." ;
+        mtp:hasParticipant   meetup:8786b3d02bb360762e6b95e253d658f1 , meetup:c89a184a92cd84101319956839826b69 ;
+        mtp:hasPurpose       meetup:c6faeb0cd39e512fb100768f9e7e4106 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuko_Takayama> ;
+        mtp:hasType          "HM" .
+
+meetup:8786b3d02bb360762e6b95e253d658f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yuko_Takayama> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Yuko Takayama" .
+
+meetup:c89a184a92cd84101319956839826b69
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Takayama Yūko" .

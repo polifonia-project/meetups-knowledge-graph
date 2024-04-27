@@ -1,0 +1,96 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/37281891/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rune \"Sternklang\" Brøndbo (born 2 March 1968 in Norway) is a Norwegian jazz musician (keyboards, guitar) and composer, known for recording with various notable bands including Wibutee and Sternklang. He is the cousin of the DDE drummer Eskil Brøndbo and vocalist Bjarne Brøndbo" ;
+        mtp:hasPurpose       meetup:f7d9507f653823168cc8b3e293afa3d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rune_Brøndbo> ;
+        mtp:hasType          "HT" .
+
+meetup:8c312e6d9891512cbb6397cbdf9cdb45
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rune_Brøndbo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Brøndbo" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9abf835f4f1b69532191f05f5acddf32
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anja_Garbarek> ;
+        mtp:hasOffset           "187" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Anja Garbarek" .
+
+meetup:85f78471cde4d4342213395642821f64
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rune_Brøndbo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Brøndbo" .
+
+<http://dbpedia.org/resource/Rune_Brøndbo>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/37281891/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also contributes on the two latest albums of Wibutee, Playmachine (2004) and Sweet Mental (2006), with whom he performed at Nattjazz in Bergen (2003 and 2006), the last time featuring Anja Garbarek." ;
+        mtp:hasParticipant   meetup:9abf835f4f1b69532191f05f5acddf32 , meetup:8c312e6d9891512cbb6397cbdf9cdb45 ;
+        mtp:hasPurpose       meetup:6bea7e6f6d2899c415086705f319fbd9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rune_Brøndbo> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f7d9507f653823168cc8b3e293afa3d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Rune Brøndbo is a jazz musician and composer" ;
+        mtp:hasEvidencePurposeSecond  "He is related to other musicians in his family" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Anja_Garbarek>
+        rdf:type  core:Person .
+
+meetup:6bea7e6f6d2899c415086705f319fbd9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Involvement in albums and performances" ;
+        mtp:hasEvidencePurposeSecond  "Participation in Nattjazz festival" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:5d5e5a0fe9db0dc1e631fbba21f594c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9919853" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0069293813" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/37281891/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brøndbo has made himself noticed with his band Sternklang releasing four records within a decade (1997–2006)." ;
+        mtp:hasParticipant   meetup:85f78471cde4d4342213395642821f64 ;
+        mtp:hasPurpose       meetup:5d5e5a0fe9db0dc1e631fbba21f594c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rune_Brøndbo> ;
+        mtp:hasType          "HT" .

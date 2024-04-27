@@ -1,0 +1,100 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:4c7c1eec8249404146ee5fe510ef4677
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Organization dedicated to preserving art and culture through educational programs" ;
+        mtp:hasEvidencePurposeSecond  "Provides instruction in music along with other art forms" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f1f99b8f85e4eaa85f5422375737e8b1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jackie_McLean> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Jackie McLean" .
+
+<http://w3id.org/polifonia/pilot/meetups/212237/10/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2006, Jackie McLean was elected to the DownBeat Hall of Fame via the International Critics Poll." ;
+        mtp:hasParticipant   meetup:f1f99b8f85e4eaa85f5422375737e8b1 ;
+        mtp:hasPurpose       meetup:1f507d0b8c177968ee51d38a14cbcb29 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jackie_McLean> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/212237/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1970, he and his wife, Dollie McLean, along with jazz bassist Paul (PB) Brown, founded the Artists Collective, Inc. of Hartford, an organization dedicated to preserving the art and culture of the African Diaspora. It provides educational programs and instruction in dance, theatre, music and visual arts." ;
+        mtp:hasPurpose       meetup:4c7c1eec8249404146ee5fe510ef4677 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jackie_McLean> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:26c33b5a61fa3091daf4ac4ba35ab31f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.37235564" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22858739" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/212237/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A. B. Spellman's 1966 study, Black Music, Four Lives: Cecil Taylor, Ornette Coleman, Herbie Nichols, Jackie McLean, still in print, includes extensive mid-career reflections by McLean on his youth and career to date." ;
+        mtp:hasParticipant   meetup:a84ba2660209e85423e97a245c156142 , meetup:65321bc2c02549d4896250216c53a108 , meetup:8743980010747fa1422bb43fd7fd45e2 ;
+        mtp:hasPurpose       meetup:26c33b5a61fa3091daf4ac4ba35ab31f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jackie_McLean> ;
+        mtp:hasType          "HM" .
+
+meetup:1f507d0b8c177968ee51d38a14cbcb29
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.46359614" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26828372" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Jackie_McLean>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:65321bc2c02549d4896250216c53a108
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Francis_Spellman> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.9999985099120484" ;
+        mtp:hasTextEvidence     "Spellman" .
+
+<http://dbpedia.org/resource/Francis_Spellman>
+        rdf:type  core:Person .
+
+meetup:8743980010747fa1422bb43fd7fd45e2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "A. B. Spellman's" .
+
+meetup:a84ba2660209e85423e97a245c156142
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jackie_McLean> ;
+        mtp:hasOffset           "101" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jackie McLean" .

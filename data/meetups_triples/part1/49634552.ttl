@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Chase_Anderson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/49634552/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1976, after visiting Max's Kansas City and CBGB and seeing the Ramones, Anderson became interested in the new punk movement. Returning to Toronto, Anderson eventually joined Battered Wives one of a few new bands on the scene." ;
+        mtp:hasParticipant   meetup:49a411720782bea485f8d562ae1e4237 ;
+        mtp:hasPurpose       meetup:fe1dfdb5b791ad1f81d2c2860a52e91d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cleave_Anderson> ;
+        mtp:hasType          "HT" .
+
+meetup:49a411720782bea485f8d562ae1e4237
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chase_Anderson> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "0.7274161160936303" ;
+        mtp:hasTextEvidence     "Anderson" .
+
+<http://dbpedia.org/resource/Cleave_Anderson>
+        rdf:type  core:Person .
+
+meetup:fe1dfdb5b791ad1f81d2c2860a52e91d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in punk movement" ;
+        mtp:hasEvidencePurposeSecond  "Joining a new band" ;
+        mtp:hasSourcePurpose          "LLM" .

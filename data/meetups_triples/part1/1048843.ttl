@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:cd29fd01333581ce119226f80dc1942d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to academic background" ;
+        mtp:hasEvidencePurposeSecond  "Related to personal details" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:525fcf1970aa93e0b0be8cf5d3bc23d0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Vassar> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Phil Vassar" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:729167a555c63fa5c77f0f56f2b5dbdc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94002604" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.054132134" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1048843/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vassar was born May 28, 1962, in Lynchburg, Virginia. He attended James Madison University in Harrisonburg, Virginia." ;
+        mtp:hasPurpose       meetup:cd29fd01333581ce119226f80dc1942d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Vassar> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Phil_Vassar>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1048843/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He followed it in 2002 with American Child, Shaken Not Stirred in 2004, and finally Greatest Hits, Vol. 1 in 2006 before Vassar left the label for Universal South Records (now Show Dog-Universal Music)." ;
+        mtp:hasParticipant   meetup:525fcf1970aa93e0b0be8cf5d3bc23d0 ;
+        mtp:hasPurpose       meetup:729167a555c63fa5c77f0f56f2b5dbdc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Vassar> ;
+        mtp:hasType          "HT" .

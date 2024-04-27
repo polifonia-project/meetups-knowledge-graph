@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Solveig_Heilo>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/48289425/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Solveig Heilo (born December 24, 1981), simply known as Sol Heilo, is a Norwegian composer, artist, musician, music producer, arranger, designer and costume designer." ;
+        mtp:hasParticipant   meetup:de2d0eb0c59837b855b92d753a6f85ac ;
+        mtp:hasPurpose       meetup:d2f0b64dc7db9ad605ab913dedf7340e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Solveig_Heilo> ;
+        mtp:hasType          "HT" .
+
+meetup:de2d0eb0c59837b855b92d753a6f85ac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Solveig_Heilo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Solveig Heilo" .
+
+meetup:d2f0b64dc7db9ad605ab913dedf7340e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6401216" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2647152" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .

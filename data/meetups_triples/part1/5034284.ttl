@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/5034284/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While still attending Latymer, he participated in the first ever Film Studies O-level and was featured in the Evening Standard as  \"Tim Pope, aged seventeen, who wants to be a film director\"." ;
+        mtp:hasParticipant   meetup:e78b01a7ca7c84aee757496ba77247a9 ;
+        mtp:hasPurpose       meetup:e8a99673753e8b83dd96135d1e229559 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tim_Pope> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e78b01a7ca7c84aee757496ba77247a9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Pope> ;
+        mtp:hasOffset           "132" ;
+        mtp:hasSimilarityScore  "0.9999999999946568" ;
+        mtp:hasTextEvidence     "Tim Pope" .
+
+meetup:e8a99673753e8b83dd96135d1e229559
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.69145674" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.30009073" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Tim_Pope>
+        rdf:type  core:Person .

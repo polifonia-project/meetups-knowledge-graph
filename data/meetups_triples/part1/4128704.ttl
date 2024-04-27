@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/4128704/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leslie Peter Wilkinson (born 9 May 1969 in Liverpool) in an English bass player and singer-songwriter, formerly of Shack, Cast, and Echo & the Bunnymen." ;
+        mtp:hasParticipant   meetup:05e62852b1078323abc809645e793d1f , meetup:9cb8b55dc74b4f0bbdff7d12a6594c59 ;
+        mtp:hasPurpose       meetup:5bbe95a56dd3514d33796a66d656c4fb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Wilkinson_(bass_guitarist)> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:05e62852b1078323abc809645e793d1f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Leslie Peter Wilkinson" .
+
+<http://dbpedia.org/resource/Peter_Wilkinson_(bass_guitarist)>
+        rdf:type  core:Person .
+
+meetup:5bbe95a56dd3514d33796a66d656c4fb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6649318" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.32312033" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9cb8b55dc74b4f0bbdff7d12a6594c59
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Wilkinson_(bass_guitarist)> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.8579005804477452" ;
+        mtp:hasTextEvidence     "Peter Wilkinson" .

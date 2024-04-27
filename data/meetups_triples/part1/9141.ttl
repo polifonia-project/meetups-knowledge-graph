@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:46363f386bdac42f84971cc7a65b9cad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Details about an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Health condition and cause of death" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c59f4181ce5d379cd5630e19bd72b777
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Jones opening his first store" ;
+        mtp:hasEvidencePurposeSecond  "Customers designing their own clothes" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/9141/19/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1967, Jones opened his first store, called Zilch, at 217 Thompson Street in the Greenwich Village section of New York City. The store sold \"hip\" clothing and accessories and also allowed customers to design their own clothes." ;
+        mtp:hasPurpose       meetup:c59f4181ce5d379cd5630e19bd72b777 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Davy_Jones_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Davy_Jones_(musician)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:316fc6ad2b67f9faf7b561ed621ce25c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Related to someone's death" ;
+        mtp:hasEvidencePurposeSecond  "Expressing surprise or excitement" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:dd9f77fadd0f42403058bb38bdff3f14
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the music career of David in the Monkees." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions Nesmith's personal opinion about David and the band." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:25279fec51653c835f1809e7bfeb929f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doug_Jones_(baseball)> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jones" .
+
+<http://w3id.org/polifonia/pilot/meetups/9141/28/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In an 8 March 2012 interview with Rolling Stone magazine, Nesmith commented, \"For me, David was the Monkees. They were his band." ;
+        mtp:hasPurpose       meetup:dd9f77fadd0f42403058bb38bdff3f14 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Davy_Jones_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Doug_Jones_(baseball)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/9141/26/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On the morning of 29 February 2012, Jones went to tend to his 14 horses at a farm in Indiantown, Florida. After riding one of his favourite horses around the track, he complained of chest pains and difficulty breathing, and was rushed to Martin Memorial South Hospital in Stuart, Florida, where he was pronounced dead of a heart attack resulting from arteriosclerosis." ;
+        mtp:hasParticipant   meetup:25279fec51653c835f1809e7bfeb929f ;
+        mtp:hasPurpose       meetup:46363f386bdac42f84971cc7a65b9cad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Davy_Jones_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/9141/28/22>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "May he rest in peace. \"Yahoo!" ;
+        mtp:hasPurpose       meetup:316fc6ad2b67f9faf7b561ed621ce25c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Davy_Jones_(musician)> ;
+        mtp:hasType          "HT" .

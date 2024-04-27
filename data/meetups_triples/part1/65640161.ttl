@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Saadet_İkesus_Altan>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/65640161/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She spent her childhood in Istanbul and her years after age nine in Ankara. Her military officer father fell in the Turkish War of Independence and the family had to move to the new capital when her mother found employment with the Ministry of Foreign Affairs." ;
+        mtp:hasParticipant   meetup:5914e70cc544861d6c203c2cf23c704e ;
+        mtp:hasPurpose       meetup:7be8e4b6700f1b1b5cde63b28bfe6804 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Saadet_İkesus_Altan> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:5914e70cc544861d6c203c2cf23c704e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Fatma Saadet İkesus" .
+
+meetup:7be8e4b6700f1b1b5cde63b28bfe6804
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about the person's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about the person's education" ;
+        mtp:hasSourcePurpose          "LLM" .

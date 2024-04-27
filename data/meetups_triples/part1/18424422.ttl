@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d1e2c1366da5209e41eafa03a858bc90
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pärt_Uusberg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pärt Uusberg" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:f61cc117a973a63c8feca40a2a7421f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pärt_Uusberg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pärt Uusberg" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a158e79cfaf10ff52e2a5ec62e3c5eff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8882829" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.109817296" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:000cf6febb83b8af5b668b52e06afad6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998987" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.2683706e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/18424422/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pärt Uusberg (born 16 December 1986) is an Estonian composer, conductor, and actor." ;
+        mtp:hasParticipant   meetup:d1e2c1366da5209e41eafa03a858bc90 ;
+        mtp:hasPurpose       meetup:000cf6febb83b8af5b668b52e06afad6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pärt_Uusberg> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/18424422/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is the chief conductor of Chamber Choir Head Ööd, Vend." ;
+        mtp:hasParticipant   meetup:f61cc117a973a63c8feca40a2a7421f9 ;
+        mtp:hasPurpose       meetup:a158e79cfaf10ff52e2a5ec62e3c5eff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pärt_Uusberg> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Pärt_Uusberg>
+        rdf:type  core:Person .

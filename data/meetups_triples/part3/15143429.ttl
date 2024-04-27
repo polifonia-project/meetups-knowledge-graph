@@ -1,0 +1,38 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:9e67f5d05e7830b68bd200a4e53a5cb0
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "March 19 , 1984" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1984-03-19"^^xsd:date ;
+        time:hasEnd          "1984-03-19"^^xsd:date .
+
+<http://dbpedia.org/resource/Thao_Nguyen>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:47ed58a3a3be11cec4c3b22b6bddff23
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "now" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/15143429/13/5>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Thao_Nguyen> ;
+        mtp:hasType     "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/15143429/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:47ed58a3a3be11cec4c3b22b6bddff23 , meetup:9e67f5d05e7830b68bd200a4e53a5cb0 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Thao_Nguyen> ;
+        mtp:hasType     "HT" .

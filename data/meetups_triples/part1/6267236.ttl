@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/6267236/4/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His son with Powell, Bruce Boyd Raeburn of New Orleans, was the curator of the William Ransom Hogan Archive of New Orleans Jazz at the Tulane University in New Orleans until December 2017." ;
+        mtp:hasParticipant   meetup:88523a3be9f9a8a7a38a70fb6b7dbacc , meetup:93aff655e50eb2f17a29d3112fb3795a ;
+        mtp:hasPurpose       meetup:4d2b34266ff28571179b398aefda2426 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Boyd_Raeburn> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Boyd_Raeburn>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4d2b34266ff28571179b398aefda2426
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involves jazz music" ;
+        mtp:hasEvidencePurposeSecond  "Related to university archive" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:88523a3be9f9a8a7a38a70fb6b7dbacc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bruce Boyd Raeburn" .
+
+meetup:93aff655e50eb2f17a29d3112fb3795a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Boyd_Raeburn> ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Boyd Raeburn" .

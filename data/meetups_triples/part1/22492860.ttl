@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Carl_Cohn_Haste>
+        rdf:type  core:Person .
+
+meetup:1b3df8b0c3a00e18365097a188a58e88
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9982034" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0016626009" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/22492860/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carl Cohn Haste (7 December 1874 – 4 June 1939) was a Danish pianist, organist and composer." ;
+        mtp:hasParticipant   meetup:e54a19fff78f12c19c98ae67b5701809 ;
+        mtp:hasPurpose       meetup:1b3df8b0c3a00e18365097a188a58e88 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carl_Cohn_Haste> ;
+        mtp:hasType          "HT" .
+
+meetup:e54a19fff78f12c19c98ae67b5701809
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carl_Cohn_Haste> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999960437" ;
+        mtp:hasTextEvidence     "Carl Cohn Haste" .

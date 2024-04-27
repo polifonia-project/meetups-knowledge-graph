@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b90152b631734559fce838015ba581a4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Greg_Saunier> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Greg Saunier" .
+
+meetup:4aa5adeb7361837a7d71638ef6d32aac
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8983461" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0831626" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/50923144/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Greg Saunier (born 18 May 1969) is a musician, producer, and composer best known as the drummer and founding member of Deerhoof." ;
+        mtp:hasParticipant   meetup:b90152b631734559fce838015ba581a4 ;
+        mtp:hasPurpose       meetup:4aa5adeb7361837a7d71638ef6d32aac ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Greg_Saunier> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Greg_Saunier>
+        rdf:type  core:Person .

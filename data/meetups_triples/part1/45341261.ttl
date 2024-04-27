@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:3fed59f27f138c435a5cfb4cb76ebeb4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99389005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.005586421" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c23d4812e7448ce45471bef6c30f9dd6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/4mat> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Matthew Simmonds" .
+
+<http://w3id.org/polifonia/pilot/meetups/45341261/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He began his career in the demoscene of the early 1990s composing on the Amiga." ;
+        mtp:hasParticipant   meetup:c23d4812e7448ce45471bef6c30f9dd6 ;
+        mtp:hasPurpose       meetup:3fed59f27f138c435a5cfb4cb76ebeb4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/4mat> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/4mat>
+        rdf:type  core:Person .

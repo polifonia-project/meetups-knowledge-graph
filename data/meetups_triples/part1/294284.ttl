@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Christian_Lindberg>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c7667026f2ad3bbce164a84f47ba074d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999774" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.3977929e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/294284/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In recognition of Alessi's immense contributions to the trombone community, he was awarded the 2002 ITA Award, the most prestigious award offered by the International Trombone Association." ;
+        mtp:hasParticipant   meetup:e004b88aa7192fd81a0a8824ef9132b4 ;
+        mtp:hasPurpose       meetup:c7667026f2ad3bbce164a84f47ba074d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joseph_Alessi> ;
+        mtp:hasType          "HT" .
+
+meetup:d25e1a0a6eb68e7190c8c7fd55841380
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joseph_Alessi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joseph Alessi" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Joseph_Alessi>
+        rdf:type  core:Person .
+
+meetup:caf928930b5701d4157b8cf87498609e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9978527" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0009532465" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/294284/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joseph Alessi and Swedish trombone virtuoso Christian Lindberg are widely regarded as the finest players of the instrument today, arguably the finest in history." ;
+        mtp:hasParticipant   meetup:d25e1a0a6eb68e7190c8c7fd55841380 , meetup:4f784d24290d21d551cd8e19c451b6fe ;
+        mtp:hasPurpose       meetup:caf928930b5701d4157b8cf87498609e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joseph_Alessi> ;
+        mtp:hasType          "HM" .
+
+meetup:e004b88aa7192fd81a0a8824ef9132b4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joseph_Alessi> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joseph Alessi" .
+
+meetup:4f784d24290d21d551cd8e19c451b6fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christian_Lindberg> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Christian Lindberg" .

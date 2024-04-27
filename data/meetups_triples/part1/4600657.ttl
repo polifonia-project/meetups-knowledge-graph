@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Ibolya_Oláh>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4600657/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ibolya Oláh (born 31 January 1978) is a Hungarian pop singer." ;
+        mtp:hasParticipant   meetup:32e00850d6f6c2982813ec6aaf7f4851 ;
+        mtp:hasPurpose       meetup:6a8060d1a94b6991ad25bf0694d508c5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ibolya_Oláh> ;
+        mtp:hasType          "HT" .
+
+meetup:6a8060d1a94b6991ad25bf0694d508c5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99357045" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0063838656" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:32e00850d6f6c2982813ec6aaf7f4851
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ibolya_Oláh> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ibolya Oláh" .

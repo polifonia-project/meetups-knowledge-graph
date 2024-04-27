@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/24220027/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known for his \"tramp\" persona and for performing humorous or satirical musical numbers, including parodies of popular songs of the day." ;
+        mtp:hasParticipant   meetup:c1367b90818a0166497117c236a1c6b7 ;
+        mtp:hasPurpose       meetup:3e253c451ccf1840aaed330724cba13f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nat_M._Wills> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:c1367b90818a0166497117c236a1c6b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nat_M._Wills> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nat M. Wills" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:3e253c451ccf1840aaed330724cba13f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996667" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00016901524" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d807833ee793d9744812cf6375dc229d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nat_M._Wills> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nat M. Wills" .
+
+<http://dbpedia.org/resource/Nat_M._Wills>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/24220027/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nat M. Wills (born Louis McGrath Wills; July 11, 1873 – December 9, 1917) was a popular American stage star, vaudeville entertainer, and recording artist at the beginning of the 20th century." ;
+        mtp:hasParticipant   meetup:e40a53cfe2c7d249b4c2c72f2d8464f9 , meetup:d807833ee793d9744812cf6375dc229d ;
+        mtp:hasPurpose       meetup:bb0a35905a3c3d9911e83d43f2bc8421 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nat_M._Wills> ;
+        mtp:hasType          "HM" .
+
+meetup:bb0a35905a3c3d9911e83d43f2bc8421
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6512904" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.34760222" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e40a53cfe2c7d249b4c2c72f2d8464f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Louis McGrath Wills" .

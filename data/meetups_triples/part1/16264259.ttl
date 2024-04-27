@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/16264259/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Emily Marie Nemmers (born July 9, 1981) is an American music artist, who performs and records under the name Emily West." ;
+        mtp:hasParticipant   meetup:38712b566a41ccacd73b1d7192137922 ;
+        mtp:hasPurpose       meetup:0bf11771f18eb4eb1efb6535314c6d3c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emily_West> ;
+        mtp:hasType          "HT" .
+
+meetup:cf3405c7848bd1db73c637dd75c60c22
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Pursuing a career in country music" ;
+        mtp:hasEvidencePurposeSecond  "Graduating from high school" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:0bf11771f18eb4eb1efb6535314c6d3c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5124683" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.36975425" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:38712b566a41ccacd73b1d7192137922
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emily_West> ;
+        mtp:hasOffset           "109" ;
+        mtp:hasSimilarityScore  "0.9999574002661716" ;
+        mtp:hasTextEvidence     "Emily West" .
+
+<http://w3id.org/polifonia/pilot/meetups/16264259/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She moved to Nashville, Tennessee in 2000 following her graduation from Waterloo West High School in hopes of achieving her goals of becoming a country music singer. West soon signed a deal with a publishing company in Nashville, Warner-Chapell." ;
+        mtp:hasPurpose       meetup:cf3405c7848bd1db73c637dd75c60c22 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emily_West> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Emily_West>
+        rdf:type  core:Person .

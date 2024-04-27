@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Karl_Malone>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1c1b60bbf24facb466008a27c23379ee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Karl_Malone> ;
+        mtp:hasOffset           "87" ;
+        mtp:hasSimilarityScore  "0.8336197320086821" ;
+        mtp:hasTextEvidence     "Malone" .
+
+meetup:dca1e542725d77312ff7277a7ff6c0c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.73413515" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26480773" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/30543994/16/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "style=\"text-align:left\" |\"Passion 2020\"(Passion featuring Kristian Stanfill and Melody Malone)" ;
+        mtp:hasParticipant   meetup:1c1b60bbf24facb466008a27c23379ee , meetup:bef8a13fa67875c4e3ebf397b391bb0a , meetup:e146e2863ad90a3631ac62a39b8dfbf9 ;
+        mtp:hasPurpose       meetup:dca1e542725d77312ff7277a7ff6c0c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kristian_Stanfill> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Kristian_Stanfill>
+        rdf:type  core:Person .
+
+meetup:bef8a13fa67875c4e3ebf397b391bb0a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Melody Malone" .
+
+meetup:e146e2863ad90a3631ac62a39b8dfbf9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kristian_Stanfill> ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kristian Stanfill" .

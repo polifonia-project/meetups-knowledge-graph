@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/41755050/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Impending Doom Is Northern Bound (2009) by Tyler Pursel" ;
+        mtp:hasParticipant   meetup:fd64df54eb460c89bbf38b3d07f4d999 ;
+        mtp:hasPurpose       meetup:788e7b3a5fb491025c8e76b0906938ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tyler_Pursel> ;
+        mtp:hasType          "HT" .
+
+meetup:fd64df54eb460c89bbf38b3d07f4d999
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tyler_Pursel> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "0.9999968495930774" ;
+        mtp:hasTextEvidence     "Tyler Pursel" .
+
+meetup:788e7b3a5fb491025c8e76b0906938ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9993038" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0004940729" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Tyler_Pursel>
+        rdf:type  core:Person .

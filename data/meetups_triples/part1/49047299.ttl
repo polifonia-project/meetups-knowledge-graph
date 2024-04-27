@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Charlotte_W._Hawes>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:07c224d5461cd6becd8a6f2c836eec7d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Received education at home" ;
+        mtp:hasEvidencePurposeSecond  "Personal background and ancestry" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/49047299/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in Wrentham, Massachusetts, she was of Puritan ancestry, her ancestors on the father's side having settled in Massachusetts in 1635. A large part of her early education was received in at home." ;
+        mtp:hasPurpose       meetup:07c224d5461cd6becd8a6f2c836eec7d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charlotte_W._Hawes> ;
+        mtp:hasType          "HT" .

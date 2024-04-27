@@ -1,0 +1,98 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:5dc708b669521a72009335da1b57d67b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8477111" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13898742" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0402f884e1450d62c4910302ca98fc18
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lawrence_Kramer_(musicologist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999997024695538" ;
+        mtp:hasTextEvidence     "Lawrence Kramer" .
+
+meetup:b52e816318a742c886cfcdaa58be534a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lawrence_Kramer_(musicologist)> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lawrence Kramer" .
+
+meetup:035af3518a900126078304196ab56a35
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alastair Williams" .
+
+meetup:2c2e44ed68397ef9f302d669bd260ffc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8669845" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12595549" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6b1217255cd9d0180dfdab70b33b0f2c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Kramer's contribution to musicology" ;
+        mtp:hasEvidencePurposeSecond  "Disciplinary change in the humanities" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/40279333/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Writing in 2001, Alastair Williams described Kramer as a pioneering figure in the disciplinary change that brought musicology, formerly an outlier, into the broader fold of the humanities." ;
+        mtp:hasParticipant   meetup:b52e816318a742c886cfcdaa58be534a , meetup:035af3518a900126078304196ab56a35 ;
+        mtp:hasPurpose       meetup:6b1217255cd9d0180dfdab70b33b0f2c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lawrence_Kramer_(musicologist)> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/40279333/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lawrence Kramer (born 1946) is an American musicologist and composer." ;
+        mtp:hasParticipant   meetup:0402f884e1450d62c4910302ca98fc18 ;
+        mtp:hasPurpose       meetup:5dc708b669521a72009335da1b57d67b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lawrence_Kramer_(musicologist)> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:6c55731dbe3f46bab622382fcdf91808
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lawrence_Kramer_(musicologist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lawrence Kramer" .
+
+<http://w3id.org/polifonia/pilot/meetups/40279333/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His academic work is closely associated with the humanistic, culturally oriented New Musicology, now more often referred to as cultural or critical musicology." ;
+        mtp:hasParticipant   meetup:6c55731dbe3f46bab622382fcdf91808 ;
+        mtp:hasPurpose       meetup:2c2e44ed68397ef9f302d669bd260ffc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lawrence_Kramer_(musicologist)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lawrence_Kramer_(musicologist)>
+        rdf:type  core:Person .

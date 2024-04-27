@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Kris_Jensen>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ae529dd5d195d571576e0ab2d257213b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kristian_Jensen> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kristian Jensen" .
+
+<http://dbpedia.org/resource/Kristian_Jensen>
+        rdf:type  core:Person .
+
+meetup:e137c70e6dc60a99a9edf937e2f3327c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99408406" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0042095417" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/18880178/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kris Jensen (born Peter Kristian Jensen; April 4, 1942) is an American singer, bassist, and guitarist." ;
+        mtp:hasParticipant   meetup:ae529dd5d195d571576e0ab2d257213b , meetup:3dbac29183f229f88972ebb559909794 , meetup:e19be35c02d0e55cd58680d93f7c8768 ;
+        mtp:hasPurpose       meetup:e137c70e6dc60a99a9edf937e2f3327c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kris_Jensen> ;
+        mtp:hasType          "HM" .
+
+meetup:3dbac29183f229f88972ebb559909794
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Kristian Jensen" .
+
+meetup:e19be35c02d0e55cd58680d93f7c8768
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kris_Jensen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999991188" ;
+        mtp:hasTextEvidence     "Kris Jensen" .

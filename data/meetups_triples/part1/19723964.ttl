@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/19723964/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Larry Sitsky remembered her in his Fantasia No. 2 in Memory of Winifred Burston (1980)." ;
+        mtp:hasParticipant   meetup:e893dcc2bf706f8254fa5be0a4f4c70e , meetup:4964be2df5a64fb4ec6d5d2fed6ba14f ;
+        mtp:hasPurpose       meetup:76ec028314d0d85623cec97e0c12c834 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Winifred_Burston> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/19723964/3/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Winifred Burston retired from the Conservatorium in 1964 and was succeeded by Gordon Watson." ;
+        mtp:hasParticipant   meetup:eac2b600ca3ea3839bd73293ac88c747 ;
+        mtp:hasPurpose       meetup:3bb0c106f8a33af7cfbe8193f4fa46f1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Winifred_Burston> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:76ec028314d0d85623cec97e0c12c834
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999845" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.783865e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e893dcc2bf706f8254fa5be0a4f4c70e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Larry_Sitsky> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Larry Sitsky" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Winifred_Burston>
+        rdf:type  core:Person .
+
+meetup:4964be2df5a64fb4ec6d5d2fed6ba14f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Winifred_Burston> ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Winifred Burston" .
+
+meetup:3bb0c106f8a33af7cfbe8193f4fa46f1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997969" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00020286716" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:eac2b600ca3ea3839bd73293ac88c747
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Winifred_Burston> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Winifred Burston" .
+
+<http://dbpedia.org/resource/Larry_Sitsky>
+        rdf:type  core:Person .

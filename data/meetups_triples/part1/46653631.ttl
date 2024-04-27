@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Felix_Mendelssohn>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/46653631/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "but in the late 90s he became a born again Christian and he is now a Pastor in the church, he is blessed with 19 kids." ;
+        mtp:hasParticipant   meetup:d44f5f9863c0a51e074f50086478def1 ;
+        mtp:hasPurpose       meetup:c7daebbde73ecb224fd22080a6d2819d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Felix_Liberty> ;
+        mtp:hasType          "HT" .
+
+meetup:c7daebbde73ecb224fd22080a6d2819d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97963125" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.020321198" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d44f5f9863c0a51e074f50086478def1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Felix_Liberty> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Felix Liberty" .
+
+<http://dbpedia.org/resource/Felix_Liberty>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/46653631/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Felix Liberty  (born Felix Aigbe Liberty) also known as Lover boy is a Nigerian pop musician, singer, songwriter and producer." ;
+        mtp:hasParticipant   meetup:d195b091535da8ae791e3d8254b4ab0e , meetup:22ba74132106d656e1acbb34f32b02d6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Felix_Liberty> ;
+        mtp:hasType          "HM" .
+
+meetup:22ba74132106d656e1acbb34f32b02d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Felix_Liberty> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Felix Liberty" .
+
+meetup:d195b091535da8ae791e3d8254b4ab0e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Felix_Mendelssohn> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "0.9913305405021516" ;
+        mtp:hasTextEvidence     "Felix" .

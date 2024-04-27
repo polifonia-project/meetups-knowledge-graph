@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b6af0299df10aefdac279645aef38475
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9714857" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013857023" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:dfefb5f45ac6dc4ef8b70c5609a831dd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Rymer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Billy Rymer" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/25992369/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy Rymer (born December 10, 1984) is an American musician, most notable for being the drummer for The Dillinger Escape Plan from 2009 until the band played its final shows in December 2017." ;
+        mtp:hasParticipant   meetup:dfefb5f45ac6dc4ef8b70c5609a831dd ;
+        mtp:hasPurpose       meetup:b6af0299df10aefdac279645aef38475 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Rymer> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0d24d4a6bf49acd39625ad4d30a94aae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Band name change and album release" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration with Mike Sapone and Triple Crown Records" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9e38ad73d081b5e40b9d2fa1b64cb182
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Sapone> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mike Sapone" .
+
+<http://w3id.org/polifonia/pilot/meetups/25992369/5/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On April 4, 2013, North Korea announced through Facebook that they would be changing their band name from North Korea to NK. The band was said to be working with Mike Sapone on a full-length release by their label Triple Crown Records." ;
+        mtp:hasParticipant   meetup:9e38ad73d081b5e40b9d2fa1b64cb182 ;
+        mtp:hasPurpose       meetup:0d24d4a6bf49acd39625ad4d30a94aae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Rymer> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mike_Sapone>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Billy_Rymer>
+        rdf:type  core:Person .

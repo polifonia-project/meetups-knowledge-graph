@@ -1,0 +1,81 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1758cad0fa8f3d75a3dbddde65b51310
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brook_Lopez> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lopez" .
+
+<http://dbpedia.org/resource/Trini_Lopez>
+        rdf:type  core:Person .
+
+meetup:76c2635aa97d3075f8968291ddb3b4f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Trini_Lopez> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "0.9999944994575364" ;
+        mtp:hasTextEvidence     "Trini Lopez" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:97b164ce6182a90b5eb83350a935c4d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nancy_Ames> ;
+        mtp:hasOffset           "95" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nancy Ames" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1431359/18/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lopez died on August 11, 2020, at Desert Regional Medical Center in Palm Springs, California. He was 83, and suffered from complications from COVID-19 during the COVID-19 pandemic in California." ;
+        mtp:hasParticipant   meetup:1758cad0fa8f3d75a3dbddde65b51310 ;
+        mtp:hasPurpose       meetup:652ca6be65680c0106352b6f0c788bd1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Trini_Lopez> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Brook_Lopez>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:16e0c2806c8f9dc255d5278f2d34b42d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.91906613" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07854965" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1431359/6/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1969, NBC aired a Trini Lopez variety special featuring surf guitar group The Ventures, and Nancy Ames as guests." ;
+        mtp:hasParticipant   meetup:97b164ce6182a90b5eb83350a935c4d4 , meetup:76c2635aa97d3075f8968291ddb3b4f1 ;
+        mtp:hasPurpose       meetup:16e0c2806c8f9dc255d5278f2d34b42d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Trini_Lopez> ;
+        mtp:hasType          "HM" .
+
+meetup:652ca6be65680c0106352b6f0c788bd1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Unforeseen event happening at the same time" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Nancy_Ames>
+        rdf:type  core:Person .

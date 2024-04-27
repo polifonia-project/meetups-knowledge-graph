@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Arnold_Stiefel>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Toni_Braxton>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Bette_Midler>
+        rdf:type  core:Person .
+
+meetup:9f640abcbf34161030b21eb971b220a4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arnold_Stiefel> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Arnold Stiefel" .
+
+meetup:b9cdc83a8caa4e944a7113a02a8eac6a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arnold_Stiefel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Arnold Stiefel" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Rod_Stewart>
+        rdf:type  core:Person .
+
+meetup:bcd1bda4208b88d28157360054584e67
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rod_Stewart> ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "0.9999999999997868" ;
+        mtp:hasTextEvidence     "Rod Stewart" .
+
+<http://w3id.org/polifonia/pilot/meetups/39301777/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Over the course of his career, Stiefel has worked with Bette Midler, Prince, and Toni Braxton, amongst others." ;
+        mtp:hasParticipant   meetup:9f640abcbf34161030b21eb971b220a4 , meetup:18ac301dd806afc60b5678d8e727ddd7 , meetup:98af6b7cace235bf86977a1cc63c2c3a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arnold_Stiefel> ;
+        mtp:hasType          "HM" .
+
+meetup:18ac301dd806afc60b5678d8e727ddd7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Toni_Braxton> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "0.9999999999988204" ;
+        mtp:hasTextEvidence     "Toni Braxton" .
+
+meetup:98af6b7cace235bf86977a1cc63c2c3a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bette_Midler> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "Bette Midler" .
+
+meetup:c2c6cb6f68eab83db79ea139c16700b3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9941614" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.005808628" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/39301777/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known for his association with Rod Stewart, whom he has managed since 1983." ;
+        mtp:hasParticipant   meetup:b9cdc83a8caa4e944a7113a02a8eac6a , meetup:bcd1bda4208b88d28157360054584e67 ;
+        mtp:hasPurpose       meetup:c2c6cb6f68eab83db79ea139c16700b3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arnold_Stiefel> ;
+        mtp:hasType          "HM" .

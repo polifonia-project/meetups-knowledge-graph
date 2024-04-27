@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:cb3a5e52d04e53ea2a614191fe0e7fc8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7188063" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23595758" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Keke_Palmer>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:87fc99dcf056329eb27a6466330d8b1f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Keke_Palmer> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "Keke Palmer" .
+
+<http://w3id.org/polifonia/pilot/meetups/4808226/13/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2020, she marched in Hollywood, California, as part of the George Floyd protests. That same year, she addressed the movement during her opening monologue at the 2020 MTV Video Music Awards." ;
+        mtp:hasPurpose       meetup:649cfee15fab899da4786017ad5aeed8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Keke_Palmer> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4808226/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2021, she received a Primetime Emmy Award for her roles in the series Keke Palmer's Turnt Up with the Taylors." ;
+        mtp:hasParticipant   meetup:87fc99dcf056329eb27a6466330d8b1f ;
+        mtp:hasPurpose       meetup:cb3a5e52d04e53ea2a614191fe0e7fc8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Keke_Palmer> ;
+        mtp:hasType          "HT" .
+
+meetup:649cfee15fab899da4786017ad5aeed8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Participating in protests" ;
+        mtp:hasEvidencePurposeSecond  "Speaking about social movement" ;
+        mtp:hasSourcePurpose          "LLM" .

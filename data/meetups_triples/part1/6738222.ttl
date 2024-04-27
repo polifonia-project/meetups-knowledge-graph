@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/6738222/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1936 Williams began her American recording career on various record labels, and by 1937 she was recording songs with her band, Midge Williams and Her Jazz Jesters." ;
+        mtp:hasParticipant   meetup:2a6791f2ac8245c7512b923f52c812cc ;
+        mtp:hasPurpose       meetup:df63de4529cb77aaec713ffe710e5ada ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Midge_Williams> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Midge_Williams>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/6738222/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Although not as famous as other jazz recording artists, Williams was a respected singer and her group, Midge Williams and Her Jazz Jesters, made several well-received recordings during the late 1930s." ;
+        mtp:hasParticipant   meetup:2c6631c99aee8883fdedc3fe558301a7 ;
+        mtp:hasPurpose       meetup:92a7279e0632d6e1f78429a9593e9e62 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Midge_Williams> ;
+        mtp:hasType          "HT" .
+
+meetup:92a7279e0632d6e1f78429a9593e9e62
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9157294" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.050666735" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:df63de4529cb77aaec713ffe710e5ada
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99953294" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00045684786" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2a6791f2ac8245c7512b923f52c812cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Midge_Williams> ;
+        mtp:hasOffset           "130" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Midge Williams" .
+
+meetup:2c6631c99aee8883fdedc3fe558301a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Midge_Williams> ;
+        mtp:hasOffset           "103" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Midge Williams" .

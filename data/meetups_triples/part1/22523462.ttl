@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a404a814407126bc68617db35c2d9132
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95797986" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04091774" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ba8cfb9c37bd53a9c5aa6bd66ae57ae3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Composer and conductor" ;
+        mtp:hasEvidencePurposeSecond  "Opera house conductor" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/22523462/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Charles Borremans (5 April 1769 – 17 July 1827), was a composer of operas, and a violinist and conductor at the Théâtre Royal de la Monnaie in Belgium from 1804 to 1825." ;
+        mtp:hasParticipant   meetup:b31027f2e2fd1c59d2c1221f565dd0d1 ;
+        mtp:hasPurpose       meetup:a404a814407126bc68617db35c2d9132 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_Borremans> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:b31027f2e2fd1c59d2c1221f565dd0d1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_Borremans> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charles Borremans" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Charles_Borremans>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/22523462/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Charles Borremans (5 April 1769 – 17 July 1827), was a composer of operas, and a violinist and conductor at the Théâtre Royal de la Monnaie in Belgium from 1804 to 1825. The composer Charles-Louis-Joseph Hanssens succeeded him as conductor of this opera house." ;
+        mtp:hasParticipant   meetup:ebc28923ef5c129a2eb879d412746128 ;
+        mtp:hasPurpose       meetup:ba8cfb9c37bd53a9c5aa6bd66ae57ae3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_Borremans> ;
+        mtp:hasType          "HT" .
+
+meetup:ebc28923ef5c129a2eb879d412746128
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_Borremans> ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charles Borremans" .

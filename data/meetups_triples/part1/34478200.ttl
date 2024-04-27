@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/34478200/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009, she formed a dance band with her New York-based co-producer and business partner, DJ Exacta. She has worked with other artists like Sonny Fodera and Dubfire." ;
+        mtp:hasParticipant   meetup:549cf627bed8e44d5b4f36793c606792 ;
+        mtp:hasPurpose       meetup:4f4d8cdbea7d5c391dde526b2071a2f9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kate_Elsworth> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:48085651c6b3317bd2768b0a250206de
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99635255" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0029076906" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/34478200/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kate Elsworth is an Australian-born electronic dance music DJ, vocalist and songwriter based in London." ;
+        mtp:hasParticipant   meetup:c49155aae4f78149ea34e7a366c5e218 ;
+        mtp:hasPurpose       meetup:48085651c6b3317bd2768b0a250206de ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kate_Elsworth> ;
+        mtp:hasType          "HT" .
+
+meetup:47740c6c0256fd5af0ab4f6ae5e2b463
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing at nightclub gigs" ;
+        mtp:hasEvidencePurposeSecond  "Spending time in Ibiza" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Kate_Elsworth>
+        rdf:type  core:Person .
+
+meetup:549cf627bed8e44d5b4f36793c606792
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sonny Fodera" .
+
+meetup:4f4d8cdbea7d5c391dde526b2071a2f9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creating a dance band and collaborating with other artists" ;
+        mtp:hasEvidencePurposeSecond  "Forming a business partnership with DJ Exacta" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/34478200/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She has performed around the globe including nightclub gigs at Amnesia on Ibiza. Kate spent time in Ibiza, developing an ear for house music." ;
+        mtp:hasPurpose       meetup:47740c6c0256fd5af0ab4f6ae5e2b463 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kate_Elsworth> ;
+        mtp:hasType          "HT" .
+
+meetup:c49155aae4f78149ea34e7a366c5e218
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kate_Elsworth> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999976282865064" ;
+        mtp:hasTextEvidence     "Kate Elsworth" .

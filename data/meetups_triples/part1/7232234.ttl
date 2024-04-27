@@ -1,0 +1,90 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/7232234/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was host of CBC Radio's weekly show Opera Time from 1962 to 1979, as well as its successor Opera In Stereo from 1979 to 1984." ;
+        mtp:hasParticipant   meetup:e480abb94848caaa6528727fa38bef07 ;
+        mtp:hasPurpose       meetup:a611723d1d5b8ac414fb3554a8496f30 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruby_Mercer> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ecc8d095194d5832e5952fb43ae05584
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruby_Mercer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ruby Mercer" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/7232234/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mercer was born in Athens, Ohio, and grew up in Toronto, Ontario, Canada, she founded Opera Canada, a periodical for which she served as editor from 1960 to 1990." ;
+        mtp:hasParticipant   meetup:ecc8d095194d5832e5952fb43ae05584 ;
+        mtp:hasPurpose       meetup:ee2552f619fcc343aff4f35b428ad734 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruby_Mercer> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:e480abb94848caaa6528727fa38bef07
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruby_Mercer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ruby Mercer" .
+
+meetup:ee2552f619fcc343aff4f35b428ad734
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98559856" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.006306038" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Ruby_Mercer>
+        rdf:type  core:Person .
+
+meetup:9d8ab3fe8904024e2c969a67ff5be466
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.914352" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05100956" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/7232234/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ruby Mercer, CM (26 July 1906 – 26 January 1999) was an American-born Canadian writer, broadcaster, soprano and entrepreneur." ;
+        mtp:hasParticipant   meetup:3b17fa79a8cde016d6cba9bd9812fe88 ;
+        mtp:hasPurpose       meetup:9d8ab3fe8904024e2c969a67ff5be466 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruby_Mercer> ;
+        mtp:hasType          "HT" .
+
+meetup:a611723d1d5b8ac414fb3554a8496f30
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5033531" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.48343864" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3b17fa79a8cde016d6cba9bd9812fe88
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruby_Mercer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "Ruby Mercer" .

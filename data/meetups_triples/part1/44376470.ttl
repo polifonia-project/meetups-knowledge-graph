@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/44376470/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was captured by Russians in 1915 and on 1 August 1916 he joined the Czechoslovak Legion in Russia. During his stay in Russia, he became familiar with the cultural life of the country and occasionally he organized and performed on public concertos." ;
+        mtp:hasParticipant   meetup:7a5d0d98fc5ef5c4d7df4b024e4836e0 ;
+        mtp:hasPurpose       meetup:96f76869a9861cdde091e223105c8b7b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ludvík_Kundera_(musicologist)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ludvík_Kundera_(musicologist)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:96f76869a9861cdde091e223105c8b7b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Organizing and performing concerts" ;
+        mtp:hasEvidencePurposeSecond  "Captured by Russians and joined Czechoslovak Legion" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c0ee36fa2af562d337e65234f22d1911
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The interpretation of Janáček's works" ;
+        mtp:hasEvidencePurposeSecond  "Janáčkovy akademie múzických umění" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Milan_Kundera>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/44376470/25/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "[The interpretation of Janáček's works], Leoš Janáček a soudobá hudba: Brno 1958, 189–96; also in Sborník Janáčkovy akademie múzických umění, ii (1960), 5–18; Ger. trans." ;
+        mtp:hasPurpose       meetup:c0ee36fa2af562d337e65234f22d1911 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ludvík_Kundera_(musicologist)> ;
+        mtp:hasType          "HT" .
+
+meetup:7a5d0d98fc5ef5c4d7df4b024e4836e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Milan_Kundera> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kundera" .

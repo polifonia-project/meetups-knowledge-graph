@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ca535dc118237f039db9d05673263bab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Roker's involvement in the Philadelphia music scene" ;
+        mtp:hasEvidencePurposeSecond  "Roker's health issues and cause of death" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/16204528/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Roker was still active on the Philadelphia music scene during the 21st century. He died in Philadelphia, Pennsylvania, at the age of 84, of natural causes, though he had been suffering from diabetes, lung cancer, and other health issues." ;
+        mtp:hasPurpose       meetup:ca535dc118237f039db9d05673263bab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mickey_Roker> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mickey_Roker>
+        rdf:type  core:Person .

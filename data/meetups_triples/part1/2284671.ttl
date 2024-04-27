@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:fc0e3dde7831099d0be95472fff23f3b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9845894" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01069913" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c6b229b39682fe31c23f87b1ab6c746b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charon Shemekia Copeland" .
+
+meetup:afd5dc239bbf122e20ac286134466e04
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shemekia_Copeland> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Shemekia Copeland" .
+
+meetup:2581fc2d5aa21491a3adfba37fcee0bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Album release and awards" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration with hero" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2284671/2/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her second album, Wicked, was released in 2000 and featured a duet with one of her heroes, Ruth Brown. It earned her three Blues Music Awards." ;
+        mtp:hasPurpose       meetup:2581fc2d5aa21491a3adfba37fcee0bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shemekia_Copeland> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Shemekia_Copeland>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2284671/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Charon Shemekia Copeland (born April 10, 1979) is an American electric blues vocalist." ;
+        mtp:hasParticipant   meetup:c6b229b39682fe31c23f87b1ab6c746b , meetup:afd5dc239bbf122e20ac286134466e04 ;
+        mtp:hasPurpose       meetup:fc0e3dde7831099d0be95472fff23f3b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shemekia_Copeland> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/58462675/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aaron Bay-Schuck (born September 5, 1981) is an American music industry executive." ;
+        mtp:hasParticipant   meetup:35cc1022a4f919d5f1721aad574cd1b1 ;
+        mtp:hasPurpose       meetup:13d59031adde5e1cb0c7e6d297451a17 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aaron_Bay-Schuck> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:13d59031adde5e1cb0c7e6d297451a17
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9793171" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.020655101" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Aaron_Bay-Schuck>
+        rdf:type  core:Person .
+
+meetup:35cc1022a4f919d5f1721aad574cd1b1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aaron_Bay-Schuck> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aaron Bay-Schuck" .

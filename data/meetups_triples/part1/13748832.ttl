@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:ff3066d3f608ea7b14d5fee4825f3d48
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rich_Robinson> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "0.8847334629439918" ;
+        mtp:hasTextEvidence     "Rich" .
+
+meetup:17df8146d4c42b96328c1d36d6e834e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rich_Balling> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rich Balling" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/13748832/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rich Balling (also known as R. Loren or Rich Loren) is an American musician, producer, and curator." ;
+        mtp:hasParticipant   meetup:ff3066d3f608ea7b14d5fee4825f3d48 , meetup:0c4fa4fb8dbc3dc1abead38030145151 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rich_Balling> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/13748832/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Balling is currently involved in a number of projects using his first initial and middle name, R. Loren: Pyramids, Sailors With Wax Wings, and White Moth." ;
+        mtp:hasParticipant   meetup:17df8146d4c42b96328c1d36d6e834e7 ;
+        mtp:hasPurpose       meetup:0d0c0c024a8fd18b0c52646f295c5748 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rich_Balling> ;
+        mtp:hasType          "HT" .
+
+meetup:0c4fa4fb8dbc3dc1abead38030145151
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rich_Balling> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rich Balling" .
+
+meetup:0d0c0c024a8fd18b0c52646f295c5748
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999927" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.6440501e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Rich_Robinson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Rich_Balling>
+        rdf:type  core:Person .

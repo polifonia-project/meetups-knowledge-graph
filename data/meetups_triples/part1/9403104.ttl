@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/9403104/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rachel Wai-Ching Cheung (Chinese: 張緯晴; Jyutping: Zoeng1 Wai5 Cing4; born September 27, 1991) is a classical pianist from Kowloon, Hong Kong. She has won numerous prizes and awards in Hong Kong and overseas, and performs regularly in Asia, Europe, and North America." ;
+        mtp:hasParticipant   meetup:02521ca6e9d496e3678f10ec2b0f6dd8 ;
+        mtp:hasPurpose       meetup:ba78b3c43004d51eaff2ca515b7dc9a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rachel_Cheung> ;
+        mtp:hasType          "HT" .
+
+meetup:02521ca6e9d496e3678f10ec2b0f6dd8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leslie_Cheung> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cheung" .
+
+<http://dbpedia.org/resource/Leslie_Cheung>
+        rdf:type  core:Person .
+
+meetup:ba78b3c43004d51eaff2ca515b7dc9a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Rachel Cheung is a classical pianist" ;
+        mtp:hasEvidencePurposeSecond  "She was born in Hong Kong" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Rachel_Cheung>
+        rdf:type  core:Person .

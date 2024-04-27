@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/62571658/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lane was born on March 16, 1931, in Clarksdale, Mississippi. Lane and his siblings, three sisters and two brothers, lived with his mother Ethel Thomas in Clarksdale." ;
+        mtp:hasParticipant   meetup:560ad95f940314ed0a19d907bffda356 ;
+        mtp:hasPurpose       meetup:fcf0f897f1b61fbea5f1d66e6ee9c3c4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ernest_Lane_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:fcf0f897f1b61fbea5f1d66e6ee9c3c4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Lane's family and birthplace" ;
+        mtp:hasEvidencePurposeSecond  "Information about Lane's upbringing and education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Ernest_Lane_(musician)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ethel_Thomas>
+        rdf:type  core:Person .
+
+meetup:560ad95f940314ed0a19d907bffda356
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ethel_Thomas> ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "Ethel Thomas" .
+
+meetup:education  rdfs:label  "Education" .

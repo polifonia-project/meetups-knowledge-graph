@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/19320154/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1972, founding member Dave Reed invited one of his music students, 15-year-old Scott Murawski, to sit in with the band." ;
+        mtp:hasParticipant   meetup:359f6322991344e06b30029b9ea65fad ;
+        mtp:hasPurpose       meetup:763fe70ba806252c7d0eae8737856e1b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Scott_Murawski> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:359f6322991344e06b30029b9ea65fad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Scott_Murawski> ;
+        mtp:hasOffset           "82" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Scott Murawski" .
+
+meetup:763fe70ba806252c7d0eae8737856e1b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.67219454" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1796078" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Scott_Murawski>
+        rdf:type  core:Person .

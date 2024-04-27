@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Stefano_Arteaga>
+        rdf:type  core:Person .
+
+meetup:b0a655148e217ccac6408602c1eee2f4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "The manuscript treatise on the rhythm of the ancients" ;
+        mtp:hasEvidencePurposeSecond  "The second edition in three volumes" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/46815354/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Stefano Arteaga (born Esteban de Arteaga y López; December 26, 1747 - September 30, 1799) was a Spanish-born writer on theater and music, active in Italy." ;
+        mtp:hasParticipant   meetup:7b7e775f64346cdee4a5d6892dec0ac4 ;
+        mtp:hasPurpose       meetup:a084cc4049c15e87e9e8aa8ad9ceab2d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stefano_Arteaga> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/46815354/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A second edition, in three volumes, appeared at Venice in 1785. He also left behind him a manuscript treatise on the rhythm of the ancients." ;
+        mtp:hasPurpose       meetup:b0a655148e217ccac6408602c1eee2f4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stefano_Arteaga> ;
+        mtp:hasType          "HT" .
+
+meetup:a084cc4049c15e87e9e8aa8ad9ceab2d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9979407" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0016288394" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7b7e775f64346cdee4a5d6892dec0ac4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stefano_Arteaga> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999318" ;
+        mtp:hasTextEvidence     "Stefano Arteaga" .

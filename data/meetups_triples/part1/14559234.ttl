@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Pantula_Rama>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/14559234/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Known as Andhra's Nightingale and Golden Voice, Pantula Rama lives in Vishakhapatnam and is married to violinist MSN Murthy." ;
+        mtp:hasParticipant   meetup:a16d73437b098c659c380a284bd0871a , meetup:9b2f94881d3ee878ab54c2df8d9b5b13 ;
+        mtp:hasPurpose       meetup:90aec04f277afebb45dc84f93027dd9c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pantula_Rama> ;
+        mtp:hasType          "HM" .
+
+meetup:90aec04f277afebb45dc84f93027dd9c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Pantula Rama is known for her singing talent" ;
+        mtp:hasEvidencePurposeSecond  "She is married to violinist MSN Murthy" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a16d73437b098c659c380a284bd0871a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "113" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "MSN Murthy" .
+
+meetup:9b2f94881d3ee878ab54c2df8d9b5b13
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pantula_Rama> ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pantula Rama" .

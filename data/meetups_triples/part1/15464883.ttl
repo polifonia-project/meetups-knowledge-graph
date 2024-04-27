@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/15464883/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kumi Miyasato (宮里久美, Miyasato Kumi) is a Japanese pop singer and voice actor who was popular in her native Japan in the mid-to-late 1980s." ;
+        mtp:hasParticipant   meetup:fe29bb8a02bcaa2a63e914f43fb72639 , meetup:74866c21d2cbcf1d07341f4064d119be ;
+        mtp:hasPurpose       meetup:a2085a58526ddaab79a7ece8828b3a58 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kumi_Miyasato> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fe29bb8a02bcaa2a63e914f43fb72639
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Miyasato Kumi" .
+
+meetup:a2085a58526ddaab79a7ece8828b3a58
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Japanese pop singer" ;
+        mtp:hasEvidencePurposeSecond  "Popular in the 1980s" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:74866c21d2cbcf1d07341f4064d119be
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kumi_Miyasato> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kumi Miyasato" .
+
+<http://dbpedia.org/resource/Kumi_Miyasato>
+        rdf:type  core:Person .

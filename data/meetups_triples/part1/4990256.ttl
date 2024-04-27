@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/4990256/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was educated at St Lawrence School and at Harrow Weald County Grammar School, under the tutelage of the future Home Secretary, Merlyn Rees." ;
+        mtp:hasParticipant   meetup:424e6e7af7b9ee0944723d26b0984f70 , meetup:415a823e2674ae750ff63cd62a0075c1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nigel_Waymouth> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Nigel_Waymouth>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:415a823e2674ae750ff63cd62a0075c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Merlyn_Rees> ;
+        mtp:hasOffset           "130" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Merlyn Rees" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:424e6e7af7b9ee0944723d26b0984f70
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nigel_Waymouth> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nigel Waymouth" .
+
+meetup:7729b593e9ab22c16584afe851aa6bbb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99943763" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00055365916" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4990256/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His early childhood was spent in Argentina until he moved to England in 1953." ;
+        mtp:hasParticipant   meetup:28ff11179d11d03261bbed8d8d86cc6e ;
+        mtp:hasPurpose       meetup:7729b593e9ab22c16584afe851aa6bbb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nigel_Waymouth> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Merlyn_Rees>
+        rdf:type  core:Person .
+
+meetup:28ff11179d11d03261bbed8d8d86cc6e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nigel_Waymouth> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nigel Waymouth" .

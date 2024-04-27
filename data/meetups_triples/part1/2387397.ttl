@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2387397/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mikuni Shimokawa (下川 みくに, Shimokawa Mikuni, born 19 March 1980) is a Japanese pop singer and songwriter." ;
+        mtp:hasParticipant   meetup:6ca075e244bdb863aaa46a23b3020d30 ;
+        mtp:hasPurpose       meetup:bc5d58374412a426a76c367cb76f891f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mikuni_Shimokawa> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6ca075e244bdb863aaa46a23b3020d30
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mikuni_Shimokawa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mikuni Shimokawa" .
+
+meetup:bc5d58374412a426a76c367cb76f891f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999198" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.232502e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Mikuni_Shimokawa>
+        rdf:type  core:Person .

@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:cd8081c91164f07c039aa20c29d71b41
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Marcangelo> ;
+        mtp:hasOffset           "133" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Marcangelo" .
+
+<http://w3id.org/polifonia/pilot/meetups/3933124/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During his time at the Leeds School of Music, he founded the band Cow, together with his friends John Hodgson, who played drums, and John Marcangelo, who played keyboards and other percussion." ;
+        mtp:hasParticipant   meetup:cd8081c91164f07c039aa20c29d71b41 , meetup:9bca7d7e45926e7a9737274d1804f4fc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mik_Kaminski> ;
+        mtp:hasType          "HM" .
+
+meetup:9bca7d7e45926e7a9737274d1804f4fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mik_Kaminski> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kaminski" .
+
+<http://w3id.org/polifonia/pilot/meetups/3933124/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kaminski was born in Harrogate, West Riding of Yorkshire, England." ;
+        mtp:hasParticipant   meetup:d9c60278b79d536c6c4bdca9e5cdcb25 ;
+        mtp:hasPurpose       meetup:f22128954f617a2dfeac6479d1a61533 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mik_Kaminski> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/John_Marcangelo>
+        rdf:type  core:Person .
+
+meetup:d9c60278b79d536c6c4bdca9e5cdcb25
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mik_Kaminski> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kaminski" .
+
+<http://dbpedia.org/resource/Mik_Kaminski>
+        rdf:type  core:Person .
+
+meetup:f22128954f617a2dfeac6479d1a61533
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9780139" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.021810938" ;
+        mtp:hasSourcePurpose          "ML" .

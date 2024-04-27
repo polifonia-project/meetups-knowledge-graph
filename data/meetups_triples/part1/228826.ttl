@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Kenney_Jones>
+        rdf:type  core:Person .
+
+meetup:cb391ed9ac6ac79461a5f5d7d20592ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kenney_Jones> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kenney Jones" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:6e58327bca4eb02549443e83d98c208d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pete_Townshend> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "0.9999998747290356" ;
+        mtp:hasTextEvidence     "Townshend" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/228826/10/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was the first time that he had appeared onstage with Townshend and Daltrey since 1988." ;
+        mtp:hasParticipant   meetup:6e58327bca4eb02549443e83d98c208d , meetup:01e8c464a7a7f9e859809a87440e3ba5 ;
+        mtp:hasPurpose       meetup:9d3c3ec85ae154dbfc4715e9ecba0c6e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kenney_Jones> ;
+        mtp:hasType          "HM" .
+
+meetup:01e8c464a7a7f9e859809a87440e3ba5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kenney_Jones> ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kenney Jones" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/228826/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kenney Jones reunited with The Who on 14 June 2014 at the Rock n Horsepower benefit concert held at his Hurtwood Polo Club." ;
+        mtp:hasParticipant   meetup:cb391ed9ac6ac79461a5f5d7d20592ff ;
+        mtp:hasPurpose       meetup:900bb5f2e2e9e370ee207ad68d2a6ee2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kenney_Jones> ;
+        mtp:hasType          "HT" .
+
+meetup:900bb5f2e2e9e370ee207ad68d2a6ee2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998295" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.5882028e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Pete_Townshend>
+        rdf:type  core:Person .
+
+meetup:9d3c3ec85ae154dbfc4715e9ecba0c6e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9664031" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.033584446" ;
+        mtp:hasSourcePurpose          "ML" .

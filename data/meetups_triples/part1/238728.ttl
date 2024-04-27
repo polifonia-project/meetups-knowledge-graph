@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:7870fff7b92e3a371e2d6376278de011
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a Hollywood movie chronicling a band's career." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the portrayal of a musician by an actress." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lita_Ford>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/238728/22/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2010, a major Hollywood motion picture chronicling the career of Ford's first band, The Runaways, was produced. Ford was portrayed by actress Scout Taylor-Compton in the movie, entitled The Runaways." ;
+        mtp:hasParticipant   meetup:4e79ed15d8ee1a26871734e61ddce952 , meetup:f3fa8ac0f4aa777eda77b11df8de9b73 ;
+        mtp:hasPurpose       meetup:7870fff7b92e3a371e2d6376278de011 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lita_Ford> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Scout_Taylor-Compton>
+        rdf:type  core:Person .
+
+meetup:f3fa8ac0f4aa777eda77b11df8de9b73
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Scout_Taylor-Compton> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Scout Taylor-Compton" .
+
+meetup:4e79ed15d8ee1a26871734e61ddce952
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ford" .

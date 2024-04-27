@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:96c4df745ed36572a29d2ba2508134b2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rod_Stewart> ;
+        mtp:hasOffset           "122" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rod Stewart" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:fa32cdc9a398f87c534e60502c7329e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barry_Rudolph> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999995363730879" ;
+        mtp:hasTextEvidence     "Barry Rudolph" .
+
+<http://dbpedia.org/resource/Barry_Rudolph>
+        rdf:type  core:Person .
+
+meetup:5489e00f43938e84a3c7b73cf861a114
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.88637054" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11321646" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:082f609c2477dedfc429dcd6e5a1b92f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barry_Rudolph> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Barry Rudolph" .
+
+<http://w3id.org/polifonia/pilot/meetups/63717438/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Barry Rudolph is a recording engineer, mixing engineer, record producer and technical writer best known for his work with Rod Stewart, Lynyrd Skynyrd and Hall & Oates." ;
+        mtp:hasParticipant   meetup:fa32cdc9a398f87c534e60502c7329e7 , meetup:96c4df745ed36572a29d2ba2508134b2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barry_Rudolph> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Rod_Stewart>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/63717438/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has been a contributing editor for Music Connection Magazine since 1987 and Mix Magazine since 1997." ;
+        mtp:hasParticipant   meetup:082f609c2477dedfc429dcd6e5a1b92f ;
+        mtp:hasPurpose       meetup:5489e00f43938e84a3c7b73cf861a114 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barry_Rudolph> ;
+        mtp:hasType          "HT" .

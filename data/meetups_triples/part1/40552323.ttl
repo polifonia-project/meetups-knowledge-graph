@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:09b705420593e6c97f1add5801f5a411
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about someone's upbringing and education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/40552323/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1954 and raised in the rural New South Wales town of Dubbo." ;
+        mtp:hasParticipant   meetup:b139f7a55afa69155c81a180f56389f0 ;
+        mtp:hasPurpose       meetup:09b705420593e6c97f1add5801f5a411 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Mason_(Australian_musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b139f7a55afa69155c81a180f56389f0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Marsden Mason" .
+
+<http://dbpedia.org/resource/Dave_Mason_(Australian_musician)>
+        rdf:type  core:Person .

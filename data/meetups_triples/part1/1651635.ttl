@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e6fb0a1607ff0c5b97e82d76558792e4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music due to family background" ;
+        mtp:hasEvidencePurposeSecond  "Details about personal life and upbringing" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1651635/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tim Kingsbury (born 1977) is a Canadian musician and member of the indie rock band Arcade Fire." ;
+        mtp:hasParticipant   meetup:3f3604b45bc2c2a5b90d2465329df1d3 ;
+        mtp:hasPurpose       meetup:48d3e478e8f56fcea95e48558f6a1e55 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tim_Kingsbury> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Tim_Kingsbury>
+        rdf:type  core:Person .
+
+meetup:48d3e478e8f56fcea95e48558f6a1e55
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6811761" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.20985515" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3f3604b45bc2c2a5b90d2465329df1d3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Kingsbury> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tim Kingsbury" .
+
+<http://w3id.org/polifonia/pilot/meetups/1651635/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kingsbury spent his early years living in and around Guelph, Ontario. He comes from a musical family; his mother Birdie was a pianist and a music director and Parkwood Gardens Community church in Guelph, and Kingsbury sang in the church choir." ;
+        mtp:hasPurpose       meetup:e6fb0a1607ff0c5b97e82d76558792e4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tim_Kingsbury> ;
+        mtp:hasType          "HT" .

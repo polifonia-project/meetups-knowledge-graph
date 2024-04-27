@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Andy_Vallario>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/22307263/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andy Vallario is a jingle writer, musician, producer and president and chief creative officer of Media Results, Inc., a full-service Greater Boston advertising agency." ;
+        mtp:hasParticipant   meetup:6ae5058cc46b8e5733e525d898f8bac1 ;
+        mtp:hasPurpose       meetup:07434a3d0bce682492d419d5903adcc6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Vallario> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:6ae5058cc46b8e5733e525d898f8bac1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andy_Vallario> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999745630141788" ;
+        mtp:hasTextEvidence     "Andy Vallario" .
+
+meetup:07434a3d0bce682492d419d5903adcc6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.75035936" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2494677" ;
+        mtp:hasSourcePurpose          "ML" .

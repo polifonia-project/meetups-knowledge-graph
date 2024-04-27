@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/52413488/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sergio Rosales (born February 19, 1988) is a Venezuelan conductor." ;
+        mtp:hasParticipant   meetup:3e2399346b3a7f48224d89bcf975760b ;
+        mtp:hasPurpose       meetup:f4dc176bb999c9a257979e2425746052 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sergio_Rosales> ;
+        mtp:hasType          "HT" .
+
+meetup:3e2399346b3a7f48224d89bcf975760b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sergio_Rosales> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sergio Rosales" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f4dc176bb999c9a257979e2425746052
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9909738" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008505853" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Sergio_Rosales>
+        rdf:type  core:Person .

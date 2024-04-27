@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:63a8f47afb507308ca53ae1afa3bc0a5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.65446895" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26271635" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:74ddb02359b2eef5b587f72798e28988
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_Gopthal> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lee Gopthal" .
+
+<http://w3id.org/polifonia/pilot/meetups/68391654/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lehman Serikeesna Gopthal (1 March 1938 – 29 August 1997), known as Lee Gopthal, was a Jamaican-British record label owner and promoter, the co-founder of Trojan Records." ;
+        mtp:hasParticipant   meetup:74ddb02359b2eef5b587f72798e28988 , meetup:30473c48ccac52b3043a2f766d1e0549 ;
+        mtp:hasPurpose       meetup:63a8f47afb507308ca53ae1afa3bc0a5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lee_Gopthal> ;
+        mtp:hasType          "HM" .
+
+meetup:30473c48ccac52b3043a2f766d1e0549
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lehman Serikeesna Gopthal" .
+
+<http://dbpedia.org/resource/Lee_Gopthal>
+        rdf:type  core:Person .

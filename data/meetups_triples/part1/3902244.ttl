@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/3902244/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Domestic after he won the highly publicized third season of the television series Deutschland sucht den Superstar, the German version of Pop Idol, in 2006." ;
+        mtp:hasParticipant   meetup:0010d71ee3e2015f38ee6859a739d543 ;
+        mtp:hasPurpose       meetup:c1f70e8ce965acad47b4fedc7287bf13 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tobias_Regner> ;
+        mtp:hasType          "HT" .
+
+meetup:0010d71ee3e2015f38ee6859a739d543
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tobias_Regner> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tobias Regner" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Tobias_Regner>
+        rdf:type  core:Person .
+
+meetup:b270f6b2d48fcbd1d7433513c433d6d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tobias_Regner> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tobias Regner" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/3902244/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tobias Regner (born 5 August 1982) is a German singer and guitarist who has enjoyed success in the rock music genre." ;
+        mtp:hasParticipant   meetup:b270f6b2d48fcbd1d7433513c433d6d4 ;
+        mtp:hasPurpose       meetup:5643c5d55d061b384555c12b0756bce9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tobias_Regner> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:5643c5d55d061b384555c12b0756bce9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99210733" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0075820936" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c1f70e8ce965acad47b4fedc7287bf13
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9547449" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.045221437" ;
+        mtp:hasSourcePurpose          "ML" .

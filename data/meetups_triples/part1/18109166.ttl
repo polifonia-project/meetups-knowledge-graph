@@ -1,0 +1,97 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:43d99950297e6ab3cafb294c75f80ad3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Larsson's cooperation with Huawei" ;
+        mtp:hasEvidencePurposeSecond  "Larsson's opinion on China" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Henrik_Larsson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Zara_Larsson>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6a2dc578fe05164566553fbce17f7626
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions her sister being a singer and member of a band." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions her early inspirations in music." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/18109166/23/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In August 2020, Larsson announced that she had ended her cooperation with Huawei. She said that China is \"not a nice state\" and that she does not stand behind its policies." ;
+        mtp:hasParticipant   meetup:e9edc137b05f5c42b285aeb6a3fc2de0 ;
+        mtp:hasPurpose       meetup:43d99950297e6ab3cafb294c75f80ad3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zara_Larsson> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Whitney_Houston>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:df0a148e52e7554f7a2506e860a18e5d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Whitney_Houston> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Whitney Houston" .
+
+meetup:e9edc137b05f5c42b285aeb6a3fc2de0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henrik_Larsson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Larsson" .
+
+meetup:9af98b90a91e9723fabbc19e78942638
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9852415" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011004481" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/18109166/3/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She has a sister, Hanna, who is three years younger and is a singer and member of the band Lennix. She has cited Carola Häggkvist, Whitney Houston, and Elvis Presley as early inspirations." ;
+        mtp:hasParticipant   meetup:df0a148e52e7554f7a2506e860a18e5d ;
+        mtp:hasPurpose       meetup:6a2dc578fe05164566553fbce17f7626 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zara_Larsson> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/18109166/12/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"Symphony\" by Clean Bandit featuring Zara Larsson was included as a bonus track and was released as a single on the same date and became Larsson's fifth number one single in her home country and first number one single in the United Kingdom." ;
+        mtp:hasParticipant   meetup:ea20795a75d87e38d031cad2a23ed80f ;
+        mtp:hasPurpose       meetup:9af98b90a91e9723fabbc19e78942638 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Zara_Larsson> ;
+        mtp:hasType          "HT" .
+
+meetup:ea20795a75d87e38d031cad2a23ed80f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Zara_Larsson> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Zara Larsson" .

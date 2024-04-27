@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Joe_Robichaux>
+        rdf:type  core:Person .
+
+meetup:0405f124336f6b47a34e44c66b2a35be
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Robichaux> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joseph Robichaux" .
+
+meetup:a85c44b928e70d232e14b81dcf29c271
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Robichaux> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "0.9999999999451176" ;
+        mtp:hasTextEvidence     "John Robichaux" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/John_Robichaux>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:35483e4204fdf3599cfe9911a086a265
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9881897" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0106248045" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/16650324/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joseph Robichaux (March 8, 1900 – January 17, 1965) was an American jazz pianist." ;
+        mtp:hasParticipant   meetup:0405f124336f6b47a34e44c66b2a35be ;
+        mtp:hasPurpose       meetup:35483e4204fdf3599cfe9911a086a265 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Robichaux> ;
+        mtp:hasType          "HT" .
+
+meetup:6553a43cc90addfc99df9e4fb79679d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Robichaux> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joseph Robichaux" .
+
+<http://w3id.org/polifonia/pilot/meetups/16650324/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was the nephew of John Robichaux." ;
+        mtp:hasParticipant   meetup:a85c44b928e70d232e14b81dcf29c271 , meetup:6553a43cc90addfc99df9e4fb79679d6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Robichaux> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Steve_Masakowski>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/47682976/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steve Masakowski (born September 2, 1954) is jazz guitarist, educator, and inventor." ;
+        mtp:hasParticipant   meetup:99a29b98002518ad4493aadc156d95f7 ;
+        mtp:hasPurpose       meetup:cfd2c6f23887aafc1d20a400b594cebe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Masakowski> ;
+        mtp:hasType          "HT" .
+
+meetup:cfd2c6f23887aafc1d20a400b594cebe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9555266" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03860052" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:99a29b98002518ad4493aadc156d95f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Masakowski> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Steve Masakowski" .

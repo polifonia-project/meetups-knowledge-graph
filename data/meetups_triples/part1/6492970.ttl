@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Winston_Grennan>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/6492970/5/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While living New York, Grennan performed at the uptown nightclub Mikell's, where local musicians scored and adapted the beat for their own use. A reconstituted Flyers later emerged in New York as the rhythm that became known as disco." ;
+        mtp:hasPurpose       meetup:06300f6c4840496a39b564de44fba0fb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Winston_Grennan> ;
+        mtp:hasType          "HT" .
+
+meetup:06300f6c4840496a39b564de44fba0fb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Grennan performed at a nightclub and musicians adapted the beat." ;
+        mtp:hasEvidencePurposeSecond  "The rhythm became known as disco and was celebrated publicly." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:576d208bc039bcaca5053aa2bbe09c02
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Winston_Grennan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Winston Grennan" .
+
+<http://w3id.org/polifonia/pilot/meetups/6492970/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Winston Grennan (16 September 1944 – 27 October 2000) was a Jamaican drummer, famous for session work from 1962 to 1973 in Jamaica as well as later in New York City through the 1970s and 1980s." ;
+        mtp:hasParticipant   meetup:576d208bc039bcaca5053aa2bbe09c02 ;
+        mtp:hasPurpose       meetup:7397f3af87d552e4bb95519b0067cfe6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Winston_Grennan> ;
+        mtp:hasType          "HT" .
+
+meetup:7397f3af87d552e4bb95519b0067cfe6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7207332" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.27882096" ;
+        mtp:hasSourcePurpose          "ML" .

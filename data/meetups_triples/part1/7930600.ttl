@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Daisy_Sweeney>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:604459e56e2896f9ebf5809c081a060b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Recognition of Sweeney's contribution to the community" ;
+        mtp:hasEvidencePurposeSecond  "Artistic tribute to Leonard Cohen" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/7930600/1/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2018, Sweeney was honoured with a community mural on a building in Montreal's Little Burgundy neighbourhood. The artist, Kevin Ledo, also painted a mural of Leonard Cohen in the city's Plateau neighbourhood." ;
+        mtp:hasParticipant   meetup:15e22efa8d5f8d5a18c2d1c64ff5af81 , meetup:2934c02fab2f3f4cc714ddc4c8b32cf4 , meetup:cef5b7f302ed3d8b0664408f30e9936d ;
+        mtp:hasPurpose       meetup:604459e56e2896f9ebf5809c081a060b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daisy_Sweeney> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Ricky_Ledo>
+        rdf:type  core:Person .
+
+meetup:2934c02fab2f3f4cc714ddc4c8b32cf4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ricky_Ledo> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.7294332846716753" ;
+        mtp:hasTextEvidence     "Ledo" .
+
+meetup:cef5b7f302ed3d8b0664408f30e9936d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kawhi_Leonard> ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "0.9550691288894132" ;
+        mtp:hasTextEvidence     "Leonard" .
+
+meetup:15e22efa8d5f8d5a18c2d1c64ff5af81
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kevin Ledo" .
+
+<http://dbpedia.org/resource/Kawhi_Leonard>
+        rdf:type  core:Person .

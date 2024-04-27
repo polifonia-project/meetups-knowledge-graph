@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Pablo_Ruiz_(singer)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Ricky_Martin>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/29394256/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pablo Maximiliano Miguel Coronel Vidoz, also known as Pablito Ruiz and Pablo Ruiz, born on 4 May 1975 in Buenos Aires, Argentina, is a singer, actor, and dancer." ;
+        mtp:hasParticipant   meetup:8de3142f55725c7029b78cf937cfb6c9 , meetup:3e0142ebe653fc9e15249a901636ef55 ;
+        mtp:hasPurpose       meetup:c6de6d679b61b44dce3dbb4b416a500a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pablo_Ruiz_(singer)> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/29394256/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After Ricky Martin came out as gay at the end of March 2010, Ruiz claimed in a TV interview with Viviana Canosa to have kissed Martin at a party in Mexico when he was 17 and Martin was around 22. Martin was working on the TV show Muñecos de Papel in Mexico at the time." ;
+        mtp:hasParticipant   meetup:dc764e97f7b8bdc93eddcaa9f108e5f2 ;
+        mtp:hasPurpose       meetup:ca864f70cd239a35a9648a9378e47932 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pablo_Ruiz_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:3e0142ebe653fc9e15249a901636ef55
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pablo Maximiliano Miguel Coronel Vidoz" .
+
+meetup:dc764e97f7b8bdc93eddcaa9f108e5f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ricky_Martin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ricky Martin" .
+
+meetup:ca864f70cd239a35a9648a9378e47932
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Revelation about Ricky Martin's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Ricky Martin's involvement in the TV show Muñecos de Papel" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c6de6d679b61b44dce3dbb4b416a500a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Pablito Ruiz is a singer, actor, and dancer" ;
+        mtp:hasEvidencePurposeSecond  "Pablito Ruiz was born in Buenos Aires, Argentina" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8de3142f55725c7029b78cf937cfb6c9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pablo_Ruiz_(singer)> ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "0.999999997163485" ;
+        mtp:hasTextEvidence     "Pablito Ruiz" .

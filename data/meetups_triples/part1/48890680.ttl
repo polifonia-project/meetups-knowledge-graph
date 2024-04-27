@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Joseph_Koo>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/48890680/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1982, Tuason became assistant to Joseph Koo, one of the most respected composers in Hong Kong, known as the Godfather of Cantopop. Koo became Tuason's mentor in his musical career and entry into the Hong Kong music business." ;
+        mtp:hasParticipant   meetup:f6d81594e67943244029ea390dfd358c , meetup:cf2572f7afadddb6f0f4ebe37f8bf592 ;
+        mtp:hasPurpose       meetup:829bf1d550ccc2421616cd088a8a137b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Tuason> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f6d81594e67943244029ea390dfd358c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joseph_Koo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joseph Koo" .
+
+<http://dbpedia.org/resource/Andrew_Tuason>
+        rdf:type  core:Person .
+
+meetup:cf2572f7afadddb6f0f4ebe37f8bf592
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tuason" .
+
+meetup:829bf1d550ccc2421616cd088a8a137b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Tuason's musical career and mentorship" ;
+        mtp:hasEvidencePurposeSecond  "Assistant to Joseph Koo" ;
+        mtp:hasSourcePurpose          "LLM" .

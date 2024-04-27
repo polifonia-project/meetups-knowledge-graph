@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Shannon_Barnett>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/37778964/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shannon Barnett (born 1982) is an Australian trombonist and composer who was named Young Australian Jazz Artist of the Year at the 2007 Australian Jazz Bell Awards." ;
+        mtp:hasParticipant   meetup:eb3b197775e9c8d556a5479c90b3a8e3 ;
+        mtp:hasPurpose       meetup:951573b4e781498b1310c719538706cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shannon_Barnett> ;
+        mtp:hasType          "HT" .
+
+meetup:eb3b197775e9c8d556a5479c90b3a8e3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shannon_Barnett> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Shannon Barnett" .
+
+meetup:951573b4e781498b1310c719538706cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6304819" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3694248" ;
+        mtp:hasSourcePurpose          "ML" .

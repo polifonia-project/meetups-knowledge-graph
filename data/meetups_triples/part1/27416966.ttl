@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/27416966/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Klevis Bega (born 21 May 1984 in Lushnjë, Albania), known professionally as Kastro Zizo, is an Albanian singer, songwriter, actor, and television presenter." ;
+        mtp:hasParticipant   meetup:815aeaa720d5a7c5fcd774674dfa2abb ;
+        mtp:hasPurpose       meetup:0d375d30ae2d9b80d309c807c04e8e4d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kastro_Zizo> ;
+        mtp:hasType          "HT" .
+
+meetup:ec65f3557ea6d9ebd93c8fcfff7430cf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Branko_Kubala> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "0.6302844241783401" ;
+        mtp:hasTextEvidence     "Branko" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:815aeaa720d5a7c5fcd774674dfa2abb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kastro_Zizo> ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "0.9999999729750474" ;
+        mtp:hasTextEvidence     "Kastro Zizo" .
+
+<http://w3id.org/polifonia/pilot/meetups/27416966/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Klevis Bega (born 21 May 1984 in Lushnjë, Albania), known professionally as Kastro Zizo, is an Albanian singer, songwriter, actor, and television presenter. Bega made his film debut as protagonist Branko in Pharmakon, the Albanian entry for the Best Foreign Language Oscar at the 85th Academy Awards, which did not make the final shortlist." ;
+        mtp:hasParticipant   meetup:ec65f3557ea6d9ebd93c8fcfff7430cf ;
+        mtp:hasPurpose       meetup:b38aa9a52e95df48f0b6aba07424c0f9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kastro_Zizo> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Branko_Kubala>
+        rdf:type  core:Person .
+
+meetup:0d375d30ae2d9b80d309c807c04e8e4d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99997926" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.1559491e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b38aa9a52e95df48f0b6aba07424c0f9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Kastro Zizo is a singer and actor." ;
+        mtp:hasEvidencePurposeSecond  "Kastro Zizo was born in Albania." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Kastro_Zizo>
+        rdf:type  core:Person .

@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Harry_Richman>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Jonathan_Richman>
+        rdf:type  core:Person .
+
+meetup:43ada5705c2b54e8fe8117b92b91c139
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95204216" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.046929333" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b5cb446ef4101705ffc45db436e9c67d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Harry_Richman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Harry Richman" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:148522daccd8274d459789b3a6be2649
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Henry Reichman Jr." .
+
+meetup:21bba9ed60f844b0f0f540b7c7ae9665
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jonathan_Richman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Richman" .
+
+meetup:e189c4f2e575998aa15956161e847f8a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Details about a person's life" ;
+        mtp:hasEvidencePurposeSecond  "The end of someone's life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1096017/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Harry Richman (born Henry Reichman Jr.; August 10, 1895 – November 3, 1972) was an American singer, actor, dancer, comedian, pianist, songwriter, bandleader, and nightclub performer, at his most popular in the 1920s and 1930s." ;
+        mtp:hasParticipant   meetup:148522daccd8274d459789b3a6be2649 , meetup:b5cb446ef4101705ffc45db436e9c67d ;
+        mtp:hasPurpose       meetup:43ada5705c2b54e8fe8117b92b91c139 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harry_Richman> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1096017/15/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On November 3, 1972, Richman died in Hollywood, California, at the age of 77. He is buried at Hillside Memorial Park Cemetery in Culver City, California." ;
+        mtp:hasParticipant   meetup:21bba9ed60f844b0f0f540b7c7ae9665 ;
+        mtp:hasPurpose       meetup:e189c4f2e575998aa15956161e847f8a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harry_Richman> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Richard_Wagner>
+        rdf:type  core:Person .
+
+meetup:f5aa66433cfa106a9958026843001861
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Theophilus_Finck> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Henry Theophilus Finck" .
+
+<http://w3id.org/polifonia/pilot/meetups/3450403/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Henry Theophilus Finck (September 22, 1854 – October 1, 1926) was an American music critic, a leading promoter in the United States of Richard Wagner and his musical theories." ;
+        mtp:hasParticipant   meetup:f3b35e2d96ead0d3d365f45f45c156ad , meetup:f5aa66433cfa106a9958026843001861 ;
+        mtp:hasPurpose       meetup:11e1ac28085e03479385f381b8aaeae4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Theophilus_Finck> ;
+        mtp:hasType          "HM" .
+
+meetup:f3b35e2d96ead0d3d365f45f45c156ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richard_Wagner> ;
+        mtp:hasOffset           "137" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Richard Wagner" .
+
+meetup:11e1ac28085e03479385f381b8aaeae4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87525475" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.124733806" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Henry_Theophilus_Finck>
+        rdf:type  core:Person .

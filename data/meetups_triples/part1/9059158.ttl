@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/9059158/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Introducing Jim Rotondi (Criss Cross, 1997)" ;
+        mtp:hasParticipant   meetup:0267dad79f153d6d9772e68b3a5754ef ;
+        mtp:hasPurpose       meetup:08b0d87e82021b737cd6bd412f62d0c0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jim_Rotondi> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/9059158/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He played in New York City for twenty years before moving to Austria. He has taught at the University for Music and Dramatic Arts in Graz, Austria." ;
+        mtp:hasParticipant   meetup:70ca126837e941d85051994b01ac57d3 ;
+        mtp:hasPurpose       meetup:5095baf04f3109f4c81035d3a56f1784 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jim_Rotondi> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jim_Rotondi>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:0267dad79f153d6d9772e68b3a5754ef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jim_Rotondi> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Jim Rotondi" .
+
+meetup:5095baf04f3109f4c81035d3a56f1784
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Playing music in New York City" ;
+        mtp:hasEvidencePurposeSecond  "Teaching at a university in Austria" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:70ca126837e941d85051994b01ac57d3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James" .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .
+
+meetup:08b0d87e82021b737cd6bd412f62d0c0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999948" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.009077e-05" ;
+        mtp:hasSourcePurpose          "ML" .

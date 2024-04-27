@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:172f34db57fb8ee2a8ed885193980406
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Russ_Lossing> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999961346" ;
+        mtp:hasTextEvidence     "Russ Lossing" .
+
+meetup:3b7ba3e19c5e0764a32fe32fe263e85c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9732031" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.023102405" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/46447934/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Russ Lossing (born 1960) is an American jazz pianist, composer, improviser, arranger, educator, scholar." ;
+        mtp:hasParticipant   meetup:172f34db57fb8ee2a8ed885193980406 ;
+        mtp:hasPurpose       meetup:3b7ba3e19c5e0764a32fe32fe263e85c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Russ_Lossing> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Russ_Lossing>
+        rdf:type  core:Person .

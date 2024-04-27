@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Lina_Hedlund>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/21156604/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lina Maria Hedlund (born 28 March 1978) is a Swedish singer and member of the pop group Alcazar." ;
+        mtp:hasParticipant   meetup:16f14ab288d73c6c709e127fc61864bc ;
+        mtp:hasPurpose       meetup:540e34dfd1a9d70818b28df7359c4a2d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lina_Hedlund> ;
+        mtp:hasType          "HT" .
+
+meetup:16f14ab288d73c6c709e127fc61864bc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lina_Hedlund> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999857324" ;
+        mtp:hasTextEvidence     "Lina" .
+
+meetup:540e34dfd1a9d70818b28df7359c4a2d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99984753" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00014049895" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b6e301b6d0bf65406aeb43fe84255830
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Financial success through gambling" ;
+        mtp:hasEvidencePurposeSecond  "Family's relocation and real estate investment" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8083a8c66b813b612ea753356f27a6ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to an individual's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Unforeseen events happening simultaneously" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/29538095/2/14>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "That same year, Nomura's 62-year-old father, Alvin Engel, committed suicide in Hawaii via carbon monoxide poisoning. Nomura traveled to Hawaii to pick up his father's ashes and returned them to Japan." ;
+        mtp:hasPurpose       meetup:8083a8c66b813b612ea753356f27a6ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Don_Nomura> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/29538095/2/19>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By 1985, he had saved enough money to rent an apartment and bring his family back to L.A. Nomura then converted $1,000 to $41,000 while playing baccarat in Las Vegas. The money helped him to buy an apartment building in L.A. for $250,000 that he later sold for $400,000." ;
+        mtp:hasPurpose       meetup:b6e301b6d0bf65406aeb43fe84255830 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Don_Nomura> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Don_Nomura>
+        rdf:type  core:Person .

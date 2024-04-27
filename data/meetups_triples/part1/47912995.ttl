@@ -1,0 +1,96 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:b884a2198291e112f99a479aef37940c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.3800947e-09" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Igor_Ozim>
+        rdf:type  core:Person .
+
+meetup:80c1db78500f4dc3469f82c5caee9605
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.58721966" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.38480523" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/47912995/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Amanda Favier (born 7 April 1979 in Paris, France) is a French classical violinist." ;
+        mtp:hasParticipant   meetup:57164eec3ea64eec6b5753ce3fad4ff5 ;
+        mtp:hasPurpose       meetup:80c1db78500f4dc3469f82c5caee9605 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amanda_Favier> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Amanda_Favier>
+        rdf:type  core:Person .
+
+meetup:841bc96430c458953c2fb7aac0f512fa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Igor_Ozim> ;
+        mtp:hasOffset           "90" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Igor Ozim" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Jean-Jacques_Kantorow>
+        rdf:type  core:Person .
+
+meetup:3e960245af9583363238c105879a3e7e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jean-Jacques_Kantorow> ;
+        mtp:hasOffset           "112" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jean-Jacques Kantorow" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/47912995/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She then traveled in Europe to study with teachers including: Sir Ifrah Neaman in London, Igor Ozim in Cologne, Jean-Jacques Kantorow in Rotterdam and Suzanne Gessner." ;
+        mtp:hasParticipant   meetup:841bc96430c458953c2fb7aac0f512fa , meetup:3e960245af9583363238c105879a3e7e , meetup:576a921565f7e92a211b2db7339f53d0 , meetup:74fa26e8b20a0ab30504a05adef7f0b9 ;
+        mtp:hasPurpose       meetup:b884a2198291e112f99a479aef37940c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Amanda_Favier> ;
+        mtp:hasType          "HM" .
+
+meetup:57164eec3ea64eec6b5753ce3fad4ff5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amanda_Favier> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999989197879564" ;
+        mtp:hasTextEvidence     "Amanda Favier" .
+
+meetup:74fa26e8b20a0ab30504a05adef7f0b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "66" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ifrah Neaman" .
+
+meetup:576a921565f7e92a211b2db7339f53d0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amanda_Favier> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Amanda Favier" .

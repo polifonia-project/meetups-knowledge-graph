@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b5cfff478020cf0c1c7a7430e96e3c43
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Related to the design and production of audio products" ;
+        mtp:hasEvidencePurposeSecond  "Related to the hiring of an audio engineer" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/61653228/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cavin supervised the design, production and testing of the company's audio products, and he designed a 16-channel stereo mixing console used at Monterey Pop Festival in 1967. At the request of Harry McCune, Jr., audio engineer John Meyer was hired by McCune to produce the 3-way JM-3 concert loudspeaker." ;
+        mtp:hasParticipant   meetup:9fc80a94df3f8926d74c893722110aa5 , meetup:763f9b55817fb0ff117189416534c547 ;
+        mtp:hasPurpose       meetup:b5cfff478020cf0c1c7a7430e96e3c43 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Cavin> ;
+        mtp:hasType          "HT" .
+
+meetup:9fc80a94df3f8926d74c893722110aa5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_R._Meyer> ;
+        mtp:hasOffset           "52" ;
+        mtp:hasSimilarityScore  "0.9956688284724664" ;
+        mtp:hasTextEvidence     "John Meyer" .
+
+meetup:763f9b55817fb0ff117189416534c547
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Harry McCune" .
+
+<http://dbpedia.org/resource/John_R._Meyer>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Bob_Cavin>
+        rdf:type  core:Person .

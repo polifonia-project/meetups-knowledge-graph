@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Nicholas_Bullen>
+        rdf:type  core:Person .
+
+meetup:e022fd4f6d218e090aac428bd7da3e2f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.62298596" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19254194" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/2401488/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nicholas Bullen (born 1968 in Coventry, England) is an English composer, artist and writer." ;
+        mtp:hasParticipant   meetup:47ee086c8a3b2ab822bd60a418654294 ;
+        mtp:hasPurpose       meetup:e022fd4f6d218e090aac428bd7da3e2f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicholas_Bullen> ;
+        mtp:hasType          "HT" .
+
+meetup:47ee086c8a3b2ab822bd60a418654294
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicholas_Bullen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Nicholas Bullen" .

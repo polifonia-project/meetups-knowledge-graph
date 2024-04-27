@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:b2ea38119cd9d3d9d436113a564b784f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7426719" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2367207" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/45100652/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Peter Jesperson is an American music industry businessman from Minneapolis, Minnesota, known for his involvement in discovering the Replacements, and for later serving as their manager." ;
+        mtp:hasParticipant   meetup:db9766e35afc15e83cc55a2c3f4d0506 ;
+        mtp:hasPurpose       meetup:b2ea38119cd9d3d9d436113a564b784f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Jesperson> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0411af39af9d7eec3cfa472f18432a6a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charley Hallman" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:41ef4c02340a5b4fbb541d787a891156
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96703553" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.022587527" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Peter_Jesperson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/45100652/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also co-founded Twin/Tone Records along with Paul Stark and Charley Hallman, and managed the record store Oar Folkjokeopus during the 1970s and early 1980s." ;
+        mtp:hasParticipant   meetup:bc42bdb66fee69a18622d87e91d596e8 , meetup:0411af39af9d7eec3cfa472f18432a6a ;
+        mtp:hasPurpose       meetup:41ef4c02340a5b4fbb541d787a891156 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Jesperson> ;
+        mtp:hasType          "HM" .
+
+meetup:db9766e35afc15e83cc55a2c3f4d0506
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Jesperson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peter Jesperson" .
+
+meetup:bc42bdb66fee69a18622d87e91d596e8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Jesperson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Jesperson" .

@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Mary_Ann_Pollar>
+        rdf:type  core:Person .
+
+meetup:e7c6699bd0bb2d69b7a37d8a84be1d6d
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "today" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/65960570/9/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:e7c6699bd0bb2d69b7a37d8a84be1d6d ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mary_Ann_Pollar> ;
+        mtp:hasType     "HM" .
+
+meetup:ddd2ac929674a855a5a47163d5a9dbb3
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "1971 to 1977" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1971-01-01"^^xsd:date ;
+        time:hasEnd          "1977-12-31"^^xsd:date .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/65960570/9/1>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mary_Ann_Pollar> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:70a140d37f83b43b9f247c40efa04fa1
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1927–1999" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1927-01-01"^^xsd:date ;
+        time:hasEnd          "1999-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/65960570/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:ddd2ac929674a855a5a47163d5a9dbb3 , meetup:70a140d37f83b43b9f247c40efa04fa1 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mary_Ann_Pollar> ;
+        mtp:hasType     "HT" .

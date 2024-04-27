@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2519838/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joseph Edward Filippelli (March 26, 1915 – August 17, 2001), known professionally as Flip Phillips, was an American jazz tenor saxophone and clarinet player." ;
+        mtp:hasParticipant   meetup:912e34b8478c2367962b19f96b0c6c1f ;
+        mtp:hasPurpose       meetup:72bad97464ebe598b67d9d7d9e79d045 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Flip_Phillips> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Flip_Phillips>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2519838/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Flip Phillips Quartet (Mercury, 1953)" ;
+        mtp:hasParticipant   meetup:200000fd45cf84240b65169e3038df4f ;
+        mtp:hasPurpose       meetup:3fd498a15050694e69e3fe038a9b7069 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Flip_Phillips> ;
+        mtp:hasType          "HT" .
+
+meetup:912e34b8478c2367962b19f96b0c6c1f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Flip_Phillips> ;
+        mtp:hasOffset           "87" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Flip Phillips" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:72bad97464ebe598b67d9d7d9e79d045
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999583" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.980712e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3fd498a15050694e69e3fe038a9b7069
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98975605" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01024331" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:200000fd45cf84240b65169e3038df4f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Flip_Phillips> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Flip Phillips" .

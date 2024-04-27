@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:7ae69eeb57213179f6ee3a1a5624ec6c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8531077" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14165814" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Gary_Finneran>
+        rdf:type  core:Person .
+
+meetup:537801b221d208f18fdd0d84cf096817
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_Finneran> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gary Finneran" .
+
+<http://w3id.org/polifonia/pilot/meetups/42854591/1/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tuscaurora's 2000 album Malnutrition Headache showed the range of pop/rock/punk influences that melded in Finneran's songwriting style, and in his singing, which varied from raw volatile emotion to beautifully original melodic lines. Music by Tuscaurora was featured in several movies produced by Hart D. Fisher." ;
+        mtp:hasPurpose       meetup:a6b835be9930c5fdb71c647026589ca0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Finneran> ;
+        mtp:hasType          "HT" .
+
+meetup:cc484a007bda530596db37efd5e61874
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gary X" .
+
+meetup:a6b835be9930c5fdb71c647026589ca0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Album and songwriting style" ;
+        mtp:hasEvidencePurposeSecond  "Music featured in movies" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/42854591/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gary Finneran (April 17, 1964 – May 10, 2009), also known as \"Gary X\", was an American singer songwriter best known as the frontman for the band Ex-Idols." ;
+        mtp:hasParticipant   meetup:537801b221d208f18fdd0d84cf096817 , meetup:cc484a007bda530596db37efd5e61874 ;
+        mtp:hasPurpose       meetup:7ae69eeb57213179f6ee3a1a5624ec6c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Finneran> ;
+        mtp:hasType          "HM" .

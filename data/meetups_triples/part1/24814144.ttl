@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Heddy_Lester>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/24814144/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Heddy Lester (born Heddy Affolter, 18 June 1950) is a Dutch singer and actress, best known outside the Netherlands for her participation in the 1977 Eurovision Song Contest." ;
+        mtp:hasParticipant   meetup:9021ff53059733f8bbdb4499c3bcdae8 , meetup:cd4d1b687a10ac85bf0bac6ec93fe254 ;
+        mtp:hasPurpose       meetup:03cfc23e5db2e0b9cc05ebbbf3dfe2b7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Heddy_Lester> ;
+        mtp:hasType          "HM" .
+
+meetup:9021ff53059733f8bbdb4499c3bcdae8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Heddy Affolter" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:cd4d1b687a10ac85bf0bac6ec93fe254
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Heddy_Lester> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Heddy Lester" .
+
+meetup:03cfc23e5db2e0b9cc05ebbbf3dfe2b7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98905945" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008253111" ;
+        mtp:hasSourcePurpose          "ML" .

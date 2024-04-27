@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:d5ef8adb02694a564123f9364de6d600
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Santiago_Chalar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999879130111866" ;
+        mtp:hasTextEvidence     "Santiago Chalar" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/42786761/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carlos Alfredo Paravís Salaverry known as Santiago Chalar (September 25, 1938, Montevideo – November 21, 1994) was a physician traumathologist, poet, songwriter, musician, guitarist and singer from Uruguay." ;
+        mtp:hasParticipant   meetup:91110257eefe47d9744d16528b9deedc , meetup:027d69a083bad6a95c1063e4f07d7402 , meetup:10a96d9cc2e426c13464b9e4cbbbf747 ;
+        mtp:hasPurpose       meetup:bdb8e019dce31af9ec7a4f176474673a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Santiago_Chalar> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Santiago_Chalar>
+        rdf:type  core:Person .
+
+meetup:027d69a083bad6a95c1063e4f07d7402
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alfredo_Brown> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9903546686827168" ;
+        mtp:hasTextEvidence     "Alfredo" .
+
+<http://w3id.org/polifonia/pilot/meetups/42786761/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Santiago Chalar was born on September 25, 1938 in Montevideo, Uruguay." ;
+        mtp:hasParticipant   meetup:d5ef8adb02694a564123f9364de6d600 ;
+        mtp:hasPurpose       meetup:1a05b57a24e4b9dc43f1ec45fef10de7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Santiago_Chalar> ;
+        mtp:hasType          "HT" .
+
+meetup:91110257eefe47d9744d16528b9deedc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Carlos Alfredo Paravís Salaverry" .
+
+meetup:10a96d9cc2e426c13464b9e4cbbbf747
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Santiago_Chalar> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "0.9999879130111866" ;
+        mtp:hasTextEvidence     "Santiago Chalar" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Alfredo_Brown>
+        rdf:type  core:Person .
+
+meetup:1a05b57a24e4b9dc43f1ec45fef10de7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.43416393" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3794672" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:bdb8e019dce31af9ec7a4f176474673a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Carlos Alfredo Paravís Salaverry was a musician and songwriter." ;
+        mtp:hasEvidencePurposeSecond  "He was also a physician and poet." ;
+        mtp:hasSourcePurpose          "LLM" .

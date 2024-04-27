@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Nino_Tempo>
+        rdf:type  core:Person .
+
+meetup:9b8e42f8aedc0f36c3e5e53c7c96e99b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nino_Tempo> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nino Tempo" .
+
+<http://dbpedia.org/resource/April_Stevens>
+        rdf:type  core:Person .
+
+meetup:cba0bf80d6cac4633a1213b9d4cc956f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/April_Stevens> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "April Stevens" .
+
+<http://dbpedia.org/resource/Nino_Tempo_&_April_Stevens>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/14959820/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nino Tempo & April Stevens (Antonino and Carol Vincinette LoTempio) are a brother and sister singing act from Niagara Falls, New York. Formed in the early 1960s when Nino Tempo and April Stevens signed as a duo with Atco Records, they had a string of Billboard hits and earned a Grammy Award as \"best rock & roll record of the year\" for the single \"Deep Purple\"." ;
+        mtp:hasParticipant   meetup:9b8e42f8aedc0f36c3e5e53c7c96e99b , meetup:cba0bf80d6cac4633a1213b9d4cc956f ;
+        mtp:hasPurpose       meetup:d5d8e90897fe918591983bea7efd4e6e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nino_Tempo_&_April_Stevens> ;
+        mtp:hasType          "HT" .
+
+meetup:d5d8e90897fe918591983bea7efd4e6e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "They are a singing act with Billboard hits" ;
+        mtp:hasEvidencePurposeSecond  "They are brother and sister from Niagara Falls" ;
+        mtp:hasSourcePurpose          "LLM" .

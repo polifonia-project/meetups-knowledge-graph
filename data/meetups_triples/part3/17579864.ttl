@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ray_Linn>
+        rdf:type  core:Person .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:8dbc250c0793fbb16379ac8be875bedb
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1914–1994" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1914-01-01"^^xsd:date ;
+        time:hasEnd          "1994-12-31"^^xsd:date .
+
+meetup:ac625af31f6ab2d2453fde849e896309
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "4 November 1996" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1996-11-04"^^xsd:date ;
+        time:hasEnd          "1996-11-04"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/17579864/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:8dbc250c0793fbb16379ac8be875bedb ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ray_Linn> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/17579864/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:ac625af31f6ab2d2453fde849e896309 , meetup:8511e53ca811e144a3d50937ae4b4359 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ray_Linn> ;
+        mtp:hasType     "HT" .
+
+meetup:8511e53ca811e144a3d50937ae4b4359
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "October 20 , 1920" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1920-10-20"^^xsd:date ;
+        time:hasEnd          "1920-10-20"^^xsd:date .

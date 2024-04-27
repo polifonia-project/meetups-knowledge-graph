@@ -1,0 +1,52 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:f33061cecda4eb4cf092b468a868dbd9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steven_Tyler> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Steven Tyler" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:ba74b2ceeacce3d281bf80edb3b24e45
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clive_Davis> ;
+        mtp:hasOffset           "106" ;
+        mtp:hasSimilarityScore  "0.999999999999801" ;
+        mtp:hasTextEvidence     "Clive Davis" .
+
+<http://dbpedia.org/resource/Steven_Tyler>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Clive_Davis>
+        rdf:type  core:Person .
+
+meetup:3845d4b5f62aaff06f8bbcf888e968a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6547977" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3006837" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/166539/7/15>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The accomplishment was mentioned in the 1979 Aerosmith song \"No Surprize\", where Steven Tyler sings, \"Old Clive Davis said he's surely gonna make us a star, I'm gonna make you a star, just the way you are.\"" ;
+        mtp:hasParticipant   meetup:ba74b2ceeacce3d281bf80edb3b24e45 , meetup:f33061cecda4eb4cf092b468a868dbd9 ;
+        mtp:hasPurpose       meetup:3845d4b5f62aaff06f8bbcf888e968a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Clive_Davis> ;
+        mtp:hasType          "HM" .

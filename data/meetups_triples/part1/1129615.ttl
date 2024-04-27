@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fec308a9f037b35cf233a12dfdf1722b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ken_Lim> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ken Lim" .
+
+meetup:0d7b78b68eff2728f57a7d024febcb3c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lin Zhiqiang" .
+
+meetup:614eb05a282e71c6f98fb96b9c1dd5df
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9923258" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0069952994" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ee867b65c7b635901fa0452e4eedd34c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9580507" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.029951345" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1129615/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ken Lim aka Lin Zhiqiang (born 1964) is composer, music producer, publisher, artist manager, concert promoter, campaign management and concept development." ;
+        mtp:hasParticipant   meetup:f7696bd72d21eadfd047d9d8859ab797 , meetup:0d7b78b68eff2728f57a7d024febcb3c ;
+        mtp:hasPurpose       meetup:ee867b65c7b635901fa0452e4eedd34c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ken_Lim> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f7696bd72d21eadfd047d9d8859ab797
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ken_Lim> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Ken Lim" .
+
+<http://w3id.org/polifonia/pilot/meetups/1129615/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ken Lim runs one of Singapore's most established record companies, Hype Records, a set-up that does PR & Campaign concepts, Concert Promotions, Artiste & Music Promotions across Asia Pacific region, Artiste Management and TV & film productions." ;
+        mtp:hasParticipant   meetup:fec308a9f037b35cf233a12dfdf1722b ;
+        mtp:hasPurpose       meetup:614eb05a282e71c6f98fb96b9c1dd5df ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ken_Lim> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ken_Lim>
+        rdf:type  core:Person .

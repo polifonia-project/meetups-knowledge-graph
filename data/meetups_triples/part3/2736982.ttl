@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bill_Burr>
+        rdf:type  core:Person .
+
+meetup:6136a0dfab2cad8cbf3b4799ff424634
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "Saturday Night" ;
+        mtp:hasSource        "ML" .
+
+meetup:27022b64b21318be9ea7573e1567b177
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "Monday Morning" ;
+        mtp:hasSource        "ML" .
+
+meetup:9a1cdb99753c6d6f6692946d0ed4154f
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "May 2007" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2007-05-01"^^xsd:date ;
+        time:hasEnd          "2007-05-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/2736982/11/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:6136a0dfab2cad8cbf3b4799ff424634 , meetup:eaa9ce628a3999680bef14eade9a0a84 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Bill_Burr> ;
+        mtp:hasType     "HT" .
+
+meetup:eaa9ce628a3999680bef14eade9a0a84
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "October 10 , 2020" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2020-10-10"^^xsd:date ;
+        time:hasEnd          "2020-10-10"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/2736982/5/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:27022b64b21318be9ea7573e1567b177 , meetup:9a1cdb99753c6d6f6692946d0ed4154f ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Bill_Burr> ;
+        mtp:hasType     "HT" .

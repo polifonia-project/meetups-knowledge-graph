@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Carrie_Smith>
+        rdf:type  core:Person .
+
+meetup:950b68c248310b58e86b9977d0de8882
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9992805" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00061577116" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/17233386/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carrie Smith (West 54, 1979)" ;
+        mtp:hasParticipant   meetup:637e8b72864499c3ef1ffae4760546d6 ;
+        mtp:hasPurpose       meetup:950b68c248310b58e86b9977d0de8882 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carrie_Smith> ;
+        mtp:hasType          "HT" .
+
+meetup:637e8b72864499c3ef1ffae4760546d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carrie_Smith> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999889936932" ;
+        mtp:hasTextEvidence     "Carrie Smith" .

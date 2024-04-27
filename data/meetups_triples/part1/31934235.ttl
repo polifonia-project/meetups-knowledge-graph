@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:58e4cb219bbb1a63e838a438d0a2d094
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Andy Gee is a guitarist and musician" ;
+        mtp:hasEvidencePurposeSecond  "Andy Gee was born on September 1, 1950 in Berlin" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:40612485c711e0cc05afb05d252889b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Ellis_(comics)> ;
+        mtp:hasOffset           "140" ;
+        mtp:hasSimilarityScore  "0.8185663624997248" ;
+        mtp:hasTextEvidence     "Steve Ellis" .
+
+meetup:6bbfdb462d8de7851863d846f110d91a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Bardens> ;
+        mtp:hasOffset           "125" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peter Bardens" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/31934235/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andy Gee (born Andreas Gröber, 1 September 1950 in Berlin) is a German guitarist and musician, best known for his time with Peter Bardens, Steve Ellis and as a temporary member of Thin Lizzy." ;
+        mtp:hasParticipant   meetup:40612485c711e0cc05afb05d252889b7 , meetup:6bbfdb462d8de7851863d846f110d91a , meetup:2d5891247c49b1c1e95f595912e6b3e5 ;
+        mtp:hasPurpose       meetup:58e4cb219bbb1a63e838a438d0a2d094 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Gee> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Steve_Ellis_(comics)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Peter_Bardens>
+        rdf:type  core:Person .
+
+meetup:2d5891247c49b1c1e95f595912e6b3e5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andy_Gee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Andy Gee" .
+
+<http://dbpedia.org/resource/Andy_Gee>
+        rdf:type  core:Person .

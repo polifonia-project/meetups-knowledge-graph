@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/15929938/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tim Kelleher was born October 4, 1980, in Phoenix, Arizona. Kelleher attended Chaparral High School in Scottsdale, Arizona, and honed in on his craft while writing music and playing in numerous rock and industrial bands." ;
+        mtp:hasParticipant   meetup:3d968de990385172bb95259987ba55fa ;
+        mtp:hasPurpose       meetup:ef9a63ecc0f575219df0aa28f4065636 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tim_Kelleher_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3d968de990385172bb95259987ba55fa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Kelleher_(actor)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tim Kelleher" .
+
+<http://dbpedia.org/resource/Tim_Kelleher_(musician)>
+        rdf:type  core:Person .
+
+meetup:ef9a63ecc0f575219df0aa28f4065636
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Tim Kelleher's passion for music and his involvement in rock and industrial bands" ;
+        mtp:hasEvidencePurposeSecond  "Tim Kelleher's personal background and education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Tim_Kelleher_(actor)>
+        rdf:type  core:Person .

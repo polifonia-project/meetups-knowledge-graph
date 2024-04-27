@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/32252307/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mihajlo Obrenov aka miKKa (born 1982) is a Serbian musician, sound engineer and film director." ;
+        mtp:hasParticipant   meetup:2e4d1ec15dca4fe77ad899d150a65724 , meetup:d0fe45b0e77fbae1e813ba66f79a07df ;
+        mtp:hasPurpose       meetup:43b9d1041fd1d8498fde21c047d878d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/MiKKa> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/MiKKa>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:2e4d1ec15dca4fe77ad899d150a65724
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/MiKKa> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "0.9999999999547812" ;
+        mtp:hasTextEvidence     "miKKa" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:43b9d1041fd1d8498fde21c047d878d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999917" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.7873346e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d0fe45b0e77fbae1e813ba66f79a07df
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mihajlo Obrenov" .

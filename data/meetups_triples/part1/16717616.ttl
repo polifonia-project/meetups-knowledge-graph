@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Fletcher_Henderson>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:62945472a88e23c1e8a57a6443fd7b8b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Activities related to playing music" ;
+        mtp:hasEvidencePurposeSecond  "Personal experiences and relationships" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:fa5de77cf36e84c3552646fb9f8d9d55
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Muggsy_Spanier> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Muggsy Spanier" .
+
+meetup:8f087b9eff819eb621cc9eb08deffbf0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fletcher_Henderson> ;
+        mtp:hasOffset           "94" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fletcher Henderson" .
+
+<http://dbpedia.org/resource/Red_Richards>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/16717616/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He toured Italy and France in 1953 with Mezz Mezzrow's band alongside Buck Clayton and Big Chief Moore, also accompanying Frank Sinatra in Italy. He played with Muggsy Spanier intermittently from 1953 through the end of the decade and with Fletcher Henderson in 1957–58." ;
+        mtp:hasParticipant   meetup:fa5de77cf36e84c3552646fb9f8d9d55 , meetup:8f087b9eff819eb621cc9eb08deffbf0 , meetup:e48e781a40295d7bc725d026182157a6 ;
+        mtp:hasPurpose       meetup:62945472a88e23c1e8a57a6443fd7b8b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Red_Richards> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Muggsy_Spanier>
+        rdf:type  core:Person .
+
+meetup:e48e781a40295d7bc725d026182157a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Richards" .

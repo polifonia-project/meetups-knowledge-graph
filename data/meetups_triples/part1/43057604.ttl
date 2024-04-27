@@ -1,0 +1,89 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e142d2ce579c95b767013085eb3470eb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Career progression in management" ;
+        mtp:hasEvidencePurposeSecond  "Promotion of British acts" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Maurice_Oberstein>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/43057604/2/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the 1980s, acts that he promoted included Sade, Wham! and later George Michael." ;
+        mtp:hasParticipant   meetup:c8626302787a93139f17e02adf2c0e20 ;
+        mtp:hasPurpose       meetup:6ba2e30cc1b1cfe5b949fff218d74274 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maurice_Oberstein> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/43057604/2/19>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After his retirement he returned to the US in 1993, taking a post as \"Professor of Pop\" at the University of Miami. However, he remained an Anglophile, frequently returning to Britain." ;
+        mtp:hasPurpose       meetup:f99fe7bb5413a319cdf4734707053516 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maurice_Oberstein> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/43057604/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He rose through the ranks of management at the company, eventually becoming the chairman of CBS Records UK in 1976. He promoted British acts such as The Clash, New Hearts and Adam and the Ants, and oversaw the successful international promotion of Jeff Wayne's War of the Worlds album." ;
+        mtp:hasParticipant   meetup:6da665b231519829bf922e5bbd14dea6 ;
+        mtp:hasPurpose       meetup:e142d2ce579c95b767013085eb3470eb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maurice_Oberstein> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jeff_Wayne>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f99fe7bb5413a319cdf4734707053516
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Teaching at University of Miami" ;
+        mtp:hasEvidencePurposeSecond  "Frequent visits to Britain" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c8626302787a93139f17e02adf2c0e20
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Michael> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "0.9999950378579548" ;
+        mtp:hasTextEvidence     "George Michael" .
+
+meetup:6ba2e30cc1b1cfe5b949fff218d74274
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Promoting music acts" ;
+        mtp:hasEvidencePurposeSecond  "Career and professional life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/George_Michael>
+        rdf:type  core:Person .
+
+meetup:6da665b231519829bf922e5bbd14dea6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Wayne> ;
+        mtp:hasOffset           "132" ;
+        mtp:hasSimilarityScore  "0.9953648876403888" ;
+        mtp:hasTextEvidence     "Jeff Wayne" .

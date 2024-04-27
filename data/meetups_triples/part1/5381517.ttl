@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Justin_Foley>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/William_A._Foley>
+        rdf:type  core:Person .
+
+meetup:67bab669082f902aad6eae5703dece4f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_A._Foley> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "0.9678599126938964" ;
+        mtp:hasTextEvidence     "Foley" .
+
+meetup:cafeb3d03755b36507740c83eb4ee747
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the evolution of a band and the role of the lyricist." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the local celebrity status of the lyricist." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/5381517/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Red Tide began as a thrash metal outfit in 1993 then evolved into a jazz metal band in the late 1990s. As the primary lyricist and one of the songwriters for Red Tide, Foley earned local celebrityhood." ;
+        mtp:hasParticipant   meetup:67bab669082f902aad6eae5703dece4f ;
+        mtp:hasPurpose       meetup:cafeb3d03755b36507740c83eb4ee747 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Justin_Foley> ;
+        mtp:hasType          "HT" .

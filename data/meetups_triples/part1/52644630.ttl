@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:507b8110e4df769ab657527247df6a07
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the development of singing skills" ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the Xinghai Conservatory of Music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f4539580839c66edf5dce16c5b0863ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9911573" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.003336937" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6777d5665ef6ce72239ee8dcaca9eef9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jana_Chen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999991540274376" ;
+        mtp:hasTextEvidence     "Jana Chen" .
+
+<http://dbpedia.org/resource/Jana_Chen>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/52644630/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Following her artistic interest some years later, she emigrated to Guangzhou and entered the Xinghai Conservatory of Music, where she started developing her singing skills. After finishing the course inside that institution, she successfully graduated as a Pop singer." ;
+        mtp:hasPurpose       meetup:507b8110e4df769ab657527247df6a07 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jana_Chen> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/52644630/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jana Chen (traditional Chinese: 陳娟兒; simplified Chinese: 陈娟儿; pinyin: Chén juān er), born January 27, 1989, is a Chinese C-pop (Mandopop) singer who started her career in 2010." ;
+        mtp:hasParticipant   meetup:6777d5665ef6ce72239ee8dcaca9eef9 ;
+        mtp:hasPurpose       meetup:f4539580839c66edf5dce16c5b0863ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jana_Chen> ;
+        mtp:hasType          "HT" .

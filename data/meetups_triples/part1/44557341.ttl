@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:02a3209cc75088284ef052c2d02e2371
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Karen_Harding> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999997726" ;
+        mtp:hasTextEvidence     "Karen Harding" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:bfeac25095a3060edc6208d3253d5e3c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.73136693" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26086152" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/44557341/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Karen Harding (born 18 November 1991) is an English singer and songwriter from Consett, County Durham." ;
+        mtp:hasParticipant   meetup:02a3209cc75088284ef052c2d02e2371 ;
+        mtp:hasPurpose       meetup:cbb942c062fe2c880764dcc4fa907a92 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Karen_Harding> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:cbb942c062fe2c880764dcc4fa907a92
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9622327" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.022607045" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f65cf1140a3c98ed2c64ce0f78322f10
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Karen_Harding> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Karen Harding" .
+
+<http://dbpedia.org/resource/Karen_Harding>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/44557341/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her first single, \"Say Something\", released in February 2015, entered the top 10 of the UK Singles Chart." ;
+        mtp:hasParticipant   meetup:f65cf1140a3c98ed2c64ce0f78322f10 ;
+        mtp:hasPurpose       meetup:bfeac25095a3060edc6208d3253d5e3c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Karen_Harding> ;
+        mtp:hasType          "HT" .

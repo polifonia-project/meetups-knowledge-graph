@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/42637743/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Evan Johns (July 12, 1956 – March 11, 2017) was an American guitarist specializing in a variety of music, including rockabilly." ;
+        mtp:hasParticipant   meetup:932ceb8f9c0aaaecb2cab370fb92c4af ;
+        mtp:hasPurpose       meetup:034b3d0be29ed48de13f5057abf49e36 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Evan_Johns> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:034b3d0be29ed48de13f5057abf49e36
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9695302" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.017908765" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:932ceb8f9c0aaaecb2cab370fb92c4af
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Evan_Johns> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999319016" ;
+        mtp:hasTextEvidence     "Evan Johns" .
+
+<http://dbpedia.org/resource/Evan_Johns>
+        rdf:type  core:Person .

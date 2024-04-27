@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f723a9deeb62fc66c9a7f1a105f21921
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Jerry Mason was a singer and guitar player" ;
+        mtp:hasEvidencePurposeSecond  "Jerry Mason's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/20714116/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jerry Mason (born 1942, Pittsburgh, Pennsylvania) is an American former singer, songwriter, guitar player, and entertainer during America's rock and roll era." ;
+        mtp:hasParticipant   meetup:6a7370339865bf26a36e737d41387177 ;
+        mtp:hasPurpose       meetup:f723a9deeb62fc66c9a7f1a105f21921 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jerry_Mason_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:2cccfade6ac15b4728ac45ba56af7844
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99989116" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.5958604e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f485e5bafe4e3caaf85ca1e8fc76a18a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jerry_Mason_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jerry Mason" .
+
+<http://w3id.org/polifonia/pilot/meetups/20714116/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mason currently lives in Southern California." ;
+        mtp:hasParticipant   meetup:f485e5bafe4e3caaf85ca1e8fc76a18a ;
+        mtp:hasPurpose       meetup:2cccfade6ac15b4728ac45ba56af7844 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jerry_Mason_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:6a7370339865bf26a36e737d41387177
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jerry_Mason_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999861658517628" ;
+        mtp:hasTextEvidence     "Jerry Mason" .
+
+<http://dbpedia.org/resource/Jerry_Mason_(singer)>
+        rdf:type  core:Person .

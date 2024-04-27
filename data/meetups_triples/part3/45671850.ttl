@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Anderson_East>
+        rdf:type  core:Person .
+
+meetup:03e9930b4aee36f6e5a5fb1243c6fbfc
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "July 17 , 1987" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1987-07-17"^^xsd:date ;
+        time:hasEnd          "1987-07-17"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:6b33c4ebae738087b7a8e7ccb3f2b9bd
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "currently" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/45671850/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:03e9930b4aee36f6e5a5fb1243c6fbfc , meetup:6b33c4ebae738087b7a8e7ccb3f2b9bd ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Anderson_East> ;
+        mtp:hasType     "HM" .

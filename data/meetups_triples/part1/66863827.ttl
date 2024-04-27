@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:2b962e3d30d15820a7f6fe2662712b68
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Prince's political aspirations" ;
+        mtp:hasEvidencePurposeSecond  "Potential celebration of a young mayor" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Paperboy_Prince>
+        rdf:type  core:Person .
+
+meetup:374b5d11954a0adb3f4c3868dc86b779
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96428996" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.029426435" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a2cd314d6e974dca518ae1a6ec974879
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paperboy_Prince> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999882618" ;
+        mtp:hasTextEvidence     "Paperboy Love Prince" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/66863827/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paperboy Love Prince (born 1992/1993) is an American artist, community activist and political candidate who resides in Brooklyn, New York City." ;
+        mtp:hasParticipant   meetup:a2cd314d6e974dca518ae1a6ec974879 ;
+        mtp:hasPurpose       meetup:374b5d11954a0adb3f4c3868dc86b779 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paperboy_Prince> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/66863827/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In December 2020, Prince registered as a candidate for Mayor of New York City in the 2021 Democratic primary. If elected, Prince would have been the youngest mayor in the history of New York City." ;
+        mtp:hasPurpose       meetup:2b962e3d30d15820a7f6fe2662712b68 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paperboy_Prince> ;
+        mtp:hasType          "HT" .

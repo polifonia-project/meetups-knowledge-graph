@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bernie_Sanders>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4687626/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Harrell was born in New York City borough the Bronx on September 26, 1960. His father, Bernie, worked at a produce market in the Bronx's Hunts Point section; his mother, Hattie, was a nurse's aide." ;
+        mtp:hasParticipant   meetup:0905c021fb3eac092c441bd31cb9212f , meetup:806acff4f446bd61cdc9f5cc573b1f97 ;
+        mtp:hasPurpose       meetup:b74762e5e08333fbca31877961469a4e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andre_Harrell> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Montrezl_Harrell>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b74762e5e08333fbca31877961469a4e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Harrell's family and upbringing" ;
+        mtp:hasEvidencePurposeSecond  "Information about Harrell's parents' occupations" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:0905c021fb3eac092c441bd31cb9212f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bernie_Sanders> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.6150474702073706" ;
+        mtp:hasTextEvidence     "Bernie" .
+
+meetup:806acff4f446bd61cdc9f5cc573b1f97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Montrezl_Harrell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Harrell" .
+
+<http://dbpedia.org/resource/Andre_Harrell>
+        rdf:type  core:Person .

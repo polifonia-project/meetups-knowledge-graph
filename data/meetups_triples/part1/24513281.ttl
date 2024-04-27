@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:06aaf29d3021cdf9675835fd2f3dd8fb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martin_Craft> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Martin Craft" .
+
+<http://w3id.org/polifonia/pilot/meetups/24513281/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Usually recording under the name M. Craft, he has released several albums on various labels, most recently signing with London's Heavenly Recordings." ;
+        mtp:hasParticipant   meetup:06aaf29d3021cdf9675835fd2f3dd8fb ;
+        mtp:hasPurpose       meetup:75d1112be20035efad688ad14d5daec2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martin_Craft> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2bf50170822d185705a98f726352a8e8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martin_Craft> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Martin Craft" .
+
+<http://dbpedia.org/resource/Martin_Craft>
+        rdf:type  core:Person .
+
+meetup:75d1112be20035efad688ad14d5daec2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98861873" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008518095" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9cedfb0dc07f9e3802cb2462f16839f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jarvis_Cocker> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jarvis Cocker" .
+
+meetup:f212df9e76e81b0350a1168207101615
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999417" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.703835e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jarvis_Cocker>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/24513281/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "For several years he played guitar and toured with Jarvis Cocker." ;
+        mtp:hasParticipant   meetup:9cedfb0dc07f9e3802cb2462f16839f7 , meetup:2bf50170822d185705a98f726352a8e8 ;
+        mtp:hasPurpose       meetup:f212df9e76e81b0350a1168207101615 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Martin_Craft> ;
+        mtp:hasType          "HM" .

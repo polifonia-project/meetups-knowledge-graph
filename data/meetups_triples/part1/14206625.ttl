@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4c0cd4f59f6638021381afb7aa9675a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95713013" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01771826" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2b09acddbd127faad308cf955d5feb0a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music video auditions" ;
+        mtp:hasEvidencePurposeSecond  "Personal life and career move to Los Angeles" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:13bb6894f6e8ac4f2a5afcfdf1905410
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to personal relationships" ;
+        mtp:hasEvidencePurposeSecond  "Unrelated events happening at the same time" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9944485dc63f4cb9d0b4388c3d59a547
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dianna_Agron> ;
+        mtp:hasOffset           "477" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dianna Agron" .
+
+<http://w3id.org/polifonia/pilot/meetups/14206625/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Agron moved to Los Angeles in 2005, attending an audition for a dance agency on the same day. She was signed by the agency and told them that she wanted to be in musicals; they sent her out for music video auditions." ;
+        mtp:hasPurpose       meetup:2b09acddbd127faad308cf955d5feb0a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dianna_Agron> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/14206625/22/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The couple had a messy break-up in February 2011, the day after the film was released, with reports that he threatened her over the phone and had a \"heated confrontation\" with Romanian actor Sebastian Stan, someone with whom Agron was close in early 2011. She temporarily moved to a hotel under a false name so that Pettyfer would not be able to find her, and Pettyfer was instructed to not attend an event at which she would be present." ;
+        mtp:hasPurpose       meetup:13bb6894f6e8ac4f2a5afcfdf1905410 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dianna_Agron> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/14206625/20/17>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The debate on Jewish characters being portrayed by Jewish actors became prominent in 2018 with the success of The Marvelous Mrs. Maisel, and a response from physiognomist Sharrona Pearl in Jewish culture magazine Tablet cited Agron and her roles as overtly shiksa and Christian characters as a reason why more representation of Jewish performers is not needed, highlighting a Glee episode in which a Jewish character wants to look more like \"the archetypal shiksa portrayed by Dianna Agron\" as an example of Jewishness not being a physical trait." ;
+        mtp:hasParticipant   meetup:9944485dc63f4cb9d0b4388c3d59a547 ;
+        mtp:hasPurpose       meetup:4c0cd4f59f6638021381afb7aa9675a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dianna_Agron> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Dianna_Agron>
+        rdf:type  core:Person .

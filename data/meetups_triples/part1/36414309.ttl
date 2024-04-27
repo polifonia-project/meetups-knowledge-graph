@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/36414309/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christian Eggen (born 8 January 1957) is a Norwegian composer, pianist and conductor." ;
+        mtp:hasParticipant   meetup:5991ef50ee9bb03fa8825428fa53641e ;
+        mtp:hasPurpose       meetup:a25bcb4cacaa2d9b9db030ed99ebf65e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christian_Eggen> ;
+        mtp:hasType          "HT" .
+
+meetup:a25bcb4cacaa2d9b9db030ed99ebf65e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9929818" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0070056813" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5991ef50ee9bb03fa8825428fa53641e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christian_Eggen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Christian Eggen" .
+
+<http://dbpedia.org/resource/Christian_Eggen>
+        rdf:type  core:Person .

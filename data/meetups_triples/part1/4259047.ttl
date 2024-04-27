@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6459cc3f0273a9adaffeba8a1522ccd5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9813592" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018586947" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4259047/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Barry Paris (born February 6, 1948) is an author and journalist based in Pittsburgh, Pennsylvania." ;
+        mtp:hasParticipant   meetup:6154dbd90b2a06727edaf83936126976 ;
+        mtp:hasPurpose       meetup:6459cc3f0273a9adaffeba8a1522ccd5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barry_Paris> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:057c49c79b42f8ae4d8855436b02f81e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8373524" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14833663" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:657de8a73873e5e6b6d2ced7970740b2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barry_Paris> ;
+        mtp:hasOffset           "49" ;
+        mtp:hasSimilarityScore  "0.9999999999937756" ;
+        mtp:hasTextEvidence     "Barry Paris" .
+
+meetup:6154dbd90b2a06727edaf83936126976
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Barry_Paris> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999993080452" ;
+        mtp:hasTextEvidence     "Barry Paris" .
+
+<http://dbpedia.org/resource/Barry_Paris>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4259047/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In reviewing the book, the Daily Express stated \"Barry Paris has written the model of a movie biography\"." ;
+        mtp:hasParticipant   meetup:657de8a73873e5e6b6d2ced7970740b2 ;
+        mtp:hasPurpose       meetup:057c49c79b42f8ae4d8855436b02f81e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barry_Paris> ;
+        mtp:hasType          "HT" .

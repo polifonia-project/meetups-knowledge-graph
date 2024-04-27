@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Benny_Green_(saxophonist)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a022bd3cee5f7ee096da5435fae6ee4f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bennie_Green> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9987574655117442" ;
+        mtp:hasTextEvidence     "Benny Green" .
+
+<http://dbpedia.org/resource/Bennie_Green>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:e4ca48cfacb02ddb2e076faf1fccc6ea
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Unplanned events or circumstances" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1431263/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They married in London in 1926 and initially lived with David's father, an immigrant Russian-Jewish tailor, at 1 Greenwell Street, London. Benny Green was born in Leeds because his mother wanted to be near her own family for the birth, but they soon returned to London, to a basement flat in Cleveland Street." ;
+        mtp:hasParticipant   meetup:a022bd3cee5f7ee096da5435fae6ee4f ;
+        mtp:hasPurpose       meetup:e4ca48cfacb02ddb2e076faf1fccc6ea ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Benny_Green_(saxophonist)> ;
+        mtp:hasType          "HT" .

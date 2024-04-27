@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:d337f53a241a60e25eff83dcc5a0fa18
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Radio program with large audience" ;
+        mtp:hasEvidencePurposeSecond  "Longest running personality radio show" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/57312548/12/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1972 his program had \"the largest national radio audience in Australia\" with \"about 400,000\" Australians listening in \"at least once a week\". and was \"Australia's longest running personality radio show\"." ;
+        mtp:hasPurpose       meetup:d337f53a241a60e25eff83dcc5a0fa18 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arch_McKirdy> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Arch_McKirdy>
+        rdf:type  core:Person .
+
+meetup:e2fb0bf5cd444e088e909f8fed824507
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arch_McKirdy> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Arch McKirdy" .
+
+meetup:086b9f6570e29a18f340b0b2ec624125
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99988484" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00011257691" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/57312548/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Arch McKirdy (17 March 1924 – 26 August 2013) was an Australian radio broadcaster, voice trainer, mentor and executive, who was best known for his evening jazz program Relax with Me, \"Australia's most popular radio program\" in the 1960s and early 1970s." ;
+        mtp:hasParticipant   meetup:e2fb0bf5cd444e088e909f8fed824507 ;
+        mtp:hasPurpose       meetup:086b9f6570e29a18f340b0b2ec624125 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arch_McKirdy> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/29213863/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Emily Josephine Troup (7 July 1853, Woodberry Down, London – 11 April 1913, Saltwood, Kent) was an English composer of songs and works for piano and violin." ;
+        mtp:hasParticipant   meetup:b1d77f6f9eb799836fa745f8b5afe9e0 , meetup:fd2a3e4d3be29ae842e8e1643ae3da9d ;
+        mtp:hasPurpose       meetup:f2927b0fd74723e97d9ce50c47e41d2e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Josephine_Troup> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b1d77f6f9eb799836fa745f8b5afe9e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Josephine_Troup> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.9999992769143432" ;
+        mtp:hasTextEvidence     "Josephine Troup" .
+
+meetup:f2927b0fd74723e97d9ce50c47e41d2e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Composer of songs and works" ;
+        mtp:hasEvidencePurposeSecond  "Biographical information" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:fd2a3e4d3be29ae842e8e1643ae3da9d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emily_Dickinson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9984758528946116" ;
+        mtp:hasTextEvidence     "Emily" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/29213863/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Emily Josephine Troup (7 July 1853, Woodberry Down, London – 11 April 1913, Saltwood, Kent) was an English composer of songs and works for piano and violin. A scholarship for female students studying orchestral composition was established in her name at the Royal Academy of Music, in London." ;
+        mtp:hasParticipant   meetup:22849e289486c07e35dfa4a363452c23 ;
+        mtp:hasPurpose       meetup:f357a4dca01b80861483ab96e724af3c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Josephine_Troup> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Emily_Dickinson>
+        rdf:type  core:Person .
+
+meetup:f357a4dca01b80861483ab96e724af3c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Composer of songs and works" ;
+        mtp:hasEvidencePurposeSecond  "Scholarship for orchestral composition" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:22849e289486c07e35dfa4a363452c23
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emily_Dickinson> ;
+        mtp:hasOffset           "85" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Emily" .
+
+<http://dbpedia.org/resource/Josephine_Troup>
+        rdf:type  core:Person .

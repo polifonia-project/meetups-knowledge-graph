@@ -1,0 +1,63 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a3425dd636fb1a239e703222579e7938
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to the personal life of the couple, specifically their adoption of a son." ;
+        mtp:hasEvidencePurposeSecond  "There is a coincidence mentioned in the sentence, as the adopted son shares the same name as his father." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/726151/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The couple adopted a son, Phil Harris Jr. (born 1935)." ;
+        mtp:hasParticipant   meetup:d3ecb0e5fa1d59dba3e14e112f789f91 ;
+        mtp:hasPurpose       meetup:9d8ed34f69b3a1e161099ed6f6ac9d00 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Harris> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Phil_Harris>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:9d8ed34f69b3a1e161099ed6f6ac9d00
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to the personal life of the couple, specifically their adoption of a son." ;
+        mtp:hasEvidencePurposeSecond  "There is a coincidence mentioned in the sentence, which is the son's name being the same as his father's." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/726151/14/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The couple adopted a son, Phil Harris Jr. (born 1935)." ;
+        mtp:hasParticipant   meetup:6c024820f6d761e6758af50153509ceb ;
+        mtp:hasPurpose       meetup:a3425dd636fb1a239e703222579e7938 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Harris> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:d3ecb0e5fa1d59dba3e14e112f789f91
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Harris> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.9999995906667876" ;
+        mtp:hasTextEvidence     "Phil Harris" .
+
+meetup:6c024820f6d761e6758af50153509ceb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Harris> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.9999995906667876" ;
+        mtp:hasTextEvidence     "Phil Harris" .

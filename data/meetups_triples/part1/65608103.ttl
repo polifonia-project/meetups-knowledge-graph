@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:dc591ff5ebedc391a88141e67dbf7e86
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bobby Britt" .
+
+<http://w3id.org/polifonia/pilot/meetups/65608103/15/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2021, the brothers arranged and recorded a version of The Mermaid with Beth Ditto singing lead vocal for the AppleTV+ series Dickinson. The brothers appear uncredited with fiddle player Bobby Britt and bassist Billie Feather in Season 3 Episode 4 as the backing band for Ditto as she performs a portion of the recorded song during one of the episode's scenes." ;
+        mtp:hasParticipant   meetup:dc591ff5ebedc391a88141e67dbf7e86 , meetup:ff1d1f90dad3149a6b0e5a6bf8b65bdb ;
+        mtp:hasPurpose       meetup:c1be788611cf8f1a3d6ad2edcd922de6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Holland_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:ff1d1f90dad3149a6b0e5a6bf8b65bdb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Britt_McKillip> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "0.999903312108728" ;
+        mtp:hasTextEvidence     "Britt" .
+
+meetup:c1be788611cf8f1a3d6ad2edcd922de6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating and recording music" ;
+        mtp:hasEvidencePurposeSecond  "Personal involvement in a TV series" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Britt_McKillip>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Michael_Holland_(musician)>
+        rdf:type  core:Person .

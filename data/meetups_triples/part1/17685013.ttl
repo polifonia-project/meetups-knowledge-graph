@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5b8998793ff7bf474792003ffbc13f97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_Cowell> ;
+        mtp:hasOffset           "109" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Simon Cowell" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:cb481aa33ea622c23d6e54c6b571834f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yvie_Burnett> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Yvie Burnett" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Simon_Cowell>
+        rdf:type  core:Person .
+
+meetup:0caac0a36bff1091cea879bf86fec65e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Yvie being a judge in music competitions" ;
+        mtp:hasEvidencePurposeSecond  "Yvie's involvement in educational music programs" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/17685013/10/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yvie became a judge in 2015 when she was one of the three judges on the prestigious BBC Songs of Praise School Choir of the Year 2015, which was held at Nottingham's Albert Hall. She was also a judge on BBC Radio Ulster's School Choir of the Year 2015." ;
+        mtp:hasParticipant   meetup:1513d5fad63ca17de8262c7001166485 ;
+        mtp:hasPurpose       meetup:0caac0a36bff1091cea879bf86fec65e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yvie_Burnett> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Yvie_Burnett>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/17685013/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yvie Burnett (born 8 August 1963), is a Scottish mezzo-soprano and vocal coach, best known for her work with Simon Cowell on television shows The X Factor and Britain's Got Talent,  The Big Reunion The Voice UK and BBC's Let It Shine" ;
+        mtp:hasParticipant   meetup:5b8998793ff7bf474792003ffbc13f97 , meetup:cb481aa33ea622c23d6e54c6b571834f ;
+        mtp:hasPurpose       meetup:cc4c2da35285881537dae4286b2e4861 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yvie_Burnett> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1513d5fad63ca17de8262c7001166485
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Yvie" .
+
+meetup:cc4c2da35285881537dae4286b2e4861
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9597572" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.037797064" ;
+        mtp:hasSourcePurpose          "ML" .

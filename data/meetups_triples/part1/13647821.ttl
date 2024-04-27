@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:9c4591611f34d8524c65ad8c810ad962
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95328414" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.046167273" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/13647821/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steve Allee (born September 14, 1950) is an American jazz musician and composer." ;
+        mtp:hasParticipant   meetup:d844caa83994cac9d04e2a619c5cdafe ;
+        mtp:hasPurpose       meetup:cb4b5072cf253e0c99564bf7c61a2eaf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Allee> ;
+        mtp:hasType          "HT" .
+
+meetup:050e6fa1e42363856e6a16bfe58ee94b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Allee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999986926" ;
+        mtp:hasTextEvidence     "Steve Allee" .
+
+<http://w3id.org/polifonia/pilot/meetups/13647821/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steve Allee (Green Tree, 1979)" ;
+        mtp:hasParticipant   meetup:050e6fa1e42363856e6a16bfe58ee94b ;
+        mtp:hasPurpose       meetup:9c4591611f34d8524c65ad8c810ad962 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Allee> ;
+        mtp:hasType          "HT" .
+
+meetup:d844caa83994cac9d04e2a619c5cdafe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Allee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Steve Allee" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:cb4b5072cf253e0c99564bf7c61a2eaf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995739" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0003055244" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Steve_Allee>
+        rdf:type  core:Person .

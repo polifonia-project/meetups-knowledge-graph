@@ -1,0 +1,103 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Rafael_Batlle_Pacheco>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Carmen_Barradas>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/30604514/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Following the example of her younger brother, the painter Rafael Barradas, she adopted the stage name Carmen Barradas." ;
+        mtp:hasParticipant   meetup:f4fe1b4f13a3bf1d1e6e9f219b8eb7c8 , meetup:3da9d82cc0b805777d7c22bd0baa6497 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carmen_Barradas> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1f21f98c37514612e737cba2efb59c6a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rafael_Batlle_Pacheco> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rafael" .
+
+meetup:1c736f77a3e6b7e805ef009d24d49a43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carmen_Barradas> ;
+        mtp:hasOffset           "99" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Barradas" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:3da9d82cc0b805777d7c22bd0baa6497
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Maria del Carmen Pérez Jiménez" .
+
+<http://w3id.org/polifonia/pilot/meetups/30604514/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After World War I, Rafael Barradas found he was unable to return from Spain to Uruguay, so in 1916 Barradas' family moved to Spain." ;
+        mtp:hasParticipant   meetup:1c736f77a3e6b7e805ef009d24d49a43 , meetup:db013adc4f1f1853e81a0d90491a33d8 ;
+        mtp:hasPurpose       meetup:c49b9852773b8a2a13842aacff1f7791 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carmen_Barradas> ;
+        mtp:hasType          "HM" .
+
+meetup:632fc9494981055cd9cbe3c34140b102
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Teaching at Institutos Normales" ;
+        mtp:hasEvidencePurposeSecond  "Living and composing in Spain" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/30604514/3/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Barradas lived and composed in Spain until 1922, then returned with her family to Montevideo in 1928, where she took a position teaching at the Institutos Normales." ;
+        mtp:hasParticipant   meetup:1f21f98c37514612e737cba2efb59c6a , meetup:814bcd5dcec0458d124a7a7ba2f01087 ;
+        mtp:hasPurpose       meetup:632fc9494981055cd9cbe3c34140b102 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carmen_Barradas> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:db013adc4f1f1853e81a0d90491a33d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rafael_Batlle_Pacheco> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.8685356897891482" ;
+        mtp:hasTextEvidence     "Rafael" .
+
+meetup:814bcd5dcec0458d124a7a7ba2f01087
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carmen_Barradas> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Barradas" .
+
+meetup:c49b9852773b8a2a13842aacff1f7791
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "An unexpected occurrence" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f4fe1b4f13a3bf1d1e6e9f219b8eb7c8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carmen_Barradas> ;
+        mtp:hasOffset           "102" ;
+        mtp:hasSimilarityScore  "0.9999941778764688" ;
+        mtp:hasTextEvidence     "Carmen Barradas" .

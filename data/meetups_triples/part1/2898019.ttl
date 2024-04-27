@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3e65ca07ce28fee02b562cb1b614fa4f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Dame Gwyneth Jones is a renowned operatic soprano, known for her performances in Wagnerian roles." ;
+        mtp:hasEvidencePurposeSecond  "Dame Gwyneth Jones' career and talent in music making may have been influenced by her education and training in opera." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Gwyneth_Jones_(soprano)>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b4401fef9d22e7fc4246e9fb33634562
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dame Gwyneth Jones  (" .
+
+meetup:81b249868b177c4f7ca50b27c58f80db
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gwyneth_Jones_(soprano)> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "0.714644346127107" ;
+        mtp:hasTextEvidence     "Gwyneth Jones" .
+
+<http://w3id.org/polifonia/pilot/meetups/2898019/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dame Gwyneth Jones  (born 7 November 1936) is a Welsh operatic dramatic soprano, widely regarded as  one of the greatest Wagnerian sopranos in the second half of the 20th century." ;
+        mtp:hasParticipant   meetup:81b249868b177c4f7ca50b27c58f80db , meetup:b4401fef9d22e7fc4246e9fb33634562 ;
+        mtp:hasPurpose       meetup:3e65ca07ce28fee02b562cb1b614fa4f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gwyneth_Jones_(soprano)> ;
+        mtp:hasType          "HM" .

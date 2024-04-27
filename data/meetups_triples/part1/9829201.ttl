@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Wayne_Nelson>
+        rdf:type  core:Person .
+
+meetup:22def8121a4d181a9d0bc77b077644a7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Events related to someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Unforeseen events happening at the same time" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/9829201/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wayne Nelson (born June 1, 1950) is an American singer and musician best known for being the current lead singer of the rock band Little River Band, in which he also plays bass." ;
+        mtp:hasParticipant   meetup:0ad1aa7e62ec4032a34ce6ec61fbff0a ;
+        mtp:hasPurpose       meetup:660157a8c59a77da860cbdf08117ad54 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wayne_Nelson> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0ad1aa7e62ec4032a34ce6ec61fbff0a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wayne_Nelson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wayne Nelson" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/9829201/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nelson's daughter Aubree died in September 1992, aged 13, in a car collision in San Diego. Their son was injured in the same collision." ;
+        mtp:hasPurpose       meetup:22def8121a4d181a9d0bc77b077644a7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wayne_Nelson> ;
+        mtp:hasType          "HT" .
+
+meetup:4f2707098be723701e31922067e17a7c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a band and performing hit single" ;
+        mtp:hasEvidencePurposeSecond  "Management invitation to join the band" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/9829201/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While in Messina's band and opening for Little River Band in 1980, LRB's management invited Nelson to join the Australian band, and he officially became a member in 1981. In addition to playing bass, he was the lead singer on LRB's hit single, \"The Night Owls\" (1981)." ;
+        mtp:hasPurpose       meetup:4f2707098be723701e31922067e17a7c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wayne_Nelson> ;
+        mtp:hasType          "HT" .
+
+meetup:660157a8c59a77da860cbdf08117ad54
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6999436" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29990625" ;
+        mtp:hasSourcePurpose          "ML" .

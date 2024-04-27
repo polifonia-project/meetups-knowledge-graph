@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/3827019/6/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It did not chart in the US until a year after his fourth release, \"The Pied Piper,\" became known as his signature song and a Top 10 hit in the United States and the UK. Although his next single, a version of Phil Ochs' song \"Changes,\" also reached the charts in both the UK and US, it was much less successful." ;
+        mtp:hasParticipant   meetup:fb4b1015d5a3ebed42fbd789551efd30 ;
+        mtp:hasPurpose       meetup:972166db9fe81942fcfbd813ac253fd8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Crispian_St._Peters> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/3827019/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1966, St. Peters' career finally yielded a Top 10 hit in the UK Singles Chart, with \"You Were on My Mind,\" a song written and first recorded in 1964 by the Canadian folk duo, Ian & Sylvia, and a hit in the United States for We Five in 1965. St. Peters' single eventually hit No. 2 in the UK and was then released in the US on the Philadelphia-based Jamie Records label." ;
+        mtp:hasPurpose       meetup:dcbe1d071a21837114e19604565d02b1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Crispian_St._Peters> ;
+        mtp:hasType          "HT" .
+
+meetup:972166db9fe81942fcfbd813ac253fd8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Related to the success of the artist's songs" ;
+        mtp:hasEvidencePurposeSecond  "Timing of the chart success" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:fb4b1015d5a3ebed42fbd789551efd30
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Ochs> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Phil Ochs" .
+
+meetup:dcbe1d071a21837114e19604565d02b1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The success of St. Peters' hit song" ;
+        mtp:hasEvidencePurposeSecond  "The timing of the song's release in the US" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Phil_Ochs>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Crispian_St._Peters>
+        rdf:type  core:Person .

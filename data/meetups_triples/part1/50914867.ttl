@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:fdb02619cbd46b97d0c9c66f5030b2ef
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999857" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.2795567e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/50914867/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fredrikke Amalie Holtemann Rynning Waaler (7 May 1865 – 2 February 1952) was a Norwegian composer, violinist, and proponent for women's rights." ;
+        mtp:hasParticipant   meetup:017192c6ae75dbfa965e4a078bc152b0 ;
+        mtp:hasPurpose       meetup:fdb02619cbd46b97d0c9c66f5030b2ef ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fredrikke_Waaler> ;
+        mtp:hasType          "HT" .
+
+meetup:017192c6ae75dbfa965e4a078bc152b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fredrikke_Waaler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fredrikke Amalie Holtemann Rynning" .
+
+<http://dbpedia.org/resource/Fredrikke_Waaler>
+        rdf:type  core:Person .

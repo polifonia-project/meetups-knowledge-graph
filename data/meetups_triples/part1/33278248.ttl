@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ivan_Seal>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:6f5f422a7fa2de8a542a5f606d8b3720
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ivan_Seal> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ivan Seal" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Jack_Kirby>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/33278248/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ivan Seal (born 1973) is an English painter who is best known for his work on the albums covers for the music of Leyland J. Kirby." ;
+        mtp:hasParticipant   meetup:6f5f422a7fa2de8a542a5f606d8b3720 , meetup:16a1a20a554457f61c1554e25fe17347 ;
+        mtp:hasPurpose       meetup:96bf513d02e0336351142b35942e72ad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ivan_Seal> ;
+        mtp:hasType          "HM" .
+
+meetup:16a1a20a554457f61c1554e25fe17347
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Kirby> ;
+        mtp:hasOffset           "124" ;
+        mtp:hasSimilarityScore  "0.9641572289191253" ;
+        mtp:hasTextEvidence     "Kirby" .
+
+meetup:96bf513d02e0336351142b35942e72ad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996314" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00026568232" ;
+        mtp:hasSourcePurpose          "ML" .

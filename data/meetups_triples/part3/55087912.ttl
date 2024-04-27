@@ -1,0 +1,46 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Taylor_Ho_Bynum>
+        rdf:type  core:Person .
+
+meetup:a3d0757f704595e9f1c589800055ca2b
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "two years" ;
+        mtp:hasSource        "ML" .
+
+meetup:863539495a3c1a877cb6563a64b9825f
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2014" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2014-01-01"^^xsd:date ;
+        time:hasEnd          "2014-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/55087912/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:f8ca0b7427521ed11385215e6344244f ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Taylor_Ho_Bynum> ;
+        mtp:hasType     "HT" .
+
+meetup:f8ca0b7427521ed11385215e6344244f
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1975" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1975-01-01"^^xsd:date ;
+        time:hasEnd          "1975-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/55087912/4/18>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:a3d0757f704595e9f1c589800055ca2b , meetup:863539495a3c1a877cb6563a64b9825f ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Taylor_Ho_Bynum> ;
+        mtp:hasType     "HT" .

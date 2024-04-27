@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:10b32fc40a8f5858197139b34b517e0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kim_Sung-eun_(actress,_born_1983)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.94736493617196" ;
+        mtp:hasTextEvidence     "Kim Sung-eun" .
+
+meetup:04a1a5923ce4e13c568a2eddc854c60f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99011886" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007473977" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Kim_Sung-eun_(actress,_born_1983)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/50375461/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kim Sung-eun (born September 16, 1983) is a South Korean actress." ;
+        mtp:hasParticipant   meetup:10b32fc40a8f5858197139b34b517e0b ;
+        mtp:hasPurpose       meetup:04a1a5923ce4e13c568a2eddc854c60f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kim_Sung-eun_(actress,_born_1983)> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2610064/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jake Riviera (born Andrew Jakeman, February 1948, in Edgware, Middlesex, England) is a British music business entrepreneur, best known for his management of such performers as Elvis Costello and Nick Lowe and as co-founder (with Dave Robinson) of the pioneering British indie label, Stiff Records." ;
+        mtp:hasParticipant   meetup:02178bf86155182bab46acdc4e432081 , meetup:1464b21709c99c5964cf54584f0d270a , meetup:801d9462b3c6f21dfb927f72ac95c0fc , meetup:da9480c8c27e9d85952f7346cea4a8ba ;
+        mtp:hasPurpose       meetup:f2519b4ae40d48992f513b1a9ad1d92d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jake_Riviera> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Dave_Robinson_(American_football)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f2519b4ae40d48992f513b1a9ad1d92d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Jake Riviera is known for managing performers and co-founding a record label." ;
+        mtp:hasEvidencePurposeSecond  "Jake Riviera's business ventures in the music industry." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Elvis_Costello>
+        rdf:type  core:Person .
+
+meetup:02178bf86155182bab46acdc4e432081
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jake_Riviera> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jake Riviera" .
+
+<http://dbpedia.org/resource/Jake_Riviera>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Nick_Lowe>
+        rdf:type  core:Person .
+
+meetup:801d9462b3c6f21dfb927f72ac95c0fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nick_Lowe> ;
+        mtp:hasOffset           "195" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nick Lowe" .
+
+meetup:1464b21709c99c5964cf54584f0d270a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Robinson_(American_football)> ;
+        mtp:hasOffset           "229" ;
+        mtp:hasSimilarityScore  "0.584767886104399" ;
+        mtp:hasTextEvidence     "Dave Robinson" .
+
+meetup:da9480c8c27e9d85952f7346cea4a8ba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elvis_Costello> ;
+        mtp:hasOffset           "176" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elvis Costello" .

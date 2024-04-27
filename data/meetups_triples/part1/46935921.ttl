@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ece0e079422039c7531d04ac6e340553
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99981195" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.469495e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/46935921/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 2003 he has been regular drummer of the Eple Trio." ;
+        mtp:hasParticipant   meetup:a5670dcc28780c733e7d8342e9fa6ec1 ;
+        mtp:hasPurpose       meetup:64e210f92eb579db212b1ea05c82c315 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jonas_Howden_Sjøvaag> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jonas_Howden_Sjøvaag>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a5670dcc28780c733e7d8342e9fa6ec1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jonas_Howden_Sjøvaag> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sjøvaag" .
+
+meetup:58d0953b6a581cc08568cfc7b4da96f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jonas_Howden_Sjøvaag> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sjøvaag" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/46935921/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He graduated at the Norwegian Academy of Music with a Master's degree in improvised music in 2008." ;
+        mtp:hasParticipant   meetup:58d0953b6a581cc08568cfc7b4da96f2 ;
+        mtp:hasPurpose       meetup:ece0e079422039c7531d04ac6e340553 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jonas_Howden_Sjøvaag> ;
+        mtp:hasType          "HT" .
+
+meetup:64e210f92eb579db212b1ea05c82c315
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.78925425" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21039528" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Charlie_McCoy>
+        rdf:type  core:Person .
+
+meetup:abf0ea663d69ac4f3c543807e4b4e287
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charlie_McCoy> ;
+        mtp:hasOffset           "99" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charlie McCoy" .
+
+<http://w3id.org/polifonia/pilot/meetups/1540074/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "McCoy's performance that night, along with the positive response from the audience, led to him and his band being signed to the Old South Jamboree." ;
+        mtp:hasParticipant   meetup:abf0ea663d69ac4f3c543807e4b4e287 ;
+        mtp:hasPurpose       meetup:abbe39f7b4c883f3bc77e2bf30c53405 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charlie_McCoy> ;
+        mtp:hasType          "HT" .
+
+meetup:abbe39f7b4c883f3bc77e2bf30c53405
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about McCoy's performance and his band being signed to the Old South Jamboree, indicating a topic related to music making." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions McCoy and his band being signed, which implies a business-related topic, possibly a meeting or negotiation." ;
+        mtp:hasSourcePurpose          "LLM" .

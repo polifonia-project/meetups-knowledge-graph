@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/39252345/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jun Hyun-moo (born November 7, 1977) is a South Korean host and television personality." ;
+        mtp:hasParticipant   meetup:4beaae86cefd94099ae279266858749c ;
+        mtp:hasPurpose       meetup:50afa8954eed598f2e5fb8d12c6d4808 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jun_Hyun-moo> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jun_Hyun-moo>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:4beaae86cefd94099ae279266858749c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jun_Hyun-moo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jun Hyun-moo" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:50afa8954eed598f2e5fb8d12c6d4808
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.72982025" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2700315" ;
+        mtp:hasSourcePurpose          "ML" .

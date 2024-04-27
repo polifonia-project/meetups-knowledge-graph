@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Madonna>
+        rdf:type  core:Person .
+
+meetup:867120f098c7a491b71021441bca0d77
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.46854764" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4367307" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e1605faab7b5ad2fa12bc580b558b78d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Madonna> ;
+        mtp:hasOffset           "188" ;
+        mtp:hasSimilarityScore  "0.9999999962693096" ;
+        mtp:hasTextEvidence     "Madonna" .
+
+meetup:8e7905bde9bd200cce7233c520f16201
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tracy_Young> ;
+        mtp:hasOffset           "47" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tracy Young" .
+
+<http://dbpedia.org/resource/Tracy_Young>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/37353630/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "With more than 25 years in the music industry, Young has racked up over 60 #1 Billboard Club Chart Hits and has collaborated on remixes with over 100 artists, including 14 exclusively for Madonna." ;
+        mtp:hasParticipant   meetup:e1605faab7b5ad2fa12bc580b558b78d , meetup:8e7905bde9bd200cce7233c520f16201 ;
+        mtp:hasPurpose       meetup:867120f098c7a491b71021441bca0d77 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tracy_Young> ;
+        mtp:hasType          "HM" .

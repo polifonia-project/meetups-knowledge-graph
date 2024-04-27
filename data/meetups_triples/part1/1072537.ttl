@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Sammy_Davis_Jr.>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Frank_Sinatra>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a0e6f6dd79658ff9fd66d8fdf324130a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing at Jilly's night club" ;
+        mtp:hasEvidencePurposeSecond  "Frequent guests and celebrities" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:cacd93f0f0fd4446e2a0b65cbac8f058
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sammy_Davis_Jr.> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sammy Davis, Jr." .
+
+<http://dbpedia.org/resource/Marilyn_Monroe>
+        rdf:type  core:Person .
+
+meetup:5d59a2500122cf2cc01c43192e448312
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Liza_Minnelli> ;
+        mtp:hasOffset           "103" ;
+        mtp:hasSimilarityScore  "0.999999999997641" ;
+        mtp:hasTextEvidence     "Liza" .
+
+<http://dbpedia.org/resource/Liza_Minnelli>
+        rdf:type  core:Person .
+
+meetup:d28a5c72355ff736bc0d1b17543aee15
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Sinatra> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Frank Sinatra" .
+
+meetup:f08eb3619837a70281d30405eff5457d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marilyn_Monroe> ;
+        mtp:hasOffset           "121" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marilyn Monroe" .
+
+<http://w3id.org/polifonia/pilot/meetups/1072537/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was a pianist and cabaret singer at Jilly's, a popular New York City night club in the 1960s owned by Jilly Rizzo. Frequent guests included Frank Sinatra and his Rat Pack, Dean Martin and Sammy Davis, Jr. Others, like Liza Minnelli and Marilyn Monroe, also frequented the club." ;
+        mtp:hasParticipant   meetup:cacd93f0f0fd4446e2a0b65cbac8f058 , meetup:f08eb3619837a70281d30405eff5457d , meetup:d28a5c72355ff736bc0d1b17543aee15 , meetup:5d59a2500122cf2cc01c43192e448312 ;
+        mtp:hasPurpose       meetup:a0e6f6dd79658ff9fd66d8fdf324130a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Val_Anthony> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Val_Anthony>
+        rdf:type  core:Person .

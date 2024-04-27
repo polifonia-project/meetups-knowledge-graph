@@ -1,0 +1,95 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:2f4b43c48d70d71e22fafc6701c982ed
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Regina_Strinasacchi> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Strinasacchi" .
+
+<http://w3id.org/polifonia/pilot/meetups/8485929/1/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1785, Strinasacchi married Johann Conrad Schlick (born Munster, Germany, 1759— died Gotha, 1825), composer, cellist, mandolinist and konzertmeister of the Gotha ducal band." ;
+        mtp:hasParticipant   meetup:888e3ed7fc252a86fcfe6193171a3f63 , meetup:2f4b43c48d70d71e22fafc6701c982ed ;
+        mtp:hasPurpose       meetup:9fa6e2db3a3d313a50ed8665b1a1edb0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Regina_Strinasacchi> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/8485929/1/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was also reported to have died in Gotha." ;
+        mtp:hasParticipant   meetup:a08b064d095d81cf6e3ce215f821d981 ;
+        mtp:hasPurpose       meetup:44d627213d5c6e82736c9849d012174d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Regina_Strinasacchi> ;
+        mtp:hasType          "HT" .
+
+meetup:fd6eade8b817692139efb552b2f21c18
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Regina_Strinasacchi> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Strinasacchi" .
+
+meetup:00e7f2ef6d16d4571e8e08e7b4b454c4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98158747" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013698183" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Regina_Strinasacchi>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8485929/1/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Upon her husband's death, she moved with her son to Dresden, where she lived out the remainder of her life." ;
+        mtp:hasParticipant   meetup:fd6eade8b817692139efb552b2f21c18 ;
+        mtp:hasPurpose       meetup:00e7f2ef6d16d4571e8e08e7b4b454c4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Regina_Strinasacchi> ;
+        mtp:hasType          "HT" .
+
+meetup:a08b064d095d81cf6e3ce215f821d981
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Regina_Strinasacchi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Strinasacchi" .
+
+meetup:888e3ed7fc252a86fcfe6193171a3f63
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johann Conrad Schlick" .
+
+meetup:9fa6e2db3a3d313a50ed8665b1a1edb0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to the profession of music" ;
+        mtp:hasEvidencePurposeSecond  "Related to personal relationships and marriage" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:44d627213d5c6e82736c9849d012174d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998346" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0011242558" ;
+        mtp:hasSourcePurpose          "ML" .

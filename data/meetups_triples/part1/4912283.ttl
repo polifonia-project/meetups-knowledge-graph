@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Paul_Green_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4912283/15/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In June 2007, Paul unveiled his first School of Rock festival. The two-day event at the Jersey Shore in Asbury Park, New Jersey, attracted almost 10,000 people and served as the quintessential example of the School's initial hopes: music education for young musicians through live performances." ;
+        mtp:hasPurpose       meetup:553de0039f39da78de7bf8bbcd160087 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Green_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:553de0039f39da78de7bf8bbcd160087
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "A festival attracting thousands of people" ;
+        mtp:hasEvidencePurposeSecond  "Music education for young musicians" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .

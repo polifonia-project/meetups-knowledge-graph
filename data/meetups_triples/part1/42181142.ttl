@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/42181142/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Scott Kalvert (August 15, 1964 – March 5, 2014) was an American film director, known mainly for his 1995 film The Basketball Diaries, starring Leonardo DiCaprio and Mark Wahlberg, and 2002's Deuces Wild." ;
+        mtp:hasParticipant   meetup:60d671ee1bef5a27454c23d467d239d0 , meetup:9a8030b5c9f7382ab9e402fd1f1f87d4 , meetup:27f44148384be6695f97030c54962ac4 ;
+        mtp:hasPurpose       meetup:83de21fe02a0b5605d28d483545b4cc0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Scott_Kalvert> ;
+        mtp:hasType          "HM" .
+
+meetup:83de21fe02a0b5605d28d483545b4cc0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9407168" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0591966" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9a8030b5c9f7382ab9e402fd1f1f87d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Wahlberg> ;
+        mtp:hasOffset           "167" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mark Wahlberg" .
+
+<http://dbpedia.org/resource/Leonardo_DiCaprio>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:27f44148384be6695f97030c54962ac4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leonardo_DiCaprio> ;
+        mtp:hasOffset           "145" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Leonardo DiCaprio" .
+
+meetup:60d671ee1bef5a27454c23d467d239d0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Scott_Kalvert> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Scott Kalvert" .
+
+<http://dbpedia.org/resource/Mark_Wahlberg>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Scott_Kalvert>
+        rdf:type  core:Person .

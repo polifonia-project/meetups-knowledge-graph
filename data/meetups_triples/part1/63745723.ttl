@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:da50f2c338d02b08976e475ceaffffe1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about art" ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the influence of Walter Benjamin and Seth Price" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Seth_Price>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/63745723/13/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cuba (2015) is a work of video assemblage which appears to be inspired by Walter Benjamin’s Arcades Project. In Queens To Hollywood (2015), Shirt appropriates footage from the artist Seth Price." ;
+        mtp:hasParticipant   meetup:13c916445583754343c4e2e2bc12409e ;
+        mtp:hasPurpose       meetup:da50f2c338d02b08976e475ceaffffe1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shirt_(artist)> ;
+        mtp:hasType          "HT" .
+
+meetup:13c916445583754343c4e2e2bc12409e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Seth_Price> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Seth Price" .
+
+<http://dbpedia.org/resource/Shirt_(artist)>
+        rdf:type  core:Person .

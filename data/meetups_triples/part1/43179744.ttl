@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:49007df8750b6996340a40125903fbb0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Webber founded an electronic music label" ;
+        mtp:hasEvidencePurposeSecond  "The label includes various artists" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/43179744/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Webber founded, in 2013, the Toronto/Los Angeles based electronic music label FMLY. Distributed through Universal Music Canada, the FMLY roster includes The Prodigy, Rusko, Ferry Corsten, New World Punx, Guiliano Rascan, Cyzon, and Plain Language." ;
+        mtp:hasParticipant   meetup:f2b253344c2869323500b2f9424a288c , meetup:e7f444dd8d48a8ca09d772494872d3c4 ;
+        mtp:hasPurpose       meetup:49007df8750b6996340a40125903fbb0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Seb_Webber> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Seb_Webber>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ferry_Corsten>
+        rdf:type  core:Person .
+
+meetup:f2b253344c2869323500b2f9424a288c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ferry_Corsten> ;
+        mtp:hasOffset           "89" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ferry Corsten" .
+
+meetup:e7f444dd8d48a8ca09d772494872d3c4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "120" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Guiliano Rascan" .

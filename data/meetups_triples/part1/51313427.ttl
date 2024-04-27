@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/51313427/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tara McNeill (pronounced TAR-a) is an Irish violinist, harpist, and soprano singer from Antrim, Northern Ireland." ;
+        mtp:hasParticipant   meetup:ccc66bae9ff875cef8bdb8e3f50abdb2 , meetup:1ec16ca270804582afe407d6512759e6 ;
+        mtp:hasPurpose       meetup:1141a5924fc1f86c532662607a5f2593 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tara_McNeill> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Tara_McNeill>
+        rdf:type  core:Person .
+
+meetup:ccc66bae9ff875cef8bdb8e3f50abdb2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tara_McNeill> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tara McNeill" .
+
+meetup:1ec16ca270804582afe407d6512759e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "TAR-a" .
+
+meetup:1141a5924fc1f86c532662607a5f2593
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.750162" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1768014" ;
+        mtp:hasSourcePurpose          "ML" .

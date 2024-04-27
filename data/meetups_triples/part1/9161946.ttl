@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:76d93ff12ae3461e9a05d8d50e53d2d0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97962636" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.019791326" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a0b25d17461804f3c71ccc34674c8600
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Rosenstock> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Jeff Rosenstock" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/9161946/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeff Rosenstock was raised in Baldwin on New York's Long Island." ;
+        mtp:hasParticipant   meetup:a0b25d17461804f3c71ccc34674c8600 ;
+        mtp:hasPurpose       meetup:76d93ff12ae3461e9a05d8d50e53d2d0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Rosenstock> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jeff_Rosenstock>
+        rdf:type  core:Person .

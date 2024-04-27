@@ -1,0 +1,96 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Yank_Barry>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:25bbce05cdbdccaef5a86aac1d8f821d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9773143" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.022656508" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8e52518fe5cf4bc94711769956f9e18a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yank_Barry> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Yank Barry" .
+
+meetup:7e77a807eb1a8b321a136e476f1043f6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Barry's family and upbringing" ;
+        mtp:hasEvidencePurposeSecond  "Information about Barry's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/26298389/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Barry was born in Montreal, Canada, in 1948 to Arthur Falovitch and Ruth (née Reznick) Falovitch-Pickholtz. He grew up in the Jewish community of Montreal and had five siblings." ;
+        mtp:hasPurpose       meetup:7e77a807eb1a8b321a136e476f1043f6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yank_Barry> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Gerald_Barry_(composer)>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:04e58a77e2ac5cfcd54473da11a8d3e7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.63538307" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3645984" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/26298389/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is a musician, songwriter, and music producer who had a stint as the lead singer of the garage rock band The Kingsmen in the 1960s." ;
+        mtp:hasParticipant   meetup:1f479e153be3b50bef6411ab53781f45 ;
+        mtp:hasPurpose       meetup:04e58a77e2ac5cfcd54473da11a8d3e7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yank_Barry> ;
+        mtp:hasType          "HT" .
+
+meetup:1f479e153be3b50bef6411ab53781f45
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yank_Barry> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Yank Barry" .
+
+meetup:c26e9dafbe6e2ac2fdecdc9147e6a843
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gerald_Barry_(composer)> ;
+        mtp:hasOffset           "36" ;
+        mtp:hasSimilarityScore  "0.9046052631437398" ;
+        mtp:hasTextEvidence     "Gerald Barry" .
+
+<http://w3id.org/polifonia/pilot/meetups/26298389/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yank Barry (born 29 January 1948 as Gerald Barry Falovitch) is a Canadian businessman and musician." ;
+        mtp:hasParticipant   meetup:c26e9dafbe6e2ac2fdecdc9147e6a843 , meetup:8e52518fe5cf4bc94711769956f9e18a ;
+        mtp:hasPurpose       meetup:25bbce05cdbdccaef5a86aac1d8f821d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yank_Barry> ;
+        mtp:hasType          "HM" .

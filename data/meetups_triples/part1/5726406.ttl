@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Touré_(journalist)>
+        rdf:type  core:Person .
+
+meetup:28a6224394bbc451b005f95dbe0fcb86
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Touré_(journalist)> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Touré" .
+
+<http://w3id.org/polifonia/pilot/meetups/5726406/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Touré was born in Niafunké, Mali in 1981 to Ali Farka Touré. Despite his father's discouragement and his family's lineage as a tribe of soldiers, Touré secretly took up the guitar and enrolled in the Institut National des Arts in Bamako, Mali." ;
+        mtp:hasParticipant   meetup:28a6224394bbc451b005f95dbe0fcb86 ;
+        mtp:hasPurpose       meetup:ed0320e8f3d58ad0ae94370395368ea1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vieux_Farka_Touré> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Vieux_Farka_Touré>
+        rdf:type  core:Person .
+
+meetup:ed0320e8f3d58ad0ae94370395368ea1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions Touré's interest in playing the guitar." ;
+        mtp:hasEvidencePurposeSecond  "The sentence provides information about Touré's background and family." ;
+        mtp:hasSourcePurpose          "LLM" .

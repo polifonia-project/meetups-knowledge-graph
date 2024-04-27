@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:032200d49ee38c0329158bc32ffebd84
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9251997" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0742428" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1b736ba2b962089c05e1ee1936e6047e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Esmond_Edwards> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Esmond Edwards" .
+
+meetup:d5270001f8278f62b921f36a845ee45d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84331477" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1566839" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/13685108/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was originally hired by founder Bob Weinstock as a photographer for the record label." ;
+        mtp:hasParticipant   meetup:d6e69b1b20d7c385420477b12053f996 , meetup:7b64963502f8b27876a60db3b2491d04 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Esmond_Edwards> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/13685108/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Esmond Edwards (October 29, 1927 – January 20, 2007) was an American photographer, record producer, and recording engineer." ;
+        mtp:hasParticipant   meetup:7ae7c65a6ce282ca899cfdf521c35ea1 ;
+        mtp:hasPurpose       meetup:d5270001f8278f62b921f36a845ee45d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Esmond_Edwards> ;
+        mtp:hasType          "HT" .
+
+meetup:d6e69b1b20d7c385420477b12053f996
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Weinstock> ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Weinstock" .
+
+<http://dbpedia.org/resource/Bob_Weinstock>
+        rdf:type  core:Person .
+
+meetup:7b64963502f8b27876a60db3b2491d04
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Esmond_Edwards> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Esmond Edwards" .
+
+meetup:7ae7c65a6ce282ca899cfdf521c35ea1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Esmond_Edwards> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Esmond Edwards" .
+
+<http://w3id.org/polifonia/pilot/meetups/13685108/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked for the jazz label Prestige Records during the 1950s and early 1960s." ;
+        mtp:hasParticipant   meetup:1b736ba2b962089c05e1ee1936e6047e ;
+        mtp:hasPurpose       meetup:032200d49ee38c0329158bc32ffebd84 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Esmond_Edwards> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Esmond_Edwards>
+        rdf:type  core:Person .

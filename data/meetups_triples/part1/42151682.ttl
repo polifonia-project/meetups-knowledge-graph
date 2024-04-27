@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/42151682/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was born in Bandaka (then Coquelathville) in the Belgian Congo." ;
+        mtp:hasParticipant   meetup:1ede500729f6d51de4ad6b7539f7ffca ;
+        mtp:hasPurpose       meetup:d9a3c42333e64414c36bf0324fdda8cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucie_Eyenga> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lucie_Eyenga>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/42151682/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The congolese music scene lost one of its greatest female voices of all time on December 12, 1987, when Lucie Eyenga died in Kinshasa." ;
+        mtp:hasParticipant   meetup:7762d25a3098332c001acc561d25a895 ;
+        mtp:hasPurpose       meetup:0e7e2574a5825718cce6ea3e27644af1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucie_Eyenga> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:d9a3c42333e64414c36bf0324fdda8cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.60778445" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29198074" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7762d25a3098332c001acc561d25a895
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lucie_Eyenga> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lucie Eyenga" .
+
+meetup:1ede500729f6d51de4ad6b7539f7ffca
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lucie_Eyenga> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lucie Eyenga" .
+
+meetup:0e7e2574a5825718cce6ea3e27644af1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.4988524" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.49088964" ;
+        mtp:hasSourcePurpose          "ML" .

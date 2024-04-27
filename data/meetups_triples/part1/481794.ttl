@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:2ac4ca29f22f16a496b282d3ab3c4ccb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99390703" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.006088397" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/481794/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Art Porter Jr. was born in Little Rock, Arkansas in 1961." ;
+        mtp:hasParticipant   meetup:2a7e462eef722a4efe64aec0ce7dcd0a ;
+        mtp:hasPurpose       meetup:805ed54dcfac37e1cd3d23b0dd15fff7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Art_Porter_Jr.> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/481794/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was during this time that he was arrested and charged with working under-age in a nightclub serving alcoholic beverages." ;
+        mtp:hasParticipant   meetup:fc93115c4aed45bec0978e538d84c92f ;
+        mtp:hasPurpose       meetup:2ac4ca29f22f16a496b282d3ab3c4ccb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Art_Porter_Jr.> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:2a7e462eef722a4efe64aec0ce7dcd0a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Art_Porter_Jr.> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Art Porter Jr." .
+
+<http://dbpedia.org/resource/Art_Porter_Jr.>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:fc93115c4aed45bec0978e538d84c92f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Art_Porter_Jr.> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Art Porter Jr." .
+
+meetup:805ed54dcfac37e1cd3d23b0dd15fff7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999297" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.8311947e-06" ;
+        mtp:hasSourcePurpose          "ML" .

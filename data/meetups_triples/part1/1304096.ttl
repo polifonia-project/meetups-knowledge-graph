@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:29e5a1fb6ca2281602af16626ce3b490
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.75381255" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24608552" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ef59c7231d068c9f8a55e774c0cefe88
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jaymz_Bee> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jaymz Bee" .
+
+meetup:da3a66975e04338ff9d7f79c7f4418f4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9198517" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.061266128" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/John_Howard>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1304096/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2002, he released a new album, produced by Dave Howard, Sub Urban by Jaymz Bee and the Deep Lounge Coalition and followed that with another Royal Jelly Orchestra release entitled Seriously Happy for Wychwood Productions." ;
+        mtp:hasParticipant   meetup:ef59c7231d068c9f8a55e774c0cefe88 , meetup:dc7d24d66e35da937be3f5f6ac365e38 ;
+        mtp:hasPurpose       meetup:da3a66975e04338ff9d7f79c7f4418f4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jaymz_Bee> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1304096/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jaymz Bee (born April 13, 1963) is a Canadian musician, writer, emcee and radio personality based in Toronto, Ontario." ;
+        mtp:hasParticipant   meetup:e78446b8ffaf6539593ca9b423144dcd ;
+        mtp:hasPurpose       meetup:29e5a1fb6ca2281602af16626ce3b490 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jaymz_Bee> ;
+        mtp:hasType          "HT" .
+
+meetup:e78446b8ffaf6539593ca9b423144dcd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jaymz_Bee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jaymz Bee" .
+
+<http://dbpedia.org/resource/Jaymz_Bee>
+        rdf:type  core:Person .
+
+meetup:dc7d24d66e35da937be3f5f6ac365e38
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Howard> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "0.8311200944295691" ;
+        mtp:hasTextEvidence     "Howard" .

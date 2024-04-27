@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2864028/9/18>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In September 2013 they played a sold out acoustic show at London's Cadogan Hall and released 'An Acoustic Skunk Anansie Live In London' to critical acclaim." ;
+        mtp:hasPurpose       meetup:7b1833c4690fb6754af9dd9bcc62c3bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Richardson_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:7b1833c4690fb6754af9dd9bcc62c3bf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performing a sold out acoustic show" ;
+        mtp:hasEvidencePurposeSecond  "Releasing 'An Acoustic Skunk Anansie Live In London'" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Mark_Richardson_(musician)>
+        rdf:type  core:Person .

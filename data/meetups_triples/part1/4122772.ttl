@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4122772/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Norma Zimmer (July 13, 1923 – May 10, 2011) was an American vocalist, best remembered for her 22-year tenure as Lawrence Welk's \"Champagne Lady\" on The Lawrence Welk Show." ;
+        mtp:hasParticipant   meetup:c89fe38429138aa48afa54a8a9f2c4b4 , meetup:c9192f3f113417f509006279def616a7 ;
+        mtp:hasPurpose       meetup:f2ef9bb8b80f399f279e0af699f8c07b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Norma_Zimmer> ;
+        mtp:hasType          "HM" .
+
+meetup:c9192f3f113417f509006279def616a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lawrence_Welk> ;
+        mtp:hasOffset           "114" ;
+        mtp:hasSimilarityScore  "0.9981851164189262" ;
+        mtp:hasTextEvidence     "Lawrence Welk" .
+
+meetup:f2ef9bb8b80f399f279e0af699f8c07b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.64301" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22758473" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Norma_Zimmer>
+        rdf:type  core:Person .
+
+meetup:c89fe38429138aa48afa54a8a9f2c4b4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Norma_Zimmer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Norma Zimmer" .
+
+<http://dbpedia.org/resource/Lawrence_Welk>
+        rdf:type  core:Person .

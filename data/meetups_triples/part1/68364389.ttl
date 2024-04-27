@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Natalia_Khoma>
+        rdf:type  core:Person .
+
+meetup:5c680c411d21d2e3d015d6648ed356e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Natalia_Khoma> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Natalia Khoma" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/68364389/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is the first and only Ukrainian cellist to become a laureate of the International Tchaikovsky Competition in Moscow, Russia." ;
+        mtp:hasParticipant   meetup:5c680c411d21d2e3d015d6648ed356e7 ;
+        mtp:hasPurpose       meetup:c8d99db60bd76fa20292e4b912bd5de2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Natalia_Khoma> ;
+        mtp:hasType          "HT" .
+
+meetup:c8d99db60bd76fa20292e4b912bd5de2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.80042046" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10456192" ;
+        mtp:hasSourcePurpose          "ML" .

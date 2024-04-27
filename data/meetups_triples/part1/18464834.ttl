@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_Wort_Hannam>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:fdfdde58e735ec13840bd0ea51a746fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Wort_Hannam> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Wort Hannam" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:eb9ee1cfb76397376cd59dd6118a86f8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94928443" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04416155" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/18464834/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Themes which are central to his music include life in Western Canada, and the human experience as seen through the eyes of working folk." ;
+        mtp:hasParticipant   meetup:fdfdde58e735ec13840bd0ea51a746fe ;
+        mtp:hasPurpose       meetup:cc364c01e96f690e7b2396e5ecfc72d1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Wort_Hannam> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:cc364c01e96f690e7b2396e5ecfc72d1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6771941" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2667397" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/18464834/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Wort Hannam is a Canadian folk musician, from Fort Macleod, Alberta." ;
+        mtp:hasParticipant   meetup:7a37366da42eca0f6d2e1b99f9e0708a ;
+        mtp:hasPurpose       meetup:eb9ee1cfb76397376cd59dd6118a86f8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Wort_Hannam> ;
+        mtp:hasType          "HT" .
+
+meetup:7a37366da42eca0f6d2e1b99f9e0708a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Wort_Hannam> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Wort Hannam" .

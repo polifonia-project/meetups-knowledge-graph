@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/20458973/4/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Terps climbed to a #2 national ranking by early December. The Terrapins finished second in the ACC and Francis was named to the All-ACC first team and the All ACC Tournament team." ;
+        mtp:hasParticipant   meetup:f3f6bd955dbcfdfd1fc3ee3bbed5ee2f ;
+        mtp:hasPurpose       meetup:8df99abcf8262cc69d1e02dee6a19f8d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Francis> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f3f6bd955dbcfdfd1fc3ee3bbed5ee2f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pope_Francis> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "0.8331243874257072" ;
+        mtp:hasTextEvidence     "Francis" .
+
+<http://dbpedia.org/resource/Steve_Francis>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Pope_Francis>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/20458973/24/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"On February 17, 2002, Francis's #23 jersey was honored by Maryland in a ceremony preceding the game against the #1 ranked Duke Blue Devils. Francis sat on the team's bench during the game and cheered as the Terrapins upset the Blue Devils 87–73." ;
+        mtp:hasPurpose       meetup:90a5ee9491684442c673ce5d38101642 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Francis> ;
+        mtp:hasType          "HT" .
+
+meetup:90a5ee9491684442c673ce5d38101642
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Honoring Francis's jersey" ;
+        mtp:hasEvidencePurposeSecond  "Francis's presence at the game" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8df99abcf8262cc69d1e02dee6a19f8d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Sports achievements" ;
+        mtp:hasEvidencePurposeSecond  "Academic recognition" ;
+        mtp:hasSourcePurpose          "LLM" .

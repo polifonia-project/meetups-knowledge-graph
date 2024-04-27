@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Maurice_Ravel>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:fdd1dbdb0870f5ba87134f5c1e7ba4cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arbie_Orenstein> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Arbie Orenstein" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:2348ef69817ab3b9466e6c3406fb76be
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8879801" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10711554" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Arbie_Orenstein>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/46298560/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Arbie Orenstein  (born 1937) is an American musicologist, author, academic and pianist, known as a scholar of the life and works of the composer Maurice Ravel and, more generally, as an expert on Jewish music." ;
+        mtp:hasParticipant   meetup:3fe98a2e60a6c21c86efbc8ff81205a2 , meetup:fdd1dbdb0870f5ba87134f5c1e7ba4cc ;
+        mtp:hasPurpose       meetup:2348ef69817ab3b9466e6c3406fb76be ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arbie_Orenstein> ;
+        mtp:hasType          "HM" .
+
+meetup:3fe98a2e60a6c21c86efbc8ff81205a2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maurice_Ravel> ;
+        mtp:hasOffset           "145" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Maurice Ravel" .

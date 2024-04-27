@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c6af295a5fd9185727b3ea3b7ce08ad6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hisao_Tanabe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hisao Tanabe" .
+
+meetup:562166087ad736a443bd34f0fa61d141
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "119" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Heisao" .
+
+meetup:dc3f447a6221cba8767695eec30a21dd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7014161" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26045406" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a67f1281c454fc903024c2a463ece44c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the preservation of traditional music in Korea." ;
+        mtp:hasEvidencePurposeSecond  "It also mentions the role of the Japanese government in supporting traditional music." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/33424927/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hisao Tanabe  (田辺 尚雄, Tanabe Hisao, August 16, 1883 – March 5, 1984) was a Japanese musicologist responsible for initiating the study of Asian music in Japan." ;
+        mtp:hasParticipant   meetup:c6af295a5fd9185727b3ea3b7ce08ad6 ;
+        mtp:hasPurpose       meetup:dc3f447a6221cba8767695eec30a21dd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hisao_Tanabe> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/33424927/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In April 1921, he visited Korea and played an important role in rescuing the threatened music tradition of the Joseon court. Though the Japanese government had dissolved Korea's Royal Music Institute, forcing it to rely on private sponsorship, he successfully argued that \"traditional music and dance like aak will be lost forever if it is not supported\" by the Japanese government." ;
+        mtp:hasParticipant   meetup:562166087ad736a443bd34f0fa61d141 ;
+        mtp:hasPurpose       meetup:a67f1281c454fc903024c2a463ece44c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hisao_Tanabe> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Hisao_Tanabe>
+        rdf:type  core:Person .

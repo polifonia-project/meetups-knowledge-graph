@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Eddie_Van_Halen>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/22022199/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hubble moved to New York City in 1944, and by the late 1940s had played with Bob Wilber, Buddy Rich, Doc Evans, Alvino Rey, and Eddie Condon. He played with his own ensemble from the late 1940s, recording for Savoy Records in 1952." ;
+        mtp:hasParticipant   meetup:6a8d930f4f8e46bf8a9852b139f5e6b6 ;
+        mtp:hasPurpose       meetup:43383cbfb7f3ef22e6198d8e3a79ab86 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Hubble> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Eddie_Hubble>
+        rdf:type  core:Person .
+
+meetup:6a8d930f4f8e46bf8a9852b139f5e6b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Van_Halen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Eddie" .
+
+meetup:43383cbfb7f3ef22e6198d8e3a79ab86
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Hubble's career as a musician" ;
+        mtp:hasEvidencePurposeSecond  "Hubble's relocation to New York City" ;
+        mtp:hasSourcePurpose          "LLM" .

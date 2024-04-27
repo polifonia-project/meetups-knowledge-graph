@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/22981969/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Though his work takes him nearly everywhere he primarily resides in Studio City, Los Angeles, CA and Haiku-Pauwela, Hawaii." ;
+        mtp:hasParticipant   meetup:685b5cfcd06d808aa28e28fdb1b1225a ;
+        mtp:hasPurpose       meetup:a272bb5535150da5b749c6f386412016 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Hutchinson_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:685b5cfcd06d808aa28e28fdb1b1225a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Hutchinson_(musician)> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James Hutchinson" .
+
+meetup:1bb3f9c93eddbba2ba7b446f74a43807
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9432673" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.056457784" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/James_Hutchinson_(musician)>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Bonnie_Raitt>
+        rdf:type  core:Person .
+
+meetup:41ea033ca6f2a866a2815564057f7842
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bonnie_Raitt> ;
+        mtp:hasOffset           "101" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "Bonnie Raitt" .
+
+meetup:d99c75f5e610312631970a9d9d233fe0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Hutchinson_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9795524308476466" ;
+        mtp:hasTextEvidence     "James Hutchinson" .
+
+<http://w3id.org/polifonia/pilot/meetups/22981969/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Hutchinson (born January 24, 1953) is an American session bassist best known for his work with Bonnie Raitt." ;
+        mtp:hasParticipant   meetup:41ea033ca6f2a866a2815564057f7842 , meetup:d99c75f5e610312631970a9d9d233fe0 ;
+        mtp:hasPurpose       meetup:1bb3f9c93eddbba2ba7b446f74a43807 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Hutchinson_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:a272bb5535150da5b749c6f386412016
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9379164" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05790832" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a7c082c78002756b15a6efa6434f37be
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement with blues musicians" ;
+        mtp:hasEvidencePurposeSecond  "Travel and personal experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Jacques_Demêtre>
+        rdf:type  core:Person .
+
+meetup:e213c41264202c85926b404b71e698f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Vicheney" .
+
+<http://w3id.org/polifonia/pilot/meetups/64380457/1/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He met Sonny Terry and Brownie McGhee in 1958, and in 1959 made his first visit to the United States, with Marcel Chauvard. In the U.S., where blues music was largely overlooked by mainstream culture, he met blues musicians in Chicago, Detroit and New York City." ;
+        mtp:hasParticipant   meetup:e213c41264202c85926b404b71e698f9 ;
+        mtp:hasPurpose       meetup:a7c082c78002756b15a6efa6434f37be ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jacques_Demêtre> ;
+        mtp:hasType          "HT" .

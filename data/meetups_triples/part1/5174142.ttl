@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8ddafa09c1e25b181d0c44b48bad9658
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999826" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.9670383e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:9490dbddfef9e4ea5e53888bca3a50f3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating a band and playing guitar" ;
+        mtp:hasEvidencePurposeSecond  "Formation of personal relationships" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Steinar_Sverd_Johnsen>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Jan_Axel_Blomberg>
+        rdf:type  core:Person .
+
+meetup:64454ee13b6fcb42c7530cf083366fb4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jan_Axel_Blomberg> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jan Axel Blomberg" .
+
+<http://w3id.org/polifonia/pilot/meetups/5174142/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He formed the band with Jan Axel Blomberg (also known as Hellhammer) of Mayhem in 1987, originally under the moniker Mortem (where he played guitar)." ;
+        mtp:hasParticipant   meetup:64454ee13b6fcb42c7530cf083366fb4 , meetup:378b21537d5b633864c98e39b1521762 ;
+        mtp:hasPurpose       meetup:9490dbddfef9e4ea5e53888bca3a50f3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steinar_Sverd_Johnsen> ;
+        mtp:hasType          "HM" .
+
+meetup:a0e4bfdf99b5a20afbe64c1463e6ed53
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steinar_Sverd_Johnsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Steinar Sverd Johnsen" .
+
+meetup:378b21537d5b633864c98e39b1521762
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steinar_Sverd_Johnsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steinar Sverd Johnsen" .
+
+<http://w3id.org/polifonia/pilot/meetups/5174142/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steinar Sverd Johnsen is a Norwegian keyboardist and composer, born 1972." ;
+        mtp:hasParticipant   meetup:a0e4bfdf99b5a20afbe64c1463e6ed53 ;
+        mtp:hasPurpose       meetup:8ddafa09c1e25b181d0c44b48bad9658 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steinar_Sverd_Johnsen> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fc79951e86321552b8205a5acd169ab7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Coles> ;
+        mtp:hasOffset           "136" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jack Coles" .
+
+<http://w3id.org/polifonia/pilot/meetups/59343963/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jack Coles was born in London and began music at an early age." ;
+        mtp:hasParticipant   meetup:9e3f387dbf637ce0235705186ba8dfc0 ;
+        mtp:hasPurpose       meetup:5d81fa1b04529723055a833e4c33e96b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Coles> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jack_Coles>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/59343963/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After studying the trumpet at the Royal Military School of Music from 1933 to 1934 and winning the \"Gold Cup\" for best all-round pupil, Coles played with leading British dance bands until the outbreak of war in 1939, when he enlisted in the King's Royal Rifle Corps." ;
+        mtp:hasParticipant   meetup:fc79951e86321552b8205a5acd169ab7 ;
+        mtp:hasPurpose       meetup:0e3a3cf2c8f48edb75ea13c7aa6e4208 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Coles> ;
+        mtp:hasType          "HT" .
+
+meetup:0e3a3cf2c8f48edb75ea13c7aa6e4208
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999547" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.5510126e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9e3f387dbf637ce0235705186ba8dfc0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Coles> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jack Coles" .
+
+meetup:5d81fa1b04529723055a833e4c33e96b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.806863" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1859404" ;
+        mtp:hasSourcePurpose          "ML" .

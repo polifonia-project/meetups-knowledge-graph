@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/9067881/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2000, Krieger's musical Everything's Ducky, again with Russell, opened at TheatreWorks in Palo Alto, California. The show won the 2000 Backstage West Garland Award for Best Score as well as the Will Glickman Award for Best New Bay Area Play of 2000." ;
+        mtp:hasPurpose       meetup:a1e663033d5c9924a9bd01f6ada11dfd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Krieger> ;
+        mtp:hasType          "HT" .
+
+meetup:a1e663033d5c9924a9bd01f6ada11dfd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Musical production" ;
+        mtp:hasEvidencePurposeSecond  "Award ceremony" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:d6f4e8afd318aae73c39cc10c07aa1b8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Eyen> ;
+        mtp:hasOffset           "98" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tom Eyen" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2a9b97745f72d4b969660707263ce0a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Krieger> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Henry Krieger" .
+
+<http://w3id.org/polifonia/pilot/meetups/9067881/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He  most notably wrote the music for the Broadway shows Dreamgirls (1981, with lyrics and book by Tom Eyen), The Tap Dance Kid (1983), and Side Show (1997)." ;
+        mtp:hasParticipant   meetup:d6f4e8afd318aae73c39cc10c07aa1b8 , meetup:46f607e4a9e4289f9f6c62ad4d8988d0 ;
+        mtp:hasPurpose       meetup:314638377ccc2092c7f6ebf7fbe48cb3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Krieger> ;
+        mtp:hasType          "HM" .
+
+meetup:314638377ccc2092c7f6ebf7fbe48cb3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.50477356" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.49513975" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Henry_Krieger>
+        rdf:type  core:Person .
+
+meetup:46f607e4a9e4289f9f6c62ad4d8988d0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Krieger> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Henry Krieger" .
+
+<http://dbpedia.org/resource/Tom_Eyen>
+        rdf:type  core:Person .
+
+meetup:de68d0e9518d9d7ab982830ae4f3d6ad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9073194" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.092536114" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/9067881/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Henry Krieger (born February 9, 1945 in New York City) is an American musical theatre composer." ;
+        mtp:hasParticipant   meetup:2a9b97745f72d4b969660707263ce0a6 ;
+        mtp:hasPurpose       meetup:de68d0e9518d9d7ab982830ae4f3d6ad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Krieger> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5d4fad6df76856e268080d8601e8daa7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Catlin> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "George Catlin" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/27197108/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked in Hartford, Connecticut from 1799 or earlier until about 1814, when he moved to Philadelphia, Pennsylvania. According to his advertisements in Connecticut newspapers he made pianofortes, harpsichords, violoncellos, guitars, bassoons, clarinets, \"hautboys\" (oboes), flutes, and fifes." ;
+        mtp:hasParticipant   meetup:5d4fad6df76856e268080d8601e8daa7 ;
+        mtp:hasPurpose       meetup:9b2ea31e46bfde1e22a4d53854dcf90f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Catlin_(musical_instrument_maker)> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/George_Catlin_(musical_instrument_maker)>
+        rdf:type  core:Person .
+
+meetup:9b2ea31e46bfde1e22a4d53854dcf90f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "He made various musical instruments" ;
+        mtp:hasEvidencePurposeSecond  "He advertised his work in newspapers" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/George_Catlin>
+        rdf:type  core:Person .

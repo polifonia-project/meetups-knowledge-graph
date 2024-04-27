@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/13318131/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andy Statman (born 1950) is a noted American klezmer clarinetist and bluegrass/newgrass mandolinist." ;
+        mtp:hasParticipant   meetup:7a8d7785c98a3e95ab519f7599d9506e ;
+        mtp:hasPurpose       meetup:37424e19934fc8fdbc0a85208ce380ad ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Statman> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7a8d7785c98a3e95ab519f7599d9506e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andy_Statman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Andy Statman" .
+
+meetup:37424e19934fc8fdbc0a85208ce380ad
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7531298" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2443751" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Andy_Statman>
+        rdf:type  core:Person .

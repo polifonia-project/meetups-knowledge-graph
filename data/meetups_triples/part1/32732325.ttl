@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/32732325/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jack Whitney (February 21, 1905 – November 2, 1992) was an American sound engineer." ;
+        mtp:hasParticipant   meetup:d646df761e8259281273aab4b3c2cad8 ;
+        mtp:hasPurpose       meetup:8147dc32e2b73721d83bbc052cefef9a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Whitney> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jack_Whitney>
+        rdf:type  core:Person .
+
+meetup:d646df761e8259281273aab4b3c2cad8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Whitney> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999986926" ;
+        mtp:hasTextEvidence     "Jack Whitney" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:8147dc32e2b73721d83bbc052cefef9a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.861463" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13836278" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/35014054/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cvetka Bevc (born 29 October 1960)" ;
+        mtp:hasParticipant   meetup:f5122c7f77ef49f726cd442fa6a8554e ;
+        mtp:hasPurpose       meetup:ff729e6c3945361544c15dbf1ba7912a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cvetka_Bevc> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Cvetka_Bevc>
+        rdf:type  core:Person .
+
+meetup:3e3f65cb08d5b008a56a9bec85baad19
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cvetka_Bevc> ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cvetka Bevc" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e1cb02512f9e33eeeb810a7592e7058e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bevc" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:54d481334289542de1cdd0afd0dbbe25
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about someone's educational background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f5122c7f77ef49f726cd442fa6a8554e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cvetka_Bevc> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999989783532" ;
+        mtp:hasTextEvidence     "Cvetka Bevc" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/35014054/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bevc was born in Slovenj Gradec in 1960." ;
+        mtp:hasParticipant   meetup:e1cb02512f9e33eeeb810a7592e7058e , meetup:3e3f65cb08d5b008a56a9bec85baad19 ;
+        mtp:hasPurpose       meetup:54d481334289542de1cdd0afd0dbbe25 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cvetka_Bevc> ;
+        mtp:hasType          "HM" .
+
+meetup:ff729e6c3945361544c15dbf1ba7912a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99952245" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00036734657" ;
+        mtp:hasSourcePurpose          "ML" .

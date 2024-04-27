@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:da9843f64ff9a7957e761f322f780cc4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996044" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00039492402" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0e23ad76d668f859f887631543a68044
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Lefler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999100452" ;
+        mtp:hasTextEvidence     "John Lefler" .
+
+meetup:089a1161b9cef670e439c1d7378269fd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9854893" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.014457778" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/John_Lefler>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7dbd6a3566c0c364e05f55f4c7acbacd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Lefler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999809576" ;
+        mtp:hasTextEvidence     "John Lefler" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/26274959/23/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Lefler – Shout Fire EP (2012)" ;
+        mtp:hasParticipant   meetup:7dbd6a3566c0c364e05f55f4c7acbacd ;
+        mtp:hasPurpose       meetup:089a1161b9cef670e439c1d7378269fd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Lefler> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/26274959/22/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Lefler – Better by Design (2009)" ;
+        mtp:hasParticipant   meetup:0e23ad76d668f859f887631543a68044 ;
+        mtp:hasPurpose       meetup:da9843f64ff9a7957e761f322f780cc4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Lefler> ;
+        mtp:hasType          "HT" .

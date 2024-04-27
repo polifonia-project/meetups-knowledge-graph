@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/565999/6/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He met his future collaborator, Blockhead, in 1994 during the latter's only year at the school." ;
+        mtp:hasParticipant   meetup:0b4002751d0321be2f9b681df7dd6762 , meetup:e5ab0fabe63b2da7032dad782211251b ;
+        mtp:hasPurpose       meetup:82e1bb85913ef18dd7a42eabd874e271 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aesop_Rock> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Aesop_Rock>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0b4002751d0321be2f9b681df7dd6762
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aesop_Rock> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aesop Rock" .
+
+meetup:b3ea83406c42f6f90c0798ce1a65610a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9981548" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0018448404" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:82e1bb85913ef18dd7a42eabd874e271
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Collaboration in music" ;
+        mtp:hasEvidencePurposeSecond  "Meeting at school" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:e5ab0fabe63b2da7032dad782211251b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bavitz" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f83d6cd1df698514aac363d13b91d6e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aesop_Rock> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aesop Rock" .
+
+<http://w3id.org/polifonia/pilot/meetups/565999/6/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Blockhead was involved with a crew in New York called The Overground that included Dub-L. During his early adulthood, Aesop Rock held various odd jobs including positions answering phones for clothing catalogs, packaging artwork in art gallery storerooms and working for one-hour photo developers." ;
+        mtp:hasParticipant   meetup:f83d6cd1df698514aac363d13b91d6e6 ;
+        mtp:hasPurpose       meetup:b3ea83406c42f6f90c0798ce1a65610a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aesop_Rock> ;
+        mtp:hasType          "HT" .

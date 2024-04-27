@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Aime_Kiwakana>
+        rdf:type  core:Person .
+
+meetup:3e765a424506334b107ac778ad2cca15
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1992" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1992-01-01"^^xsd:date ;
+        time:hasEnd          "1992-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/32276557/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:3e765a424506334b107ac778ad2cca15 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Aime_Kiwakana> ;
+        mtp:hasType     "HT" .
+
+meetup:04e694addc3740848a59acb0ade1f245
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1980s" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1980-01-01"^^xsd:date ;
+        time:hasEnd          "1989-12-31"^^xsd:date .
+
+meetup:485fa7b3462e62fb97817f2dc54a7ff6
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1950s" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1950-01-01"^^xsd:date ;
+        time:hasEnd          "1959-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/32276557/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:04e694addc3740848a59acb0ade1f245 , meetup:485fa7b3462e62fb97817f2dc54a7ff6 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Aime_Kiwakana> ;
+        mtp:hasType     "HT" .

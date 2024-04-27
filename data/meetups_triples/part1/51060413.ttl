@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/51060413/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Steevi Bacon is a musician from London, UK." ;
+        mtp:hasParticipant   meetup:bada0c9c096011369d7e8a25971bd3ce ;
+        mtp:hasPurpose       meetup:25e7e8281fb766843af5b1072a64d644 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steevi_Bacon> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:478d4dbdfe48983c193753e841c4019e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Woodrow_Wilson> ;
+        mtp:hasOffset           "177" ;
+        mtp:hasSimilarityScore  "0.9271236063985662" ;
+        mtp:hasTextEvidence     "Wilson" .
+
+meetup:bada0c9c096011369d7e8a25971bd3ce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steevi_Bacon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Steevi Bacon" .
+
+<http://w3id.org/polifonia/pilot/meetups/51060413/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is co-founder member and drummer for the UK based power pop rock band Cats in Space, established May 2015 with guitarist Greg Hart, and their fellow songwriting partner Mick Wilson of British 70s phenomenon 10cc." ;
+        mtp:hasParticipant   meetup:478d4dbdfe48983c193753e841c4019e , meetup:6c988276dc27038722327db842622b9a , meetup:2084e3bfecf6c12b82baf984381283a3 ;
+        mtp:hasPurpose       meetup:cdfdeec8b391cd7b5ae6e8a46bfc7ec0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steevi_Bacon> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Steevi_Bacon>
+        rdf:type  core:Person .
+
+meetup:2084e3bfecf6c12b82baf984381283a3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steevi_Bacon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steevi Bacon" .
+
+meetup:6c988276dc27038722327db842622b9a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Greg_Hart> ;
+        mtp:hasOffset           "124" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Greg Hart" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:cdfdeec8b391cd7b5ae6e8a46bfc7ec0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9768032" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.022164542" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Woodrow_Wilson>
+        rdf:type  core:Person .
+
+meetup:25e7e8281fb766843af5b1072a64d644
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.63069034" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.27477303" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Greg_Hart>
+        rdf:type  core:Person .

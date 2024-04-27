@@ -1,0 +1,59 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Freddy_Fender>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1146259/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1958, he legally changed his name from Baldemar Huerta to Freddy Fender." ;
+        mtp:hasParticipant   meetup:32fa0dec68b5076bf7499868a6736195 ;
+        mtp:hasPurpose       meetup:7d5205d35ac9e487d2b0d8fe057ef5a8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Freddy_Fender> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0ba41ffe3a79ee9f06351643b7349424
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Event honoring Freddy Fender" ;
+        mtp:hasEvidencePurposeSecond  "Recognition of Freddy Fender's hometown" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:7d5205d35ac9e487d2b0d8fe057ef5a8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99962604" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00021038105" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1146259/21/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On June 5, 2005, Fender was present for the dedication of a $1.4 million water tower in San Benito. The tower bears an image of Fender along with the words \"San Benito Hometown of Freddy Fender,\" and is visible when driving east on U.S. Route 83 through San Benito." ;
+        mtp:hasPurpose       meetup:0ba41ffe3a79ee9f06351643b7349424 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Freddy_Fender> ;
+        mtp:hasType          "HT" .
+
+meetup:32fa0dec68b5076bf7499868a6736195
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Freddy_Fender> ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Baldemar Huerta" .

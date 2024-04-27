@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/6437092/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Fraser MacPherson CM (10 April 1928 – 27 September 1993) was a Canadian jazz musician from Saint Boniface, Manitoba." ;
+        mtp:hasParticipant   meetup:3d828c19ef429033d865e0361861147f , meetup:1e52b769be69bae8d5b6e9e7f81bd92a ;
+        mtp:hasPurpose       meetup:93f3fefa8a233c49a41fb710fed8c995 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fraser_MacPherson> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Fraser_MacPherson>
+        rdf:type  core:Person .
+
+meetup:3d828c19ef429033d865e0361861147f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Allen_Fraser> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999074311524112" ;
+        mtp:hasTextEvidence     "John Fraser" .
+
+<http://dbpedia.org/resource/John_Allen_Fraser>
+        rdf:type  core:Person .
+
+meetup:93f3fefa8a233c49a41fb710fed8c995
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "John Fraser MacPherson was a Canadian jazz musician." ;
+        mtp:hasEvidencePurposeSecond  "He was from Saint Boniface, Manitoba." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:1e52b769be69bae8d5b6e9e7f81bd92a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fraser_MacPherson> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fraser MacPherson" .

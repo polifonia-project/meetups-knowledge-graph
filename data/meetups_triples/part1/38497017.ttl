@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Legz_Diamond>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/38497017/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Richard Murrell is an American guitarist and singer from Detroit, Michigan, United States, better known as Legz Diamond." ;
+        mtp:hasParticipant   meetup:dc773ebff87488993e8677e051cad78d , meetup:56191aba5b933cc4afaa3f6b4c237398 ;
+        mtp:hasPurpose       meetup:e9a9029477545c678055e6d2f7d980ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Legz_Diamond> ;
+        mtp:hasType          "HM" .
+
+meetup:e9a9029477545c678055e6d2f7d980ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998806" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0011214087" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:dc773ebff87488993e8677e051cad78d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Richard Murrell" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:56191aba5b933cc4afaa3f6b4c237398
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Legz_Diamond> ;
+        mtp:hasOffset           "107" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Legz Diamond" .

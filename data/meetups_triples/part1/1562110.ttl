@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Tommy_Edwards>
+        rdf:type  core:Person .
+
+meetup:8cd8065009f2f022de3e32e9b3cb6ebe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8927058" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07487915" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:64b9c2c7def8fd8532861c5e0cc34534
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions the composition and recording of a song." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the personal life of the songwriter and singer." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d54a27913033f8941ef5017405199f21
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tommy_Edwards> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999990364301063" ;
+        mtp:hasTextEvidence     "Tommy Edwards" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:08f49872e00ed0bc11e7fceccc352f20
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frederick_Wallace_Edwards> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Edwards" .
+
+<http://dbpedia.org/resource/Frederick_Wallace_Edwards>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1562110/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tommy Edwards Sings—Regent MG 6096 (Mono only) -- 1958" ;
+        mtp:hasParticipant   meetup:d54a27913033f8941ef5017405199f21 ;
+        mtp:hasPurpose       meetup:8cd8065009f2f022de3e32e9b3cb6ebe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Edwards> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1562110/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The song was composed by then-future U.S. Vice-President Charles G. Dawes in 1911 as \"Melody in A Major\" with lyrics written in 1951 by Carl Sigman. Edwards originally recorded and charted the song in 1951, but it only climbed to no. 18." ;
+        mtp:hasParticipant   meetup:08f49872e00ed0bc11e7fceccc352f20 ;
+        mtp:hasPurpose       meetup:64b9c2c7def8fd8532861c5e0cc34534 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Edwards> ;
+        mtp:hasType          "HT" .

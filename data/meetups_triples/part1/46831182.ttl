@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:05b80354be254b3d96da09524d9c74d8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Kinetics is a rapper based in NYC" ;
+        mtp:hasEvidencePurposeSecond  "He has collaborated with various artists" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/46831182/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeremy Dussolliet, known professionally as Kinetics is a rapper based in New York City who has been releasing hip-hop projects since 2008. He has collaborated with R.A. the Rugged Man, Skyzoo, Remedy from Wu-Tang Killa Bees, Termanology, Accent, the Unknown Prophets and others, but is best known for his work with friend and longtime collaborator, NYC producer One Love." ;
+        mtp:hasParticipant   meetup:e5255383257d59b9681e1be852158d42 ;
+        mtp:hasPurpose       meetup:05b80354be254b3d96da09524d9c74d8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kinetics_(rapper)> ;
+        mtp:hasType          "HT" .
+
+meetup:e5255383257d59b9681e1be852158d42
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jeremy Dussolliet" .
+
+<http://dbpedia.org/resource/Kinetics_(rapper)>
+        rdf:type  core:Person .

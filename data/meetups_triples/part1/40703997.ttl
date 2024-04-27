@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Svein_Dag_Hauge>
+        rdf:type  core:Person .
+
+meetup:3e57846026bfc7b8c910aeecbba72d63
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Norwegian jazz musician and record producer" ;
+        mtp:hasEvidencePurposeSecond  "Born in Årdal, Norway" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/40703997/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Svein Dag Hauge (born 23 October 1956 in Årdal, Norway) is a Norwegian jazz musician (guitar) and record producer, known from the band Lava and numerous recordings as a studio musician." ;
+        mtp:hasParticipant   meetup:230c667e46c781ddf6548e5e543bdc47 ;
+        mtp:hasPurpose       meetup:3e57846026bfc7b8c910aeecbba72d63 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Svein_Dag_Hauge> ;
+        mtp:hasType          "HT" .
+
+meetup:230c667e46c781ddf6548e5e543bdc47
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Svein_Dag_Hauge> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Svein Dag Hauge" .

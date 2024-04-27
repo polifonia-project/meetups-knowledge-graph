@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:3f65b757610ddca32521a8ee4d107c24
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dr._John> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mac Rebennack" .
+
+meetup:f5a2baf8a38ec00611555e85e395910c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alvin_Tyler> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Red Tyler" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/7445532/2/21>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1994, he recorded the album The Ultimate Session with Toussaint, Earl Palmer, Mac Rebennack, and other New Orleans musicians. Tyler died at age 72 in New Orleans." ;
+        mtp:hasPurpose       meetup:4c7f5b8201302f30f6e4b6cd1465099f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alvin_Tyler> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/7445532/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "According to Mac Rebennack, \"Red Tyler was the true leader of the [studio] band but he never got full credit." ;
+        mtp:hasParticipant   meetup:3f65b757610ddca32521a8ee4d107c24 , meetup:f5a2baf8a38ec00611555e85e395910c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alvin_Tyler> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Dr._John>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Alvin_Tyler>
+        rdf:type  core:Person .
+
+meetup:4c7f5b8201302f30f6e4b6cd1465099f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Recording an album with New Orleans musicians" ;
+        mtp:hasEvidencePurposeSecond  "Death at age 72 in New Orleans" ;
+        mtp:hasSourcePurpose          "LLM" .

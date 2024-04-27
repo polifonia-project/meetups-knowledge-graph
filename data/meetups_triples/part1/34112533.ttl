@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/34112533/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alexander Zakin (22 January 1903 – 16 October 1990) was a Russian-born pianist, best known for being the accompanist of the violinist Isaac Stern between 1940 and 1977." ;
+        mtp:hasParticipant   meetup:0521413d3c675a0abcc8124f792b3d96 , meetup:9fe4d51b7cb9084357a08c7f5800e123 ;
+        mtp:hasPurpose       meetup:3ba29a055b8f8b0b3eb0b3dac8343cee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alexander_Zakin> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3ba29a055b8f8b0b3eb0b3dac8343cee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9947179" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0044148043" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9fe4d51b7cb9084357a08c7f5800e123
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alexander_Zakin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alexander Zakin" .
+
+<http://dbpedia.org/resource/Isaac_Stern>
+        rdf:type  core:Person .
+
+meetup:0521413d3c675a0abcc8124f792b3d96
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Isaac_Stern> ;
+        mtp:hasOffset           "136" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Isaac Stern" .
+
+<http://dbpedia.org/resource/Alexander_Zakin>
+        rdf:type  core:Person .

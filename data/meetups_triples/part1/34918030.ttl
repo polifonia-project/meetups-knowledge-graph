@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Roland_John_Wiley>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1edfff17f0dd15ef348d8a24f8e492dd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99822754" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0011971032" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:c09194d7ea618bddb97c9921d67c6a30
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roland_John_Wiley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Roland John Wiley" .
+
+<http://w3id.org/polifonia/pilot/meetups/34918030/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has written a biography and critical study on the music of Pyotr Ilyich Tchaikovsky and contributed the entry on the composer in the 2001 edition of the New Grove Dictionary of Music and Musicians." ;
+        mtp:hasParticipant   meetup:c09194d7ea618bddb97c9921d67c6a30 ;
+        mtp:hasPurpose       meetup:1edfff17f0dd15ef348d8a24f8e492dd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roland_John_Wiley> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/22617432/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Povl Hamburger   (22 June 1901 - 20 November 1972) was a Danish organist and composer." ;
+        mtp:hasParticipant   meetup:d8e4293f179801102fa870fe0b5b12f7 ;
+        mtp:hasPurpose       meetup:91f5da62ac08d78f572dfa9ebf398948 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Povl_Hamburger> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Povl_Hamburger>
+        rdf:type  core:Person .
+
+meetup:d8e4293f179801102fa870fe0b5b12f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Povl_Hamburger> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999908850724" ;
+        mtp:hasTextEvidence     "Povl Hamburger" .
+
+meetup:91f5da62ac08d78f572dfa9ebf398948
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.73555297" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26024786" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .

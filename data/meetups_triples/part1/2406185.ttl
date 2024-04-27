@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Neil_Young>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2406185/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Around this time, he listened to music in the charts and North American artists such as Neil Young." ;
+        mtp:hasParticipant   meetup:0cdac7756b8c9cd301ac03b134c1ba1b , meetup:5038a5d7b49acb93a3ffefd2fc2f7f57 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Bedford> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Mark_Bedford>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2406185/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mark Bedford was born on 24 August 1961, in Islington, London, England." ;
+        mtp:hasParticipant   meetup:5c796e89e020efe1ff02eeb17c5b58e2 ;
+        mtp:hasPurpose       meetup:dbf4e206f630cc4427dda2d7701c555a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Bedford> ;
+        mtp:hasType          "HT" .
+
+meetup:5c796e89e020efe1ff02eeb17c5b58e2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Bedford> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999995688712" ;
+        mtp:hasTextEvidence     "Mark Bedford" .
+
+meetup:0cdac7756b8c9cd301ac03b134c1ba1b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Neil_Young> ;
+        mtp:hasOffset           "88" ;
+        mtp:hasSimilarityScore  "0.999999967244961" ;
+        mtp:hasTextEvidence     "Neil Young" .
+
+meetup:dbf4e206f630cc4427dda2d7701c555a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996126" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00038656968" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5038a5d7b49acb93a3ffefd2fc2f7f57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Bedford> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mark Bedford" .

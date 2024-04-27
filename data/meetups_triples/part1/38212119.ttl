@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:7951d305e63c8710e959e59e79ef99fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mai_Endo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mai Endo" .
+
+meetup:11cfbdb915444485c975a4b3b227921e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mai_Endo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mai Endo" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mai_Endo>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/38212119/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mai Endo (遠藤 舞, Endō Mai, born July 31, 1988) is a Japanese idol, singer and talent from Tokyo." ;
+        mtp:hasParticipant   meetup:7951d305e63c8710e959e59e79ef99fe ;
+        mtp:hasPurpose       meetup:e1ed2cde252abd8a047918379ffdb726 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mai_Endo> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/38212119/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She made her solo debut as a singer on July 13, 2013." ;
+        mtp:hasParticipant   meetup:11cfbdb915444485c975a4b3b227921e ;
+        mtp:hasPurpose       meetup:1d1d7662af9f697deddc408ed1fb9c9d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mai_Endo> ;
+        mtp:hasType          "HT" .
+
+meetup:1d1d7662af9f697deddc408ed1fb9c9d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999993" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.5574064e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e1ed2cde252abd8a047918379ffdb726
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.83578414" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12019805" ;
+        mtp:hasSourcePurpose          "ML" .

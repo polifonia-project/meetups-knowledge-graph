@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:b7fa638cfd5fbc4e32a981ccdad5d472
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Pendleton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brian Pendleton" .
+
+meetup:809669323d1012d95a947122eb144729
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.82469267" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16439252" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/9966508/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brian Pendleton (13 April 1944 – 16 May 2001) was a British guitarist, and a founder member of the 1960s pop group Pretty Things." ;
+        mtp:hasParticipant   meetup:b7fa638cfd5fbc4e32a981ccdad5d472 ;
+        mtp:hasPurpose       meetup:809669323d1012d95a947122eb144729 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Pendleton> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/9966508/6/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 25 May 2001 he was found dead by the door of his flat in Maidstone, Kent; he had been suffering from lung cancer. He was survived by two sons." ;
+        mtp:hasPurpose       meetup:e574a5f8ff6ca60edce9be2bb2482400 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Pendleton> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Brian_Pendleton>
+        rdf:type  core:Person .
+
+meetup:e574a5f8ff6ca60edce9be2bb2482400
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Details about a person's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about a health condition" ;
+        mtp:hasSourcePurpose          "LLM" .

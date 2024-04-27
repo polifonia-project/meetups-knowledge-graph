@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:139e85204fb3b9620f9119d3ffc00c07
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Karen Iwata is a former member of AKB48" ;
+        mtp:hasEvidencePurposeSecond  "Karen Iwata was born in Sendai" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/37785182/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Karen Iwata (岩田 華怜, Iwata Karen, born May 13, 1998 in Sendai, Miyagi Prefecture) is an actress and former member of the Japanese idol girl group AKB48 under Team A." ;
+        mtp:hasParticipant   meetup:ec01a55dca919ef019f698380f3929f0 ;
+        mtp:hasPurpose       meetup:139e85204fb3b9620f9119d3ffc00c07 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Karen_Iwata> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Karen_Iwata>
+        rdf:type  core:Person .
+
+meetup:36a14130bef9b2cfdd3d2f312fa165ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Miwa Sugawara" .
+
+meetup:ec01a55dca919ef019f698380f3929f0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Karen_Iwata> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Karen Iwata" .
+
+meetup:e577856250756594ad6c69e753dc02d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Iwata's personal background" ;
+        mtp:hasEvidencePurposeSecond  "Information about her education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/37785182/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Iwata was born on 13 May 1998 in Sendai, Miyagi Prefecture. Her mother is Miwa Sugawara, who works as a TV personality in Sendai." ;
+        mtp:hasParticipant   meetup:36a14130bef9b2cfdd3d2f312fa165ff ;
+        mtp:hasPurpose       meetup:e577856250756594ad6c69e753dc02d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Karen_Iwata> ;
+        mtp:hasType          "HT" .

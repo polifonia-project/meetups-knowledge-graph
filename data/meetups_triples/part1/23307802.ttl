@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/23307802/24/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also spoke at length on the subject of fan-submitted art in the 2011 documentary film Press Pause Play." ;
+        mtp:hasParticipant   meetup:7efc5ca49628b100092edda158151e27 ;
+        mtp:hasPurpose       meetup:c4258a97a67242bfb0772a4a5bbc0cb0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ólafur_Arnalds> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:7efc5ca49628b100092edda158151e27
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ólafur_Arnalds> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ólafur Arnalds" .
+
+meetup:c9d995050e91fe13099e516abee49ab7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Janus Rasmussen" .
+
+<http://w3id.org/polifonia/pilot/meetups/23307802/24/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2014 Ólafur announced his electronic debut album in collaboration with Janus Rasmussen under his project Kiasmos." ;
+        mtp:hasParticipant   meetup:c9d995050e91fe13099e516abee49ab7 , meetup:c5f4cda8155477eb74711b090663862d ;
+        mtp:hasPurpose       meetup:f86d043e9387ba8801ab4938562efacb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ólafur_Arnalds> ;
+        mtp:hasType          "HM" .
+
+meetup:c5f4cda8155477eb74711b090663862d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ólafur_Arnalds> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ólafur Arnalds" .
+
+meetup:f86d043e9387ba8801ab4938562efacb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9919979" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0074937292" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Ólafur_Arnalds>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:c4258a97a67242bfb0772a4a5bbc0cb0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9688774" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01924647" ;
+        mtp:hasSourcePurpose          "ML" .

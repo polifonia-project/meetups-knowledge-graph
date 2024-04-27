@@ -1,0 +1,92 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:998c3a8fe84dd2f62aa87e5176c5810b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98537725" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.014116633" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/46526702/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She has released two studio albums: Volume One (2011) and Panacea (2016), and three EPs:" ;
+        mtp:hasParticipant   meetup:3478fb349c1e22336da2bb229029f849 ;
+        mtp:hasPurpose       meetup:998c3a8fe84dd2f62aa87e5176c5810b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sahara_Beck> ;
+        mtp:hasType          "HT" .
+
+meetup:53f25568f84752ab59a067ffe3815ffa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sahara_Beck> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sahara Beck" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:2b31c47049d8c72860c0f4f18ea5d779
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99941313" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0003298911" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3478fb349c1e22336da2bb229029f849
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sahara_Beck> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sahara Beck" .
+
+<http://w3id.org/polifonia/pilot/meetups/46526702/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "You Could Be Happy (2013), Bloom (2014) and Queen of Hearts (2019)." ;
+        mtp:hasParticipant   meetup:53f25568f84752ab59a067ffe3815ffa ;
+        mtp:hasPurpose       meetup:2b31c47049d8c72860c0f4f18ea5d779 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sahara_Beck> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Sahara_Beck>
+        rdf:type  core:Person .
+
+meetup:decc9345f095bffd5dcafb8246c8eec3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8228537" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15477349" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3034408d00939b6b08d8306591cd7b80
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sahara_Beck> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999131530594" ;
+        mtp:hasTextEvidence     "Sahara Beck" .
+
+<http://w3id.org/polifonia/pilot/meetups/46526702/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sahara Beck (born 1996) is an Australian singer and songwriter, from the Sunshine Coast." ;
+        mtp:hasParticipant   meetup:3034408d00939b6b08d8306591cd7b80 ;
+        mtp:hasPurpose       meetup:decc9345f095bffd5dcafb8246c8eec3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sahara_Beck> ;
+        mtp:hasType          "HT" .

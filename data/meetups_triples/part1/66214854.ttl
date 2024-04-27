@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:4b6850e7745b1ed899b0b2ad0e0a923c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9826752" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0140067255" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/66214854/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Golda Rosheuvel (born 1 January 1970) is a Guyanese-British actress and singer." ;
+        mtp:hasParticipant   meetup:07e7d850ebb59756c61c51bfc15ac955 ;
+        mtp:hasPurpose       meetup:4b6850e7745b1ed899b0b2ad0e0a923c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Golda_Rosheuvel> ;
+        mtp:hasType          "HT" .
+
+meetup:024d952ddd7b3d00bb9ccd8c8ac11709
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "111" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charlotte" .
+
+meetup:07e7d850ebb59756c61c51bfc15ac955
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Golda_Rosheuvel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Golda Rosheuvel" .
+
+<http://w3id.org/polifonia/pilot/meetups/66214854/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is known for her theatre work and a number of on-screen roles, most prominently for the portrayal of Queen Charlotte in Netflix's Bridgerton." ;
+        mtp:hasParticipant   meetup:b75ea97817aeb435cd7c5c235fd39717 , meetup:024d952ddd7b3d00bb9ccd8c8ac11709 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Golda_Rosheuvel> ;
+        mtp:hasType          "HM" .
+
+meetup:b75ea97817aeb435cd7c5c235fd39717
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Golda_Rosheuvel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Golda Rosheuvel" .
+
+<http://dbpedia.org/resource/Golda_Rosheuvel>
+        rdf:type  core:Person .

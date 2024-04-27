@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/176900/107/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lee \"Scratch\" Perry & New Age Doom – Lee \"Scratch\" Perry's Guide to the Universe (2021)" ;
+        mtp:hasParticipant   meetup:d89c1ac88bbf7ebd69ff26b75cdcfde0 , meetup:d1381619694d413efed9eff370c85f3c ;
+        mtp:hasPurpose       meetup:0cb5b06cc63661d067747514066f5875 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lee_%22Scratch%22_Perry> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/176900/22/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The film gives an insight into the spiritual world of Perry, after director Volker Schaner spent more than 15 years filming with the Upsetters, witnessing the building of Perry's \"Secret Laboratory\" in Switzerland from the beginning until its destruction by fire in 2015. Shot in Switzerland, Jamaica, London, and Berlin, the movie also shows scenes from Aksum and Lalibela, Ethiopia to provide necessary background information." ;
+        mtp:hasPurpose       meetup:3b1cc8b9a8a72c1c02c3b39ee3b65ced ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lee_%22Scratch%22_Perry> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/176900/102/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lee \"Scratch\" Perry – Lee Scratch Perry Presents" ;
+        mtp:hasParticipant   meetup:f676d35ff28f6ae0d9961c2f3d45104d ;
+        mtp:hasPurpose       meetup:82b4570749d58dbbf26fa256b1f582fa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lee_%22Scratch%22_Perry> ;
+        mtp:hasType          "HT" .
+
+meetup:d1381619694d413efed9eff370c85f3c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_%22Scratch%22_Perry> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lee \"Scratch\" Perry's" .
+
+meetup:3b1cc8b9a8a72c1c02c3b39ee3b65ced
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The film explores the spiritual world of Perry and his music-making journey." ;
+        mtp:hasEvidencePurposeSecond  "The film also provides insights into Perry's personal life and experiences." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:82b4570749d58dbbf26fa256b1f582fa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9981823" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0016898563" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/MF_Doom>
+        rdf:type  core:Person .
+
+meetup:0cb5b06cc63661d067747514066f5875
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.60730225" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3446004" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Lee_%22Scratch%22_Perry>
+        rdf:type  core:Person .
+
+meetup:f676d35ff28f6ae0d9961c2f3d45104d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_%22Scratch%22_Perry> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lee Scratch Perry" .
+
+meetup:d89c1ac88bbf7ebd69ff26b75cdcfde0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/MF_Doom> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "0.7488158044376955" ;
+        mtp:hasTextEvidence     "Doom" .

@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:7fb43573735dda44e08037855e615409
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99235314" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0060461834" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/50408185/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dhrubajyoti Phukan married singer Shaswati Phukan in 1991, and is the father of a daughter, Shreya Phukan, and a son, Ayushjyoti Phukan." ;
+        mtp:hasParticipant   meetup:26b6558b02c0e4e1f70147717be7ed78 , meetup:9b15720859d0476dceee9a398ea00a77 ;
+        mtp:hasPurpose       meetup:7fb43573735dda44e08037855e615409 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dhrubajyoti_Phukan> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Dhrubajyoti_Phukan>
+        rdf:type  core:Person .
+
+meetup:9b15720859d0476dceee9a398ea00a77
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dhrubajyoti_Phukan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dhrubajyoti Phukan" .
+
+meetup:26b6558b02c0e4e1f70147717be7ed78
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "34" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Shaswati Phukan" .

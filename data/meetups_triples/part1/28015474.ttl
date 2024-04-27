@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f1d6224494c357523778a08c0aed4ec1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions musicians and musical programs." ;
+        mtp:hasEvidencePurposeSecond  "The Radio committee stopping suggests an impact on education." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:69132e118dcd6239c5112680350c949d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.60721725" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17351946" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/28015474/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "One of the first symphonic orchestras popular in public in Russia beyond Ural Mountains in 1920th years-was an orchestra under control of A.L. Markson who gave concerts on gardens open-air stage, recreation centres and city theatre." ;
+        mtp:hasParticipant   meetup:64d3ca161d1d7997393c55d53c36b54e ;
+        mtp:hasPurpose       meetup:0db2c403dcc998f3f9dd5cf1f7d706df ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abram_Markson> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:64d3ca161d1d7997393c55d53c36b54e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ben_Markson> , <http://dbpedia.org/resource/Abram_Markson> ;
+        mtp:hasOffset           "138" , "108" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Markson" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:9c675ea3c32234b0a8a9e2c04228d8b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Abram_Markson> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Abram Markson" .
+
+<http://w3id.org/polifonia/pilot/meetups/28015474/6/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The sentence was carried out on 26 February 1938 in Krasnoyarsk. As a result of reprisals concerning musicians translation of musical programs for some time in Krasnoyarsk a Radio committee has stopped." ;
+        mtp:hasPurpose       meetup:f1d6224494c357523778a08c0aed4ec1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abram_Markson> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Abram_Markson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ben_Markson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/28015474/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 21 February 1938 Abram Markson, after arrest, was condemned six days NKVD under 58th article and sentenced to a supreme penalty (execution)." ;
+        mtp:hasParticipant   meetup:9c675ea3c32234b0a8a9e2c04228d8b0 ;
+        mtp:hasPurpose       meetup:69132e118dcd6239c5112680350c949d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abram_Markson> ;
+        mtp:hasType          "HT" .
+
+meetup:0db2c403dcc998f3f9dd5cf1f7d706df
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Orchestra performing concerts" ;
+        mtp:hasEvidencePurposeSecond  "Publicly enjoyed musical events" ;
+        mtp:hasSourcePurpose          "LLM" .

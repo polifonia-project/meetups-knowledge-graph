@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Smiley_Burnette>
+        rdf:type  core:Person .
+
+meetup:ba3c02991acd653a3534ab0e4a2a40bc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to music making because it mentions Husky donating his Country Music Hall of Fame award." ;
+        mtp:hasEvidencePurposeSecond  "The sentence is also related to public celebration because it mentions donating items of memorabilia to the city of Leadwood." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/344562/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On January 16, 2011, Husky was honored at West St. Francois County High School in Leadwood, Missouri, where local singers and the high-school choir sang some of his hits. Husky also donated several items of memorabilia, including his Country Music Hall of Fame award, to the city of Leadwood." ;
+        mtp:hasPurpose       meetup:ba3c02991acd653a3534ab0e4a2a40bc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ferlin_Husky> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/344562/6/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By the weekend, he had improved and was preparing to move out of the coronary care unit, but on March 17, Husky died at his daughter's home in Westmoreland, Tennessee, of congestive heart failure. He was interred next to his son, Danny Louis Husky, in Hendersonville Memory Gardens in Hendersonville, Tennessee." ;
+        mtp:hasParticipant   meetup:8020ae5b78ea1f2acfe588975a58aa45 ;
+        mtp:hasPurpose       meetup:2ccd3d670ef38148062b80a705d77d1d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ferlin_Husky> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2ccd3d670ef38148062b80a705d77d1d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to the personal life of the person mentioned." ;
+        mtp:hasEvidencePurposeSecond  "There is a coincidence mentioned in the sentence regarding the burial location." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:99d8f947ca22de706b7190afa68fcf1a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to the use of a moniker in the music industry." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the suggestion of a name change, which is a personal decision." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c9aaaf4e83e3289c50444949c12dc1c9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Smiley_Burnette> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Smiley Burnette" .
+
+meetup:a5238cfd1535e0f98617cfc6fa108210
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ferlin_Husky> ;
+        mtp:hasOffset           "91" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ferlin Husky" .
+
+<http://w3id.org/polifonia/pilot/meetups/344562/2/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He began using the moniker Terry Preston at the suggestion of Smiley Burnette, who claimed Ferlin Husky would never work on a marquee." ;
+        mtp:hasParticipant   meetup:c9aaaf4e83e3289c50444949c12dc1c9 , meetup:a5238cfd1535e0f98617cfc6fa108210 ;
+        mtp:hasPurpose       meetup:99d8f947ca22de706b7190afa68fcf1a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ferlin_Husky> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Ferlin_Husky>
+        rdf:type  core:Person .
+
+meetup:8020ae5b78ea1f2acfe588975a58aa45
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Danny Louis Husky" .

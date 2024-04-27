@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2426115/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Formerly a member of the band Lillix, she released her debut album as a solo artist, Mellow Drama, on April 5, 2011, on Light Organ Records." ;
+        mtp:hasParticipant   meetup:98e24ae3ca8be08c4adc39c7f9037a4f ;
+        mtp:hasPurpose       meetup:fe40d125c1f814e0fbb5f0bd11823a1c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Louise_Burns> ;
+        mtp:hasType          "HT" .
+
+meetup:fe40d125c1f814e0fbb5f0bd11823a1c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99953866" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00046061084" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Louise_Burns>
+        rdf:type  core:Person .
+
+meetup:98e24ae3ca8be08c4adc39c7f9037a4f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Louise_Burns> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Louise Burns" .

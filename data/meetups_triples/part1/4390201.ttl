@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Claude_Frank>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:bbb45e2524c2049b2b14b8a97de13b38
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Claus Johannes Frank" .
+
+meetup:54b645f4abdfe614f0b24f6432204cfd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Claude_Frank> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "Claude Frank" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/4390201/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Claude Frank (born Claus Johannes Frank; December 24, 1925 – December 27, 2014) was a German-born American pianist." ;
+        mtp:hasParticipant   meetup:54b645f4abdfe614f0b24f6432204cfd , meetup:bbb45e2524c2049b2b14b8a97de13b38 ;
+        mtp:hasPurpose       meetup:ff17c3c191301478e6c07b3a226408a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Claude_Frank> ;
+        mtp:hasType          "HM" .
+
+meetup:ff17c3c191301478e6c07b3a226408a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99977" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000117684795" ;
+        mtp:hasSourcePurpose          "ML" .

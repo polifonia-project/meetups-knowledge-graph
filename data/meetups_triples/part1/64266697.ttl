@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/64266697/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Seth Everman (born 19 October 1993) is a Swedish YouTuber, social media personality, and musician, best known for making comedic piano videos and parodies, often maintaining a straight face in a deadpan manner." ;
+        mtp:hasParticipant   meetup:6f4f871c886baaaa9853a6cbe8b5632a ;
+        mtp:hasPurpose       meetup:97faf97b227b2f01abed5dd66409bd76 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Seth_Everman> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:bceb9f61602950da9e0de2a8c126e090
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Seth_Everman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Seth Everman" .
+
+<http://dbpedia.org/resource/Seth_Everman>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/64266697/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has a large following across multiple social media platforms including Twitter, Tumblr and Instagram, and is one of the most subscribed YouTubers in Sweden." ;
+        mtp:hasParticipant   meetup:bceb9f61602950da9e0de2a8c126e090 ;
+        mtp:hasPurpose       meetup:9304bb6c769e5625445cb38afdc24dd9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Seth_Everman> ;
+        mtp:hasType          "HT" .
+
+meetup:97faf97b227b2f01abed5dd66409bd76
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.92988586" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.027479626" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9304bb6c769e5625445cb38afdc24dd9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9393782" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05827265" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6f4f871c886baaaa9853a6cbe8b5632a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Seth_Everman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999997654072" ;
+        mtp:hasTextEvidence     "Seth Everman" .
+
+meetup:education  rdfs:label  "Education" .

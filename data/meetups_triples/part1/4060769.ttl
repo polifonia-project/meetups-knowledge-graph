@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4060769/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During his childhood, his family moved to Hemel Hempstead, England, where he became a schoolfriend of the young Steven Wilson." ;
+        mtp:hasParticipant   meetup:e018014f76cb20eb3dc221b4795dc6d2 , meetup:a3b885a83ce604651b2a1903ddac0a4c ;
+        mtp:hasPurpose       meetup:e964bf212a03681c1bc64e0fb611a353 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Colin_Edwin> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Colin_Edwin>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Steven_Wilson>
+        rdf:type  core:Person .
+
+meetup:f7007fa1e96c0b18dc239b76ee87f01d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Colin_Edwin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999964048" ;
+        mtp:hasTextEvidence     "Colin Edwin" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b7ecdf47666b00f8091e4a8d8cc56d7c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.812696" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15073831" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a3b885a83ce604651b2a1903ddac0a4c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steven_Wilson> ;
+        mtp:hasOffset           "112" ;
+        mtp:hasSimilarityScore  "0.9999999999978684" ;
+        mtp:hasTextEvidence     "Steven Wilson" .
+
+meetup:e018014f76cb20eb3dc221b4795dc6d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Colin_Edwin> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Colin Edwin" .
+
+meetup:e964bf212a03681c1bc64e0fb611a353
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95866036" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.041337218" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4060769/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Colin Edwin was born in Melbourne, Australia on 2 July 1970." ;
+        mtp:hasParticipant   meetup:f7007fa1e96c0b18dc239b76ee87f01d ;
+        mtp:hasPurpose       meetup:b7ecdf47666b00f8091e4a8d8cc56d7c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Colin_Edwin> ;
+        mtp:hasType          "HT" .

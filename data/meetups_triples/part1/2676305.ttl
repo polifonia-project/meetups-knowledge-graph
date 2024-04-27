@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:487140694646e1a9f2558f666dc73c9e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yu_Yamada> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Yu Yamada" .
+
+meetup:bb340093377a1293b7347a509695fb4f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tetsuto_Yamada> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.6970246396802917" ;
+        mtp:hasTextEvidence     "Yamada" .
+
+meetup:ee810c9c95520aa849594089617ac709
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Yu Yamada is a singer" ;
+        mtp:hasEvidencePurposeSecond  "Yu Yamada is a model and actress" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2676305/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yu Yamada (山田 優, Yamada Yū, born July 5, 1984, Okinawa) is a Japanese model, actress and singer best known from her modeling work with CanCam magazine." ;
+        mtp:hasParticipant   meetup:487140694646e1a9f2558f666dc73c9e , meetup:bb340093377a1293b7347a509695fb4f ;
+        mtp:hasPurpose       meetup:ee810c9c95520aa849594089617ac709 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yu_Yamada> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Tetsuto_Yamada>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Yu_Yamada>
+        rdf:type  core:Person .

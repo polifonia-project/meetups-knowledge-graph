@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:95d99a20435e17eee3310e2fead1218d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7541439" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2457943" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9656e188d479c36fd2ba375ae6af32e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hiroko_Shimabukuro> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hiroko Shimabukuro" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Hiroko_Shimabukuro>
+        rdf:type  core:Person .
+
+meetup:bd17c0769b016a6e9d8fb5a7d239d548
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hiroko_Suzuki> ;
+        mtp:hasOffset           "47" ;
+        mtp:hasSimilarityScore  "0.9999983494419644" ;
+        mtp:hasTextEvidence     "Hiroko" .
+
+<http://w3id.org/polifonia/pilot/meetups/2155551/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hiroko Shimabukuro (島袋 寛子, Shimabukuro Hiroko, born 7 April 1984), best known mononymously as Hiro, is a Japanese singer." ;
+        mtp:hasParticipant   meetup:9656e188d479c36fd2ba375ae6af32e1 , meetup:bd17c0769b016a6e9d8fb5a7d239d548 ;
+        mtp:hasPurpose       meetup:95d99a20435e17eee3310e2fead1218d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hiroko_Shimabukuro> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Hiroko_Suzuki>
+        rdf:type  core:Person .

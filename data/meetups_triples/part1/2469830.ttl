@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2469830/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Candida Mary Doyle (born 25 August 1963) is an English musician who is keyboard player and occasional backing vocalist with the band Pulp, which she joined in 1984." ;
+        mtp:hasParticipant   meetup:0c1d5c45ebd56d193a9946b7be722476 , meetup:e0ca8cf3693ca1bd1fb3401d817005d7 ;
+        mtp:hasPurpose       meetup:453e2874b5c3a70bb020b73db807c44f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Candida_Doyle> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:0c1d5c45ebd56d193a9946b7be722476
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Candida_Doyle> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999996779287932" ;
+        mtp:hasTextEvidence     "Candida" .
+
+meetup:e0ca8cf3693ca1bd1fb3401d817005d7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doyle_Wolfgang_von_Frankenstein> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "0.975140795735458" ;
+        mtp:hasTextEvidence     "Doyle" .
+
+meetup:453e2874b5c3a70bb020b73db807c44f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.85067695" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07340402" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Doyle_Wolfgang_von_Frankenstein>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Candida_Doyle>
+        rdf:type  core:Person .

@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:51f8b3df9a5ebd5f03e5cc7ef1486448
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Thomas Ernest Hare" .
+
+<http://dbpedia.org/resource/Ernie_Hare>
+        rdf:type  core:Person .
+
+meetup:d0ce9725ad9c07e23f5c0bdb674047ec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ernie_Hare> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9998672670860466" ;
+        mtp:hasTextEvidence     "Ernest Hare" .
+
+<http://w3id.org/polifonia/pilot/meetups/10594178/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Thomas Ernest Hare (March 16, 1883 – March 9, 1939) was an American singer who recorded prolifically during the 1920s and 1930s, finding fame as a radio star on the Happiness Boys radio program." ;
+        mtp:hasParticipant   meetup:d0ce9725ad9c07e23f5c0bdb674047ec , meetup:51f8b3df9a5ebd5f03e5cc7ef1486448 ;
+        mtp:hasPurpose       meetup:c3ecf1af97d51e3f8ae73c561295bb25 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ernie_Hare> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:c3ecf1af97d51e3f8ae73c561295bb25
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9951207" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0048778052" ;
+        mtp:hasSourcePurpose          "ML" .

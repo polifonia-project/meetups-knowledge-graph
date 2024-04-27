@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/44787707/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johannes Herbst (July 23, 1735 – January 15, 1812) was a German-American Moravian minister and composer." ;
+        mtp:hasParticipant   meetup:f7354839a0afde82ea61bfbba4156499 ;
+        mtp:hasPurpose       meetup:e7bdd9eab9742000b535756237a98f1e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johannes_Herbst> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Johannes_Herbst>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f7354839a0afde82ea61bfbba4156499
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johannes_Herbst> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johannes Herbst" .
+
+meetup:e7bdd9eab9742000b535756237a98f1e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999833" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.6402994e-06" ;
+        mtp:hasSourcePurpose          "ML" .

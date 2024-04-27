@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Stet_Howland>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lyndon_B._Johnson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4064082/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On July 2, 2011, Howland joined 10,000 Views, a Fort Myers, Florida based powerhouse rock band. Other current members of 10,000 Views are Timmy Johnson (lead vocals/rhythm guitar) and John Hyatt (lead guitar/vocals)." ;
+        mtp:hasParticipant   meetup:ca9d5d105deb4416941506ffc5c25bf5 , meetup:7170c4302c264fce0a931e9542004633 ;
+        mtp:hasPurpose       meetup:fd3c4c4666d8c6bd1b9c323b18c7f078 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stet_Howland> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:bf5adbbdeb03d9f533c724013428f4fa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stet_Howland> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Stet Howland" .
+
+<http://w3id.org/polifonia/pilot/meetups/4064082/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Stet Howland (born August 14, 1960) is an American drummer." ;
+        mtp:hasParticipant   meetup:bf5adbbdeb03d9f533c724013428f4fa ;
+        mtp:hasPurpose       meetup:ba1bc97b5b5345d25ea64e3ffce4b34d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stet_Howland> ;
+        mtp:hasType          "HT" .
+
+meetup:ca9d5d105deb4416941506ffc5c25bf5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lyndon_B._Johnson> ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "0.7159072461619508" ;
+        mtp:hasTextEvidence     "Johnson" .
+
+meetup:fd3c4c4666d8c6bd1b9c323b18c7f078
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Joining a rock band" ;
+        mtp:hasEvidencePurposeSecond  "Band members' personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:7170c4302c264fce0a931e9542004633
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Timmy Johnson" .
+
+meetup:ba1bc97b5b5345d25ea64e3ffce4b34d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.43759724" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4255784" ;
+        mtp:hasSourcePurpose          "ML" .

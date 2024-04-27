@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Nusrat_Fateh_Ali_Khan>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1a5383f1d834c2c98db5fcdda1d9d637
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997414" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00024452948" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/3712093/0/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By the time she signed with Atlantic in 1997, she had embraced a variety of genres, having played with Quwaali musician Nusrat Fateh Ali Khan, Porno for Pyros, Tracy Chapman, The Jayhawks, Brandy, Tony!" ;
+        mtp:hasParticipant   meetup:9fc50ad88c4f56c4f0f84a9ffcdec95b , meetup:65b68c4b331934149349349d09594904 , meetup:e9bb77a8958a4ccff04e827f932a8630 ;
+        mtp:hasPurpose       meetup:1a5383f1d834c2c98db5fcdda1d9d637 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lili_Haydn> ;
+        mtp:hasType          "HM" .
+
+meetup:e9bb77a8958a4ccff04e827f932a8630
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lili_Haydn> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lili Haydn" .
+
+meetup:65b68c4b331934149349349d09594904
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tracy_Chapman> ;
+        mtp:hasOffset           "160" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tracy Chapman" .
+
+<http://dbpedia.org/resource/Lili_Haydn>
+        rdf:type  core:Person .
+
+meetup:9fc50ad88c4f56c4f0f84a9ffcdec95b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nusrat_Fateh_Ali_Khan> ;
+        mtp:hasOffset           "120" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nusrat Fateh Ali Khan" .
+
+<http://dbpedia.org/resource/Tracy_Chapman>
+        rdf:type  core:Person .

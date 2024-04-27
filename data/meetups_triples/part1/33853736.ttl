@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/33853736/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Josiah Miller (1832 – 1880) was an English Congregationalist minister and hymnologist." ;
+        mtp:hasParticipant   meetup:c7f6a46fc8bb2d502b846b69da61e8ee ;
+        mtp:hasPurpose       meetup:81be62140c11a0ad46bb6bd778192ccb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Josiah_Miller> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Josiah_Miller>
+        rdf:type  core:Person .
+
+meetup:c7f6a46fc8bb2d502b846b69da61e8ee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Josiah_Miller> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999991758" ;
+        mtp:hasTextEvidence     "Josiah Miller" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:81be62140c11a0ad46bb6bd778192ccb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8622593" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11994662" ;
+        mtp:hasSourcePurpose          "ML" .

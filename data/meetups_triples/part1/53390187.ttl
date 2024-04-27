@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4b51d18757f07e0da516a24c23e31347
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.77819" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22176668" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/53390187/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Surya Kumar Neupane (born 1987) known professionally as Uttam Neupane, is a Nepali sound mixer." ;
+        mtp:hasParticipant   meetup:31353c38b76196be41a85829c1c5c72d , meetup:69af3d94ef26017c45e03d60b78b9c87 ;
+        mtp:hasPurpose       meetup:4b51d18757f07e0da516a24c23e31347 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Uttam_Neupane> ;
+        mtp:hasType          "HM" .
+
+meetup:69af3d94ef26017c45e03d60b78b9c87
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Surya_(Telugu_actor)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999992896" ;
+        mtp:hasTextEvidence     "Surya Kumar" .
+
+meetup:31353c38b76196be41a85829c1c5c72d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Uttam_Neupane> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Uttam Neupane" .
+
+<http://dbpedia.org/resource/Uttam_Neupane>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Surya_(Telugu_actor)>
+        rdf:type  core:Person .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d4b510e4251e52c38ea131adf36bb0b1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9838811" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.016117154" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d26718898c11395f28115dc3ea3ca6b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gustav_Mahler> ;
+        mtp:hasOffset           "123" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gustav Mahler" .
+
+<http://dbpedia.org/resource/Heinz_Unger>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b1c77a95e56a00a38333a2e940703f5f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Heinz_Unger> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Heinz Unger" .
+
+<http://dbpedia.org/resource/Gustav_Mahler>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:27404ed88edcda3347561e24c3ff332a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions Unger's debut with the Toronto Symphony Orchestra and his role as a guest conductor." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions Unger settling in Toronto in 1948." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/44444627/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Having made his debut in North America with the Toronto Symphony Orchestra in Canada in 1937, and returning there in 1938, Unger settled in Toronto in 1948. He was a guest conductor of the Promenade Symphony Orchestra, which gave concerts at the Varsity Arena in Toronto." ;
+        mtp:hasPurpose       meetup:27404ed88edcda3347561e24c3ff332a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Heinz_Unger> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/44444627/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Heinz Unger (14 December 1895 – 25 February 1965) was a German conductor, known particularly for conducting the works of Gustav Mahler." ;
+        mtp:hasParticipant   meetup:d26718898c11395f28115dc3ea3ca6b6 , meetup:b1c77a95e56a00a38333a2e940703f5f ;
+        mtp:hasPurpose       meetup:d4b510e4251e52c38ea131adf36bb0b1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Heinz_Unger> ;
+        mtp:hasType          "HM" .

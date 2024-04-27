@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Majk_Spirit>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:2cb29b8d1918dedcd97d5cf8a1c47c63
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Majk_Spirit> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Majk Spirit" .
+
+<http://w3id.org/polifonia/pilot/meetups/38449667/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Majk Spirit (born Michal Dušička; 28 August 1984) is a Slovak rapper and member of the group H16, named after his primary school Hálova 16 in Petržalka." ;
+        mtp:hasParticipant   meetup:2cb29b8d1918dedcd97d5cf8a1c47c63 ;
+        mtp:hasPurpose       meetup:9e9dc4fba3e5781ff07e0be67df4ed1e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Majk_Spirit> ;
+        mtp:hasType          "HT" .
+
+meetup:9e9dc4fba3e5781ff07e0be67df4ed1e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9448163" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.055153623" ;
+        mtp:hasSourcePurpose          "ML" .

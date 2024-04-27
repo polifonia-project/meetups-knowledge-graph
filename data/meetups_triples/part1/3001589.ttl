@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/3001589/18/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alban Gerhardt cello and Cecile Licad piano" ;
+        mtp:hasParticipant   meetup:2c36c040eace047e5d9c18089c8184e5 , meetup:1a3e9cd3b4cf8e4f129b1ebc40324f37 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cecile_Licad> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Alban_Gerhardt>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Cecile_Licad>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3001589/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cecile Licad Performs Chopin for Music Masters (1995)." ;
+        mtp:hasParticipant   meetup:2869895f47959bbcc04fa262257d6d03 ;
+        mtp:hasPurpose       meetup:648f6ae077b5639690f3d1dcbfba5461 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cecile_Licad> ;
+        mtp:hasType          "HT" .
+
+meetup:2869895f47959bbcc04fa262257d6d03
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cecile_Licad> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cecile Licad" .
+
+meetup:1a3e9cd3b4cf8e4f129b1ebc40324f37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cecile_Licad> ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cecile Licad" .
+
+meetup:648f6ae077b5639690f3d1dcbfba5461
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7610224" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17332938" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2c36c040eace047e5d9c18089c8184e5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alban_Gerhardt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alban Gerhardt" .

@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:df3f3a5fe601ab14cf6b8422ce344e74
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.81698245" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15508835" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/28754739/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He recorded one studio album for Vee Jay Records in 1963, in addition to appearing on radio shows." ;
+        mtp:hasParticipant   meetup:f4a1b9c0964dfcd1bf3b492dd55015b9 ;
+        mtp:hasPurpose       meetup:df3f3a5fe601ab14cf6b8422ce344e74 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Orville_Couch> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Orville_Couch>
+        rdf:type  core:Person .
+
+meetup:f4a1b9c0964dfcd1bf3b492dd55015b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Orville_Couch> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Orville Couch" .
+
+meetup:b0fa5a9e2811edd6da8e0f6f91e40c4b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Orville_Couch> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999824342312" ;
+        mtp:hasTextEvidence     "Orville Couch" .
+
+<http://w3id.org/polifonia/pilot/meetups/28754739/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Orville Couch (February 21, 1935 – May 26, 2002) was an American country music singer." ;
+        mtp:hasParticipant   meetup:b0fa5a9e2811edd6da8e0f6f91e40c4b ;
+        mtp:hasPurpose       meetup:5f4d99f049e0316bc95f823722aae55e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Orville_Couch> ;
+        mtp:hasType          "HT" .
+
+meetup:5f4d99f049e0316bc95f823722aae55e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.72322434" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2759928" ;
+        mtp:hasSourcePurpose          "ML" .

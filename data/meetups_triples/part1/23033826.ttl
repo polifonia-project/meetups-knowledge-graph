@@ -1,0 +1,99 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Philip_Stein>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/23033826/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Philip Stein, The Mexican murals, 1984" ;
+        mtp:hasParticipant   meetup:0b7aacfcff25df2ce72503a5f2cc9b5b ;
+        mtp:hasPurpose       meetup:8004b8300f83f2747028cfe58a708061 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Philip_Stein> ;
+        mtp:hasType          "HT" .
+
+meetup:0b7aacfcff25df2ce72503a5f2cc9b5b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Philip_Stein> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999907946486032" ;
+        mtp:hasTextEvidence     "Philip Stein" .
+
+meetup:d9b386f5a78a2bdef04097f56f316cc0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Alfaro_Siqueiros> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.9999999999996874" ;
+        mtp:hasTextEvidence     "Siqueiros" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f2f3b49bd048962b2559454d3f99fafd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9945655" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.003664412" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e728d3842e7908190f095fb2e3e465a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95880806" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0374593" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/David_Alfaro_Siqueiros>
+        rdf:type  core:Person .
+
+meetup:8004b8300f83f2747028cfe58a708061
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9825737" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0153114945" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/23033826/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Philip Stein, Siqueiros: his life and works, 1994" ;
+        mtp:hasParticipant   meetup:0b1ffcc50c82557b1d18708057aee31d , meetup:d9b386f5a78a2bdef04097f56f316cc0 ;
+        mtp:hasPurpose       meetup:f2f3b49bd048962b2559454d3f99fafd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Philip_Stein> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/23033826/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Philip Stein, better known as \"Estaño\" (b. Newark, New Jersey, February 5, 1919 – d. Manhattan, April 27, 2009), was an American painter and muralist." ;
+        mtp:hasParticipant   meetup:4d00aa6ce501d6efc590e442bea66c10 ;
+        mtp:hasPurpose       meetup:e728d3842e7908190f095fb2e3e465a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Philip_Stein> ;
+        mtp:hasType          "HT" .
+
+meetup:0b1ffcc50c82557b1d18708057aee31d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Philip_Stein> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999907946486174" ;
+        mtp:hasTextEvidence     "Philip Stein" .
+
+meetup:4d00aa6ce501d6efc590e442bea66c10
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Philip_Stein> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999990794648589" ;
+        mtp:hasTextEvidence     "Philip Stein" .

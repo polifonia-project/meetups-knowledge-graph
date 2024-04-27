@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2536629/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A year later, a second Greatest Hits package produced his last MCA single in the No. 5 \"Old School\" before he moved to Columbia Records." ;
+        mtp:hasParticipant   meetup:5171f75b0fcada63384c195ae221d4bb ;
+        mtp:hasPurpose       meetup:d2bf8d75f34c9d34f1f3056b9ee90c47 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Conlee> ;
+        mtp:hasType          "HT" .
+
+meetup:5171f75b0fcada63384c195ae221d4bb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Conlee> ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Conlee" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:bff1a01667cdea4477b53e1da2201f09
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Conlee> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Conlee" .
+
+meetup:d59a4b08f94840d978df53f30d14b058
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to the topic of music making because it mentions an album and a song." ;
+        mtp:hasEvidencePurposeSecond  "The sentence could also be related to the topic of coincidence because it mentions the year 1984, which could be seen as a coincidence or a significant event." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d2bf8d75f34c9d34f1f3056b9ee90c47
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to the music career and releases of the artist." ;
+        mtp:hasEvidencePurposeSecond  "The mention of moving to a different record label suggests a business decision or negotiation." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2536629/6/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Conlee's first Columbia release, Harmony, gave him his last number one hit in \"Got My Heart Set on You\" in 1986." ;
+        mtp:hasParticipant   meetup:bff1a01667cdea4477b53e1da2201f09 ;
+        mtp:hasPurpose       meetup:e6d6c7f67c613b374115c447bd6bbecd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Conlee> ;
+        mtp:hasType          "HT" .
+
+meetup:e6d6c7f67c613b374115c447bd6bbecd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to the topic of music making because it mentions Conlee's release and his hit song." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also hints at Conlee's personal life as it mentions his last number one hit." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/John_Conlee>
+        rdf:type  core:Person .
+
+meetup:cc7bc6cd3ef771ff52dcc648776026b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Conlee> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Conlee" .
+
+<http://w3id.org/polifonia/pilot/meetups/2536629/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Blue Highway in 1984, his last studio album for MCA, produced a No. 2 in \"Years After You.\"" ;
+        mtp:hasParticipant   meetup:cc7bc6cd3ef771ff52dcc648776026b6 ;
+        mtp:hasPurpose       meetup:d59a4b08f94840d978df53f30d14b058 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Conlee> ;
+        mtp:hasType          "HT" .

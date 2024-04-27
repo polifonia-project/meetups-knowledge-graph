@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Bunk_Gardner>
+        rdf:type  core:Person .
+
+meetup:a5444755db7a077d7c412f2d99527ee6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bunk_Gardner> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bunk" .
+
+<http://dbpedia.org/resource/Frank_Zappa>
+        rdf:type  core:Person .
+
+meetup:533e48ab878b187e46ccff74d11b77a0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "\"Bunk\" Gardner" .
+
+meetup:80f5e6919a947c6f1edf60d8ef3bd951
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Bunk Gardner is a musician" ;
+        mtp:hasEvidencePurposeSecond  "Bunk Gardner's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3ace741514cbe559d8a22e4fffd6a75f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Zappa> ;
+        mtp:hasOffset           "188" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Frank Zappa" .
+
+<http://w3id.org/polifonia/pilot/meetups/31579354/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Leon Guarnera, professionally known as \"Bunk\" Gardner (born May 2, 1933 in Cleveland, Ohio, United States) is an American musician who most notably played for the original version of Frank Zappa's Mothers of Invention until the group disbanded in 1969." ;
+        mtp:hasParticipant   meetup:a5444755db7a077d7c412f2d99527ee6 , meetup:533e48ab878b187e46ccff74d11b77a0 , meetup:3ace741514cbe559d8a22e4fffd6a75f ;
+        mtp:hasPurpose       meetup:80f5e6919a947c6f1edf60d8ef3bd951 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bunk_Gardner> ;
+        mtp:hasType          "HM" .

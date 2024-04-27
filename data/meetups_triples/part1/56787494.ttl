@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/56787494/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He retired The Teenagers in 2005." ;
+        mtp:hasParticipant   meetup:04f078cf3787ab01e7cde771a31bff49 ;
+        mtp:hasPurpose       meetup:b4ba59a284a7f1db1c6b67f8f23b8c19 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Merchant> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/56787494/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jimmy Merchant (born February 10, 1940) is an American singer and musician." ;
+        mtp:hasParticipant   meetup:422df6cc42149846f4e74552a0871e7b ;
+        mtp:hasPurpose       meetup:9652febc087e8bec5a7657a934031206 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Merchant> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b4ba59a284a7f1db1c6b67f8f23b8c19
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999976" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.9417497e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9652febc087e8bec5a7657a934031206
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999738" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.5394746e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jimmy_Merchant>
+        rdf:type  core:Person .
+
+meetup:04f078cf3787ab01e7cde771a31bff49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Merchant> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jimmy Merchant" .
+
+meetup:422df6cc42149846f4e74552a0871e7b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Merchant> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999842544" ;
+        mtp:hasTextEvidence     "Jimmy Merchant" .

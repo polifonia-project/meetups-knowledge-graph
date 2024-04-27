@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/66886311/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is based in Los Angeles, California." ;
+        mtp:hasParticipant   meetup:6593eab52459785795f43e6829b08cdf ;
+        mtp:hasPurpose       meetup:f0cb6d099ba069d2513a233969f04761 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Kendrick> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/David_Kendrick>
+        rdf:type  core:Person .
+
+meetup:6593eab52459785795f43e6829b08cdf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Kendrick> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David Kendrick" .
+
+meetup:f0cb6d099ba069d2513a233969f04761
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.65832984" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28671005" ;
+        mtp:hasSourcePurpose          "ML" .

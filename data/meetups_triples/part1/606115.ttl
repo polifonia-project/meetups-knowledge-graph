@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/606115/0/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Scotsman newspaper has described her as Scotland's best-selling female singer in terms of the numbers of hit chart singles and albums she has achieved in the UK since 1976. She is also a twice Olivier Award-winning actress, with roles including Viv Nicholson in the musical Spend Spend Spend, and was the original Mrs. Johnstone in Willy Russell's long-running musical Blood Brothers." ;
+        mtp:hasParticipant   meetup:95d9e9624b944fdf3de5d7b23d1ca672 , meetup:0688caee5cb3dcdff6781f2dc9a54b75 ;
+        mtp:hasPurpose       meetup:b69b2cbd2f357ce2453e8ca208efd462 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Barbara_Dickson> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0688caee5cb3dcdff6781f2dc9a54b75
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Viv_Nicholson> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Viv Nicholson" .
+
+meetup:b69b2cbd2f357ce2453e8ca208efd462
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to music making because it mentions the musicals 'Spend Spend Spend' and 'Blood Brothers' in which the person mentioned has acted." ;
+        mtp:hasEvidencePurposeSecond  "The sentence is also related to personal life as it mentions the person being a twice Olivier Award-winning actress." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Barbara_Dickson>
+        rdf:type  core:Person .
+
+meetup:95d9e9624b944fdf3de5d7b23d1ca672
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Willy_Russell> ;
+        mtp:hasOffset           "159" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Willy Russell" .
+
+<http://dbpedia.org/resource/Viv_Nicholson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Willy_Russell>
+        rdf:type  core:Person .

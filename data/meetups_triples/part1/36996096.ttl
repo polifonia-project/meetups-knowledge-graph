@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:73524a20abd7929cf6bdf8e145e87d97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erik_Johannessen_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9529403482131048" ;
+        mtp:hasTextEvidence     "Erik Johannessen" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:8f3b7e00240106b4a8331b60a989b02d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9128999" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.087066926" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/36996096/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Erik Johannessen (born 22 July 1975 in Oslo) is a Norwegian trombonist) and composer, who has played in bands like Jaga Jazzist, Trondheim Jazz Orchestra, Loud Jazz Band, Lord Kelvin, Funky Hot Grits, Ensemble Denada and Magic Pocket." ;
+        mtp:hasParticipant   meetup:73524a20abd7929cf6bdf8e145e87d97 ;
+        mtp:hasPurpose       meetup:8f3b7e00240106b4a8331b60a989b02d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erik_Johannessen_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Erik_Johannessen_(musician)>
+        rdf:type  core:Person .

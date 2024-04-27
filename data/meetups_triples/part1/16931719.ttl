@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d3ce3a2724c905c231b1a8b314801b21
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995474" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00045228252" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f1f6a6388c8235f113380c7faeb560ab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sarah_Vaughan> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "0.9999999998884164" ;
+        mtp:hasTextEvidence     "Sarah Vaughan" .
+
+<http://w3id.org/polifonia/pilot/meetups/16931719/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was married from 1978 to 1981 to singer Sarah Vaughan." ;
+        mtp:hasParticipant   meetup:4e17b0a9bb1ca1f1086176b1745b587b , meetup:f1f6a6388c8235f113380c7faeb560ab ;
+        mtp:hasPurpose       meetup:360f36d64d406ec1a4de04da50faa0d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Waymon_Reed> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/16931719/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Waymon Reed (January 10, 1940, Fayetteville, North Carolina - November 25, 1983, Nashville, Tennessee) was an American jazz trumpeter." ;
+        mtp:hasParticipant   meetup:286085cb8c24ddccbe79c980390a20a1 ;
+        mtp:hasPurpose       meetup:d3ce3a2724c905c231b1a8b314801b21 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Waymon_Reed> ;
+        mtp:hasType          "HT" .
+
+meetup:4e17b0a9bb1ca1f1086176b1745b587b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Waymon_Reed> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Waymon Reed" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:286085cb8c24ddccbe79c980390a20a1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Waymon_Reed> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Waymon Reed" .
+
+<http://dbpedia.org/resource/Waymon_Reed>
+        rdf:type  core:Person .
+
+meetup:360f36d64d406ec1a4de04da50faa0d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6297087" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.34933603" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Sarah_Vaughan>
+        rdf:type  core:Person .

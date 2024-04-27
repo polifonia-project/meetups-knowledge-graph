@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bill_Kelliher>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:fd0cb65be94be9399d54e2a9ef31081c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94811356" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0512647" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9eab12ec4ca98dbf0b54a775cd729fc3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Kelliher> ;
+        mtp:hasOffset           "164" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bill Kelliher" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/8057086/11/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In June 2016, ESP Guitars announced that Kelliher had started endorsing their guitars and that they would be releasing 2 signature models for him, the high end ESP Bill Kelliher and the more affordable LTD BK-600." ;
+        mtp:hasParticipant   meetup:9eab12ec4ca98dbf0b54a775cd729fc3 ;
+        mtp:hasPurpose       meetup:fd0cb65be94be9399d54e2a9ef31081c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_Kelliher> ;
+        mtp:hasType          "HT" .

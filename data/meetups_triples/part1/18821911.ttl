@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:dc07048a9343ee2971a25a16f2c6cbdc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Series of lectures at universities" ;
+        mtp:hasEvidencePurposeSecond  "Joined the staff of Rhythm Magazine" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Francis_Spellman>
+        rdf:type  core:Person .
+
+meetup:e103d7bcc446ca85b0ed5528ada32e77
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Francis_Spellman> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Spellman" .
+
+<http://w3id.org/polifonia/pilot/meetups/18821911/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After touring the nation with several other African-American poets in 1967, Spellman joined the staff of Rhythm Magazine, where he wrote poems and political essays until 1969. After leaving the magazine, he conducted a series of lectures at universities throughout the United States, including Morehouse College, Emory University, Rutgers University, and Harvard." ;
+        mtp:hasParticipant   meetup:e103d7bcc446ca85b0ed5528ada32e77 ;
+        mtp:hasPurpose       meetup:dc07048a9343ee2971a25a16f2c6cbdc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/A._B._Spellman> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/A._B._Spellman>
+        rdf:type  core:Person .

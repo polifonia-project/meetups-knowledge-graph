@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a36c338d4dda1df58da3c24d562c570a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.933822" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06607158" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/7026348/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Agnes Bernelle (born Agnes Elisabeth Bernauer; 7 March 1923 – 15 February 1999) was a Berlin-born expatriate actress and singer, who lived in England for many years, then Ireland." ;
+        mtp:hasParticipant   meetup:e8ebd64997b80e3f47ed7351aa71782c , meetup:927f206fe0eb2312f0c3245308dc07d5 ;
+        mtp:hasPurpose       meetup:ed884f85f992d03ead84297d8484f3a0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Agnes_Bernelle> ;
+        mtp:hasType          "HM" .
+
+meetup:e8ebd64997b80e3f47ed7351aa71782c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Agnes Elisabeth Bernauer" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:712602c98d1a5d78868cb71f0e298a48
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Agnes_Bernelle> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Agnes Bernelle" .
+
+<http://w3id.org/polifonia/pilot/meetups/7026348/24/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Agnes Bernelle : I was the little girl (Documentary, by RTÉ 1989)" ;
+        mtp:hasParticipant   meetup:712602c98d1a5d78868cb71f0e298a48 ;
+        mtp:hasPurpose       meetup:a36c338d4dda1df58da3c24d562c570a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Agnes_Bernelle> ;
+        mtp:hasType          "HT" .
+
+meetup:ed884f85f992d03ead84297d8484f3a0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Agnes Bernelle was a singer" ;
+        mtp:hasEvidencePurposeSecond  "She lived in England and Ireland" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:927f206fe0eb2312f0c3245308dc07d5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Agnes_Bernelle> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Agnes Bernelle" .
+
+<http://dbpedia.org/resource/Agnes_Bernelle>
+        rdf:type  core:Person .

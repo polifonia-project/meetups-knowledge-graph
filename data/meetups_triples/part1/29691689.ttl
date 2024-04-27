@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/29691689/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Takeshi Koike (小池健, Koike Takeshi) (born January 26, 1968) is a Japanese animator, illustrator and film director." ;
+        mtp:hasParticipant   meetup:0c159a9e518cf69ef295e82fd4594fb7 , meetup:1818a82cc44034acb6542100eb71bcce , meetup:2a2ee583a6758a9eddcf542b15e9b9cd ;
+        mtp:hasPurpose       meetup:8adaaebc373de07018a9c04cad65afb5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Takeshi_Koike> ;
+        mtp:hasType          "HM" .
+
+meetup:0c159a9e518cf69ef295e82fd4594fb7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Takeshi_Kitano> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "0.9999999975423748" ;
+        mtp:hasTextEvidence     "Takeshi" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:8adaaebc373de07018a9c04cad65afb5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9652525" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.029453741" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Takeshi_Kitano>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Takeshi_Koike>
+        rdf:type  core:Person .
+
+meetup:2a2ee583a6758a9eddcf542b15e9b9cd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Takeshi_Koike> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Takeshi Koike" .
+
+meetup:1818a82cc44034acb6542100eb71bcce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Koike Takeshi" .

@@ -1,0 +1,89 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:937246b287116f8bb9034bc6e68dd39c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/JS_Clayden> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "JS Clayden" .
+
+meetup:4ecf395bab1cc1adebe61b15aa88a724
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mark Clayden" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/7870100/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He moved to several towns in the United Kingdom, settling in Nottingham, England for a number of years before emigrating to Los Angeles, California." ;
+        mtp:hasParticipant   meetup:937246b287116f8bb9034bc6e68dd39c ;
+        mtp:hasPurpose       meetup:068742cb02d82453b15bcac05aaf304b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/JS_Clayden> ;
+        mtp:hasType          "HT" .
+
+meetup:b9543592563535b6906d8d80885dae74
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9906936" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009276396" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/7870100/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "JS Clayden (born Jonathan Seth Clayden, 24 March 1971) is a British singer/songwriter." ;
+        mtp:hasParticipant   meetup:c32a2756013c8a151fda0d6d0c3e2079 ;
+        mtp:hasPurpose       meetup:b9543592563535b6906d8d80885dae74 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/JS_Clayden> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/7870100/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is also the brother of Pitchshifter's bassist, Mark Clayden." ;
+        mtp:hasParticipant   meetup:adc7bf44e4f92cd3d19221f6821c4445 , meetup:4ecf395bab1cc1adebe61b15aa88a724 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/JS_Clayden> ;
+        mtp:hasType          "HM" .
+
+meetup:adc7bf44e4f92cd3d19221f6821c4445
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/JS_Clayden> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "JS Clayden" .
+
+<http://dbpedia.org/resource/JS_Clayden>
+        rdf:type  core:Person .
+
+meetup:c32a2756013c8a151fda0d6d0c3e2079
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/JS_Clayden> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "JS Clayden" .
+
+meetup:068742cb02d82453b15bcac05aaf304b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9585203" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.034692913" ;
+        mtp:hasSourcePurpose          "ML" .

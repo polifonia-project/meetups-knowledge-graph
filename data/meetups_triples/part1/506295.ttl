@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Cathy_Dennis>
+        rdf:type  core:Person .
+
+meetup:afbb856eca2b3bee10ced9bf8d6a1954
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Solo hits and cover songs" ;
+        mtp:hasEvidencePurposeSecond  "Career achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/506295/5/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The three solo hits were: \"Just Another Dream\" (UK No. 13, US No. 9, Australia No. 14), which featured D Mob on backing vocals; a cover of the Wish and Fonda Rae 1984 club hit \"Touch Me (All Night Long)\" (UK No. 5, US No. 2, Australia No. 16), which is probably her most remembered hit to date; and \"Too Many Walls\" (UK No. 17, US No. 8, Australia No. 57)." ;
+        mtp:hasPurpose       meetup:afbb856eca2b3bee10ced9bf8d6a1954 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cathy_Dennis> ;
+        mtp:hasType          "HT" .

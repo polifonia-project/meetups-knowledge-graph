@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/965109/19/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Amphlett died, aged 53, on 21 April 2013 at her home in Manhattan, after a long battle with breast cancer." ;
+        mtp:hasParticipant   meetup:ef69a147925a8a976b5be01f1cb7b52f ;
+        mtp:hasPurpose       meetup:0e8b3d1c7900a7f6dc970cef50a7ad2f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chrissy_Amphlett> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Chrissy_Amphlett>
+        rdf:type  core:Person .
+
+meetup:f0337c82667b1d9acf1a8518aedea64e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9976907" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0019284204" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/965109/19/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Russell Crowe wrote: \"RIP Chrissie Amphlett, [she] played my mum in Blood Brothers, 1988.\"" ;
+        mtp:hasParticipant   meetup:629ee5e8532264276abbd7a7dbdc7302 , meetup:710e382fc4ad5ed9eb5b8b9f1b4ab650 ;
+        mtp:hasPurpose       meetup:f0337c82667b1d9acf1a8518aedea64e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chrissy_Amphlett> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Russell_Crowe>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0e8b3d1c7900a7f6dc970cef50a7ad2f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Unfortunate event" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ef69a147925a8a976b5be01f1cb7b52f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chrissy_Amphlett> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chrissie Amphlett" .
+
+meetup:629ee5e8532264276abbd7a7dbdc7302
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Russell_Crowe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Russell Crowe" .
+
+meetup:710e382fc4ad5ed9eb5b8b9f1b4ab650
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chrissy_Amphlett> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chrissie Amphlett" .

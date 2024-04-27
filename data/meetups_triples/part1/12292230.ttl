@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/12292230/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Calvin Richardson (born December 16, 1976) is an American R&B and soul singer-songwriter." ;
+        mtp:hasParticipant   meetup:5c96dd4c0b066959a82e0d04c40e777e ;
+        mtp:hasPurpose       meetup:3e5b6dcf4f0faef5db90bb68c4507483 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Calvin_Richardson> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:77f35d09711293437f2660e0ba1d9b16
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Calvin_Richardson> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Calvin Richardson" .
+
+meetup:3e5b6dcf4f0faef5db90bb68c4507483
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9708083" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.029189855" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/12292230/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1999, he released his debut solo album Country Boy." ;
+        mtp:hasParticipant   meetup:77f35d09711293437f2660e0ba1d9b16 ;
+        mtp:hasPurpose       meetup:c81b16e86cb81f4194ce88662be3b919 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Calvin_Richardson> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:5c96dd4c0b066959a82e0d04c40e777e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Calvin_Richardson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Calvin Richardson" .
+
+<http://dbpedia.org/resource/Calvin_Richardson>
+        rdf:type  core:Person .
+
+meetup:c81b16e86cb81f4194ce88662be3b919
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99928147" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0004865132" ;
+        mtp:hasSourcePurpose          "ML" .

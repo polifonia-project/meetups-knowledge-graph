@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:aac5deb4b85ccca85aa15361d2653993
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Levi_Stubbs> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Levi Stubbs" .
+
+<http://w3id.org/polifonia/pilot/meetups/811354/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Levi Stubbs and his wife Clineice were married (for 48 years) from 1960 until his death in 2008." ;
+        mtp:hasParticipant   meetup:22c03744a5073d4e6e27b8bea8f5def5 , meetup:273e00b698e20c16c4e7576e16541c48 ;
+        mtp:hasPurpose       meetup:c88251aaea1b02b25b7f06d23228cb2f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Levi_Stubbs> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:273e00b698e20c16c4e7576e16541c48
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Levi_Stubbs> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "Levi Stubbs" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Levi_Stubbs>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/811354/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Levi Stubbs (born Levi Stubbles, June 6, 1936 – October 17, 2008) was an American baritone singer, best known as the lead vocalist of the R&B group the Four Tops, who released a variety of Motown hit records during the 1960s and 1970s." ;
+        mtp:hasParticipant   meetup:aac5deb4b85ccca85aa15361d2653993 ;
+        mtp:hasPurpose       meetup:5a511583fc1b32fc6639058ad1ee3399 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Levi_Stubbs> ;
+        mtp:hasType          "HT" .
+
+meetup:c88251aaea1b02b25b7f06d23228cb2f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.72526026" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.27430078" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5a511583fc1b32fc6639058ad1ee3399
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9622156" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.020282013" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:22c03744a5073d4e6e27b8bea8f5def5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Clineice" .

@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Billy_Faier>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/25491055/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy Faier (December 21, 1930 – January 29, 2016) was an American banjo player and folk music evangelist." ;
+        mtp:hasParticipant   meetup:e1111f26d39ff51a96e741e4281b61c4 ;
+        mtp:hasPurpose       meetup:d3ebb7c312c465ed730f0501a51f3eba ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Faier> ;
+        mtp:hasType          "HT" .
+
+meetup:d3ebb7c312c465ed730f0501a51f3eba
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6765399" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11691921" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Pete_Seeger>
+        rdf:type  core:Person .
+
+meetup:3e160f28dc3f284d9c86ba0ba07b64dc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pete_Seeger> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Pete Seeger" .
+
+<http://w3id.org/polifonia/pilot/meetups/25491055/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He, along with Pete Seeger, was one of the early exponents of the banjo during the mid-20th-century American folk music revival." ;
+        mtp:hasParticipant   meetup:3e160f28dc3f284d9c86ba0ba07b64dc , meetup:28d6d29ddbd57ede6a0b63bd034c2eea ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Faier> ;
+        mtp:hasType          "HM" .
+
+meetup:e1111f26d39ff51a96e741e4281b61c4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Faier> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Billy Faier" .
+
+meetup:28d6d29ddbd57ede6a0b63bd034c2eea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Faier> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Billy Faier" .

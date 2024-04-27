@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d517c49acd0ae9511d630879e16f8799
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Arkestra" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/22753132/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Sun Ra Arkestra Meets Salah Ragab Plus The Cairo Jazz Band, In Egypt (Praxis, 1983)" ;
+        mtp:hasParticipant   meetup:d517c49acd0ae9511d630879e16f8799 , meetup:2e0e00692c5f912d0070c9c300252dba ;
+        mtp:hasPurpose       meetup:bc7803bfe70ee8b931e2e5ba7852260c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Salah_Ragab> ;
+        mtp:hasType          "HM" .
+
+meetup:bc7803bfe70ee8b931e2e5ba7852260c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Music collaboration" ;
+        mtp:hasEvidencePurposeSecond  "Cultural event" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:2e0e00692c5f912d0070c9c300252dba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Salah_Ragab> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Salah Ragab" .
+
+<http://dbpedia.org/resource/Salah_Ragab>
+        rdf:type  core:Person .

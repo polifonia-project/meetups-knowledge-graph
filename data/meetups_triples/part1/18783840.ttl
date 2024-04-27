@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ken_Chinn>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c82f8eba22a8c07ecc2be394b36aa78e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Little Joe was a short-lived music group" ;
+        mtp:hasEvidencePurposeSecond  "Chinn battled with drug addiction" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/18783840/7/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Another short-lived group, Little Joe, followed soon thereafter, which was active sporadically for the next two years and recorded a demo in 1992. After moving to Vancouver, Chinn began what would become a long battle with hard drug addiction." ;
+        mtp:hasParticipant   meetup:52c4a64126452ed13bf63cd9bd953c17 ;
+        mtp:hasPurpose       meetup:c82f8eba22a8c07ecc2be394b36aa78e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ken_Chinn> ;
+        mtp:hasType          "HT" .
+
+meetup:52c4a64126452ed13bf63cd9bd953c17
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicky_Chinn> ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chinn" .
+
+<http://dbpedia.org/resource/Nicky_Chinn>
+        rdf:type  core:Person .

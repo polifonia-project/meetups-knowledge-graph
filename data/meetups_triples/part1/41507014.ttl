@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:47f1ae66c6714ad117b99141458db07b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.9764247541290512" ;
+        mtp:hasTextEvidence     "James" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6bcdfd3c7ad8fdd3bd90b14f83f9e03b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/BJ_the_Chicago_Kid> ;
+        mtp:hasOffset           "76" ;
+        mtp:hasSimilarityScore  "0.999417746879972" ;
+        mtp:hasTextEvidence     "BJ" .
+
+meetup:d58ea4a21c68c13af7d8c49f9999fde4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/BJ_the_Chicago_Kid> ;
+        mtp:hasOffset           "82" ;
+        mtp:hasSimilarityScore  "0.99999728277734" ;
+        mtp:hasTextEvidence     "BJ" .
+
+meetup:9907bfe83d32df6b74b02afb47bdf906
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8081462" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1906203" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/41507014/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bryan James Sledge (born November 23, 1984), better known by his stage name BJ the Chicago Kid (or simply BJ), is an American singer and songwriter from Chicago, Illinois." ;
+        mtp:hasParticipant   meetup:47f1ae66c6714ad117b99141458db07b , meetup:6bcdfd3c7ad8fdd3bd90b14f83f9e03b ;
+        mtp:hasPurpose       meetup:cd23ebed58de29e6ac78a02cd1f451fa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/BJ_the_Chicago_Kid> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:cd23ebed58de29e6ac78a02cd1f451fa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "BJ the Chicago Kid is a singer and songwriter" ;
+        mtp:hasEvidencePurposeSecond  "He is from Chicago, Illinois" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/BJ_the_Chicago_Kid>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/41507014/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009, Sledge released his debut mixtape, A Taste of Chicago, under the moniker BJ the Chicago Kid." ;
+        mtp:hasParticipant   meetup:d58ea4a21c68c13af7d8c49f9999fde4 ;
+        mtp:hasPurpose       meetup:9907bfe83d32df6b74b02afb47bdf906 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/BJ_the_Chicago_Kid> ;
+        mtp:hasType          "HT" .

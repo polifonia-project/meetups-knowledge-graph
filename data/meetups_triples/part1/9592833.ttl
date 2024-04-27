@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:9d7429fe4c8c4e53bb962a08a726ddd7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Essay about Mozart's life" ;
+        mtp:hasEvidencePurposeSecond  "Celebration of Mozart's birth anniversary" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e07452cf8045223c9b40dcc8e441dbc6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about music recording and CD production." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions receiving a grant and recording at a studio." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Ralitsa_Tcholakova>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Elaine_Keillor>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0a434a213e1295b08b2c7b4fc7b2d0f8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elaine_Keillor> ;
+        mtp:hasOffset           "117" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elaine Keillor" .
+
+meetup:abff3fb74c3bd5d4449557583786b4e2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ralitsa_Tcholakova> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "0.9999999988451124" ;
+        mtp:hasTextEvidence     "Ralitsa Tcholakova" .
+
+<http://w3id.org/polifonia/pilot/meetups/9592833/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In June 2008 Ralitsa Tcholakova received a grant from Ottawa City Arts Funding for music recording and together with Elaine Keillor recently recorded a CD at the Glenn Gould Studio in Toronto." ;
+        mtp:hasParticipant   meetup:0a434a213e1295b08b2c7b4fc7b2d0f8 , meetup:abff3fb74c3bd5d4449557583786b4e2 ;
+        mtp:hasPurpose       meetup:e07452cf8045223c9b40dcc8e441dbc6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ralitsa_Tcholakova> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/9592833/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2006, her essay Footsteps to Eternity about Mozart's life, was published in the first anthology book in connection with the celebration of the composer's 250th birth anniversary in Bulgaria. The anthology Mozart-Genius is a project sponsored by the Austrian Embassy in Sofia, Bulgaria." ;
+        mtp:hasPurpose       meetup:9d7429fe4c8c4e53bb962a08a726ddd7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ralitsa_Tcholakova> ;
+        mtp:hasType          "HT" .

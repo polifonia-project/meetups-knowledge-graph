@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/30532186/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was born in Córdoba, Argentina." ;
+        mtp:hasParticipant   meetup:f6058dabbbc285d94ba81682b8a69adf ;
+        mtp:hasPurpose       meetup:118d24ec017d7e0e63ef082cf45192f9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Graciela_Castillo> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a222c3cb18a7258ea22d038b6758f358
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.69476885" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2946963" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f6058dabbbc285d94ba81682b8a69adf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Graciela_Castillo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Graciela Castillo" .
+
+meetup:118d24ec017d7e0e63ef082cf45192f9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7785439" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21950312" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:5fc7d08122161edcb0d2ea9a5331ff31
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Graciela_Castillo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999407996274" ;
+        mtp:hasTextEvidence     "Graciela Castillo" .
+
+<http://w3id.org/polifonia/pilot/meetups/30532186/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Graciela Castillo (born 1940) is an Argentine electroacoustic composer." ;
+        mtp:hasParticipant   meetup:5fc7d08122161edcb0d2ea9a5331ff31 ;
+        mtp:hasPurpose       meetup:a222c3cb18a7258ea22d038b6758f358 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Graciela_Castillo> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Graciela_Castillo>
+        rdf:type  core:Person .

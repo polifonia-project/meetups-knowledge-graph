@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Ted_Lewis_(musician)>
+        rdf:type  core:Person .
+
+meetup:c7975d519f1d063c080f19a7a37b6ef8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Details about Lewis' death and funeral" ;
+        mtp:hasEvidencePurposeSecond  "Thousands walking past his coffin in Circleville" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/151327/6/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "in 1956, for example) into the 1960s. True to his vaudeville beginnings, he created a visual as well as a musical act." ;
+        mtp:hasPurpose       meetup:a119a8e6be19e7b56cf5cab9c2a467c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ted_Lewis_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a119a8e6be19e7b56cf5cab9c2a467c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating a musical act" ;
+        mtp:hasEvidencePurposeSecond  "Personal life and career" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/151327/14/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lewis died in his sleep in New York on August 25, 1971, of lung failure at the age of 81. Following a Jewish funeral service in New York City, his body was brought to Circleville where thousands walked past his coffin." ;
+        mtp:hasPurpose       meetup:c7975d519f1d063c080f19a7a37b6ef8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ted_Lewis_(musician)> ;
+        mtp:hasType          "HT" .

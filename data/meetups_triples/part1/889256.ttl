@@ -1,0 +1,92 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Lars_Vaular>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/889256/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Praised by Rolling Stone, The New York Times, Stereogum, Filter, Spin, and Entertainment Weekly among others for its experimentation with contrasting musical sounds, this eponymous album contains Lerche's most interesting arrangements and catchy songwriting to date, but also some of his most somber and introspective." ;
+        mtp:hasParticipant   meetup:a3a0ef9f1cb2340b96bda1b5e81a3af8 ;
+        mtp:hasPurpose       meetup:db7fcfed68f122ba1b95265676478098 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sondre_Lerche> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Sondre_Lerche>
+        rdf:type  core:Person .
+
+meetup:5809a6580cd2991bbad9ca7ba7ddf3f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sondre_Lerche> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sondre Lerche" .
+
+meetup:92c44fff7c5a8bb7d78bf581a0026b98
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lars_Vaular> ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lars Vaular" .
+
+<http://w3id.org/polifonia/pilot/meetups/889256/10/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sondre Lerche is the cousin of Norwegian rapper Lars Vaular." ;
+        mtp:hasParticipant   meetup:5935a2bc1f738e6bafc4b6d92540b9c8 , meetup:92c44fff7c5a8bb7d78bf581a0026b98 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sondre_Lerche> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:a3a0ef9f1cb2340b96bda1b5e81a3af8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sondre_Lerche> ;
+        mtp:hasOffset           "113" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sondre Lerche" .
+
+meetup:c76720735add5aef7c7a4e77907ef527
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7130494" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24219906" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/889256/7/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The album was recorded – live in the studio – and mixed in a short but intense time period of three weeks." ;
+        mtp:hasParticipant   meetup:5809a6580cd2991bbad9ca7ba7ddf3f9 ;
+        mtp:hasPurpose       meetup:c76720735add5aef7c7a4e77907ef527 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sondre_Lerche> ;
+        mtp:hasType          "HT" .
+
+meetup:5935a2bc1f738e6bafc4b6d92540b9c8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sondre_Lerche> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Sondre Lerche" .
+
+meetup:db7fcfed68f122ba1b95265676478098
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9993162" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00024898097" ;
+        mtp:hasSourcePurpose          "ML" .

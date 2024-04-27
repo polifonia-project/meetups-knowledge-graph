@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Aoi_Morikawa>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Sola_Aoi>
+        rdf:type  core:Person .
+
+meetup:ca2c0f70f7ac8c101f9308c458ba8cd6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about Aoi Morikawa's personal life." ;
+        mtp:hasEvidencePurposeSecond  "Details about Aoi Morikawa's education." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:15d1a209db3c675bd9828d2093d7c469
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sola_Aoi> ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aoi" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:75a074fbc6f9aaa2afaffe129830ce0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aoi_Morikawa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aoi Morikawa" .
+
+<http://w3id.org/polifonia/pilot/meetups/47023439/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aoi Morikawa (森川 葵, Morikawa Aoi, born June 17, 1995, in Aichi Prefecture, Japan) is a Japanese actress and model who is affiliated with Stardust Promotion." ;
+        mtp:hasParticipant   meetup:75a074fbc6f9aaa2afaffe129830ce0b , meetup:15d1a209db3c675bd9828d2093d7c469 ;
+        mtp:hasPurpose       meetup:ca2c0f70f7ac8c101f9308c458ba8cd6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aoi_Morikawa> ;
+        mtp:hasType          "HM" .

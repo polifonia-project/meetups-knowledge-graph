@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Guitar>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/50903646/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He moved to Athens, Georgia in his early twenties, at which time he started playing pedal steel guitar, for which he is better known. He received his first guitar at age 9 and began learning how to play, and began his music career when he arrived in Athens, Georgia." ;
+        mtp:hasParticipant   meetup:9316715131d6b62c72c7471348716ae9 , meetup:5946f56739001c5f9682ebc62f2f70a6 ;
+        mtp:hasPurpose       meetup:21c3a2f03de82cac4d63d031caa40f26 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Neff_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5946f56739001c5f9682ebc62f2f70a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q326933> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Neff" .
+
+<http://dbpedia.org/resource/John_Neff_(musician)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<https://www.wikidata.org/wiki/Q326933>
+        rdf:type  core:Person .
+
+meetup:21c3a2f03de82cac4d63d031caa40f26
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions his music career and playing guitar." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions his personal life and moving to Athens." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9316715131d6b62c72c7471348716ae9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Guitar> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "0.9918822989392766" ;
+        mtp:hasTextEvidence     "guitar" .

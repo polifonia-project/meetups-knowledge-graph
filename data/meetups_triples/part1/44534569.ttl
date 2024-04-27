@@ -1,0 +1,82 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/44534569/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Suzuki is also part of a supergroup called Halloween Junky Orchestra led by established musicians such as Hyde and K.A. Z of Vamps for their October 2012 hit single Halloween Party." ;
+        mtp:hasParticipant   meetup:2825360062f3b5833b76932dc5bf0a76 , meetup:51c0e34ee9daf995b60147e7d64dfb22 , meetup:fa635cc2cd61ffc1a2f06e53d8dcf59f ;
+        mtp:hasPurpose       meetup:7dca2737878b549658279fe7d14c90c1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rina_Suzuki_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7dca2737878b549658279fe7d14c90c1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99851435" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007540405" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Hyde_(musician)>
+        rdf:type  core:Person .
+
+meetup:51c0e34ee9daf995b60147e7d64dfb22
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rina_Suzuki_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rina Suzuki" .
+
+<http://w3id.org/polifonia/pilot/meetups/44534569/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rina Suzuki (鈴木 理菜, Suzuki Rina, born August 21, 1991, Nara Prefecture, Japan), better known for both with her full name or by her stage name RINA, is a Japanese musician, singer and songwriter." ;
+        mtp:hasParticipant   meetup:6126ad638ad96bee208c0029c69c7bba ;
+        mtp:hasPurpose       meetup:fc8fd09b199257d74c159d8be01b9cce ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rina_Suzuki_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:fc8fd09b199257d74c159d8be01b9cce
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94762427" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03772807" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:6126ad638ad96bee208c0029c69c7bba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rina_Suzuki_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999664058242" ;
+        mtp:hasTextEvidence     "Rina Suzuki" .
+
+meetup:fa635cc2cd61ffc1a2f06e53d8dcf59f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "115" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "K.A. Z of Vamps" .
+
+<http://dbpedia.org/resource/Rina_Suzuki_(musician)>
+        rdf:type  core:Person .
+
+meetup:2825360062f3b5833b76932dc5bf0a76
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hyde_(musician)> ;
+        mtp:hasOffset           "76" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hyde" .

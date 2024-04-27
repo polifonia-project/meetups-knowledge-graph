@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jerry_Garcia>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/15941792/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Maricris Garcia was born as Maria Cristina Yu Garcia on September 26, 1987, in Caloocan, Philippines. She studied tourism at the La Consolacion College in Caloocan." ;
+        mtp:hasParticipant   meetup:c612b652183cfc22f8c9e58320bc6bb9 ;
+        mtp:hasPurpose       meetup:1b8ae12b46f4d0d92acf95875f8a9bd4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maricris_Garcia> ;
+        mtp:hasType          "HT" .
+
+meetup:c612b652183cfc22f8c9e58320bc6bb9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maricris_Garcia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Maricris Garcia" .
+
+meetup:13931e92eae47bd966dc60618a93b945
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jerry_Garcia> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "0.995360579688366" ;
+        mtp:hasTextEvidence     "Garcia" .
+
+meetup:4a9cc8a566b2aa43b666072fb76ac5d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maricris_Garcia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Maricris Garcia" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:88a80786d2e445ee51f96a6944c7ff5f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about Maricris Garcia's personal background" ;
+        mtp:hasEvidencePurposeSecond  "Details about Maricris Garcia's birth and upbringing" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Maricris_Garcia>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/15941792/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Maricris Garcia was born as Maria Cristina Yu Garcia on September 26, 1987, in Caloocan, Philippines." ;
+        mtp:hasParticipant   meetup:13931e92eae47bd966dc60618a93b945 , meetup:4a9cc8a566b2aa43b666072fb76ac5d6 ;
+        mtp:hasPurpose       meetup:88a80786d2e445ee51f96a6944c7ff5f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maricris_Garcia> ;
+        mtp:hasType          "HM" .
+
+meetup:1b8ae12b46f4d0d92acf95875f8a9bd4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to studying and acquiring knowledge" ;
+        mtp:hasEvidencePurposeSecond  "Related to personal background and life events" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Robert_Tepper>
+        rdf:type  core:Person .
+
+meetup:931fdc6e917754deb6b77e9096a24d17
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9119018" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.054192655" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/5786231/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert Tepper (born May 30, 1950) is an American songwriter, recording artist and singer, best known for his hit song \"No Easy Way Out\" from the Rocky IV motion picture soundtrack." ;
+        mtp:hasParticipant   meetup:a5f6b073e96fc944ed729b5c1da8485d ;
+        mtp:hasPurpose       meetup:931fdc6e917754deb6b77e9096a24d17 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_Tepper> ;
+        mtp:hasType          "HT" .
+
+meetup:a5f6b073e96fc944ed729b5c1da8485d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Tepper> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Robert Tepper" .

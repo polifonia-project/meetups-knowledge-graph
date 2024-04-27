@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/7713649/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "George Howard (September 15, 1956 – March 22, 1998) was an American smooth jazz saxophonist." ;
+        mtp:hasParticipant   meetup:1626ee49a8856f822f27dc6e71731c1b ;
+        mtp:hasPurpose       meetup:b0c2029f7846a16668e1762c82761669 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Howard_(jazz)> ;
+        mtp:hasType          "HT" .
+
+meetup:b0c2029f7846a16668e1762c82761669
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999999" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 8.6289624e-08" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/George_Howard_(jazz)>
+        rdf:type  core:Person .
+
+meetup:1626ee49a8856f822f27dc6e71731c1b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Howard_(jazz)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.5840452541929201" ;
+        mtp:hasTextEvidence     "George Howard" .

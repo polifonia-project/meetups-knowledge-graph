@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:78a7489d4a76b3dddd14a435b0d4f226
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8666503" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12182875" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Kevin_Talley>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:c89682002d5d63a8e21ab1b607312638
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999751" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.3161776e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/2294693/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In addition, he was the touring drummer for Battlecross in 2013." ;
+        mtp:hasParticipant   meetup:000a7f98c2b60c5b007e233b780087e7 ;
+        mtp:hasPurpose       meetup:c89682002d5d63a8e21ab1b607312638 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Talley> ;
+        mtp:hasType          "HT" .
+
+meetup:000a7f98c2b60c5b007e233b780087e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Talley> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kevin Talley" .
+
+meetup:121fef76872026a020891e8be9e7b1f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Talley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kevin Talley" .
+
+<http://w3id.org/polifonia/pilot/meetups/2294693/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kevin Talley (born May 21, 1978) is an American heavy metal drummer  for Dååth, Feared, Sylencer and Nothnegal." ;
+        mtp:hasParticipant   meetup:121fef76872026a020891e8be9e7b1f2 ;
+        mtp:hasPurpose       meetup:78a7489d4a76b3dddd14a435b0d4f226 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Talley> ;
+        mtp:hasType          "HT" .

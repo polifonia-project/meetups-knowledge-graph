@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d109e07159f2a4a6e23e6a384d12f068
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Music career and achievements" ;
+        mtp:hasEvidencePurposeSecond  "Record label affiliation" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c53838555816ed56aa377063efd1da42
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Reba_McEntire> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "0.9999999961873414" ;
+        mtp:hasTextEvidence     "Reba" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/4145583/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is currently signed to Big Loud Records. Smith is the current record holder of most #1 hits among all Canadian artists on Billboard's Canada Country chart, at eleven." ;
+        mtp:hasPurpose       meetup:d109e07159f2a4a6e23e6a384d12f068 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dallas_Smith> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Reba_McEntire>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4145583/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Some of his main influences were The Beatles and female country singers Reba McEntire and The Judds." ;
+        mtp:hasParticipant   meetup:c53838555816ed56aa377063efd1da42 , meetup:e4fc61fbdbd41482480253f973a10066 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dallas_Smith> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Dallas_Smith>
+        rdf:type  core:Person .
+
+meetup:e4fc61fbdbd41482480253f973a10066
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dallas_Smith> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dallas Smith" .

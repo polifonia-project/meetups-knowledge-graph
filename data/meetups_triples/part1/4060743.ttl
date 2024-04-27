@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Whitey_Wistert>
+        rdf:type  core:Person .
+
+meetup:3bb8531a59da964de3116d70c05acc50
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Collier_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tom Collier" .
+
+meetup:4316102534a1907add98c017edb920bf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ward Collier" .
+
+<http://w3id.org/polifonia/pilot/meetups/4060743/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Collier was born in Puyallup, Washington on June 30, 1948  and grew up in Seattle, Washington. His parents were professional musicians; Ward Collier, known to his friends as \"Whitey\", played trumpet in various lounge bands around the Seattle/Tacoma area." ;
+        mtp:hasParticipant   meetup:4316102534a1907add98c017edb920bf , meetup:da2c35f8eefdb64104bb229f99d36358 , meetup:3bb8531a59da964de3116d70c05acc50 ;
+        mtp:hasPurpose       meetup:e84aab3b5481d5dae351f90a97861813 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tom_Collier> ;
+        mtp:hasType          "HT" .
+
+meetup:e84aab3b5481d5dae351f90a97861813
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Collier's parents were professional musicians" ;
+        mtp:hasEvidencePurposeSecond  "Collier's birthplace and upbringing" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Tom_Collier>
+        rdf:type  core:Person .
+
+meetup:da2c35f8eefdb64104bb229f99d36358
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Whitey_Wistert> ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "0.999984904008332" ;
+        mtp:hasTextEvidence     "Whitey" .
+
+<http://dbpedia.org/resource/Tom_Collier_(musician)>
+        rdf:type  core:Person .

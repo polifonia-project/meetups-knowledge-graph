@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5c16d30b0fecf42887bf7c8b764b8eec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Studying piano and being inspired by jazz pianist Bill Evans" ;
+        mtp:hasEvidencePurposeSecond  "Finishing high school and studying at Princeton Community High School" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/588791/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gary Burton (born January 23, 1943) is an American jazz vibraphonist, composer, and educator." ;
+        mtp:hasParticipant   meetup:c2e6d1bcf249005450acd01fc942a57c ;
+        mtp:hasPurpose       meetup:33f1477298c8ea069a480567f2312323 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Burton> ;
+        mtp:hasType          "HT" .
+
+meetup:33f1477298c8ea069a480567f2312323
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8164228" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18304686" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Bill_Evans>
+        rdf:type  core:Person .
+
+meetup:5c3b24300f1530069911ce71a1daadf8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Evans> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.9999999999978542" ;
+        mtp:hasTextEvidence     "Bill Evans" .
+
+<http://w3id.org/polifonia/pilot/meetups/588791/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is also known for pioneering fusion jazz and popularizing the duet format in jazz, as well as being a major figure in music education from his 30 years at the Berklee College of Music." ;
+        mtp:hasParticipant   meetup:e6ef58d7387cff848963fbe0c54f9c6f ;
+        mtp:hasPurpose       meetup:5d90b64a1f784b37164dcfeb434e5a37 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Burton> ;
+        mtp:hasType          "HT" .
+
+meetup:5d90b64a1f784b37164dcfeb434e5a37
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999981" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.8899685e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e6ef58d7387cff848963fbe0c54f9c6f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_Burton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gary Burton" .
+
+<http://w3id.org/polifonia/pilot/meetups/588791/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He began studying piano at age sixteen while finishing high school at Princeton Community High School in Princeton, Indiana (1956–60). He has cited jazz pianist Bill Evans as the inspiration for his approach to the vibraphone." ;
+        mtp:hasParticipant   meetup:5c3b24300f1530069911ce71a1daadf8 ;
+        mtp:hasPurpose       meetup:5c16d30b0fecf42887bf7c8b764b8eec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Burton> ;
+        mtp:hasType          "HT" .
+
+meetup:c2e6d1bcf249005450acd01fc942a57c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_Burton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gary Burton" .
+
+<http://dbpedia.org/resource/Gary_Burton>
+        rdf:type  core:Person .

@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lenny_White>
+        rdf:type  core:Person .
+
+meetup:d704c805c2259b236230e9640ffdaf99
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Crawford> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Billy Crawford" .
+
+meetup:3a9ef83cb06714a9d200f5821308a113
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The DVD release is related to music making." ;
+        mtp:hasEvidencePurposeSecond  "The production and distribution of the DVD involved business meetings." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a9e20fad4aced69b358ff7a7d97dd1fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michel Jankielewicz" .
+
+meetup:1a0fcf4a46b7fc9b21eebd93ce8f11cb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lenny_White> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Big City" .
+
+meetup:10676d2daf5c393727ace9c1d1ba9a96
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9870868" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011608949" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Billy_Crawford>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3317624/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy Crawford (1997–99)" ;
+        mtp:hasParticipant   meetup:d704c805c2259b236230e9640ffdaf99 ;
+        mtp:hasPurpose       meetup:10676d2daf5c393727ace9c1d1ba9a96 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Crawford> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/3317624/16/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The DVD was released in France in 2005. It was directed by Michel Jankielewicz, produced by Yves El-Baze and distributed by UMG (2005) (worldwide) (DVD)." ;
+        mtp:hasParticipant   meetup:a9e20fad4aced69b358ff7a7d97dd1fe , meetup:1a0fcf4a46b7fc9b21eebd93ce8f11cb ;
+        mtp:hasPurpose       meetup:3a9ef83cb06714a9d200f5821308a113 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Crawford> ;
+        mtp:hasType          "HT" .

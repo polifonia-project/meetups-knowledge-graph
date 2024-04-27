@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/44348070/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Håkan Fredrik Ljungkvist (born 29 November 1969 in Kristinehamn, Sweden), is a Swedish jazz musician (saxophone and clarinet), the son of saxophonist Håkan Ljungkvist and married to the jazz singer Lina Nyberg." ;
+        mtp:hasParticipant   meetup:5c45b9535732809e842e8e3ae55a0394 , meetup:71ecede0e229ec891947eb3b0a3838b0 , meetup:5e90b6bcc8f9c60e55174df682f15bc3 ;
+        mtp:hasPurpose       meetup:604d9984997157b2d4724c0dc92439a8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fredrik_Ljungkvist> ;
+        mtp:hasType          "HM" .
+
+meetup:71ecede0e229ec891947eb3b0a3838b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lina_Nyberg> ;
+        mtp:hasOffset           "200" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lina Nyberg" .
+
+meetup:5e90b6bcc8f9c60e55174df682f15bc3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Håkan Fredrik Ljungkvist" .
+
+meetup:5c45b9535732809e842e8e3ae55a0394
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fredrik_Ljungkvist> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fredrik Ljungkvist" .
+
+meetup:604d9984997157b2d4724c0dc92439a8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Håkan Fredrik Ljungkvist is a Swedish jazz musician." ;
+        mtp:hasEvidencePurposeSecond  "He is married to the jazz singer Lina Nyberg." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Fredrik_Ljungkvist>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Lina_Nyberg>
+        rdf:type  core:Person .

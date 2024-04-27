@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:77420e60c6d0774c5f4b302ccb0d7585
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Meeting between the museum and the developer" ;
+        mtp:hasEvidencePurposeSecond  "Foreclosure on the property due to financial struggles" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:214a4ff37f965ac6c24b86ae7f6e6981
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Auctioning Hollywood memorabilia" ;
+        mtp:hasEvidencePurposeSecond  "Mother's collection valued at $10.79 million" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/38511933/12/16>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By 1999, Reynolds and Fisher began preparing to move the Hollywood Motion Picture Museum to a new location near the Kodak Theater in Los Angeles, which was scheduled to open in 2004. When the Los Angeles museum's lender could no longer fund the project, the museum was unable to complete construction on the property." ;
+        mtp:hasPurpose       meetup:55cd5d4356dc1e5ba659b13cf19bc103 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Todd_Fisher> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/38511933/12/19>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While the lawsuit between the museum and Orman dragged on in the courts, the museum signed a deal to anchor the proposed Belle Island Village tourist attraction, which was scheduled to debut in fall 2008, in Pigeon Forge, Tennessee. When the developer of the Belle Island Village resort met with financial struggles of their own, the construction lender Regions Bank foreclosed on the unfinished property." ;
+        mtp:hasPurpose       meetup:77420e60c6d0774c5f4b302ccb0d7585 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Todd_Fisher> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/38511933/14/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2011, Reynolds and Fisher contracted with Profiles in History to begin auctioning the collection of Hollywood memorabilia, until enough proceeds were generated to pay off their creditors. In statements made to the press, Fisher announced that his mother was \"heartbroken\" to have to auction off her collection, which was valued at $10.79 million in the bankruptcy filing." ;
+        mtp:hasPurpose       meetup:214a4ff37f965ac6c24b86ae7f6e6981 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Todd_Fisher> ;
+        mtp:hasType          "HT" .
+
+meetup:55cd5d4356dc1e5ba659b13cf19bc103
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Discussion about funding and construction" ;
+        mtp:hasEvidencePurposeSecond  "Planning for a museum relocation" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Todd_Fisher>
+        rdf:type  core:Person .

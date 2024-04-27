@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/32895987/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked on more than 40 films between 1964 and 1994." ;
+        mtp:hasParticipant   meetup:612caa2218eb1aec9012df79a35a9384 ;
+        mtp:hasPurpose       meetup:1562fda24a7957947f998b20e479d7ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_T._Knight> ;
+        mtp:hasType          "HT" .
+
+meetup:1562fda24a7957947f998b20e479d7ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995827" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00030993824" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:612caa2218eb1aec9012df79a35a9384
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_T._Knight> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charles T. Knight" .
+
+<http://dbpedia.org/resource/Charles_T._Knight>
+        rdf:type  core:Person .

@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Laura_Bush>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/60833037/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Laura Brooke Winter (born May 17, 1999), known professionally as Elle Winter, is an American singer-songwriter and actress from New York City." ;
+        mtp:hasParticipant   meetup:592485a5069866f317c4d61119c43971 , meetup:ce6dbc809aef2da1e9e643b10050ae96 ;
+        mtp:hasPurpose       meetup:69db7a18672b548ca66655410bb19716 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elle_Winter> ;
+        mtp:hasType          "HM" .
+
+meetup:69db7a18672b548ca66655410bb19716
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Elle Winter is a singer-songwriter" ;
+        mtp:hasEvidencePurposeSecond  "Elle Winter is from New York City" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ce6dbc809aef2da1e9e643b10050ae96
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elle_Winter> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "0.9999990940292048" ;
+        mtp:hasTextEvidence     "Elle Winter" .
+
+<http://dbpedia.org/resource/Elle_Winter>
+        rdf:type  core:Person .
+
+meetup:592485a5069866f317c4d61119c43971
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Laura_Bush> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7073932951297249" ;
+        mtp:hasTextEvidence     "Laura" .

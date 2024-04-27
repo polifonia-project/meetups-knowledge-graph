@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/45495967/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Gogokhia (Georgian: დავით გოგოხია, born 16 July 1987 in Jvari, Georgia) is a Georgian experimental visual artist, director of photography, and video editor, specialize in music videos, commercials etc" ;
+        mtp:hasParticipant   meetup:6d2f0d1760c90de3a1cf093540c74663 ;
+        mtp:hasPurpose       meetup:a3861beb89326f933c3c2eb2c2112d0d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Gogokhia> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/David_Gogokhia>
+        rdf:type  core:Person .
+
+meetup:a3861beb89326f933c3c2eb2c2112d0d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8551957" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13685776" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6d2f0d1760c90de3a1cf093540c74663
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Gogokhia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Gogokhia" .

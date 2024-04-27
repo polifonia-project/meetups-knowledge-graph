@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/3409738/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gordon Haskell (27 April 1946 – 15 October 2020) was an English musician and songwriter." ;
+        mtp:hasParticipant   meetup:8614ddf8bf648c18c021777a57dc954d ;
+        mtp:hasPurpose       meetup:e7faff213e76d6812ba94268c699757a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gordon_Haskell> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/3409738/11/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After commuting from the Greek island of Skopelos for eight years he returned to the UK in 2017 for a British tour with Hannah's Yard, and planned to continue touring and recording as and when he chose. He was a resident of the UK." ;
+        mtp:hasPurpose       meetup:5212aeb5e5bd8d58e9ae238a1ab3fb14 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gordon_Haskell> ;
+        mtp:hasType          "HT" .
+
+meetup:574af2d02659780a84e17cd02ed31b10
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gordon_Haskell> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "0.9999999999973852" ;
+        mtp:hasTextEvidence     "Gordon Haskell" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5212aeb5e5bd8d58e9ae238a1ab3fb14
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music tours and recording" ;
+        mtp:hasEvidencePurposeSecond  "Residency and personal choices" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/3409738/60/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\" The Importance of Salmon \" Gordon Haskell (Author) Sue Haskell (Illustrator) Self Published  14 June 2019" ;
+        mtp:hasParticipant   meetup:af6d0eb2e8139cf51252c9b145cd05a5 , meetup:574af2d02659780a84e17cd02ed31b10 ;
+        mtp:hasPurpose       meetup:4b3cd7725fb8de59ebc669861efa2fef ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gordon_Haskell> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Gordon_Haskell>
+        rdf:type  core:Person .
+
+meetup:8614ddf8bf648c18c021777a57dc954d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gordon_Haskell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gordon Haskell" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:af6d0eb2e8139cf51252c9b145cd05a5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sue Haskell" .
+
+meetup:4b3cd7725fb8de59ebc669861efa2fef
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84575933" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14767833" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e7faff213e76d6812ba94268c699757a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99880445" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0011909301" ;
+        mtp:hasSourcePurpose          "ML" .

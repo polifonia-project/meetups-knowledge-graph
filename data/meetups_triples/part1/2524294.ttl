@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:839dfe9ed48012abcb306ab4b222ec54
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frances_Adaskin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999994033" ;
+        mtp:hasTextEvidence     "Frances Adaskin" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d7838c4c7a6e4a5f4668fa94696cfe23
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999994" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.580663e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Frances_Adaskin>
+        rdf:type  core:Person .
+
+meetup:1bfa3f1637dd16ae785a1fa7f07690ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Recognition for musical achievements" ;
+        mtp:hasEvidencePurposeSecond  "Acknowledgement of teaching contributions" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/2524294/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Frances Adaskin died in Vancouver on March 8, 2001, aged 100." ;
+        mtp:hasParticipant   meetup:839dfe9ed48012abcb306ab4b222ec54 ;
+        mtp:hasPurpose       meetup:d7838c4c7a6e4a5f4668fa94696cfe23 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frances_Adaskin> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2524294/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Adaskin received the Order of Canada honour on December 15, 1976. It was awarded for \"...a life devoted to music as accompanist of international repute and as a soloist and teacher...\"" ;
+        mtp:hasPurpose       meetup:1bfa3f1637dd16ae785a1fa7f07690ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frances_Adaskin> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Henry_Thomas_(blues_musician)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/2671046/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Thomas was born into a family of freed slaves in Big Sandy, Texas in 1874. He began traveling the Texas railroad lines as a hobo after leaving home in his teens." ;
+        mtp:hasPurpose       meetup:c345749e24ef21d28f7dfe74caa99961 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Thomas_(blues_musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:c345749e24ef21d28f7dfe74caa99961
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Thomas' personal journey and background" ;
+        mtp:hasEvidencePurposeSecond  "Thomas' self-education and life experiences" ;
+        mtp:hasSourcePurpose          "LLM" .

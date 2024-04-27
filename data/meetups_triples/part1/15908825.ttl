@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Pedrinho_(footballer,_born_1957)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8afa5b0229c0d74287a38f82375da4cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_London> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999994033" ;
+        mtp:hasTextEvidence     "Peter London" .
+
+meetup:907336580d8ded8548a1bd2bd3f19844
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pedrinho_(footballer,_born_1957)> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.5101292982338411" ;
+        mtp:hasTextEvidence     "Pedrinho" .
+
+meetup:1736b05c00d4cef1de7e34aeb15043cf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Peter London is a bassist" ;
+        mtp:hasEvidencePurposeSecond  "Peter London was born in Sweden" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/15908825/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Peter London (born Pedrinho Londres; 28 September 1982 in Sweden) is a Swedish bassist." ;
+        mtp:hasParticipant   meetup:907336580d8ded8548a1bd2bd3f19844 , meetup:8afa5b0229c0d74287a38f82375da4cc ;
+        mtp:hasPurpose       meetup:1736b05c00d4cef1de7e34aeb15043cf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_London> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Peter_London>
+        rdf:type  core:Person .

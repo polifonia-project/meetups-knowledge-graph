@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5da349da718690a08894cfd74a8591e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9658535" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.031179158" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3e4c2507218ef3089bda31a6c19bbe8f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Abbe_Lane> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Abbe Lane" .
+
+<http://w3id.org/polifonia/pilot/meetups/2205692/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was the fourth wife of Latin bandleader and musician Xavier Cugat." ;
+        mtp:hasParticipant   meetup:16e632f5ecee3d0e3d33371bd6fa158b , meetup:e247aa9f47b24f6d9f763700e55d81f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abbe_Lane> ;
+        mtp:hasType          "HM" .
+
+meetup:d2da37511e6f6defae044c51be56d2c0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9965423" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0023772907" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/2205692/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Abbe Lane (born Abigail Francine Lassman; December 14, 1932) is an American singer and actress." ;
+        mtp:hasParticipant   meetup:3e4c2507218ef3089bda31a6c19bbe8f ;
+        mtp:hasPurpose       meetup:d2da37511e6f6defae044c51be56d2c0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abbe_Lane> ;
+        mtp:hasType          "HT" .
+
+meetup:16e632f5ecee3d0e3d33371bd6fa158b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Abbe_Lane> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Abbe Lane" .
+
+meetup:e247aa9f47b24f6d9f763700e55d81f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Xavier_Cugat> ;
+        mtp:hasOffset           "57" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Xavier Cugat" .
+
+<http://dbpedia.org/resource/Abbe_Lane>
+        rdf:type  core:Person .
+
+meetup:4635c18a7cace61069e87a550bfd26e5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Abbe_Lane> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Abbe Lane" .
+
+<http://dbpedia.org/resource/Xavier_Cugat>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2205692/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lane was known in the 1950s and 1960s for her revealing outfits and sultry style of performing." ;
+        mtp:hasParticipant   meetup:4635c18a7cace61069e87a550bfd26e5 ;
+        mtp:hasPurpose       meetup:5da349da718690a08894cfd74a8591e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Abbe_Lane> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:251ce4213eddd63f297030ab3f36bfe6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Thomas_Winther_Andersen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Thomas Winther Andersen" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/37521864/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Thomas Winther Andersen (born 29 April 1969) is a Norwegian-born, now Amsterdam-based jazz bassist, married to jazz singer Henriette Andersen." ;
+        mtp:hasParticipant   meetup:251ce4213eddd63f297030ab3f36bfe6 , meetup:400b7a658bc33fab59d60711e3e176a6 ;
+        mtp:hasPurpose       meetup:de17bbc9e6befb586198feefebd23a68 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Thomas_Winther_Andersen> ;
+        mtp:hasType          "HM" .
+
+meetup:400b7a658bc33fab59d60711e3e176a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "123" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Henriette Andersen" .
+
+<http://dbpedia.org/resource/Thomas_Winther_Andersen>
+        rdf:type  core:Person .
+
+meetup:de17bbc9e6befb586198feefebd23a68
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.009074e-09" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/53544411/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joe Crabtree (born 21 September 1979) is an English rock drummer." ;
+        mtp:hasParticipant   meetup:10f350b284e6645677577d85a406a836 ;
+        mtp:hasPurpose       meetup:83fe480c428caf3ccb3b80414e7d17ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Crabtree> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Joe_Crabtree>
+        rdf:type  core:Person .
+
+meetup:83fe480c428caf3ccb3b80414e7d17ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96639174" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.027925435" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:10f350b284e6645677577d85a406a836
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Crabtree> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999858" ;
+        mtp:hasTextEvidence     "Joe Crabtree" .

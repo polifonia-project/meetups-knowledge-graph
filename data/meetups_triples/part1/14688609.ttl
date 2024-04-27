@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/14688609/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Frank Vicari (April 11, 1931 – October 20, 2006) was a jazz saxophonist." ;
+        mtp:hasParticipant   meetup:7e11d504f702a14fd9c4017af57d405e ;
+        mtp:hasPurpose       meetup:a120ff030b284006cb4a034070f38949 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frank_Vicari> ;
+        mtp:hasType          "HT" .
+
+meetup:a120ff030b284006cb4a034070f38949
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7540465" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23302557" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7e11d504f702a14fd9c4017af57d405e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Vicari> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999541558" ;
+        mtp:hasTextEvidence     "Frank Vicari" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Frank_Vicari>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .

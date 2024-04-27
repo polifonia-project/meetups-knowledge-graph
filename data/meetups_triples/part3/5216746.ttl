@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ryan_Paris>
+        rdf:type  core:Person .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:7480b689082dd5b2035e4df4f130885a
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1990s" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1990-01-01"^^xsd:date ;
+        time:hasEnd          "1999-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/5216746/7/1>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ryan_Paris> ;
+        mtp:hasType     "HT" .
+
+meetup:724b00b563c4ab266c8908584d247ca3
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1983" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1983-01-01"^^xsd:date ;
+        time:hasEnd          "1983-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/5216746/2/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:7480b689082dd5b2035e4df4f130885a ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ryan_Paris> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/5216746/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:0e33faaf6d5f2cbbcb6be7ce00bce3ab , meetup:724b00b563c4ab266c8908584d247ca3 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ryan_Paris> ;
+        mtp:hasType     "HM" .
+
+meetup:0e33faaf6d5f2cbbcb6be7ce00bce3ab
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "12 March 1953" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1953-03-12"^^xsd:date ;
+        time:hasEnd          "1953-03-12"^^xsd:date .

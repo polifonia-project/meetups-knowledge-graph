@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/27002727/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Roger Ball (born 4 June 1944, Broughty Ferry, Scotland) is a Scottish saxophonist, keyboardist, songwriter and arranger." ;
+        mtp:hasParticipant   meetup:6589a6fde7401ec402a01289683baa68 ;
+        mtp:hasPurpose       meetup:b68b6002831927c4d2c24f53a9ee9dce ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roger_Ball_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:b68b6002831927c4d2c24f53a9ee9dce
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95631665" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.036374584" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6589a6fde7401ec402a01289683baa68
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roger_Ball_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999977578918458" ;
+        mtp:hasTextEvidence     "Roger Ball" .
+
+<http://dbpedia.org/resource/Roger_Ball_(musician)>
+        rdf:type  core:Person .

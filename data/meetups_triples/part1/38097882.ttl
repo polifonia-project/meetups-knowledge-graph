@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a67309df332eb731a59ef719b219230c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87752074" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11545478" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:144c584a26b608acd5f40128a61ca061
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Katarzyna Głowicka" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/38097882/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kasia Glowicka (born Katarzyna Głowicka, October 12, 1977), also known as Katarina Glowicka, is a Polish composer and lecturer of computer music at the Royal Conservatory of Brussels." ;
+        mtp:hasParticipant   meetup:b21f85ae6c3ed6ac83c04e1958f39012 , meetup:144c584a26b608acd5f40128a61ca061 ;
+        mtp:hasPurpose       meetup:a67309df332eb731a59ef719b219230c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kasia_Glowicka> ;
+        mtp:hasType          "HM" .
+
+meetup:b21f85ae6c3ed6ac83c04e1958f39012
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kasia_Glowicka> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kasia Glowicka" .
+
+<http://dbpedia.org/resource/Kasia_Glowicka>
+        rdf:type  core:Person .

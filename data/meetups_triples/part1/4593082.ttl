@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:07ec76d9a6ce99a62757a4b7ba064152
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999913" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.937298e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:62a5b0a8b0447ecc18e93ad89ecd03d3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in instrumental and jazz fusion groups" ;
+        mtp:hasEvidencePurposeSecond  "Residing in New York" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Percy_Jones_(musician)>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/4593082/1/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Residing in New York, he currently is a member of MJ12, an instrumental group based in NYC. Jones was also a member of the jazz fusion group Soft Machine, the poetry rock group" ;
+        mtp:hasPurpose       meetup:62a5b0a8b0447ecc18e93ad89ecd03d3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Percy_Jones_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4593082/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Percy Jones (born 3 December 1947) is a Welsh bass guitarist known as a member of the jazz fusion ensemble Brand X, from 1974-1980, and 1992-1999." ;
+        mtp:hasParticipant   meetup:71497a55d1ab861651f143babaac5e72 ;
+        mtp:hasPurpose       meetup:07ec76d9a6ce99a62757a4b7ba064152 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Percy_Jones_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:71497a55d1ab861651f143babaac5e72
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Percy_Jones_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9406177173598604" ;
+        mtp:hasTextEvidence     "Percy Jones" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:bf3b1f07a3cc92b7ec1bc4fc86f2f838
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9963637" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0035233921" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/5084342/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Radojka Adžić (Serbian Cyrillic: Радојка Аџић; born 21 May 1976), better known as Dara Bubamara, is a Serbian singer and media personality from Novi Sad." ;
+        mtp:hasParticipant   meetup:dd1a378b31d82d559f8ec508e4c84c99 ;
+        mtp:hasPurpose       meetup:bf3b1f07a3cc92b7ec1bc4fc86f2f838 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dara_Bubamara> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Dara_Bubamara>
+        rdf:type  core:Person .
+
+meetup:dd1a378b31d82d559f8ec508e4c84c99
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dara_Bubamara> ;
+        mtp:hasOffset           "95" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dara Bubamara" .

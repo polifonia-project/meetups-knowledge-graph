@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/6751007/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bernhard Fleischmann, born 1975 in Vienna, is an Austrian musician, usually known as B. Fleischmann." ;
+        mtp:hasParticipant   meetup:cac01f8b8ce200d320be7f0ee7f104cb , meetup:d295fe2198ae028b117b709748bf3974 ;
+        mtp:hasPurpose       meetup:669f3451e735d0f98b260b961af37148 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bernhard_Fleischmann> ;
+        mtp:hasType          "HM" .
+
+meetup:669f3451e735d0f98b260b961af37148
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Bernhard Fleischmann is a musician" ;
+        mtp:hasEvidencePurposeSecond  "He was born in Vienna" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:d295fe2198ae028b117b709748bf3974
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bernhard_Fleischmann> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Bernhard Fleischmann" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Bernhard_Fleischmann>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Martin_Fleischmann>
+        rdf:type  core:Person .
+
+meetup:cac01f8b8ce200d320be7f0ee7f104cb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martin_Fleischmann> ;
+        mtp:hasOffset           "88" ;
+        mtp:hasSimilarityScore  "0.7660101206363434" ;
+        mtp:hasTextEvidence     "Fleischmann" .

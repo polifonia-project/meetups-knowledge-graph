@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:938c32288988212352588cb6867993af
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joan_Osborne> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999995366976" ;
+        mtp:hasTextEvidence     "Joan Osborne" .
+
+meetup:4d093e288acbdcec94a93197b19967a4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Her neighborhood influences her music" ;
+        mtp:hasEvidencePurposeSecond  "She has a particular attachment to New York City" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/168438/16/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joan Osborne has a daughter, born in December 2004." ;
+        mtp:hasParticipant   meetup:938c32288988212352588cb6867993af ;
+        mtp:hasPurpose       meetup:983fbc5b52dde2c3ecbfeb2cea6bba4f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joan_Osborne> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/168438/16/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Originally from Anchorage, Kentucky, a suburb of Louisville, Osborne moved to New York City in the late 1980s, Osborne has stated that she feels a particular attachment to the city, particularly the borough of Brooklyn. Her interest in her neighborhood of Boerum Hill’s culture, history, and society has multiple influences on her music." ;
+        mtp:hasPurpose       meetup:4d093e288acbdcec94a93197b19967a4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joan_Osborne> ;
+        mtp:hasType          "HT" .
+
+meetup:983fbc5b52dde2c3ecbfeb2cea6bba4f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6279816" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19011243" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Joan_Osborne>
+        rdf:type  core:Person .

@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4842137/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vicki Randle (born December 11, 1954) is an American singer, multi-instrumentalist (primarily acoustic guitar and percussion) and composer, known as the first (and only) female member of The Tonight Show Band, starting with host Jay Leno in 1992." ;
+        mtp:hasParticipant   meetup:4a5ae9a172f9c2fcc3c0da9ab0ee0369 , meetup:6727e42f3e65848966d67cf7450d88b0 ;
+        mtp:hasPurpose       meetup:056bdf30f87466fbfc77a8f38d1b08d7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vicki_Randle> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Jay_Leno>
+        rdf:type  core:Person .
+
+meetup:056bdf30f87466fbfc77a8f38d1b08d7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.42203203" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23637475" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Vicki_Randle>
+        rdf:type  core:Person .
+
+meetup:4a5ae9a172f9c2fcc3c0da9ab0ee0369
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vicki_Randle> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Vicki Randle" .
+
+meetup:6727e42f3e65848966d67cf7450d88b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jay_Leno> ;
+        mtp:hasOffset           "229" ;
+        mtp:hasSimilarityScore  "0.999089878525763" ;
+        mtp:hasTextEvidence     "Jay Leno" .

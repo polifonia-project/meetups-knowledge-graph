@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2183490/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Wednesday was a founding member of JAB, an Australian punk rock band, in Adelaide in January 1976. The band's original lineup consisted of Bohdan X (Bodhan Kubiakowski) on guitar and vocals, Wednesday playing bass guitar, synthesizer and tapes and Johnny Crash (Janis Friedenfelds) on drums and vocals." ;
+        mtp:hasParticipant   meetup:a03dd896b19065e694914752673f3694 ;
+        mtp:hasPurpose       meetup:02d6aea2bbbf0e5a04ca9075fc26d269 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ash_Wednesday_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:02d6aea2bbbf0e5a04ca9075fc26d269
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a punk rock band and its members." ;
+        mtp:hasEvidencePurposeSecond  "It mentions the personal life of the band members." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a03dd896b19065e694914752673f3694
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bohdan_X> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bohdan X" .
+
+<http://dbpedia.org/resource/Ash_Wednesday_(musician)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Bohdan_X>
+        rdf:type  core:Person .

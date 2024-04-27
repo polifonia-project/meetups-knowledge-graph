@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:bdef8081885981dcae71adaba3fe2fda
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9857194" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013037088" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/57717469/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hutchings has played saxophone with the Sun Ra Arkestra, Floating Points, Mulatu Astatke, Polar Bear, Melt Yourself Down, Heliocentrics and Zed-U." ;
+        mtp:hasParticipant   meetup:1a2e0791b9cfc8ec555f416378c03491 , meetup:af6a2731e42505bbee5c7cb6c98ba559 ;
+        mtp:hasPurpose       meetup:bdef8081885981dcae71adaba3fe2fda ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shabaka_Hutchings> ;
+        mtp:hasType          "HM" .
+
+meetup:1a2e0791b9cfc8ec555f416378c03491
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shabaka_Hutchings> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Shabaka Hutchings" .
+
+meetup:af6a2731e42505bbee5c7cb6c98ba559
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mulatu_Astatke> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mulatu Astatke" .
+
+<http://dbpedia.org/resource/Mulatu_Astatke>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Shabaka_Hutchings>
+        rdf:type  core:Person .

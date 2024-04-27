@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/17208659/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ewell Goldyn Rhambo, known as Bo Rhambo, (born September 21, 1923, Austin, Texas - November 24, 1988 in Los Angeles, California) was an American trumpeter and tenor saxophonist." ;
+        mtp:hasParticipant   meetup:26da124961c6e41e69e0e62eff8bff9f ;
+        mtp:hasPurpose       meetup:3a5fff27e833260c8985a6b7a75f2e62 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bo_Rhambo> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bo_Rhambo>
+        rdf:type  core:Person .
+
+meetup:26da124961c6e41e69e0e62eff8bff9f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bo_Rhambo> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bo Rhambo" .
+
+meetup:3a5fff27e833260c8985a6b7a75f2e62
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Bo Rhambo was a musician" ;
+        mtp:hasEvidencePurposeSecond  "Bo Rhambo had a personal life" ;
+        mtp:hasSourcePurpose          "LLM" .

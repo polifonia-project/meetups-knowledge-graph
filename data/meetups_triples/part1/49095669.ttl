@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:15272c9cf69e9f76e502d46cd1e904d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Kurt Robertson is a punk rock guitarist" ;
+        mtp:hasEvidencePurposeSecond  "Kurt Robertson's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/49095669/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2014, he joined the skate punk band SNFU." ;
+        mtp:hasParticipant   meetup:1350c3c8a0536b5611699cd005871f84 ;
+        mtp:hasPurpose       meetup:625ba3381fb7805cf1b84975b054591c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kurt_Robertson> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:625ba3381fb7805cf1b84975b054591c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9490155" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.045722928" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Kurt_Robertson>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/49095669/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kurt Robertson, also known as \"Dirty Kurt\" (born July 21, 1965 in Vancouver, British Columbia), is a Canadian punk rock guitarist and musician." ;
+        mtp:hasParticipant   meetup:a2a899f5de14d91f21de4552a3907cdd , meetup:b3000e025cb49ede0cc748225d7293df ;
+        mtp:hasPurpose       meetup:15272c9cf69e9f76e502d46cd1e904d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kurt_Robertson> ;
+        mtp:hasType          "HM" .
+
+meetup:1350c3c8a0536b5611699cd005871f84
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kurt_Robertson> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kurt Robertson" .
+
+meetup:b3000e025cb49ede0cc748225d7293df
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "\"Dirty Kurt\"" .
+
+meetup:a2a899f5de14d91f21de4552a3907cdd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kurt_Robertson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Kurt Robertson" .

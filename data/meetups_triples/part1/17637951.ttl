@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0d3d8699ec196d05cb4174a14b961da9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gordon_Brisker> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gordon Brisker" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:cff5159644891bc59926adc9966ce87c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6616253" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3293199" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/17637951/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gordon Brisker (November 6, 1937 in Cincinnati, Ohio – September 10, 2004) was an American jazz tenor saxophonist." ;
+        mtp:hasParticipant   meetup:0d3d8699ec196d05cb4174a14b961da9 ;
+        mtp:hasPurpose       meetup:cff5159644891bc59926adc9966ce87c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gordon_Brisker> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Gordon_Brisker>
+        rdf:type  core:Person .

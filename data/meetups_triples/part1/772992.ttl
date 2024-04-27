@@ -1,0 +1,59 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:8668edab6f261693b2b91df48d61f654
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.55147785" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23815812" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Carmen_Rasmusen>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/772992/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In June 2008, Rasmusen starred as one of the headliners for a live music show in Branson, MO, called America's Favorite Finalists. The show featured six top 12 American Idol Finalists performing their own music, cover songs and group numbers." ;
+        mtp:hasPurpose       meetup:9d8d159e9de4ab9aa8c5184d06486872 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carmen_Rasmusen> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/772992/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carmen Rasmusen Herbert (born March 25, 1985) is a Canadian-American country music artist who ranked sixth on the second season of American Idol in 2003." ;
+        mtp:hasParticipant   meetup:c7c3dff4cb1e92650116f59960ed14f2 ;
+        mtp:hasPurpose       meetup:8668edab6f261693b2b91df48d61f654 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carmen_Rasmusen> ;
+        mtp:hasType          "HT" .
+
+meetup:c7c3dff4cb1e92650116f59960ed14f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carmen_Rasmusen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Carmen Rasmusen" .
+
+meetup:9d8d159e9de4ab9aa8c5184d06486872
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performance by American Idol finalists" ;
+        mtp:hasEvidencePurposeSecond  "Live music show in Branson, MO" ;
+        mtp:hasSourcePurpose          "LLM" .

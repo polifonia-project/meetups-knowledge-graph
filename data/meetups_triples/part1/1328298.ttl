@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/George_Foreman>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b836d6c6b6c8f463ebf97f7aa2c41f67
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Foreman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Foreman" .
+
+<http://w3id.org/polifonia/pilot/meetups/1328298/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After several years, Foreman and his family moved back to Southern California, this time settling in San Diego. He graduated from San Dieguito Academy in the North County Coastal area of San Diego, California." ;
+        mtp:hasParticipant   meetup:b836d6c6b6c8f463ebf97f7aa2c41f67 ;
+        mtp:hasPurpose       meetup:49b15808d87b03a714c89c7c7b6b1964 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jon_Foreman> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jon_Foreman>
+        rdf:type  core:Person .
+
+meetup:49b15808d87b03a714c89c7c7b6b1964
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Foreman's life and family" ;
+        mtp:hasEvidencePurposeSecond  "Foreman's education and schooling" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:dbdfee94c0830806acaba9200797a528
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9994466" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00043110357" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f1338c8db061232a6a2a60cbc626a29f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marilyn_Manson> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "0.8225237473008744" ;
+        mtp:hasTextEvidence     "Manson" .
+
+meetup:521cb98b1813fbd7a812b49ec9e037f0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Garbage's music career" ;
+        mtp:hasEvidencePurposeSecond  "Garbage's achievements and releases" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/504461/0/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1995, Garbage released their self-titled debut album, a critical and commercial success. The band have released seven studio albums, including the multiple Grammy Award-nominated Version 2.0 and a greatest hits album." ;
+        mtp:hasPurpose       meetup:521cb98b1813fbd7a812b49ec9e037f0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shirley_Manson> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/504461/48/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They were married at a Los Angeles courthouse in May 2010. They continue to reside in Los Angeles, while Manson maintains a second home in the Edinburgh suburb of Joppa." ;
+        mtp:hasParticipant   meetup:f1338c8db061232a6a2a60cbc626a29f ;
+        mtp:hasPurpose       meetup:0a98229f8e42074648d2d9cfedff10a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shirley_Manson> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0a98229f8e42074648d2d9cfedff10a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Unrelated events happening together" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:0c36d34107b5f2fa2499be733c0bc938
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Binki Shapiro's" .
+
+<http://dbpedia.org/resource/Marilyn_Manson>
+        rdf:type  core:Person .
+
+meetup:90c3643cea705fd9c4d586aa8948b266
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shirley_Manson> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Shirley Manson" .
+
+<http://w3id.org/polifonia/pilot/meetups/504461/46/14>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2010, Shirley Manson donated two hand-decorated T-shirts to Binki Shapiro's (of the band Little Joy) online charity auction \"Crafts for a Cause\" to raise money for victims of the 2010 Haiti earthquake." ;
+        mtp:hasParticipant   meetup:90c3643cea705fd9c4d586aa8948b266 , meetup:0c36d34107b5f2fa2499be733c0bc938 ;
+        mtp:hasPurpose       meetup:dbdfee94c0830806acaba9200797a528 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shirley_Manson> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Shirley_Manson>
+        rdf:type  core:Person .

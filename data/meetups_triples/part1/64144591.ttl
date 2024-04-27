@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:32896e795b4da33793e17fa3b735b3e8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9886657" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0062809866" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9e3f66ac642a7e0875c63e42849bb5a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Devon_Gilfillian> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Devon Gilfillian" .
+
+<http://w3id.org/polifonia/pilot/meetups/64144591/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Devon Gilfillian is an American soul singer-songwriter based in Nashville, Tennessee." ;
+        mtp:hasParticipant   meetup:9e3f66ac642a7e0875c63e42849bb5a6 ;
+        mtp:hasPurpose       meetup:32896e795b4da33793e17fa3b735b3e8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Devon_Gilfillian> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Devon_Gilfillian>
+        rdf:type  core:Person .

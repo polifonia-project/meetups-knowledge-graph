@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Estelle_Skidmore_Doremus>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/34174307/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the early 1860s her husband's work took them to Paris, where he advised the French government. Estelle was remembered as \"the leader of the American colony in Paris during the most brilliant part of the reign of Napoleon III\"." ;
+        mtp:hasParticipant   meetup:0de3b9886c85968bfe969b3d26492dd4 ;
+        mtp:hasPurpose       meetup:6b7eb4b8b6987ac614b324acc5dc4779 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Estelle_Skidmore_Doremus> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Estelle_Getty>
+        rdf:type  core:Person .
+
+meetup:0de3b9886c85968bfe969b3d26492dd4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Estelle_Getty> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99904285283989" ;
+        mtp:hasTextEvidence     "Estelle" .
+
+meetup:6b7eb4b8b6987ac614b324acc5dc4779
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Estelle's life and activities" ;
+        mtp:hasEvidencePurposeSecond  "Recognition of Estelle's role in Paris" ;
+        mtp:hasSourcePurpose          "LLM" .

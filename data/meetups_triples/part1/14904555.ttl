@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/14904555/4/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Having earned the moniker \"molten mama with the lava larynx\", she caught the eye of a Warner Bros. movie scout while singing at The Pump Room in Chicago, leading to a role in Million Dollar Baby (1941). Wynn is perhaps best known for dubbing Rita Hayworth's singing voice in several films, including The Strawberry Blonde (1941), My Gal Sal (1942), and You Were Never Lovelier (1942),In the late 1940s, she appeared on the Morey Amsterdam and Ed Sullivan shows." ;
+        mtp:hasParticipant   meetup:ab4007bdd549c10f401019725b53590b , meetup:0cd8645950f90fef087bed230734c355 ;
+        mtp:hasPurpose       meetup:5d2e5e151393a0a43e7c3e3fdfea2882 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nan_Wynn> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ed_Miliband>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d8d55bb3d6e4e2d4043076cc1f3f7659
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.69939095" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2553289" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ab4007bdd549c10f401019725b53590b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ed_Miliband> ;
+        mtp:hasOffset           "240" ;
+        mtp:hasSimilarityScore  "0.6955970225022843" ;
+        mtp:hasTextEvidence     "Ed" .
+
+<http://dbpedia.org/resource/Nan_Wynn>
+        rdf:type  core:Person .
+
+meetup:55a830477730a12c471b84ab3a28b644
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nan_Wynn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nan Wynn" .
+
+<http://w3id.org/polifonia/pilot/meetups/14904555/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nan Wynn, born Masha Vatz (May 8, 1918 - March 21, 1971) was an American big-band singer, and Broadway and film actress." ;
+        mtp:hasParticipant   meetup:622eea41133921f9e499dc90c8790cac , meetup:55a830477730a12c471b84ab3a28b644 ;
+        mtp:hasPurpose       meetup:d8d55bb3d6e4e2d4043076cc1f3f7659 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nan_Wynn> ;
+        mtp:hasType          "HM" .
+
+meetup:5d2e5e151393a0a43e7c3e3fdfea2882
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Singing and dubbing in films" ;
+        mtp:hasEvidencePurposeSecond  "Appearance on TV shows" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:0cd8645950f90fef087bed230734c355
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rita_Hayworth> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rita Hayworth" .
+
+<http://dbpedia.org/resource/Rita_Hayworth>
+        rdf:type  core:Person .
+
+meetup:622eea41133921f9e499dc90c8790cac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Masha Vatz" .

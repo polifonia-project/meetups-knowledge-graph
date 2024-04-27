@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1caaf18f766fdcdf79b4c1242ea6d482
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93948025" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.060484722" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/10686803/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeff Rona was born Culver City, California, the son of European immigrants." ;
+        mtp:hasParticipant   meetup:ca3464870a8e5df40e970cc24aee9775 ;
+        mtp:hasPurpose       meetup:1caaf18f766fdcdf79b4c1242ea6d482 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Rona> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ca3464870a8e5df40e970cc24aee9775
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Rona> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999989484" ;
+        mtp:hasTextEvidence     "Jeff Rona" .
+
+<http://dbpedia.org/resource/Jeff_Rona>
+        rdf:type  core:Person .

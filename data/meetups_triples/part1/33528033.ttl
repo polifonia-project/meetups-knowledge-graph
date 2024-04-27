@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:facfbf5dcca5c926b1eaa8774c95a230
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Asha Mevlana Clayton-Niederman" .
+
+<http://dbpedia.org/resource/Asha_Mevlana>
+        rdf:type  core:Person .
+
+meetup:fd4081c15ad9ccaa4e122542c9f14679
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97724724" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010424541" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c68e927dffd1e5a61293bd45d0e2c9e8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Mevlana's work as a string director and soloist for the Trans-Siberian Orchestra" ;
+        mtp:hasEvidencePurposeSecond  "Mevlana's work as a director and release of her documentary" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/33528033/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Asha Mevlana (born Asha Mevlana Clayton-Niederman) is an American violinist and travel presenter." ;
+        mtp:hasParticipant   meetup:f5636b3c240304dacf972fd0bb871a5d , meetup:facfbf5dcca5c926b1eaa8774c95a230 ;
+        mtp:hasPurpose       meetup:fd4081c15ad9ccaa4e122542c9f14679 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Asha_Mevlana> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/33528033/5/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2011 Mevlana was hired as the string director and soloist for the Trans-Siberian Orchestra West Coast Tour and has toured around North America and Europe. Melvana has also worked as a director and her debut documentary short Driven was released in 2011." ;
+        mtp:hasParticipant   meetup:888df5789229e909173605582f321152 ;
+        mtp:hasPurpose       meetup:c68e927dffd1e5a61293bd45d0e2c9e8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Asha_Mevlana> ;
+        mtp:hasType          "HT" .
+
+meetup:888df5789229e909173605582f321152
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Melvana" .
+
+meetup:f5636b3c240304dacf972fd0bb871a5d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Asha_Mevlana> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999996905534" ;
+        mtp:hasTextEvidence     "Asha Mevlana" .

@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/60463889/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2003, Zubayeer composed and arranged an orchestral work titled The Golden Land which was based on the seasons of Bangladesh and her nature. The work was commissioned by Sundsvall Symphony Orchestra." ;
+        mtp:hasPurpose       meetup:370555c349a31abfe85a7ffd1337caae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Swani_Zubayeer> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:69f1baef19b63aaf832c24bea25bf7b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Swani_Zubayeer> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999966019004" ;
+        mtp:hasTextEvidence     "Swani Zubayeer" .
+
+<http://w3id.org/polifonia/pilot/meetups/60463889/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Swani Zubayeer (born 2 December 1973) is a Bangladeshi classical singer, composer and music director." ;
+        mtp:hasParticipant   meetup:69f1baef19b63aaf832c24bea25bf7b6 ;
+        mtp:hasPurpose       meetup:5e5fc27f43fcbb13e0670f077f53eecf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Swani_Zubayeer> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:370555c349a31abfe85a7ffd1337caae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Composition and orchestration" ;
+        mtp:hasEvidencePurposeSecond  "Commissioned work" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Swani_Zubayeer>
+        rdf:type  core:Person .
+
+meetup:5e5fc27f43fcbb13e0670f077f53eecf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997644" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00018200644" ;
+        mtp:hasSourcePurpose          "ML" .

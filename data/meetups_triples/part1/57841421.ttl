@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7c3318777644b7735c6a6c9f07fdfac6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Involves music production and performances" ;
+        mtp:hasEvidencePurposeSecond  "Involves a festival and radio show performance" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f29cda3415ad63257143bbbbc389be93
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rakei" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/57841421/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jordan Rakei (born 1992) is a New Zealand-Australian musician, singer, songwriter and record producer currently based in London, United Kingdom." ;
+        mtp:hasParticipant   meetup:8adae1d27e53887072f68195433983e9 ;
+        mtp:hasPurpose       meetup:67fdedb916419ad74b219338927b6ec7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jordan_Rakei> ;
+        mtp:hasType          "HT" .
+
+meetup:8adae1d27e53887072f68195433983e9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jordan_Rakei> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jordan Rakei" .
+
+<http://dbpedia.org/resource/Jordan_Rakei>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/57841421/8/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A tour of North America in spring 2018 included a performance at SXSW Festival and a live session for Jason Bentley's radio show on KCRW. In 2018, Rakei released the single \"Wildfire\", released on 10 May 2018, and also provided the vocals on the 2018 Nightmares on Wax track \"Typical\"." ;
+        mtp:hasParticipant   meetup:f29cda3415ad63257143bbbbc389be93 ;
+        mtp:hasPurpose       meetup:7c3318777644b7735c6a6c9f07fdfac6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jordan_Rakei> ;
+        mtp:hasType          "HT" .
+
+meetup:67fdedb916419ad74b219338927b6ec7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99686134" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0023705726" ;
+        mtp:hasSourcePurpose          "ML" .

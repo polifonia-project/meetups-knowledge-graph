@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/27837176/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tom Waits opened for a concert by Tim Weisberg at Ebbett's Field, Denver Colorado, May 17–19, 1973" ;
+        mtp:hasParticipant   meetup:ef9c34b91d93f51ccb0b39fabd67c5db , meetup:23dbded666741bcccc3e6b07abf8ba6f ;
+        mtp:hasPurpose       meetup:e6c8c49d724382fd40bc05c611384d99 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tim_Weisberg> ;
+        mtp:hasType          "HM" .
+
+meetup:e6c8c49d724382fd40bc05c611384d99
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performance at a concert" ;
+        mtp:hasEvidencePurposeSecond  "Live event with audience" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/27837176/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bonnie Raitt - Tim Weisberg concert at Greek Theatre, University of California, Berkeley, September 14, 1980." ;
+        mtp:hasParticipant   meetup:a6f465695766c5490370a7b497f377b3 , meetup:9be2afbdb4712d62b79eafba8e9e23cc ;
+        mtp:hasPurpose       meetup:a2fa0765aa04e72eb8721f3a979a0e37 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tim_Weisberg> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Tim_Weisberg>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:a2fa0765aa04e72eb8721f3a979a0e37
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99616313" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0031276175" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ef9c34b91d93f51ccb0b39fabd67c5db
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Weisberg> ;
+        mtp:hasOffset           "34" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Tim Weisberg" .
+
+<http://dbpedia.org/resource/Bonnie_Raitt>
+        rdf:type  core:Person .
+
+meetup:a6f465695766c5490370a7b497f377b3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Weisberg> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Tim Weisberg" .
+
+meetup:9be2afbdb4712d62b79eafba8e9e23cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bonnie_Raitt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99999999999676" ;
+        mtp:hasTextEvidence     "Bonnie Raitt" .
+
+<http://dbpedia.org/resource/Tom_Waits>
+        rdf:type  core:Person .
+
+meetup:23dbded666741bcccc3e6b07abf8ba6f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Waits> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tom Waits" .

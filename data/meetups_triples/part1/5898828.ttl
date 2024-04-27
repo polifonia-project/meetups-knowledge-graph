@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/5898828/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Coco Montoya (born Henry Montoya, October 2, 1951, Santa Monica, California) is an American blues guitarist and singer and former member of John Mayall & the Bluesbreakers." ;
+        mtp:hasParticipant   meetup:b4a41ef19f7b47197de7787347bd31bd , meetup:77c3ea343ad956f9d97994972b22ac80 , meetup:1fdee8de2ed15a3abf51c5af5bf2b4dd ;
+        mtp:hasPurpose       meetup:9bcabf2d78a23a0fe2ca11a6894cb12f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Coco_Montoya> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/John_Mayall>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Coco_Montoya>
+        rdf:type  core:Person .
+
+meetup:9bcabf2d78a23a0fe2ca11a6894cb12f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Blues guitarist and singer" ;
+        mtp:hasEvidencePurposeSecond  "Born in Santa Monica, California" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:1fdee8de2ed15a3abf51c5af5bf2b4dd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Coco_Montoya> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Coco Montoya" .
+
+meetup:b4a41ef19f7b47197de7787347bd31bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Henry Montoya" .
+
+meetup:77c3ea343ad956f9d97994972b22ac80
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Mayall> ;
+        mtp:hasOffset           "140" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Mayall" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:d765f6ddad66a2582440c179f199c822
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.81499016" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15469836" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/3322879/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Frank Infante (born November 15, 1951) is an American guitarist and bassist best known as a former member of the new wave band Blondie." ;
+        mtp:hasParticipant   meetup:f9877d9646699f999515d9d4d81274a3 ;
+        mtp:hasPurpose       meetup:d765f6ddad66a2582440c179f199c822 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frank_Infante> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Frank_Infante>
+        rdf:type  core:Person .
+
+meetup:f9877d9646699f999515d9d4d81274a3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Infante> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Frank Infante" .

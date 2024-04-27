@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:972e8a357bfdd9223322885373870c35
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.2079835e-08" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/19231571/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Igor Vidmar (born December 10, 1950) is a prominent Slovenian and former Yugoslav journalist, rock music promoter and manager, music producer and political activist." ;
+        mtp:hasParticipant   meetup:be89a63812fbbf0556c9a9e7bcdb34a5 ;
+        mtp:hasPurpose       meetup:972e8a357bfdd9223322885373870c35 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Igor_Vidmar> ;
+        mtp:hasType          "HT" .
+
+meetup:be89a63812fbbf0556c9a9e7bcdb34a5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Igor_Vidmar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Igor Vidmar" .
+
+<http://dbpedia.org/resource/Igor_Vidmar>
+        rdf:type  core:Person .

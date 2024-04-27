@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/27994657/7/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In May 2011, Oksana Grigorieva dropped claims of domestic abuse against Gibson." ;
+        mtp:hasParticipant   meetup:eb2ea1a222b9ca0b9bd9573f47dea026 , meetup:ff0df41e4b9bb3d177a8234e87e63074 ;
+        mtp:hasPurpose       meetup:54d793a9beacc243e69d6f1e00fea7a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Oksana_Grigorieva> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/27994657/3/15>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the U.K. she worked under the name Sacha Chernuha before changing it to Oksana Grigorieva." ;
+        mtp:hasParticipant   meetup:4e3870f98da0239e3da3f73bbf50a7a0 , meetup:4f6e7c6533f62be103081c6204b211ae ;
+        mtp:hasPurpose       meetup:b1760c1a95f074770d90694fc4f3fb4b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Oksana_Grigorieva> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:eb2ea1a222b9ca0b9bd9573f47dea026
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Oksana_Grigorieva> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Oksana Grigorieva" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Oksana_Grigorieva>
+        rdf:type  core:Person .
+
+meetup:ff0df41e4b9bb3d177a8234e87e63074
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Gibson> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "0.8433716246525814" ;
+        mtp:hasTextEvidence     "Gibson" .
+
+<http://dbpedia.org/resource/Bob_Gibson>
+        rdf:type  core:Person .
+
+meetup:4e3870f98da0239e3da3f73bbf50a7a0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Oksana_Grigorieva> ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Oksana Grigorieva" .
+
+meetup:54d793a9beacc243e69d6f1e00fea7a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9901424" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0047014584" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b1760c1a95f074770d90694fc4f3fb4b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9986318" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007473299" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4f6e7c6533f62be103081c6204b211ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Grigorieva" .

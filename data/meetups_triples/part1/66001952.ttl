@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:7174b6fd69044b8bc97a1ce3f60679cd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.48078215" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3774362" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Louis_Benjamin>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:92b829618a26bdca57d5404988f58020
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Isaac Louis Benjamin" .
+
+<http://w3id.org/polifonia/pilot/meetups/66001952/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Isaac Louis Benjamin (17 October 1922 – 20 June 1994) was a British entertainment business executive and theatre impresario." ;
+        mtp:hasParticipant   meetup:92b829618a26bdca57d5404988f58020 , meetup:bf7a64efee2a00d9bc96052f267786d7 ;
+        mtp:hasPurpose       meetup:7174b6fd69044b8bc97a1ce3f60679cd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Louis_Benjamin> ;
+        mtp:hasType          "HM" .
+
+meetup:bf7a64efee2a00d9bc96052f267786d7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Louis_Benjamin> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "0.999999999970953" ;
+        mtp:hasTextEvidence     "Louis Benjamin" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:8bf58525c4d1e5ff8bdda5472d01749b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.932921" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06705652" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8123e8901fa64057e412ec1bf5a87d25
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Louis_Benjamin> ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Louis Benjamin" .
+
+<http://w3id.org/polifonia/pilot/meetups/66001952/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Among other leading positions between the 1960s and 1980s, he chaired Pye Records, was a managing director at ATV and at the London Palladium, and organised the Royal Variety Performances." ;
+        mtp:hasParticipant   meetup:8123e8901fa64057e412ec1bf5a87d25 ;
+        mtp:hasPurpose       meetup:8bf58525c4d1e5ff8bdda5472d01749b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Louis_Benjamin> ;
+        mtp:hasType          "HT" .

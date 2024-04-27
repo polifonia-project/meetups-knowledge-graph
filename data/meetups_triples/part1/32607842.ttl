@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5c28491fb7592aea7321cdb95e37f3b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimbo_Mathus> ;
+        mtp:hasOffset           "49" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jimbo Mathus" .
+
+meetup:56b4c029b66fcef67264b02bee9458ea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8504558693851964" ;
+        mtp:hasTextEvidence     "James" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/32607842/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James H. Mathis Jr. (born August 1967), known as Jimbo Mathus, is an American singer-songwriter and guitarist, best known for his work with the swing revival band Squirrel Nut Zippers." ;
+        mtp:hasParticipant   meetup:5c28491fb7592aea7321cdb95e37f3b7 , meetup:56b4c029b66fcef67264b02bee9458ea ;
+        mtp:hasPurpose       meetup:be415844c4e065e7a1d87a2574d12876 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimbo_Mathus> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Jimbo_Mathus>
+        rdf:type  core:Person .
+
+meetup:be415844c4e065e7a1d87a2574d12876
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.85000813" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13065943" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .

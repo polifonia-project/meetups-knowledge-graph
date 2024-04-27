@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:96c83d291d68db28a4c3c001a0a39938
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kateryna_Pavlenko> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.9999999282000002" ;
+        mtp:hasTextEvidence     "Kateryna Pavlenko" .
+
+meetup:d06227ec27c3974a6525f3636875a915
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99988365" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00011556145" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/67738840/8/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In June 2021, Kateryna Pavlenko entered the top 100 most influential women in Ukraine according to Focus magazine, where she took 10th place." ;
+        mtp:hasParticipant   meetup:96c83d291d68db28a4c3c001a0a39938 ;
+        mtp:hasPurpose       meetup:d06227ec27c3974a6525f3636875a915 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kateryna_Pavlenko> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Kateryna_Pavlenko>
+        rdf:type  core:Person .

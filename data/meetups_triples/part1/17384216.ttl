@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Kevin_Bacon>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/17384216/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Bacon (born December 22, 1949) is an American singer-songwriter, musician and film score composer." ;
+        mtp:hasParticipant   meetup:9c603898525da72426cf2fee39438cde ;
+        mtp:hasPurpose       meetup:49bd8d3c70efe8e0acd066c5076a906a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Bacon_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:9c603898525da72426cf2fee39438cde
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Bacon_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999902919654176" ;
+        mtp:hasTextEvidence     "Michael Bacon" .
+
+<http://dbpedia.org/resource/Michael_Bacon_(musician)>
+        rdf:type  core:Person .
+
+meetup:49bd8d3c70efe8e0acd066c5076a906a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99977046" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00015818595" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:abe1c0a316bd9450f35284a4db3f6c49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Bacon_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael Bacon" .
+
+<http://w3id.org/polifonia/pilot/meetups/17384216/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is the older brother of actor Kevin Bacon." ;
+        mtp:hasParticipant   meetup:e1c554dae6887695655ebbec597c3044 , meetup:abe1c0a316bd9450f35284a4db3f6c49 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Bacon_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:e1c554dae6887695655ebbec597c3044
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Bacon> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "0.999999994302442" ;
+        mtp:hasTextEvidence     "Kevin Bacon" .

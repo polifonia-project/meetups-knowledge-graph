@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:d594e2314e127458007991686d9e2043
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9547416" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.032840732" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Larry_Taylor>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/6959923/7/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Larry Taylor died on 19 August 2019 at the age of 77 from cancer." ;
+        mtp:hasParticipant   meetup:4a8a4657276c59403511e9ef4fa11191 ;
+        mtp:hasPurpose       meetup:d594e2314e127458007991686d9e2043 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Larry_Taylor> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4a8a4657276c59403511e9ef4fa11191
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Larry_Taylor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999983716874438" ;
+        mtp:hasTextEvidence     "Larry Taylor" .

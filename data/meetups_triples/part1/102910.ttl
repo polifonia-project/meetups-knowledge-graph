@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:409e67f5e991d41add4f1e8815b70e6a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Martin> ;
+        mtp:hasOffset           "192" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Martin" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/102910/42/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Critic Allison Adaot of Entertainment Weekly wrote, \"Meteor Shower is a very funny play." ;
+        mtp:hasParticipant   meetup:90d9a4ce7ddcc7d34fb936a02594ed54 , meetup:409e67f5e991d41add4f1e8815b70e6a ;
+        mtp:hasPurpose       meetup:1844ef9f1aca28766d9385335663a968 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Martin> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:90d9a4ce7ddcc7d34fb936a02594ed54
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Allison Adaot" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:1844ef9f1aca28766d9385335663a968
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5178212" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4341943" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7973483cb4c91ac921ecbe27fbf5f609
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99631786" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0021921033" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Steve_Martin>
+        rdf:type  core:Person .
+
+meetup:2248ee687c3c85555919cb6bedefdd5e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Martin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Steve Martin" .
+
+<http://w3id.org/polifonia/pilot/meetups/102910/42/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Martin's next work as a playwright was the comic play Meteor Shower which opened at San Diego's Old Globe Theatre in August 2016, and went on to Connecticut's Long Wharf Theatre later the same year." ;
+        mtp:hasParticipant   meetup:2248ee687c3c85555919cb6bedefdd5e ;
+        mtp:hasPurpose       meetup:7973483cb4c91ac921ecbe27fbf5f609 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Steve_Martin> ;
+        mtp:hasType          "HT" .

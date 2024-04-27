@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Harry_Oster>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0bcbe6233829f405b51176f950956a52
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999845" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.449127e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7511dfb678217d413acc6ed58200ae5a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions making a record and releasing recordings." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions selling a record to a record label." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:dada005ea3aa6aaf6a4ff56794c6ffd3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Harry_Oster> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Harry Oster" .
+
+<http://w3id.org/polifonia/pilot/meetups/5274263/8/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The same year he made, by Allen's advice, a record of Snooks Eaglin in New Orleans and sold it to Folkways Records. The following recordings were released by his own record label, Folk-Lyric." ;
+        mtp:hasPurpose       meetup:7511dfb678217d413acc6ed58200ae5a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harry_Oster> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/5274263/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dr. Harry Oster (April 12, 1923 – January 19, 2001) was an American folklorist and musicologist." ;
+        mtp:hasParticipant   meetup:dada005ea3aa6aaf6a4ff56794c6ffd3 ;
+        mtp:hasPurpose       meetup:0bcbe6233829f405b51176f950956a52 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Harry_Oster> ;
+        mtp:hasType          "HT" .

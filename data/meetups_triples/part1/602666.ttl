@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:2fc6e5480eef29cb0e65f4bfb7fd8826
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arthur_Russell_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999998239515704" ;
+        mtp:hasTextEvidence     "Dinosaur L" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Arthur_Russell_(musician)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/602666/7/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After spending a few Saturday nights without Louis, Arthur decided to come. After the third or fourth time there, he started to come without Louis\"." ;
+        mtp:hasPurpose       meetup:881f1747161724b35ec65630a0f040b0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Russell_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:881f1747161724b35ec65630a0f040b0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Activities and experiences of an individual" ;
+        mtp:hasEvidencePurposeSecond  "Unplanned events or circumstances" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:9a36af4263e8135c1603506447908152
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8686097" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13119602" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/602666/48/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dinosaur L: \"Go Bang\" (1982), from 24→24 Music." ;
+        mtp:hasParticipant   meetup:2fc6e5480eef29cb0e65f4bfb7fd8826 ;
+        mtp:hasPurpose       meetup:9a36af4263e8135c1603506447908152 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Russell_(musician)> ;
+        mtp:hasType          "HT" .

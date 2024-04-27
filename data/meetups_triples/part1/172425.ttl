@@ -1,0 +1,108 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:acb473fb21cbde30139714d26eb863dc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Peel> ;
+        mtp:hasOffset           "155" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Peel" .
+
+meetup:34fd8f1819739b7b5de0fcd9fc8b5e75
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999164" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000832375" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0faf94d2d00efc336c5e5140466e466a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Related to someone's family" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/172425/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The first album to consist entirely of David Bedford compositions was Nurses Song with Elephants, recorded at the Marquee Studios, and released in 1972 on John Peel's Dandelion label." ;
+        mtp:hasParticipant   meetup:6e609d6eba5d7f72a19e34c23a89f344 , meetup:acb473fb21cbde30139714d26eb863dc ;
+        mtp:hasPurpose       meetup:7f090278a55ac82fe9c4e0676051ded3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Bedford> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/172425/26/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He married his third wife, Allison Powell, in 1994, and the couple had a son and two daughters. His third wife and all seven of his children survive him." ;
+        mtp:hasPurpose       meetup:0faf94d2d00efc336c5e5140466e466a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Bedford> ;
+        mtp:hasType          "HT" .
+
+meetup:b7d943b838fa316c9d2f85b26f80683d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Marriages and family relationships" ;
+        mtp:hasEvidencePurposeSecond  "Occurrences that happen by chance" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6e609d6eba5d7f72a19e34c23a89f344
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Bedford> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Bedford" .
+
+meetup:7f090278a55ac82fe9c4e0676051ded3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8713872" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12848105" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/John_Peel>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/David_Bedford>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/172425/11/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1983, Oldfield created a short-lived record label called Oldfield Music whose sole release was a David Bedford album, Star Clusters, Nebulae and Places in Devon / The Song of the White Horse." ;
+        mtp:hasParticipant   meetup:fcbfd71ac2f41f954112bb7b4ddcf88b ;
+        mtp:hasPurpose       meetup:34fd8f1819739b7b5de0fcd9fc8b5e75 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Bedford> ;
+        mtp:hasType          "HT" .
+
+meetup:fcbfd71ac2f41f954112bb7b4ddcf88b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Bedford> ;
+        mtp:hasOffset           "100" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Bedford" .
+
+<http://w3id.org/polifonia/pilot/meetups/172425/26/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His second marriage, to Susan Pilgrim in 1969, also produced two daughters. His first two marriages ended in divorce." ;
+        mtp:hasPurpose       meetup:b7d943b838fa316c9d2f85b26f80683d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Bedford> ;
+        mtp:hasType          "HT" .

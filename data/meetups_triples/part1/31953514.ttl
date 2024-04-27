@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/31953514/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Little David Wilkins (born May 18, 1945) is an American country music singer, songwriter, and pianist." ;
+        mtp:hasParticipant   meetup:f94a939ff4473b40aaf25d6c34896739 ;
+        mtp:hasPurpose       meetup:d576026b252f42da13cc083af602772e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Little_David_Wilkins> ;
+        mtp:hasType          "HT" .
+
+meetup:d576026b252f42da13cc083af602772e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999999" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.720375e-08" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:961476fc1d13abfe59b2a052b9928816
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9951088" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0048572505" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/31953514/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Between 1969 and 1977, he recorded for MCA Records with whom he released his greatest number of chart hits." ;
+        mtp:hasParticipant   meetup:423c5efb9ae83870b959ff0675fec5f1 ;
+        mtp:hasPurpose       meetup:961476fc1d13abfe59b2a052b9928816 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Little_David_Wilkins> ;
+        mtp:hasType          "HT" .
+
+meetup:423c5efb9ae83870b959ff0675fec5f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Little_David_Wilkins> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Little David Wilkins" .
+
+meetup:f94a939ff4473b40aaf25d6c34896739
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Little_David_Wilkins> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Little David Wilkins" .
+
+<http://dbpedia.org/resource/Little_David_Wilkins>
+        rdf:type  core:Person .

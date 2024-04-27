@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/62411529/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Seamus Fogarty is a London-based Irish singer-songwriter, originally from County Mayo." ;
+        mtp:hasParticipant   meetup:ca4c80ac2572c61d3d72e21187a4eea7 ;
+        mtp:hasPurpose       meetup:9b77f8dc85b60f86b784a155afdff8db ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Seamus_Fogarty> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ca4c80ac2572c61d3d72e21187a4eea7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Seamus_Fogarty> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Seamus Fogarty" .
+
+<http://dbpedia.org/resource/Seamus_Fogarty>
+        rdf:type  core:Person .
+
+meetup:9b77f8dc85b60f86b784a155afdff8db
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.90817183" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07890191" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .

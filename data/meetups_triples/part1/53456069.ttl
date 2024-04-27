@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:c523e4e5fcf27715b74b6fdd0661a877
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Participating in Eurovision" ;
+        mtp:hasEvidencePurposeSecond  "Representing Norway" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/53456069/2/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the final, held on 11 March, JOWST and Walmann received the maximum 12 points from four of the eleven international juries in addition to winning the televote. They subsequently advanced to the gold final, where they won the competition." ;
+        mtp:hasPurpose       meetup:c90025e438f32b942e2c8ab1f90ceb09 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jowst> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:279c6a8b0572849ae41bfd1ac95ab026
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9766814" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013399184" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/53456069/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joakim With Steen (born 26 June 1989), better known as Jowst (usually stylised JOWST), is a Norwegian music producer and songwriter." ;
+        mtp:hasParticipant   meetup:7bdf118ac224571afcacb8adfa284d5c ;
+        mtp:hasPurpose       meetup:279c6a8b0572849ae41bfd1ac95ab026 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jowst> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Aleksander_Walmann>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/53456069/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He represented Norway in the Eurovision Song Contest 2017 with the song \"Grab the Moment\", along with vocalist Aleksander Walmann finishing in 10th place." ;
+        mtp:hasParticipant   meetup:f3932c3e779fbbf9a5c5eccdb8bfa28f , meetup:7a09c9ae4825bd0ce786e374652a2965 ;
+        mtp:hasPurpose       meetup:c523e4e5fcf27715b74b6fdd0661a877 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jowst> ;
+        mtp:hasType          "HM" .
+
+meetup:f3932c3e779fbbf9a5c5eccdb8bfa28f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jowst> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jowst" .
+
+meetup:c90025e438f32b942e2c8ab1f90ceb09
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Participating and winning a music competition" ;
+        mtp:hasEvidencePurposeSecond  "Celebrating the victory in a public event" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:7a09c9ae4825bd0ce786e374652a2965
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aleksander_Walmann> ;
+        mtp:hasOffset           "111" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aleksander Walmann" .
+
+meetup:7bdf118ac224571afcacb8adfa284d5c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jowst> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jowst" .
+
+<http://dbpedia.org/resource/Jowst>
+        rdf:type  core:Person .

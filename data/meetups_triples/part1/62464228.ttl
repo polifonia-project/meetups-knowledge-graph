@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:06d3f667cb92f2e91621ddb8364ab1ec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Song Sun-dan" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:becc86920c2aa8cb19cd37823230a3ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9986381" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007920543" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:cf6e0621525e3229ec3d4977efaef0d1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Song_Ga-in> ;
+        mtp:hasOffset           "88" ;
+        mtp:hasSimilarityScore  "0.9999426884424952" ;
+        mtp:hasTextEvidence     "Song Ga-in" .
+
+meetup:e55f2343befd78a5072bb98b2ee5b15e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jo Eun-sim" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/62464228/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Song was born Jo Eun-shim on December 26, 1986 in Jindo County, South Jeolla Province, South Korea. Her mother, Song Sun-dan, teaches Jindo ssitgimgut, a shaman exorcism ritual that is classified as one of South Korea's \"Intangible Cultural Properties.\"" ;
+        mtp:hasParticipant   meetup:06d3f667cb92f2e91621ddb8364ab1ec ;
+        mtp:hasPurpose       meetup:4729864167a10649c0057db871ddd715 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Song_Ga-in> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Song_Ga-in>
+        rdf:type  core:Person .
+
+meetup:4729864167a10649c0057db871ddd715
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Song's mother teaches a shaman exorcism ritual" ;
+        mtp:hasEvidencePurposeSecond  "Song was born in South Korea" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/62464228/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jo Eun-sim (Korean: 조은심; born December 26, 1986), better known by her stage name, Song Ga-in (Korean: 송가인), is a South Korean female trot singer." ;
+        mtp:hasParticipant   meetup:cf6e0621525e3229ec3d4977efaef0d1 , meetup:e55f2343befd78a5072bb98b2ee5b15e ;
+        mtp:hasPurpose       meetup:becc86920c2aa8cb19cd37823230a3ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Song_Ga-in> ;
+        mtp:hasType          "HM" .

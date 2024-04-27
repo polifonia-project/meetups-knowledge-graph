@@ -1,0 +1,59 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/67221639/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She started at BBC Radio 1Xtra in January 2019, replacing Charlie Sloth. Her Rap Show on 1Xtra was awarded \"Best Radio Show\" by British magazine DJMag." ;
+        mtp:hasPurpose       meetup:e2112a85627decff7640b88a9a3dbe2d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tiffany_Calver> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Tiffany_Calver>
+        rdf:type  core:Person .
+
+meetup:e2112a85627decff7640b88a9a3dbe2d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Radio show host" ;
+        mtp:hasEvidencePurposeSecond  "Career achievement" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:61ccb494fd1c792a7a6cc25cd5134100
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9605146" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02529387" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e6ad6bb612df517ae7f812ffa5ec09cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tiffany_Calver> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tiffany Calver" .
+
+<http://w3id.org/polifonia/pilot/meetups/67221639/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tiffany Calver (born September 16, 1994) is a British radio DJ and presenter." ;
+        mtp:hasParticipant   meetup:e6ad6bb612df517ae7f812ffa5ec09cc ;
+        mtp:hasPurpose       meetup:61ccb494fd1c792a7a6cc25cd5134100 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tiffany_Calver> ;
+        mtp:hasType          "HT" .

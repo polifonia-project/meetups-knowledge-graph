@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Edward_Simon_(musician)>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:76ae204decae2e70b2c33eb9ac3f78fa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84228915" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14257927" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/16813306/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "When he was ten years old, he went to the United States of America to study at the Performing Arts School in Philadelphia. After graduating, he attended the University of the Arts in Philadelphia, where he studied classical piano, then the Manhattan School of Music, where he studied jazz piano." ;
+        mtp:hasPurpose       meetup:96f6bfc2458d799bd8e83fe5134cf93e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Edward_Simon_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/16813306/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Edward Simon (born July 27, 1969) is a Venezuelan jazz pianist and composer." ;
+        mtp:hasParticipant   meetup:538948d73744115c49d960e66fefe8d8 ;
+        mtp:hasPurpose       meetup:76ae204decae2e70b2c33eb9ac3f78fa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Edward_Simon_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:96f6bfc2458d799bd8e83fe5134cf93e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Focus on academic studies" ;
+        mtp:hasEvidencePurposeSecond  "Focus on learning music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:538948d73744115c49d960e66fefe8d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Edward_Simon_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999997373036149" ;
+        mtp:hasTextEvidence     "Edward Simon" .

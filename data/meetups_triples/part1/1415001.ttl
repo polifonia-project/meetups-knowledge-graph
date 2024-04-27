@@ -1,0 +1,96 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Ze'ev_Schiff>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9ec5399bb7cc7614d293a000e543f60b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ze'ev_Schiff> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Schiff" .
+
+<http://dbpedia.org/resource/András_Schiff>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1415001/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sir András Schiff (Hungarian: [ˈɒndraːʃ ˈʃiff]; born 21 December 1953) is a Hungarian-born Austro-British classical pianist and conductor, who has received numerous major awards and honours, including the Grammy Award, Gramophone Award, Mozart Medal, and Royal Academy of Music Bach Prize, and was appointed Knight Bachelor in the 2014 Queen's Birthday Honours for services to music." ;
+        mtp:hasParticipant   meetup:bf4fc07130462084598557e4a180f6a9 ;
+        mtp:hasPurpose       meetup:ce590cc203dc4d618599d7c09df05bdb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/András_Schiff> ;
+        mtp:hasType          "HT" .
+
+meetup:66134c0730bf1c483c1d8dacb743f6c2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/András_Schiff> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "András Schiff" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:ce590cc203dc4d618599d7c09df05bdb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6609579" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.33585185" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:bf4fc07130462084598557e4a180f6a9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/András_Schiff> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "András Schiff" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:f4aa20a188f6e93664c1305838da5c38
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Personal concerns and decisions" ;
+        mtp:hasEvidencePurposeSecond  "Unfortunate events happening together" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:da1689a21d01f6090b39e1d70e52c275
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9924528" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004744692" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1415001/18/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 14 January 2012, in an interview with the German newspaper Der Tagesspiegel, Schiff expressed his deep worries about right-wing radical gangs terrorising Roma, open antisemitism, and the very conservative chauvinism and nationalism of the ruling Fidesz party in Hungary lately. Since, as he says, “antisemitic baiting has become socially acceptable in Hungary”, and he had been decried as Saujude on the Internet, he had cancelled all his concerts in Hungary, he said." ;
+        mtp:hasParticipant   meetup:9ec5399bb7cc7614d293a000e543f60b ;
+        mtp:hasPurpose       meetup:f4aa20a188f6e93664c1305838da5c38 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/András_Schiff> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1415001/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is also known for his public criticism of political movements in Hungary and Austria." ;
+        mtp:hasParticipant   meetup:66134c0730bf1c483c1d8dacb743f6c2 ;
+        mtp:hasPurpose       meetup:da1689a21d01f6090b39e1d70e52c275 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/András_Schiff> ;
+        mtp:hasType          "HT" .

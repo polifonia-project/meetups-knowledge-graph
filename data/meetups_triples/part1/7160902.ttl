@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/7160902/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sidney Louie Gunter Jr. (27 February 1925 – 15 March 2013), known as Hardrock Gunter, was a singer, songwriter and guitarist whose music at the turn of the 1950s prefigured rock and roll and rockabilly music." ;
+        mtp:hasParticipant   meetup:3591f6101145818318431a2a00f77977 , meetup:70f7d0910dcd9fbf1a3638cf45a4eb10 , meetup:0e738e435bc4a9bbdf72900012aaea18 ;
+        mtp:hasPurpose       meetup:2cfeb8a7fcc54f886b7f629c31f6ccb4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hardrock_Gunter> ;
+        mtp:hasType          "HM" .
+
+meetup:70f7d0910dcd9fbf1a3638cf45a4eb10
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Louie_Pounds> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.7534425167900224" ;
+        mtp:hasTextEvidence     "Louie" .
+
+meetup:0e738e435bc4a9bbdf72900012aaea18
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sidney Louie Gunter Jr." .
+
+meetup:3591f6101145818318431a2a00f77977
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hardrock_Gunter> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hardrock Gunter" .
+
+<http://dbpedia.org/resource/Louie_Pounds>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Hardrock_Gunter>
+        rdf:type  core:Person .
+
+meetup:2cfeb8a7fcc54f886b7f629c31f6ccb4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9199964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07999297" ;
+        mtp:hasSourcePurpose          "ML" .

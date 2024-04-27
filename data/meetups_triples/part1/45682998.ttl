@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/George_W._Bush>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Andy_Richards>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:7835c42ae524b553d2e62aa18a19824f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "36" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Phil Bush" .
+
+meetup:6d787b8d440396adb26adc9f750644b2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Julian_Mendelsohn> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Julian Mendelsohn" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8f183e0f7b987f05b4d3979aa9e37564
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_W._Bush> ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "0.929110672831038" ;
+        mtp:hasTextEvidence     "Bush" .
+
+meetup:61436a5768315955156f2193a11ffd62
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involvement in band and music production" ;
+        mtp:hasEvidencePurposeSecond  "Meeting with Mike Stone of Clay Records" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/45682998/15/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Whilst in Manchester, he was part of a band called Sneaky Pierre, featuring the cream of Manchester's session musicians which included some members of Sad Café, and in 1983 was invited by Mike Stone of Clay Records to produce the synth-pop band White Door from Stoke-on-Trent. It was recorded at Pluto Studios by Phil Bush and was mixed in Sarm East Studios by Julian Mendelsohn who was working with Trevor Horn at the time." ;
+        mtp:hasParticipant   meetup:6d787b8d440396adb26adc9f750644b2 , meetup:8f183e0f7b987f05b4d3979aa9e37564 , meetup:7835c42ae524b553d2e62aa18a19824f , meetup:bc7a009febd6634d5b59732fd3c53ea3 ;
+        mtp:hasPurpose       meetup:61436a5768315955156f2193a11ffd62 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Richards> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Trevor_Horn>
+        rdf:type  core:Person .
+
+meetup:bc7a009febd6634d5b59732fd3c53ea3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Trevor_Horn> ;
+        mtp:hasOffset           "123" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Trevor Horn" .
+
+<http://dbpedia.org/resource/Julian_Mendelsohn>
+        rdf:type  core:Person .

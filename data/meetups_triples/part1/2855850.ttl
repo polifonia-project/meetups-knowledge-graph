@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2855850/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He currently resides in San Diego, California." ;
+        mtp:hasParticipant   meetup:5905d00d43936e1f744e6821599bd050 ;
+        mtp:hasPurpose       meetup:d765a7669e405a22f44c4a8d10768444 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ryan_Sinn> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5905d00d43936e1f744e6821599bd050
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ryan_Sinn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ryan Sinn" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:d765a7669e405a22f44c4a8d10768444
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.86330485" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10126212" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Ryan_Sinn>
+        rdf:type  core:Person .

@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d661d35d261321da89a149550d8bbf47
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Karolina Jóhannsdóttir" .
+
+<http://w3id.org/polifonia/pilot/meetups/1547719/11/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jóhann left Reykjavík in the early 2000s, living in Copenhagen before settling in Kreuzberg, Berlin. He had a daughter, Karolina Jóhannsdóttir, who lives in Copenhagen." ;
+        mtp:hasParticipant   meetup:d661d35d261321da89a149550d8bbf47 ;
+        mtp:hasPurpose       meetup:a9e569728c8eaf79f1e2cbfa007343a7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jóhann_Jóhannsson> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1547719/5/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "IBM 1401, A User's Manual, Jóhann's fourth studio album, was released on 30 October 2006 on the 4AD label. It was inspired by his father, an IBM engineer and one of Iceland's first computer programmers, who used early hardware to compose melodies during his downtime at work." ;
+        mtp:hasPurpose       meetup:b2ac976547e2f635c975488fc8adbdfe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jóhann_Jóhannsson> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b2ac976547e2f635c975488fc8adbdfe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Album inspired by father's work" ;
+        mtp:hasEvidencePurposeSecond  "Father's role as an IBM engineer" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a9e569728c8eaf79f1e2cbfa007343a7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Mention of living in different cities and having a daughter" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Jóhann_Jóhannsson>
+        rdf:type  core:Person .

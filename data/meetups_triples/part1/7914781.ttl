@@ -1,0 +1,95 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/7914781/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1946 he moved to New York with his family, where his father, Nino D'Aurelio (born Aurelio Guidi), found work as opera singer. Dorelli studied double bass and piano at the High School of Music and Art in New York." ;
+        mtp:hasParticipant   meetup:027834db634e5fa8e19d5a6cf41505bf ;
+        mtp:hasPurpose       meetup:e50c5d8ee48a77fde0eecc04d65430aa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Dorelli> ;
+        mtp:hasType          "HT" .
+
+meetup:027834db634e5fa8e19d5a6cf41505bf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dorelli" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f491bba935ed71923713d5a682f3e354
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Dorelli> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johnny Dorelli" .
+
+<http://w3id.org/polifonia/pilot/meetups/7914781/42/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1965 - Johnny Dorelli (CGD, FG 5024)" ;
+        mtp:hasParticipant   meetup:f491bba935ed71923713d5a682f3e354 ;
+        mtp:hasPurpose       meetup:36bf12515841d0f89056cfadb07cc386 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Dorelli> ;
+        mtp:hasType          "HT" .
+
+meetup:22c81222e150becb80f3cff31d2f6daa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Giorgio Guidi" .
+
+<http://w3id.org/polifonia/pilot/meetups/7914781/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Johnny Dorelli (real name Giorgio Guidi; born 20 February 1937) is an Italian actor, singer, and television host." ;
+        mtp:hasParticipant   meetup:22c81222e150becb80f3cff31d2f6daa , meetup:117a9f6bad3fbbc9cafc2382aa3139a9 ;
+        mtp:hasPurpose       meetup:8fb6efc9298d6d0a7df52345656ee9e6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Johnny_Dorelli> ;
+        mtp:hasType          "HM" .
+
+meetup:117a9f6bad3fbbc9cafc2382aa3139a9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Johnny_Dorelli> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Johnny Dorelli" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Johnny_Dorelli>
+        rdf:type  core:Person .
+
+meetup:8fb6efc9298d6d0a7df52345656ee9e6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9813968" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018201154" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:36bf12515841d0f89056cfadb07cc386
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9993567" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00063375686" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e50c5d8ee48a77fde0eecc04d65430aa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music as a profession" ;
+        mtp:hasEvidencePurposeSecond  "Pursuit of musical education" ;
+        mtp:hasSourcePurpose          "LLM" .

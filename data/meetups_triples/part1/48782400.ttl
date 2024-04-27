@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/48782400/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has performed at the Royal Albert Hall, Barbican Centre and Royal Festival Hall in London, as well as Bridgewater Hall, Manchester Arena, Symphony Hall, Birmingham and National Indoor Arena." ;
+        mtp:hasParticipant   meetup:3b3f53824f0f4791321e388cfe9c3394 ;
+        mtp:hasPurpose       meetup:abe25f6922894d165faf8d0d3c57061e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Thomas_Gould_(violinist)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/48782400/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Thomas Gould (born 1983) is a British violinist and the leader of Britten Sinfonia, as well as former leader of Aurora Orchestra." ;
+        mtp:hasParticipant   meetup:31ff09a8cbe7a31801f42681a2147231 ;
+        mtp:hasPurpose       meetup:943173170331dbe071d6cd569b203515 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Thomas_Gould_(violinist)> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:31ff09a8cbe7a31801f42681a2147231
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Thomas_Gould_(violinist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8533135500260646" ;
+        mtp:hasTextEvidence     "Thomas Gould" .
+
+<http://dbpedia.org/resource/Thomas_Gould_(violinist)>
+        rdf:type  core:Person .
+
+meetup:943173170331dbe071d6cd569b203515
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9621497" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03784338" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3b3f53824f0f4791321e388cfe9c3394
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Thomas_Gould_(violinist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Thomas Gould" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:abe25f6922894d165faf8d0d3c57061e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999497" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.9660055e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .

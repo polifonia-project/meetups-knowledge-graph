@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Graham_Moore_(writer)>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Alan_Moore>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/40651820/5/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His adapted screenplay for the 2014 film The Imitation Game, based on the biography Alan Turing: The Enigma by Andrew Hodges, topped the 2011 Black List of the best unproduced scripts in Hollywood. The script earned Moore numerous nominations, including the 2014 Golden Globe Award for Best Screenplay, and ultimately won the 2014 Academy Award for Best Adapted Screenplay at the 87th Academy Awards (awarded February 2015)." ;
+        mtp:hasParticipant   meetup:8a98422b528c2bacd83a58fde2534469 ;
+        mtp:hasPurpose       meetup:104d53d5f621d6312a65d6720fb4b35c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Graham_Moore_(writer)> ;
+        mtp:hasType          "HT" .
+
+meetup:8a98422b528c2bacd83a58fde2534469
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alan_Moore> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.9321007036756096" ;
+        mtp:hasTextEvidence     "Moore" .
+
+meetup:104d53d5f621d6312a65d6720fb4b35c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Screenplay adaptation and awards" ;
+        mtp:hasEvidencePurposeSecond  "Academy Awards celebration" ;
+        mtp:hasSourcePurpose          "LLM" .

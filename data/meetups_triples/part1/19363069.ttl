@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ffcab47d395b2775e52b5cf95288f8b6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.46788743" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40730393" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:13f3f7637536bc6a5e77385b5bab31f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Pedersen_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chris Pedersen" .
+
+<http://dbpedia.org/resource/Chris_Pedersen_(musician)>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/19363069/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He currently resides in Australia." ;
+        mtp:hasParticipant   meetup:13f3f7637536bc6a5e77385b5bab31f9 ;
+        mtp:hasPurpose       meetup:ffcab47d395b2775e52b5cf95288f8b6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Pedersen_(musician)> ;
+        mtp:hasType          "HT" .

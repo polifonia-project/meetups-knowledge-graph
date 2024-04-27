@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Al_Pike>
+        rdf:type  core:Person .
+
+meetup:235a540698fb857dee2507bd72db7af2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Al_Pike> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Al Pike" .
+
+<http://w3id.org/polifonia/pilot/meetups/25673785/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Al Pike (born 1961 in New York City, New York, United States) is an American musician, best known as the bassist of the hardcore punk band Reagan Youth, as well as briefly being a member of Samhain." ;
+        mtp:hasParticipant   meetup:235a540698fb857dee2507bd72db7af2 ;
+        mtp:hasPurpose       meetup:d6a348b129cbf85ca5eb30972c275f70 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Al_Pike> ;
+        mtp:hasType          "HT" .
+
+meetup:d6a348b129cbf85ca5eb30972c275f70
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999709" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.4017914e-05" ;
+        mtp:hasSourcePurpose          "ML" .

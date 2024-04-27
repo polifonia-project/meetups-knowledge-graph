@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/63007660/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Met Marco Beltrami became his assistant in 1997, collaborating in the creation of numerous soundtracks, including that of The Hurt Locker for which they received an Oscar nomination for the best soundtrack in 2010." ;
+        mtp:hasParticipant   meetup:a21562398a61357a75b9ff974b97b890 , meetup:4e4d4d90b68792cfadd2890713587fb4 ;
+        mtp:hasPurpose       meetup:2a06be0205adc883bee738ba8b648082 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Buck_Sanders> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Buck_Sanders>
+        rdf:type  core:Person .
+
+meetup:a21562398a61357a75b9ff974b97b890
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marco_Beltrami> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marco Beltrami" .
+
+<http://dbpedia.org/resource/Marco_Beltrami>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:bcf34c67e024e6b755a7dc48fd0632bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Buck_Sanders> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.9999999999749036" ;
+        mtp:hasTextEvidence     "Buck Sanders" .
+
+meetup:2a06be0205adc883bee738ba8b648082
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7304297" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15784113" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:40cc10b745445d87ef22f04d4143236b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8449779" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07252091" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/63007660/1/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Raised in South Carolina, Buck Sanders moved to Los Angeles in 1989 to pursue his career as a musician." ;
+        mtp:hasParticipant   meetup:bcf34c67e024e6b755a7dc48fd0632bd ;
+        mtp:hasPurpose       meetup:40cc10b745445d87ef22f04d4143236b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Buck_Sanders> ;
+        mtp:hasType          "HT" .
+
+meetup:4e4d4d90b68792cfadd2890713587fb4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Buck_Sanders> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Buck Sanders" .

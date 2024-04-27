@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:bfcc61475e09f2dcf5caf69bef083c4c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miles_Jaye> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Miles Jaye" .
+
+meetup:dc4a235f8795b9888ce77eded5136252
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8059399" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18911721" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8186fc893e7a3f2b92d8d5fb03c66d4a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miles_Jaye> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Miles Jaye" .
+
+<http://dbpedia.org/resource/Miles_Jaye>
+        rdf:type  core:Person .
+
+meetup:10a5094bfc315411c02cde8c983f2a20
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998429" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00015021647" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/33322019/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Miles Jaye Davis (born November 12, 1957), known professionally as Miles Jaye, is an American R&B and jazz singer,  jazz violinist, songwriter, and record producer." ;
+        mtp:hasParticipant   meetup:bfcc61475e09f2dcf5caf69bef083c4c ;
+        mtp:hasPurpose       meetup:dc4a235f8795b9888ce77eded5136252 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miles_Jaye> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/33322019/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He had several hits on the US R&B chart in the late 1980s and early 1990s, the biggest of which was \"Let's Start Love Over\" in 1987." ;
+        mtp:hasParticipant   meetup:8186fc893e7a3f2b92d8d5fb03c66d4a ;
+        mtp:hasPurpose       meetup:10a5094bfc315411c02cde8c983f2a20 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Miles_Jaye> ;
+        mtp:hasType          "HT" .

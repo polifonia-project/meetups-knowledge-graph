@@ -1,0 +1,85 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Sonny_Burke>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/18461050/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1968 Norman and Garth Watt-Roy formed a nine-piece soul band and toured U.S. military bases in Germany, backing American soul singers such as Sonny Burke and played a summer residency at the Maddocks Club in Spain." ;
+        mtp:hasParticipant   meetup:f0316fceec28711b205325528fbe9f3b , meetup:ba3be0562c0191aa99bfdf48c1f89c0f , meetup:bff8c8c59cac1030f98200eb7a778fe0 ;
+        mtp:hasPurpose       meetup:1a87d0baa191774656c5b5f72a3910cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Norman_Watt-Roy> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Norman_Watt-Roy>
+        rdf:type  core:Person .
+
+meetup:bff8c8c59cac1030f98200eb7a778fe0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Garth Watt-Roy" .
+
+meetup:f0316fceec28711b205325528fbe9f3b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sonny_Burke> ;
+        mtp:hasOffset           "145" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sonny Burke" .
+
+meetup:1a87d0baa191774656c5b5f72a3910cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Formation of a soul band" ;
+        mtp:hasEvidencePurposeSecond  "Touring and residency" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ba3be0562c0191aa99bfdf48c1f89c0f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Norman_Watt-Roy> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Norman Watt-Roy" .
+
+meetup:cb30607b5ae43447f0b3dfbf8e023908
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5395274" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.34407502" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c7e6c73bb6e72d85dadb699a77602bad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Norman_Watt-Roy> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Norman Watt-Roy" .
+
+<http://w3id.org/polifonia/pilot/meetups/18461050/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In early 1967, Norman Watt-Roy formed the band the Living Daylights with his brother Garth and released a single on the Philips label titled \"Let's Live for Today\" (April 1967) and did regular gigs in venues such as the Angel Blues Rooms in Edmonton, London." ;
+        mtp:hasParticipant   meetup:c7e6c73bb6e72d85dadb699a77602bad ;
+        mtp:hasPurpose       meetup:cb30607b5ae43447f0b3dfbf8e023908 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Norman_Watt-Roy> ;
+        mtp:hasType          "HT" .

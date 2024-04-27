@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:7de025acfd56cf8a4a85617b9d948713
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Music label and album release" ;
+        mtp:hasEvidencePurposeSecond  "Frequent gigs and event organizing" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:2d9fa42dc2fbe45740bddc14d8a4b952
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.68590677" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29681385" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2995169/7/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leicester label Sorted Records released the Helpline album in 1999. He continues to perform frequent gigs within the city, both as performer and/or event organiser." ;
+        mtp:hasPurpose       meetup:7de025acfd56cf8a4a85617b9d948713 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Hewick> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2995169/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kevin Hewick (born 4 February 1957) is an English singer-songwriter who was an early member of the Factory Records roster." ;
+        mtp:hasParticipant   meetup:837f7e609d1bdeba01c0d48477676bae ;
+        mtp:hasPurpose       meetup:f8f762f20e69bf706e129b82b42e439a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Hewick> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:377f40b1a33329bf0e65f984f05ada75
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Hewick> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kevin Hewick" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f8f762f20e69bf706e129b82b42e439a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9885068" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0111436965" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2995169/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Today he is known for his recordings on Sorted, Pink Box and his own Botheration label, and his recent work with Venetian collective Unfolk." ;
+        mtp:hasParticipant   meetup:377f40b1a33329bf0e65f984f05ada75 ;
+        mtp:hasPurpose       meetup:2d9fa42dc2fbe45740bddc14d8a4b952 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Hewick> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Kevin_Hewick>
+        rdf:type  core:Person .
+
+meetup:837f7e609d1bdeba01c0d48477676bae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Hewick> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kevin Hewick" .

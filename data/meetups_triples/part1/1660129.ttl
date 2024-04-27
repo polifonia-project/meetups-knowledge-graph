@@ -1,0 +1,99 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:92d639a1628627dae70502429c836e10
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Helen_Miller> ;
+        mtp:hasOffset           "226" ;
+        mtp:hasSimilarityScore  "0.9997274580100526" ;
+        mtp:hasTextEvidence     "Helen Miller" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:be576e796304ec01ddf45c3288e32b30
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Howard_Greenfield> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Howard Greenfield" .
+
+<http://dbpedia.org/resource/Helen_Miller>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1660129/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Howard Greenfield (March 15, 1936 – March 4, 1986) was an American lyricist and songwriter, who for several years in the 1960s worked out of the famous Brill Building." ;
+        mtp:hasParticipant   meetup:be576e796304ec01ddf45c3288e32b30 ;
+        mtp:hasPurpose       meetup:1513263f42406a4c111aa25d8cd211bd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Howard_Greenfield> ;
+        mtp:hasType          "HT" .
+
+meetup:2f123986c257fa8270b8b5a52c1975e9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Keller_(songwriter)> ;
+        mtp:hasOffset           "210" ;
+        mtp:hasSimilarityScore  "0.912060381534275" ;
+        mtp:hasTextEvidence     "Jack Keller" .
+
+<http://dbpedia.org/resource/Jack_Keller_(songwriter)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Howard_Greenfield>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:ef463ddae695e722558f611c375cc825
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Neil_Sedaka> ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Neil Sedaka" .
+
+meetup:5920f39e6d5c4f70b2b33bb86ee9af37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Howard_Greenfield> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Howard Greenfield" .
+
+<http://w3id.org/polifonia/pilot/meetups/1660129/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known for his successful songwriting collaborations, including one with Neil Sedaka from the late 1950s to the mid-1970s, and near-simultaneous (and equally successful) songwriting partnerships with Jack Keller and Helen Miller throughout most of the 1960s." ;
+        mtp:hasParticipant   meetup:ef463ddae695e722558f611c375cc825 , meetup:92d639a1628627dae70502429c836e10 , meetup:5920f39e6d5c4f70b2b33bb86ee9af37 , meetup:2f123986c257fa8270b8b5a52c1975e9 ;
+        mtp:hasPurpose       meetup:f37e5bb71550ee4aae2377675aa4fab5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Howard_Greenfield> ;
+        mtp:hasType          "HM" .
+
+meetup:1513263f42406a4c111aa25d8cd211bd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9190578" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.080868036" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Neil_Sedaka>
+        rdf:type  core:Person .
+
+meetup:f37e5bb71550ee4aae2377675aa4fab5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8676425" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13204435" ;
+        mtp:hasSourcePurpose          "ML" .

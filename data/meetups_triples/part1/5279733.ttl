@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Kliph_Scurlock>
+        rdf:type  core:Person .
+
+meetup:be93f7521d085a79c7f2c5c64dea1b33
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions a band called Pink Pony." ;
+        mtp:hasEvidencePurposeSecond  "The sentence discusses negative comments and personal criticism." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/5279733/7/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In May, Scurlock said that he had been fired for negative comments about Wayne Coyne's friend Christina Fallin, the daughter of Oklahoma's governor and leader of a band called Pink Pony. Fallin had recently been criticized for cultural appropriation after she wore a Native American headdress in a publicity photo." ;
+        mtp:hasPurpose       meetup:be93f7521d085a79c7f2c5c64dea1b33 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kliph_Scurlock> ;
+        mtp:hasType          "HT" .

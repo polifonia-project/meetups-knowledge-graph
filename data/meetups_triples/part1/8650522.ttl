@@ -1,0 +1,82 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Damon_Johnson>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lyndon_B._Johnson>
+        rdf:type  core:Person .
+
+meetup:f4e17a187e1c6081966f81d641c25352
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lyndon_B._Johnson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johnson" .
+
+meetup:cf5603e7c477b519c4d64ae045b5fa1e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence discusses the release of an album and the songs featured." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the artist's career paths." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:59c6ffd7a4338a9f676e1c75b1dab763
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Raskulinecz" .
+
+<http://w3id.org/polifonia/pilot/meetups/8650522/14/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Star Riders' third album, Heavy Fire, was released on February 3, 2017, and was followed by tours of the UK and Europe, with further touring in the US during March and April 2018, alongside Judas Priest and Saxon. Heavy Fire reached № 6 in the UK album charts." ;
+        mtp:hasPurpose       meetup:d724e6176b6d15becc81cac1a1be0625 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damon_Johnson> ;
+        mtp:hasType          "HT" .
+
+meetup:ac17ad3c5db8a42ec706a64e125a20a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Damon_Johnson> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Damon Johnson" .
+
+meetup:d724e6176b6d15becc81cac1a1be0625
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Album release and touring" ;
+        mtp:hasEvidencePurposeSecond  "Chart success" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/8650522/19/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The album was released on September 22, 2017, and features songs from many of Johnson's projects so far. He said, \"One of my friends described it as a musical anthology for the different paths my career has taken; that is a fairly accurate assessment." ;
+        mtp:hasParticipant   meetup:f4e17a187e1c6081966f81d641c25352 ;
+        mtp:hasPurpose       meetup:cf5603e7c477b519c4d64ae045b5fa1e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damon_Johnson> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/8650522/22/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Titled Battle Lessons, the album was released under the name of Damon Johnson & The Get Ready." ;
+        mtp:hasParticipant   meetup:ac17ad3c5db8a42ec706a64e125a20a7 , meetup:59c6ffd7a4338a9f676e1c75b1dab763 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damon_Johnson> ;
+        mtp:hasType          "HM" .

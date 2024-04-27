@@ -1,0 +1,95 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Glen_%22Archie%22_Gamble>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18851974/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has played with some classic rock bands, both as a side-man and in an opening capacity:  Kiss, Alice Cooper, Vince Neil, Paul Rodgers, Robert Plant, as well as some younger bands: Sum 41, KAOS, The Trews, Finger 11 and more." ;
+        mtp:hasParticipant   meetup:c16ad3ddd92c6b64f3b8ddcd3738c191 , meetup:29c9ecdf616d6c26e013399a45b20e58 , meetup:de8387ad960b6b2137f686772aa2a1e6 , meetup:752a5d8b3a6bdafce90d9e58bb9b7de4 , meetup:42c3201023d90913c004ddd0fa7e7c57 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Glen_%22Archie%22_Gamble> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Paul_Rodgers>
+        rdf:type  core:Person .
+
+meetup:752a5d8b3a6bdafce90d9e58bb9b7de4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Glen_%22Archie%22_Gamble> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Glen \"Archie\" Gamble" .
+
+<http://dbpedia.org/resource/Vince_Neil>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Robert_Plant>
+        rdf:type  core:Person .
+
+meetup:42c3201023d90913c004ddd0fa7e7c57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vince_Neil> ;
+        mtp:hasOffset           "112" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Vince Neil" .
+
+<http://dbpedia.org/resource/Alice_Cooper>
+        rdf:type  core:Person .
+
+meetup:a85096c3836a2257846a9d307a3f1f35
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97745115" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.017584542" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:de8387ad960b6b2137f686772aa2a1e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Rodgers> ;
+        mtp:hasOffset           "124" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Paul Rodgers" .
+
+meetup:a3edd7155ac1b8edbdb267db8bf36bf2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Glen_%22Archie%22_Gamble> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Glen \"Archie\" Gamble" .
+
+<http://w3id.org/polifonia/pilot/meetups/18851974/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Glen \"Archie\" Gamble is a drummer from London, Ontario, Canada and is best known for his tenure in Helix." ;
+        mtp:hasParticipant   meetup:a3edd7155ac1b8edbdb267db8bf36bf2 ;
+        mtp:hasPurpose       meetup:a85096c3836a2257846a9d307a3f1f35 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Glen_%22Archie%22_Gamble> ;
+        mtp:hasType          "HT" .
+
+meetup:29c9ecdf616d6c26e013399a45b20e58
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Plant> ;
+        mtp:hasOffset           "138" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Robert Plant" .
+
+meetup:c16ad3ddd92c6b64f3b8ddcd3738c191
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alice_Cooper> ;
+        mtp:hasOffset           "98" ;
+        mtp:hasSimilarityScore  "0.9999978150124772" ;
+        mtp:hasTextEvidence     "Alice Cooper" .

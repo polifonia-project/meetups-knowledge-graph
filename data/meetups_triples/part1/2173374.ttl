@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2173374/6/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "BT Express released an album per year through 1978." ;
+        mtp:hasParticipant   meetup:70c561351c16d809bffb0f02e2d59767 ;
+        mtp:hasPurpose       meetup:80698030e0978fc1f65c1caa55828c5b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/B._T._Express> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/B._T._Express>
+        rdf:type  core:Person .
+
+meetup:70c561351c16d809bffb0f02e2d59767
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/B._T._Express> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999992468" ;
+        mtp:hasTextEvidence     "BT Express" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:80698030e0978fc1f65c1caa55828c5b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.46275944" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3412494" ;
+        mtp:hasSourcePurpose          "ML" .

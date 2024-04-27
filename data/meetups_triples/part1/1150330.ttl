@@ -1,0 +1,110 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1150330/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He then ran a night club, the Scene, off Great Windmill Street in Soho, London, where in 1963 the Rolling Stones played, amongst others including Zoot Money and Chris Farlowe. He became the manager of musicians, such as Alexis Korner and Georgie Fame, and helped to persuade the Animals to move to London." ;
+        mtp:hasParticipant   meetup:e29d289360cf30709736470f1be4a113 , meetup:64b08a838c30971bd42283284545aee4 ;
+        mtp:hasPurpose       meetup:0f9dc27b3efcff7458c4aab1ecc2b988 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ronan_O'Rahilly> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1150330/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aodogán Ronan O'Rahilly (21 May 1940 – 20 April 2020) was an Irish businessman best known for the creation of the offshore radio station, Radio Caroline." ;
+        mtp:hasParticipant   meetup:dc320c3fb0064883cedf0ded2ebd4d1d , meetup:549b07c0fd16b829b7d12c29474443f2 ;
+        mtp:hasPurpose       meetup:6e95cb185959e118389f3d2d72cdee4f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ronan_O'Rahilly> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Ronan_O'Rahilly>
+        rdf:type  core:Person .
+
+meetup:64b08a838c30971bd42283284545aee4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alexis_Korner> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alexis Korner" .
+
+meetup:0f9dc27b3efcff7458c4aab1ecc2b988
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music industry" ;
+        mtp:hasEvidencePurposeSecond  "Managing musicians and facilitating collaborations" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Alexis_Korner>
+        rdf:type  core:Person .
+
+meetup:84921684302298b18b643ca04b969ab8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ronan_O'Rahilly> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ronan O'Rahilly" .
+
+meetup:e29d289360cf30709736470f1be4a113
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Georgie_Fame> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Georgie Fame" .
+
+meetup:12f5a74b5b1febbcb73d4be1d86b9c1d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Lazenby> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.999999999999929" ;
+        mtp:hasTextEvidence     "George Lazenby" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6e95cb185959e118389f3d2d72cdee4f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.89949155" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.078952685" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:549b07c0fd16b829b7d12c29474443f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Aodogán Ronan O'Rahilly" .
+
+meetup:dc320c3fb0064883cedf0ded2ebd4d1d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ronan_O'Rahilly> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ronan O'Rahilly" .
+
+<http://dbpedia.org/resource/Georgie_Fame>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/George_Lazenby>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/1150330/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also became manager of George Lazenby, who played James Bond in one film." ;
+        mtp:hasParticipant   meetup:12f5a74b5b1febbcb73d4be1d86b9c1d , meetup:84921684302298b18b643ca04b969ab8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ronan_O'Rahilly> ;
+        mtp:hasType          "HM" .

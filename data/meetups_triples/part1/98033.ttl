@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:418acb5d5464d3011edc97a1a5bd2f32
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Mansfield> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.99999999998343" ;
+        mtp:hasTextEvidence     "David Mansfield" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/David_Mansfield>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/98033/3/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also composed the music for the soundtrack to The Ballad of Little Jo (1993), a movie written and directed by Maggie Greenwald, whom he married in 1993. Together they adopted two children." ;
+        mtp:hasPurpose       meetup:889ddab03dab399fcfcf9ec0ec7ea0ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Mansfield> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/98033/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "David Mansfield (born September 13, 1956) is an American musician and composer." ;
+        mtp:hasParticipant   meetup:418acb5d5464d3011edc97a1a5bd2f32 ;
+        mtp:hasPurpose       meetup:6cdbf754b6a77f463577f95c680bc121 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Mansfield> ;
+        mtp:hasType          "HT" .
+
+meetup:6cdbf754b6a77f463577f95c680bc121
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9695016" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.030492116" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:889ddab03dab399fcfcf9ec0ec7ea0ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Composing music for a movie" ;
+        mtp:hasEvidencePurposeSecond  "Marriage and adoption" ;
+        mtp:hasSourcePurpose          "LLM" .

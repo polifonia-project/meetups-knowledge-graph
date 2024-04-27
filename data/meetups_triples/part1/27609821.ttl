@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Kris_Lawrence>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/27609821/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kristoffer Lawrence Cadevida (born on September 1, 1985), better known as simply Kris Lawrence, is a Filipino-American singer-songwriter of dual American and Filipino citizenship." ;
+        mtp:hasParticipant   meetup:4c8b1d89ec3ab392d78f8053b8eabde0 , meetup:b9178f43073338221723fc21454e68a6 ;
+        mtp:hasPurpose       meetup:3a49013fa812c536d9e9be959ad1f226 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kris_Lawrence> ;
+        mtp:hasType          "HM" .
+
+meetup:4c8b1d89ec3ab392d78f8053b8eabde0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kris_Lawrence> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kris Lawrence" .
+
+meetup:3a49013fa812c536d9e9be959ad1f226
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9906598" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0082335295" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b9178f43073338221723fc21454e68a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kristoffer Lawrence Cadevida" .

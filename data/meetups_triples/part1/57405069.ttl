@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/57405069/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "McMahon was previously a member of short-lived NYC group Inouk. Originally formed in Philadelphia, Inouk was made up of McMahon on guitar and vocals, his brother, Alexander McMahon on guitar, keyboard, and vocals, Ian Fenger on lead guitar, Jesse Johnson on bass and vocals, and Glen Brasile on drums." ;
+        mtp:hasParticipant   meetup:55602b6c02a322e730cc1910c82a3383 , meetup:27ad49bcac4c4dcce7c0c64bd76d9249 ;
+        mtp:hasPurpose       meetup:cf34786d0950ff04d4a493c9a0c4b223 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damon_McMahon> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Charles_Paul_Alexander>
+        rdf:type  core:Person .
+
+meetup:55602b6c02a322e730cc1910c82a3383
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_Paul_Alexander> ;
+        mtp:hasOffset           "99" ;
+        mtp:hasSimilarityScore  "0.8554402799397794" ;
+        mtp:hasTextEvidence     "Alexander" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ac8f34e261b652eebf934327759b9660
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Damon_McMahon> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Damon McMahon" .
+
+<http://w3id.org/polifonia/pilot/meetups/57405069/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Originally from Philadelphia, he is currently based in Los Angeles." ;
+        mtp:hasParticipant   meetup:ac8f34e261b652eebf934327759b9660 ;
+        mtp:hasPurpose       meetup:ae5d2b0ac005976968a49c3831d3c66e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damon_McMahon> ;
+        mtp:hasType          "HT" .
+
+meetup:ae5d2b0ac005976968a49c3831d3c66e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8064216" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.085508995" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:27ad49bcac4c4dcce7c0c64bd76d9249
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "86" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "McMahon" .
+
+<http://dbpedia.org/resource/Damon_McMahon>
+        rdf:type  core:Person .
+
+meetup:cf34786d0950ff04d4a493c9a0c4b223
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Inouk was a NYC music group" ;
+        mtp:hasEvidencePurposeSecond  "McMahon's involvement with Inouk" ;
+        mtp:hasSourcePurpose          "LLM" .

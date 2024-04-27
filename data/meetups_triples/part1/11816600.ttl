@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:4a689a7ee04980cc60b1494d0d8d6c6f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Meeting between Doncaster and the club" ;
+        mtp:hasEvidencePurposeSecond  "Unfortunate coincidence leading to eviction" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Giorgio_Gomelsky>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/11816600/17/22>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Doncaster was persuaded to, in turn, visit the club, and a half-page feature duly appeared in the next day's Mirror. The powers that be at Ind Coope Breweries, owners of the Station Hotel, were aghast at the degenerate behaviour displayed in the article and the club was evicted forthwith." ;
+        mtp:hasPurpose       meetup:4a689a7ee04980cc60b1494d0d8d6c6f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Giorgio_Gomelsky> ;
+        mtp:hasType          "HT" .

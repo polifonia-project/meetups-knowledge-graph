@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b24428955faa44d9066c89e46181a10f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kirill_Pokrovsky> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kirill Pokrovsky" .
+
+meetup:d5ccfc44688fb7a7e008a8f89410af31
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kirill_Pokrovsky> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kirill Pokrovsky" .
+
+meetup:10fcf2e06ecae8b0105bfc1d13843562
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.996931" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0019885134" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8d637d1f4062cc5357d74bcf8d1313a3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999939" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.1356396e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/41157059/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Between 1985 and 1989, Pokrovsky played as a keyboardist for Soviet heavy metal music bands Aria and Master." ;
+        mtp:hasParticipant   meetup:d5ccfc44688fb7a7e008a8f89410af31 ;
+        mtp:hasPurpose       meetup:8d637d1f4062cc5357d74bcf8d1313a3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kirill_Pokrovsky> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Kirill_Pokrovsky>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/41157059/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Later he moved to Belgium and wrote his first solo album called BRUGGE." ;
+        mtp:hasParticipant   meetup:b24428955faa44d9066c89e46181a10f ;
+        mtp:hasPurpose       meetup:10fcf2e06ecae8b0105bfc1d13843562 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kirill_Pokrovsky> ;
+        mtp:hasType          "HT" .

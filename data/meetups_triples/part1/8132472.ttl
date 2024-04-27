@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:8ab3ace680fa72ee4ffafc970c01a7d1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rik_Waller> ;
+        mtp:hasOffset           "175" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rik Waller" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Rik_Waller>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8132472/9/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 28 February 2007, Waller appeared on Never Mind the Buzzcocks in the Identity Parade Round and briefly replaced captain Phill Jupitus when it became clear who was the real Rik Waller." ;
+        mtp:hasParticipant   meetup:8ab3ace680fa72ee4ffafc970c01a7d1 , meetup:1b4ef8eb5fc7e99bf91bdcefc2633827 ;
+        mtp:hasPurpose       meetup:cad2bb3a7afb9c5a92b02ce0db00dd6a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rik_Waller> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Phill_Jupitus>
+        rdf:type  core:Person .
+
+meetup:cad2bb3a7afb9c5a92b02ce0db00dd6a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999806" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0001922904" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1b4ef8eb5fc7e99bf91bdcefc2633827
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phill_Jupitus> ;
+        mtp:hasOffset           "123" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Phill Jupitus" .

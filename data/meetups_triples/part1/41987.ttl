@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/41987/20/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It went to no. 1 in Belgium and France, where it held the top position for ten weeks, selling over 500,000 units. The success of the single was considered to be Tyler's comeback in France, and received overwhelmingly positive reviews from music critics." ;
+        mtp:hasPurpose       meetup:1d2f10a29ef60ebd0aadd2c72393e915 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bonnie_Tyler> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1d2f10a29ef60ebd0aadd2c72393e915
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Tyler's successful single" ;
+        mtp:hasEvidencePurposeSecond  "Positive reviews and comeback" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:6d530d4b8018f6a3a16c3561f0ccca2a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bonnie_Tyler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bonnie Tyler" .
+
+meetup:285b06771458978ec389054180c09737
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.42161965" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.37546286" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/41987/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her 1978 single \"It's a Heartache\" reached number four on the UK Singles Chart, and number three on the US Billboard Hot 100." ;
+        mtp:hasParticipant   meetup:6d530d4b8018f6a3a16c3561f0ccca2a ;
+        mtp:hasPurpose       meetup:285b06771458978ec389054180c09737 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bonnie_Tyler> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bonnie_Tyler>
+        rdf:type  core:Person .
+
+meetup:4ec2451c555c2ce44960293d6a20da14
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bonnie_Tyler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999911863712" ;
+        mtp:hasTextEvidence     "Bonnie Tyler" .
+
+meetup:25ab4ca04c367ca3caed95cf5538feb8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97183007" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.023598867" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/41987/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bonnie Tyler (born Gaynor Hopkins, 8 June 1951) is a Welsh singer who is known for her distinctive husky voice." ;
+        mtp:hasParticipant   meetup:4ec2451c555c2ce44960293d6a20da14 ;
+        mtp:hasPurpose       meetup:25ab4ca04c367ca3caed95cf5538feb8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bonnie_Tyler> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .

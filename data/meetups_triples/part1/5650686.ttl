@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5637fdc7753ad28b9604f39c3c3d5d62
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_McBain_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John McBain" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/5650686/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John McBain (born April 23, 1965) is an American musician, producer, and mastering engineer from New Jersey." ;
+        mtp:hasParticipant   meetup:5637fdc7753ad28b9604f39c3c3d5d62 ;
+        mtp:hasPurpose       meetup:2d49e77ba02c94d3e8ccf09eca03a45a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_McBain_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:2d49e77ba02c94d3e8ccf09eca03a45a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95119166" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.044142216" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/John_McBain_(musician)>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .

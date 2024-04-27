@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/3675524/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1962, along with band-mate Alvin Lee, his band The Jaybirds performed at The Star Club in Hamburg, Germany. Lyons was also hired to play in the club's house band, along with Tony Sheridan." ;
+        mtp:hasPurpose       meetup:f0eee42a0ed7e800239cc291647b9659 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leo_Lyons> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/3675524/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Revered for decades in the music business as one of the most consistent and successful performers and producers, Leo Lyons, born in Mansfield, Nottinghamshire in November 1943, became a professional musician at the age of 16." ;
+        mtp:hasParticipant   meetup:eaa28739ded74689345ca6e230b3ad53 ;
+        mtp:hasPurpose       meetup:9cadf55eb5cbe264cdb56c3d8d997764 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leo_Lyons> ;
+        mtp:hasType          "HT" .
+
+meetup:f0eee42a0ed7e800239cc291647b9659
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Performing at The Star Club" ;
+        mtp:hasEvidencePurposeSecond  "Hired to play in the club's house band" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9cadf55eb5cbe264cdb56c3d8d997764
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Leo Lyons' career in music" ;
+        mtp:hasEvidencePurposeSecond  "Leo Lyons' success in the music business" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:eaa28739ded74689345ca6e230b3ad53
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leo_Lyons> ;
+        mtp:hasOffset           "113" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Leo Lyons" .
+
+<http://dbpedia.org/resource/Leo_Lyons>
+        rdf:type  core:Person .

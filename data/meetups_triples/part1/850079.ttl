@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:8bb792891eebbc25d82ded1fb7475dc6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999523" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.758273e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/850079/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "George Hurley (born September 4, 1958) is a drummer noted for his work with Minutemen and fIREHOSE." ;
+        mtp:hasParticipant   meetup:6a74a84848ce23336ab15dc6b5644f3b ;
+        mtp:hasPurpose       meetup:15c0391a34d61cbd60212ed2ed0a4312 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Hurley> ;
+        mtp:hasType          "HT" .
+
+meetup:b8159a2087dbbf7f15e0ec8377e4689d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Watt> ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mike Watt" .
+
+meetup:4e9e68519243727511d3543259b12212
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Hurley> ;
+        mtp:hasOffset           "206" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "George Hurley" .
+
+<http://dbpedia.org/resource/Mike_Watt>
+        rdf:type  core:Person .
+
+meetup:6a74a84848ce23336ab15dc6b5644f3b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Hurley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "George Hurley" .
+
+meetup:15c0391a34d61cbd60212ed2ed0a4312
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.86072695" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13834171" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/850079/11/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also plays with his surviving Minutemen cohort Mike Watt on occasion, usually performing a set of Minutemen songs without a third person substituting for the late Minutemen leader D. Boon under the name George Hurley and Mike Watt." ;
+        mtp:hasParticipant   meetup:4e9e68519243727511d3543259b12212 , meetup:b8159a2087dbbf7f15e0ec8377e4689d ;
+        mtp:hasPurpose       meetup:8bb792891eebbc25d82ded1fb7475dc6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/George_Hurley> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/George_Hurley>
+        rdf:type  core:Person .

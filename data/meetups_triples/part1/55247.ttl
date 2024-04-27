@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/55247/14/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Phillips lived in Nevada City, California, for 21 years where he worked on the start-up of the Hospitality House, a homeless shelter, and the Peace and Justice Center. \"It's my town." ;
+        mtp:hasPurpose       meetup:8291b80a2cc841e1f883cc9d3f4e9f6a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Utah_Phillips> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:8291b80a2cc841e1f883cc9d3f4e9f6a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Phillips' involvement in community organizations" ;
+        mtp:hasEvidencePurposeSecond  "Celebration of community achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Utah_Phillips>
+        rdf:type  core:Person .

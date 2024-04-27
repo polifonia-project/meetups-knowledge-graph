@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:a4b20b7e0901208a31a530b91265cd3a
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "September 2010" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2010-09-01"^^xsd:date ;
+        time:hasEnd          "2010-09-30"^^xsd:date .
+
+meetup:0ae4974b1a0d2d5d200b2076b3e0d0e5
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "29 December 1963" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1963-12-29"^^xsd:date ;
+        time:hasEnd          "1963-12-29"^^xsd:date .
+
+meetup:b619a72f81eada9701ddbdcc295f86fe
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2013" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2013-01-01"^^xsd:date ;
+        time:hasEnd          "2013-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/243553/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:0ae4974b1a0d2d5d200b2076b3e0d0e5 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Dave_McKean> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/243553/22/3>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:a4b20b7e0901208a31a530b91265cd3a , meetup:6220eb5c58bf3e80a994c0d3d7bcbc0b , meetup:b619a72f81eada9701ddbdcc295f86fe ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Dave_McKean> ;
+        mtp:hasType     "HT" .
+
+meetup:6220eb5c58bf3e80a994c0d3d7bcbc0b
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "April 2008" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2008-04-01"^^xsd:date ;
+        time:hasEnd          "2008-04-30"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://dbpedia.org/resource/Dave_McKean>
+        rdf:type  core:Person .

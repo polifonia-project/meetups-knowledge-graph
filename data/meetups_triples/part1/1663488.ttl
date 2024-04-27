@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:3f2facff97625db35ece0ac79f2f6e9c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Damien_Jurado> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Damien Jurado" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5ffb0be7e1d2c9ab808390a2326cda34
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Damien_Jurado> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Damien Jurado" .
+
+<http://w3id.org/polifonia/pilot/meetups/1663488/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Damien Jurado is an American singer-songwriter from Seattle, Washington, United States." ;
+        mtp:hasParticipant   meetup:5ffb0be7e1d2c9ab808390a2326cda34 ;
+        mtp:hasPurpose       meetup:0ffe6d0a6d80af2912db5bf63b3eb0c0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damien_Jurado> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Damien_Jurado>
+        rdf:type  core:Person .
+
+meetup:0ffe6d0a6d80af2912db5bf63b3eb0c0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87869924" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05514937" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:260669682918fbc7c36c3b54fdf1ace3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5194904" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.48040563" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1663488/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Over the years, he has released albums on Sub Pop, Secretly Canadian, Loose, and is currently on his own label Maraqopa Records." ;
+        mtp:hasParticipant   meetup:d4ad9b87118e066ab566fb21030c451b ;
+        mtp:hasPurpose       meetup:260669682918fbc7c36c3b54fdf1ace3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damien_Jurado> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1663488/5/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2016 Damien Jurado released the acclaimed The Horizon Just Laughed, his first self produced album, teaming up with L.A. recording studio Sonikwire." ;
+        mtp:hasParticipant   meetup:3f2facff97625db35ece0ac79f2f6e9c ;
+        mtp:hasPurpose       meetup:258a7748726a7a2faeaf7df621dd6872 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Damien_Jurado> ;
+        mtp:hasType          "HT" .
+
+meetup:d4ad9b87118e066ab566fb21030c451b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Damien_Jurado> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Damien Jurado" .
+
+meetup:258a7748726a7a2faeaf7df621dd6872
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.45603532" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.42110384" ;
+        mtp:hasSourcePurpose          "ML" .

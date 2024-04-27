@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a0cf6e11670d7aa300c9afa064c6a0be
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sonny_Phillips> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sonny Phillips" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f5ac3a8fa9204de670e2462f5bb8b75b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sonny_Phillips> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Sonny Phillips" .
+
+<http://dbpedia.org/resource/Sonny_Phillips>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/16811715/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sonny Phillips (born December 7, 1936) is an American jazz keyboardist." ;
+        mtp:hasParticipant   meetup:f5ac3a8fa9204de670e2462f5bb8b75b ;
+        mtp:hasPurpose       meetup:342b7e0613cf3c10520141bb21dcf76d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sonny_Phillips> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/16811715/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Legends Of Acid Jazz: Sonny Phillips (Prestige, 1997) (compilation of Sure 'Nuff + Black On Black!)" ;
+        mtp:hasParticipant   meetup:a0cf6e11670d7aa300c9afa064c6a0be ;
+        mtp:hasPurpose       meetup:470edf7816f62a6af12ec8ded85a2e1b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sonny_Phillips> ;
+        mtp:hasType          "HT" .
+
+meetup:470edf7816f62a6af12ec8ded85a2e1b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9769052" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013516177" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:342b7e0613cf3c10520141bb21dcf76d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9577408" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018218491" ;
+        mtp:hasSourcePurpose          "ML" .

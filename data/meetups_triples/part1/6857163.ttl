@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/6857163/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her principal violin studies were at the Royal Conservatory in The Hague." ;
+        mtp:hasParticipant   meetup:4afa6cbc5300f7aa872b16816a319665 ;
+        mtp:hasPurpose       meetup:db4446aa6bc7c0d3cfcc164f60665935 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucy_van_Dael> ;
+        mtp:hasType          "HT" .
+
+meetup:4afa6cbc5300f7aa872b16816a319665
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lucy_van_Dael> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lucy van Dael" .
+
+meetup:6b72bb2d8b596d73a95a623c658aa4c0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lucy_van_Dael> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lucy van Dael" .
+
+meetup:d3ab06290a149efbe4985a4c89734d23
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8611473" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0727021" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/6857163/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lucy van Dael (born in 1946) is a Dutch baroque violinist and member of the faculty of the Amsterdam Conservatory." ;
+        mtp:hasParticipant   meetup:6b72bb2d8b596d73a95a623c658aa4c0 ;
+        mtp:hasPurpose       meetup:d3ab06290a149efbe4985a4c89734d23 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucy_van_Dael> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lucy_van_Dael>
+        rdf:type  core:Person .
+
+meetup:db4446aa6bc7c0d3cfcc164f60665935
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.69495326" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.30503163" ;
+        mtp:hasSourcePurpose          "ML" .

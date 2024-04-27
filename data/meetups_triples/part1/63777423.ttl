@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Surf_Mesa>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:edc60ced6e2ad89c295aba89ab18e25e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Surf Mesa is an electronic musician" ;
+        mtp:hasEvidencePurposeSecond  "Surf Mesa is from Seattle" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Mark_Aguirre>
+        rdf:type  core:Person .
+
+meetup:854ed6b03a364bb781d0c98a39c6b95e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Aguirre> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.998869083783928" ;
+        mtp:hasTextEvidence     "Aguirre" .
+
+meetup:be29f41625048c9f3cbe5b0d53a1f4f5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions the success of a song and a remix." ;
+        mtp:hasEvidencePurposeSecond  "The sentence implies the popularity of the song and remix." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:49ffd1debcf62251e1a0cbb5a08d9a7e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Surf_Mesa> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "0.9999999999974704" ;
+        mtp:hasTextEvidence     "Surf Mesa" .
+
+<http://dbpedia.org/resource/Marshmello>
+        rdf:type  core:Person .
+
+meetup:b5933b949cba96b33c9a3dd399be19ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marshmello> ;
+        mtp:hasOffset           "82" ;
+        mtp:hasSimilarityScore  "0.9999997874783956" ;
+        mtp:hasTextEvidence     "Marshmello" .
+
+<http://w3id.org/polifonia/pilot/meetups/63777423/2/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By June 2020, the song had become an international hit, reaching the top 10 in Austria, Germany, Switzerland, Scotland, the Netherlands, Malaysia and Singapore, and the top 5 of the Billboard Hot Dance/Electronic Songs chart. In June 2020, Aguirre released an official remix for American electronic musician Marshmello and American singer Halsey's \"Be Kind\"." ;
+        mtp:hasParticipant   meetup:b5933b949cba96b33c9a3dd399be19ff ;
+        mtp:hasPurpose       meetup:be29f41625048c9f3cbe5b0d53a1f4f5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Surf_Mesa> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/63777423/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Powell Aguirre (born April 10, 2000), known by the stage name Surf Mesa, is an American electronic musician from Seattle." ;
+        mtp:hasParticipant   meetup:49ffd1debcf62251e1a0cbb5a08d9a7e , meetup:854ed6b03a364bb781d0c98a39c6b95e ;
+        mtp:hasPurpose       meetup:edc60ced6e2ad89c295aba89ab18e25e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Surf_Mesa> ;
+        mtp:hasType          "HM" .

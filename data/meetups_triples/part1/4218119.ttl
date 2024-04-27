@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:8f1e6cd27586eccd4d3a0bf2261dd3d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tom_Cora> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "0.809432239962461" ;
+        mtp:hasTextEvidence     "Cora" .
+
+meetup:2cca6c58c24f6440558ff0954cb75987
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Details about a funeral" ;
+        mtp:hasEvidencePurposeSecond  "Funeral ceremony and burial" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:811a29c82ec2b97a9b3df76302dcf42c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marie_McDonald> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marie McDonald" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Marie_McDonald>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4218119/13/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "McDonald's funeral was held on October 23 at the Church of the Recessional at Forest Lawn Memorial Park, Glendale in Glendale, California. Her remains were interred in the Freedom Mausoleum at Forest Lawn Memorial Park, Glendale." ;
+        mtp:hasPurpose       meetup:2cca6c58c24f6440558ff0954cb75987 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marie_McDonald> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/4218119/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marie McDonald (born Cora Marie Frye, July 6, 1923 – October 21, 1965) was an American singer and actress known as \"The Body Beautiful\" and later nicknamed \"The Body\"." ;
+        mtp:hasParticipant   meetup:8f1e6cd27586eccd4d3a0bf2261dd3d2 , meetup:811a29c82ec2b97a9b3df76302dcf42c ;
+        mtp:hasPurpose       meetup:d83ba26f7f9c042df35eeb0121d78c80 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marie_McDonald> ;
+        mtp:hasType          "HM" .
+
+meetup:d83ba26f7f9c042df35eeb0121d78c80
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.63276756" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21267708" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Tom_Cora>
+        rdf:type  core:Person .

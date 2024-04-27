@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/James_Brown>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Fred_Thomas_(bassist)>
+        rdf:type  core:Person .
+
+meetup:eda154c2dc9ede0a4b3e87e8c35e8533
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fred_Thomas_(bassist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.4432149779623366" ;
+        mtp:hasTextEvidence     "Fred Thomas" .
+
+<http://w3id.org/polifonia/pilot/meetups/61715534/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fred Thomas is an American bassist best known for his work with singer James Brown for over thirty years." ;
+        mtp:hasParticipant   meetup:eda154c2dc9ede0a4b3e87e8c35e8533 , meetup:f889fcb01fef99c2e20c5ef89975316a ;
+        mtp:hasPurpose       meetup:a69c3cc4bcb35a4a536a9408ef61d0c7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fred_Thomas_(bassist)> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:a69c3cc4bcb35a4a536a9408ef61d0c7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99743843" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013006543" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f889fcb01fef99c2e20c5ef89975316a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Brown> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "0.9999999591192088" ;
+        mtp:hasTextEvidence     "James Brown" .

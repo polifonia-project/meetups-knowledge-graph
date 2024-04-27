@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Leonard_Bernstein>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:483032e120e86900ffc1a8108ae3cb7e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.832574" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16720945" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3864f47496e82ff1e334c3f2ff5e3081
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Perry_Farrell> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "0.9999999999996588" ;
+        mtp:hasTextEvidence     "Perry Farrell" .
+
+<http://w3id.org/polifonia/pilot/meetups/271031/6/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was during this period that Bernstein chose the pseudonym Perry Farrell for himself as a play on the word \"peripheral\"." ;
+        mtp:hasParticipant   meetup:d42945204211aa822395bb3c270e7b01 , meetup:3864f47496e82ff1e334c3f2ff5e3081 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Perry_Farrell> ;
+        mtp:hasType          "HM" .
+
+meetup:9c081c97f4c9024b1cc5da4a0f2d4f8a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peretz_Bernstein> ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peretz Bernstein" .
+
+<http://dbpedia.org/resource/Perry_Farrell>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/271031/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Perry Farrell (born Peretz Bernstein; March 29, 1959) is an American singer, songwriter and musician, best known as the frontman of the alternative rock band Jane's Addiction." ;
+        mtp:hasParticipant   meetup:9c081c97f4c9024b1cc5da4a0f2d4f8a , meetup:13ede98b41d8160beecf2182bf15fef5 ;
+        mtp:hasPurpose       meetup:483032e120e86900ffc1a8108ae3cb7e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Perry_Farrell> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Peretz_Bernstein>
+        rdf:type  core:Person .
+
+meetup:d42945204211aa822395bb3c270e7b01
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leonard_Bernstein> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "0.9949189564689458" ;
+        mtp:hasTextEvidence     "Bernstein" .
+
+meetup:13ede98b41d8160beecf2182bf15fef5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Perry_Farrell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Perry Farrell" .

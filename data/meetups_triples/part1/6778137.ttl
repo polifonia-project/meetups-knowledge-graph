@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Chris_Brown>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:eb7a0e746a2fdc895ff4f9ffe85ad573
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruff_Driverz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999086943248" ;
+        mtp:hasTextEvidence     "Ruff Driverz" .
+
+meetup:e1787228056b4e0ac821b179de37d1a7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Brown> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "0.9999999012022208" ;
+        mtp:hasTextEvidence     "Chris Brown" .
+
+<http://dbpedia.org/resource/Brad_Carter>
+        rdf:type  core:Person .
+
+meetup:acedd31f1ff72aede056b1cd57937808
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brad_Carter> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "0.999999999995964" ;
+        mtp:hasTextEvidence     "Brad Carter" .
+
+<http://w3id.org/polifonia/pilot/meetups/6778137/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ruff Driverz were the aliases of British DJ / remixers Brad Carter and Chris Brown." ;
+        mtp:hasParticipant   meetup:eb7a0e746a2fdc895ff4f9ffe85ad573 , meetup:e1787228056b4e0ac821b179de37d1a7 , meetup:acedd31f1ff72aede056b1cd57937808 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruff_Driverz> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Ruff_Driverz>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:02942cf9d4ff1e747adb857073a42558
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruff_Driverz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ruff Driverz" .
+
+meetup:0a1f78e5ff38189bc0886867693845ff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94480383" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.055134684" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6778137/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The duo also recorded under the names 2000BC and Transit." ;
+        mtp:hasParticipant   meetup:02942cf9d4ff1e747adb857073a42558 ;
+        mtp:hasPurpose       meetup:0a1f78e5ff38189bc0886867693845ff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruff_Driverz> ;
+        mtp:hasType          "HT" .

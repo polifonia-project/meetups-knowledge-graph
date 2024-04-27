@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/5841372/13/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "|Miyano mamoru live tour ~reliving~,\"2021" ;
+        mtp:hasParticipant   meetup:fc4760385806c34d56fa3cadb2eefa3e , meetup:ffba76f94b6e2d106e2ce2ac952fc46a ;
+        mtp:hasPurpose       meetup:fa75a69f96dd7fa703472a7d4d895c40 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mamoru_Miyano> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fa75a69f96dd7fa703472a7d4d895c40
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.85522825" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.121333465" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Mamoru_Miyano>
+        rdf:type  core:Person .
+
+meetup:fc4760385806c34d56fa3cadb2eefa3e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mamoru_Miyano> ;
+        mtp:hasOffset           "1" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Miyano mamoru" .
+
+meetup:ffba76f94b6e2d106e2ce2ac952fc46a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "|Miyano mamoru" .

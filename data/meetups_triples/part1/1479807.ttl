@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Marcel_Journet>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1479807/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marcel Journet (25 July 1868 – 7 September 1933), was a French, bass, operatic singer." ;
+        mtp:hasParticipant   meetup:549a6ff6793b9d95f1ae94ac2b8f5e50 ;
+        mtp:hasPurpose       meetup:d947d7aa77ca8fb42ac93ebaa87bbeb7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marcel_Journet> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:9fcd4daf94d184e33bca1aa700b98f9d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7461232" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17130005" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:549a6ff6793b9d95f1ae94ac2b8f5e50
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marcel_Journet> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marcel Journet" .
+
+<http://w3id.org/polifonia/pilot/meetups/1479807/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He enjoyed a prominent career in England, France and Italy, and appeared at the foremost American opera houses in New York City and Chicago." ;
+        mtp:hasParticipant   meetup:ff1da86718bb1dfe4cd63fcc089f5e9e ;
+        mtp:hasPurpose       meetup:9fcd4daf94d184e33bca1aa700b98f9d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marcel_Journet> ;
+        mtp:hasType          "HT" .
+
+meetup:ff1da86718bb1dfe4cd63fcc089f5e9e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marcel_Journet> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marcel Journet" .
+
+meetup:d947d7aa77ca8fb42ac93ebaa87bbeb7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9736308" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.023309968" ;
+        mtp:hasSourcePurpose          "ML" .

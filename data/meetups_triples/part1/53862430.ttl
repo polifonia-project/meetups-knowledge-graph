@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:eb98d320c7e0ed4685f7f578c0262c68
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about Morgan Wallen's birth and family" ;
+        mtp:hasEvidencePurposeSecond  "Morgan Wallen's career in music" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/53862430/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Morgan Wallen was born to Tommy and Lesli Wallen on May 13, 1993, in Sneedville, Tennessee." ;
+        mtp:hasParticipant   meetup:6fffbe7935116889fe74b0b7a75256ba , meetup:c3f7b773f40b939bea6ce76e08327904 ;
+        mtp:hasPurpose       meetup:eb98d320c7e0ed4685f7f578c0262c68 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Morgan_Wallen> ;
+        mtp:hasType          "HM" .
+
+meetup:6fffbe7935116889fe74b0b7a75256ba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "36" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lesli Wallen" .
+
+<http://dbpedia.org/resource/Morgan_Wallen>
+        rdf:type  core:Person .
+
+meetup:c3f7b773f40b939bea6ce76e08327904
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Morgan_Wallen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Morgan Wallen" .

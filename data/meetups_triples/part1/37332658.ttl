@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:ea5eb600e9a451217de73bf9fd6d7fdb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998392" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00015984988" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2b8451d3d1c3e33ef5011f59da7d7680
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alex_M.O.R.P.H.> ;
+        mtp:hasOffset           "126" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alex M.O.R.P.H." .
+
+<http://dbpedia.org/resource/Alex_M.O.R.P.H.>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/37332658/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alexander Mieling (German pronunciation: [ʔalɛkˈsandɐ ˈmiːlɪŋ]; born 24 December 1975) better known by his stage name Alex M.O.R.P.H." ;
+        mtp:hasParticipant   meetup:2b8451d3d1c3e33ef5011f59da7d7680 ;
+        mtp:hasPurpose       meetup:ea5eb600e9a451217de73bf9fd6d7fdb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alex_M.O.R.P.H.> ;
+        mtp:hasType          "HT" .

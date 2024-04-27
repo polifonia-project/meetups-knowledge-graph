@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:13bb8d51a08e3ace6c3b2f1709550bb4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Studio with meeting room for clients" ;
+        mtp:hasEvidencePurposeSecond  "Casting studio for live auditions" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/30890593/30/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Located next to the West Kensington Underground, Mark Summers Studios has one of the biggest casting studios in London. The state of the art studio features beauty lighting, the photographer's choice of back drops, a client meeting room, and the fastest web upload in London, making live casting available." ;
+        mtp:hasPurpose       meetup:13bb8d51a08e3ace6c3b2f1709550bb4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Summers_(casting_director)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mark_Summers_(casting_director)>
+        rdf:type  core:Person .

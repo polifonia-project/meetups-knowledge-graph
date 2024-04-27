@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/John_Bush_(musician)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Felipe_Alou>
+        rdf:type  core:Person .
+
+meetup:704f28447a1dad758d4d87a775892d29
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joey_Vera> ;
+        mtp:hasOffset           "247" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joey Vera" .
+
+meetup:8df73d6f749e4e1ee4ed33a65afb903c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Felipe_Alou> ;
+        mtp:hasOffset           "160" ;
+        mtp:hasSimilarityScore  "0.8071291718649988" ;
+        mtp:hasTextEvidence     "Felipe" .
+
+meetup:6cd700f131aea73e49b55f96edfa6121
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Bush_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.973828779881286" ;
+        mtp:hasTextEvidence     "John Bush" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4b5a43e809529dadb3cb4921323d2de1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8459466" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14773712" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a562a22b90f809be26f9d8de7fa9b2f8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Bush_(musician)> ;
+        mtp:hasOffset           "124" ;
+        mtp:hasSimilarityScore  "0.973828779881286" ;
+        mtp:hasTextEvidence     "John Bush" .
+
+<http://w3id.org/polifonia/pilot/meetups/705824/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Bush started his singing career at Woodrow Wilson High School (Los Angeles) in 1979, fronting a short-lived rock band called \"Royal Decree\", with brothers Felipe \"Phil\" Sandoval (lead guitar) and Gonzalo \"Gonzo\" Sandoval (drums), and bassist Joey Vera, also Woodrow Wilson High School alumni." ;
+        mtp:hasParticipant   meetup:8df73d6f749e4e1ee4ed33a65afb903c , meetup:704f28447a1dad758d4d87a775892d29 , meetup:6cd700f131aea73e49b55f96edfa6121 ;
+        mtp:hasPurpose       meetup:4b5a43e809529dadb3cb4921323d2de1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Bush_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b1ed8c312acee618663f0747803dd6b2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98864895" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004911865" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/705824/16/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In April 2011, German instrumental rock band Long Distance Calling released a self-titled full-length album, which features John Bush performing vocals for the track \"Middleville\"." ;
+        mtp:hasParticipant   meetup:a562a22b90f809be26f9d8de7fa9b2f8 ;
+        mtp:hasPurpose       meetup:b1ed8c312acee618663f0747803dd6b2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Bush_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Joey_Vera>
+        rdf:type  core:Person .

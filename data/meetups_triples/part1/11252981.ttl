@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11252981/13/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2004, Henry Stone was awarded the first ever Pioneer Award for the Dance Music Hall of Fame, which was presented in New York City." ;
+        mtp:hasParticipant   meetup:b9b32a1393b264517ec2463ec100bff3 ;
+        mtp:hasPurpose       meetup:dfc84ee22170486f401e8956311bfccb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Stone> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:95716f71d1427cd723fb80b24ae92185
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.76519537" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22659367" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b9b32a1393b264517ec2463ec100bff3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Stone> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9999997377305252" ;
+        mtp:hasTextEvidence     "Henry Stone" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:cbd9128718d17e9ae91beba6518b7695
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "50" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Henry David Epstein" .
+
+<http://dbpedia.org/resource/Henry_Stone>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/11252981/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Henry Stone (June 3, 1921 – August 7, 2014), born Henry David Epstein, was an American record company executive and producer whose career spanned the era from R&B in the early 1950s through the disco boom of the 1970s to the 2010s." ;
+        mtp:hasParticipant   meetup:cbd9128718d17e9ae91beba6518b7695 , meetup:78f5c907486477bd86e3ba733017bccc ;
+        mtp:hasPurpose       meetup:95716f71d1427cd723fb80b24ae92185 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Stone> ;
+        mtp:hasType          "HM" .
+
+meetup:78f5c907486477bd86e3ba733017bccc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Stone> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Henry Stone" .
+
+meetup:dfc84ee22170486f401e8956311bfccb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99984324" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00015679" ;
+        mtp:hasSourcePurpose          "ML" .

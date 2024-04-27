@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1f1175f5243e9dbcd80d065b12737202
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to Mozart's music and opera" ;
+        mtp:hasEvidencePurposeSecond  "Involves the personal life of Mozart" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/29546771/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As the President of the Mozart Society, an organization that owned Bertramka, she was pressured into donating the property to the National Committee of Prague in 1986. Bertramka was the villa where Wolfgang Amadeus Mozart stayed while he was in Prague and where he completed his opera Don Giovanni." ;
+        mtp:hasPurpose       meetup:1f1175f5243e9dbcd80d065b12737202 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jitka_Snížková> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/29546771/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jitka Snížková born Skrhova (1924–1989) was a Czech composer, music educator and musicologist." ;
+        mtp:hasParticipant   meetup:ccf48fe0b8b1b8cbbdab407d45b41f2c , meetup:f0ab44bff5bddec6485ce2b7385a0a03 ;
+        mtp:hasPurpose       meetup:efcecc9dddfca578801a04ccb04e0796 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jitka_Snížková> ;
+        mtp:hasType          "HM" .
+
+meetup:f0ab44bff5bddec6485ce2b7385a0a03
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Skrhova" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:ccf48fe0b8b1b8cbbdab407d45b41f2c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jitka_Snížková> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jitka Snížková" .
+
+meetup:efcecc9dddfca578801a04ccb04e0796
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6413515" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35842094" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jitka_Snížková>
+        rdf:type  core:Person .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Tsubasa_Honda>
+        rdf:type  core:Person .
+
+meetup:6dc1648704ea5ddc74f416003165d0a8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tsubasa_Honda> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tsubasa Honda" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b0d606109425c6d7327b4b06d265d58c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98968095" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007377676" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/38631176/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tsubasa Honda (本田 翼, Honda Tsubasa, born June 27, 1992) is a Japanese actress and model." ;
+        mtp:hasParticipant   meetup:6dc1648704ea5ddc74f416003165d0a8 ;
+        mtp:hasPurpose       meetup:b0d606109425c6d7327b4b06d265d58c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tsubasa_Honda> ;
+        mtp:hasType          "HT" .

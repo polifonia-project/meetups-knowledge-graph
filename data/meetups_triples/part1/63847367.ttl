@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:476e09c1a6719ee4ac749164ed9ec031
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5507936" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.43635762" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cfe65df5b27baa4626c731665321e9b8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Topic related to music composition and performance" ;
+        mtp:hasEvidencePurposeSecond  "Topic related to historical research and discovery" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/63847367/42/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Handel's Messiah: Discovery of the Original Word-Book Used at the First Performance in Dublin, April 13, 1742 (Dublin: University Press, 1891). According to Culwick's obituary, this put to an end the controversy over whether the original performance of the Messiah had taken place in Dublin." ;
+        mtp:hasParticipant   meetup:940ab7e507683cb21b0092fab3dd2ee9 ;
+        mtp:hasPurpose       meetup:cfe65df5b27baa4626c731665321e9b8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Cooksey_Culwick> ;
+        mtp:hasType          "HT" .
+
+meetup:8196a4b479cdc2b870430658de477135
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Cooksey_Culwick> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "James Cooksey Culwick" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/63847367/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Cooksey Culwick (28 April 1845 – 5 October 1907) was an English musician who is most well known for being organist of the Chapel Royal and founding the Orpheus Choir, both in Dublin, Ireland." ;
+        mtp:hasParticipant   meetup:8196a4b479cdc2b870430658de477135 ;
+        mtp:hasPurpose       meetup:476e09c1a6719ee4ac749164ed9ec031 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Cooksey_Culwick> ;
+        mtp:hasType          "HT" .
+
+meetup:940ab7e507683cb21b0092fab3dd2ee9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Culwick" .
+
+<http://dbpedia.org/resource/James_Cooksey_Culwick>
+        rdf:type  core:Person .

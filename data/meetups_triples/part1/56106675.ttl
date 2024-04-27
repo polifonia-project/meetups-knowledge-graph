@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Britt_Lightning>
+        rdf:type  core:Person .
+
+meetup:2f8d16ad5c2c557a80e9f5e3603a0c2a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performing at awards" ;
+        mtp:hasEvidencePurposeSecond  "Promoting album on TV show" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:14157b6975c124b45683f73250c88d53
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.64316505" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3179526" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:73a53cfed45dc4f9e15e4c32737956a0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jason_Derulo> ;
+        mtp:hasOffset           "66" ;
+        mtp:hasSimilarityScore  "0.999999999999801" ;
+        mtp:hasTextEvidence     "Jason Derulo" .
+
+<http://w3id.org/polifonia/pilot/meetups/56106675/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She joined Sanz at the 2013 Latin Grammy Awards in Las Vegas performing the single \"No Me Compares. \"In 2013, Lightning performed on Live with Kelly and Michael with Jason Derulo to promote his album Tattoos." ;
+        mtp:hasParticipant   meetup:73a53cfed45dc4f9e15e4c32737956a0 ;
+        mtp:hasPurpose       meetup:2f8d16ad5c2c557a80e9f5e3603a0c2a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Britt_Lightning> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jason_Derulo>
+        rdf:type  core:Person .
+
+meetup:f544745db791c454e047b7ff83e98897
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Britt_Lightning> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Britt Lightning" .
+
+<http://w3id.org/polifonia/pilot/meetups/56106675/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brittany Denaro (born February 2, 1985), best known as Britt Lightning, is the lead guitarist for the band Vixen." ;
+        mtp:hasParticipant   meetup:f544745db791c454e047b7ff83e98897 ;
+        mtp:hasPurpose       meetup:14157b6975c124b45683f73250c88d53 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Britt_Lightning> ;
+        mtp:hasType          "HT" .

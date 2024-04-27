@@ -1,0 +1,89 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cc48a065c068603b00a4eca90ad09518
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Cusins> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "William George Cusins" .
+
+meetup:0677f56fc49098442d4d85812b921910
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Cusins> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "William Cusins" .
+
+<http://w3id.org/polifonia/pilot/meetups/192737/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Among his works as a composer are Royal Wedding Serenata (1863), concert overture Les Travailleurs de la mer (1869), the oratorio Gideon (produced Gloucester, 1871), overture to William Shakespeare's Love's Labour's Lost (1875), Piano Concerto in A minor, marches and songs." ;
+        mtp:hasParticipant   meetup:0677f56fc49098442d4d85812b921910 ;
+        mtp:hasPurpose       meetup:f3ba672ae0236770f3575ff8c19dc79f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_Cusins> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Robert_Schumann>
+        rdf:type  core:Person .
+
+meetup:373a1f19871e9110d5e2a6f49dc3cc90
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Schumann> ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "0.9999985498383522" ;
+        mtp:hasTextEvidence     "Robert Schumann" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:f3ba672ae0236770f3575ff8c19dc79f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999356" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.1358696e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ecc1aefe19b89ac727280928a08cea0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Cusins> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "William Cusins" .
+
+<http://w3id.org/polifonia/pilot/meetups/192737/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sir William George Cusins (14 October 1833 – 31 August 1893) was an English pianist, violinist, organist, conductor and composer." ;
+        mtp:hasParticipant   meetup:cc48a065c068603b00a4eca90ad09518 ;
+        mtp:hasPurpose       meetup:9560c792686230fe6718dc8e4f4bc492 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_Cusins> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/William_Cusins>
+        rdf:type  core:Person .
+
+meetup:9560c792686230fe6718dc8e4f4bc492
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9865876" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013286164" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/192737/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sir William Cusins produced editions of the piano music of Robert Schumann." ;
+        mtp:hasParticipant   meetup:373a1f19871e9110d5e2a6f49dc3cc90 , meetup:ecc1aefe19b89ac727280928a08cea0b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/William_Cusins> ;
+        mtp:hasType          "HM" .

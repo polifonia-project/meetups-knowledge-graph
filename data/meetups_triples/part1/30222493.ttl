@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/William_Pleeth>
+        rdf:type  core:Person .
+
+meetup:cedc96b1587c659e44a95c33306b1d3f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about studying cello and music education." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions studying at different institutions and with various teachers." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Daniil_Shafran>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a2b884b1b68c4334ef414351020abbdb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Boris Pergamenshikov" .
+
+meetup:159c96e3cdf58070300c68c784dd89d1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daniil_Shafran> ;
+        mtp:hasOffset           "111" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Daniil Shafran" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:8335c6c3c0c0a82844d23898d78c429f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_Pleeth> ;
+        mtp:hasOffset           "95" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "William Pleeth" .
+
+<http://w3id.org/polifonia/pilot/meetups/30222493/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1990 she won 2nd prize in the International Tchaikovsky Competition in Moscow. She played with a number of prestigious orchestras including the Bavarian Radio Symphony Orchestra, the NHK Symphony Orchestra, Leningrad Philharmonic, Jerusalem Symphony Orchestra, and the Russian State Orchestra and participated in many music festivals around the globe." ;
+        mtp:hasPurpose       meetup:388510a89ef662796e3cd62ebdf7e05b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Françoise_Groben> ;
+        mtp:hasType          "HT" .
+
+meetup:388510a89ef662796e3cd62ebdf7e05b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Achievements in music competitions and performances with prestigious orchestras" ;
+        mtp:hasEvidencePurposeSecond  "Participation in music festivals and global recognition" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/30222493/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born on 4 December 1965 in Luxembourg City, Groben first studied the cello with Georges Mallach at the Conservatoire de Luxembourg. She continued with Boris Pergamenshikov at the Musikhochschule, Cologne, and subsequently with William Pleeth, Daniil Shafran, as well as with members of the Amadeus Quartet." ;
+        mtp:hasParticipant   meetup:159c96e3cdf58070300c68c784dd89d1 , meetup:8335c6c3c0c0a82844d23898d78c429f , meetup:a2b884b1b68c4334ef414351020abbdb ;
+        mtp:hasPurpose       meetup:cedc96b1587c659e44a95c33306b1d3f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Françoise_Groben> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Françoise_Groben>
+        rdf:type  core:Person .

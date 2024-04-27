@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:91714d7c132f788d02a84c0107b4ea83
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9588918" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04080765" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Billy_Yates_(singer)>
+        rdf:type  core:Person .
+
+meetup:dc335737513412ae95e3d392fddcbc5c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99527943" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0046370234" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:040b205dc45376d1a0c57a50c31793a3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Yates_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9774095226949012" ;
+        mtp:hasTextEvidence     "Billy Yates" .
+
+<http://w3id.org/polifonia/pilot/meetups/4427611/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1993–1999: \"I Don't Need Your Rockin' Chair\" and Billy Yates =" ;
+        mtp:hasParticipant   meetup:d4e3b8572e791183dcd97b2c2cc07ef2 ;
+        mtp:hasPurpose       meetup:dc335737513412ae95e3d392fddcbc5c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Yates_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4427611/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy Yates has been married to his wife, Nancy, since the release of \"Flowers\" in 1997." ;
+        mtp:hasParticipant   meetup:040b205dc45376d1a0c57a50c31793a3 ;
+        mtp:hasPurpose       meetup:91714d7c132f788d02a84c0107b4ea83 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_Yates_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:d4e3b8572e791183dcd97b2c2cc07ef2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Yates_(singer)> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "0.9774095226949012" ;
+        mtp:hasTextEvidence     "Billy Yates" .

@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/30696664/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He lives in Gothenburg, Sweden." ;
+        mtp:hasParticipant   meetup:6ffe968089f70088e7003297ae5212d7 ;
+        mtp:hasPurpose       meetup:d1c47771f0dfd2439a90ec94859b4b40 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_Jensen> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6ffe968089f70088e7003297ae5212d7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_Jensen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Simon Jensen" .
+
+<http://w3id.org/polifonia/pilot/meetups/30696664/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "All You Can Eat, Simon Jensen Band (Blue Beat Productions, 2005)" ;
+        mtp:hasParticipant   meetup:5313f99d13c55c2dc13f3a390d6e34f3 ;
+        mtp:hasPurpose       meetup:a6b95e2a87cee91c36b1fd6308bbd2a8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_Jensen> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/30696664/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Simon Jensen (born February 3, 1973) is a Danish jazz flutist, composer and poet." ;
+        mtp:hasParticipant   meetup:be7113170b95172702297917317736ab ;
+        mtp:hasPurpose       meetup:67b971aa522f9ca4b3bc18a61de16257 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_Jensen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Simon_Jensen>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:5313f99d13c55c2dc13f3a390d6e34f3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_Jensen> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "0.9999999997071995" ;
+        mtp:hasTextEvidence     "Simon Jensen" .
+
+meetup:be7113170b95172702297917317736ab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_Jensen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999602101445436" ;
+        mtp:hasTextEvidence     "Simon Jensen" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:67b971aa522f9ca4b3bc18a61de16257
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.36185214" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26278052" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d1c47771f0dfd2439a90ec94859b4b40
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9367164" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.062966235" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a6b95e2a87cee91c36b1fd6308bbd2a8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9971712" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.002472893" ;
+        mtp:hasSourcePurpose          "ML" .

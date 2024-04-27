@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2657736/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andrew Mackay (born 23 July 1946) is an English multi-instrumentalist, best known as a founding member (playing oboe and saxophone) of the art rock group Roxy Music." ;
+        mtp:hasParticipant   meetup:39f9cbde328564fb7a4b68d08a1f0d45 ;
+        mtp:hasPurpose       meetup:29805af9511ec309834fbb831d3c64fe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Mackay> ;
+        mtp:hasType          "HT" .
+
+meetup:29805af9511ec309834fbb831d3c64fe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Andrew Mackay, who is known for his involvement in the art rock group Roxy Music as a multi-instrumentalist." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions Andrew Mackay's birthdate, which is a personal detail about him." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:39f9cbde328564fb7a4b68d08a1f0d45
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andy_Mackay> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999648995022" ;
+        mtp:hasTextEvidence     "Andrew Mackay" .
+
+<http://dbpedia.org/resource/Andy_Mackay>
+        rdf:type  core:Person .

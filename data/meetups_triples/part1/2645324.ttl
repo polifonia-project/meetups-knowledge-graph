@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:4f76c463ad795e94a6b3d797ea2efe10
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9964658" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0025734259" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2645324/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has played on albums by dozens of artists, including David Lee Roth's first three solo albums." ;
+        mtp:hasParticipant   meetup:65c4032bba7b44a7b4a1d94f8932a3df , meetup:9075701f2f945d9ab25cc4c90db25296 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gregg_Bissonette> ;
+        mtp:hasType          "HM" .
+
+meetup:121c39daf0322dba9f850961da326bb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gregg_Bissonette> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gregg Bissonette" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/2645324/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gregg Bissonette (born June 9, 1959) is an American jazz and rock drummer." ;
+        mtp:hasParticipant   meetup:121c39daf0322dba9f850961da326bb3 ;
+        mtp:hasPurpose       meetup:4f76c463ad795e94a6b3d797ea2efe10 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gregg_Bissonette> ;
+        mtp:hasType          "HT" .
+
+meetup:65c4032bba7b44a7b4a1d94f8932a3df
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Lee_Roth> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Lee Roth" .
+
+meetup:9075701f2f945d9ab25cc4c90db25296
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gregg_Bissonette> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gregg Bissonette" .
+
+<http://dbpedia.org/resource/David_Lee_Roth>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Gregg_Bissonette>
+        rdf:type  core:Person .

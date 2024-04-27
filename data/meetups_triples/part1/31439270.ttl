@@ -1,0 +1,77 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/John_Rich>
+        rdf:type  core:Person .
+
+meetup:417e948e80c98d416a791f5b34553b22
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Rich> ;
+        mtp:hasOffset           "154" ;
+        mtp:hasSimilarityScore  "0.9999999998817088" ;
+        mtp:hasTextEvidence     "John Rich" .
+
+meetup:0ae91878bcf9dfab3d8798aad14fb4f5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998176" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.5011152e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e8b0b9e4e9660b28451e5254107a239c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87441415" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12532923" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/31439270/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He signed with Columbia Nashville in 2011 and has released his debut single, \"Mr. Bartender\" after being discovered through a talent contest sponsored by John Rich of Big & Rich." ;
+        mtp:hasParticipant   meetup:4f221a009aeddf9f0aca0cbdba775def , meetup:417e948e80c98d416a791f5b34553b22 ;
+        mtp:hasPurpose       meetup:e8b0b9e4e9660b28451e5254107a239c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bradley_Gaskin> ;
+        mtp:hasType          "HM" .
+
+meetup:4f221a009aeddf9f0aca0cbdba775def
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bradley_Gaskin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bradley Gaskin" .
+
+<http://w3id.org/polifonia/pilot/meetups/31439270/0/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He made his Grand Ole Opry debut on August 20, 2011." ;
+        mtp:hasParticipant   meetup:36609ff77e2712bf799acbb358cb24e4 ;
+        mtp:hasPurpose       meetup:0ae91878bcf9dfab3d8798aad14fb4f5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bradley_Gaskin> ;
+        mtp:hasType          "HT" .
+
+meetup:36609ff77e2712bf799acbb358cb24e4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bradley_Gaskin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bradley Gaskin" .
+
+<http://dbpedia.org/resource/Bradley_Gaskin>
+        rdf:type  core:Person .

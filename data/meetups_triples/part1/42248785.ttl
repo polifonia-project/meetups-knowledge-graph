@@ -1,0 +1,54 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bill_Sheppard_(music_producer)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a7a60ae61b0ab5376bac772e3806f12a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Promoter and producer of music" ;
+        mtp:hasEvidencePurposeSecond  "Vice President of 20th Century Fox Records" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8c2287f4ef4ed10b8a3b95714b2ca5cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Sheppard_(music_producer)> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "0.94026720428159" ;
+        mtp:hasTextEvidence     "Bill Sheppard" .
+
+meetup:8f09013cf4560dca5e11bbc217d7b4f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ewart Abner's" .
+
+<http://w3id.org/polifonia/pilot/meetups/42248785/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"Burnin'\", The Bill Sheppard Combo on Ewart Abner's Abner Records" ;
+        mtp:hasParticipant   meetup:8f09013cf4560dca5e11bbc217d7b4f7 , meetup:8c2287f4ef4ed10b8a3b95714b2ca5cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_Sheppard_(music_producer)> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/42248785/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bill \"Bunky\" Sheppard (20 March 1922 in New Orleans – 1 July 1997 in Los Angeles) was an American, Chicago-based music promoter and music producer of the 1950s and 1960s, who eventually became Vice President of 20th Century Fox Records (1978-1992). He promoted such groups as The Esquires (\"Get on Up\", \"And Get Away\", and \"Girls in the City\"), The Sheppards and others." ;
+        mtp:hasPurpose       meetup:a7a60ae61b0ab5376bac772e3806f12a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bill_Sheppard_(music_producer)> ;
+        mtp:hasType          "HT" .

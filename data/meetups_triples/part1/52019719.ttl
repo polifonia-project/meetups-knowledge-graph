@@ -1,0 +1,80 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/52019719/4/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2018-2019, Elliot Madore returns to the Dutch National Opera in the European premiere of John Adams’ Girls of the Golden West directed by Peter Sellars, a role he premiered at the San Francisco Opera last season." ;
+        mtp:hasParticipant   meetup:1ee0ef25074c06544f8439111df59618 , meetup:403e8c4133215883278d4912bde9beda , meetup:030e715d228a1e788678d13805b6c34e ;
+        mtp:hasPurpose       meetup:186947ecd54d4d7bade717c3dcdc4a3d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elliot_Madore> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/52019719/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Elliot Madore (born April 15, 1987) is a Canadian lyric baritone with an international operatic career." ;
+        mtp:hasParticipant   meetup:4a667a316cc41aade9609ee854a70d29 ;
+        mtp:hasPurpose       meetup:1c95a7c90e4a507785c8fabf7a049c7a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Elliot_Madore> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Peter_Sellars>
+        rdf:type  core:Person .
+
+meetup:1ee0ef25074c06544f8439111df59618
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Sellars> ;
+        mtp:hasOffset           "143" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peter Sellars" .
+
+<http://dbpedia.org/resource/Elliot_Madore>
+        rdf:type  core:Person .
+
+meetup:1c95a7c90e4a507785c8fabf7a049c7a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99468553" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0052716876" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:186947ecd54d4d7bade717c3dcdc4a3d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7677501" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22564375" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4a667a316cc41aade9609ee854a70d29
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elliot_Madore> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999959288173154" ;
+        mtp:hasTextEvidence     "Elliot Madore" .
+
+meetup:403e8c4133215883278d4912bde9beda
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Adams’" .
+
+meetup:030e715d228a1e788678d13805b6c34e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elliot_Madore> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.9999959288173154" ;
+        mtp:hasTextEvidence     "Elliot Madore" .

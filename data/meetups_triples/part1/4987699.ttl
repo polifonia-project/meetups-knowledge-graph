@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:6b76a7c15d1a116715747d61f2a95d8a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about the person's life" ;
+        mtp:hasEvidencePurposeSecond  "Involvement in singing and dancing" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Rosalind_Ashford>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/4987699/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born Rosalind Ashford on September 2, 1943, to John and Mary Ashford in Detroit, Michigan, Ashford sang in church choirs and learned to dance in local centers." ;
+        mtp:hasParticipant   meetup:66ea9f8d56e8cd1f648ad9c0aa37a856 ;
+        mtp:hasPurpose       meetup:6b76a7c15d1a116715747d61f2a95d8a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rosalind_Ashford> ;
+        mtp:hasType          "HT" .
+
+meetup:66ea9f8d56e8cd1f648ad9c0aa37a856
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rosalind_Ashford> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rosalind Ashford" .

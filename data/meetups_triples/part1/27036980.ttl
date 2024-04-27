@@ -1,0 +1,101 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:646b60b1186d32d766ed27371d13fd6c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9861888" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009119568" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fc8d14a5d52a628ab7723d57a894233c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Manmohan_Acharya> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Manmohan Acharya" .
+
+meetup:bae7e899c536f22e5c661322626b6938
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "114" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mayadhar Acharya" .
+
+meetup:cfa409c817e4d4c0a059c154bcbd8801
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Manmohan_Acharya> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Manmohan Acharya" .
+
+<http://dbpedia.org/resource/Manmohan_Acharya>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:9a9cfbc29a1a455de220d0f66b373cdc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Manmohan_Acharya> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Manmohan Acharya" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/27036980/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A devotional song from his Gitamohanam was featured in the 2009 Bollywood movie, The Desire." ;
+        mtp:hasParticipant   meetup:cfa409c817e4d4c0a059c154bcbd8801 ;
+        mtp:hasPurpose       meetup:d46332070403bf72deae8b6bd24bf9ba ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Manmohan_Acharya> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/27036980/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Manmohan Acharya was a poet and lyricist from India." ;
+        mtp:hasParticipant   meetup:9a9cfbc29a1a455de220d0f66b373cdc ;
+        mtp:hasPurpose       meetup:646b60b1186d32d766ed27371d13fd6c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Manmohan_Acharya> ;
+        mtp:hasType          "HT" .
+
+meetup:d46332070403bf72deae8b6bd24bf9ba
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99989843" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.8204387e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:191e2be377bfaa3adbfbe0ffda418847
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about someone's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/27036980/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Manmohan Acharya was born in 1967 in Lathanga, a village in the Jagatsinghpur district of Orissa, India to Pandit Mayadhar Acharya and Parvati Devi." ;
+        mtp:hasParticipant   meetup:fc8d14a5d52a628ab7723d57a894233c , meetup:bae7e899c536f22e5c661322626b6938 ;
+        mtp:hasPurpose       meetup:191e2be377bfaa3adbfbe0ffda418847 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Manmohan_Acharya> ;
+        mtp:hasType          "HM" .

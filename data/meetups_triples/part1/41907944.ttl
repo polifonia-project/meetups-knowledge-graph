@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/41907944/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Irving Berman, was a Newark, New Jersey businessman, record company owner, and nightclub impresario." ;
+        mtp:hasParticipant   meetup:303b4eb9a2aafa75b43ec55321ce3960 ;
+        mtp:hasPurpose       meetup:4d2ba1b7f393ba5ebfe0ae0eb28618e9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Irving_Berman> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:303b4eb9a2aafa75b43ec55321ce3960
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Irving_Berman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "Irving Berman" .
+
+<http://dbpedia.org/resource/Irving_Berman>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4d2ba1b7f393ba5ebfe0ae0eb28618e9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99996865" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.4186824e-05" ;
+        mtp:hasSourcePurpose          "ML" .

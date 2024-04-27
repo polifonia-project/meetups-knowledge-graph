@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:0f0cabd44b420f52552870ed899f9583
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gramophonedzie> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "0.999986207699395" ;
+        mtp:hasTextEvidence     "Gramophonedzie" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:40d93587a0740de7f5fb0a0a2a878236
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marko Milićević" .
+
+<http://dbpedia.org/resource/Gramophonedzie>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/26562904/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marko Milićević (Serbian: Марко Милићевић), most known as Gramophonedzie (Грамофонџије, Gramofondžije), is a Serbian DJ from Belgrade." ;
+        mtp:hasParticipant   meetup:0f0cabd44b420f52552870ed899f9583 , meetup:40d93587a0740de7f5fb0a0a2a878236 ;
+        mtp:hasPurpose       meetup:2fdb4f2678793b4ed421b02655331024 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gramophonedzie> ;
+        mtp:hasType          "HM" .
+
+meetup:2fdb4f2678793b4ed421b02655331024
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7468788" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24879274" ;
+        mtp:hasSourcePurpose          "ML" .

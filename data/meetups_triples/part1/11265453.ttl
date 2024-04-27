@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11265453/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kepe received her MFA from The Shakespeare Theatre, Academy for Classical Acting in Washington, D.C. under the direction of Michael Kahn." ;
+        mtp:hasParticipant   meetup:a4cfd38134e60677437fc041b79a6ca1 , meetup:3e68b7ba41d6f716a7d4f3e7012e0afb ;
+        mtp:hasPurpose       meetup:e47eba82964ae7785938b55eca40503e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna_Kepe> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3e68b7ba41d6f716a7d4f3e7012e0afb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Kahn_(theatre_director)> ;
+        mtp:hasOffset           "124" ;
+        mtp:hasSimilarityScore  "0.8472969116415489" ;
+        mtp:hasTextEvidence     "Michael Kahn" .
+
+meetup:a4cfd38134e60677437fc041b79a6ca1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna_Kepe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anna Kepe" .
+
+meetup:e47eba82964ae7785938b55eca40503e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.89762443" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09985801" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Anna_Kepe>
+        rdf:type  core:Person .
+
+meetup:847ad04ae1d91eca31168dfe2c6f9b94
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9957883" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0039962814" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/11265453/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anna Kepe (born 1977), also known by her married name of Anna Kepe Haas, is a director, actress, producer, pedagogue and entrepreneur." ;
+        mtp:hasParticipant   meetup:18078cb9b122d197ecd8ee290bb3b993 , meetup:31ae1df6acd78a35ad43e32098ba1363 ;
+        mtp:hasPurpose       meetup:847ad04ae1d91eca31168dfe2c6f9b94 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna_Kepe> ;
+        mtp:hasType          "HM" .
+
+meetup:31ae1df6acd78a35ad43e32098ba1363
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "57" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anna Kepe Haas" .
+
+meetup:18078cb9b122d197ecd8ee290bb3b993
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna_Kepe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anna Kepe" .
+
+<http://dbpedia.org/resource/Michael_Kahn_(theatre_director)>
+        rdf:type  core:Person .

@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:f307a25c8df0641a47a1e7621f3153f1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Vic Dana is a singer" ;
+        mtp:hasEvidencePurposeSecond  "Samuel Mendola's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1865673/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Samuel Mendola (born August 26, 1942, Buffalo, New York, United States), known professionally as Vic Dana, is an American dancer and singer." ;
+        mtp:hasParticipant   meetup:b9990bb12a496dd3c3630d7303f04600 , meetup:145a46bf7ed1be3c64357547910cf07a ;
+        mtp:hasPurpose       meetup:f307a25c8df0641a47a1e7621f3153f1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vic_Dana> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Vic_Dana>
+        rdf:type  core:Person .
+
+meetup:b9990bb12a496dd3c3630d7303f04600
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Samuel Mendola" .
+
+meetup:145a46bf7ed1be3c64357547910cf07a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vic_Dana> ;
+        mtp:hasOffset           "97" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Vic Dana" .

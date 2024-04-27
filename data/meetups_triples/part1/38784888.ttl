@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/James_II_of_England>
+        rdf:type  core:Person .
+
+meetup:4a2b61037c7b673baaaa3915aeff1069
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_II_of_England> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.4613757636103222" ;
+        mtp:hasTextEvidence     "James" .
+
+<http://dbpedia.org/resource/FuntCase>
+        rdf:type  core:Person .
+
+meetup:0b8d4845a1ce59a3e8c99ca2b967d48e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/FuntCase> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "FuntCase" .
+
+meetup:19eedaff1b91be7d91f21c71790e58a6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "FuntCase is a dubstep and drum and bass producer and DJ" ;
+        mtp:hasEvidencePurposeSecond  "James Hazell is his real name" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/38784888/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Hazell (born 29 July 1986), better known by his stage name FuntCase, is an English dubstep and drum and bass producer and DJ, from Bournemouth, England." ;
+        mtp:hasParticipant   meetup:0b8d4845a1ce59a3e8c99ca2b967d48e , meetup:4a2b61037c7b673baaaa3915aeff1069 ;
+        mtp:hasPurpose       meetup:19eedaff1b91be7d91f21c71790e58a6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/FuntCase> ;
+        mtp:hasType          "HM" .

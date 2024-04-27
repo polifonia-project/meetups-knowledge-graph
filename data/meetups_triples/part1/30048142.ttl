@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Cristian_Heyne>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/30048142/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cristián Heyne (born January 13, 1973 in Santiago)" ;
+        mtp:hasParticipant   meetup:915acaba2298acb43c7782072212a2e5 ;
+        mtp:hasPurpose       meetup:594e8daf367b125ab36a2dffa28efb3e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cristian_Heyne> ;
+        mtp:hasType          "HT" .
+
+meetup:594e8daf367b125ab36a2dffa28efb3e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7364451" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19744176" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:915acaba2298acb43c7782072212a2e5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cristian_Heyne> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cristián Heyne" .

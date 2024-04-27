@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9a9dee6ababe3b66ee7d1933102df316
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cornelius_Bumpus> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cornelius Bumpus" .
+
+meetup:cb654bca70231eab1846031f400775b2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Cornelius Bumpus was a musician" ;
+        mtp:hasEvidencePurposeSecond  "He was from Santa Cruz, California" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Cornelius_Bumpus>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/508488/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cornelius Bumpus (May 7, 1945 – February 3, 2004) was an American woodwind, brass and keyboard player and vocalist from Santa Cruz, California." ;
+        mtp:hasParticipant   meetup:9a9dee6ababe3b66ee7d1933102df316 ;
+        mtp:hasPurpose       meetup:cb654bca70231eab1846031f400775b2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cornelius_Bumpus> ;
+        mtp:hasType          "HT" .

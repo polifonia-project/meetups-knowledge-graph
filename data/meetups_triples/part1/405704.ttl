@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/405704/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christopher Anthony John Martin was born on 2 March 1977 in Exeter, Devon, England, and is the oldest of five children. His father, Anthony John Martin, of Whitestone House, Exeter, is a retired chartered accountant, and his mother, Alison Martin, who is from Zimbabwe, is a music teacher." ;
+        mtp:hasParticipant   meetup:139029077fcdc61d1b87e0a7e5327bef ;
+        mtp:hasPurpose       meetup:f50ade04d6cce1ec9a64a7b18c2edde8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chris_Martin> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Chris_Martin>
+        rdf:type  core:Person .
+
+meetup:f50ade04d6cce1ec9a64a7b18c2edde8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about Christopher Martin's family and background" ;
+        mtp:hasEvidencePurposeSecond  "His mother being a music teacher" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:139029077fcdc61d1b87e0a7e5327bef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anthony John Martin" .

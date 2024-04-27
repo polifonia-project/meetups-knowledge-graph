@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Phil_Daniels>
+        rdf:type  core:Person .
+
+meetup:81e7a2ba573aff0f541342426326cf47
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Daniels appeared in Strictly Come Dancing" ;
+        mtp:hasEvidencePurposeSecond  "Daniels starred in the film Freebird" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Shawn_Daniels>
+        rdf:type  core:Person .
+
+meetup:7bbfda5bead10b2f6877ad3771e70f33
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shawn_Daniels> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daniels" .
+
+<http://w3id.org/polifonia/pilot/meetups/1430046/7/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Also in 2008, Daniels starred alongside Gary Stretch and Geoff Bell in the UK film Freebird, directed by Jon Ivay, which followed three bikers across a drug-fuelled ride in the Welsh countryside. Daniels appeared in the 2008 series of Strictly Come Dancing with dancing partner Flavia Cacace." ;
+        mtp:hasParticipant   meetup:7bbfda5bead10b2f6877ad3771e70f33 , meetup:56858aab4e01dfe6064f25697e140fd7 ;
+        mtp:hasPurpose       meetup:81e7a2ba573aff0f541342426326cf47 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Daniels> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Flavia_Cacace>
+        rdf:type  core:Person .
+
+meetup:56858aab4e01dfe6064f25697e140fd7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Flavia_Cacace> ;
+        mtp:hasOffset           "82" ;
+        mtp:hasSimilarityScore  "0.9999999999845528" ;
+        mtp:hasTextEvidence     "Flavia" .

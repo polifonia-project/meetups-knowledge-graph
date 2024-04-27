@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:3d65c31a64645a86d957ba3251711bd1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pierre_Cao> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "Pierre Cao" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Pierre_Cao>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:c02fc7a22fa73f14306f58727536d2d3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Conducting Eurovision song" ;
+        mtp:hasEvidencePurposeSecond  "Winning Luxembourg's entry" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/20601002/10/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He conducted Luxembourg's winning song \"Tu te reconnaîtras\" in 1973. As such, he was the only conductor ever conducting one of Luxembourg's five winning Eurovision entries." ;
+        mtp:hasPurpose       meetup:c02fc7a22fa73f14306f58727536d2d3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pierre_Cao> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/20601002/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pierre Cao (born 22 December 1937 in Dudelange) is a Luxembourgian composer and conductor." ;
+        mtp:hasParticipant   meetup:3d65c31a64645a86d957ba3251711bd1 ;
+        mtp:hasPurpose       meetup:fdb2c0333b946fe4be1d1aadc6fb2825 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pierre_Cao> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:fdb2c0333b946fe4be1d1aadc6fb2825
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6986971" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24892381" ;
+        mtp:hasSourcePurpose          "ML" .

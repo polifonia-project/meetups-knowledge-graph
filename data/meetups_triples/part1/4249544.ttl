@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/4249544/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was the bassist for Weather Report during their final years from 1982 to 1986, and launched a solo career in 1988." ;
+        mtp:hasParticipant   meetup:e650f469f0411ee744dce84764444b35 ;
+        mtp:hasPurpose       meetup:1ad3e088ce6a10daeb4e68d025b22eff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Victor_Bailey_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:1ad3e088ce6a10daeb4e68d025b22eff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996247" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00021692779" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Victor_Bailey_(musician)>
+        rdf:type  core:Person .
+
+meetup:e650f469f0411ee744dce84764444b35
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Victor_Bailey_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Victor Bailey" .
+
+meetup:a819b01f672f9d771d3f11e258a798ee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8078189" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1920772" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4249544/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Victor Bailey (March 27, 1960 – November 11, 2016) was an American bass guitar player." ;
+        mtp:hasParticipant   meetup:5fdfe0c38eb5b299e93b43611eea2806 ;
+        mtp:hasPurpose       meetup:a819b01f672f9d771d3f11e258a798ee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Victor_Bailey_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:5fdfe0c38eb5b299e93b43611eea2806
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Victor_Bailey_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9974549638875274" ;
+        mtp:hasTextEvidence     "Victor Bailey" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ralph_Peterson_Jr.>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:b689bcef5fb857b1844342370b245e19
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ralph_Peterson_Jr.> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ralph Peterson Jr." .
+
+meetup:8bf8d1106fe36cdc84a179ddd08d01f2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9905228" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0084578255" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/18008123/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ralph Peterson Jr. (May 20, 1962 – March 1, 2021) was an American jazz drummer and bandleader." ;
+        mtp:hasParticipant   meetup:b689bcef5fb857b1844342370b245e19 ;
+        mtp:hasPurpose       meetup:8bf8d1106fe36cdc84a179ddd08d01f2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ralph_Peterson_Jr.> ;
+        mtp:hasType          "HT" .

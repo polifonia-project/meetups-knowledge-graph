@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/29875085/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joyce Spencer, also known as DJ Jazzy Joyce (born June 20, 1967) is an American hip hop DJ from the Bronx, New York and producer on New York City's radio station Hot 97." ;
+        mtp:hasParticipant   meetup:360d1770747c00e84863c0ca08210cb1 ;
+        mtp:hasPurpose       meetup:c9ec27405c18f747ec23398eaedbd822 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Jazzy_Joyce> ;
+        mtp:hasType          "HT" .
+
+meetup:2992f55e3e88cf2deaff39276b473130
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9971949" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001453253" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:c9ec27405c18f747ec23398eaedbd822
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "DJ Jazzy Joyce is a hip hop DJ and producer" ;
+        mtp:hasEvidencePurposeSecond  "Joyce Spencer is her real name" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:633f3119533457fb465e3b7323648d1a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DJ_Jazzy_Joyce> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "DJ Jazzy Joyce" .
+
+meetup:360d1770747c00e84863c0ca08210cb1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/DJ_Jazzy_Joyce> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "DJ Jazzy Joyce" .
+
+<http://w3id.org/polifonia/pilot/meetups/29875085/0/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "DJ Jazzy Joyce went on to tour with Digable Planets following the release of the Blowout Comb album in 1994." ;
+        mtp:hasParticipant   meetup:633f3119533457fb465e3b7323648d1a ;
+        mtp:hasPurpose       meetup:2992f55e3e88cf2deaff39276b473130 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Jazzy_Joyce> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/DJ_Jazzy_Joyce>
+        rdf:type  core:Person .

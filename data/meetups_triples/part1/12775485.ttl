@@ -1,0 +1,52 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a9ac0ebcddc5ff110362a132ff8d0a70
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Corden> ;
+        mtp:hasOffset           "163" ;
+        mtp:hasSimilarityScore  "0.924069903633538" ;
+        mtp:hasTextEvidence     "James Corden" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/James_Corden>
+        rdf:type  core:Person .
+
+meetup:713c9f625b7008a97880e6f35039069a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sheila_Rogers> ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sheila Rogers" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:25fe4ff04e1af832d4ccd3f589ce680c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9832755" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008922437" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Sheila_Rogers>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/12775485/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After the announcement of David Letterman's retirement in 2014, CBS announced that Sheila Rogers would be the new supervising producer for The Late Late Show with James Corden debuting in 2015." ;
+        mtp:hasParticipant   meetup:a9ac0ebcddc5ff110362a132ff8d0a70 , meetup:713c9f625b7008a97880e6f35039069a ;
+        mtp:hasPurpose       meetup:25fe4ff04e1af832d4ccd3f589ce680c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sheila_Rogers> ;
+        mtp:hasType          "HM" .

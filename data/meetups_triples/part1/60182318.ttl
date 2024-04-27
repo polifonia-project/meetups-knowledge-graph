@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5970a76396cec05a54062a5eb5a2f085
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Relocation and involvement in social activism" ;
+        mtp:hasEvidencePurposeSecond  "Involvement in civil rights organization" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/60182318/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After her husband's death in 1893, Asberry moved to Tacoma with her family. This was where she became one of the founding members of the Tacoma Chapter of the National Association for the Advancement of Colored People (NAACP) chapter." ;
+        mtp:hasParticipant   meetup:a0d88b42bc4f86cd9b8038c0f590d4d2 ;
+        mtp:hasPurpose       meetup:5970a76396cec05a54062a5eb5a2f085 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nettie_Craig_Asberry> ;
+        mtp:hasType          "HT" .
+
+meetup:a0d88b42bc4f86cd9b8038c0f590d4d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Asberry" .
+
+<http://dbpedia.org/resource/Nettie_Craig_Asberry>
+        rdf:type  core:Person .

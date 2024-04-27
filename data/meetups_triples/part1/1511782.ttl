@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Budgie_(musician)>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a9ebd7d8dc32d6da0ab8746834a12bba
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performance of music compositions" ;
+        mtp:hasEvidencePurposeSecond  "Event showcasing artistic works" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1511782/7/17>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The programme's world première took place in Hong Kong in November 2010 as part of the New Vision Arts Festival. \"The Butterfly Effect\" featured improvised solos and ensemble works as well as new pieces and arrangements specially created for the festival, inspired by the pace, rhythm and character of Hong Kong." ;
+        mtp:hasPurpose       meetup:a9ebd7d8dc32d6da0ab8746834a12bba ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Budgie_(musician)> ;
+        mtp:hasType          "HT" .

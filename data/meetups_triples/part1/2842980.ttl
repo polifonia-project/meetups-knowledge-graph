@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2842980/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fran Jeffries (born Frances Ann Makris; May 18, 1937 – December 15, 2016) was an American singer, dancer, actress, and model." ;
+        mtp:hasParticipant   meetup:e2767d1ec058b8582677c76fc9ef4d7d , meetup:49675e00e78e31ca0ddf642a17f80876 ;
+        mtp:hasPurpose       meetup:7276d247725fc48dc12499b480561427 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fran_Jeffries> ;
+        mtp:hasType          "HM" .
+
+meetup:e2767d1ec058b8582677c76fc9ef4d7d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Frances Ann Makris" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:49675e00e78e31ca0ddf642a17f80876
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fran_Jeffries> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fran Jeffries" .
+
+meetup:7276d247725fc48dc12499b480561427
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9809734" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018042209" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Fran_Jeffries>
+        rdf:type  core:Person .

@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/28000659/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her first solo album The Wave (2002) was received positively by various music critics;... Of her writing style, Music Critic Johny Luftus wrote \"Chicago singer/songwriter Julie Frost likes to place pleading heartache, clever wordplay, and determined pluck over nuanced arrangements\"." ;
+        mtp:hasParticipant   meetup:c2feb66a8f4e0658681e20d3c6411b3e , meetup:8a1befa2073165738f8dda1b24da68e7 ;
+        mtp:hasPurpose       meetup:c04d031be891d0e1c79b672bfd25c522 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Julie_Frost> ;
+        mtp:hasType          "HM" .
+
+meetup:c04d031be891d0e1c79b672bfd25c522
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Julie Frost's music style and album reception" ;
+        mtp:hasEvidencePurposeSecond  "Julie Frost's personal life and writing style" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c2feb66a8f4e0658681e20d3c6411b3e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johny Luftus" .
+
+meetup:8a1befa2073165738f8dda1b24da68e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Julie_Frost> ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "0.9999999999991472" ;
+        mtp:hasTextEvidence     "Julie Frost" .
+
+<http://dbpedia.org/resource/Julie_Frost>
+        rdf:type  core:Person .

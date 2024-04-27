@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/14640996/7/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Clay's funeral was held on January 16, 2016 at the Liberty Baptist Church in Chicago. After the funeral, he was buried at the Oak Woods Cemetery in Chicago." ;
+        mtp:hasPurpose       meetup:9fb4f7ff49a0d433ff1fda0cf8afbad8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Otis_Clay> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Otis_Clay>
+        rdf:type  core:Person .
+
+meetup:9fb4f7ff49a0d433ff1fda0cf8afbad8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Events related to an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "A gathering to honor and remember someone" ;
+        mtp:hasSourcePurpose          "LLM" .

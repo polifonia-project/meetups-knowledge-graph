@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:43968b713e125a808e27fc83db204086
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jory K. Prum" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/45275263/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jory Prum (January 31, 1975 – April 22, 2016), also known as Jory K. Prum, was an American audio engineer, best known for his work in film and video games." ;
+        mtp:hasParticipant   meetup:43968b713e125a808e27fc83db204086 , meetup:dbf061719db7b1b56b9ef7f9ba201d97 , meetup:bdb0164193a5a5199ac4f8941ef1daba ;
+        mtp:hasPurpose       meetup:7f2711931043bb2080d777f20ce12514 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jory_Prum> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:bdb0164193a5a5199ac4f8941ef1daba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ralph_Kirkpatrick> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "0.5128748898041565" ;
+        mtp:hasTextEvidence     "K." .
+
+<http://dbpedia.org/resource/Ralph_Kirkpatrick>
+        rdf:type  core:Person .
+
+meetup:dbf061719db7b1b56b9ef7f9ba201d97
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jory_Prum> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jory Prum" .
+
+<http://dbpedia.org/resource/Jory_Prum>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:15e6faff1b40146f6beb6675e95853c8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jory_Prum> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jory Prum" .
+
+<http://w3id.org/polifonia/pilot/meetups/45275263/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was the owner of a recording studio located in the San Francisco Bay Area." ;
+        mtp:hasParticipant   meetup:15e6faff1b40146f6beb6675e95853c8 ;
+        mtp:hasPurpose       meetup:7105abd1266103b5a9b9fa3f59d9d509 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jory_Prum> ;
+        mtp:hasType          "HT" .
+
+meetup:7105abd1266103b5a9b9fa3f59d9d509
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8701734" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10860103" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7f2711931043bb2080d777f20ce12514
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99205923" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.004333374" ;
+        mtp:hasSourcePurpose          "ML" .

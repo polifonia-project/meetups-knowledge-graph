@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2951007/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He joined the band in 1977, making an appearance on the album, You Can Tune a Piano but You Can't Tuna Fish released the following year. He replaced Gregg Philbin." ;
+        mtp:hasParticipant   meetup:53111b0331ac0380c76a763aa99fe97b ;
+        mtp:hasPurpose       meetup:20c2061aa3656068db12317c182504c1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bruce_Hall_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bruce_Hall_(musician)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:20c2061aa3656068db12317c182504c1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a band" ;
+        mtp:hasEvidencePurposeSecond  "Career change" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Kevin_Gregg>
+        rdf:type  core:Person .
+
+meetup:53111b0331ac0380c76a763aa99fe97b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Gregg> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.7922994859093834" ;
+        mtp:hasTextEvidence     "Gregg" .

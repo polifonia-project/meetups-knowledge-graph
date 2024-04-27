@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/4660891/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Eddie Jackson (born January 29, 1961), also known as EdBass and One Take, is an American bass guitarist for the progressive metal band Queensrÿche, which he co-founded in 1982." ;
+        mtp:hasParticipant   meetup:3cc8331c9d7acbbbfbcc823564b03150 , meetup:50ed1684fd8b54185f8bb24c554ff497 ;
+        mtp:hasPurpose       meetup:c0fea6faa82b4ab109c6e60c41a5c820 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Jackson_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c0fea6faa82b4ab109c6e60c41a5c820
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9549228" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0417386" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:50ed1684fd8b54185f8bb24c554ff497
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "53" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "EdBass" .
+
+meetup:3cc8331c9d7acbbbfbcc823564b03150
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Jackson_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.5173250346945125" ;
+        mtp:hasTextEvidence     "Eddie Jackson" .
+
+<http://dbpedia.org/resource/Eddie_Jackson_(musician)>
+        rdf:type  core:Person .

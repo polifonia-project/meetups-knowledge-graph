@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:55402347f3dde3f95ed616d34bdd2e0c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Establishing The Ireland Funds" ;
+        mtp:hasEvidencePurposeSecond  "Raising over $450 million" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Tony_O'Reilly>
+        rdf:type  core:Person .
+
+meetup:ef090f602678354dd6b276e9733e0aff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Related to someone's personal life" ;
+        mtp:hasEvidencePurposeSecond  "An unexpected event" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/202018/64/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The American Ireland Fund, now the central entity in The Ireland Funds, was established in Boston by O'Reilly and his friend, Pittsburgh businessman Dan Rooney, in 1976, and for many years this and later similar initiatives in other countries, took up a considerable amount of his time. The funds, now a network with more than ten national entities, have raised over $450 million to date." ;
+        mtp:hasPurpose       meetup:55402347f3dde3f95ed616d34bdd2e0c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_O'Reilly> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/202018/10/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He made his final appearance for Ireland on 14 February 1970, after a six-year absence from the national team, against England. This final appearance was an 11th-hour replacement, denying Frank O'Driscoll—father of Brian, Ireland's most-capped player—what would prove to be his only chance at a Test cap." ;
+        mtp:hasPurpose       meetup:ef090f602678354dd6b276e9733e0aff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_O'Reilly> ;
+        mtp:hasType          "HT" .

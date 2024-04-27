@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fc52962460ffa05f90c13debffa87b23
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97181624" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.028151881" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Marzette_Watts>
+        rdf:type  core:Person .
+
+meetup:173f4ca35676b5c69fb43ee8f50a672c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marzette_Watts> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marzette Watts" .
+
+meetup:8bfa06224e3cd8c1cdebbca562f31a9e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marzette_Watts> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marzette Watts" .
+
+meetup:614b24c021d7ea988459e1296703535e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Marzette Watts was a jazz saxophonist" ;
+        mtp:hasEvidencePurposeSecond  "Marzette Watts was born in Montgomery, Alabama" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/17972586/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He had a brief career in music and is revered for his 1966 self-titled free jazz release." ;
+        mtp:hasParticipant   meetup:173f4ca35676b5c69fb43ee8f50a672c ;
+        mtp:hasPurpose       meetup:fc52962460ffa05f90c13debffa87b23 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marzette_Watts> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/17972586/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marzette Watts (March 9, 1938, Montgomery, Alabama – March 2, 1998, Nashville) was an American jazz tenor and soprano saxophonist." ;
+        mtp:hasParticipant   meetup:8bfa06224e3cd8c1cdebbca562f31a9e ;
+        mtp:hasPurpose       meetup:614b24c021d7ea988459e1296703535e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marzette_Watts> ;
+        mtp:hasType          "HT" .

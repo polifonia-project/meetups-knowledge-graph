@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Bump_J>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8b2a0dc3addf92b82e79758dab495be9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Bump J is an American rapper" ;
+        mtp:hasEvidencePurposeSecond  "Managed by SAL&CO" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/56945875/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Terrance Michael Boykin (born September 15, 1981), better known as Bump J, is an American rapper from Chicago managed by SAL&CO." ;
+        mtp:hasParticipant   meetup:8f7465005adb9db8f1a6837d703498f7 , meetup:41c0f2d737d8aa18445f1ac6dfcf3de6 ;
+        mtp:hasPurpose       meetup:8b2a0dc3addf92b82e79758dab495be9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bump_J> ;
+        mtp:hasType          "HM" .
+
+meetup:8f7465005adb9db8f1a6837d703498f7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bump_J> ;
+        mtp:hasOffset           "67" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Bump J" .
+
+meetup:41c0f2d737d8aa18445f1ac6dfcf3de6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Terrance_Bullitt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "Terrance" .
+
+<http://dbpedia.org/resource/Terrance_Bullitt>
+        rdf:type  core:Person .

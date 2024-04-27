@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ted_Dwane>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/29319130/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ted Dwane (born Edward James Milton Dwane, 15 August 1984) is a British musician and photographer, best known for being the bassist of the Grammy Award-winning British folk rock band Mumford & Sons." ;
+        mtp:hasParticipant   meetup:9d0cc3687d81b0a57abc27e473d06ebd , meetup:5836271c6b403df1957fb2699ae290c9 , meetup:910c6015cb5751d0399e81be8f944bec ;
+        mtp:hasPurpose       meetup:fc9a1266a7609ea8715d2bddf064453f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ted_Dwane> ;
+        mtp:hasType          "HM" .
+
+meetup:fc9a1266a7609ea8715d2bddf064453f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7761557" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13846622" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:910c6015cb5751d0399e81be8f944bec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ted_Dwane> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ted Dwane" .
+
+meetup:9d0cc3687d81b0a57abc27e473d06ebd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Milton> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "0.9998928773675656" ;
+        mtp:hasTextEvidence     "Milton" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/John_Milton>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Edward_James>
+        rdf:type  core:Person .
+
+meetup:5836271c6b403df1957fb2699ae290c9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Edward_James> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "0.9999970365060592" ;
+        mtp:hasTextEvidence     "Edward James" .

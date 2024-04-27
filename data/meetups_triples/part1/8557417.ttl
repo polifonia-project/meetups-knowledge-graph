@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Robert_Grossman>
+        rdf:type  core:Person .
+
+meetup:be49f97e9d45f0e5a5e9e48fb35226b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Grossman> ;
+        mtp:hasOffset           "113" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Robert Grossman" .
+
+<http://dbpedia.org/resource/Richard_Grossman_(publisher)>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:2c335e63ab1663b2084d9b2749372e42
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_Grossman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999974988" ;
+        mtp:hasTextEvidence     "Robert Grossman" .
+
+<http://w3id.org/polifonia/pilot/meetups/8557417/16/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Grossman received a 1977 Academy Awards nomination for \"Best Animated Short Film\" for Jimmy The C (James Picker, Robert Grossman and Craig Whitaker, producers; Motionpicker Productions)." ;
+        mtp:hasParticipant   meetup:be49f97e9d45f0e5a5e9e48fb35226b0 , meetup:351f3b4dea5b5453e28e48aaeb1e3c8d ;
+        mtp:hasPurpose       meetup:4ca9ea8f08ea0813e46bea56b9e32b7d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_Grossman> ;
+        mtp:hasType          "HM" .
+
+meetup:351f3b4dea5b5453e28e48aaeb1e3c8d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Richard_Grossman_(publisher)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Grossman" .
+
+meetup:4ca9ea8f08ea0813e46bea56b9e32b7d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998043" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00017486418" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/8557417/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert Grossman (March 1, 1940 – March 15, 2018) was an American painter, sculptor, filmmaker, comics artist, illustrator and author." ;
+        mtp:hasParticipant   meetup:2c335e63ab1663b2084d9b2749372e42 ;
+        mtp:hasPurpose       meetup:b66cee51f85c6cc9ab5c4c7f73007293 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_Grossman> ;
+        mtp:hasType          "HT" .
+
+meetup:b66cee51f85c6cc9ab5c4c7f73007293
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95918936" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.030669449" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:37ab5d1eecd85385ed8390d9fdf18897
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andy_Warhol> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Andy Warhol" .
+
+<http://w3id.org/polifonia/pilot/meetups/42434332/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born Lee Black Childers in Jefferson County, Kentucky, he started to spell his name with three rather than two \"e\"s as a child." ;
+        mtp:hasParticipant   meetup:af66d9d52820184f07a5f85802e49eaa ;
+        mtp:hasPurpose       meetup:ba0f40b05b8327ef91463d60dfafce09 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leee_Black_Childers> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Leee_Black_Childers>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/42434332/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Childers grew up in Kentucky and attended Kentucky Southern College near Louisville, Kentucky, before moving to San Francisco, and later in 1968 to New York City. He began taking photographs of drag queens and was encouraged by Andy Warhol to work as a photographer, gaining a reputation for his portraits of the artists, musicians and others who passed through the Factory in New York." ;
+        mtp:hasParticipant   meetup:37ab5d1eecd85385ed8390d9fdf18897 ;
+        mtp:hasPurpose       meetup:475e0a72e4d52873339e692bf3b6b73b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leee_Black_Childers> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:ba0f40b05b8327ef91463d60dfafce09
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99966335" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00031811072" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/42434332/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leee Black Childers (July 24, 1945 – April 6, 2014) was an American photographer, writer and rock music manager, who \"recorded the legacy of a theatrical cross over between rock music and gay culture\"." ;
+        mtp:hasParticipant   meetup:fe268e4cb981784465407d15f677286b ;
+        mtp:hasPurpose       meetup:ccceddb05a63dcba2ade577296cc3b19 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leee_Black_Childers> ;
+        mtp:hasType          "HT" .
+
+meetup:ccceddb05a63dcba2ade577296cc3b19
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99808866" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010671732" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:af66d9d52820184f07a5f85802e49eaa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leee_Black_Childers> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Leee Black Childers" .
+
+<http://dbpedia.org/resource/Andy_Warhol>
+        rdf:type  core:Person .
+
+meetup:fe268e4cb981784465407d15f677286b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leee_Black_Childers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Leee Black Childers" .
+
+meetup:475e0a72e4d52873339e692bf3b6b73b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Childers photographed musicians" ;
+        mtp:hasEvidencePurposeSecond  "Childers' personal journey" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,42 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:5c888ee0d1b6303993f8c90259300afd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6612549" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23456244" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0b072e5c8a884d4330e37bdd496a7f74
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Emma_Anderson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999995908837" ;
+        mtp:hasTextEvidence     "Emma Anderson" .
+
+<http://dbpedia.org/resource/Emma_Anderson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1799260/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Emma Anderson (born 10 June 1967) is an English musician." ;
+        mtp:hasParticipant   meetup:0b072e5c8a884d4330e37bdd496a7f74 ;
+        mtp:hasPurpose       meetup:5c888ee0d1b6303993f8c90259300afd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emma_Anderson> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11653967/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1984, they signed a recording contract with Mercury Records and released two studio albums, Velocity (1984) and House of Miracles (1986). They had one minor hit (\"Look My Way\") and a successful MTV music video." ;
+        mtp:hasPurpose       meetup:09c7359ca56c30b94ef3248a3abf2c0c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alice_Cohen> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/11653967/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alice Cohen (born November 25, 1958) also known by the stage name Alice Desoto, is a New York City-based American singer, songwriter, musician and fine artist." ;
+        mtp:hasParticipant   meetup:1b5da6960a496c6b28d850d30ffd0292 ;
+        mtp:hasPurpose       meetup:1e19f0d265abcbdca8ce8d5dadda1f29 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alice_Cohen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Alice_Cohen>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/11653967/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cohen has also pursued a solo career and has released six studio albums since 2008." ;
+        mtp:hasParticipant   meetup:45ce1349b8ab63ba812bd1fee0428700 ;
+        mtp:hasPurpose       meetup:a07cb610914f663521227cd2a2f56b91 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alice_Cohen> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1b5da6960a496c6b28d850d30ffd0292
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alice_Cohen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alice Cohen" .
+
+meetup:45ce1349b8ab63ba812bd1fee0428700
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alice_Cohen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alice Cohen" .
+
+meetup:09c7359ca56c30b94ef3248a3abf2c0c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the band's recording contract and albums." ;
+        mtp:hasEvidencePurposeSecond  "The band's signing of the recording contract may involve business meetings." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:1e19f0d265abcbdca8ce8d5dadda1f29
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9717633" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.028086" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a07cb610914f663521227cd2a2f56b91
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.945716" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.054243375" ;
+        mtp:hasSourcePurpose          "ML" .

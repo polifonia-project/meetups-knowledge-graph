@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5c17a5a77b3293aff143edf1daba9bcd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Dai Meng is an idol singer" ;
+        mtp:hasEvidencePurposeSecond  "Dai Meng was born in Shanghai" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3e699c1e7595ae3f1e81b9a1137fafdc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dài Méng" .
+
+<http://w3id.org/polifonia/pilot/meetups/52409678/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dai Meng (Chinese: 戴萌; pinyin: Dài Méng; born 8 February 1993 in Shanghai, China) is a Chinese idol singer." ;
+        mtp:hasParticipant   meetup:3e699c1e7595ae3f1e81b9a1137fafdc , meetup:f8a3b4b28a9ae26eeb39debc2d897b15 ;
+        mtp:hasPurpose       meetup:5c17a5a77b3293aff143edf1daba9bcd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dai_Meng> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Dai_Meng>
+        rdf:type  core:Person .
+
+meetup:f8a3b4b28a9ae26eeb39debc2d897b15
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dai_Meng> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dai Meng" .

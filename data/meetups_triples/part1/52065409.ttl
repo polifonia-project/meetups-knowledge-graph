@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Jens_Petter_Antonsen>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/52065409/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jens Petter Antonsen (born 2 August 1963) is a Norwegian musician (trumpet), known studio musician from a large number of recordings and television shows." ;
+        mtp:hasParticipant   meetup:0c18dda9e231b81f65dabd2203189638 ;
+        mtp:hasPurpose       meetup:499583cc843494907ea8fbbd8fec31b7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jens_Petter_Antonsen> ;
+        mtp:hasType          "HT" .
+
+meetup:cd63d89a74ee04908500521f00258e2a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Odd R. Antonsen" .
+
+<http://w3id.org/polifonia/pilot/meetups/52065409/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is the son of bandleader Odd R. Antonsen, and brother of musicians Ole Edvard and Tom Erik Antonsen." ;
+        mtp:hasParticipant   meetup:dc33e56ad1050ed5a11cb49827568040 , meetup:cd63d89a74ee04908500521f00258e2a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jens_Petter_Antonsen> ;
+        mtp:hasType          "HM" .
+
+meetup:dc33e56ad1050ed5a11cb49827568040
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jens_Petter_Antonsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jens Petter Antonsen" .
+
+meetup:0c18dda9e231b81f65dabd2203189638
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jens_Petter_Antonsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jens Petter Antonsen" .
+
+meetup:499583cc843494907ea8fbbd8fec31b7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99616975" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0038284701" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,63 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:c8a14f2d7d654de80a98b6cd5b186280
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Playing in bands" ;
+        mtp:hasEvidencePurposeSecond  "Tour manager for Motion City Soundtrack" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/28367473/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is known for playing in bands fordirelifesake, Boys Night Out, The Receiving End of Sirens, Isles & Glaciers, and The Company We Keep. He is also the tour manager for Motion City Soundtrack." ;
+        mtp:hasPurpose       meetup:c8a14f2d7d654de80a98b6cd5b186280 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Southall> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/28367473/13/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2012, a new band featuring Justin Pierre of Motion City Soundtrack, Brian Southall, Amy Brennan and Brendan Morgan was announced." ;
+        mtp:hasParticipant   meetup:47cf09ca197629c197461f354907ff1e , meetup:ed69b68917b83dd6c4acbc577d4110fc ;
+        mtp:hasPurpose       meetup:62828e7248025f65ca3251eb968372c1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Southall> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ed69b68917b83dd6c4acbc577d4110fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Southall> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brian Southall" .
+
+<http://dbpedia.org/resource/Brian_Southall>
+        rdf:type  core:Person .
+
+meetup:62828e7248025f65ca3251eb968372c1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999949" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.054851e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:47cf09ca197629c197461f354907ff1e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "87" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Amy Brennan" .

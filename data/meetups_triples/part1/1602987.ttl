@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ronnie_Gilbert>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e4abc6b41f5ec9c7470cb33728a3bffb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ruth Alice Gilbert" .
+
+meetup:b324d8279c54e3e3b5cde088a08f6d7f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ronnie_Gilbert> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ronnie Gilbert" .
+
+<http://w3id.org/polifonia/pilot/meetups/1602987/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ruth Alice Gilbert (September 7, 1926 – June 6, 2015) as stage name Ronnie Gilbert, was an American folk singer, songwriter, actress and political activist." ;
+        mtp:hasParticipant   meetup:e4abc6b41f5ec9c7470cb33728a3bffb , meetup:b324d8279c54e3e3b5cde088a08f6d7f ;
+        mtp:hasPurpose       meetup:b35b1b16554d84c75be80724a373c342 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ronnie_Gilbert> ;
+        mtp:hasType          "HM" .
+
+meetup:b35b1b16554d84c75be80724a373c342
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9863985" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007435724" ;
+        mtp:hasSourcePurpose          "ML" .

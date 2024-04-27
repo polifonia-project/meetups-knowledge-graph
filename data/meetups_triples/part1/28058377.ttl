@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/28058377/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Stefan Altenburger (Zürich, 1968) is a Swiss visual artist who is best known as musician Golden Boy for his collaborations with Miss Kittin such as the club hit \"Rippin Kittin.\"" ;
+        mtp:hasParticipant   meetup:0b8cd7bb79bb22ce878db29772b5ea65 , meetup:f1de99b4eb5afb207f5ae3157541fca8 ;
+        mtp:hasPurpose       meetup:f6b26d6f0912599d4b2234a2308ae680 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Golden_Boy_(electronic_musician)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Miss_Kittin>
+        rdf:type  core:Person .
+
+meetup:f6b26d6f0912599d4b2234a2308ae680
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995302" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0004639431" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a87aabfc8b8787eef90f9335b4993504
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Visual artist and gallery shows" ;
+        mtp:hasEvidencePurposeSecond  "Winning Swiss Federal Prizes" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f1de99b4eb5afb207f5ae3157541fca8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Golden_Boy_(electronic_musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Stefan Altenburger" .
+
+meetup:0b8cd7bb79bb22ce878db29772b5ea65
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Miss_Kittin> ;
+        mtp:hasOffset           "129" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Miss Kittin" .
+
+<http://dbpedia.org/resource/Golden_Boy_(electronic_musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/28058377/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A resident of Zurich, Switzerland, Altenburger first found recognition as a visual artist, winning the 1991 Swiss Federal Prize for Design and the 1994 Swiss Federal Prize for the Arts. His gallery shows traveled the world, getting him published in a multitude of European publications." ;
+        mtp:hasPurpose       meetup:a87aabfc8b8787eef90f9335b4993504 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Golden_Boy_(electronic_musician)> ;
+        mtp:hasType          "HT" .

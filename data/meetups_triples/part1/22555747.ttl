@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a61b06f7a3572d20a6a4e2c65ee6f019
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tina_Turner> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "0.8259261050645509" ;
+        mtp:hasTextEvidence     "Tina" .
+
+meetup:ad358eaa886bd73048e21e9a26757a1c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tina_Parol> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Tina Parol" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/22555747/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tina Parol (born Tina Annetta Borusowski, 1988) is an American singer-songwriter and record producer." ;
+        mtp:hasParticipant   meetup:ad358eaa886bd73048e21e9a26757a1c , meetup:a61b06f7a3572d20a6a4e2c65ee6f019 ;
+        mtp:hasPurpose       meetup:a9c499c64f124c61b5bbb20dc9071eae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tina_Parol> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Tina_Turner>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Tina_Parol>
+        rdf:type  core:Person .
+
+meetup:a9c499c64f124c61b5bbb20dc9071eae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.59078026" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35380745" ;
+        mtp:hasSourcePurpose          "ML" .

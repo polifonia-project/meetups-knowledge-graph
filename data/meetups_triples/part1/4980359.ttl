@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Paul_Crook>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4980359/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paul Crook (born February 12, 1966 in Plainfield, New Jersey) is an American guitarist currently recording and performing with Meat Loaf." ;
+        mtp:hasParticipant   meetup:6c58c8fad240e56ddb393d4f53321f0b ;
+        mtp:hasPurpose       meetup:505763185784d82666a0e299a04fbccb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Crook> ;
+        mtp:hasType          "HT" .
+
+meetup:505763185784d82666a0e299a04fbccb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9258065" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06488544" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Marya_Roxx>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:319d59a5ccee2344bea93aaa7a09ba79
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marya_Roxx> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marya Roxx" .
+
+<http://w3id.org/polifonia/pilot/meetups/4980359/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has also recorded and toured with Anthrax, Sebastian Bach and Marya Roxx." ;
+        mtp:hasParticipant   meetup:ee45a90b5dbe07d7ab529927f3b8dac5 , meetup:319d59a5ccee2344bea93aaa7a09ba79 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Crook> ;
+        mtp:hasType          "HM" .
+
+meetup:ee45a90b5dbe07d7ab529927f3b8dac5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Crook> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Paul Crook" .
+
+meetup:6c58c8fad240e56ddb393d4f53321f0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Crook> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Paul Crook" .

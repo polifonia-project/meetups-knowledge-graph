@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/666272/32/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During the 1990s, King purchased a pub in Ryde. The pub was named Joe Daflo's, a collaboration of the names of his three children; his son D'Arcy and daughters Jolie and Florrie." ;
+        mtp:hasParticipant   meetup:15bcff1246efed5e504f1d6c98b66faf ;
+        mtp:hasPurpose       meetup:1b51e84819848c985574fdcbdbfc345a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_King_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Florrie>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Mark_King_(musician)>
+        rdf:type  core:Person .
+
+meetup:15bcff1246efed5e504f1d6c98b66faf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Florrie> ;
+        mtp:hasOffset           "122" ;
+        mtp:hasSimilarityScore  "0.9999999296613022" ;
+        mtp:hasTextEvidence     "Florrie" .
+
+meetup:1b51e84819848c985574fdcbdbfc345a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "King's personal life and family" ;
+        mtp:hasEvidencePurposeSecond  "King's business venture in purchasing a pub" ;
+        mtp:hasSourcePurpose          "LLM" .

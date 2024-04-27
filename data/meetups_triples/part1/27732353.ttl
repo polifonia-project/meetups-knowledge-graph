@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jon_Baker_(producer)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/27732353/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has worked as a fashion designer, promoter, and is currently co-owner of Geejam, a luxury resort and recording studio located in San San, near Port Antonio, Jamaica." ;
+        mtp:hasParticipant   meetup:6bfb3940efe53c28cd5ab2792e15b90d ;
+        mtp:hasPurpose       meetup:31988219c4a4db04cda663b8b9886944 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jon_Baker_(producer)> ;
+        mtp:hasType          "HT" .
+
+meetup:31988219c4a4db04cda663b8b9886944
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95223016" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03792993" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:191cab24f2168ce51aef74c15fbecd37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jon_Baker_(producer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8360630971541847" ;
+        mtp:hasTextEvidence     "Jon Baker" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:6bfb3940efe53c28cd5ab2792e15b90d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jon_Baker_(producer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jon Baker" .
+
+meetup:0be70cca58b45b3b0998c80caad57325
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Meeting with club promoter" ;
+        mtp:hasEvidencePurposeSecond  "Introduction to hip-hop scene" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3acd8127329c4d2363ef85f41bd8c3f9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5232586" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4710577" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/27732353/4/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1982, Baker launched UK fashion label Demob in New York. Baker then based himself in New York where he met club promoter and manager Ruza Blue who introduced him to the hip-hop scene in the Bronx." ;
+        mtp:hasPurpose       meetup:0be70cca58b45b3b0998c80caad57325 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jon_Baker_(producer)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/27732353/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jon Baker (born 1960) is a music industry executive." ;
+        mtp:hasParticipant   meetup:191cab24f2168ce51aef74c15fbecd37 ;
+        mtp:hasPurpose       meetup:3acd8127329c4d2363ef85f41bd8c3f9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jon_Baker_(producer)> ;
+        mtp:hasType          "HT" .

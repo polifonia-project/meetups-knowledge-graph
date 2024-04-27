@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:fa801ac472f1693c8ae3151b9856d2bd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.78508824" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.109622985" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/45364555/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Napier (born 18 September 1984), known professionally as Jimmy Napes, is an English songwriter and record producer." ;
+        mtp:hasParticipant   meetup:c5a91fdf791e78b60935f66c293aacdb , meetup:fb09085c02d84082339be2ab556cd981 ;
+        mtp:hasPurpose       meetup:fa801ac472f1693c8ae3151b9856d2bd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jimmy_Napes> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Jimmy_Napes>
+        rdf:type  core:Person .
+
+meetup:c5a91fdf791e78b60935f66c293aacdb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.6214866584425082" ;
+        mtp:hasTextEvidence     "James" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:fb09085c02d84082339be2ab556cd981
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jimmy_Napes> ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jimmy Napes" .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .

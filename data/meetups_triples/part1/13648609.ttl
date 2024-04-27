@@ -1,0 +1,97 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Roger_Glover>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/13648609/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Although he plays saxophone as well, Glover's primary instrument is the clarinet." ;
+        mtp:hasParticipant   meetup:7941646afe43b6f8f4cf7d357ae7228d , meetup:db8ea590891690934d09d3b084366e8e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frank_Glover> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Frank_Glover>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9ed1068a4676dca1c22a01ba3a994163
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Glover> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Frank Glover" .
+
+meetup:7941646afe43b6f8f4cf7d357ae7228d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roger_Glover> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "0.5829979272010554" ;
+        mtp:hasTextEvidence     "Glover" .
+
+meetup:52d815c2dddfeeb39626eee2d21815a8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Claude Sifferlen" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/13648609/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "For decades, his mentor and collaborator was Indianapolis jazz pianist Claude Sifferlen." ;
+        mtp:hasParticipant   meetup:52d815c2dddfeeb39626eee2d21815a8 , meetup:bd0a410643c89a9fccaef8a7ad56f460 ;
+        mtp:hasPurpose       meetup:5aaf03ef37468b8aa2c43fe770b871a0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frank_Glover> ;
+        mtp:hasType          "HM" .
+
+meetup:55f0ef85055196f80a89cdbd0b7b9a33
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999607" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.7026242e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:db8ea590891690934d09d3b084366e8e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Glover> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Frank Glover" .
+
+meetup:5aaf03ef37468b8aa2c43fe770b871a0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a jazz pianist and his mentor" ;
+        mtp:hasEvidencePurposeSecond  "It also mentions their collaboration" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/13648609/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Frank Glover (born June 27, 1963) is a contemporary jazz musician and composer from Indianapolis, Indiana." ;
+        mtp:hasParticipant   meetup:9ed1068a4676dca1c22a01ba3a994163 ;
+        mtp:hasPurpose       meetup:55f0ef85055196f80a89cdbd0b7b9a33 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Frank_Glover> ;
+        mtp:hasType          "HT" .
+
+meetup:bd0a410643c89a9fccaef8a7ad56f460
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Frank_Glover> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Frank Glover" .

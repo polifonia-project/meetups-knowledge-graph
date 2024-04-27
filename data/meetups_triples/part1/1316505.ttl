@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:115c2bddfb2a0c5a5138bea78eef2d34
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Focus on academic achievements" ;
+        mtp:hasEvidencePurposeSecond  "Involvement in music education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:47e5502d1434dffccb7abc7415f4e80a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christian_Jacob_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Christian Jacob" .
+
+meetup:f2014b38bb856871246c1d586e29aa12
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tierney_Sutton> ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tierney Sutton" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Tierney_Sutton>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1316505/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In January 1983, Jacob entered Berklee College of Music in Boston, Massachusetts, and won many awards as a student, including the Joe Zawinul Jazz Masters Award, Oscar Peterson Jazz Masters Award, and Down Beat \"Top Collegiate Jazz Soloist\" before graduating magna cum laude in 1985. Jacob then took a teaching position at Berklee." ;
+        mtp:hasPurpose       meetup:115c2bddfb2a0c5a5138bea78eef2d34 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christian_Jacob_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Christian_Jacob_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1316505/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has gained widespread exposure as co-leader, arranger and pianist with vocalist Tierney Sutton, although he has also maintained a substantial career as a solo artist and leader." ;
+        mtp:hasParticipant   meetup:f2014b38bb856871246c1d586e29aa12 , meetup:47e5502d1434dffccb7abc7415f4e80a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christian_Jacob_(musician)> ;
+        mtp:hasType          "HM" .

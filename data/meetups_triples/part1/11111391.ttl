@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:f47cecc45edcc3b8a928a51b3ab9e076
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9696462" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.022092417" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/11111391/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gilberto Santa Rosa, in his song \"Navidad En Panama\", mentions Altamiranda as part of Panamanian culture." ;
+        mtp:hasParticipant   meetup:69ea33ea7b21ab37cd9cb1705e2e200c , meetup:9cf5b081b7021eba975cf84d153218be ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pedro_Altamiranda> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Gilberto_Santa_Rosa>
+        rdf:type  core:Person .
+
+meetup:5c44ffddcf4808bc2d1b61d963f974b5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pedro_Altamiranda> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pedro Altamiranda" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Pedro_Altamiranda>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/11111391/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Altamiranda sings about the culture and politics of Panama using humorous Panamanian slang." ;
+        mtp:hasParticipant   meetup:5c44ffddcf4808bc2d1b61d963f974b5 ;
+        mtp:hasPurpose       meetup:f47cecc45edcc3b8a928a51b3ab9e076 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pedro_Altamiranda> ;
+        mtp:hasType          "HT" .
+
+meetup:69ea33ea7b21ab37cd9cb1705e2e200c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pedro_Altamiranda> ;
+        mtp:hasOffset           "63" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Pedro Altamiranda" .
+
+meetup:9cf5b081b7021eba975cf84d153218be
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gilberto_Santa_Rosa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gilberto Santa Rosa" .

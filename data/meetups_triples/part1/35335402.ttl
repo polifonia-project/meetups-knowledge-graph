@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5a30720ece899dcd5db9fb2974a1911e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99000704" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009651944" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Logan_Mize>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/35335402/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Logan Mize is a country music artist/songwriter from Clearwater, Kansas signed to Big Yellow Dog Music." ;
+        mtp:hasParticipant   meetup:107512c7884ddb45cdf3d48a37e9d9ad ;
+        mtp:hasPurpose       meetup:5a30720ece899dcd5db9fb2974a1911e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Logan_Mize> ;
+        mtp:hasType          "HT" .
+
+meetup:107512c7884ddb45cdf3d48a37e9d9ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Logan_Mize> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999968084010276" ;
+        mtp:hasTextEvidence     "Logan Mize" .

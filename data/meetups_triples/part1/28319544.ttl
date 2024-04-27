@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/28319544/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hans Ek (born 1964 in Uppsala, Sweden), is a conductor and arranger working in the meeting between classical music, jazz, pop and folk music." ;
+        mtp:hasParticipant   meetup:6c3fb6bdde7e72c6337b650b4cc89750 ;
+        mtp:hasPurpose       meetup:45b8510b19c48261d4b15b6a0c12ede6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hans_Ek> ;
+        mtp:hasType          "HT" .
+
+meetup:45b8510b19c48261d4b15b6a0c12ede6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99918085" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0005765048" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6c3fb6bdde7e72c6337b650b4cc89750
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hans_Ek> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "Hans Ek" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Hans_Ek>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .

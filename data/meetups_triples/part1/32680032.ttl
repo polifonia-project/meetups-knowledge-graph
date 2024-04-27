@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/32680032/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Maria Korchinska (16 February 1895 – 17 April 1979) was a distinguished 20th-century Russian harpist and one of the leading 20th-century harpists in Great Britain." ;
+        mtp:hasParticipant   meetup:e209ef67843959482a0e4fa2eb758a28 ;
+        mtp:hasPurpose       meetup:ef1674b66c62312ff550d7ca8ff9a76f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maria_Korchinska> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Maria_Korchinska>
+        rdf:type  core:Person .
+
+meetup:e209ef67843959482a0e4fa2eb758a28
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maria_Korchinska> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Maria Korchinska" .
+
+meetup:ef1674b66c62312ff550d7ca8ff9a76f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6700867" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.32971174" ;
+        mtp:hasSourcePurpose          "ML" .

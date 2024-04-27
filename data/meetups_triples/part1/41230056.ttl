@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:8574e97969ab8d19d79959a3e3132e94
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/OG_Boo_Dirty> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "OG Boo Dirty" .
+
+<http://w3id.org/polifonia/pilot/meetups/41230056/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lance Taylor, known as OG Boo Dirty, is an American rapper from Memphis, Tennessee." ;
+        mtp:hasParticipant   meetup:81cff88e8c7c72343874dc8634a9c5b7 , meetup:8574e97969ab8d19d79959a3e3132e94 ;
+        mtp:hasPurpose       meetup:116984afe62d92a24fbfaece1fc9a7d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/OG_Boo_Dirty> ;
+        mtp:hasType          "HM" .
+
+meetup:81cff88e8c7c72343874dc8634a9c5b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Afrika_Bambaataa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9971844998756094" ;
+        mtp:hasTextEvidence     "Lance Taylor" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Afrika_Bambaataa>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/OG_Boo_Dirty>
+        rdf:type  core:Person .
+
+meetup:116984afe62d92a24fbfaece1fc9a7d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7817493" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.120638125" ;
+        mtp:hasSourcePurpose          "ML" .

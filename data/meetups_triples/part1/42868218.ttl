@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/David_Byrne>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Larry_Elgart>
+        rdf:type  core:Person .
+
+meetup:fc685740c547e0a51e58fdd3c36b6600
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Byrne> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Byrne" .
+
+<http://w3id.org/polifonia/pilot/meetups/42868218/5/14>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He re-built his band yet again in 1950, eliminating woodwinds and focusing on brass and saxes, not to mention his occasional harp solo. This band included his brother Don and a sax section led by Larry Elgart." ;
+        mtp:hasParticipant   meetup:fc685740c547e0a51e58fdd3c36b6600 , meetup:2f5d5129f6e07cdd94969b9933e71f09 ;
+        mtp:hasPurpose       meetup:70be9cde66519b3296d8ae7ccee40e4e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bobby_Byrne_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bobby_Byrne_(musician)>
+        rdf:type  core:Person .
+
+meetup:2f5d5129f6e07cdd94969b9933e71f09
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Larry_Elgart> ;
+        mtp:hasOffset           "60" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Larry Elgart" .
+
+meetup:70be9cde66519b3296d8ae7ccee40e4e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating and leading a band" ;
+        mtp:hasEvidencePurposeSecond  "Family and personal relationships" ;
+        mtp:hasSourcePurpose          "LLM" .

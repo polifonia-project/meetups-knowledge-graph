@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Jean_Hubeau>
+        rdf:type  core:Person .
+
+meetup:5afa8151d56c9342df511313dbcc9054
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jean_Hubeau> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Jean Hubeau" .
+
+<http://dbpedia.org/resource/Paul_Dukas>
+        rdf:type  core:Person .
+
+meetup:82f665d6bf97c31fa0fdbe6f2a7f851f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jean_Hubeau> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jean Hubeau" .
+
+meetup:ea7333948bb55f4c9882e6953761a0b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mario Hacquard" .
+
+meetup:b362e00b21a7d1d52c5204214f46f477
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93823457" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05004419" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/21716710/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jean Hubeau (22 June 1917 – 19 August 1992) was a French pianist, composer and pedagogue known especially for his recordings of Gabriel Fauré, Robert Schumann and Paul Dukas, which are recognized as benchmark versions." ;
+        mtp:hasParticipant   meetup:82f665d6bf97c31fa0fdbe6f2a7f851f , meetup:e810e75519b716c8edf71f2355a680a4 ;
+        mtp:hasPurpose       meetup:b362e00b21a7d1d52c5204214f46f477 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jean_Hubeau> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/21716710/28/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jean Hubeau - Quatre Rondels de François Villon Mario" ;
+        mtp:hasParticipant   meetup:ea7333948bb55f4c9882e6953761a0b6 , meetup:5afa8151d56c9342df511313dbcc9054 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jean_Hubeau> ;
+        mtp:hasType          "HM" .
+
+meetup:e810e75519b716c8edf71f2355a680a4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Dukas> ;
+        mtp:hasOffset           "166" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Paul Dukas" .

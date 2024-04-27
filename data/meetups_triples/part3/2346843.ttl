@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1aeffe2dcd5113f1631d60714607fdb2
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "January 10 , 1948" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1948-01-10"^^xsd:date ;
+        time:hasEnd          "1948-01-10"^^xsd:date .
+
+<http://dbpedia.org/resource/Mischa_Maisky>
+        rdf:type  core:Person .
+
+meetup:cdc9b7b5ce5cffb020412321fbab3c74
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1942–1981" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1942-01-01"^^xsd:date ;
+        time:hasEnd          "1981-12-31"^^xsd:date .
+
+meetup:278f0eb660b4fdfc4ea101ce66eb2aef
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1948" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1948-01-01"^^xsd:date ;
+        time:hasEnd          "1948-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/2346843/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:1aeffe2dcd5113f1631d60714607fdb2 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mischa_Maisky> ;
+        mtp:hasType     "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2346843/2/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:cdc9b7b5ce5cffb020412321fbab3c74 , meetup:278f0eb660b4fdfc4ea101ce66eb2aef ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Mischa_Maisky> ;
+        mtp:hasType     "HM" .

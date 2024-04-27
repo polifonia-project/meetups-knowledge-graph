@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11698034/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Reynolds was born on July 14, 1987 in Las Vegas, Nevada, the seventh of nine children (eight boys and one girl) of Christene M. (née Callister) and Ronald Reynolds, a lawyer and author. Both are natives of Nevada, and Reynolds is a 4th generation Nevadan." ;
+        mtp:hasParticipant   meetup:a14b1f57e7773c9bb5b01fc4bd3d04cf ;
+        mtp:hasPurpose       meetup:cd0a2a0f3a04ddf7ab96cf76c1680127 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Reynolds_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a14b1f57e7773c9bb5b01fc4bd3d04cf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Christene M." .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/11698034/5/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bassist Ben McKee joined the band in Las Vegas and after Tolman's departure 2011 invited Daniel Platzman, also a friend of Wayne's from Berklee College of Music, to play drums, thus completing the group's current lineup. The band relocated to Las Vegas, where they began performing almost nightly as a lounge act." ;
+        mtp:hasPurpose       meetup:2d8202b52218bbd3373fca089e345157 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dan_Reynolds_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:cd0a2a0f3a04ddf7ab96cf76c1680127
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Reynolds' family and background" ;
+        mtp:hasEvidencePurposeSecond  "Information about Reynolds' education and upbringing" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Dan_Reynolds_(singer)>
+        rdf:type  core:Person .
+
+meetup:2d8202b52218bbd3373fca089e345157
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the band's lineup and their music making journey." ;
+        mtp:hasEvidencePurposeSecond  "The band members met at Berklee College of Music." ;
+        mtp:hasSourcePurpose          "LLM" .

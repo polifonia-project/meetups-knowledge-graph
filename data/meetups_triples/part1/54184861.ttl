@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Akari_Kitō>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/54184861/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Because she was from Aichi Prefecture which is 4 hours away from Tokyo, moving to Tokyo never crossed her mind. After consideration, she decided not to waste money attending and instead decided to move to Tokyo to become a voice actress seeing as she was still young and wanted a challenge." ;
+        mtp:hasPurpose       meetup:a62abdcab0266e4d1244a892597f303b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Akari_Kitō> ;
+        mtp:hasType          "HT" .
+
+meetup:a62abdcab0266e4d1244a892597f303b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Decision about personal goals and challenges" ;
+        mtp:hasEvidencePurposeSecond  "Pursuing a career in voice acting" ;
+        mtp:hasSourcePurpose          "LLM" .

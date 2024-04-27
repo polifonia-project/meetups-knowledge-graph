@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f6dec817be95eb9c8c8c84a473c474c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995035" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00046239162" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/3075902/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ruth Ann Swenson (born August 25, 1959) is an American soprano who is renowned for her coloratura roles." ;
+        mtp:hasParticipant   meetup:b81b84b3bc4bb874455c688724513fd8 ;
+        mtp:hasPurpose       meetup:f6dec817be95eb9c8c8c84a473c474c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruth_Ann_Swenson> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Ruth_Ann_Swenson>
+        rdf:type  core:Person .
+
+meetup:b81b84b3bc4bb874455c688724513fd8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruth_Ann_Swenson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ruth Ann Swenson" .

@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/24503891/6/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2012, he released \"Playing with fire\" a Top 40 single en Chile. He sang the anthem for the 2012 Teletón." ;
+        mtp:hasParticipant   meetup:caf78541071f09a7f78343f439052158 ;
+        mtp:hasPurpose       meetup:7882f64a7a5a8eee232ebb9d3fcf676b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/DJ_Méndez> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/DJ_Méndez>
+        rdf:type  core:Person .
+
+meetup:7882f64a7a5a8eee232ebb9d3fcf676b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Creating and releasing music" ;
+        mtp:hasEvidencePurposeSecond  "Participating in a public event" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:caf78541071f09a7f78343f439052158
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yohander_Méndez> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Méndez" .
+
+<http://dbpedia.org/resource/Yohander_Méndez>
+        rdf:type  core:Person .

@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:9c1c92ffd2b80959d5eec4a52cd8a4ae
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "1853 – 4 March 1918" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/14117563/6/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:22376df99e4638fbfd1193ba1c78915a ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Alfred_Schulz-Curtius> ;
+        mtp:hasType     "HT" .
+
+meetup:22376df99e4638fbfd1193ba1c78915a
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the late 1990s" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1997-01-01"^^xsd:date ;
+        time:hasEnd          "1999-12-31"^^xsd:date .
+
+meetup:28896e3c0c8ad87d1a4d612400eaa148
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1910s" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1910-01-01"^^xsd:date ;
+        time:hasEnd          "1919-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/14117563/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:28896e3c0c8ad87d1a4d612400eaa148 , meetup:d4d8551d1c1806221e0d7cf2b3306e77 , meetup:9c1c92ffd2b80959d5eec4a52cd8a4ae ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Alfred_Schulz-Curtius> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Alfred_Schulz-Curtius>
+        rdf:type  core:Person .
+
+meetup:d4d8551d1c1806221e0d7cf2b3306e77
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1870s" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1870-01-01"^^xsd:date ;
+        time:hasEnd          "1879-12-31"^^xsd:date .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .

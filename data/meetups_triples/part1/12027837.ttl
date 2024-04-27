@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/12027837/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Edward Joseph Bertolatus (May 16, 1922 – September 27, 2012), better known as Eddie Bert, was an American jazz trombonist." ;
+        mtp:hasParticipant   meetup:2b0b270ac1decd50b420a7f0594875df , meetup:28d951efaf44ff22ab95a8cbe96d00ef ;
+        mtp:hasPurpose       meetup:3380fa136a27b9123b8237bdd3c57347 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Bert> ;
+        mtp:hasType          "HM" .
+
+meetup:3380fa136a27b9123b8237bdd3c57347
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99887675" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001121764" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:28d951efaf44ff22ab95a8cbe96d00ef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Edward Joseph Bertolatus" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:2b0b270ac1decd50b420a7f0594875df
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Bert> ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Eddie Bert" .
+
+<http://dbpedia.org/resource/Eddie_Bert>
+        rdf:type  core:Person .

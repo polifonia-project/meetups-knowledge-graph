@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e68f78e85fb5c5e557dd6792e7594469
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fantastic_Plastic_Machine_(musician)> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fantastic Plastic Machine" .
+
+meetup:a2e066dd7ef8e8c2259ae7934fb1a647
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.3680831" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.31904402" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:dc4540bb2892e343511d4bd745bf28e4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99672735" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0032536974" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Fantastic_Plastic_Machine_(musician)>
+        rdf:type  core:Person .
+
+meetup:9065982fc5615983b457c35bdcd1f3d4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fantastic_Plastic_Machine_(musician)> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "0.9999999999935056" ;
+        mtp:hasTextEvidence     "Fantastic Plastic Machine" .
+
+<http://w3id.org/polifonia/pilot/meetups/1862380/35/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "FPMB: Fantastic Plastic Machine Best   (2007)" ;
+        mtp:hasParticipant   meetup:e68f78e85fb5c5e557dd6792e7594469 ;
+        mtp:hasPurpose       meetup:a2e066dd7ef8e8c2259ae7934fb1a647 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fantastic_Plastic_Machine_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1862380/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "(2002)AlbumsThe Fantastic Plastic Machine (1997)" ;
+        mtp:hasParticipant   meetup:9065982fc5615983b457c35bdcd1f3d4 ;
+        mtp:hasPurpose       meetup:dc4540bb2892e343511d4bd745bf28e4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fantastic_Plastic_Machine_(musician)> ;
+        mtp:hasType          "HT" .

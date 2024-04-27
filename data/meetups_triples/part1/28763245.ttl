@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Mónica_Cosachov>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/28763245/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Monica Cosachov (born 7 September 1946) is an Argentine harpsichordist, pianist and composer." ;
+        mtp:hasParticipant   meetup:bb6e65f9d185a4743ce0c47922d2521f ;
+        mtp:hasPurpose       meetup:d157bf904b858be83a603a09e8344cb7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mónica_Cosachov> ;
+        mtp:hasType          "HT" .
+
+meetup:d157bf904b858be83a603a09e8344cb7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9961392" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0025186378" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:bb6e65f9d185a4743ce0c47922d2521f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mónica_Cosachov> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Monica Cosachov" .

@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1b4cb04c9b3c27cbf214325d737a46de
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daddy_X> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brad Xavier" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ba5776adadf0d6296cef3e86a35771bf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sky Blue Xavier" .
+
+<http://w3id.org/polifonia/pilot/meetups/6380291/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brad Xavier, known by his stage name Daddy X, (born February 21, 1965) is a hip hop artist and record producer." ;
+        mtp:hasParticipant   meetup:1b4cb04c9b3c27cbf214325d737a46de ;
+        mtp:hasPurpose       meetup:d225003fefc15b319951ddc994b619cb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daddy_X> ;
+        mtp:hasType          "HT" .
+
+meetup:bd6f8f674ceee88442cfa15d22dd7e69
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daddy_X> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Brad Xavier" .
+
+meetup:d225003fefc15b319951ddc994b619cb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8438056" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14745338" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6380291/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has a daughter named Sky Blue Xavier, and wrote a song for her on his debut solo album Organic Soul." ;
+        mtp:hasParticipant   meetup:bd6f8f674ceee88442cfa15d22dd7e69 , meetup:ba5776adadf0d6296cef3e86a35771bf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daddy_X> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Daddy_X>
+        rdf:type  core:Person .

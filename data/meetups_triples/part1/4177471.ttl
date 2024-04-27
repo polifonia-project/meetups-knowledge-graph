@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Evan_Marshall_(baseball)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7171abb965686acfe77ee1ba0f4d1fcb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Evan_Marshall_(baseball)> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.612764701127082" ;
+        mtp:hasTextEvidence     "Evan Marshall" .
+
+meetup:d06325d8e1c411c5aafcc4ad90457b98
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Daddy_G> ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Daddy G" .
+
+<http://w3id.org/polifonia/pilot/meetups/4177471/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Grantley Evan Marshall (born 18 December 1959), also known by the stage name Daddy G, is a British DJ and a founding member of the band  Massive Attack." ;
+        mtp:hasParticipant   meetup:7171abb965686acfe77ee1ba0f4d1fcb , meetup:d06325d8e1c411c5aafcc4ad90457b98 ;
+        mtp:hasPurpose       meetup:63674df8dc1feff8a847962bcf5c297f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Daddy_G> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Daddy_G>
+        rdf:type  core:Person .
+
+meetup:63674df8dc1feff8a847962bcf5c297f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9450265" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0549352" ;
+        mtp:hasSourcePurpose          "ML" .

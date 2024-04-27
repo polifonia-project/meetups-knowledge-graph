@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Lyndon_B._Johnson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/71965/25/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Johnson–Jeffries Fight film received more public attention in the United States than any other film to date and for the next five years, until the release of The Birth of a Nation. In the United States, many states and cities banned the exhibition of the Johnson–Jeffries film." ;
+        mtp:hasParticipant   meetup:357147fe239c239dfae266402b36d405 ;
+        mtp:hasPurpose       meetup:185d2220b2c5406bc9448bfc4d1bff82 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Johnson_(boxer)> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:185d2220b2c5406bc9448bfc4d1bff82
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Film receiving public attention" ;
+        mtp:hasEvidencePurposeSecond  "Banning of film exhibition" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/71965/47/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1911 Johnson, through an acquaintance, attempted to become a Freemason in Dundee. Although he was admitted as a member of the Forfar and Kincardine Lodge No 225 in the city, there was considerable opposition to his membership, principally on the grounds of his race, and the Forfarshire Lodge was suspended by the Grand Lodge of Scotland." ;
+        mtp:hasParticipant   meetup:4fe759dd3157d188b1e89bb9ceeebfc9 ;
+        mtp:hasPurpose       meetup:43f7d8d341851dc1bf99c6ec6289ae72 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Johnson_(boxer)> ;
+        mtp:hasType          "HT" .
+
+meetup:43f7d8d341851dc1bf99c6ec6289ae72
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Unforeseen events or circumstances" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:4fe759dd3157d188b1e89bb9ceeebfc9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lyndon_B._Johnson> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johnson" .
+
+<http://dbpedia.org/resource/Jack_Johnson_(boxer)>
+        rdf:type  core:Person .
+
+meetup:357147fe239c239dfae266402b36d405
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lyndon_B._Johnson> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Johnson" .

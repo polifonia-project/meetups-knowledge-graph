@@ -1,0 +1,101 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Tommy_Keene>
+        rdf:type  core:Person .
+
+meetup:0306e64c3e06a7ed4da8a5b124b14741
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9388943" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.055505954" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/3018482/24/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Drowning—A Tommy Keene Miscellany (2004, Not Lame)" ;
+        mtp:hasParticipant   meetup:97cd35fcbef30d94fd0febecbbf5e399 ;
+        mtp:hasPurpose       meetup:0306e64c3e06a7ed4da8a5b124b14741 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Keene> ;
+        mtp:hasType          "HT" .
+
+meetup:4e58169cd3e05ba41e943aab88280fcf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98915863" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.005248341" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ee0d9cc254c23e123906954de163b917
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tommy_Keene> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tommy Keene" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:f910eb8f54c1f68b132d6b0f71c0a305
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music bands" ;
+        mtp:hasEvidencePurposeSecond  "Graduation and personal connections" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3f6ffe3ed0e769740524b71fef3dbb9d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nils_Lofgren> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nils Lofgren" .
+
+<http://dbpedia.org/resource/Nils_Lofgren>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3018482/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He graduated in 1976 from Walter Johnson High School in Bethesda, which was also the alma mater of fellow musician Nils Lofgren, who went on to play and record with Neil Young and Bruce Springsteen. Keene played drums in one version of Lofgren's early bands." ;
+        mtp:hasParticipant   meetup:3f6ffe3ed0e769740524b71fef3dbb9d ;
+        mtp:hasPurpose       meetup:f910eb8f54c1f68b132d6b0f71c0a305 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Keene> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/3018482/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tommy Keene (born Thomas Clay Keene; June 30, 1958 – November 22, 2017) was an American singer-songwriter, best known for releasing critically acclaimed rock & roll/power pop songs in the 1980s." ;
+        mtp:hasParticipant   meetup:ab433731e953b26718da0fd5c674a4d3 , meetup:ee0d9cc254c23e123906954de163b917 ;
+        mtp:hasPurpose       meetup:4e58169cd3e05ba41e943aab88280fcf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tommy_Keene> ;
+        mtp:hasType          "HM" .
+
+meetup:ab433731e953b26718da0fd5c674a4d3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Thomas Clay Keene" .
+
+meetup:97cd35fcbef30d94fd0febecbbf5e399
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tommy_Keene> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tommy Keene" .

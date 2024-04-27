@@ -1,0 +1,80 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:b6c26e8deb22d74d856541e4a4691e3a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6142064" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3856781" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7b5abed550740c5dc4b0e6e57bf8bd07
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.85121524" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.13316724" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/5639987/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Santitos Colón is survived by his sons Santos and George and daughter Diana Vega Namer, who reside in Sarasota, Florida." ;
+        mtp:hasParticipant   meetup:60e7ec303db91230a464d196b0664771 , meetup:b5b3010bafac566944b9841cf52fb755 , meetup:a7e5dadd5a5939c95f0883c665c4e521 ;
+        mtp:hasPurpose       meetup:7b5abed550740c5dc4b0e6e57bf8bd07 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Santos_Colón> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Diana_Mitford>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/5639987/9/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He lost another son, Héctor, to liver disease in July 1998." ;
+        mtp:hasParticipant   meetup:d78bfadfaf5486997b73bdf535136e10 ;
+        mtp:hasPurpose       meetup:b6c26e8deb22d74d856541e4a4691e3a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Santos_Colón> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Santos_Colón>
+        rdf:type  core:Person .
+
+meetup:d78bfadfaf5486997b73bdf535136e10
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Santos_Colón> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Santitos Colón" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:60e7ec303db91230a464d196b0664771
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Santos_Colón> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Santitos Colón" .
+
+meetup:a7e5dadd5a5939c95f0883c665c4e521
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Diana Vega Namer" .
+
+meetup:b5b3010bafac566944b9841cf52fb755
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Diana_Mitford> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "0.8069935688662541" ;
+        mtp:hasTextEvidence     "Diana" .

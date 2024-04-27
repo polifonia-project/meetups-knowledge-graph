@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Joseph_Dubin>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:92399fd13e62e7c437cf409899b40320
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998227" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00016379934" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/48315418/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Joseph Dubin is best known for composing the soundtrack for the 1930 MGM film The Big House, as well as the Walt Disney films Cinderella, Alice in Wonderland (which was the last animated Disney film that he orchestrated the music for), 20,000 Leagues Under the Sea, The Adventures of Ichabod and Mr. Toad." ;
+        mtp:hasParticipant   meetup:37806325b0fd9ee3e7910df99d00669c ;
+        mtp:hasPurpose       meetup:92399fd13e62e7c437cf409899b40320 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joseph_Dubin> ;
+        mtp:hasType          "HT" .
+
+meetup:37806325b0fd9ee3e7910df99d00669c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joseph_Dubin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999464030799358" ;
+        mtp:hasTextEvidence     "Joseph Dubin" .

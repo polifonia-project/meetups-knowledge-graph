@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/50175429/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In addition to being a member of multiple groups from the D.C. area, such as The Crownhate Ruin and The Sorts, he also played with the Louisville band, June of 44." ;
+        mtp:hasParticipant   meetup:b94144e188992a9180eb3d65933f939f ;
+        mtp:hasPurpose       meetup:3775856de0606c418243d7f3904cf3fb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fred_Erskine> ;
+        mtp:hasType          "HT" .
+
+meetup:3775856de0606c418243d7f3904cf3fb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7938542" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.20029499" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Fred_Erskine>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Bass_guitar>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/50175429/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fred Erskine is an American bass guitarist best known as a member of the band Hoover." ;
+        mtp:hasParticipant   meetup:b1424405ebab2bfa1923477c05e2559a , meetup:c912c52ef391ee6c0fd2f5b7a2a7e8f5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fred_Erskine> ;
+        mtp:hasType          "HM" .
+
+meetup:b94144e188992a9180eb3d65933f939f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fred_Erskine> ;
+        mtp:hasOffset           "111" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Fred Erskine" .
+
+meetup:c912c52ef391ee6c0fd2f5b7a2a7e8f5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fred_Erskine> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fred Erskine" .
+
+meetup:b1424405ebab2bfa1923477c05e2559a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bass_guitar> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "0.9133549039962904" ;
+        mtp:hasTextEvidence     "bass" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:30a0e825d5a304e62ed35ab190747822
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Shows in the United States" ;
+        mtp:hasEvidencePurposeSecond  "Two American productions" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:695dd1d913a6bcfeb15603a0d5d596c4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Megadeth's co-headlining tour" ;
+        mtp:hasEvidencePurposeSecond  "Rescheduling and lineup changes" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:de0bed81905031e7e1400a13abc03ebf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the success of an album" ;
+        mtp:hasEvidencePurposeSecond  "There is no indication of a business meeting in the sentence" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/20653/32/20>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Megadeth was originally scheduled to embark on a co-headlining tour in North America with Lamb of God dubbed \"The Metal Tour of the Year\" in the summer of 2020, with Trivium and In Flames as support acts, but was postponed due to the COVID-19 pandemic. The tour was rescheduled for the summer of 2021, with Hatebreed replacing In Flames due to the latter being forced to withdraw from the line-up due to international visa issues caused by the pandemic." ;
+        mtp:hasPurpose       meetup:695dd1d913a6bcfeb15603a0d5d596c4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Megadeth> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/20653/26/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "These shows continued the following year in the United States. The first took place in Indio, California, and was the only scheduled show in the United States at the time, although a second American production was held at Yankee Stadium in New York City shortly afterwards." ;
+        mtp:hasPurpose       meetup:30a0e825d5a304e62ed35ab190747822 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Megadeth> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/20653/14/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Released in July 1992, Countdown to Extinction entered the Billboard 200 chart at number two and was certified double platinum in the United States. The album's overseas success helped the band to develop a larger following outside the US." ;
+        mtp:hasPurpose       meetup:de0bed81905031e7e1400a13abc03ebf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Megadeth> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Megadeth>
+        rdf:type  core:Person .

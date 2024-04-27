@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:d96496201c2953034a48f7a81369f7ce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Major_Lance> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Major Lance" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Al_Jackson_Jr.>
+        rdf:type  core:Person .
+
+meetup:d4849f9d26dd00701119754a7f34a583
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Al_Jackson_Jr.> ;
+        mtp:hasOffset           "66" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Al Jackson Jr." .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Major_Lance>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1077909/11/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On September 30, 1975, Jackson was scheduled to fly from Memphis to Detroit, to produce a Major Lance session, when he supposedly heard a reminder on the radio about the Joe Frazier–Muhammad Ali fight that night. Jackson called Detroit to delay the session, saying he was going to watch the \"Thrilla in Manila\" on the big screen at the Mid-South Coliseum." ;
+        mtp:hasParticipant   meetup:d96496201c2953034a48f7a81369f7ce ;
+        mtp:hasPurpose       meetup:eab5b259f1cfd9db0378ac333a0413eb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Al_Jackson_Jr.> ;
+        mtp:hasType          "HT" .
+
+meetup:b4d6b626c2e4fe116d75168fb323f3df
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.50600606" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.478013" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1077909/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "And by the time Al Senior came in an hour later, at 8:00 o'clock, Al Jackson Jr. was swinging that damn band like a pro." ;
+        mtp:hasParticipant   meetup:d4849f9d26dd00701119754a7f34a583 ;
+        mtp:hasPurpose       meetup:b4d6b626c2e4fe116d75168fb323f3df ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Al_Jackson_Jr.> ;
+        mtp:hasType          "HT" .
+
+meetup:eab5b259f1cfd9db0378ac333a0413eb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Jackson's delay to watch a boxing match" ;
+        mtp:hasEvidencePurposeSecond  "Coincidence of the radio reminder and Jackson's schedule" ;
+        mtp:hasSourcePurpose          "LLM" .

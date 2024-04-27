@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:ec996fb0a0bafac0bd1cb4e741eb2992
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Yulia's participation in Eurovision" ;
+        mtp:hasEvidencePurposeSecond  "Eurovision Song Contest 2018" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/53464990/7/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 29 January 2018, it was confirmed that she will return to represent Russia at the Eurovision Song Contest 2018 in Lisbon, Portugal. On 11 March, it was revealed that the song Yulia will sing at the Eurovision Song Contest 2018 will be \"I Won't Break\"On 10" ;
+        mtp:hasPurpose       meetup:ec996fb0a0bafac0bd1cb4e741eb2992 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuliya_Samoylova_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:6467eb5a75554d11ba5c84a823b2f6a1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9937469" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0037766497" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/53464990/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In early 2017, she was selected to represent Russia in the 2017 edition of the Eurovision Song Contest with the song \"Flame Is Burning\", but was subsequently banned from the contest's host country, Ukraine, due to violating Ukrainian law by entering Crimea through Russia in 2015, shortly after the region was annexed by Russia. In response to the ban, Russia ultimately withdrew from the contest." ;
+        mtp:hasPurpose       meetup:cc5303d99714f6631db29d4ccf8ba57c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuliya_Samoylova_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:2924dda681db465a8fc1330f76749136
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yuliya_Samoylova_(singer)> ;
+        mtp:hasOffset           "202" ;
+        mtp:hasSimilarityScore  "0.9999990773347058" ;
+        mtp:hasTextEvidence     "Julia Samoylova" .
+
+<http://dbpedia.org/resource/Yuliya_Samoylova_(singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/53464990/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Julia Olegovna Samoilova (Russian: Ю́лия Оле́говна Само́йлова, IPA: [ˈjʉlʲɪjə ɐˈlʲeɡəvnə sɐˈmojləvə]; born 7 April 1989), sometimes credited as Yulia Samoilova or Julia Samoylova, is a Russian singer-songwriter." ;
+        mtp:hasParticipant   meetup:2924dda681db465a8fc1330f76749136 ;
+        mtp:hasPurpose       meetup:6467eb5a75554d11ba5c84a823b2f6a1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuliya_Samoylova_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:cc5303d99714f6631db29d4ccf8ba57c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Participation in Eurovision Song Contest" ;
+        mtp:hasEvidencePurposeSecond  "Withdrawal from the contest" ;
+        mtp:hasSourcePurpose          "LLM" .

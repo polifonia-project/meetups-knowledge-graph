@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/56162272/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yoo Yeon-jung (Korean: 유연정; born August 3, 1999), better known by the mononym Yeonjung, is a South Korean singer." ;
+        mtp:hasParticipant   meetup:1932b67853ec4c6889a61fccfe3068f5 ;
+        mtp:hasPurpose       meetup:8907d9aa89d3529ff92a80bb463c7999 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yoo_Yeon-jung> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:1932b67853ec4c6889a61fccfe3068f5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yoo_Yeon-jung> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Yoo Yeon-jung" .
+
+meetup:8907d9aa89d3529ff92a80bb463c7999
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9985252" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013585051" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Yoo_Yeon-jung>
+        rdf:type  core:Person .

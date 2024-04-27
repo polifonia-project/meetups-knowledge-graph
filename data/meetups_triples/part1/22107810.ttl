@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1a15763ce1c7aaf2cc3588f22350441a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_William_Otto_Allen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Robert William Otto Allen" .
+
+<http://w3id.org/polifonia/pilot/meetups/22107810/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was the brother of conductor Georg Frederik Ferdinand Allen." ;
+        mtp:hasParticipant   meetup:ce80d990bdc1edeff7c58a94d7eb5aca , meetup:94b25fa07fe39429eb51758700f6de24 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_William_Otto_Allen> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/22107810/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From the late 1870s he was a music teacher in Aarhus and in 1885 he became organist at Århus Cathedral. He was a frequent contributor to the Aarhus music scene both as a pianist, as conductor and as a composer." ;
+        mtp:hasPurpose       meetup:efb0f2e9c3e1c6405899286bcf5e9615 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_William_Otto_Allen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Robert_William_Otto_Allen>
+        rdf:type  core:Person .
+
+meetup:94b25fa07fe39429eb51758700f6de24
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Georg_Frederik_Ferdinand_Allen> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Georg Frederik Ferdinand Allen" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:ce80d990bdc1edeff7c58a94d7eb5aca
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_William_Otto_Allen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Robert William Otto Allen" .
+
+meetup:efb0f2e9c3e1c6405899286bcf5e9615
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music scene" ;
+        mtp:hasEvidencePurposeSecond  "Music teacher and organist" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Georg_Frederik_Ferdinand_Allen>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/22107810/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert William Otto Allen  (18 March 1852 – 9 December 1888) was a Danish pianist, composer and conductor." ;
+        mtp:hasParticipant   meetup:1a15763ce1c7aaf2cc3588f22350441a ;
+        mtp:hasPurpose       meetup:d5e125a0e0ac172529292e8b1f02e3ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_William_Otto_Allen> ;
+        mtp:hasType          "HT" .
+
+meetup:d5e125a0e0ac172529292e8b1f02e3ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99992836" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 6.0388644e-05" ;
+        mtp:hasSourcePurpose          "ML" .

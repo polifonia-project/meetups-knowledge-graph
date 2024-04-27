@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Tim_Hovey>
+        rdf:type  core:Person .
+
+meetup:88f1d4c187fc23ad2417cce4fb77f704
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999976" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.5610572e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:77faa5502a4b23cea8ff5c42d78153aa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Hovey> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tim Hovey" .
+
+<http://w3id.org/polifonia/pilot/meetups/28195325/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tim Hovey (June 19, 1945 – September 9, 1989) was a former American child actor during the 1950s." ;
+        mtp:hasParticipant   meetup:77faa5502a4b23cea8ff5c42d78153aa ;
+        mtp:hasPurpose       meetup:88f1d4c187fc23ad2417cce4fb77f704 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tim_Hovey> ;
+        mtp:hasType          "HT" .

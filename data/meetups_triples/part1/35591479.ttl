@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5fbd156915b718627acf76ff6c4e652c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96977973" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.030219676" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/35591479/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Arthur Argo (1935–1981) was a Scottish traditional folk musician, promoter and collector and the great grandson of Gavin Greig." ;
+        mtp:hasParticipant   meetup:cca5ad75aabacc88e0051f0985fb1a74 ;
+        mtp:hasPurpose       meetup:5fbd156915b718627acf76ff6c4e652c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Argo> ;
+        mtp:hasType          "HT" .
+
+meetup:cca5ad75aabacc88e0051f0985fb1a74
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arthur_Argo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999548283993668" ;
+        mtp:hasTextEvidence     "Arthur Argo" .
+
+<http://dbpedia.org/resource/Arthur_Argo>
+        rdf:type  core:Person .

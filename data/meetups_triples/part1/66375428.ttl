@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Alexander_23>
+        rdf:type  core:Person .
+
+meetup:e0355c8eaef6b5c066d7f5af1d050bc4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97620493" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.023689857" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6711913b024f988c698f9c4ae24ad51b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99853647" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0014612875" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7d5358628313d900f025fbe4b783964e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Jordan> ;
+        mtp:hasOffset           "119" ;
+        mtp:hasSimilarityScore  "0.9999999936689504" ;
+        mtp:hasTextEvidence     "Michael Jordan" .
+
+meetup:e81530b5e9e473c272c2714b71b1eb83
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alexander_23> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "0.999999841410853" ;
+        mtp:hasTextEvidence     "Alexander 23" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/66375428/5/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "When describing his decision to go by Alexander 23, Glantz said, \"I was born on the 23rd, I grew up in Chicago and saw Michael Jordan as a huge figure in basketball and was obsessed with him, and he wore number 23." ;
+        mtp:hasParticipant   meetup:e81530b5e9e473c272c2714b71b1eb83 , meetup:7d5358628313d900f025fbe4b783964e ;
+        mtp:hasPurpose       meetup:6711913b024f988c698f9c4ae24ad51b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alexander_23> ;
+        mtp:hasType          "HM" .
+
+meetup:1fa5aa98832d92038119ed30ebb72886
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alexander_23> ;
+        mtp:hasOffset           "66" ;
+        mtp:hasSimilarityScore  "0.999999841410853" ;
+        mtp:hasTextEvidence     "Alexander 23" .
+
+<http://dbpedia.org/resource/Michael_Jordan>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/66375428/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alexander Glantz (born January 23, 1995), known professionally as Alexander 23, is an American singer, songwriter, multi-instrumentalist, engineer, and record producer." ;
+        mtp:hasParticipant   meetup:1fa5aa98832d92038119ed30ebb72886 ;
+        mtp:hasPurpose       meetup:e0355c8eaef6b5c066d7f5af1d050bc4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alexander_23> ;
+        mtp:hasType          "HT" .

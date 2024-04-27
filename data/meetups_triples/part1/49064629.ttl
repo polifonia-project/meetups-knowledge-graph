@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:309d61d34c997b6dc5813b6cf350dc6d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9788625" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.021021675" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/49064629/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Stiles was born, Hillary Jane Ashton Stiles, on September 25, 1993, in Palo Pinto, Texas, the daughter of Duane Michael and Debbie Kay Stiles (née, Johnson). She was raised in Houston, Texas, where she considers it to be her hometown." ;
+        mtp:hasPurpose       meetup:38ecd745be517cd0fbb203219814a457 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/HillaryJane> ;
+        mtp:hasType          "HT" .
+
+meetup:8e644d5a91537c3a60a36e903eafd216
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997392" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00022766512" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/49064629/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Her subsequent extended play, Stix and Stones Unplugged, was released on December 30, 2014, by Infiltrate Music." ;
+        mtp:hasParticipant   meetup:19ec6b4c86014ea24d128d778d2fffa0 ;
+        mtp:hasPurpose       meetup:309d61d34c997b6dc5813b6cf350dc6d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/HillaryJane> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/HillaryJane>
+        rdf:type  core:Person .
+
+meetup:19ec6b4c86014ea24d128d778d2fffa0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/HillaryJane> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "HillaryJane" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e85ef9d06c2197b688f4340e72a3d0fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/HillaryJane> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999870198" ;
+        mtp:hasTextEvidence     "HillaryJane" .
+
+meetup:38ecd745be517cd0fbb203219814a457
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Stiles' personal background" ;
+        mtp:hasEvidencePurposeSecond  "Information about Stiles' upbringing and education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/49064629/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "HillaryJane started her music career in 2009, performed in 2014 at South by Southwest, and with the release, Stix and Stones, an extended play, on July 29, 2014, with Infiltrate Music." ;
+        mtp:hasParticipant   meetup:e85ef9d06c2197b688f4340e72a3d0fc ;
+        mtp:hasPurpose       meetup:8e644d5a91537c3a60a36e903eafd216 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/HillaryJane> ;
+        mtp:hasType          "HT" .

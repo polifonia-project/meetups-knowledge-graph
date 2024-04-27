@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Rued_Langgaard>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:c4c75140dd25801b27c3141eb073b156
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rued_Langgaard> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rued Langgaard" .
+
+<http://w3id.org/polifonia/pilot/meetups/38343505/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tage Nielsen (16 January 1929 in Frederiksberg – 23 March 2003) was a Danish composer." ;
+        mtp:hasParticipant   meetup:76c0c5c8a22585a81e53d6b97d87c665 ;
+        mtp:hasPurpose       meetup:c3680db7093461cec73985120fc56f6c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tage_Nielsen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Tage_Nielsen>
+        rdf:type  core:Person .
+
+meetup:76c0c5c8a22585a81e53d6b97d87c665
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tage_Nielsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tage Nielsen" .
+
+<http://w3id.org/polifonia/pilot/meetups/38343505/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He studied with Rued Langgaard and worked for Danish Radio as well as being a professor at the Danish Academy of Music." ;
+        mtp:hasParticipant   meetup:c4c75140dd25801b27c3141eb073b156 , meetup:86c7b2684cdea43f2ec19c989511404f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tage_Nielsen> ;
+        mtp:hasType          "HM" .
+
+meetup:86c7b2684cdea43f2ec19c989511404f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tage_Nielsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tage Nielsen" .
+
+meetup:c3680db7093461cec73985120fc56f6c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.72502905" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19888793" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:b0753443f58ad2ab4e594a72b5a9e789
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sean_Poppen> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Poppen" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/31275792/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 2006 Poppen has been the conductor of the Rundfunk-Sinfonieorchester Saarbrücken, which was, together with the Rundfunkorchester Kaiserslautern, named Deutsche Radio Philharmonie Saarbrücken Kaiserslautern in 2007. In 2007 he conducted in the Herkulessaal the premiere of Wilhelm Killmayer's Dithyramben for orchestra with the Symphonieorchester des Bayerischen Rundfunks." ;
+        mtp:hasParticipant   meetup:b0753443f58ad2ab4e594a72b5a9e789 ;
+        mtp:hasPurpose       meetup:2e6de993a2355c90d6a3f986208cc184 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christoph_Poppen> ;
+        mtp:hasType          "HT" .
+
+meetup:b154eb6ab0429c481661cbe8e229e3ce
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99600804" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0029828278" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e1ff350e71df5736ba27438644261cb8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christoph_Poppen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Christoph Poppen" .
+
+<http://w3id.org/polifonia/pilot/meetups/31275792/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christoph Poppen (born 9 March 1956) is a German conductor, violinist and academic teacher." ;
+        mtp:hasParticipant   meetup:e1ff350e71df5736ba27438644261cb8 ;
+        mtp:hasPurpose       meetup:b154eb6ab0429c481661cbe8e229e3ce ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christoph_Poppen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Christoph_Poppen>
+        rdf:type  core:Person .
+
+meetup:2e6de993a2355c90d6a3f986208cc184
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Conducting orchestras" ;
+        mtp:hasEvidencePurposeSecond  "Premiere of a composition" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Sean_Poppen>
+        rdf:type  core:Person .

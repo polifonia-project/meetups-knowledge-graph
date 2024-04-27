@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/47905340/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Son Na-eun (Korean: 손나은; born February 10, 1994), known mononymously as Naeun, is a South Korean singer and actress." ;
+        mtp:hasParticipant   meetup:1fccc3f94b7476c57d3eae52d45c4796 ;
+        mtp:hasPurpose       meetup:64734a2573c666f36c7d05bb133e0562 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Son_Na-eun> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Son_Na-eun>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:1fccc3f94b7476c57d3eae52d45c4796
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Son_Na-eun> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Son Na-eun" .
+
+meetup:64734a2573c666f36c7d05bb133e0562
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9773122" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.022182006" ;
+        mtp:hasSourcePurpose          "ML" .

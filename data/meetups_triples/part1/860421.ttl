@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Louis_Nelson_Delisle>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/860421/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"Big Eye\" Louis Nelson Delisle (January 28, 1885 – August 20, 1949) was an American early twentieth-century Dixieland jazz clarinetist in New Orleans, Louisiana, United States." ;
+        mtp:hasParticipant   meetup:e8306c5c3611eb2fd90bc7980ea4290d ;
+        mtp:hasPurpose       meetup:6befc28cc2f65bc44349651cacb1060e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Louis_Nelson_Delisle> ;
+        mtp:hasType          "HT" .
+
+meetup:6befc28cc2f65bc44349651cacb1060e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7239304" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26773137" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e8306c5c3611eb2fd90bc7980ea4290d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Louis_Nelson_Delisle> ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Louis Nelson Delisle" .

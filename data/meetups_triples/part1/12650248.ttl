@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/12650248/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeff Dahl (born 1955, Stuttgart, Germany) is an American musician." ;
+        mtp:hasParticipant   meetup:e23ea519f7b539ba0a51189574b8970c ;
+        mtp:hasPurpose       meetup:8346099bbc232386cdd452a3d5b1b2ea ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Dahl> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Jeff_Dahl>
+        rdf:type  core:Person .
+
+meetup:e23ea519f7b539ba0a51189574b8970c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Dahl> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999602" ;
+        mtp:hasTextEvidence     "Jeff Dahl" .
+
+meetup:8346099bbc232386cdd452a3d5b1b2ea
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9841651" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009094485" ;
+        mtp:hasSourcePurpose          "ML" .

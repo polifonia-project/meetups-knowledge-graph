@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b35b5ab19e0d533814c73c959d5c37bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chelsea_Cutler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chelsea Cutler" .
+
+<http://w3id.org/polifonia/pilot/meetups/60630044/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chelsea Cutler was born and raised in Westport, Connecticut." ;
+        mtp:hasParticipant   meetup:0c2220657b2d3b70c1905945b782a0e7 ;
+        mtp:hasPurpose       meetup:5edbe756e3cda2a40b3940cab404d866 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chelsea_Cutler> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/60630044/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She continued posting music to her SoundCloud while attending Amherst College in Massachusetts, where she also played soccer with Amherst soccer legend Meredith Manley, who set the school record for red cards during her playing career." ;
+        mtp:hasParticipant   meetup:026b8b0b64a725719e35af4e98b7af46 , meetup:b35b5ab19e0d533814c73c959d5c37bd ;
+        mtp:hasPurpose       meetup:fa8eeb99ca57429919f50d83b2f190ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chelsea_Cutler> ;
+        mtp:hasType          "HM" .
+
+meetup:026b8b0b64a725719e35af4e98b7af46
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "152" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Meredith Manley" .
+
+<http://dbpedia.org/resource/Chelsea_Cutler>
+        rdf:type  core:Person .
+
+meetup:0c2220657b2d3b70c1905945b782a0e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chelsea_Cutler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999964472" ;
+        mtp:hasTextEvidence     "Chelsea Cutler" .
+
+meetup:5edbe756e3cda2a40b3940cab404d866
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8954531" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.060216237" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fa8eeb99ca57429919f50d83b2f190ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998429" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0015193567" ;
+        mtp:hasSourcePurpose          "ML" .

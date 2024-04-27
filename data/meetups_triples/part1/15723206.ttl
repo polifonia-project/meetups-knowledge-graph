@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Andrew_Innes>
+        rdf:type  core:Person .
+
+meetup:5333648373db943c5139cb2e1882a3e4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a punk band" ;
+        mtp:hasEvidencePurposeSecond  "Meeting Alan McGee and Bobby Gillespie" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d40cb97da63df94a8c9edd73f531297c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alan_McGee> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alan McGee" .
+
+<http://w3id.org/polifonia/pilot/meetups/15723206/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While in high school in 1978, Innes was the guitarist for a Glasgow punk band called The Drains. He met Alan McGee and Bobby Gillespie when they had joined the band." ;
+        mtp:hasParticipant   meetup:d40cb97da63df94a8c9edd73f531297c , meetup:be8a42ba50f57e09ea3169dbd708db34 ;
+        mtp:hasPurpose       meetup:5333648373db943c5139cb2e1882a3e4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Innes> ;
+        mtp:hasType          "HT" .
+
+meetup:be8a42ba50f57e09ea3169dbd708db34
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Gillespie> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bobby Gillespie" .
+
+<http://dbpedia.org/resource/Bobby_Gillespie>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Alan_McGee>
+        rdf:type  core:Person .

@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/36370864/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lars Horntveth (born 10 March 1980 in Tønsberg, Norway) is a Norwegian musician (saxophones, clarinet, percussion and guitar), band leader, and composer. He is the younger brother of tubaist Line Horntveth, but best known as a key member of the bands Jaga Jazzist and The National Bank, together with his brother Martin Horntveth." ;
+        mtp:hasParticipant   meetup:ea8ce25efae10b9280f6b46403aeaea0 , meetup:30a3eb3081363ba74ae2be2bb0fba392 ;
+        mtp:hasPurpose       meetup:11ffbef064157a1fd33d5057ecfa653e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lars_Horntveth> ;
+        mtp:hasType          "HT" .
+
+meetup:11ffbef064157a1fd33d5057ecfa653e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Lars Horntveth is a musician and band member." ;
+        mtp:hasEvidencePurposeSecond  "He is the younger brother of tubaist Line Horntveth." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:30a3eb3081363ba74ae2be2bb0fba392
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Martin_Horntveth> ;
+        mtp:hasOffset           "159" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Martin Horntveth" .
+
+<http://dbpedia.org/resource/Martin_Horntveth>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Line_Horntveth>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Lars_Horntveth>
+        rdf:type  core:Person .
+
+meetup:ea8ce25efae10b9280f6b46403aeaea0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Line_Horntveth> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Line Horntveth" .

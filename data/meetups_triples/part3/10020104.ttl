@@ -1,0 +1,35 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/10020104/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:68db2f4441ecee60f4b015e30833eff6 , meetup:31659be4852616a150da54a77b30dcdd ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Berle_Adams> ;
+        mtp:hasType     "HM" .
+
+meetup:68db2f4441ecee60f4b015e30833eff6
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "11 June 1917 – 25 August 2009" ;
+        mtp:hasSource        "ML" .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://dbpedia.org/resource/Berle_Adams>
+        rdf:type  core:Person .
+
+meetup:31659be4852616a150da54a77b30dcdd
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the 1940s" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1940-01-01"^^xsd:date ;
+        time:hasEnd          "1949-12-31"^^xsd:date .

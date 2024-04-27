@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Noriko_Ogawa_(pianist)>
+        rdf:type  core:Person .
+
+meetup:e6a8be81c424fff3f4e3d793933a1f3e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Japanese classical pianist" ;
+        mtp:hasEvidencePurposeSecond  "Based in London" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3fd2cdf04a3286f06642241809440d1d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Noriko_Ogawa_(pianist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.965517231902554" ;
+        mtp:hasTextEvidence     "Noriko Ogawa" .
+
+<http://dbpedia.org/resource/Seiji_Ogawa>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4255220/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Noriko Ogawa (小川典子, Ogawa Noriko) (born 1962) is a Japanese classical pianist, based in London." ;
+        mtp:hasParticipant   meetup:04216066da44962527145eb5545065a8 , meetup:3fd2cdf04a3286f06642241809440d1d ;
+        mtp:hasPurpose       meetup:e6a8be81c424fff3f4e3d793933a1f3e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Noriko_Ogawa_(pianist)> ;
+        mtp:hasType          "HM" .
+
+meetup:04216066da44962527145eb5545065a8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Seiji_Ogawa> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "0.9988795903168306" ;
+        mtp:hasTextEvidence     "Ogawa" .

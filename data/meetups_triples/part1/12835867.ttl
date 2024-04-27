@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:47ede80935c1a3b7c2b6bcbce0c825d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.55124617" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.30322796" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:63931ed4ff16dc48a2c663f632700c7c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Janis_Tanaka> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Janis Tanaka" .
+
+meetup:6ae5f6ada201ca7ae7b176f0d47f5f12
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Courtney_Love> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Courtney Love" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/12835867/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Janis Tanaka (born January 9, 1963) is an American bassist who has worked as a session musician and on tour with a number of well-known artists including Pink, Fireball Ministry, Hammers of Misfortune, Stone Fox, and L7." ;
+        mtp:hasParticipant   meetup:b9c5a5ac1edd602c1283cf4916d436c0 ;
+        mtp:hasPurpose       meetup:47ede80935c1a3b7c2b6bcbce0c825d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Janis_Tanaka> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Janis_Tanaka>
+        rdf:type  core:Person .
+
+meetup:12277841feff97edbed4284e3648cd8c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kat_Bjelland> ;
+        mtp:hasOffset           "76" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kat Bjelland" .
+
+meetup:b9c5a5ac1edd602c1283cf4916d436c0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Janis_Tanaka> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Janis Tanaka" .
+
+<http://dbpedia.org/resource/Kat_Bjelland>
+        rdf:type  core:Person .
+
+meetup:b144acb067f4f1ef05d4c63a58f98a58
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9957552" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0027259672" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f2e9807350ceb70869daefaf53127fc7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "94" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Deirdre Schletter" .
+
+<http://dbpedia.org/resource/Courtney_Love>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/12835867/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was also a member of the Pagan Babies, a band started by Courtney Love, Kat Bjelland, and Deirdre Schletter in the 1980s." ;
+        mtp:hasParticipant   meetup:12277841feff97edbed4284e3648cd8c , meetup:6ae5f6ada201ca7ae7b176f0d47f5f12 , meetup:63931ed4ff16dc48a2c663f632700c7c , meetup:f2e9807350ceb70869daefaf53127fc7 ;
+        mtp:hasPurpose       meetup:b144acb067f4f1ef05d4c63a58f98a58 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Janis_Tanaka> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Meta_Rosenberg>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/61885340/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Meta Rosenberg (5 June 1915 – 30 December 2004), born Meta Arenson, was an American television producer and talent agent, who was also executive producer of the television series The Rockford Files." ;
+        mtp:hasParticipant   meetup:c179f98c7fe53c76e99e95ee2fd9c308 ;
+        mtp:hasPurpose       meetup:e1554f5ecd9dc7e8a713cd35c45a8e81 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Meta_Rosenberg> ;
+        mtp:hasType          "HT" .
+
+meetup:c179f98c7fe53c76e99e95ee2fd9c308
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Meta_Rosenberg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Meta Rosenberg" .
+
+meetup:e1554f5ecd9dc7e8a713cd35c45a8e81
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7231819" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2451439" ;
+        mtp:hasSourcePurpose          "ML" .

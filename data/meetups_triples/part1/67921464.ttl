@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/67921464/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Henrietta Smith-Rolla (born 1980/81), is a British-born Ghanaian-Russian-German composer, producer and DJ based in Manchester, performing under the alias Afrodeutsche." ;
+        mtp:hasParticipant   meetup:635f3c9dcb4ef0ed26f5d09ca223b150 , meetup:ad0ab1236a3b47ff6612007a55b7fdf8 ;
+        mtp:hasPurpose       meetup:9950234224f30d44b4f0fea468e87865 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Afrodeutsche> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:635f3c9dcb4ef0ed26f5d09ca223b150
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Afrodeutsche> ;
+        mtp:hasOffset           "154" ;
+        mtp:hasSimilarityScore  "0.7523396668447446" ;
+        mtp:hasTextEvidence     "Afrodeutsche" .
+
+meetup:ad0ab1236a3b47ff6612007a55b7fdf8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henrietta_of_England> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.7911436316250051" ;
+        mtp:hasTextEvidence     "Henrietta" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Afrodeutsche>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Henrietta_of_England>
+        rdf:type  core:Person .
+
+meetup:9950234224f30d44b4f0fea468e87865
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99009573" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009901722" ;
+        mtp:hasSourcePurpose          "ML" .

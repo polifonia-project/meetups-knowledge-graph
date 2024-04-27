@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:34f5cf377ff1bc5a5b6cacb8583b4ce6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9787658" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018779026" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/41576162/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2004, Hutchison, now living in Glasgow, joined his brother Scott in Frightened Rabbit, rendering them a two-piece band. Describing his entry into the band, Grant stated, \"Scott started playing solo shows supporting friends' bands in Glasgow with just an acoustic guitar." ;
+        mtp:hasPurpose       meetup:aec168fa9a32743b6c06a5e538206594 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Grant_Hutchison> ;
+        mtp:hasType          "HT" .
+
+meetup:41489493f8bbec4104900c185c416eea
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Grant_Hutchison> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Grant Hutchison" .
+
+meetup:aec168fa9a32743b6c06a5e538206594
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about joining a band" ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions the person's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Grant_Hutchison>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/41576162/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Grant Hutchison (born 13 June 1984 in Selkirk, Scotland) is a Scottish drummer and percussionist." ;
+        mtp:hasParticipant   meetup:41489493f8bbec4104900c185c416eea ;
+        mtp:hasPurpose       meetup:34f5cf377ff1bc5a5b6cacb8583b4ce6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Grant_Hutchison> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:310f97694699b3e79d67839d725642b8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nicky_Wire> ;
+        mtp:hasOffset           "54" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nicky Wire" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ba957ee5c03927999a7f708123a8df07
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7277793" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23869105" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:37c4dfbeca37d8a9cecec12685b873ed
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about the artist's personal life" ;
+        mtp:hasEvidencePurposeSecond  "Reference to a track on an album" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/601309/16/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The family previously lived in a terrace house in the village of Wattsville, near Blackwood. Although he was annoyed when a British tabloid revealed that he lived there, printing a picture of his house with the number clearly visible, he later paid public tribute to his former home in the title of the track \"Wattsville Blues,\" on Know Your Enemy album." ;
+        mtp:hasPurpose       meetup:37c4dfbeca37d8a9cecec12685b873ed ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicky_Wire> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Nicky_Wire>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/601309/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nicholas Allen Jones (born 20 January 1969), known as Nicky Wire, is the Welsh lyricist, bassist and occasional vocalist with the Welsh alternative rock band Manic Street Preachers." ;
+        mtp:hasParticipant   meetup:310f97694699b3e79d67839d725642b8 ;
+        mtp:hasPurpose       meetup:ba957ee5c03927999a7f708123a8df07 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nicky_Wire> ;
+        mtp:hasType          "HT" .

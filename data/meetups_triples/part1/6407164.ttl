@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Phyllis_Dillon>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Duke_Reid>
+        rdf:type  core:Person .
+
+meetup:0068b9d90ef61b299b4a37d2d63dc2b5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phyllis_Dillon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Phyllis Dillon" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/6407164/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Phyllis Dillon  (27 December 1944 – 15 April 2004) was a Jamaican rocksteady and reggae singer who recorded for Duke Reid's lucrative Treasure Isle record label in the late 1960s and early 1970s." ;
+        mtp:hasParticipant   meetup:0068b9d90ef61b299b4a37d2d63dc2b5 , meetup:77c9e0fc845f24ca71c6bd942a721899 ;
+        mtp:hasPurpose       meetup:251ad8a44507a3cf7473184cd31e6664 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phyllis_Dillon> ;
+        mtp:hasType          "HM" .
+
+meetup:77c9e0fc845f24ca71c6bd942a721899
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Duke_Reid> ;
+        mtp:hasOffset           "114" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Duke Reid" .
+
+meetup:251ad8a44507a3cf7473184cd31e6664
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6153241" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3457651" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .

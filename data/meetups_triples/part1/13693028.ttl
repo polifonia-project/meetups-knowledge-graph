@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Roger_Bannister>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Freddy_Bannister>
+        rdf:type  core:Person .
+
+meetup:b2fcce20acdaee858ea75427075df97f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5697133" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.42694914" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:31bfaea6c6823e4abb7715278919b668
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Freddy_Bannister> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Freddy Bannister" .
+
+<http://w3id.org/polifonia/pilot/meetups/13693028/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Freddy Bannister (3 December 1934 – 11 August 2019), sometimes written as Freddie Bannister, was a leading British concert promoter during the 1960s and 1970s, and was the founder of the Bath Festival of Blues 1969, the Bath Festival of Blues and Progressive Music 1970 and the Knebworth festivals." ;
+        mtp:hasParticipant   meetup:43b28cddd59e691456cc2f3a43fb9f82 , meetup:31bfaea6c6823e4abb7715278919b668 , meetup:ab2860b5e87cc4fa18e2741393a8ecda ;
+        mtp:hasPurpose       meetup:b2fcce20acdaee858ea75427075df97f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Freddy_Bannister> ;
+        mtp:hasType          "HM" .
+
+meetup:ab2860b5e87cc4fa18e2741393a8ecda
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roger_Bannister> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "0.5883412476731351" ;
+        mtp:hasTextEvidence     "Bannister" .
+
+meetup:43b28cddd59e691456cc2f3a43fb9f82
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Freddie Bannister" .

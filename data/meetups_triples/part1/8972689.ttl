@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Aki_Hata>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Tsutomu_Hata>
+        rdf:type  core:Person .
+
+meetup:ee70cd917ad3bb29c0ccb827f8f8cc50
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Aki Hata is a musician, singer, lyricist and composer." ;
+        mtp:hasEvidencePurposeSecond  "Aki Hata's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/8972689/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aki Hata (畑 亜貴, Hata Aki, born August 13, 1966) is a Japanese musician, singer, lyricist and composer." ;
+        mtp:hasParticipant   meetup:eb1e68cdd720d6b8a9082ded0a292dcd , meetup:51c711438b7e348e861240980658f4d3 , meetup:1c72c3bbb88ced8fe96975889383d95f ;
+        mtp:hasPurpose       meetup:ee70cd917ad3bb29c0ccb827f8f8cc50 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aki_Hata> ;
+        mtp:hasType          "HM" .
+
+meetup:eb1e68cdd720d6b8a9082ded0a292dcd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aki_Hata> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aki Hata" .
+
+meetup:1c72c3bbb88ced8fe96975889383d95f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hata Aki" .
+
+meetup:51c711438b7e348e861240980658f4d3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tsutomu_Hata> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "0.99999646030791" ;
+        mtp:hasTextEvidence     "Hata" .

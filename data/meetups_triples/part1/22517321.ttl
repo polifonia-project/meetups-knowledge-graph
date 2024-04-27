@@ -1,0 +1,99 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/22517321/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was musical consultant for the film Between Wars (1974)." ;
+        mtp:hasParticipant   meetup:054dbcc45b656d742794d4c1b3e80a3f ;
+        mtp:hasPurpose       meetup:72d5ccb63ecd86deb54c37ffd87ba839 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Romola_Costantino> ;
+        mtp:hasType          "HT" .
+
+meetup:054dbcc45b656d742794d4c1b3e80a3f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Romola_Costantino> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Romola Costantino" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2235d66f1c1d4355f783a792393b2678
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9937297" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.006266773" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:72d5ccb63ecd86deb54c37ffd87ba839
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.4010816e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:8ca734c04e67f651ec7d3fb7f7eae000
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Romola_Costantino> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Romola Costantino" .
+
+<http://w3id.org/polifonia/pilot/meetups/22517321/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Romola Costantino died in 1988 in Adelaide, South Australia, aged 58, from cancer." ;
+        mtp:hasParticipant   meetup:16835c30309255e61ad972d9456ad35d ;
+        mtp:hasPurpose       meetup:2235d66f1c1d4355f783a792393b2678 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Romola_Costantino> ;
+        mtp:hasType          "HT" .
+
+meetup:d4477d90d5f4e9313aa2f7f45f0633e4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99983335" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.05065e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/22517321/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1971, Romola Costantino married George Enyi, an artist and sculptor, and sometimes used her married name Romola Enyi." ;
+        mtp:hasParticipant   meetup:24d504217855d2d95abbb63563e08572 , meetup:8ca734c04e67f651ec7d3fb7f7eae000 ;
+        mtp:hasPurpose       meetup:d4477d90d5f4e9313aa2f7f45f0633e4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Romola_Costantino> ;
+        mtp:hasType          "HM" .
+
+meetup:24d504217855d2d95abbb63563e08572
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "George Enyi" .
+
+meetup:16835c30309255e61ad972d9456ad35d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Romola_Costantino> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Romola Costantino" .
+
+<http://dbpedia.org/resource/Romola_Costantino>
+        rdf:type  core:Person .

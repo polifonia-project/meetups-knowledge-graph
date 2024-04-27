@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/38979300/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Horomona Horo (born 1978) is a New Zealand Māori musician and composer." ;
+        mtp:hasParticipant   meetup:c44777eddb96adf493fe263c3ab8a049 ;
+        mtp:hasPurpose       meetup:c5fa9a8bfdfa348f0a56feafe77ab645 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Horomona_Horo> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:c5fa9a8bfdfa348f0a56feafe77ab645
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99993765" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.2844346e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Horomona_Horo>
+        rdf:type  core:Person .
+
+meetup:c44777eddb96adf493fe263c3ab8a049
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Horomona_Horo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Horomona Horo" .

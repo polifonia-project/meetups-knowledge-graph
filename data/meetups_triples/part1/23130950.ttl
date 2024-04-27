@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Elias_Mallin>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:43d6f455fbe8435e2e9e593c911a4791
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marilyn_Manson> ;
+        mtp:hasOffset           "114" ;
+        mtp:hasSimilarityScore  "0.9999999999602665" ;
+        mtp:hasTextEvidence     "Marilyn Manson" .
+
+meetup:c265563f5b973e074111f6f994f55f62
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Elias_Mallin> ;
+        mtp:hasOffset           "52" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Elias Mallin" .
+
+meetup:323d2642e68d222724e30c33d864ea2e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andy_Gerold> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Andy Gerold" .
+
+meetup:3703b386bd4f989ccc5930f6bc441615
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a band and touring" ;
+        mtp:hasEvidencePurposeSecond  "Leaving the band" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/23130950/7/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He contributed the band's second record The Spore and toured with them on the 2005 Warped Tour, Avenged Sevenfold, and Orgy tour. Gerold quit the band after the departure of drummer Elias Mallin." ;
+        mtp:hasParticipant   meetup:c265563f5b973e074111f6f994f55f62 ;
+        mtp:hasPurpose       meetup:3703b386bd4f989ccc5930f6bc441615 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Gerold> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Marilyn_Manson>
+        rdf:type  core:Person .
+
+meetup:9782b15a4d239c5d21e39a7e98c8562f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.62787604" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22540529" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/23130950/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Andy Gerold (born June 13, 1978) is a professional multi-instrumentalist and is best known as a former bassist of Marilyn Manson." ;
+        mtp:hasParticipant   meetup:43d6f455fbe8435e2e9e593c911a4791 , meetup:323d2642e68d222724e30c33d864ea2e ;
+        mtp:hasPurpose       meetup:9782b15a4d239c5d21e39a7e98c8562f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andy_Gerold> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Andy_Gerold>
+        rdf:type  core:Person .

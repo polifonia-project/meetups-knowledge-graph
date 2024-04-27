@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/41637392/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vladimir Ziva (born 1957) is a Russian conductor who graduated from both Moscow and Saint Petersburg Conservatories where he was under guidance from Evgeny Kudryavtsev and Dmitri Kitaenko respectively." ;
+        mtp:hasParticipant   meetup:d9cb381215ac10e4d4944f151fea2bc3 , meetup:48e20bccd865c4b5c97bf72c00221933 , meetup:04b341b56fcceed29141f58c284a2a0d ;
+        mtp:hasPurpose       meetup:43d2e903a7122ddb5406684fcdad3283 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vladimir_Ziva> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Dmitri_Kitayenko>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Vladimir_Ziva>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:04b341b56fcceed29141f58c284a2a0d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "149" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Evgeny Kudryavtsev" .
+
+meetup:48e20bccd865c4b5c97bf72c00221933
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dmitri_Kitayenko> ;
+        mtp:hasOffset           "172" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dmitri Kitaenko" .
+
+meetup:43d2e903a7122ddb5406684fcdad3283
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Conductor Vladimir Ziva" ;
+        mtp:hasEvidencePurposeSecond  "Graduated from music conservatories" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d9cb381215ac10e4d4944f151fea2bc3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vladimir_Ziva> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Vladimir Ziva" .

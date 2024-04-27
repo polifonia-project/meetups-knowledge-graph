@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/25907756/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The impact of this death on Matt Johnson and his creativity is a subject of the 2017 documentary THE INERTIA VARIATIONS, directed by Johanna St Michaels, which focuses on the life of Matt Johnson and the team who surround him." ;
+        mtp:hasParticipant   meetup:9610dcbe0885f42c4446fe302dc45ca3 ;
+        mtp:hasPurpose       meetup:29eab77fa960bd97f511b493f3af878b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_Johnson_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9610dcbe0885f42c4446fe302dc45ca3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Johnson_(singer)> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "0.8280172438644383" ;
+        mtp:hasTextEvidence     "Matt Johnson" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/25907756/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Matt Johnson (born 15 August 1961) is an English singer-songwriter best known as the vocalist and only constant member of his band The The." ;
+        mtp:hasParticipant   meetup:16d29633321d8a9e97bac870a7573530 ;
+        mtp:hasPurpose       meetup:add27871c917fac89e4f0c7d108c42a1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_Johnson_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:16d29633321d8a9e97bac870a7573530
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Johnson_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8280172438644618" ;
+        mtp:hasTextEvidence     "Matt Johnson" .
+
+<http://dbpedia.org/resource/Matt_Johnson_(singer)>
+        rdf:type  core:Person .
+
+meetup:29eab77fa960bd97f511b493f3af878b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99963903" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00014918289" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:add27871c917fac89e4f0c7d108c42a1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5217289" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.369147" ;
+        mtp:hasSourcePurpose          "ML" .

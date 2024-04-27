@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ferraby_Lionheart>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/13953245/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2000, Ferraby returned to Los Angeles and began hanging around Hollywood open mics and rock clubs. His first band, Telecast, became popular in Los Angeles with the new wave rock resurgent fans of the time." ;
+        mtp:hasParticipant   meetup:b9a691c0bdf092e5a518e7b395789715 ;
+        mtp:hasPurpose       meetup:0abd382a62dcc32a56c64f5f58c14412 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ferraby_Lionheart> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:0abd382a62dcc32a56c64f5f58c14412
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in the music scene" ;
+        mtp:hasEvidencePurposeSecond  "Personal experiences and activities" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Chris_Jericho>
+        rdf:type  core:Person .
+
+meetup:503b82176740a51a2fc3e9ec8255179a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95234543" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.024674088" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2e67e617eeb646e1c3c972b79dd2a9c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ferraby_Lionheart> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ferraby Lionheart" .
+
+meetup:b9a691c0bdf092e5a518e7b395789715
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chris_Jericho> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lionheart" .
+
+<http://w3id.org/polifonia/pilot/meetups/13953245/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ferraby Lionheart (born May 1, 1977 in Los Angeles, California, United States) is an American songwriter and recording artist." ;
+        mtp:hasParticipant   meetup:2e67e617eeb646e1c3c972b79dd2a9c6 ;
+        mtp:hasPurpose       meetup:503b82176740a51a2fc3e9ec8255179a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ferraby_Lionheart> ;
+        mtp:hasType          "HT" .

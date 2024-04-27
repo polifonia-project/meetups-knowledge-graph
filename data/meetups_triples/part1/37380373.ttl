@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Yngve_Moe>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/37380373/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yngve Moe (4 October 1957 – 17 April 2013) was a Norwegian bass guitarist and founding member of the rock band Dance with a Stranger." ;
+        mtp:hasParticipant   meetup:8bfe795a34aeff11d1d59dbc8a0280b4 ;
+        mtp:hasPurpose       meetup:cf9842796f4fa7b9aa481a4541132a09 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yngve_Moe> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:8bfe795a34aeff11d1d59dbc8a0280b4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yngve_Moe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999996530164" ;
+        mtp:hasTextEvidence     "Yngve Moe" .
+
+meetup:cf9842796f4fa7b9aa481a4541132a09
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997621" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00020554812" ;
+        mtp:hasSourcePurpose          "ML" .

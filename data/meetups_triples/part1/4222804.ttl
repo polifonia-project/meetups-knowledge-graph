@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/James_%22J.T.%22_Taylor>
+        rdf:type  core:Person .
+
+meetup:d0f44f92e1ed6d687fb9bc1eaaddb1ec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eumir_Deodato> ;
+        mtp:hasOffset           "188" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Eumir Deodato" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:c74a2f4193fa6e0f50ad23a3b46d104e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "The band recorded albums with a producer" ;
+        mtp:hasEvidencePurposeSecond  "The song was used in national media coverage for major events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/4222804/6/11>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The song was used in national media coverage for the 1980 World Series, the 1981 Super Bowl, the 1981 NBA Finals, and the 1981 return of the Iran hostages. After the release of Something Special (1981), which continued the level of success of the previous two albums, the band recorded As One (1982), their fourth and final album with producer Eumir Deodato." ;
+        mtp:hasParticipant   meetup:d0f44f92e1ed6d687fb9bc1eaaddb1ec ;
+        mtp:hasPurpose       meetup:c74a2f4193fa6e0f50ad23a3b46d104e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_%22J.T.%22_Taylor> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Eumir_Deodato>
+        rdf:type  core:Person .

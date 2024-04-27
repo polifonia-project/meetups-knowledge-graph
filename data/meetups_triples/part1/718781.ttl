@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jerry_Harrison>
+        rdf:type  core:Person .
+
+meetup:f85d6c490c0fa6da3eab8fdea4595c0d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jerry_Harrison> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jerry Harrison" .
+
+<http://w3id.org/polifonia/pilot/meetups/718781/14/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As of 2015, Jerry Harrison is the founder and chairman of the board at RedCrow, which is a web based direct investment platform that connects financial & human capital to healthcare start-ups." ;
+        mtp:hasParticipant   meetup:f85d6c490c0fa6da3eab8fdea4595c0d ;
+        mtp:hasPurpose       meetup:f6a6501af69314bfc2115d28f2da1125 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jerry_Harrison> ;
+        mtp:hasType          "HT" .
+
+meetup:f6a6501af69314bfc2115d28f2da1125
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94293743" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.034782592" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/53930781/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alice Merton (born 13 September 1993) is a German-born Irish-Canadian singer and songwriter." ;
+        mtp:hasParticipant   meetup:ece4a402543e43bbfe3fe5300f4aa561 ;
+        mtp:hasPurpose       meetup:99df8ae07aee035def2b514141eb9afe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alice_Merton> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Alice_Merton>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:99df8ae07aee035def2b514141eb9afe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.61549693" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28039744" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:ece4a402543e43bbfe3fe5300f4aa561
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alice_Merton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Alice Merton" .

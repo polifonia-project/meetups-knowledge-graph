@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Nairo_Quintana>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:54668106bd089b65c21bf612e1f7e10e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6671499" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29320487" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f0e00ffeba1d2077c1b52e0a91f494eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gonzalo Quintana III" .
+
+meetup:0134082b874eff38457d1358e6503730
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charlie_Quintana> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charlie Quintana" .
+
+<http://w3id.org/polifonia/pilot/meetups/3186709/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gonzalo Quintana III (January 29, 1962 – March 14, 2018), also known as Charlie Quintana or Chalo, was an American rock and punk drummer." ;
+        mtp:hasParticipant   meetup:f0e00ffeba1d2077c1b52e0a91f494eb , meetup:0134082b874eff38457d1358e6503730 , meetup:7591329b497cdd873163398e2b276996 ;
+        mtp:hasPurpose       meetup:54668106bd089b65c21bf612e1f7e10e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charlie_Quintana> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Charlie_Quintana>
+        rdf:type  core:Person .
+
+meetup:7591329b497cdd873163398e2b276996
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nairo_Quintana> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "0.979959426983982" ;
+        mtp:hasTextEvidence     "Quintana" .

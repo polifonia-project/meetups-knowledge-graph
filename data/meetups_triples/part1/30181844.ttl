@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7ddd56fa882edb831e0aba539cbb73eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christina_Kubisch> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Christina Kubisch" .
+
+meetup:32ad808366dbabc92e9475967bf28fae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99556607" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00443126" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/30181844/5/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1986 she began working with a new medium, ultraviolet light, and in 1987 she moved to Berlin. During that time, she created the pieces On Air (1984) and Iter Magneticum (1986) and \"Night Flight\" (1987)." ;
+        mtp:hasPurpose       meetup:701df939c9f1eacea860dc4da64b4caf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christina_Kubisch> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/30181844/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christina Kubisch (born 31 January 1948) is a German composer, sound artist, performance artist, professor and flautist." ;
+        mtp:hasParticipant   meetup:7ddd56fa882edb831e0aba539cbb73eb ;
+        mtp:hasPurpose       meetup:32ad808366dbabc92e9475967bf28fae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christina_Kubisch> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Christina_Kubisch>
+        rdf:type  core:Person .
+
+meetup:701df939c9f1eacea860dc4da64b4caf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating music pieces" ;
+        mtp:hasEvidencePurposeSecond  "Personal and professional activities" ;
+        mtp:hasSourcePurpose          "LLM" .

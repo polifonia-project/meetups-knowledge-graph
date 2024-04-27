@@ -1,0 +1,96 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Will.i.am>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:75cc3196df2de124acb09eff389ef2f2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chrisette_Michele> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chrisette Michele" .
+
+<http://w3id.org/polifonia/pilot/meetups/8182757/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chrisette Michele Payne (born December 8, 1982) is an American R&B and soul singer." ;
+        mtp:hasParticipant   meetup:75cc3196df2de124acb09eff389ef2f2 ;
+        mtp:hasPurpose       meetup:a7fa90fddd3dc6991b8ece60cdd264e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chrisette_Michele> ;
+        mtp:hasType          "HT" .
+
+meetup:a55db8744bafb205d021274469dfe47c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the performance and sales of an album." ;
+        mtp:hasEvidencePurposeSecond  "There is no indication of a business meeting in the sentence." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/8182757/10/18>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The album debuted at number 25 on the US Billboard 200 chart, selling 42,000 copies in its first week. It also peaked at number 7 on the US Top R&B/Hip-Hop Albums chart." ;
+        mtp:hasPurpose       meetup:a55db8744bafb205d021274469dfe47c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chrisette_Michele> ;
+        mtp:hasType          "HT" .
+
+meetup:7c736818352d396e9668ada55b0f0523
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Will.i.am> ;
+        mtp:hasOffset           "102" ;
+        mtp:hasSimilarityScore  "0.999990651526544" ;
+        mtp:hasTextEvidence     "will.i.am" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:fa8af7fe3e0c8857d21dba06626cd0e9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chrisette_Michele> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chrisette Michele" .
+
+meetup:a7fa90fddd3dc6991b8ece60cdd264e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5304157" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.348208" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Chrisette_Michele>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8182757/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She won a Grammy Award for Best Urban/Alternative Performance in 2009 for her song \"Be OK\" (featuring will.i.am)." ;
+        mtp:hasParticipant   meetup:7c736818352d396e9668ada55b0f0523 , meetup:fa8af7fe3e0c8857d21dba06626cd0e9 ;
+        mtp:hasPurpose       meetup:c25661d3fafe386dabd5da5e1352f3dc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chrisette_Michele> ;
+        mtp:hasType          "HM" .
+
+meetup:c25661d3fafe386dabd5da5e1352f3dc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997931" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00017425577" ;
+        mtp:hasSourcePurpose          "ML" .

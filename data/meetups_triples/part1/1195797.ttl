@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Mike_D>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1195797/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Louis Diamond (born November 20, 1965), better known as Mike D, is an American singer, rapper, musician and founding member of the hip hop group Beastie Boys." ;
+        mtp:hasParticipant   meetup:21e46b5c310f5b0bb05933d4ecc5c37a , meetup:c45a1d283b6fb8eb8606abbea013afc1 , meetup:4d783f20027154f043a0ca448d13114d ;
+        mtp:hasPurpose       meetup:b540230586a460953f9638b0eb111e06 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_D> ;
+        mtp:hasType          "HM" .
+
+meetup:b540230586a460953f9638b0eb111e06
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.50833005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.49166664" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c45a1d283b6fb8eb8606abbea013afc1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael Louis Diamond" .
+
+<http://dbpedia.org/resource/Louis_Diamond>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:4d783f20027154f043a0ca448d13114d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_D> ;
+        mtp:hasOffset           "64" ;
+        mtp:hasSimilarityScore  "0.9999999887490392" ;
+        mtp:hasTextEvidence     "Mike D" .
+
+meetup:21e46b5c310f5b0bb05933d4ecc5c37a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Louis_Diamond> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "0.9999999998652244" ;
+        mtp:hasTextEvidence     "Louis Diamond" .

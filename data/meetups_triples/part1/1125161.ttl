@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:39324ef9196942a838b14f5172a4e950
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999666" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.6613582e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1125161/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bench joined the band in 1987, shortly after Gavin Ward switched from bass guitar to guitar." ;
+        mtp:hasParticipant   meetup:b400b9cdd1c9697b37008cf972be84e3 , meetup:672ae807616d374a2569f5ac291422a4 ;
+        mtp:hasPurpose       meetup:39324ef9196942a838b14f5172a4e950 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jo_Bench> ;
+        mtp:hasType          "HM" .
+
+meetup:a99ea0b86cf8ef70f0b905a1628c410a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8825008" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06793886" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e61bbee743cd625f17171ef242454fae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jo_Bench> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jo-Anne Bench" .
+
+<http://dbpedia.org/resource/Jo_Bench>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Gavin_Ward_(footballer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1125161/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jo-Anne Bench is a death metal bass player from Leamington Spa, England, who is best known as the bassist for Bolt Thrower." ;
+        mtp:hasParticipant   meetup:e61bbee743cd625f17171ef242454fae ;
+        mtp:hasPurpose       meetup:a99ea0b86cf8ef70f0b905a1628c410a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jo_Bench> ;
+        mtp:hasType          "HT" .
+
+meetup:b400b9cdd1c9697b37008cf972be84e3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gavin_Ward_(footballer)> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "0.5727808346050246" ;
+        mtp:hasTextEvidence     "Gavin Ward" .
+
+meetup:672ae807616d374a2569f5ac291422a4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jo_Bench> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jo-Anne Bench" .

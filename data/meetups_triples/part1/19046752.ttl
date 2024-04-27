@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:fbf796219f09fa615177384cdae05d3f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Josh_Roseman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Josh Roseman" .
+
+<http://w3id.org/polifonia/pilot/meetups/19046752/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Josh Roseman (born 5 June 1967) is an American jazz trombonist." ;
+        mtp:hasParticipant   meetup:fbf796219f09fa615177384cdae05d3f ;
+        mtp:hasPurpose       meetup:1af02c8a17aee1d5ddd8e6eb7ef61bd7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Josh_Roseman> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Josh_Roseman>
+        rdf:type  core:Person .
+
+meetup:1af02c8a17aee1d5ddd8e6eb7ef61bd7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98136044" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011730077" ;
+        mtp:hasSourcePurpose          "ML" .

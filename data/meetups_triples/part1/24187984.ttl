@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:5b97aab8ef04e3e4ed535d0a70d26dec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Creating and licensing music" ;
+        mtp:hasEvidencePurposeSecond  "Founding a music publishing company" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/24187984/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jared Gutstadt (born September 19, 1977), also known as Jingle Jared, is a Canadian-born entrepreneur, inventor, and musician best known for founding the creative music agency Jingle Punks (2008), and the scripted-podcast network Audio Up (2020)." ;
+        mtp:hasParticipant   meetup:971d0f3580ef7dc23359cb133c3bafe9 , meetup:81715783e109766e086b05da1fdb9aa7 ;
+        mtp:hasPurpose       meetup:6624482df2d9eb3631b1a988c32116c0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jared_Gutstadt> ;
+        mtp:hasType          "HM" .
+
+meetup:81715783e109766e086b05da1fdb9aa7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jingle Jared" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/24187984/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2008, Gutstadt and Dan Demole co-founded Jingle Punks, a music publishing and licensing company headquartered in New York. With a catalog of nearly 500k songs, it forms one of the largest publishing libraries in the world." ;
+        mtp:hasPurpose       meetup:5b97aab8ef04e3e4ed535d0a70d26dec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jared_Gutstadt> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jared_Gutstadt>
+        rdf:type  core:Person .
+
+meetup:6624482df2d9eb3631b1a988c32116c0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6325511" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.31841198" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:971d0f3580ef7dc23359cb133c3bafe9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jared_Gutstadt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jared Gutstadt" .

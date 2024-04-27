@@ -1,0 +1,112 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Herman_Autrey>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Gene_Sedric>
+        rdf:type  core:Person .
+
+meetup:58e03884950abe14ba52b6d746c10cd1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998273" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00010721027" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5e7e511622ddd2eb76bb509b35480318
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95772314" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.036620043" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:69c6b7432ca1360699445865026a87d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Harry Dial" .
+
+meetup:664c72812c1409c05bc49d36989c4116
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gene_Sedric> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gene Sedric" .
+
+meetup:c52cce735bc360cab5df899c5427f6d2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to playing music" ;
+        mtp:hasEvidencePurposeSecond  "Related to personal experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/16152183/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Herman Autrey (December 4, 1904 – June 14, 1980) was an American jazz trumpeter." ;
+        mtp:hasParticipant   meetup:881e0d690e42784030cf59f01d1b6e78 ;
+        mtp:hasPurpose       meetup:5e7e511622ddd2eb76bb509b35480318 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Herman_Autrey> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/16152183/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He became well known through Fats Waller, who hired him in 1934 after signing a contract with Victor Records. He played with the drummer Harry Dial, guitarist Al Casey, and reedist Gene Sedric." ;
+        mtp:hasParticipant   meetup:664c72812c1409c05bc49d36989c4116 , meetup:69c6b7432ca1360699445865026a87d8 , meetup:1e1023e39d0b7d91635076a34884580d ;
+        mtp:hasPurpose       meetup:c52cce735bc360cab5df899c5427f6d2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Herman_Autrey> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Al_Casey_(rock_guitarist)>
+        rdf:type  core:Person .
+
+meetup:6e09faee4ce5820b111805019a6c3b58
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Herman_Autrey> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Herman Autrey" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1e1023e39d0b7d91635076a34884580d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Al_Casey_(rock_guitarist)> ;
+        mtp:hasOffset           "49" ;
+        mtp:hasSimilarityScore  "0.8265856220769295" ;
+        mtp:hasTextEvidence     "Al Casey" .
+
+<http://w3id.org/polifonia/pilot/meetups/16152183/2/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Herman Autrey died in June 1980 in New York, at the age of 75." ;
+        mtp:hasParticipant   meetup:6e09faee4ce5820b111805019a6c3b58 ;
+        mtp:hasPurpose       meetup:58e03884950abe14ba52b6d746c10cd1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Herman_Autrey> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:881e0d690e42784030cf59f01d1b6e78
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Herman_Autrey> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Herman Autrey" .

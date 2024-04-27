@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11934405/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Santos was born in 1982 in The Bronx, New York City, to Dominican parents. He grew up in the Mott Haven neighborhood in the Bronx." ;
+        mtp:hasPurpose       meetup:63d5d967db85ef0bad77fa480ee00ec0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Max_Santos> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Max_Santos>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Max_Cavalera>
+        rdf:type  core:Person .
+
+meetup:9cc271718bfc9381f1129f9cfc9e2b70
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Max_Santos> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "0.9999999988999662" ;
+        mtp:hasTextEvidence     "Mikey" .
+
+meetup:b04d1a21bc66014857cb438f648cdb69
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.67774916" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.31588095" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/11934405/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Max \"Mikey\" Santos (born January 30, 1982), known professionally as Max Agende, is an American bass guitarist, musical arranger and rapper." ;
+        mtp:hasParticipant   meetup:64d200bad7c406c09efb6c262389b5a6 , meetup:2789d971df24803022eea6a37fe67fed , meetup:9cc271718bfc9381f1129f9cfc9e2b70 ;
+        mtp:hasPurpose       meetup:b04d1a21bc66014857cb438f648cdb69 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Max_Santos> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:2789d971df24803022eea6a37fe67fed
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Max Agende" .
+
+meetup:63d5d967db85ef0bad77fa480ee00ec0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Santos' personal background" ;
+        mtp:hasEvidencePurposeSecond  "Information about Santos' upbringing and education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:64d200bad7c406c09efb6c262389b5a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Max_Cavalera> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8772263818388065" ;
+        mtp:hasTextEvidence     "Max" .

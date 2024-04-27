@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1333990/12/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On December 26, 2004, Layton died of natural causes at his home in Forest Hills, New York at age 79, according to various reports following a brief illness. He was buried at Mount Hebron Cemetery in Queens, New York City, with his feet pointed away from Shea Stadium." ;
+        mtp:hasParticipant   meetup:f4ae73bf03c132967a89d5c3807b016b ;
+        mtp:hasPurpose       meetup:e6cc26146923e51f92e975bd8a54ff62 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Layton> ;
+        mtp:hasType          "HT" .
+
+meetup:f4ae73bf03c132967a89d5c3807b016b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Turner_Layton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Layton" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d97c1eaaa2e378f27d43d784c115073f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating a YouTube tribute channel" ;
+        mtp:hasEvidencePurposeSecond  "Colleagues at CBS Broadcast Center" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:71702a322b0902423ef6ae59d73abefa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Layton> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Eddie Layton" .
+
+<http://w3id.org/polifonia/pilot/meetups/1333990/10/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009, Soapluvva established a YouTube tribute channel to both Eddie Layton and Charles Paul, who were colleagues of each other at the CBS Broadcast Center in Manhattan." ;
+        mtp:hasParticipant   meetup:71702a322b0902423ef6ae59d73abefa ;
+        mtp:hasPurpose       meetup:d97c1eaaa2e378f27d43d784c115073f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Eddie_Layton> ;
+        mtp:hasType          "HT" .
+
+meetup:e6cc26146923e51f92e975bd8a54ff62
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about Layton's death and burial" ;
+        mtp:hasEvidencePurposeSecond  "Coincidental placement of his feet away from Shea Stadium" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Turner_Layton>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Eddie_Layton>
+        rdf:type  core:Person .

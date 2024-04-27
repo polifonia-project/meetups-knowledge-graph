@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Sergey_Malov>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/11129216/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1922, Malov returned to Petrograd (former Saint Petersburg) and was elected a lecturer in the Petrograd University. He continued working in Leningrad (former Petrograd) universities, museums, and research, and Oriental and Linguistic institutes of the USSR Academy of Sciences." ;
+        mtp:hasParticipant   meetup:1810b4e6f46b804699639d848ee346d0 ;
+        mtp:hasPurpose       meetup:a47543bec87d312ce5a9f11e97586291 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sergey_Malov> ;
+        mtp:hasType          "HT" .
+
+meetup:1810b4e6f46b804699639d848ee346d0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Oleg_Malov> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Malov" .
+
+<http://dbpedia.org/resource/Oleg_Malov>
+        rdf:type  core:Person .
+
+meetup:a47543bec87d312ce5a9f11e97586291
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to academic career" ;
+        mtp:hasEvidencePurposeSecond  "Related to personal life and location" ;
+        mtp:hasSourcePurpose          "LLM" .

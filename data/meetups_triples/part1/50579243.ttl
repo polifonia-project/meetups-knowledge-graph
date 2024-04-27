@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:fdf2cf94eead33408ff167432919fa81
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99608445" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0012778589" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:8ae75b477c89bb28a76d823c55967252
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9989293" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000613791" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/50579243/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Parc Jae-jung (born December 25, 1995) is a South Korean singer." ;
+        mtp:hasParticipant   meetup:c0ae8e0ec6db10b87f2594a4ed3ffa8f ;
+        mtp:hasPurpose       meetup:8ae75b477c89bb28a76d823c55967252 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Parc_Jae-jung> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:6d5aea394805e2e1988361d6fcb2c358
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Parc_Jae-jung> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Parc Jae-jung" .
+
+meetup:c0ae8e0ec6db10b87f2594a4ed3ffa8f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Parc_Jae-jung> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Parc Jae-jung" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/50579243/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is well known as the winner of the South Korean singing competition Superstar K 5 in 2013." ;
+        mtp:hasParticipant   meetup:6d5aea394805e2e1988361d6fcb2c358 ;
+        mtp:hasPurpose       meetup:fdf2cf94eead33408ff167432919fa81 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Parc_Jae-jung> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Parc_Jae-jung>
+        rdf:type  core:Person .

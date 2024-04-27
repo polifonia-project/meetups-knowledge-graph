@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/10570705/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michel Portal (born 27 November 1935) is a French composer, saxophonist, and clarinetist." ;
+        mtp:hasParticipant   meetup:571606f117a9a133acbebccc12c8eb37 ;
+        mtp:hasPurpose       meetup:0df4a57f459df94a5bfd473cc72a1898 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michel_Portal> ;
+        mtp:hasType          "HT" .
+
+meetup:571606f117a9a133acbebccc12c8eb37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michel_Portal> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Michel Portal" .
+
+<http://dbpedia.org/resource/Michel_Portal>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:0df4a57f459df94a5bfd473cc72a1898
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7846755" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08810261" ;
+        mtp:hasSourcePurpose          "ML" .

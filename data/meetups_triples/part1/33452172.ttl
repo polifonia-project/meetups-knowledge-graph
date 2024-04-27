@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:957f91ffa6fe4240824f2253c79ae7d7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999101" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.36548e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:185091a018bd6d182834fad1d49a7866
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robert_J._Litt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Robert J. Litt" .
+
+<http://w3id.org/polifonia/pilot/meetups/33452172/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked on over 160 films between 1964 and 2000." ;
+        mtp:hasParticipant   meetup:185091a018bd6d182834fad1d49a7866 ;
+        mtp:hasPurpose       meetup:957f91ffa6fe4240824f2253c79ae7d7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_J._Litt> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Robert_J._Litt>
+        rdf:type  core:Person .

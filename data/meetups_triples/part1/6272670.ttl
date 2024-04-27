@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/6272670/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bazar lived in Sydney, Australia throughout the 1990s and much of the 2000s before returning to England. She was married during the 1990s, but divorced in the mid-2000s." ;
+        mtp:hasParticipant   meetup:b19c4403014a45ceba2f1ac24b0ff452 ;
+        mtp:hasPurpose       meetup:699937336807b9245b5c7188cbde3482 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Thereza_Bazar> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/6272670/4/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The same year, she recorded the theme song for the US film, Gotcha!. This was released as a single in the US." ;
+        mtp:hasPurpose       meetup:54a93df61a9c6e5aa96928b5197c9770 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Thereza_Bazar> ;
+        mtp:hasType          "HT" .
+
+meetup:699937336807b9245b5c7188cbde3482
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Occurrences that happen by chance" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:b19c4403014a45ceba2f1ac24b0ff452
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bazar" .
+
+<http://dbpedia.org/resource/Thereza_Bazar>
+        rdf:type  core:Person .
+
+meetup:54a93df61a9c6e5aa96928b5197c9770
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Recording a theme song" ;
+        mtp:hasEvidencePurposeSecond  "Releasing a single" ;
+        mtp:hasSourcePurpose          "LLM" .

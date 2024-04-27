@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:ec0a2d6ade4e18580edda643d6a2fc9a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Cale> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.9999999999814548" ;
+        mtp:hasTextEvidence     "John Cale" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1350984/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Alex Thomas (born 10 October 1978) is an English drummer from Lutterworth, Leicestershire, who performs with Squarepusher and Air." ;
+        mtp:hasParticipant   meetup:aadc53c34bf25828477067b9622d5f43 ;
+        mtp:hasPurpose       meetup:ba6a47e1566d3ee5697d356c42f2b7e7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alex_Thomas> ;
+        mtp:hasType          "HT" .
+
+meetup:ba6a47e1566d3ee5697d356c42f2b7e7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99869233" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0012987241" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Alex_Thomas>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/John_Cale>
+        rdf:type  core:Person .
+
+meetup:aadc53c34bf25828477067b9622d5f43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alex_Thomas> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999686196" ;
+        mtp:hasTextEvidence     "Alex Thomas" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1350984/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also performed with John Cale (2013)." ;
+        mtp:hasParticipant   meetup:ec0a2d6ade4e18580edda643d6a2fc9a , meetup:08c4564172f61f83cf65e4c351179dcd ;
+        mtp:hasPurpose       meetup:88087e16375730639c81c8e3e11542a1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alex_Thomas> ;
+        mtp:hasType          "HM" .
+
+meetup:08c4564172f61f83cf65e4c351179dcd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alex_Thomas> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alex Thomas" .
+
+meetup:88087e16375730639c81c8e3e11542a1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.4687337e-08" ;
+        mtp:hasSourcePurpose          "ML" .

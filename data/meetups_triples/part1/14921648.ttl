@@ -1,0 +1,100 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/14921648/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She made her debut on the country music scene as a teenager, releasing four singles on MCA Records in the early 1980s before leaving her career in favor of a college education." ;
+        mtp:hasParticipant   meetup:03eaa2d8e19bb9b9bca5e6417bfc85ba ;
+        mtp:hasPurpose       meetup:c5fd2fc873d028bf09e9347ea7bddf74 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kippi_Brannon> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:03eaa2d8e19bb9b9bca5e6417bfc85ba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kippi_Brannon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kippi Brannon" .
+
+meetup:085a230d3992748687a36dce0985ba91
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kippi Rolynn Binkley" .
+
+meetup:b614a04b7f4eaaec11cc3be94091762a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kippi_Brannon> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kippi Brannon" .
+
+meetup:6d5b4e2fd28488e7253326e51e9d81cd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kippi_Brannon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kippi Brannon" .
+
+<http://w3id.org/polifonia/pilot/meetups/14921648/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By 1992, she returned to the country music scene, eventually releasing her debut album I'd Be with You in 1997." ;
+        mtp:hasParticipant   meetup:b614a04b7f4eaaec11cc3be94091762a ;
+        mtp:hasPurpose       meetup:8e7578f0b34ffc1a0b47f7f443b9de46 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kippi_Brannon> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:8e7578f0b34ffc1a0b47f7f443b9de46
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.693575" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28848097" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/14921648/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kippi Brannon (born Kippi Rolynn Binkley, 1966) is an American country music singer." ;
+        mtp:hasParticipant   meetup:6d5b4e2fd28488e7253326e51e9d81cd , meetup:085a230d3992748687a36dce0985ba91 ;
+        mtp:hasPurpose       meetup:ec9cf90b3f7fcb90cc20b2d43e763817 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kippi_Brannon> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Kippi_Brannon>
+        rdf:type  core:Person .
+
+meetup:ec9cf90b3f7fcb90cc20b2d43e763817
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9785017" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.021472232" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c5fd2fc873d028bf09e9347ea7bddf74
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998975" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.940075e-06" ;
+        mtp:hasSourcePurpose          "ML" .

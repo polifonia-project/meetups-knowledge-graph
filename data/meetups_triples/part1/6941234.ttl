@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Arthur_Gunter>
+        rdf:type  core:Person .
+
+meetup:3248fd0697cc4d751902ac712f2d9c96
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97192425" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.026949171" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6941234/5/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Also in late 2016, UK Jasmine issued an Arthur Gunter CD, also called \"Baby Let's Play House\", which is easily available." ;
+        mtp:hasParticipant   meetup:585026d98a4231350aa6fe8821f18bcd ;
+        mtp:hasPurpose       meetup:3248fd0697cc4d751902ac712f2d9c96 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Arthur_Gunter> ;
+        mtp:hasType          "HT" .
+
+meetup:585026d98a4231350aa6fe8821f18bcd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Arthur_Gunter> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Arthur Gunter" .

@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/15439659/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jennifer Day Morrison (born August 22, 1979) is an American country music singer." ;
+        mtp:hasParticipant   meetup:86229c49685aeca955151c40c5931f3f ;
+        mtp:hasPurpose       meetup:97710378dfbf921863cfbe687f0da767 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jennifer_Day> ;
+        mtp:hasType          "HT" .
+
+meetup:6647f07abc93e4a42a628cc392fa1e4c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jennifer_Day> ;
+        mtp:hasOffset           "36" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jennifer Day" .
+
+meetup:86229c49685aeca955151c40c5931f3f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jennifer_Day> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999980619804" ;
+        mtp:hasTextEvidence     "Jennifer Day" .
+
+meetup:97710378dfbf921863cfbe687f0da767
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95051396" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.030021297" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jennifer_Day>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/15439659/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Signed to BNA Records in late 1999, she has released one studio album (2000's The Fun of Your Love) and has charted two singles on the Billboard Hot Country Singles & Tracks (now Hot Country Songs) charts." ;
+        mtp:hasParticipant   meetup:6647f07abc93e4a42a628cc392fa1e4c ;
+        mtp:hasPurpose       meetup:1a10dd7180cfc03c9047761e0b67122f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jennifer_Day> ;
+        mtp:hasType          "HT" .
+
+meetup:1a10dd7180cfc03c9047761e0b67122f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.50343347" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4936757" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/32854609/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Julie McDonald (born 1954) is a talent agent and co-founder of McDonald Selznick Associates (MSA), an agency headquartered in Hollywood, California, that represents dancers, choreographers, stage directors, and production designers." ;
+        mtp:hasParticipant   meetup:37389f51763edab9c3c8a75803dcadbe ;
+        mtp:hasPurpose       meetup:3f189c4e1d3e48d9885824233f7515ff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Julie_McDonald_(agent)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Julie_McDonald_(agent)>
+        rdf:type  core:Person .
+
+meetup:37389f51763edab9c3c8a75803dcadbe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Julie_McDonald_(agent)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Julie McDonald" .
+
+meetup:3f189c4e1d3e48d9885824233f7515ff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99725467" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0022509117" ;
+        mtp:hasSourcePurpose          "ML" .

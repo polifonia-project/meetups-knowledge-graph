@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:faf2590ea0178adad46070d9f16a073a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jung_Tae-woo> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jung Tae-woo" .
+
+<http://dbpedia.org/resource/Jung_Tae-woo>
+        rdf:type  core:Person .
+
+meetup:5565afc5c6febe0077aba288ea07a9f4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jang In-hee" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/14392256/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On May 8, 2009, Jung Tae-woo wed stewardess Jang In-hee in a private Christian ceremony at Seoul's Shilla Hotel." ;
+        mtp:hasParticipant   meetup:5565afc5c6febe0077aba288ea07a9f4 , meetup:faf2590ea0178adad46070d9f16a073a ;
+        mtp:hasPurpose       meetup:de0290edd66e8b067fc82d4e182836ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jung_Tae-woo> ;
+        mtp:hasType          "HM" .
+
+meetup:de0290edd66e8b067fc82d4e182836ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Events related to an individual's personal life" ;
+        mtp:hasEvidencePurposeSecond  "A public event or ceremony" ;
+        mtp:hasSourcePurpose          "LLM" .

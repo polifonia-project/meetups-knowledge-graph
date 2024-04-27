@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Kippei_Shiina>
+        rdf:type  core:Person .
+
+meetup:977fca48d78ff553e10aaee5ebf7c4c4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kippei_Shiina> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kippei Shiina" .
+
+<http://w3id.org/polifonia/pilot/meetups/39516614/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kippei Shiina (椎名 桔平, Shiina Kippei, born 14 July 1964) is a Japanese actor." ;
+        mtp:hasParticipant   meetup:977fca48d78ff553e10aaee5ebf7c4c4 , meetup:6aa80c09c2b97d10e496cd9935594fc9 ;
+        mtp:hasPurpose       meetup:3ec3395ae00e375fd67978db80bcee6b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kippei_Shiina> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:6aa80c09c2b97d10e496cd9935594fc9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Shiina Kippei" .
+
+meetup:3ec3395ae00e375fd67978db80bcee6b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999279" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.3339754e-05" ;
+        mtp:hasSourcePurpose          "ML" .

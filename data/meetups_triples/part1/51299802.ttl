@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Paul_Sartin>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/51299802/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paul Sartin (born 1971) is an English singer, instrumentalist, composer and arranger, specialising in oboe and violin." ;
+        mtp:hasParticipant   meetup:79203b5d0a6675586d1d49bc558bddef ;
+        mtp:hasPurpose       meetup:ee3b8263a9887824516427f839f86d9b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_Sartin> ;
+        mtp:hasType          "HT" .
+
+meetup:79203b5d0a6675586d1d49bc558bddef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Sartin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Paul Sartin" .
+
+meetup:ee3b8263a9887824516427f839f86d9b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99391264" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.005934479" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:f132a801d99f20685e08a059276d66f5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fred_Child> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Fred Child" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1061979/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fred Child (born March 30, 1963) is an American radio host." ;
+        mtp:hasParticipant   meetup:f132a801d99f20685e08a059276d66f5 ;
+        mtp:hasPurpose       meetup:5bed1b16efe5b10c725356cfd07f215d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fred_Child> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1061979/4/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In addition to Performance Today, Child is the host of NPR's Creators @ Carnegie; a contributor to NPR's All Things Considered; and a host for live broadcasts of important concert events from New York City, Los Angeles, and London. He also appears on-stage doing pre-concert talks for the Baltimore Symphony Orchestra, New York's Lincoln Center, the Aspen Music Festival, and the Washington Performing Arts Society." ;
+        mtp:hasPurpose       meetup:b8b158db1e5bc0ece1f00eb39190c679 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fred_Child> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f15905ea64b53c01fafef62dd71e15c4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fred_Child> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Fred Child" .
+
+<http://dbpedia.org/resource/Fred_Child>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b8b158db1e5bc0ece1f00eb39190c679
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Host of concert events" ;
+        mtp:hasEvidencePurposeSecond  "Pre-concert talks" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1061979/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Since 2000, he has been the host of the classical music radio program Performance Today on American Public Media." ;
+        mtp:hasParticipant   meetup:f15905ea64b53c01fafef62dd71e15c4 ;
+        mtp:hasPurpose       meetup:dbbf36c3178b82165a18e9bfd48667c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fred_Child> ;
+        mtp:hasType          "HT" .
+
+meetup:dbbf36c3178b82165a18e9bfd48667c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9732074" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.025051758" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5bed1b16efe5b10c725356cfd07f215d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.556414e-09" ;
+        mtp:hasSourcePurpose          "ML" .

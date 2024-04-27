@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/42308570/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The station operated from the attic of Lubinsky's home before its studio in Newark opened in 1925. The station became known as \"The Voice of Newark\" and presented programmes for immigrants to the New York metropolitan area in Polish, Lithuanian and Italian." ;
+        mtp:hasPurpose       meetup:a17ff81253591deb692bf2bdf3539e26 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Herman_Lubinsky> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9a7d2fc26906c27dea9e1ae866dcc7d5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Herman_Lubinsky> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Herman Lubinsky" .
+
+<http://w3id.org/polifonia/pilot/meetups/42308570/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Herman Lubinsky (born Hyman Lubinsky, 30 August 1896 – 16 March 1974) was an American radio station and music business executive who founded Savoy Records in New York City in 1942." ;
+        mtp:hasParticipant   meetup:9a7d2fc26906c27dea9e1ae866dcc7d5 , meetup:8b62c36b16f6a36a957c6420825159fc ;
+        mtp:hasPurpose       meetup:f4b9869d44b50277de448a0b5c1d5fdc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Herman_Lubinsky> ;
+        mtp:hasType          "HM" .
+
+meetup:8b62c36b16f6a36a957c6420825159fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hyman Lubinsky" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Herman_Lubinsky>
+        rdf:type  core:Person .
+
+meetup:a17ff81253591deb692bf2bdf3539e26
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Broadcasting music and programs" ;
+        mtp:hasEvidencePurposeSecond  "Providing educational content for immigrants" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f4b9869d44b50277de448a0b5c1d5fdc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Herman Lubinsky founded Savoy Records" ;
+        mtp:hasEvidencePurposeSecond  "Herman Lubinsky was a music business executive" ;
+        mtp:hasSourcePurpose          "LLM" .

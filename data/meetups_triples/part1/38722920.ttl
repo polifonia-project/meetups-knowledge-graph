@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:9cc72826d557f67b0b99401fe0e97f3e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9631968" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.029719917" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ec1cc6d2599b90beeb689136979540eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Carney_(artist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael Carney" .
+
+<http://w3id.org/polifonia/pilot/meetups/38722920/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known for his extensive, award winning visual work with the rock band the Black Keys, for whom his brother Patrick is the drummer." ;
+        mtp:hasParticipant   meetup:17cdcad10c27ba0ebb1b715736a80957 , meetup:ec1cc6d2599b90beeb689136979540eb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Carney_(artist)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Michael_Carney_(artist)>
+        rdf:type  core:Person .
+
+meetup:da912fa314444046ddfccd9cabcc8c52
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Carney_(artist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999648092714168" ;
+        mtp:hasTextEvidence     "Michael Carney" .
+
+meetup:17cdcad10c27ba0ebb1b715736a80957
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "118" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Patrick" .
+
+<http://w3id.org/polifonia/pilot/meetups/38722920/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Carney (born January 9, 1982) is an American art director, creative director, and photographer." ;
+        mtp:hasParticipant   meetup:da912fa314444046ddfccd9cabcc8c52 ;
+        mtp:hasPurpose       meetup:9cc72826d557f67b0b99401fe0e97f3e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Carney_(artist)> ;
+        mtp:hasType          "HT" .

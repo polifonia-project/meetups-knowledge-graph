@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:131a5030e7c770aaa2042e40ccf1392d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jon_Batiste> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jon Batiste" .
+
+meetup:2ad7839e8d0770210cd5ea3d5f39d017
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maddie_Rice> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Maddie Rice" .
+
+meetup:0af908d617a070d7201c98f9e9e1af56
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maddie_Rice> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Maddie Rice" .
+
+<http://w3id.org/polifonia/pilot/meetups/51149108/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She currently plays with the Saturday Night Live Band." ;
+        mtp:hasParticipant   meetup:0af908d617a070d7201c98f9e9e1af56 ;
+        mtp:hasPurpose       meetup:b22d0f669fbc0c6f46803f7dd2b7f0c9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maddie_Rice> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:4e88e2561a9d1df5ca8b1de5d9963089
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93035537" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.066582285" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Jon_Batiste>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Maddie_Rice>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/51149108/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She performed several years with Jon Batiste's Stay Human, the house band for The Late Show with Stephen Colbert." ;
+        mtp:hasParticipant   meetup:2ad7839e8d0770210cd5ea3d5f39d017 , meetup:131a5030e7c770aaa2042e40ccf1392d ;
+        mtp:hasPurpose       meetup:4e88e2561a9d1df5ca8b1de5d9963089 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maddie_Rice> ;
+        mtp:hasType          "HM" .
+
+meetup:b22d0f669fbc0c6f46803f7dd2b7f0c9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9479644" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03738932" ;
+        mtp:hasSourcePurpose          "ML" .

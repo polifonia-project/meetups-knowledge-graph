@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Natalie_Gioia>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:d9abbaad2e760a8285e93ddc95ce3c61
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7893116" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.20823775" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2e4d4045ecdd421d5c948d7f7a2e9e66
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Natalie_Gioia> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999973" ;
+        mtp:hasTextEvidence     "Natalie Gioia" .
+
+<http://w3id.org/polifonia/pilot/meetups/41671416/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Natalie Gioia is an electronic music vocalist and songwriter, based in Kyiv, Ukraine." ;
+        mtp:hasParticipant   meetup:2e4d4045ecdd421d5c948d7f7a2e9e66 ;
+        mtp:hasPurpose       meetup:d9abbaad2e760a8285e93ddc95ce3c61 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Natalie_Gioia> ;
+        mtp:hasType          "HT" .

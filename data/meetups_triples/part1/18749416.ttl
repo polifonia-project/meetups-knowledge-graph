@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Hank_O'Neal>
+        rdf:type  core:Person .
+
+meetup:f123e1ccd1a40b668cbf961dc6d95a81
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Focus on his educational background" ;
+        mtp:hasEvidencePurposeSecond  "Details about his personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:741bbdaccc50770c7985982deb6b42f5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leslie_O'Neal> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "O’Neal" .
+
+<http://dbpedia.org/resource/Leslie_O'Neal>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18749416/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His father was a professional soldier and educator in the U.S. Army in Texas and the Pacific (1929–1947) and, following World War II, an educator and public school superintendent in upstate New York (1953–72). O’Neal was raised in Texas; Bloomington, Indiana; and Syracuse, New York." ;
+        mtp:hasParticipant   meetup:741bbdaccc50770c7985982deb6b42f5 ;
+        mtp:hasPurpose       meetup:f123e1ccd1a40b668cbf961dc6d95a81 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hank_O'Neal> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .

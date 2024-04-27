@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11658412/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Raffaele Riefoli (born September 29, 1959 in Margherita di Savoia, Italy) is an Italian singer-songwriter who is better known as simply Raf." ;
+        mtp:hasParticipant   meetup:5555bc7d1f44634c28a26eef2ce8e2c6 ;
+        mtp:hasPurpose       meetup:0db9d91cd57f619220ac613e764b71f2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Raf_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Raf_(singer)>
+        rdf:type  core:Person .
+
+meetup:0db9d91cd57f619220ac613e764b71f2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Italian singer-songwriter" ;
+        mtp:hasEvidencePurposeSecond  "Born in Italy" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:5555bc7d1f44634c28a26eef2ce8e2c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Raf_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999840311206" ;
+        mtp:hasTextEvidence     "Raffaele Riefoli" .

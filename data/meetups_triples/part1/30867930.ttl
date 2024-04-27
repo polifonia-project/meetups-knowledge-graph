@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/30867930/6/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Success there brought a call from Diaghilev to join him in Paris to star in the premiere of Stravinsky's opera Mavra in 1922. Chaliapin then invited her to be principal soprano in the company he was forming to tour Western Europe and she sang with him in Paris." ;
+        mtp:hasParticipant   meetup:8d78a78054c264441c1935962adadc37 ;
+        mtp:hasPurpose       meetup:efbe27537308ee66ed77c2031020b396 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Oda_Slobodskaya> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:8d78a78054c264441c1935962adadc37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Feodor_Chaliapin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999898108" ;
+        mtp:hasTextEvidence     "Chaliapin" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Feodor_Chaliapin>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Oda_Slobodskaya>
+        rdf:type  core:Person .
+
+meetup:70f62dcb13396811be7119a11bae4e00
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6874836" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15520136" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/30867930/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Oda Slobodskaya (28 November/10 December 1888 - 30 July 1970) was a Russian soprano who became a British citizen." ;
+        mtp:hasParticipant   meetup:58e01202d916ad2d105bd8227e8fe3bb ;
+        mtp:hasPurpose       meetup:70f62dcb13396811be7119a11bae4e00 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Oda_Slobodskaya> ;
+        mtp:hasType          "HT" .
+
+meetup:efbe27537308ee66ed77c2031020b396
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in Stravinsky's opera" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration with Chaliapin" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:58e01202d916ad2d105bd8227e8fe3bb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Oda_Slobodskaya> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Oda Slobodskaya" .

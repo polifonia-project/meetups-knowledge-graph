@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e629321810053ebaf025e1359a056609
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7675262" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11300871" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:82101410478a55551105d820bd5136bc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/André_Olbrich> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Olbrich" .
+
+meetup:5d453f7408e6a4db80131df6b9497003
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joel_McIver> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joel McIver" .
+
+<http://dbpedia.org/resource/Joel_McIver>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1519427/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "André Olbrich (born 3 May 1967) is a German musician, best known as the co-founder and lead guitarist of power metal band Blind Guardian, in which he serves as one of the main composers with other founder Hansi Kürsch." ;
+        mtp:hasParticipant   meetup:d9c1269edd7f68dd6c896e968d0092b3 ;
+        mtp:hasPurpose       meetup:e629321810053ebaf025e1359a056609 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/André_Olbrich> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/1519427/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is also ranked number 64 in Joel McIver's The 100 Greatest Metal Guitarists." ;
+        mtp:hasParticipant   meetup:5d453f7408e6a4db80131df6b9497003 , meetup:82101410478a55551105d820bd5136bc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/André_Olbrich> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/André_Olbrich>
+        rdf:type  core:Person .
+
+meetup:d9c1269edd7f68dd6c896e968d0092b3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/André_Olbrich> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.9639412725599106" ;
+        mtp:hasTextEvidence     "Olbrich" .

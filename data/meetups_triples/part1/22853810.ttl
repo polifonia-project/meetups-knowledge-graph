@@ -1,0 +1,101 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/22853810/9/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At NAMM 2013, Tosin Abasi's signature guitar, the Ibanez TAM 100, was revealed." ;
+        mtp:hasParticipant   meetup:99c0dfb1e7d2e48c2b8eb72f3cd3720f ;
+        mtp:hasPurpose       meetup:336e1f8fea96ec3a65d7f6a36f1b2326 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tosin_Abasi> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/22853810/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His brother, Abdul Abasi, is a former drill sergeant in the United States military and is currently a fashion designer." ;
+        mtp:hasParticipant   meetup:a2525f8e524ea9990c458774a5471269 , meetup:720d6ee156a14f99937de8bfbcc87eb5 ;
+        mtp:hasPurpose       meetup:e65e5315fadc25ad4b1ab32254bd8450 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tosin_Abasi> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:720d6ee156a14f99937de8bfbcc87eb5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Abdul Abasi" .
+
+meetup:a2525f8e524ea9990c458774a5471269
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tosin_Abasi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tosin Abasi" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Tosin_Abasi>
+        rdf:type  core:Person .
+
+meetup:4ae65ee94124e583ef39965023a92a40
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tosin_Abasi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tosin Abasi" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/22853810/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tosin Abasi was born in Washington D.C. to Nigerian immigrants to the United States." ;
+        mtp:hasParticipant   meetup:4ae65ee94124e583ef39965023a92a40 ;
+        mtp:hasPurpose       meetup:d710153ece1d7d8406c1412d8881f648 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tosin_Abasi> ;
+        mtp:hasType          "HT" .
+
+meetup:d710153ece1d7d8406c1412d8881f648
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999774" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.7912929e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:336e1f8fea96ec3a65d7f6a36f1b2326
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9168091" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.082618564" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:99c0dfb1e7d2e48c2b8eb72f3cd3720f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tosin_Abasi> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tosin Abasi" .
+
+meetup:e65e5315fadc25ad4b1ab32254bd8450
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about individuals and their background" ;
+        mtp:hasEvidencePurposeSecond  "Information about education and career paths" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,90 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/4003776/3/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He married his second wife, Jane in 1985, with whom he had a daughter, Rachel. His younger brother is James, a former naval officer." ;
+        mtp:hasParticipant   meetup:c720cc74acbdd11006adbbb3e055563d ;
+        mtp:hasPurpose       meetup:fe39bed88a92a8d2d3430cdadfc1912c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Fanshawe> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4003776/2/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During a summer spent hitchhiking in Afghanistan he heard Islamic music for the first time and was immediately attracted to its beauty. During further travels in Iraq and Bahrain he recorded the traditional music he heard." ;
+        mtp:hasPurpose       meetup:a371af831516032eff496a872117209e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Fanshawe> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/David_Fanshawe>
+        rdf:type  core:Person .
+
+meetup:fe39bed88a92a8d2d3430cdadfc1912c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about personal relationships" ;
+        mtp:hasEvidencePurposeSecond  "Details about family members and occupations" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c720cc74acbdd11006adbbb3e055563d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.4968246041135521" ;
+        mtp:hasTextEvidence     "James" .
+
+<http://w3id.org/polifonia/pilot/meetups/4003776/2/24>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fanshawe detailed his plans for Pacific Odyssey in an interview with Rory Johnston on Music Now on the BBC World Service, 15 January 1986. An extended version of this including Fanshawe’s recordings and a movement of an intermezzo is on You Tube." ;
+        mtp:hasPurpose       meetup:dffeca6b4462dc9dc3e1ead286636028 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Fanshawe> ;
+        mtp:hasType          "HT" .
+
+meetup:a371af831516032eff496a872117209e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creation and recording of music" ;
+        mtp:hasEvidencePurposeSecond  "Personal experiences and travels" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:dffeca6b4462dc9dc3e1ead286636028
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Discussion about music plans" ;
+        mtp:hasEvidencePurposeSecond  "Learning about music recordings" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/4003776/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At Stowe School he spent much of his spare time learning to play the piano, and when he was 17 he was discovered by the mother of a school friend, a French baroness who tutored him in the piano even after he left the school in 1959. He started his adult career as a musician and film editor for a small production company in Wimbledon in London who made documentary films." ;
+        mtp:hasPurpose       meetup:21b2688cd5ef63aea93c847788a38c5b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Fanshawe> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .
+
+meetup:21b2688cd5ef63aea93c847788a38c5b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions learning to play the piano and starting a career as a musician." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions attending Stowe School and being tutored by a French baroness." ;
+        mtp:hasSourcePurpose          "LLM" .

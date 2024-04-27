@@ -1,0 +1,92 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Dave_Rodgers>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:8c21ba2453571a96af12c0248aa2828d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Rodgers> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dave Rodgers" .
+
+<http://w3id.org/polifonia/pilot/meetups/1857363/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in Mantua, Italy, he formed the band Aleph before contributing to the long-running Super Eurobeat series." ;
+        mtp:hasParticipant   meetup:8c21ba2453571a96af12c0248aa2828d ;
+        mtp:hasPurpose       meetup:df96ab948be9d199153df2640eaa4c76 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Rodgers> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:df96ab948be9d199153df2640eaa4c76
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9965429" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0026309371" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Alberto_Contini>
+        rdf:type  core:Person .
+
+meetup:52a325c5ae6261cafffa415aa2482e75
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alberto_Contini> ;
+        mtp:hasOffset           "58" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alberto Contini" .
+
+meetup:c7e2bd34448fc69adc686688f9b8c378
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998765" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0012134473" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:069a4d039dbffa80d2b15998b10e5461
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Rodgers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dave Rodgers" .
+
+meetup:a4f224eb36938da931ba042c7bbdb7bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Rodgers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dave Rodgers" .
+
+<http://w3id.org/polifonia/pilot/meetups/1857363/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He owns Rodgers Studio and A-Beat C Productions alongside Alberto Contini." ;
+        mtp:hasParticipant   meetup:a4f224eb36938da931ba042c7bbdb7bd , meetup:52a325c5ae6261cafffa415aa2482e75 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Rodgers> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1857363/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dave Rodgers (born Giancarlo Pasquini; 21 February 1963) is an Italian songwriter, composer, and producer known for his contributions to the Eurobeat genre of dance music." ;
+        mtp:hasParticipant   meetup:069a4d039dbffa80d2b15998b10e5461 ;
+        mtp:hasPurpose       meetup:c7e2bd34448fc69adc686688f9b8c378 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dave_Rodgers> ;
+        mtp:hasType          "HT" .

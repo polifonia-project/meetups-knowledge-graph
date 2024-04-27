@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Fury_(DJ)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a5d4da7bdaa467a16ada20fc6bdf467a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Drum-and-bass night in Denver" ;
+        mtp:hasEvidencePurposeSecond  "Premier drum-and-bass night in the nation" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:5b0d288949e948e95ec285f59d41876f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing in the hardcore techno and U.K. breakbeat scene" ;
+        mtp:hasEvidencePurposeSecond  "Continuing to snowboard to support himself" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:f2a29bc4ae0430f50f444f5732a22379
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <https://www.wikidata.org/wiki/Q7495388> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Blakley" .
+
+<https://www.wikidata.org/wiki/Q7495388>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/43741598/12/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "According to Denver Westword, \"Breakdown became the first 21-and-over all-drum-and-bass night in Denver. What began as just another weekly theme night soon morphed into a mecca for drum-and-bass culture in the States... soon it became known as the premier drum-and-bass night in the nation, with upwards of 300 people in attendance week after week.\"" ;
+        mtp:hasPurpose       meetup:a5d4da7bdaa467a16ada20fc6bdf467a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fury_(DJ)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/43741598/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While continuing to snowboard to support himself, in 1992 Blakley adopted the alias DJ Fury and began performing in the hardcore techno and U.K. breakbeat scene around Denver. His very first live performance was at a small venue on Santa Fe street in Denver." ;
+        mtp:hasParticipant   meetup:f2a29bc4ae0430f50f444f5732a22379 ;
+        mtp:hasPurpose       meetup:5b0d288949e948e95ec285f59d41876f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fury_(DJ)> ;
+        mtp:hasType          "HT" .

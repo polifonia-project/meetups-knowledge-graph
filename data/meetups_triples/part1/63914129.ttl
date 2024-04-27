@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Danny_Moss>
+        rdf:type  core:Person .
+
+meetup:4dc6d12cdc3dff5398c12025a342494e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98874706" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.010177626" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:54891aa39eb719680e20c44665bd4018
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97942" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.020331264" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b82c266f6a15428d74dd9580310385c3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Danny_Moss> ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Danny Moss" .
+
+meetup:ae21d08b27de3b4f1f67e5ab8c89bf74
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeanie_Lambe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jeanie Lambe" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/63914129/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeanie Lambe (23 December 1940 – 29 May 2020) was a Scottish jazz singer." ;
+        mtp:hasParticipant   meetup:44b3ceead76e59fb0b35a7af8fc0dc2e ;
+        mtp:hasPurpose       meetup:54891aa39eb719680e20c44665bd4018 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeanie_Lambe> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jeanie_Lambe>
+        rdf:type  core:Person .
+
+meetup:d1bd81eeaf6f7061d74dedf8c7258c05
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeanie_Lambe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jeanie Lambe" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:44b3ceead76e59fb0b35a7af8fc0dc2e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeanie_Lambe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jeanie Lambe" .
+
+<http://w3id.org/polifonia/pilot/meetups/63914129/7/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeanie Lambe and the Danny Moss Quartet (Flyright, 1980)" ;
+        mtp:hasParticipant   meetup:d1bd81eeaf6f7061d74dedf8c7258c05 ;
+        mtp:hasPurpose       meetup:4dc6d12cdc3dff5398c12025a342494e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeanie_Lambe> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/63914129/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was married to jazz tenor saxophonist Danny Moss." ;
+        mtp:hasParticipant   meetup:b82c266f6a15428d74dd9580310385c3 , meetup:ae21d08b27de3b4f1f67e5ab8c89bf74 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeanie_Lambe> ;
+        mtp:hasType          "HM" .

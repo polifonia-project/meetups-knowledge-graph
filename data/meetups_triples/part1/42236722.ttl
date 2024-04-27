@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Ludwig_Finscher>
+        rdf:type  core:Person .
+
+meetup:7d6b3f679c24a3cd66386b4dcbdc4240
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The manuscript discusses music repertoire" ;
+        mtp:hasEvidencePurposeSecond  "The congress focuses on musicological research" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/42236722/6/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She published widely, becoming one of the most influential musicologists of the twentieth century." ;
+        mtp:hasParticipant   meetup:bacb0215060d78f1f7b914aa852ff414 ;
+        mtp:hasPurpose       meetup:abebaba3abe25b5cd71305b6e68a0be6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ursula_Günther> ;
+        mtp:hasType          "HT" .
+
+meetup:abebaba3abe25b5cd71305b6e68a0be6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9527546" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03897225" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Ursula_Günther>
+        rdf:type  core:Person .
+
+meetup:bacb0215060d78f1f7b914aa852ff414
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ursula_Günther> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ursula Günther" .
+
+<http://w3id.org/polifonia/pilot/meetups/42236722/18/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Cypriot-French Repertory of the Manuscript Torino J. II.9: Report of the International Musicological Congress, Paphos, 20–25 March 1992, by Ludwig Finscher and Societa italiana di musicologia and Ursula Gunther and Associazione piemontese per la ricerca delle fonti musicali." ;
+        mtp:hasParticipant   meetup:802cf94c8849e9e6c93a9ada0e7accae , meetup:7c984bb04622901fa1c0cff96425f030 ;
+        mtp:hasPurpose       meetup:7d6b3f679c24a3cd66386b4dcbdc4240 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ursula_Günther> ;
+        mtp:hasType          "HM" .
+
+meetup:802cf94c8849e9e6c93a9ada0e7accae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ursula_Günther> ;
+        mtp:hasOffset           "202" ;
+        mtp:hasSimilarityScore  "0.9999999080045584" ;
+        mtp:hasTextEvidence     "Ursula Gunther" .
+
+meetup:7c984bb04622901fa1c0cff96425f030
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ludwig_Finscher> ;
+        mtp:hasOffset           "146" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ludwig Finscher" .

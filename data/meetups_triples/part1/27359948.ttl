@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:56aefbe8013c42b12b74030122a14ee8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Miyoshi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mark Miyoshi" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:745c4a797c141641a4e1f0f0646b382e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Miyoshi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999960636" ;
+        mtp:hasTextEvidence     "Mark Miyoshi" .
+
+meetup:97db5785ef9b273049163d5ef1a08213
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99998116" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 8.642785e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/27359948/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mark Miyoshi was born and raised in Greeley, Colorado." ;
+        mtp:hasParticipant   meetup:745c4a797c141641a4e1f0f0646b382e ;
+        mtp:hasPurpose       meetup:97db5785ef9b273049163d5ef1a08213 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Miyoshi> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mark_Miyoshi>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/27359948/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is the owner and principal craftsman at Miyoshi Daiko, based in Mt. Shasta, California." ;
+        mtp:hasParticipant   meetup:56aefbe8013c42b12b74030122a14ee8 ;
+        mtp:hasPurpose       meetup:1d95d473a67a0788b9932157aa702731 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mark_Miyoshi> ;
+        mtp:hasType          "HT" .
+
+meetup:1d95d473a67a0788b9932157aa702731
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98277974" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.012506378" ;
+        mtp:hasSourcePurpose          "ML" .

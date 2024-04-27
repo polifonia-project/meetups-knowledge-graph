@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/8998936/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is from Oregon, currently living and working in Central Oregon." ;
+        mtp:hasParticipant   meetup:a590f5cbb4852a834a4ab683cdcc6a2c ;
+        mtp:hasPurpose       meetup:cec09fca87a9795eeca91f6383e876f7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tiffany_Lee_Brown> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a590f5cbb4852a834a4ab683cdcc6a2c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tiffany_Lee_Brown> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tiffany Lee Brown" .
+
+meetup:4389292e681de80343a7014ddb8f6a76
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tiffany_Lee_Brown> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tiffany Lee Brown" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/8998936/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "For many years she was known for her work in Portland." ;
+        mtp:hasParticipant   meetup:4389292e681de80343a7014ddb8f6a76 ;
+        mtp:hasPurpose       meetup:ac0ecf4d0e891b1fe7098925ab8b8f17 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tiffany_Lee_Brown> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Tiffany_Lee_Brown>
+        rdf:type  core:Person .
+
+meetup:cec09fca87a9795eeca91f6383e876f7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9988445" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0010761241" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:ac0ecf4d0e891b1fe7098925ab8b8f17
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84857017" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10504179" ;
+        mtp:hasSourcePurpose          "ML" .

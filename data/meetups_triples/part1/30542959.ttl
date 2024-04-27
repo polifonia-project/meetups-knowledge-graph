@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:881a802d073c094d62db34f11894a7ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9991671" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007861864" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Gerard_Willems>
+        rdf:type  core:Person .
+
+meetup:cdb1b6b2d794ea3416129c97a765e7ea
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99962986" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00016573803" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/30542959/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gerard Willems AM (born Gerardus Maria Willems, 19 August 1946) is a Dutch- Australian classical pianist and teacher." ;
+        mtp:hasParticipant   meetup:67d24f3e18260c3377dbd111a1cd504e ;
+        mtp:hasPurpose       meetup:881a802d073c094d62db34f11894a7ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gerard_Willems> ;
+        mtp:hasType          "HT" .
+
+meetup:67d24f3e18260c3377dbd111a1cd504e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gerard_Willems> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gerard Willems" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:7a91acb029ece9fb75b5f6f6f4fab937
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gerard_Willems> ;
+        mtp:hasOffset           "118" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gerard Willems" .
+
+<http://w3id.org/polifonia/pilot/meetups/30542959/0/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "This series of recordings constitutes the largest classical music recording project ever undertaken in Australia, and Willems became the best selling classical artist in Australia's recording history." ;
+        mtp:hasParticipant   meetup:7a91acb029ece9fb75b5f6f6f4fab937 ;
+        mtp:hasPurpose       meetup:cdb1b6b2d794ea3416129c97a765e7ea ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gerard_Willems> ;
+        mtp:hasType          "HT" .

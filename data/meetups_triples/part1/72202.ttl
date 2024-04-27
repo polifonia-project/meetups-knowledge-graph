@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Humphrey_Lyttelton>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:a353667c17fa4c092fa507d8fe8e8626
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "The naming of the pub after Lyttelton" ;
+        mtp:hasEvidencePurposeSecond  "The change in name from The Southampton Arms" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:eeaddcdcdcff62c8119ad81e2d8657e2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jonny_Greenwood> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jonny Greenwood" .
+
+<http://w3id.org/polifonia/pilot/meetups/72202/33/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Lyttelton Arms pub, opposite Mornington Crescent station in Camden, is named after Lyttelton. It was formerly named The Southampton Arms." ;
+        mtp:hasPurpose       meetup:a353667c17fa4c092fa507d8fe8e8626 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Humphrey_Lyttelton> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/72202/32/13>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"Responding to news of Lyttelton's death, Radiohead guitarist Jonny Greenwood wrote on the band's website: \"We were all sorry to hear of Humphrey Lyttelton's death — he was an inspiring person to record with, and without his direction, we'd never have recorded/released 'Life in a Glasshouse'." ;
+        mtp:hasParticipant   meetup:0a4b8a42c976b4247d8b6c29f106db96 , meetup:eeaddcdcdcff62c8119ad81e2d8657e2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Humphrey_Lyttelton> ;
+        mtp:hasType          "HM" .
+
+meetup:0a4b8a42c976b4247d8b6c29f106db96
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Humphrey_Lyttelton> ;
+        mtp:hasOffset           "137" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Humphrey Lyttelton" .
+
+<http://dbpedia.org/resource/Jonny_Greenwood>
+        rdf:type  core:Person .

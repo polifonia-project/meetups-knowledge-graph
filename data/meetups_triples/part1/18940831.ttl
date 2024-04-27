@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:aab7d7c5ca7d6348dc805e877f29a6d1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Brendan Lawrence Lyons" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/18940831/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Throughout his rock and roll career, Cutler was around and was agent for some of the largest rock and roll shows in history outside of Woodstock including The Rolling Stones in Hyde Park, the Grateful Dead's Europe '72 tour and the Dead's participation in the Festival Express train tour across Canada. However, the Festival Express was a huge loss for the promoters and Europe '72 wasn't as profitable as promised." ;
+        mtp:hasPurpose       meetup:f7ebbb37e0763d78eb9115dd446cbb05 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sam_Cutler> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f7ebbb37e0763d78eb9115dd446cbb05
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Rock and roll shows" ;
+        mtp:hasEvidencePurposeSecond  "Loss for the promoters" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b8cb6dc0e48f1946624b413294bdbef6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7581418" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24075605" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/18940831/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sam Cutler (born Brendan Lawrence Lyons in early 1943) is best known as the former tour manager for The Rolling Stones, Grateful Dead, and numerous other major acts." ;
+        mtp:hasParticipant   meetup:aab7d7c5ca7d6348dc805e877f29a6d1 , meetup:827ede1c6c6a9bd0e1c090afb1244502 ;
+        mtp:hasPurpose       meetup:b8cb6dc0e48f1946624b413294bdbef6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sam_Cutler> ;
+        mtp:hasType          "HM" .
+
+meetup:827ede1c6c6a9bd0e1c090afb1244502
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sam_Cutler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sam Cutler" .
+
+<http://dbpedia.org/resource/Sam_Cutler>
+        rdf:type  core:Person .

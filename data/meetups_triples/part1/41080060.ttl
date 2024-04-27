@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Molly_Neuman>
+        rdf:type  core:Person .
+
+meetup:c1b93a5949eb998babb92b3f2cc4593c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Erin Smith is known for being a guitarist in a band" ;
+        mtp:hasEvidencePurposeSecond  "Erin Smith's personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:288280ba6595d7f8a25b57efb0b7ce0f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Allison_Wolfe> ;
+        mtp:hasOffset           "170" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Allison Wolfe" .
+
+<http://dbpedia.org/resource/Allison_Wolfe>
+        rdf:type  core:Person .
+
+meetup:ff689efd9bdd3ae9a224de863ba6fd32
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Molly_Neuman> ;
+        mtp:hasOffset           "144" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Molly Neuman" .
+
+<http://w3id.org/polifonia/pilot/meetups/41080060/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Erin Smith (born August 16, 1972) in Washington, D.C., is best known for being the guitarist of riot grrrl band Bratmobile, a band with drummer Molly Neuman and vocalist Allison Wolfe." ;
+        mtp:hasParticipant   meetup:55505633e7e9365f31faa1d185049917 , meetup:ff689efd9bdd3ae9a224de863ba6fd32 , meetup:288280ba6595d7f8a25b57efb0b7ce0f ;
+        mtp:hasPurpose       meetup:c1b93a5949eb998babb92b3f2cc4593c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erin_Smith> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Erin_Smith>
+        rdf:type  core:Person .
+
+meetup:55505633e7e9365f31faa1d185049917
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erin_Smith> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Erin Smith" .

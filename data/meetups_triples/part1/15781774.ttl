@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:0429fc0fd249b534e73c59fd36e076ee
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Dyer_Baizley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "John Dyer Baizley" .
+
+meetup:a35f3d341a1ee0c8ef55c9298991c31a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Dyer_Baizley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Dyer Baizley" .
+
+<http://dbpedia.org/resource/Gillian_Welch>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:b9cd64817136732ff2874fa760628bd0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gillian_Welch> ;
+        mtp:hasOffset           "292" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gillian Welch" .
+
+<http://w3id.org/polifonia/pilot/meetups/15781774/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "John Dyer Baizley is a Philadelphian musician and painter most notable for being the vocalist and rhythm guitarist of Savannah, Georgia heavy metal band Baroness." ;
+        mtp:hasParticipant   meetup:a35f3d341a1ee0c8ef55c9298991c31a ;
+        mtp:hasPurpose       meetup:405bde486b6c481e9ddf92c08a9208ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Dyer_Baizley> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/John_Dyer_Baizley>
+        rdf:type  core:Person .
+
+meetup:405bde486b6c481e9ddf92c08a9208ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93065566" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06910513" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9dbb034971f62a89df306438e691d2eb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9911642" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0067378078" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/15781774/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has also achieved critical praise for his artworks, some of which have been incorporated into album art or T-shirts for artists such as Kvelertak, Kylesa, Pig Destroyer, Darkest Hour, Daughters, Skeletonwitch, Torche, Cursed, Black Tusk, Vitamin X, Flight of the Conchords, The Red Chord, Gillian Welch, Metallica, and his own band, Baroness." ;
+        mtp:hasParticipant   meetup:b9cd64817136732ff2874fa760628bd0 , meetup:0429fc0fd249b534e73c59fd36e076ee ;
+        mtp:hasPurpose       meetup:9dbb034971f62a89df306438e691d2eb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/John_Dyer_Baizley> ;
+        mtp:hasType          "HM" .

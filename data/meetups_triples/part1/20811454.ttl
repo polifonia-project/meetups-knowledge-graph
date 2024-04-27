@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Emily_Bear>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/20811454/7/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She also performed at the Life Ball 2012 gala in Vienna, Austria, to benefit the charity AIDS Life. Later in 2012, she played the first movement of the Schumann piano concerto in A minor with the Santa Fe Concert Association." ;
+        mtp:hasPurpose       meetup:ac6809d05e7d657950759cc006c41fdd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emily_Bear> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/20811454/14/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From late November to December, Bear performed at Night of the Proms 2017, a 25-concert arena tour in Belgium, the Netherlands, Germany and Luxembourg. She was the youngest artist ever to appear at Night of the Proms." ;
+        mtp:hasPurpose       meetup:8b83f2cbd768d3c5cdad728160412155 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Emily_Bear> ;
+        mtp:hasType          "HT" .
+
+meetup:ac6809d05e7d657950759cc006c41fdd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performing at galas and concerts" ;
+        mtp:hasEvidencePurposeSecond  "Participating in charity events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8b83f2cbd768d3c5cdad728160412155
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Bear's performance at Night of the Proms 2017" ;
+        mtp:hasEvidencePurposeSecond  "Night of the Proms, a 25-concert arena tour" ;
+        mtp:hasSourcePurpose          "LLM" .

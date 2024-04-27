@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Leah_Turner>
+        rdf:type  core:Person .
+
+meetup:c5b810c584838c8316efcb75ae15f4c9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Turner's upbringing and birthplace" ;
+        mtp:hasEvidencePurposeSecond  "Information about Turner's education background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/41120756/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Turner was born on July 29, 1987, in California. She was raised on a ranch with horses, goats, and chickens in Morongo Valley, California." ;
+        mtp:hasParticipant   meetup:41ca20f0157cf83f543ce8bb28295626 ;
+        mtp:hasPurpose       meetup:c5b810c584838c8316efcb75ae15f4c9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leah_Turner> ;
+        mtp:hasType          "HT" .
+
+meetup:41ca20f0157cf83f543ce8bb28295626
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jacob_Turner> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Turner" .
+
+meetup:7c7cf5b47aee35b062902b472085580c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leah_Turner> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999993696181376" ;
+        mtp:hasTextEvidence     "Leah Turner" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:1dd05da34548acdd3a6f58ca8ae17cb1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9911305" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0049934075" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/41120756/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leah Turner (born July 29, 1987) is an American country music singer who was previously signed with Columbia Nashville." ;
+        mtp:hasParticipant   meetup:7c7cf5b47aee35b062902b472085580c ;
+        mtp:hasPurpose       meetup:1dd05da34548acdd3a6f58ca8ae17cb1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leah_Turner> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jacob_Turner>
+        rdf:type  core:Person .

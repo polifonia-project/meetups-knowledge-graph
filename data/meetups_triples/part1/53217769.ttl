@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:b104d31d4a63697fdf5db1cd48804c99
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Princess_White> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "0.999977662673014" ;
+        mtp:hasTextEvidence     "Princess White" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:23f276330a1fa861af81845c6d185f5c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.36563438" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24798933" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:23e10f8f75fdb776dafc9731c18b4686
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "125" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Salica Bryan" .
+
+<http://w3id.org/polifonia/pilot/meetups/53217769/1/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born Princess White in Philadelphia, of part-American Indian descent, she started her career as a child dancer, touring with Salica Bryan and her Pickaninnies nationally and as far as Europe and Australia." ;
+        mtp:hasParticipant   meetup:b104d31d4a63697fdf5db1cd48804c99 , meetup:23e10f8f75fdb776dafc9731c18b4686 ;
+        mtp:hasPurpose       meetup:23f276330a1fa861af81845c6d185f5c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Princess_White> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:e42b02e46a1a158956a4a9a97e053df1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Princess_White> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999977662673014" ;
+        mtp:hasTextEvidence     "Princess White" .
+
+meetup:8f5cfd4c371ce8e47f0198da8e24e66d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9381904" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.061742075" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/53217769/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Princess White (January 14, 1881 – March 21, 1976) was an American blues singer, dancer, comedian and vaudeville performer." ;
+        mtp:hasParticipant   meetup:e42b02e46a1a158956a4a9a97e053df1 ;
+        mtp:hasPurpose       meetup:8f5cfd4c371ce8e47f0198da8e24e66d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Princess_White> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Princess_White>
+        rdf:type  core:Person .

@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/11150176/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Peter Lemongello (born February 11, 1947) is an American singer known for his double album Love '76." ;
+        mtp:hasParticipant   meetup:fc8278ad1754399ba8440ae159f00a43 ;
+        mtp:hasPurpose       meetup:19ab486680f98809d301583a65533317 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Lemongello> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:fc8278ad1754399ba8440ae159f00a43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Lemongello> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peter Lemongello" .
+
+meetup:2d57bebea5de676d65400b54ac566750
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Marketing strategy for album promotion" ;
+        mtp:hasEvidencePurposeSecond  "Success of album sales" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/11150176/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Using a city-by-city marketing strategy, he and his partners began their Love '76 advertising campaign with an around-the-dial TV blitz in the New York market starting January 1, 1976, and ran commercials on all six New York channels 70 to 100 times a week. Sales of the double album skyrocketed him to fame in the New York area, and the campaign entered Los Angeles and Las Vegas." ;
+        mtp:hasParticipant   meetup:457c3d62fe8b281dfb389104b85da0ac ;
+        mtp:hasPurpose       meetup:2d57bebea5de676d65400b54ac566750 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Lemongello> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mark_Lemongello>
+        rdf:type  core:Person .
+
+meetup:19ab486680f98809d301583a65533317
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7504997" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.24824655" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Peter_Lemongello>
+        rdf:type  core:Person .
+
+meetup:457c3d62fe8b281dfb389104b85da0ac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mark_Lemongello> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lemongello" .

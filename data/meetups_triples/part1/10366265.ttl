@@ -1,0 +1,91 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/10366265/12/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1955, she traveled to Ireland in search of folk singers. According to Liam Clancy's book, she became acquainted with Tom and Paddy Clancy in New York, and while in Ireland made the Clancy household one of the stops on her collecting trip." ;
+        mtp:hasParticipant   meetup:cb64625c87c852bb8da8cbb0058ed8ad , meetup:eb2fde619d3de5dbc321b3f435b280a5 , meetup:d4a2d5e30c58e49a6a46ecf59892cd0b ;
+        mtp:hasPurpose       meetup:a5744f04d9ccc15a02f3d78f088a4670 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Diane_Hamilton> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Diane_Hamilton>
+        rdf:type  core:Person .
+
+meetup:cb64625c87c852bb8da8cbb0058ed8ad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Clancy> ;
+        mtp:hasOffset           "124" ;
+        mtp:hasSimilarityScore  "0.9161192176923584" ;
+        mtp:hasTextEvidence     "Clancy" .
+
+meetup:329b4bb5d7704f888fceb2cace9048fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Diane_Hamilton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Diane Hamilton" .
+
+meetup:a5744f04d9ccc15a02f3d78f088a4670
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Collecting folk singers" ;
+        mtp:hasEvidencePurposeSecond  "Traveling to Ireland" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/10366265/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Diane Hamilton was the pseudonym of Diane Guggenheim (1924 – 1991), an American mining heiress, folksong patron and founder of Tradition Records." ;
+        mtp:hasParticipant   meetup:329b4bb5d7704f888fceb2cace9048fe ;
+        mtp:hasPurpose       meetup:a19ed972bfc2fe5646a59b0776f9610e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Diane_Hamilton> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:eb2fde619d3de5dbc321b3f435b280a5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paddy_Clancy> ;
+        mtp:hasOffset           "68" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Paddy Clancy" .
+
+<http://dbpedia.org/resource/Liam_Clancy>
+        rdf:type  core:Person .
+
+meetup:a19ed972bfc2fe5646a59b0776f9610e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998425" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0012139652" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Tim_Clancy>
+        rdf:type  core:Person .
+
+meetup:d4a2d5e30c58e49a6a46ecf59892cd0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Liam_Clancy> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Liam Clancy" .
+
+<http://dbpedia.org/resource/Paddy_Clancy>
+        rdf:type  core:Person .

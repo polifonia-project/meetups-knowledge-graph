@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/19828154/16/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The film selected to be screened in Pusan, Hong Kong, Taiwan and Shanghai International Film Festival, the film gets reviewed as \"Run Lola Run meets new generation's wuxia… \"; \"Ming Ming's world, one which contains fantasy martial arts elements, the magical realism which set in today's contemporary era.\" Ming Ming was released in China, Hong Kong and Taipei simultaneously." ;
+        mtp:hasPurpose       meetup:b3ca63dd889a4b6005e71d428b0a6888 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Susie_Au> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/19828154/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She had directed short films in different genres during her stay in New York such as Among Fragments, Moon Chase, The Dream In New Orleans etc." ;
+        mtp:hasParticipant   meetup:21b444feb11a4b74609bc2cda242eb13 ;
+        mtp:hasPurpose       meetup:d854485ad76cba1eb7c4500acd7ada39 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Susie_Au> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b3ca63dd889a4b6005e71d428b0a6888
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Screening of the film in international film festivals" ;
+        mtp:hasEvidencePurposeSecond  "Positive reviews of the film" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Susie_Au>
+        rdf:type  core:Person .
+
+meetup:d854485ad76cba1eb7c4500acd7ada39
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9771179" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01852022" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:21b444feb11a4b74609bc2cda242eb13
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Susie_Au> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Susie Au" .

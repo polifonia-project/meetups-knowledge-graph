@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Prelude_(band)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Neil_Young>
+        rdf:type  core:Person .
+
+meetup:edf77b506cc3ce6181359499b22f7a58
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Neil_Young> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "0.9999999877294956" ;
+        mtp:hasTextEvidence     "Neil Young" .
+
+<http://w3id.org/polifonia/pilot/meetups/5589804/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Prelude began to write their own material and built a following on the folk circuit and in 1973 they recorded their first album, How Long Is Forever?, on Dawn Records at Rockfield recording studios in Wales. From it came their best known recording, an a cappella version of the Neil Young song \"After the Gold Rush\", on Dawn." ;
+        mtp:hasParticipant   meetup:edf77b506cc3ce6181359499b22f7a58 ;
+        mtp:hasPurpose       meetup:3014f7f06db016e773f098244c992020 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Prelude_(band)> ;
+        mtp:hasType          "HT" .
+
+meetup:3014f7f06db016e773f098244c992020
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating and recording music" ;
+        mtp:hasEvidencePurposeSecond  "Personal journey and experiences" ;
+        mtp:hasSourcePurpose          "LLM" .

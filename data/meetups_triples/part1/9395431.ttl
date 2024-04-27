@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:271e28ab57464a6a2dd0cdb1685e409c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.57342005" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.38238868" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:63a007ade066ad315d57d68936b836cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9995315" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00026609516" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/9395431/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dan Singer (born December 20, 1971), known professionally as Danny Diablo a.k.a." ;
+        mtp:hasParticipant   meetup:b38b65508696b358e4fd66de3fc74fd1 ;
+        mtp:hasPurpose       meetup:271e28ab57464a6a2dd0cdb1685e409c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Danny_Diablo> ;
+        mtp:hasType          "HT" .
+
+meetup:b38b65508696b358e4fd66de3fc74fd1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Danny_Diablo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999967316" ;
+        mtp:hasTextEvidence     "Dan Singer" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/9395431/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in Harlem, New York, Dan Singer is the son of a Brooklyn-born Polish-Jewish police sergeant father and a Puerto Rican homemaker mother from the East River Houses of Spanish Harlem." ;
+        mtp:hasParticipant   meetup:260d84afb552a456817fbcac61570337 ;
+        mtp:hasPurpose       meetup:63a007ade066ad315d57d68936b836cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Danny_Diablo> ;
+        mtp:hasType          "HT" .
+
+meetup:260d84afb552a456817fbcac61570337
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Danny_Diablo> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "0.999999958498905" ;
+        mtp:hasTextEvidence     "Dan Singer" .
+
+<http://dbpedia.org/resource/Danny_Diablo>
+        rdf:type  core:Person .

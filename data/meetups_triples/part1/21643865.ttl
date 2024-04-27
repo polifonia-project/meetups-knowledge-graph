@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:87bb00ffe6ab8ffd8e0b107be3c92242
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99216706" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007829354" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5d44a7886194c318f711db887fb3dace
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sigurd_Jansen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sigurd Jansen" .
+
+<http://w3id.org/polifonia/pilot/meetups/21643865/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sigurd Jansen (born 4 March 1932) is a Norwegian composer, pianist and conductor." ;
+        mtp:hasParticipant   meetup:5d44a7886194c318f711db887fb3dace ;
+        mtp:hasPurpose       meetup:87bb00ffe6ab8ffd8e0b107be3c92242 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sigurd_Jansen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Sigurd_Jansen>
+        rdf:type  core:Person .

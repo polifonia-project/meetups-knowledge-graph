@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:909a54c1dd46b1612014e29831aea38b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Jon Erik Andreas Johnson is a musician" ;
+        mtp:hasEvidencePurposeSecond  "Jon Erik Andreas Johnson was born in Bjärred, Sweden" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:4aedad9578aa882fe405c5c7ffd1b36f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andreas_Johnson> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9999999999899956" ;
+        mtp:hasTextEvidence     "Andreas Johnson" .
+
+<http://w3id.org/polifonia/pilot/meetups/2771162/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jon Erik Andreas Johnson (born 22 March 1970 in Bjärred, Sweden) is a Swedish pop/rock singer-songwriter and musician." ;
+        mtp:hasParticipant   meetup:b3d9fc3437bfa3b4bdca0301fe458ca4 , meetup:4aedad9578aa882fe405c5c7ffd1b36f ;
+        mtp:hasPurpose       meetup:909a54c1dd46b1612014e29831aea38b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andreas_Johnson> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:b3d9fc3437bfa3b4bdca0301fe458ca4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jon Erik Andreas Johnson" .
+
+meetup:7698b1bf5cb958bd1cede24f9392c8c6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7275443" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2546263" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Andreas_Johnson>
+        rdf:type  core:Person .
+
+meetup:11e51ceadd37a2ce7861c6ac99d1e5a8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Andreas_Johnson> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Andreas Johnson" .
+
+<http://w3id.org/polifonia/pilot/meetups/2771162/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1999, he had an international hit with the single \"Glorious\", which later featured on the album Liebling, and has been used in a number of advertisements from companies including Volvo, Nutella and Vauxhall." ;
+        mtp:hasParticipant   meetup:11e51ceadd37a2ce7861c6ac99d1e5a8 ;
+        mtp:hasPurpose       meetup:7698b1bf5cb958bd1cede24f9392c8c6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andreas_Johnson> ;
+        mtp:hasType          "HT" .

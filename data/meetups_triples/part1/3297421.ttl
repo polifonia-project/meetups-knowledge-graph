@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Roy_Brown_(blues_musician)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/3297421/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He formed a band, Joe Jones and his Atomic Rebops, in the late 1940s; band members played on Roy Brown's 1947 hit \"Good Rocking Tonight\"." ;
+        mtp:hasParticipant   meetup:1cebaec4c80576ebe4ed48e351d652eb , meetup:51555dd1189ea7e7c1cd5c1bacc0b9eb , meetup:1b096b329923f8c1a10a588dbbd42f66 ;
+        mtp:hasPurpose       meetup:4ff5f54ef25cd223d9c68614c5896cea ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Joe_Jones_(singer)> ;
+        mtp:hasType          "HM" .
+
+meetup:51555dd1189ea7e7c1cd5c1bacc0b9eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roy_Brown_(blues_musician)> ;
+        mtp:hasOffset           "93" ;
+        mtp:hasSimilarityScore  "0.7156776315704181" ;
+        mtp:hasTextEvidence     "Roy Brown" .
+
+meetup:1b096b329923f8c1a10a588dbbd42f66
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Jones_(singer)> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Joe Jones" .
+
+<http://dbpedia.org/resource/Doug_Jones_(baseball)>
+        rdf:type  core:Person .
+
+meetup:4ff5f54ef25cd223d9c68614c5896cea
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996012" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00039647054" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:1cebaec4c80576ebe4ed48e351d652eb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doug_Jones_(baseball)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jones" .
+
+<http://dbpedia.org/resource/Joe_Jones_(singer)>
+        rdf:type  core:Person .

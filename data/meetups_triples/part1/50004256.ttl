@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f777ae7be10cca5a3a0ab0328f9afe44
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Huang Tingting is a Chinese idol singer" ;
+        mtp:hasEvidencePurposeSecond  "Huang Tingting was born on September 8, 1992" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Huang_Tingting>
+        rdf:type  core:Person .
+
+meetup:7fd6fc7c8013c017fc84443dc67a4a7c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "75" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Huáng Tíngtíng" .
+
+meetup:306f2efba57239f53d5568a79a3424c3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Huang_Tingting> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Huang Tingting" .
+
+<http://w3id.org/polifonia/pilot/meetups/50004256/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Huang Tingting (simplified Chinese: 黄婷婷; traditional Chinese: 黃婷婷; pinyin: Huáng Tíngtíng; born September 8, 1992 in Nanjing, Jiangsu, China) is a Chinese idol singer." ;
+        mtp:hasParticipant   meetup:7fd6fc7c8013c017fc84443dc67a4a7c , meetup:306f2efba57239f53d5568a79a3424c3 ;
+        mtp:hasPurpose       meetup:f777ae7be10cca5a3a0ab0328f9afe44 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Huang_Tingting> ;
+        mtp:hasType          "HM" .

@@ -1,0 +1,95 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e05135cdc32ffca66480d867cb67d3a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99381083" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0045529096" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3fb09c927a20d05ef7bc205d141e6c86
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9997825" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0001726359" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2046088/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Faced with increasing exposure, the Philly rapper decided to modify his rap name to Peedi Peedi." ;
+        mtp:hasParticipant   meetup:78bec999dd9f863fb6e433cf3ba6f30c ;
+        mtp:hasPurpose       meetup:e05135cdc32ffca66480d867cb67d3a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peedi_Peedi> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jay-Z>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:4deb47e8a8c070a9d580cf1fc3f6a726
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jay-Z> ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jay-Z" .
+
+meetup:3e60a09f123f82f0cfa371c0afd0817a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peedi_Peedi> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peedi Crakk" .
+
+<http://w3id.org/polifonia/pilot/meetups/2046088/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pedro Louis Zayas, known as Peedi Crakk and Peedi Peedi (born September 25, 1977) is an American rapper of Puerto Rican descent." ;
+        mtp:hasParticipant   meetup:3e60a09f123f82f0cfa371c0afd0817a ;
+        mtp:hasPurpose       meetup:3fb09c927a20d05ef7bc205d141e6c86 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peedi_Peedi> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2046088/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2002, Peedi's Megahertz produced debut single, \"One for Peedi Crakk,\" charted in the R&B/hip-hop Top 40. He continued to make appearances on various Roc-a-Fella albums, including Jay-Z's The Blueprint²: The Gift & the Curse and Freeway's Philadelphia Freeway." ;
+        mtp:hasParticipant   meetup:4deb47e8a8c070a9d580cf1fc3f6a726 ;
+        mtp:hasPurpose       meetup:2dc0362ca831317cb717b685a9f8672b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peedi_Peedi> ;
+        mtp:hasType          "HT" .
+
+meetup:2dc0362ca831317cb717b685a9f8672b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Music production and album appearances" ;
+        mtp:hasEvidencePurposeSecond  "Collaborations with Roc-a-Fella artists" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:78bec999dd9f863fb6e433cf3ba6f30c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peedi_Peedi> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peedi Peedi" .
+
+<http://dbpedia.org/resource/Peedi_Peedi>
+        rdf:type  core:Person .

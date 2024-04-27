@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e12a5a3b741bf70521fbd73dd99998c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charley_Booker> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charley Booker" .
+
+<http://w3id.org/polifonia/pilot/meetups/18555957/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Booker was born in 1925 on a plantation between the Mississippi communities of Moorhead and Sunflower, the son of Lucius Booker. There is some doubt about his date of birth: in interviews, Booker stated that he was born in 1925, but Social Security records give the date as September 3, 1919." ;
+        mtp:hasParticipant   meetup:95f5e080c97ea6c4866265c8a293c7fd ;
+        mtp:hasPurpose       meetup:ab4a273bc344003e1d7afb3169b8fc08 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charley_Booker> ;
+        mtp:hasType          "HT" .
+
+meetup:6f39800ed01267a9b04daf06c1c3177e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9857642" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.013354775" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:95f5e080c97ea6c4866265c8a293c7fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Trevor_Booker> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Booker" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Charley_Booker>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18555957/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Charley Booker (September 3, 1925 – September 20, 1989) was an American blues singer and guitarist from the Mississippi Delta, who recorded in the early 1950s for Modern Records." ;
+        mtp:hasParticipant   meetup:e12a5a3b741bf70521fbd73dd99998c1 ;
+        mtp:hasPurpose       meetup:6f39800ed01267a9b04daf06c1c3177e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charley_Booker> ;
+        mtp:hasType          "HT" .
+
+meetup:ab4a273bc344003e1d7afb3169b8fc08
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about Booker's birth and family" ;
+        mtp:hasEvidencePurposeSecond  "Doubt regarding his date of birth" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Trevor_Booker>
+        rdf:type  core:Person .

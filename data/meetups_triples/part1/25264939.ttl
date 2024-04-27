@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Shinzo_Abe>
+        rdf:type  core:Person .
+
+meetup:5339effaf035ca311ab25b745673fe9f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shinzo_Abe> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "0.6878743093802716" ;
+        mtp:hasTextEvidence     "Abe" .
+
+meetup:e67cb6ebf0ec0569596406d69ac895f5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mao_Abe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999801" ;
+        mtp:hasTextEvidence     "Mao Abe" .
+
+meetup:af6f28cb71d5a4665735a98628171990
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6193577" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.36723334" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Mao_Abe>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/25264939/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mao Abe (阿部 真央, Abe Mao, born 24 January 1990)" ;
+        mtp:hasParticipant   meetup:e67cb6ebf0ec0569596406d69ac895f5 , meetup:5339effaf035ca311ab25b745673fe9f ;
+        mtp:hasPurpose       meetup:af6f28cb71d5a4665735a98628171990 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mao_Abe> ;
+        mtp:hasType          "HM" .

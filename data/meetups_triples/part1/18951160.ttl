@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:aae651959c0781b1c3cf43e0955155bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marion_Marlowe> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marion Marlowe" .
+
+meetup:97cb718e8085067f9069130b346270b5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Devin_Townsend> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "0.9988293620410464" ;
+        mtp:hasTextEvidence     "Townsend" .
+
+<http://w3id.org/polifonia/pilot/meetups/18951160/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marion Marlowe (born Marion Townsend; March 7, 1929 – March 24, 2012) was an American singer and actress." ;
+        mtp:hasParticipant   meetup:97cb718e8085067f9069130b346270b5 , meetup:aae651959c0781b1c3cf43e0955155bd ;
+        mtp:hasPurpose       meetup:200f7816e669b39d2786aefed91aa878 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marion_Marlowe> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Marion_Marlowe>
+        rdf:type  core:Person .
+
+meetup:200f7816e669b39d2786aefed91aa878
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.70776796" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29198417" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Devin_Townsend>
+        rdf:type  core:Person .

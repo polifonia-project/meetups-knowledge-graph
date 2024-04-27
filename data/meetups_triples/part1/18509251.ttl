@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Mimi_Fox>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:7e75ff0fd35f51471a536f84537e5e06
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mimi_Fox> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mimi Fox" .
+
+meetup:984613d9adcc4f59bb8a8d24747421d6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.71693474" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26212654" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/18509251/5/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mimi Fox Live (Tusco, 1993)" ;
+        mtp:hasParticipant   meetup:7e75ff0fd35f51471a536f84537e5e06 ;
+        mtp:hasPurpose       meetup:984613d9adcc4f59bb8a8d24747421d6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mimi_Fox> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:7cb98aec53c476e4611ca8a3e342a6fb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Larry_Storch> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Larry Storch" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:0569e5f7aac35ad0b9c48239a376c632
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Larry_Storch> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Larry Storch" .
+
+meetup:8ec93235c98f09817c0e1b46940d5107
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Philip_Roth> ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Philip Roth" .
+
+<http://w3id.org/polifonia/pilot/meetups/541148/27/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "An episode of Animaniacs titled \"The Sound of Warners\" features a banner that says \"Larry Storch Days; Nov 13 & 14\"." ;
+        mtp:hasParticipant   meetup:7cb98aec53c476e4611ca8a3e342a6fb ;
+        mtp:hasPurpose       meetup:908bb9e50286257c846b61e96875081b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Larry_Storch> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Philip_Roth>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Larry_Storch>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/541148/19/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Other records include Larry Storch Reads Philip Roth's Epstein, and singles such as \"Pooped\" b/w \"The Eighth Wonder Of The World\" and \"I'm Walkin'\"." ;
+        mtp:hasParticipant   meetup:8ec93235c98f09817c0e1b46940d5107 , meetup:0569e5f7aac35ad0b9c48239a376c632 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Larry_Storch> ;
+        mtp:hasType          "HM" .
+
+meetup:908bb9e50286257c846b61e96875081b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6986869" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2963446" ;
+        mtp:hasSourcePurpose          "ML" .

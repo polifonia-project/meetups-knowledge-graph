@@ -1,0 +1,35 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ivar_Kolve>
+        rdf:type  core:Person .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:5f90ac334cc83b37766d81110186c09d
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "Jan" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/37080376/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:5f90ac334cc83b37766d81110186c09d , meetup:5567d521fda0919942d11c9c3f0eab30 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Ivar_Kolve> ;
+        mtp:hasType     "HM" .
+
+meetup:5567d521fda0919942d11c9c3f0eab30
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "31 March 1967" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1967-03-31"^^xsd:date ;
+        time:hasEnd          "1967-03-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .

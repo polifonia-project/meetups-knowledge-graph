@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Omar_Bradley>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/14768731/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jan Bradley (born Addie Bradley, July 6, 1943) is an American soul singer." ;
+        mtp:hasParticipant   meetup:5da5c9f9670ffa1bdddf8f72b0a0f907 , meetup:492c5fa4de4e690dc5ef869e0598c37b ;
+        mtp:hasPurpose       meetup:4204f968af8bbaff3f731567228e1c59 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jan_Bradley> ;
+        mtp:hasType          "HM" .
+
+meetup:4204f968af8bbaff3f731567228e1c59
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84623176" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.096785516" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jan_Bradley>
+        rdf:type  core:Person .
+
+meetup:5da5c9f9670ffa1bdddf8f72b0a0f907
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jan_Bradley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999801" ;
+        mtp:hasTextEvidence     "Jan Bradley" .
+
+meetup:492c5fa4de4e690dc5ef869e0598c37b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Omar_Bradley> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "0.4666117758085386" ;
+        mtp:hasTextEvidence     "Bradley" .

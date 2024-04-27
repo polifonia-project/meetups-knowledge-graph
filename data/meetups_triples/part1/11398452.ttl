@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Kevin_Valentine>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Donnie_Iris>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:30bf2a6be534306d691c0ae86ed72ce2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Donnie_Iris> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Donnie Iris" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ae4c9409386b94c085781d0dcdc74c0d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99977416" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00022336023" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/11398452/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Valentine played drums on all of the band's early albums during the 1980s." ;
+        mtp:hasParticipant   meetup:30bf2a6be534306d691c0ae86ed72ce2 , meetup:1ac7b318ad3ea455eba22bc8bd29a1a0 ;
+        mtp:hasPurpose       meetup:ae4c9409386b94c085781d0dcdc74c0d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kevin_Valentine> ;
+        mtp:hasType          "HM" .
+
+meetup:1ac7b318ad3ea455eba22bc8bd29a1a0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Valentine> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kevin Valentine" .

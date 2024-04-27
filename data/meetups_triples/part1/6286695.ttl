@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Cara_Luft>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d57065c9d495e8a827c933ba70119edf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Luft's involvement in the folk music community." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also provides information about Luft's personal life and upbringing." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b859fc0031958cbbf16ce5c1875a01f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cara_Luft> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cara Luft" .
+
+meetup:0a6ef1bf35399f771a50ee6da30ffbe4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9754469" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.024449307" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/6286695/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She returned to her solo career in 2005." ;
+        mtp:hasParticipant   meetup:b859fc0031958cbbf16ce5c1875a01f1 ;
+        mtp:hasPurpose       meetup:0a6ef1bf35399f771a50ee6da30ffbe4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cara_Luft> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/6286695/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Luft was born 27 May 1974 and raised in Calgary, Alberta to folk-singing parents. She was brought up in the city's vibrant folk music community." ;
+        mtp:hasPurpose       meetup:d57065c9d495e8a827c933ba70119edf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cara_Luft> ;
+        mtp:hasType          "HT" .

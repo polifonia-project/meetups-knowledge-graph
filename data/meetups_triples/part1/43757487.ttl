@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:acf462270bc1fefc9f062643c14c3d94
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99701273" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0027293696" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:d797f68fabbfcf826d24f3e25789403d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bertha_Idaho> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999997726" ;
+        mtp:hasTextEvidence     "Bertha Idaho" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/43757487/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She recorded four songs in 1928 and 1929." ;
+        mtp:hasParticipant   meetup:465452ea5e0191acc4e6bceb60064db1 ;
+        mtp:hasPurpose       meetup:acf462270bc1fefc9f062643c14c3d94 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bertha_Idaho> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:5e864f04b41cc7475c7f8f2eb4b7f757
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9879381" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0060496577" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Bertha_Idaho>
+        rdf:type  core:Person .
+
+meetup:d6156e00f0f75a287433caa44e0fcece
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about her personal life" ;
+        mtp:hasEvidencePurposeSecond  "Lack of recorded details about her death" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/43757487/3/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "By 1930, she was known as Bertha Jordan and was based in Baltimore, Maryland. No details of her death have been recorded." ;
+        mtp:hasPurpose       meetup:d6156e00f0f75a287433caa44e0fcece ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bertha_Idaho> ;
+        mtp:hasType          "HT" .
+
+meetup:465452ea5e0191acc4e6bceb60064db1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bertha_Idaho> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bertha Idaho" .
+
+<http://w3id.org/polifonia/pilot/meetups/43757487/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bertha Idaho (born c. 1895; date of death unknown) was an American classic female blues singer." ;
+        mtp:hasParticipant   meetup:d797f68fabbfcf826d24f3e25789403d ;
+        mtp:hasPurpose       meetup:5e864f04b41cc7475c7f8f2eb4b7f757 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bertha_Idaho> ;
+        mtp:hasType          "HT" .

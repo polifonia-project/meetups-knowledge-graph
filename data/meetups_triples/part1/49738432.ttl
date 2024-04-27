@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4f4e5126ae17ab2bde49236faccf67a0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Learning through practical experience" ;
+        mtp:hasEvidencePurposeSecond  "Creating films independently" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/49738432/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Early in his career, Boling worked briefly as a production assistant under filmmaker Albert Maysles who was making a documentary about the Dalai Lama speaking in Central Park at the time. Maysles advised him not to attend film school but rather just to keep making movies on his own." ;
+        mtp:hasParticipant   meetup:9626479b6787c6212287a0733e75ed78 ;
+        mtp:hasPurpose       meetup:4f4e5126ae17ab2bde49236faccf67a0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alexis_Boling> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Albert_and_David_Maysles>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Alexis_Boling>
+        rdf:type  core:Person .
+
+meetup:9626479b6787c6212287a0733e75ed78
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Albert_and_David_Maysles> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999980231138" ;
+        mtp:hasTextEvidence     "Maysles" .

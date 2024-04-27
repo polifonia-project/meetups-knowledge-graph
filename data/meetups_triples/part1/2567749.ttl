@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Paul_Morris_(racing_driver)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:846dc59c174363dd79b2128412617666
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mariah_Carey> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "0.9999354452314262" ;
+        mtp:hasTextEvidence     "Carey" .
+
+<http://dbpedia.org/resource/Tony_Carey>
+        rdf:type  core:Person .
+
+meetup:04a6f20672e4102f4c89df522f80e2c2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Paul_Morris_(racing_driver)> ;
+        mtp:hasOffset           "171" ;
+        mtp:hasSimilarityScore  "0.9643113413860024" ;
+        mtp:hasTextEvidence     "Paul Morris" .
+
+<http://w3id.org/polifonia/pilot/meetups/2567749/33/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009, Tony Carey and three other ex-members of Rainbow, Joe Lynn Turner, Bobby Rondinelli and Greg Smith, teamed up with Jürgen Blackmore, Ritchie Blackmore's son, to form Over the Rainbow to perform Rainbow songs in concerts in Russia and Eastern Europe. Due to illness, however, Tony Carey left Over the Rainbow in the spring of 2009, just prior to the band's live debut at the Sweden Rock Festival, where he was replaced by Paul Morris." ;
+        mtp:hasParticipant   meetup:04a6f20672e4102f4c89df522f80e2c2 , meetup:846dc59c174363dd79b2128412617666 ;
+        mtp:hasPurpose       meetup:597fc09fc4d3388561cb54b4fe4bb782 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Carey> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Mariah_Carey>
+        rdf:type  core:Person .
+
+meetup:597fc09fc4d3388561cb54b4fe4bb782
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Formation of a band to perform Rainbow songs" ;
+        mtp:hasEvidencePurposeSecond  "Tony Carey leaving the band due to illness" ;
+        mtp:hasSourcePurpose          "LLM" .

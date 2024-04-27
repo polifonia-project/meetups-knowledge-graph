@@ -1,0 +1,117 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/51845/24/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paxton Park in Pacoima was renamed in memory of Valens in the 1990s. A city council member representing Pacoima proposed the renaming to honor Valens so residents would \"remember his humble background and emulate his accomplishments." ;
+        mtp:hasPurpose       meetup:eabf6ad6b7c59f7688f1a6790aed12ca ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ritchie_Valens> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/51845/9/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Swayed by the Little Richard comparison, Keane went to see Valenzuela play a Saturday-morning matinée at a movie theater in San Fernando. Impressed by the performance, he invited the youth to audition at his home in the Silver Lake area of Los Angeles, where he had a small recording studio in his basement." ;
+        mtp:hasParticipant   meetup:c564d42d597bb5fe5c51548457c3f11c ;
+        mtp:hasPurpose       meetup:b4cbe2a23930da0eab237c92273dc484 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ritchie_Valens> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bob_Keane>
+        rdf:type  core:Person .
+
+meetup:eabf6ad6b7c59f7688f1a6790aed12ca
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Renaming of Paxton Park in memory of Valens" ;
+        mtp:hasEvidencePurposeSecond  "Honoring Valens and his accomplishments" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:a6506a3372dbfb9fa22cc7bcda9bf1f1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99926883" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0006941629" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2bcaececa5f65f442a25be709b8a7eba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Little_Richard> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "0.9999982265173154" ;
+        mtp:hasTextEvidence     "Little Richard" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Ritchie_Valens>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/51845/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Keane, the owner and president of small record label Del-Fi Records in Hollywood, was given a tip in May 1958 by San Fernando High School student Doug Macchia about a young performer from Pacoima by the name of Richard Valenzuela. Kids knew the performer as \"the Little Richard of San Fernando\"." ;
+        mtp:hasParticipant   meetup:2bcaececa5f65f442a25be709b8a7eba , meetup:9dfb0f3da995843e664b9ec6d1d5aac8 ;
+        mtp:hasPurpose       meetup:ccdbc6bcf82e695b3ea40322db31600c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ritchie_Valens> ;
+        mtp:hasType          "HT" .
+
+meetup:ccdbc6bcf82e695b3ea40322db31600c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a young performer and a record label." ;
+        mtp:hasEvidencePurposeSecond  "It also mentions the personal life of the performer." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:c564d42d597bb5fe5c51548457c3f11c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Keane> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bob Keane" .
+
+meetup:735130c63e24d5271dd97d3b705503ce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ritchie_Valens> ;
+        mtp:hasOffset           "87" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ritchie Valens" .
+
+meetup:9dfb0f3da995843e664b9ec6d1d5aac8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "the Little Richard of San Fernando" .
+
+<http://dbpedia.org/resource/Little_Richard>
+        rdf:type  core:Person .
+
+meetup:b4cbe2a23930da0eab237c92273dc484
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involves music production" ;
+        mtp:hasEvidencePurposeSecond  "Relates to personal experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/51845/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Richard Steven Valenzuela (May 13, 1941 – February 3, 1959), known professionally as Ritchie Valens, was an American guitarist, singer and songwriter." ;
+        mtp:hasParticipant   meetup:735130c63e24d5271dd97d3b705503ce ;
+        mtp:hasPurpose       meetup:a6506a3372dbfb9fa22cc7bcda9bf1f1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ritchie_Valens> ;
+        mtp:hasType          "HT" .

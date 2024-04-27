@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Don_MacDougall>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/33279066/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked on more than 130 films between 1974 and 1999." ;
+        mtp:hasParticipant   meetup:5334a30860ccb80152d05067308ccc02 ;
+        mtp:hasPurpose       meetup:d035f38926fc9b5755565b34dd0ac016 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Don_MacDougall> ;
+        mtp:hasType          "HT" .
+
+meetup:d035f38926fc9b5755565b34dd0ac016
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9640577" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.035901316" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:5334a30860ccb80152d05067308ccc02
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Don_MacDougall> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Don MacDougall" .

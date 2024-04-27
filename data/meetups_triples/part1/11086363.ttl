@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/11086363/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From 1974 to 1990 Nigel North played in baroque operas, baroque orchestras and chamber groups and accompanied singers in concerts, participating in over 100 recordings." ;
+        mtp:hasParticipant   meetup:202cf5779a4e59d8bbed43d2fbb40be2 ;
+        mtp:hasPurpose       meetup:3977f7794bf63b98b2f1946be6e5f408 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nigel_North> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:202cf5779a4e59d8bbed43d2fbb40be2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nigel_North> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Nigel North" .
+
+meetup:3977f7794bf63b98b2f1946be6e5f408
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97202885" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.027911099" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Nigel_North>
+        rdf:type  core:Person .

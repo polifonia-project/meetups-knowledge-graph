@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/20773687/11/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On 17 April, Dolby posted on his Facebook page that he had suffered a \"catastrophic haemorrhagic stroke\" from which he was not expected to recover; Matthew Seligman died later that day, aged 64." ;
+        mtp:hasParticipant   meetup:a00f853f66ec242ea166040ef081f2c6 ;
+        mtp:hasPurpose       meetup:0236e08b4a0c9892adda0b5307777709 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matthew_Seligman> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/20773687/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Matthew Seligman (14 July 1955 – 17 April 2020) was an English bass guitarist, best known for his association with the new wave music scene of the 1980s." ;
+        mtp:hasParticipant   meetup:df64a8cc31ceffe00aac46e8696c511e ;
+        mtp:hasPurpose       meetup:82860b1a28102da785d83bd77e25e123 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matthew_Seligman> ;
+        mtp:hasType          "HT" .
+
+meetup:82860b1a28102da785d83bd77e25e123
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99975663" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0002305642" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0236e08b4a0c9892adda0b5307777709
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95651305" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.042545836" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:df64a8cc31ceffe00aac46e8696c511e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matthew_Seligman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Matthew Seligman" .
+
+<http://dbpedia.org/resource/Matthew_Seligman>
+        rdf:type  core:Person .
+
+meetup:a00f853f66ec242ea166040ef081f2c6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matthew_Seligman> ;
+        mtp:hasOffset           "148" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Matthew Seligman" .

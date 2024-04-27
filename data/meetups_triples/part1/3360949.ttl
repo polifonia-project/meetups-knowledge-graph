@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/3360949/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Louis Ferdinand Busch (July 18, 1910 – September 19, 1979) was an American record producer, musician and songwriter, best known for performing as a pianist under the pseudonym Joe \"Fingers\" Carr." ;
+        mtp:hasParticipant   meetup:7c7ddc99578f91ce3cc5e2f278f4b1f1 , meetup:301e554625794834eeb1651221d4f08d ;
+        mtp:hasPurpose       meetup:4a65ece60467bb8e7ff2b7e8c7d7b740 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lou_Busch> ;
+        mtp:hasType          "HM" .
+
+meetup:4a65ece60467bb8e7ff2b7e8c7d7b740
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9980731" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0014434386" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Lou_Busch>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:7c7ddc99578f91ce3cc5e2f278f4b1f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lou_Busch> ;
+        mtp:hasOffset           "178" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joe \"Fingers\" Carr" .
+
+meetup:301e554625794834eeb1651221d4f08d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Louis Ferdinand Busch" .

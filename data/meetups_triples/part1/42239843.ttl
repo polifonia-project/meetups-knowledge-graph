@@ -1,0 +1,86 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:af30512ec1ec5ae0d538f352e25c511d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.76860315" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.21458738" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/42239843/1/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At age 15 (1986), Gastinel finished first place in her class at the Musical Conservatory School in Lyon, France. After her time in Lyon she moved on to study at the more advanced National Musical Conservatory in Paris." ;
+        mtp:hasParticipant   meetup:e973a9cfb56371eb4ac7a3d8bbf883f5 ;
+        mtp:hasPurpose       meetup:66fd1d67602921afc2ba7b394fddc35c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anne_Gastinel> ;
+        mtp:hasType          "HT" .
+
+meetup:689a84b1374afae0213fab50e2dcd065
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Details about birthplace and location" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Anne_Gastinel>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/42239843/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was born on October 14, 1971, in the town of Tassin-la-Demi-Lune." ;
+        mtp:hasParticipant   meetup:ad228a2189e32e0c7c0a73f0ac0c71d2 ;
+        mtp:hasPurpose       meetup:af30512ec1ec5ae0d538f352e25c511d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anne_Gastinel> ;
+        mtp:hasType          "HT" .
+
+meetup:ad228a2189e32e0c7c0a73f0ac0c71d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anne_Gastinel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Anne Gastinel" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:e973a9cfb56371eb4ac7a3d8bbf883f5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gastinel" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/42239843/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was born on October 14, 1971, in the town of Tassin-la-Demi-Lune. Tassin-la-Demi-Lune is in the south east of France close to Lyon." ;
+        mtp:hasPurpose       meetup:689a84b1374afae0213fab50e2dcd065 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anne_Gastinel> ;
+        mtp:hasType          "HT" .
+
+meetup:66fd1d67602921afc2ba7b394fddc35c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Academic achievements and studying" ;
+        mtp:hasEvidencePurposeSecond  "Musical education and training" ;
+        mtp:hasSourcePurpose          "LLM" .

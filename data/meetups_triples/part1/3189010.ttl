@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Stephen_Perkins>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3189010/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Peter DiStefano (born July 10, 1965 in Santa Monica, California, U.S.) is an American guitarist and songwriter, best known for his work in the alternative rock band Porno for Pyros (the Jane's Addiction offshoot featuring vocalist Perry Farrell and drummer Stephen Perkins)." ;
+        mtp:hasParticipant   meetup:4863770e00ad3cd77eb00fc48abaebcf , meetup:1b268951f56dae3bd77b9b4d707da433 , meetup:55007e754a8bd8f00688045f4714dedd ;
+        mtp:hasPurpose       meetup:605036bd117f8cc77097fffd36f67d13 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_DiStefano> ;
+        mtp:hasType          "HM" .
+
+meetup:4863770e00ad3cd77eb00fc48abaebcf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stephen_Perkins> ;
+        mtp:hasOffset           "257" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Stephen Perkins" .
+
+meetup:1b268951f56dae3bd77b9b4d707da433
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Perry_Farrell> ;
+        mtp:hasOffset           "231" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Perry Farrell" .
+
+meetup:55007e754a8bd8f00688045f4714dedd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_DiStefano> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Peter DiStefano" .
+
+<http://dbpedia.org/resource/Perry_Farrell>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Peter_DiStefano>
+        rdf:type  core:Person .
+
+meetup:605036bd117f8cc77097fffd36f67d13
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Peter DiStefano's work as a guitarist and songwriter" ;
+        mtp:hasEvidencePurposeSecond  "Peter DiStefano's personal background" ;
+        mtp:hasSourcePurpose          "LLM" .

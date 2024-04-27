@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/13511672/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jack Costanzo (September 24, 1919 – August 18, 2018) was an American percussionist." ;
+        mtp:hasParticipant   meetup:1f2d18f28f81cf5e9bf2c58a5ac0b893 ;
+        mtp:hasPurpose       meetup:ff8ca9db1e3af207d6aef40cf159ef0e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Costanzo> ;
+        mtp:hasType          "HT" .
+
+meetup:1f2d18f28f81cf5e9bf2c58a5ac0b893
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jack_Costanzo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jack Costanzo" .
+
+meetup:ff8ca9db1e3af207d6aef40cf159ef0e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999944" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.2760934e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jack_Costanzo>
+        rdf:type  core:Person .

@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/48347857/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Levine helped to launch the careers of artists such as Capone-N-Noreaga, Lil Jon & the East Side Boyz, and Tha Eastsidaz." ;
+        mtp:hasParticipant   meetup:4d96f230c1e680d3fb6b8a68ca133346 , meetup:68512a50a787b839b9207b171e16199f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Neil_Levine> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Neil_Levine>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:68512a50a787b839b9207b171e16199f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lil_Jon> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lil Jon" .
+
+meetup:4d96f230c1e680d3fb6b8a68ca133346
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Neil_Levine> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Neil Levine" .
+
+<http://dbpedia.org/resource/Lil_Jon>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/48347857/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known as the founder of the hip-hop label Penalty Recordings, and is currently the CEO of its successor company, Penalty Entertainment." ;
+        mtp:hasParticipant   meetup:f5a00950ad534af8389265a2cdb53120 ;
+        mtp:hasPurpose       meetup:7cc056ead0c0891ecdace6eb2c778909 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Neil_Levine> ;
+        mtp:hasType          "HT" .
+
+meetup:7cc056ead0c0891ecdace6eb2c778909
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.76621956" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23377822" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:f5a00950ad534af8389265a2cdb53120
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Neil_Levine> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Neil Levine" .

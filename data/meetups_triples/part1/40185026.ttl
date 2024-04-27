@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:012e35f556ad04f947493d42e6d1bc6c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Albert Floyd Piccirilli" .
+
+meetup:f8564160006189a9e630a5a8501f9480
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Haley> ;
+        mtp:hasOffset           "127" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bill Haley" .
+
+<http://w3id.org/polifonia/pilot/meetups/40185026/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Albert Floyd Piccirilli (July 13, 1928 – May 24, 2020), also known by his stage name Al Rex, was an American bass player for Bill Haley & His Comets and its predecessor Bill Haley and the Saddlemen." ;
+        mtp:hasParticipant   meetup:012e35f556ad04f947493d42e6d1bc6c , meetup:f8564160006189a9e630a5a8501f9480 , meetup:2270a9fac8d68c78f9e5eff13fe5cef5 ;
+        mtp:hasPurpose       meetup:f5f1f3862433d13dbb541fae944d3c76 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Al_Rex> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Al_Rex>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:2270a9fac8d68c78f9e5eff13fe5cef5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Al_Rex> ;
+        mtp:hasOffset           "87" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Al Rex" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Bill_Haley>
+        rdf:type  core:Person .
+
+meetup:f5f1f3862433d13dbb541fae944d3c76
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6734251" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22130665" ;
+        mtp:hasSourcePurpose          "ML" .

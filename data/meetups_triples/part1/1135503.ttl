@@ -1,0 +1,92 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bob_Regan>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lucille_Starr>
+        rdf:type  core:Person .
+
+meetup:c93441bf2759e2b353d8cf1d2130448a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Lucille Starr was a singer and songwriter." ;
+        mtp:hasEvidencePurposeSecond  "She was originally from Saint Boniface, Manitoba." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/1135503/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She met and married country singer Bob Regan, and, using the stage name Lucille Starr, she began performing with him as a country singing duo called \"Bob & Lucille\"." ;
+        mtp:hasParticipant   meetup:f038ad22e62dac01c46237963ab6074c , meetup:69f117a435aea8461fb0b7a4a612a168 , meetup:48ba706dd10b7eab355f6ad927d1115b ;
+        mtp:hasPurpose       meetup:13b0ad45e952bc671f2958c9358f1a6f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucille_Starr> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Jenny_Lou_Carson>
+        rdf:type  core:Person .
+
+meetup:69f117a435aea8461fb0b7a4a612a168
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Regan> ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bob Regan" .
+
+meetup:08b3df674caa4892f769ff1f779291b2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lucille_Starr> ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lucille Starr" .
+
+<http://w3id.org/polifonia/pilot/meetups/1135503/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lucille Marie Raymonde Savoie (May 13, 1938 – September 4, 2020), known professionally as Lucille Starr, was a French Canadian singer, songwriter, and yodeler originally from Saint Boniface, Manitoba, best known for her 1964 hit single, \"Quand Le Soleil Dit Bonjour Aux Montagnes\" (\"The French Song\")" ;
+        mtp:hasParticipant   meetup:3e713bd8d571512fc5e2855eac6a9717 , meetup:08b3df674caa4892f769ff1f779291b2 ;
+        mtp:hasPurpose       meetup:c93441bf2759e2b353d8cf1d2130448a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lucille_Starr> ;
+        mtp:hasType          "HM" .
+
+meetup:13b0ad45e952bc671f2958c9358f1a6f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999472" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.0772087e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3e713bd8d571512fc5e2855eac6a9717
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lucille Marie Raymonde Savoie" .
+
+meetup:48ba706dd10b7eab355f6ad927d1115b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jenny_Lou_Carson> ;
+        mtp:hasOffset           "156" ;
+        mtp:hasSimilarityScore  "0.9483957994268514" ;
+        mtp:hasTextEvidence     "Lucille" .
+
+meetup:f038ad22e62dac01c46237963ab6074c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lucille_Starr> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Lucille Starr" .

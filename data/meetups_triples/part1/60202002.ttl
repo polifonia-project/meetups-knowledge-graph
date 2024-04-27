@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/60202002/4/10>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2019, Weyi was a featured storyteller of Denver's edition of the Empathy Museum, a travelling pop-up that encourages members of the public to walk in each other's shoes. The project was originally founded by artist Clare Patey, and Denver's edition was put on by the Biennial of the Americas, featuring stories from Suzi Q Smith, Mayor Michael B Hancock, and others." ;
+        mtp:hasParticipant   meetup:cd3b1e865998b5c4b93e027a074c8948 , meetup:4f719a68a628688d3b63299040761c36 ;
+        mtp:hasPurpose       meetup:1b371833c90f7651c53c485a0b24db27 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brenton_Weyi> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:cd3b1e865998b5c4b93e027a074c8948
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Clare Patey" .
+
+meetup:1b371833c90f7651c53c485a0b24db27
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Events that promote empathy and understanding" ;
+        mtp:hasEvidencePurposeSecond  "Learning through immersive experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:4f719a68a628688d3b63299040761c36
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Suzi_Q._Smith> ;
+        mtp:hasOffset           "146" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Suzi Q Smith" .
+
+<http://dbpedia.org/resource/Suzi_Q._Smith>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Brenton_Weyi>
+        rdf:type  core:Person .

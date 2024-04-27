@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Rihanna>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/40849008/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2009, James Fauntleroy co-wrote six tracks from Rihanna's fourth album Rated R (2009)." ;
+        mtp:hasParticipant   meetup:725a8a1f0c4be8bf6a6b2b19e6f916bf , meetup:db60f7938bade811441ac0bb36b53eab ;
+        mtp:hasPurpose       meetup:4fa64abc0ecba9527a39c628bec2ddb2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Fauntleroy> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:db60f7938bade811441ac0bb36b53eab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Fauntleroy> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "James Fauntleroy" .
+
+meetup:4fa64abc0ecba9527a39c628bec2ddb2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999987" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.1410881e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:725a8a1f0c4be8bf6a6b2b19e6f916bf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rihanna> ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "0.9999999999906208" ;
+        mtp:hasTextEvidence     "Rihanna" .
+
+<http://dbpedia.org/resource/James_Fauntleroy>
+        rdf:type  core:Person .

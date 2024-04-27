@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:9239987cab1303becee10e8497fa86e9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Scott_Yanow> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Scott Yanow" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4852bcd622e6e4eaa154076a1e17e287
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_White_(snooker_player)> ;
+        mtp:hasOffset           "46" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael White" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:6244d3ba0becac8fe860f97d08a60e36
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Jazz clarinetist and bandleader" ;
+        mtp:hasEvidencePurposeSecond  "Musical educator" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Scott_Yanow>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Michael_White_(snooker_player)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2057234/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael White (born November 29, 1954 in New Orleans) is a jazz clarinetist, bandleader, composer, jazz historian and musical educator. Jazz critic Scott Yanow said in a review that White \"displays the feel and spirit of the best New Orleans clarinetists\"." ;
+        mtp:hasParticipant   meetup:9239987cab1303becee10e8497fa86e9 , meetup:4852bcd622e6e4eaa154076a1e17e287 ;
+        mtp:hasPurpose       meetup:6244d3ba0becac8fe860f97d08a60e36 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_White_(clarinetist)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Michael_White_(clarinetist)>
+        rdf:type  core:Person .

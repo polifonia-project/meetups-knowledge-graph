@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/20516076/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They kept in touch as their lives diverged over the coming years, working as a make-up artist and in radiography respectively, and gave up their careers to begin DJing when both found themselves living in London in the early 1990s. They first started out on London pirate radio stations Touchdown and Defection FM." ;
+        mtp:hasParticipant   meetup:ed2e6bb9c140fbb7831e6c2453a7c226 ;
+        mtp:hasPurpose       meetup:c7daee60fa888c9d70c5a754542167b5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kemistry_&_Storm> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Kemistry>
+        rdf:type  core:Person .
+
+meetup:c7daee60fa888c9d70c5a754542167b5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "They began DJing in London" ;
+        mtp:hasEvidencePurposeSecond  "They kept in touch as their lives diverged" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:ed2e6bb9c140fbb7831e6c2453a7c226
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kemistry> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kemistry" .
+
+<http://dbpedia.org/resource/Kemistry_&_Storm>
+        rdf:type  core:Person .

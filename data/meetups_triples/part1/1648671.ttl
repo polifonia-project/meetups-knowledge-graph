@@ -1,0 +1,92 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bob_James_(musician)>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f921d96310b6c754337ea6d91fa2cede
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nick_Brignola> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nick Brignola" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4c23d539063046c71a16230af65c661d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.811958" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18514428" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1648671/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert McElhiney James (born December 25, 1939), known professionally as Bob James, is an American jazz keyboardist, arranger, and record producer." ;
+        mtp:hasParticipant   meetup:ee0dfa0a0bb113fcff3a9d66d3e0e079 , meetup:024afb1793312f71e9070f52efd920d7 , meetup:e321a8e82a0fac61c9a404c51cf59880 ;
+        mtp:hasPurpose       meetup:4c23d539063046c71a16230af65c661d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_James_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:ee0dfa0a0bb113fcff3a9d66d3e0e079
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "0.8831108103069776" ;
+        mtp:hasTextEvidence     "James" .
+
+<http://w3id.org/polifonia/pilot/meetups/1648671/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James attended the University of Michigan, but during his second year transferred to Berklee College of Music in Boston, Massachusetts. At Berklee his roommate was saxophonist Nick Brignola." ;
+        mtp:hasParticipant   meetup:f921d96310b6c754337ea6d91fa2cede , meetup:919cd026c5dc58a714e4b2b03bc40908 ;
+        mtp:hasPurpose       meetup:63d48e6b2965331b99504a63aec1ad68 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_James_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:e321a8e82a0fac61c9a404c51cf59880
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Robert McElhiney James" .
+
+meetup:63d48e6b2965331b99504a63aec1ad68
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "James' educational background" ;
+        mtp:hasEvidencePurposeSecond  "James' musical connection with Nick Brignola" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:919cd026c5dc58a714e4b2b03bc40908
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/LeBron_James> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James" .
+
+meetup:024afb1793312f71e9070f52efd920d7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_James_(musician)> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "0.9978408971558632" ;
+        mtp:hasTextEvidence     "Bob James" .
+
+<http://dbpedia.org/resource/LeBron_James>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Nick_Brignola>
+        rdf:type  core:Person .

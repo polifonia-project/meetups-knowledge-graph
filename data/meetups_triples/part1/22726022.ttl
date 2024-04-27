@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:0b65d0fe04824c7cb9f449705d122ca7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9150303" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.036329452" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Ram_Chaves>
+        rdf:type  core:Person .
+
+meetup:14a1b98c0a7b44dccefcc6b2fa602679
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ram_Chaves> ;
+        mtp:hasOffset           "202" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ram Chaves" .
+
+<http://w3id.org/polifonia/pilot/meetups/22726022/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The finale was described as a competition among the Philippines' three major island groups, with Espina representing Visayas while runners-up Jayann Bautista of Pampanga Province representing Luzon and Ram Chaves of Cagayan de Oro City representing Mindanao." ;
+        mtp:hasParticipant   meetup:14a1b98c0a7b44dccefcc6b2fa602679 ;
+        mtp:hasPurpose       meetup:0b65d0fe04824c7cb9f449705d122ca7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ram_Chaves> ;
+        mtp:hasType          "HT" .

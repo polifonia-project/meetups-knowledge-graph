@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:a4ff5ba328a3c08e10a0264addec47e4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joshua_Redman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Redman" .
+
+<http://w3id.org/polifonia/pilot/meetups/1542813/6/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The album's success came immediately after Matt Redman and LZ7, a Manchester-based Christian rap and urban music group, released the song \"Twenty Seven Million\" on 27 February 2012, to raise awareness for the anti-human trafficking movement." ;
+        mtp:hasParticipant   meetup:30d32cf29605e2569150a575f2097be7 , meetup:a4ff5ba328a3c08e10a0264addec47e4 ;
+        mtp:hasPurpose       meetup:597c9cb1c12fb5b5eec5a58effda5320 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_Redman> ;
+        mtp:hasType          "HM" .
+
+meetup:30d32cf29605e2569150a575f2097be7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Redman> ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Matt Redman" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:597c9cb1c12fb5b5eec5a58effda5320
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.4553901" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.26888302" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Joshua_Redman>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Matt_Redman>
+        rdf:type  core:Person .

@@ -1,0 +1,94 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/20368247/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the following years in Salt Lake City Thomas formed the first male glee club in Salt Lake City in 1876. He also taught music lessons in Salt Lake City, where he had among other students Heber J. Grant." ;
+        mtp:hasParticipant   meetup:a01d139b387e4304bafe50c585197284 ;
+        mtp:hasPurpose       meetup:2b8045109d4fe9b9a86dc51810a13351 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_John_Thomas> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/20368247/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1851 he joined The Church of Jesus Christ of Latter-day Saints (LDS Church)." ;
+        mtp:hasParticipant   meetup:676d22478ffec79ee053cdd77bc5ccfe ;
+        mtp:hasPurpose       meetup:18ee5e030fbb24cdcb5b033308e3a038 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_John_Thomas> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:676d22478ffec79ee053cdd77bc5ccfe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_John_Thomas> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charles J. Thomas" .
+
+meetup:680bb730471506e9e1a86177efe87b40
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_John_Thomas> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charles John Thomas" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a01d139b387e4304bafe50c585197284
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ulysses_S._Grant> ;
+        mtp:hasOffset           "91" ;
+        mtp:hasSimilarityScore  "0.9740604234272972" ;
+        mtp:hasTextEvidence     "Grant" .
+
+<http://w3id.org/polifonia/pilot/meetups/20368247/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Charles John Thomas (November 20, 1832 – March 31, 1919) was the director of the Mormon Tabernacle Choir, now the Tabernacle Choir at Temple Square, for part of the 1860s, and was involved in several other musical endeavors in early Utah." ;
+        mtp:hasParticipant   meetup:680bb730471506e9e1a86177efe87b40 ;
+        mtp:hasPurpose       meetup:3fced2d5ad9182ee17c15bba95422540 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charles_John_Thomas> ;
+        mtp:hasType          "HT" .
+
+meetup:18ee5e030fbb24cdcb5b033308e3a038
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.823185" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15635853" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Charles_John_Thomas>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ulysses_S._Grant>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:2b8045109d4fe9b9a86dc51810a13351
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Thomas formed a male glee club" ;
+        mtp:hasEvidencePurposeSecond  "He taught music lessons" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3fced2d5ad9182ee17c15bba95422540
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93642056" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.055134986" ;
+        mtp:hasSourcePurpose          "ML" .

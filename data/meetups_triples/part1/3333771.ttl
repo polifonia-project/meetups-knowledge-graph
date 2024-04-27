@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/3333771/9/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Many of Ray Campi's earliest 1950s recordings were not issued until the 1980s and 1990s, mostly on European albums." ;
+        mtp:hasParticipant   meetup:cbf5cc990a008e637f087d306a88696f ;
+        mtp:hasPurpose       meetup:d6261ef4f6e6c510581b891c0c404ec4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ray_Campi> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:cbf5cc990a008e637f087d306a88696f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ray_Campi> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ray Campi" .
+
+<http://dbpedia.org/resource/Ray_Campi>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:4a9d991109198d7e60306b7bef305890
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99513406" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00481542" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a7980d446c5790b9acac3bd71f14f59d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ray_Campi> ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ray Campi" .
+
+<http://w3id.org/polifonia/pilot/meetups/3333771/9/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"Caterpillar\" was considered his most popular record until his revival in the 1970s." ;
+        mtp:hasParticipant   meetup:a7980d446c5790b9acac3bd71f14f59d ;
+        mtp:hasPurpose       meetup:4a9d991109198d7e60306b7bef305890 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ray_Campi> ;
+        mtp:hasType          "HT" .
+
+meetup:d6261ef4f6e6c510581b891c0c404ec4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5093233" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.41229424" ;
+        mtp:hasSourcePurpose          "ML" .

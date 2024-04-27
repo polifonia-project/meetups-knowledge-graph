@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/13440597/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Henry Caldera (Sinhala: හෙන්රි කල්දේරා) (19 August 1937 – 11 October 2006) was a Sri Lankan singer, songwriter, and musician." ;
+        mtp:hasParticipant   meetup:2430f456601afe8d2794ab982b7d41a3 ;
+        mtp:hasPurpose       meetup:7807ef1be2b49ba7c304dc37acda635d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Caldera> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Henry_Caldera>
+        rdf:type  core:Person .
+
+meetup:7807ef1be2b49ba7c304dc37acda635d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8830178" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11514899" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2430f456601afe8d2794ab982b7d41a3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henry_Caldera> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9244853784996626" ;
+        mtp:hasTextEvidence     "Henry Caldera" .

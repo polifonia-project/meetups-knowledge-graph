@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:a4bd88523f52dae954b184cd75d3d337
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.40156594" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29767033" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/David_Lumsden_(musician)>
+        rdf:type  core:Person .
+
+meetup:b491744fb49b2eb9ccc217a49dbf173d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Lumsden_(musician)> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "0.9999999949453696" ;
+        mtp:hasTextEvidence     "David James Lumsden" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/10298981/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was principal of the Royal Scottish Academy of Music and Drama in Glasgow from 1976 to 1982 and of the Royal Academy of Music in London from 1982 to 1993." ;
+        mtp:hasParticipant   meetup:9bdc4e9d2fd0e36146ab099921fe5d0b ;
+        mtp:hasPurpose       meetup:c8dfb4e832502e16588972ce6249994e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Lumsden_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:c8dfb4e832502e16588972ce6249994e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99902236" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0008320101" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/10298981/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sir David James Lumsden (born 19 March 1928) is a musical educator, choirmaster, organist and harpsichordist." ;
+        mtp:hasParticipant   meetup:b491744fb49b2eb9ccc217a49dbf173d ;
+        mtp:hasPurpose       meetup:a4bd88523f52dae954b184cd75d3d337 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Lumsden_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:9bdc4e9d2fd0e36146ab099921fe5d0b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Lumsden_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "David James Lumsden" .

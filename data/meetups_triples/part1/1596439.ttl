@@ -1,0 +1,102 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1a14004faa164cd3e77b87766f9867fd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Activities related to creating and performing music" ;
+        mtp:hasEvidencePurposeSecond  "An event or gathering for music enthusiasts" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:7bea1ae8217f801e33ee77891f63b43a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98059285" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.018978592" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Cisco_Houston>
+        rdf:type  core:Person .
+
+meetup:8aef3fd6b1449c35b512a57b48675892
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9915167" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0066852644" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:005891054d400c856ca5921d1bc4a3b8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Woody_Guthrie> ;
+        mtp:hasOffset           "96" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Woody Guthrie" .
+
+<http://w3id.org/polifonia/pilot/meetups/1596439/34/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "More Songs By Woody Guthrie And Cisco Houston (Melodisc MLP12-106) (1955)" ;
+        mtp:hasParticipant   meetup:db44af10250076fb70fc67ea7c399f98 , meetup:fc4386d38935b9e42aca205aa60b5337 ;
+        mtp:hasPurpose       meetup:8aef3fd6b1449c35b512a57b48675892 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cisco_Houston> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:db44af10250076fb70fc67ea7c399f98
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cisco_Houston> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cisco Houston" .
+
+<http://w3id.org/polifonia/pilot/meetups/1596439/36/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cisco Houston Sings Songs of the Open Road (Folkways FA 2480) (1960)" ;
+        mtp:hasParticipant   meetup:bdbbbabeb5e20eabf40e7e46b1b32913 ;
+        mtp:hasPurpose       meetup:7bea1ae8217f801e33ee77891f63b43a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cisco_Houston> ;
+        mtp:hasType          "HT" .
+
+meetup:fc4386d38935b9e42aca205aa60b5337
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Woody_Guthrie> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Woody Guthrie" .
+
+<http://w3id.org/polifonia/pilot/meetups/1596439/13/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1960, he hosted the television special, Folk Sound U.S.A. on CBS, and appeared later that year at the Newport Folk Festival. His recordings for Vanguard began with the album The Cisco Special, followed by a collection of Woody Guthrie songs." ;
+        mtp:hasParticipant   meetup:005891054d400c856ca5921d1bc4a3b8 ;
+        mtp:hasPurpose       meetup:1a14004faa164cd3e77b87766f9867fd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cisco_Houston> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Woody_Guthrie>
+        rdf:type  core:Person .
+
+meetup:bdbbbabeb5e20eabf40e7e46b1b32913
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cisco_Houston> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cisco Houston" .

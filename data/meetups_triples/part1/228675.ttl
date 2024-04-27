@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/228675/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ernest Jennings Ford (February 13, 1919 – October 17, 1991),  known professionally as Tennessee Ernie Ford, was an American singer and television host who enjoyed success in the country and Western, pop, and gospel musical genres." ;
+        mtp:hasParticipant   meetup:d7eed911f2db3c1cdc773f599a7adb3f , meetup:9b684c49f6733d5c26637c1ad74765e9 ;
+        mtp:hasPurpose       meetup:1f48c3d6320fbb3935403e94e632cf27 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tennessee_Ernie_Ford> ;
+        mtp:hasType          "HM" .
+
+meetup:9b684c49f6733d5c26637c1ad74765e9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tennessee_Ernie_Ford> ;
+        mtp:hasOffset           "88" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tennessee Ernie Ford" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:1f48c3d6320fbb3935403e94e632cf27
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97467154" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.021838315" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Tennessee_Ernie_Ford>
+        rdf:type  core:Person .
+
+meetup:d7eed911f2db3c1cdc773f599a7adb3f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ernest Jennings Ford" .

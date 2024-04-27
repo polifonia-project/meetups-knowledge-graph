@@ -1,0 +1,89 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Tina_Turner>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8604933/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Craig Logan (born 22 April 1969) is a Scottish music manager." ;
+        mtp:hasParticipant   meetup:f8e6a0c7b3dcaa58a32fe2f360f7b89f ;
+        mtp:hasPurpose       meetup:e3f7ee982580dd40cf406dae54df73af ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Craig_Logan> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Craig_Logan>
+        rdf:type  core:Person .
+
+meetup:a5d5d73da153d5de2ca6f2a2bc79c21b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Garth_Brooks> ;
+        mtp:hasOffset           "108" ;
+        mtp:hasSimilarityScore  "0.999999999992042" ;
+        mtp:hasTextEvidence     "Garth Brooks" .
+
+meetup:f8e6a0c7b3dcaa58a32fe2f360f7b89f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Craig_Logan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999997726" ;
+        mtp:hasTextEvidence     "Craig Logan" .
+
+meetup:47edf778d9f2011ab418b892fc6c075b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Robbie_Williams> ;
+        mtp:hasOffset           "62" ;
+        mtp:hasSimilarityScore  "0.9999998971052316" ;
+        mtp:hasTextEvidence     "Robbie Williams" .
+
+<http://dbpedia.org/resource/Garth_Brooks>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8604933/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At the age of 25, Logan joined EMI Music as VP of International, which he ran for three years. During this time, he worked with a range of artists including Robbie Williams, Tina Turner, Iron Maiden and Garth Brooks." ;
+        mtp:hasParticipant   meetup:47edf778d9f2011ab418b892fc6c075b , meetup:a5d5d73da153d5de2ca6f2a2bc79c21b , meetup:3712853268457273f5244bfcef1328bc ;
+        mtp:hasPurpose       meetup:306a91aa9d19ade70ab2d77b2f966134 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Craig_Logan> ;
+        mtp:hasType          "HT" .
+
+meetup:e3f7ee982580dd40cf406dae54df73af
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7629241" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19180425" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Robbie_Williams>
+        rdf:type  core:Person .
+
+meetup:3712853268457273f5244bfcef1328bc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tina_Turner> ;
+        mtp:hasOffset           "79" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tina Turner" .
+
+meetup:306a91aa9d19ade70ab2d77b2f966134
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Working with artists at EMI Music" ;
+        mtp:hasEvidencePurposeSecond  "Joining EMI Music as VP of International" ;
+        mtp:hasSourcePurpose          "LLM" .

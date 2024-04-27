@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Don_Alias>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:dbdf0eb119de103724b976976e60256d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Don_Alias> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Don Alias" .
+
+meetup:abb67c70f5a7ab2bc3c51594dd740062
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about musicians and their performances." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the personal lives of the musicians." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/148356/22/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The album featured different guitarists on different nights: Georg Wadenius, Steve Khan and Mike Stern, the latter who took over permanently for a time (Jeff Richman filled in for Stern in mid-1976). Jazz percussionist Don Alias was also present for the live album." ;
+        mtp:hasParticipant   meetup:dbdf0eb119de103724b976976e60256d ;
+        mtp:hasPurpose       meetup:abb67c70f5a7ab2bc3c51594dd740062 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Blood,_Sweat_&_Tears> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Blood,_Sweat_&_Tears>
+        rdf:type  core:Person .

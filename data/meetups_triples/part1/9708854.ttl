@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Gerald_Cleaver_(musician)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e5d5297aa3c56856d3431eb29d4a13f8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gerald_Cleaver_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999998731196422" ;
+        mtp:hasTextEvidence     "Gerald Cleaver" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e1393561b86f9a7e30722c417d8f5aeb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9934582" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0055161146" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/9708854/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gerald Cleaver (born May 4, 1963) is a jazz drummer from Detroit, Michigan." ;
+        mtp:hasParticipant   meetup:e5d5297aa3c56856d3431eb29d4a13f8 ;
+        mtp:hasPurpose       meetup:e1393561b86f9a7e30722c417d8f5aeb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gerald_Cleaver_(musician)> ;
+        mtp:hasType          "HT" .

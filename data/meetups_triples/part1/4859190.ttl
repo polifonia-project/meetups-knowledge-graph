@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:f066f8ec32fc6a5a03b592aa88f8e526
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9969081" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0025458126" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:d74321ffdc5dcd086b726c0c5ad5e70b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Julius_Watkins> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Julius Watkins" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4859190/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Described by AllMusic as \"virtually the father of the jazz French horn\", Watkins won the Down Beat critics poll in 1960 and 1961 for Miscellaneous Instrument." ;
+        mtp:hasParticipant   meetup:651cb2f8ae2e65650ecdbf60e1920db3 ;
+        mtp:hasPurpose       meetup:c644b07ce162dd9bd87e347a8166f1ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Julius_Watkins> ;
+        mtp:hasType          "HT" .
+
+meetup:c644b07ce162dd9bd87e347a8166f1ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7106691" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2861657" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:651cb2f8ae2e65650ecdbf60e1920db3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Julius_Watkins> ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Julius Watkins" .
+
+<http://w3id.org/polifonia/pilot/meetups/4859190/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Julius Watkins (October 10, 1921 – April 4, 1977) was an American jazz musician who played French horn." ;
+        mtp:hasParticipant   meetup:d74321ffdc5dcd086b726c0c5ad5e70b ;
+        mtp:hasPurpose       meetup:f066f8ec32fc6a5a03b592aa88f8e526 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Julius_Watkins> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Julius_Watkins>
+        rdf:type  core:Person .

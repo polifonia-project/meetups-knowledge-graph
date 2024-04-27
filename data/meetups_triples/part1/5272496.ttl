@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Guitar>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5272496/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A child prodigy, born in Iran of Armenian descent, at seven years old he pawned his watch for a classical guitar, which he hid and practiced on in the basement." ;
+        mtp:hasParticipant   meetup:21cecd481b453e32f6e7415c65b4d40a , meetup:49d581df48fb338f4f3903f8754dde34 ;
+        mtp:hasPurpose       meetup:11fac59fac1f5f61ddc3e64cd2873c3b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Armik> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:11fac59fac1f5f61ddc3e64cd2873c3b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a child prodigy and his passion for music." ;
+        mtp:hasEvidencePurposeSecond  "It also mentions his personal life and background." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Armik>
+        rdf:type  core:Person .
+
+meetup:12e87fc7297272cf60eccecad2caf60b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Armik> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Armik" .
+
+<http://w3id.org/polifonia/pilot/meetups/5272496/0/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He launched his solo career in 1994." ;
+        mtp:hasParticipant   meetup:12e87fc7297272cf60eccecad2caf60b ;
+        mtp:hasPurpose       meetup:0edd9fb099e8d8931c3790ea9df02821 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Armik> ;
+        mtp:hasType          "HT" .
+
+meetup:21cecd481b453e32f6e7415c65b4d40a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Armik> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Armik" .
+
+meetup:0edd9fb099e8d8931c3790ea9df02821
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999877" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.2315391e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:49d581df48fb338f4f3903f8754dde34
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Guitar> ;
+        mtp:hasOffset           "106" ;
+        mtp:hasSimilarityScore  "0.9801798186699416" ;
+        mtp:hasTextEvidence     "guitar" .

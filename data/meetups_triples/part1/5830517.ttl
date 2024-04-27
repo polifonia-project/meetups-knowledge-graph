@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Sean_Lowe_(baseball)>
+        rdf:type  core:Person .
+
+meetup:5111ad8c7e02c8d9ab0d6188feaab0f1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions a hit song" ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions working for radio stations" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/5830517/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked for several radio stations in Springfield, Indianapolis and Chicago, before moving to WCBS in New York City in 1956. A million-seller and gold record recipient, Lowe's 1956 hit \"The Green Door\" was written by Marvin Moore and Bob Davie." ;
+        mtp:hasParticipant   meetup:f9f70ce1898660f4388edcb3535fa504 , meetup:cb5c4ac46e3584b41b552c45178f3e9a , meetup:be7cd743e55d0cb9b71b83758ccf3f5f ;
+        mtp:hasPurpose       meetup:5111ad8c7e02c8d9ab0d6188feaab0f1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jim_Lowe> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cb5c4ac46e3584b41b552c45178f3e9a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marvin_Moore> ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "0.999999999979906" ;
+        mtp:hasTextEvidence     "Marvin Moore" .
+
+<http://dbpedia.org/resource/Hutch_Davie>
+        rdf:type  core:Person .
+
+meetup:f9f70ce1898660f4388edcb3535fa504
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sean_Lowe_(baseball)> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lowe" .
+
+<http://dbpedia.org/resource/Marvin_Moore>
+        rdf:type  core:Person .
+
+meetup:be7cd743e55d0cb9b71b83758ccf3f5f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hutch_Davie> ;
+        mtp:hasOffset           "109" ;
+        mtp:hasSimilarityScore  "0.999999999999801" ;
+        mtp:hasTextEvidence     "Bob Davie" .
+
+<http://dbpedia.org/resource/Jim_Lowe>
+        rdf:type  core:Person .

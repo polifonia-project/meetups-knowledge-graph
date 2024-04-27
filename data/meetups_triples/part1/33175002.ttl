@@ -1,0 +1,93 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/33175002/2/18>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chen remained in Boston for nine years until she attended the University of Michigan to obtain a Doctor of Musical Arts degree in conducting. There she studied with Kenneth Kiesler and Martin Katz, served as music director of the campus orchestras, and also became conductor for the Arbor Opera Theater." ;
+        mtp:hasPurpose       meetup:c9d96a8fd7bceb062937b7b5b1783721 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mei-Ann_Chen> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/33175002/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A native of Taiwan, Chen wanted to be a conductor since she was ten years old. At a young age she began playing violin and piano with the support of her parents, and later taught herself to play the trumpet." ;
+        mtp:hasParticipant   meetup:988dd850f09e1ee74241a132bcc35d06 ;
+        mtp:hasPurpose       meetup:0cd2b2d6b845807ba10f9998824c6ffe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mei-Ann_Chen> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/33175002/2/16>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Later in her career, in October 2010, Chen returned to the New England Conservatory to guest conduct the Philharmonia. Chen dedicated the concert to the late Marylou Speaker Churchill, and thanked Benjamin Zander and dean emeritus Mark Churchill for \"making her career possible\"." ;
+        mtp:hasParticipant   meetup:48b47a67eac77de5204804e4511756c9 , meetup:d0ed7c2c6578f075d25a4bf66a6867fe ;
+        mtp:hasPurpose       meetup:6a2498080515e8a4c6a3d6f0768aabde ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mei-Ann_Chen> ;
+        mtp:hasType          "HT" .
+
+meetup:c9d96a8fd7bceb062937b7b5b1783721
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Chen attended the University of Michigan to obtain a Doctor of Musical Arts degree" ;
+        mtp:hasEvidencePurposeSecond  "Chen studied conducting and became a music director and conductor" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Wei-Yin_Chen>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Mei-Ann_Chen>
+        rdf:type  core:Person .
+
+meetup:6a2498080515e8a4c6a3d6f0768aabde
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Chen's career in music" ;
+        mtp:hasEvidencePurposeSecond  "Chen's gratitude towards Benjamin Zander and Mark Churchill" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:d0ed7c2c6578f075d25a4bf66a6867fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Marylou Speaker Churchill" .
+
+meetup:988dd850f09e1ee74241a132bcc35d06
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wei-Yin_Chen> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Chen" .
+
+meetup:0cd2b2d6b845807ba10f9998824c6ffe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Chen's passion for music and her desire to become a conductor" ;
+        mtp:hasEvidencePurposeSecond  "Chen's early musical education and self-teaching" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:48b47a67eac77de5204804e4511756c9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Benjamin_Zander> ;
+        mtp:hasOffset           "78" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Benjamin Zander" .
+
+<http://dbpedia.org/resource/Benjamin_Zander>
+        rdf:type  core:Person .

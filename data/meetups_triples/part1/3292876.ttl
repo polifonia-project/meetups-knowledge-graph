@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/3292876/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was born in Atlanta, Georgia." ;
+        mtp:hasParticipant   meetup:2bf19a2348100a9000291af87adc82c1 ;
+        mtp:hasPurpose       meetup:18a60cacbb4e6c69e578e28f546d19d1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Florence_Warner> ;
+        mtp:hasType          "HT" .
+
+meetup:2bf19a2348100a9000291af87adc82c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Florence_Warner> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Florence Warner" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:18a60cacbb4e6c69e578e28f546d19d1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.94634336" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.048785117" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Florence_Warner>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3292876/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Florence Warner (born March 22, 1947) is an American singer who has worked mainly in recordings of television commercials, including the \"Hello News\" image campaign from Gari Communications." ;
+        mtp:hasParticipant   meetup:9c2d75615b944046fd358256efc18095 ;
+        mtp:hasPurpose       meetup:a570a35913381460fd645bfd359213a5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Florence_Warner> ;
+        mtp:hasType          "HT" .
+
+meetup:9c2d75615b944046fd358256efc18095
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Florence_Warner> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999995168" ;
+        mtp:hasTextEvidence     "Florence Warner" .
+
+meetup:a570a35913381460fd645bfd359213a5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.45228204" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40783355" ;
+        mtp:hasSourcePurpose          "ML" .

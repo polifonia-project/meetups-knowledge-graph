@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/12297796/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The pencilina is a custom-made string instrument that Reed invented in the 1980s." ;
+        mtp:hasParticipant   meetup:dd32d1192054e82c0bdd2ee768ba80d3 ;
+        mtp:hasPurpose       meetup:1e72a0cdb34c9ca7b3923fee8e964bc3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bradford_Reed> ;
+        mtp:hasType          "HT" .
+
+meetup:50950dd191843356a08058d52d544a25
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8938082" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08356106" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:4ecdd63ab6477c7a8742858d3d845fef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bradford_Reed> ;
+        mtp:hasOffset           "29" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "pencilina" .
+
+<http://w3id.org/polifonia/pilot/meetups/12297796/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the 1980s he invented the pencilina, a custom made string instrument." ;
+        mtp:hasParticipant   meetup:4ecdd63ab6477c7a8742858d3d845fef ;
+        mtp:hasPurpose       meetup:50950dd191843356a08058d52d544a25 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bradford_Reed> ;
+        mtp:hasType          "HT" .
+
+meetup:dd32d1192054e82c0bdd2ee768ba80d3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bradford_Reed> ;
+        mtp:hasOffset           "4" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "pencilina" .
+
+<http://dbpedia.org/resource/Bradford_Reed>
+        rdf:type  core:Person .
+
+meetup:1e72a0cdb34c9ca7b3923fee8e964bc3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5562421" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4097702" ;
+        mtp:hasSourcePurpose          "ML" .

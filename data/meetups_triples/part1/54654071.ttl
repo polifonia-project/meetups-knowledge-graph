@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:eb219fc02e3d50c391ffa0fcc5a644bf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Fattakhova" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Vasilya_Fattakhova>
+        rdf:type  core:Person .
+
+meetup:d523391b3b9e36ddc0f9d6fa8ceca6e9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Details about an individual's life" ;
+        mtp:hasEvidencePurposeSecond  "Recognition of achievements in a public setting" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/54654071/6/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As a result, Fattakhova died at the Republican Clinical Hospital in Ufa on 26 January 2016, at the age of 36. She was buried at the \"Walk of Fame\" of the Southern Cemetery in Ufa." ;
+        mtp:hasParticipant   meetup:eb219fc02e3d50c391ffa0fcc5a644bf ;
+        mtp:hasPurpose       meetup:d523391b3b9e36ddc0f9d6fa8ceca6e9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vasilya_Fattakhova> ;
+        mtp:hasType          "HT" .

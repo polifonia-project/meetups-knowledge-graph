@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:4e9e785cd7399484881f3e1f212daa92
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Chloe_Moriondo> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Chloe Moriondo" .
+
+<http://w3id.org/polifonia/pilot/meetups/63210703/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Chloe Moriondo (stylized in all lowercase as chloe moriondo) (born September 29, 2002) is an American singer-songwriter and YouTuber born and based in Detroit." ;
+        mtp:hasParticipant   meetup:4e9e785cd7399484881f3e1f212daa92 ;
+        mtp:hasPurpose       meetup:32cb6c92d72eb41b1efbd9c3298e073f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Chloe_Moriondo> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Chloe_Moriondo>
+        rdf:type  core:Person .
+
+meetup:32cb6c92d72eb41b1efbd9c3298e073f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5341604" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.40798464" ;
+        mtp:hasSourcePurpose          "ML" .

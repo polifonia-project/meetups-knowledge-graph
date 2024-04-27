@@ -1,0 +1,52 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/2181688/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hildur Alice Nilson (26 January 1924 – 11 February 2014), known by her stage name Alice Babs, was a Swedish singer and actress." ;
+        mtp:hasParticipant   meetup:81577a053ddfdf98bfa49c330b465e08 , meetup:0f5cd0dcc383366bbabb62d189d17fd0 ;
+        mtp:hasPurpose       meetup:368f3637f0b2afc28359b22ceaaaf02d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Alice_Babs> ;
+        mtp:hasType          "HM" .
+
+meetup:0f5cd0dcc383366bbabb62d189d17fd0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alice_Babs> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alice Babs" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Nilson_Antonio>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Alice_Babs>
+        rdf:type  core:Person .
+
+meetup:368f3637f0b2afc28359b22ceaaaf02d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8999341" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07320037" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:81577a053ddfdf98bfa49c330b465e08
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nilson_Antonio> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "0.9993124056679014" ;
+        mtp:hasTextEvidence     "Nilson" .

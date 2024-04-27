@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f829f296b0808c4e083afaa55a5cd995
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84667426" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.091541365" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:1b891f5c08e2d1019c65c2da130d3d44
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jorge_Pescara> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jorge Pescara" .
+
+<http://w3id.org/polifonia/pilot/meetups/9734523/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jorge Pescara (born 14 January 1966) is a Brazilian bassist and Megatar player specializing in jazz fusion, progressive rock, experimental music, and Brazilian jazz." ;
+        mtp:hasParticipant   meetup:1b891f5c08e2d1019c65c2da130d3d44 ;
+        mtp:hasPurpose       meetup:f829f296b0808c4e083afaa55a5cd995 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jorge_Pescara> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jorge_Pescara>
+        rdf:type  core:Person .

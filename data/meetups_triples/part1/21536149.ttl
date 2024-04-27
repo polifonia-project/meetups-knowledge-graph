@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:73021527e504b4e0388269b9ba4a9ab3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sophus_Lie> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.9453321906087914" ;
+        mtp:hasTextEvidence     "Lie" .
+
+meetup:ac777ab0960897d8917c90540b27eb49
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "73" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Erika Røring Møinichen Lie Nissen" .
+
+<http://dbpedia.org/resource/Erika_Nissen>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/21536149/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Erika Nissen, née Lie (17 January 1845 – 27 October 1903), also known as Erika Røring Møinichen Lie Nissen, was a Norwegian pianist." ;
+        mtp:hasParticipant   meetup:f4252cf2ddab99b720a967d38e354355 , meetup:ac777ab0960897d8917c90540b27eb49 , meetup:73021527e504b4e0388269b9ba4a9ab3 ;
+        mtp:hasPurpose       meetup:773cffee328ebd26fd151e9a5b24c9ee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Erika_Nissen> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Sophus_Lie>
+        rdf:type  core:Person .
+
+meetup:f4252cf2ddab99b720a967d38e354355
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erika_Nissen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Erika Nissen" .
+
+meetup:773cffee328ebd26fd151e9a5b24c9ee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.88266844" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10795675" ;
+        mtp:hasSourcePurpose          "ML" .

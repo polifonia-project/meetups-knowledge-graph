@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:f8e79e8dc6f49991a58825dfc6033f14
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Singleton is recording a new gospel CD and re-recording past hits." ;
+        mtp:hasEvidencePurposeSecond  "Singleton enjoys playing dates and writing." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:80b5a73690eecb13c8b229a231f2dbdf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Margaret Louise Ebey" .
+
+meetup:b5e4f068e28004e864f26e7f9ea507dc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9934047" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0065505803" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Margie_Singleton>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/9528173/10/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Singleton returned to the studio recording a new gospel CD as well as revisiting yesterday and re-recording some of her past hits and favorites. She continues to play dates and enjoys writing." ;
+        mtp:hasPurpose       meetup:f8e79e8dc6f49991a58825dfc6033f14 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Margie_Singleton> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a5f64873f9ce0c1a8504ffd66a364f32
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Louise_Redknapp> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.961832595846668" ;
+        mtp:hasTextEvidence     "Louise" .
+
+<http://w3id.org/polifonia/pilot/meetups/9528173/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Margaret Louise Ebey (born October 12, 1935), known professionally as Margie Singleton, is an American country music singer and songwriter." ;
+        mtp:hasParticipant   meetup:80b5a73690eecb13c8b229a231f2dbdf , meetup:d983640baeae2864714befc809d4f65f , meetup:a5f64873f9ce0c1a8504ffd66a364f32 ;
+        mtp:hasPurpose       meetup:b5e4f068e28004e864f26e7f9ea507dc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Margie_Singleton> ;
+        mtp:hasType          "HM" .
+
+meetup:d983640baeae2864714befc809d4f65f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Margie_Singleton> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Margie Singleton" .
+
+<http://dbpedia.org/resource/Louise_Redknapp>
+        rdf:type  core:Person .

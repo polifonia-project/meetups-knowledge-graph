@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:ba6b38c5ee6704010d952fe14c8a8c70
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henrik_Lødøen> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lødøen" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:8ce5227236a7d7034bb63250488cc7a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Henrik_Lødøen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lødøen" .
+
+<http://w3id.org/polifonia/pilot/meetups/48550098/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In Trondheim he started collaborations with a number of the up coming young Norwegian and swedish jazz musicians." ;
+        mtp:hasParticipant   meetup:ba6b38c5ee6704010d952fe14c8a8c70 ;
+        mtp:hasPurpose       meetup:7de299d80c3450d541da300fc6569cc4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henrik_Lødøen> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Henrik_Lødøen>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:7de299d80c3450d541da300fc6569cc4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7223232" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1949375" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:94afd57975ff61f3b7c6326d8450d6e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999994" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.9818085e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/48550098/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lødøen got his diploma from the jazz program at the Norwegian University of Science and Technology in 2015." ;
+        mtp:hasParticipant   meetup:8ce5227236a7d7034bb63250488cc7a6 ;
+        mtp:hasPurpose       meetup:94afd57975ff61f3b7c6326d8450d6e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henrik_Lødøen> ;
+        mtp:hasType          "HT" .

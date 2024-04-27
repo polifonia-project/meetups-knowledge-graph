@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:42857fecbbf85f33ebae4869ba85872b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999057" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.300718e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Ronnie_Tober>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/14724955/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1963, while in the Netherlands to visit his grandmother, he appeared on Voor de vuist weg, a television show hosted by Willem Duys. Based on the positive reactions to his performance, he decided to move back to the Netherlands." ;
+        mtp:hasPurpose       meetup:c78591c617dc5b65722ef30b8a00f564 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ronnie_Tober> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:c78591c617dc5b65722ef30b8a00f564
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing on a television show" ;
+        mtp:hasEvidencePurposeSecond  "Moving back to the Netherlands" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:32d4dbfb2486d67fa0663dcc2d4542e4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ronnie_Tober> ;
+        mtp:hasOffset           "66" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ronnie Tober" .
+
+<http://w3id.org/polifonia/pilot/meetups/14724955/17/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2007, Tober, his husband, and their friends raised €10,000 for his foundation by completing the International Four Days Marches Nijmegen." ;
+        mtp:hasParticipant   meetup:32d4dbfb2486d67fa0663dcc2d4542e4 ;
+        mtp:hasPurpose       meetup:42857fecbbf85f33ebae4869ba85872b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ronnie_Tober> ;
+        mtp:hasType          "HT" .

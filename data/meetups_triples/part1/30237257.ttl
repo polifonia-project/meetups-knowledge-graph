@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4e7c1962ff9ec839745c7d5bb384605c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Teddy_Pendergrass> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Teddy Pendergrass" .
+
+meetup:448a70df1531bfff1539884c288e97e6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Hits and chart toppers of a band" ;
+        mtp:hasEvidencePurposeSecond  "Success and achievements of the band" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c8cbe0c33794833095d73e9eaa487ae0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bernard_Wilson_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.8974305706774428" ;
+        mtp:hasTextEvidence     "Bernard Wilson" .
+
+<http://w3id.org/polifonia/pilot/meetups/30237257/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1970, Wilson joined the evolving line-up of Harold Melvin and the Bluenotes, which featured Harold Melvin—another native of Philadelphia. With the addition of Teddy Pendergrass to the group and the release of their first record, the Bluenotes achieved great success." ;
+        mtp:hasParticipant   meetup:4e7c1962ff9ec839745c7d5bb384605c ;
+        mtp:hasPurpose       meetup:78287fc140a23a7c3c41c6730895da0b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bernard_Wilson_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Bernard_Wilson_(singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/30237257/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bernard Wilson (July 12, 1946 – December 26, 2010) was a second tenor and baritone R&B, funk and soul music vocalist, who was a member of Harold Melvin & the Blue Notes, and thus helped to define the “Sound of Philadelphia” in the 1970s." ;
+        mtp:hasParticipant   meetup:c8cbe0c33794833095d73e9eaa487ae0 ;
+        mtp:hasPurpose       meetup:c003b4a64ce62294aaaf88b9282e719b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bernard_Wilson_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/30237257/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was this early to mid-1970s lineup that had such hits as \"If You Don't Know Me by Now,\" \"The Love I Lost,\" \"Don't Leave Me This Way,\" and \"Bad Luck.\" Other chart toppers for the band such as \"I Miss You\" and \"Wake Up Everybody, from their five self-titled platinum records, soon followed." ;
+        mtp:hasPurpose       meetup:448a70df1531bfff1539884c288e97e6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bernard_Wilson_(singer)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Teddy_Pendergrass>
+        rdf:type  core:Person .
+
+meetup:78287fc140a23a7c3c41c6730895da0b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a music group" ;
+        mtp:hasEvidencePurposeSecond  "Career achievements" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:c003b4a64ce62294aaaf88b9282e719b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9972258" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.002737568" ;
+        mtp:hasSourcePurpose          "ML" .

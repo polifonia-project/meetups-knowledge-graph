@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:e6f0fe5ad2337daf6c886ef215b15d52
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music as a musician" ;
+        mtp:hasEvidencePurposeSecond  "Shifted studies to focus on acoustics and electronics" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:afb40aacf1ccca565ef4b209d98d435e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Gunness> ;
+        mtp:hasOffset           "175" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "David Gunness" .
+
+meetup:9afbdc27563b4c92f919097be293580d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stan_Kenton> ;
+        mtp:hasOffset           "158" ;
+        mtp:hasSimilarityScore  "0.9999697893863804" ;
+        mtp:hasTextEvidence     "Kenton" .
+
+<http://w3id.org/polifonia/pilot/meetups/38153065/1/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked at Eastern Acoustic Works (EAW) in Massachusetts for 12 years, filing three patents in the process of creating a wide variety of loudspeaker products. For EAW, Gunness developed \"Gunness Focusing\"—a system for decreasing temporal response distortion in loudspeakers, involving the processing of the audio signal before it reaches the loudspeaker drivers, applying a reverse image of the expected distortion to cancel out the loudspeaker's idiosyncrasies." ;
+        mtp:hasPurpose       meetup:573b447a167e3aa2f6804d410062d0ea ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Gunness> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/38153065/11/28>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "EAW's plant retained the ability to fill some custom loudspeaker orders, they kept a number of management and clerical positions, and also the design team of Kenton Forsythe, David Gunness and Jeff Rocha." ;
+        mtp:hasParticipant   meetup:afb40aacf1ccca565ef4b209d98d435e , meetup:9afbdc27563b4c92f919097be293580d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Gunness> ;
+        mtp:hasType          "HM" .
+
+meetup:573b447a167e3aa2f6804d410062d0ea
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Innovation in loudspeaker technology" ;
+        mtp:hasEvidencePurposeSecond  "Working at Eastern Acoustic Works" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Stan_Kenton>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/38153065/3/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During his college years he made extra money as a musician; singing and playing acoustic guitar. For these gigs he fabricated his own loudspeakers, and he determined to continue in this field, shifting his studies to focus on acoustics and electronics." ;
+        mtp:hasPurpose       meetup:e6f0fe5ad2337daf6c886ef215b15d52 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_Gunness> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/David_Gunness>
+        rdf:type  core:Person .

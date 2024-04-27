@@ -1,0 +1,100 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Butch_Walker>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/5295354/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bill Szymczyk then produced Brian's followup, Magazine, in 2011." ;
+        mtp:hasParticipant   meetup:7fff581b4841d6c5638ccdc3c0511335 , meetup:6da00cf6e061b2fb1f67024030607d57 ;
+        mtp:hasPurpose       meetup:158a8f4f1db242e5e35594ecdb21384a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Vander_Ark> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/5295354/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He toured extensively in support of the album, including a double-bill acoustic tour with Butch Walker." ;
+        mtp:hasParticipant   meetup:4103cad6a068d9f39636bcf73d939830 , meetup:fd54153215e37c9b9e09bf2bef9d66e6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Vander_Ark> ;
+        mtp:hasType          "HM" .
+
+meetup:ffe8cd487deb78f8938003e92660468b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7068667" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15202944" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fd54153215e37c9b9e09bf2bef9d66e6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Vander_Ark> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Brian Vander Ark" .
+
+meetup:158a8f4f1db242e5e35594ecdb21384a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99191225" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007919715" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:7fff581b4841d6c5638ccdc3c0511335
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Vander_Ark> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Brian Vander Ark" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Brian_Vander_Ark>
+        rdf:type  core:Person .
+
+meetup:4103cad6a068d9f39636bcf73d939830
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Butch_Walker> ;
+        mtp:hasOffset           "90" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Butch Walker" .
+
+meetup:548d14aa770de30ac0d101b3e4b651f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Vander_Ark> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brian Vander Ark" .
+
+meetup:6da00cf6e061b2fb1f67024030607d57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Szymczyk> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bill Szymczyk" .
+
+<http://w3id.org/polifonia/pilot/meetups/5295354/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brian Vander Ark released his first solo album, Resurrection, in May 2003." ;
+        mtp:hasParticipant   meetup:548d14aa770de30ac0d101b3e4b651f9 ;
+        mtp:hasPurpose       meetup:ffe8cd487deb78f8938003e92660468b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Vander_Ark> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bill_Szymczyk>
+        rdf:type  core:Person .

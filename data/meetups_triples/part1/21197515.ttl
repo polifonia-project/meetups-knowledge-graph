@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/21197515/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Willie Gardner is a Scottish musician, who formed part of various pop and rock bands in the 1970s and 1980s, playing guitar." ;
+        mtp:hasParticipant   meetup:445f21ddd33d7dfac0e75137f75ee014 ;
+        mtp:hasPurpose       meetup:8475d46ec4b32c88378b5dea61409d36 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Willie_Gardner> ;
+        mtp:hasType          "HT" .
+
+meetup:8475d46ec4b32c88378b5dea61409d36
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9905523" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.009238797" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Willie_Gardner>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:53022e50149b55acee4c1c652aa0c17c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Willie_Gardner> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Willie Gardner" .
+
+<http://w3id.org/polifonia/pilot/meetups/21197515/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was a cousin of Alex Harvey." ;
+        mtp:hasParticipant   meetup:4b15cb6b4d9fa590f4d99c25ca3e2468 , meetup:53022e50149b55acee4c1c652aa0c17c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Willie_Gardner> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Alex_Harvey_(musician)>
+        rdf:type  core:Person .
+
+meetup:4b15cb6b4d9fa590f4d99c25ca3e2468
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alex_Harvey_(musician)> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.9831094300487652" ;
+        mtp:hasTextEvidence     "Alex Harvey" .
+
+meetup:445f21ddd33d7dfac0e75137f75ee014
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Willie_Gardner> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999994033" ;
+        mtp:hasTextEvidence     "Willie Gardner" .

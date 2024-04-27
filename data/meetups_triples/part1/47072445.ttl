@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:48260731495f072d3311bdb4d1298b1e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9869251" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00767112" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:593eff476d674a249fb970c752239488
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maria_Kouznetsova_(violinist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999841345812172" ;
+        mtp:hasTextEvidence     "Maria Kouznetsova" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/47072445/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Maria Kouznetsova (Russian: Мария Кузнецова, born 1 November 1991) is a Russian violinist." ;
+        mtp:hasParticipant   meetup:593eff476d674a249fb970c752239488 ;
+        mtp:hasPurpose       meetup:48260731495f072d3311bdb4d1298b1e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maria_Kouznetsova_(violinist)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Maria_Kouznetsova_(violinist)>
+        rdf:type  core:Person .

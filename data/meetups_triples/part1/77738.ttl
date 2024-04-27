@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:3d8223a6766b0823e88a79ecba173e24
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Pursuing a career in art" ;
+        mtp:hasEvidencePurposeSecond  "Art-related jobs and personal projects" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Mike_Gordon>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Kim_Gordon>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/77738/7/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After graduating from the Otis Art Institute, Gordon moved to New York City in 1980, hoping to pursue a career in art. There, she took art-related jobs to earn an income, such as working as a writer for Artforum, and launched a \"D.I.Y. project called Design Office, doing low-fi artistic interventions\" in friends' apartments." ;
+        mtp:hasParticipant   meetup:efa2190a75c2ace35d7124561510a474 ;
+        mtp:hasPurpose       meetup:3d8223a6766b0823e88a79ecba173e24 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kim_Gordon> ;
+        mtp:hasType          "HT" .
+
+meetup:efa2190a75c2ace35d7124561510a474
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_Gordon> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gordon" .

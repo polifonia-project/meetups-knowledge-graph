@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:648d7a0904c20531a0bf622972021fc5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Jizzy Pearl is a vocalist" ;
+        mtp:hasEvidencePurposeSecond  "He was born in Chicago" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8a186fba6e82ec650fc7d4ddc8925efa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involves singing and performing in a band" ;
+        mtp:hasEvidencePurposeSecond  "Signing a record deal with a major label" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Jizzy_Pearl>
+        rdf:type  core:Person .
+
+meetup:8f02a962e8709d148ec3f018d5b40384
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Wilkinson> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "0.9996042494669456" ;
+        mtp:hasTextEvidence     "James Wilkinson" .
+
+meetup:8f156c9412f8697cea049145688189cd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jizzy_Pearl> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jizzy Pearl" .
+
+<http://w3id.org/polifonia/pilot/meetups/2229638/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jizzy Pearl (born James Wilkinson) is an American vocalist who was born on March 17, 1958, in Chicago, Illinois." ;
+        mtp:hasParticipant   meetup:8f02a962e8709d148ec3f018d5b40384 , meetup:8f156c9412f8697cea049145688189cd ;
+        mtp:hasPurpose       meetup:648d7a0904c20531a0bf622972021fc5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jizzy_Pearl> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/James_Wilkinson>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2229638/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the late 1980s, Pearl sang for Love/Hate, which achieved notoriety for performances as the house band at the Whisky a Go Go in Hollywood. The group subsequently signed to Columbia Records." ;
+        mtp:hasPurpose       meetup:8a186fba6e82ec650fc7d4ddc8925efa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jizzy_Pearl> ;
+        mtp:hasType          "HT" .

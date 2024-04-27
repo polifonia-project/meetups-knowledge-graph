@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:17f97b06753240665701afe5f0168b78
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kurt_Cobain> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "0.9999999938590064" ;
+        mtp:hasTextEvidence     "Cobain" .
+
+<http://dbpedia.org/resource/Kurt_Cobain>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/8002901/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Garry Cobain (sometimes styled as Gaz Cobain) (born 16 May 1967) is a British electronic musician, and one half of the Future Sound of London." ;
+        mtp:hasParticipant   meetup:17f97b06753240665701afe5f0168b78 , meetup:f043a32cbdc2aec5271c06b089e0598f ;
+        mtp:hasPurpose       meetup:d8256662e7b33955f52e5351a2bdbad0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Garry_Cobain> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Garry_Cobain>
+        rdf:type  core:Person .
+
+meetup:bbf05c54b1a734eb0a97b210465d3363
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kurt_Cobain> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cobain" .
+
+meetup:f043a32cbdc2aec5271c06b089e0598f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Garry_Cobain> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Garry Cobain" .
+
+<http://w3id.org/polifonia/pilot/meetups/8002901/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cobain was born on 16 May 1967 in Bedford. He left Bedford for Manchester in his late teens to study at a time when alternative music in that part of Britain was taking off; the dance music scene in particular was becoming more and more popular, not just in Manchester but all over the country and in the States too." ;
+        mtp:hasParticipant   meetup:bbf05c54b1a734eb0a97b210465d3363 ;
+        mtp:hasPurpose       meetup:fbceb844131b19598f554489580e562c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Garry_Cobain> ;
+        mtp:hasType          "HT" .
+
+meetup:fbceb844131b19598f554489580e562c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions alternative music and the dance music scene." ;
+        mtp:hasEvidencePurposeSecond  "Cobain left Bedford to study in Manchester." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:d8256662e7b33955f52e5351a2bdbad0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9180186" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04179983" ;
+        mtp:hasSourcePurpose          "ML" .

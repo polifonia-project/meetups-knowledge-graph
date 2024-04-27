@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Sergei_Rachmaninoff>
+        rdf:type  core:Person .
+
+meetup:1179b671d56fb0c53c7dae4bdba34849
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions a musician and a company." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions Aaron Richmond and Hurok." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:20fb01ebe002529d536e4f8d4acea71b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fritz_Kreisler> ;
+        mtp:hasOffset           "125" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Fritz Kreisler" .
+
+meetup:03afdf83f12dd7495277a772b1b330b7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kirsten_Flagstad> ;
+        mtp:hasOffset           "107" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kirsten Flagstad" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:54e3c7e774e81f7fb09c3a9e3ea3f068
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sergei_Rachmaninoff> ;
+        mtp:hasOffset           "69" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sergei Rachmaninoff" .
+
+<http://w3id.org/polifonia/pilot/meetups/6734297/10/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the early 1920s, Richmond was appointed the New England Manager of the Wolfsohn Musical Bureau, Inc. and, later, became the sole New England representative for the National Concert and Artists Corporation, and later for the NBC Artists Service. In this role, Richmond was the New England artist representative for Sergei Rachmaninoff, Mischa Levitski, Kirsten Flagstad, Fritz Kreisler, Monte Carlo Ballet Russe and the Vienna Choir Boys, among many others." ;
+        mtp:hasParticipant   meetup:03afdf83f12dd7495277a772b1b330b7 , meetup:54e3c7e774e81f7fb09c3a9e3ea3f068 , meetup:20fb01ebe002529d536e4f8d4acea71b ;
+        mtp:hasPurpose       meetup:9e762478bfe7a689f00e258fedcb8dc5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aaron_Richmond> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/6734297/23/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On Richmond's death in 1965, Hurok said in The Boston Globe, \"Aaron Richmond contributed to Boston what Hurok contributes to New York. He had the ideal spirit: 'Boston should see this company, hear this musician.'" ;
+        mtp:hasPurpose       meetup:1179b671d56fb0c53c7dae4bdba34849 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aaron_Richmond> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Fritz_Kreisler>
+        rdf:type  core:Person .
+
+meetup:9e762478bfe7a689f00e258fedcb8dc5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music industry" ;
+        mtp:hasEvidencePurposeSecond  "Representation and management" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Aaron_Richmond>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Kirsten_Flagstad>
+        rdf:type  core:Person .

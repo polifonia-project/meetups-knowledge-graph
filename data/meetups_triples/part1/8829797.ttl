@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Alfred_Cortot>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/8829797/0/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She entered the Conservatoire in 1906 in Marmontel's class and was awarded the Premier Prix (the highest examination award for performance) in 1907. Subsequently, she studied with Alfred Cortot and the two remained friends for the rest of his life." ;
+        mtp:hasParticipant   meetup:e8f63e4cd39796311d661551fcc48c62 ;
+        mtp:hasPurpose       meetup:237f6934c36695877947255f28571c74 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Magda_Tagliaferro> ;
+        mtp:hasType          "HT" .
+
+meetup:30de2826f4f59f1302c15c348aeb62d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9922782" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007721715" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/8829797/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Magdalena Tagliaferro was born in Petrópolis, Brazil." ;
+        mtp:hasParticipant   meetup:63694be4cfb555b1c68763a516df0cc9 ;
+        mtp:hasPurpose       meetup:30de2826f4f59f1302c15c348aeb62d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Magda_Tagliaferro> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:63694be4cfb555b1c68763a516df0cc9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Magda_Tagliaferro> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Magdalena Tagliaferro" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e8f63e4cd39796311d661551fcc48c62
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Alfred_Cortot> ;
+        mtp:hasOffset           "31" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Alfred Cortot" .
+
+meetup:237f6934c36695877947255f28571c74
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about studying music and receiving awards" ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions studying at the Conservatoire" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Magda_Tagliaferro>
+        rdf:type  core:Person .

@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Mary_Hall_Surface>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/34685680/0/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In addition, soundtrack of her musical The Odyssey of Telémaca co-written with composer David Maddox won the 2004 Parents' Choice Gold Award." ;
+        mtp:hasParticipant   meetup:c2ffd9aae4982332ba4c9df3b2afeebc ;
+        mtp:hasPurpose       meetup:8d2cfb1bcad2985c6783341963478208 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mary_Hall_Surface> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/34685680/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mary Hall Surface (born June 15, 1958) is an American playwright and director of theater, working primarily in the Washington, D.C. area." ;
+        mtp:hasParticipant   meetup:02ea108b9af59fc6d55464bd60e14830 ;
+        mtp:hasPurpose       meetup:fcd2e79c3d8b94f1304553b5a308b0c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mary_Hall_Surface> ;
+        mtp:hasType          "HT" .
+
+meetup:8d2cfb1bcad2985c6783341963478208
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.78762513" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14013372" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c2ffd9aae4982332ba4c9df3b2afeebc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mary_Hall_Surface> ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mary Hall Surface" .
+
+meetup:02ea108b9af59fc6d55464bd60e14830
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mary_Hall_Surface> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Mary Hall Surface" .
+
+meetup:fcd2e79c3d8b94f1304553b5a308b0c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7284302" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.19798969" ;
+        mtp:hasSourcePurpose          "ML" .

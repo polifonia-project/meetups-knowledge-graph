@@ -1,0 +1,70 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d3847e8087b2adb485471f0bb5e6a7a7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Relating to someone's life" ;
+        mtp:hasEvidencePurposeSecond  "An occurrence by chance" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b1d5329f05805bfb055137c473c5eca3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gilles" .
+
+<http://w3id.org/polifonia/pilot/meetups/25012919/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He himself was dead by 1254, when his younger brother, Gilles, appears as lord at Neuville." ;
+        mtp:hasParticipant   meetup:b1d5329f05805bfb055137c473c5eca3 , meetup:1897ab2c14cfef932f2da02347200f9d ;
+        mtp:hasPurpose       meetup:d3847e8087b2adb485471f0bb5e6a7a7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jehan_de_Nuevile> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Jehan_de_Nuevile>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/25012919/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jehan de Nuevile (c.1200–c.1250) was the second son of the Eustache de Nuevile, a minor nobleman with land in Neuville-Vitasse, near Arras." ;
+        mtp:hasParticipant   meetup:c8c0b733289776c908ceedebbf4b5e7c ;
+        mtp:hasPurpose       meetup:76e0efaad06758ec35fb843d7d591c7c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jehan_de_Nuevile> ;
+        mtp:hasType          "HT" .
+
+meetup:1897ab2c14cfef932f2da02347200f9d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jehan_de_Nuevile> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jehan de Nuevile" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:c8c0b733289776c908ceedebbf4b5e7c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jehan_de_Nuevile> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jehan de Nuevile" .
+
+meetup:76e0efaad06758ec35fb843d7d591c7c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9988875" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0011117553" ;
+        mtp:hasSourcePurpose          "ML" .

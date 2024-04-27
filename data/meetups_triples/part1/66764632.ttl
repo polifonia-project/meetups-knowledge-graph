@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:517249b37db2eecd823a44d453242dc7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Volker_Wangenheim> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Volker Wangenheim" .
+
+meetup:7d946e26467f2d60ceef0ef767edce4a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Volker_Wangenheim> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Volker Wangenheim" .
+
+<http://w3id.org/polifonia/pilot/meetups/66764632/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Volker Wangenheim (1 July 1928 – 23 April 2014) was a German conductor, composer and academic teacher." ;
+        mtp:hasParticipant   meetup:517249b37db2eecd823a44d453242dc7 ;
+        mtp:hasPurpose       meetup:3cf3628e8b2dfeb74b60b68990938027 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Volker_Wangenheim> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:3cf3628e8b2dfeb74b60b68990938027
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.642495" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.35520816" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:754c992724f3c071da1fd8110ce813a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.49532276" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3147618" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Volker_Wangenheim>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/66764632/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was conductor of the orchestra in Bonn from 1957, shaping the orchestra and opening the new concert hall Beethovenhalle in 1959 after which the orchestra was named from 1963." ;
+        mtp:hasParticipant   meetup:7d946e26467f2d60ceef0ef767edce4a ;
+        mtp:hasPurpose       meetup:754c992724f3c071da1fd8110ce813a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Volker_Wangenheim> ;
+        mtp:hasType          "HT" .

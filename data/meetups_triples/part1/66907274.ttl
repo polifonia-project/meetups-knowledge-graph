@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/66907274/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Frances Geneva Handy Southall (December 5, 1925 – January 2, 2004) was an American musicologist, pianist, and college professor." ;
+        mtp:hasParticipant   meetup:ac4f69878d35854fe83bdfa18570d9f4 , meetup:35a1455730246d070815be3a98ba5160 ;
+        mtp:hasPurpose       meetup:b5cfdbb37baeab5bc32c124e5da7adde ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Geneva_Handy_Southall> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:35a1455730246d070815be3a98ba5160
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Geneva_Handy_Southall> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "0.9999999999907344" ;
+        mtp:hasTextEvidence     "Geneva Handy Southall" .
+
+<http://w3id.org/polifonia/pilot/meetups/66907274/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1966, she became the first woman to earn a Ph.D. in piano performance, at the University of Iowa. Her dissertation was about composer John Field's piano concertos." ;
+        mtp:hasPurpose       meetup:13c958a50077b665eec6e418fcef1867 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Geneva_Handy_Southall> ;
+        mtp:hasType          "HT" .
+
+meetup:ac4f69878d35854fe83bdfa18570d9f4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Frances Geneva Handy Southall" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:13c958a50077b665eec6e418fcef1867
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Academic achievement" ;
+        mtp:hasEvidencePurposeSecond  "Study of piano performance" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Geneva_Handy_Southall>
+        rdf:type  core:Person .
+
+meetup:b5cfdbb37baeab5bc32c124e5da7adde
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9946403" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0044387626" ;
+        mtp:hasSourcePurpose          "ML" .

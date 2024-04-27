@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/1828635/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in Brooklyn, New York, the son of Canadian singer Charles Jordan, Marc Jordan grew up in a musical household in Toronto after his father returned to Canada." ;
+        mtp:hasParticipant   meetup:316954c00976ca4ffc28a9cabdf06fc3 , meetup:13d80089eddc260ccb7b06e344e12336 ;
+        mtp:hasPurpose       meetup:33aed5905ac84b1976280c397e260ceb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marc_Jordan> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Amy_Sky>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Marc_Jordan>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1828635/12/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marc Jordan is married to Amy Sky and they have two children together, a son, Ezra and a daughter, Zoe." ;
+        mtp:hasParticipant   meetup:f0a27e771f7fa6092291a395b1932837 , meetup:3cb7d179c0242ba4c03b9fb985d02c43 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marc_Jordan> ;
+        mtp:hasType          "HM" .
+
+meetup:f0a27e771f7fa6092291a395b1932837
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Amy_Sky> ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Amy Sky" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:3cb7d179c0242ba4c03b9fb985d02c43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marc_Jordan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marc Jordan" .
+
+meetup:316954c00976ca4ffc28a9cabdf06fc3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marc_Jordan> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Marc Jordan" .
+
+meetup:13d80089eddc260ccb7b06e344e12336
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_Jordan_(politician)> ;
+        mtp:hasOffset           "55" , "39" ;
+        mtp:hasSimilarityScore  "0.4541106358309938" , "" ;
+        mtp:hasTextEvidence     "Charles Jordan" .
+
+meetup:33aed5905ac84b1976280c397e260ceb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8883368" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08275364" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Charles_Jordan_(politician)>
+        rdf:type  core:Person .

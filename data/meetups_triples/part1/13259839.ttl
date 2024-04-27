@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:c4b28223f103a8a59d8b905a1eaede2b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Akiko_Shikata> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Akiko Shikata" .
+
+<http://w3id.org/polifonia/pilot/meetups/13259839/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Akiko Shikata (志方あきこ, Shikata Akiko, born 7 January) is a Japanese singer-songwriter and composer, who is known for writing music for games and anime." ;
+        mtp:hasParticipant   meetup:c4b28223f103a8a59d8b905a1eaede2b ;
+        mtp:hasPurpose       meetup:3f849652301ad3d3065be3a8304ce819 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Akiko_Shikata> ;
+        mtp:hasType          "HT" .
+
+meetup:3f849652301ad3d3065be3a8304ce819
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98076725" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0123261325" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Akiko_Shikata>
+        rdf:type  core:Person .

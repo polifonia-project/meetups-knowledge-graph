@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/54194966/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Pangilinan is a native of Pulilan, Bulacan, he is the second of the three children of Tony and Precy Pangilinan who were car dealers whose passion for music has been part of their hobby." ;
+        mtp:hasParticipant   meetup:e49fad7315f234481aa55a28bf7c3fe9 , meetup:c5571ad40d9a5b254f1b20f86bc66c18 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Pangilinan> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/54194966/19/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2014: Michael Pangilinan (EP)" ;
+        mtp:hasParticipant   meetup:78f543096c24a16860b9c7ffc0c82d9f ;
+        mtp:hasPurpose       meetup:518e356802476db82daf57caddc4261b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Pangilinan> ;
+        mtp:hasType          "HT" .
+
+meetup:c5571ad40d9a5b254f1b20f86bc66c18
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Pangilinan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999999261" ;
+        mtp:hasTextEvidence     "Michael Pangilinan" .
+
+meetup:78f543096c24a16860b9c7ffc0c82d9f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Pangilinan> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Michael Pangilinan" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Michael_Pangilinan>
+        rdf:type  core:Person .
+
+meetup:e49fad7315f234481aa55a28bf7c3fe9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "103" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Precy Pangilinan" .
+
+meetup:518e356802476db82daf57caddc4261b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95034015" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0241477" ;
+        mtp:hasSourcePurpose          "ML" .

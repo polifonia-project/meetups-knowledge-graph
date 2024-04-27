@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:5f1cca389a2e26347cb082802a873da4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.57072186" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.42688155" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/3822141/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Matt DeVries left Chimaira after Chimaira Christmas '11 for 'personal reasons'." ;
+        mtp:hasParticipant   meetup:1a67f3e9319c1f1702c6eae56de98345 ;
+        mtp:hasPurpose       meetup:5f1cca389a2e26347cb082802a873da4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_DeVries> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Matt_DeVries>
+        rdf:type  core:Person .
+
+meetup:1a67f3e9319c1f1702c6eae56de98345
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_DeVries> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Matt DeVries" .

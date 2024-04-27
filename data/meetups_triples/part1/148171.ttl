@@ -1,0 +1,77 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Bruno_Walter>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/148171/15/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "As reported by biographers Erik Ryding and Rebecca Pechefsky, when Hitler became Chancellor in January 1933, Walter was conducting in New York, but the next month sailed back to Leipzig planning to conduct his previously scheduled concerts with the Gewandhaus Orchestra in March. However, Leipzig's Chief of Police informed management that he would cancel the concerts if Walter was to conduct them." ;
+        mtp:hasPurpose       meetup:e058b1e8fb3962170c3badc467e77692 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bruno_Walter> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/148171/8/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During those nine years, Munich was the centre of authentic Wagner performance; its Prinzregenttheather was closely patterned after the Festspielhaus in Bayreuth, and its National Theatre had seen the world premieres of Die Meistersinger von Nürnberg, Das Rheingold, Die Walküre, and Tristan und Isolde. Walter was the city's music director for most of this period, and he presided over most of the Wagnerian repertoire." ;
+        mtp:hasPurpose       meetup:c0cb7738da1d6b9a7a804bfdefdbb134 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bruno_Walter> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e058b1e8fb3962170c3badc467e77692
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Unfortunate timing" ;
+        mtp:hasEvidencePurposeSecond  "Conducting concerts" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Hans_Pfitzner>
+        rdf:type  core:Person .
+
+meetup:9a11d20367e445a4402b28db5c76138f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hans_Pfitzner> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hans Pfitzner" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/148171/6/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Walter then returned in 1900 to Berlin, where he assumed the post of Royal Prussian Conductor at the Staatsoper Unter den Linden, succeeding Franz Schalk; his colleagues there included Richard Strauss and Karl Muck. While in Berlin he also conducted the premiere of Der arme Heinrich by Hans Pfitzner, who became a lifelong friend." ;
+        mtp:hasParticipant   meetup:9a11d20367e445a4402b28db5c76138f ;
+        mtp:hasPurpose       meetup:b3c9fa668320d2ea8ef20d354d860474 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bruno_Walter> ;
+        mtp:hasType          "HT" .
+
+meetup:c0cb7738da1d6b9a7a804bfdefdbb134
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Munich as a center of Wagner performance" ;
+        mtp:hasEvidencePurposeSecond  "World premieres and repertoire under Walter's direction" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b3c9fa668320d2ea8ef20d354d860474
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Conducting in Berlin" ;
+        mtp:hasEvidencePurposeSecond  "Friendship with Hans Pfitzner" ;
+        mtp:hasSourcePurpose          "LLM" .

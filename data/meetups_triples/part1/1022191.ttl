@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:0b25d5a669338e169985eedd2104ee4f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christy_Moore> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Christy Moore" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4bee5625f3e562c84e76cf1e1edd691d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is related to personal experiences and enjoyment in England." ;
+        mtp:hasEvidencePurposeSecond  "The mention of a bank manager suggests a possible business context." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1022191/21/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2010 Christy Moore's song \"Lisdoonvarna\" which he wrote gained entry in The Penguin Book of Irish Poetry." ;
+        mtp:hasParticipant   meetup:0b25d5a669338e169985eedd2104ee4f ;
+        mtp:hasPurpose       meetup:8266db35815055417a1f9602b53d27e9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christy_Moore> ;
+        mtp:hasType          "HT" .
+
+meetup:8266db35815055417a1f9602b53d27e9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "The main topic of the sentence is music making because it mentions Christy Moore's song 'Lisdoonvarna' being included in a book of poetry." ;
+        mtp:hasEvidencePurposeSecond  "The second most probable topic is education because the sentence mentions the song being included in The Penguin Book of Irish Poetry, which is a literary publication." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Christy_Moore>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/1022191/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During a bank strike in 1966, which lasted twelve weeks, he went to England, as many striking officials did, but didn't return when the strike was settled. \"I had a wild and wonderful time in England, with no bank manager looking over my shoulder,\" he said." ;
+        mtp:hasPurpose       meetup:4bee5625f3e562c84e76cf1e1edd691d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christy_Moore> ;
+        mtp:hasType          "HT" .

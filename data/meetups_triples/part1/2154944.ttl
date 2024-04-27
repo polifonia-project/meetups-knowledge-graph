@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/2154944/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael Rother (born 2 September 1950) is a German experimental musician, best known for being a  founding member of the influential bands Neu! and Harmonia, and an early member of the band Kraftwerk." ;
+        mtp:hasParticipant   meetup:fcfd4a0c4f272ad06f3a4e26607a4342 ;
+        mtp:hasPurpose       meetup:bdadd7850404f03a7c540c3aee1893e5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Rother> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:bdadd7850404f03a7c540c3aee1893e5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8332043" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15824553" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Michael_Rother>
+        rdf:type  core:Person .
+
+meetup:fcfd4a0c4f272ad06f3a4e26607a4342
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Rother> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Michael Rother" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/7309705/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Russell Pinkston (born January 1, 1949) is a professor of composition and the director of the electronic music studios at the University of Texas at Austin School of Music." ;
+        mtp:hasParticipant   meetup:1208bcc6891fbe11bea6dda8996c0024 ;
+        mtp:hasPurpose       meetup:cd4a4147638d31d85af402159edb600b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Russell_Pinkston> ;
+        mtp:hasType          "HT" .
+
+meetup:cd4a4147638d31d85af402159edb600b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.60115427" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2316635" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Russell_Pinkston>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:1208bcc6891fbe11bea6dda8996c0024
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Russell_Pinkston> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Russell Pinkston" .

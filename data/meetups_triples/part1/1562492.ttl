@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:8a920b18afde104c8c49b3d490832aa0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99996436" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.0573041e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1562492/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The song was written in 1952 and was one of the first credited collaborations by the team of Jerry Leiber and Mike Stoller. It sold over one million copies, and was awarded a gold disc." ;
+        mtp:hasPurpose       meetup:860bd7b30b0dc652e69c2a587258bca9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wilbert_Harrison> ;
+        mtp:hasType          "HT" .
+
+meetup:860bd7b30b0dc652e69c2a587258bca9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about a song and its success." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions the collaboration between Jerry Leiber and Mike Stoller." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/George_Harrison>
+        rdf:type  core:Person .
+
+meetup:3700be491a9d81ed13e4b626e36c5861
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Harrison> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9993695813054556" ;
+        mtp:hasTextEvidence     "Harrison" .
+
+<http://w3id.org/polifonia/pilot/meetups/1562492/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1970, Harrison had some success with \"My Heart Is Yours\", and he toured for many years with a band known as 'Wilbert Harrison and the Roamers', and as a solo act." ;
+        mtp:hasParticipant   meetup:737f4e45c02b5df59a9afcf2c167d83e , meetup:3700be491a9d81ed13e4b626e36c5861 ;
+        mtp:hasPurpose       meetup:8a920b18afde104c8c49b3d490832aa0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wilbert_Harrison> ;
+        mtp:hasType          "HM" .
+
+meetup:737f4e45c02b5df59a9afcf2c167d83e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wilbert_Harrison> ;
+        mtp:hasOffset           "112" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wilbert Harrison" .
+
+<http://dbpedia.org/resource/Wilbert_Harrison>
+        rdf:type  core:Person .

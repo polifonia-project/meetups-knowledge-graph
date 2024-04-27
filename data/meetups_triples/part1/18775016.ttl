@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2966a36cb2ad5b4efda2709b53a9d369
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about Rida's original compositions and a song he wrote for his mother." ;
+        mtp:hasEvidencePurposeSecond  "The sentence also mentions a romance Rida had as a young man in Iraq." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Rida_Al_Abdullah>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/18775016/9/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Among Rida's original compositions is \"La Tesafer (Don't Go),\" written for his mother about the time he left Iraq in 1997. The album's title song refers to a romance Rida had as a young man in Iraq." ;
+        mtp:hasParticipant   meetup:0b6d98cf96502cf6c265514571547157 ;
+        mtp:hasPurpose       meetup:2966a36cb2ad5b4efda2709b53a9d369 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rida_Al_Abdullah> ;
+        mtp:hasType          "HT" .
+
+meetup:0b6d98cf96502cf6c265514571547157
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "43" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rida" .

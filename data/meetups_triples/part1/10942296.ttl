@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/10942296/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Mel Carter (born April 22, 1939, Cincinnati, Ohio) is an American singer and actor." ;
+        mtp:hasParticipant   meetup:194b443193e4fe5c0bbf693efa89b026 ;
+        mtp:hasPurpose       meetup:6179bd707c3c85d7a691d4429150f6f8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mel_Carter> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2683c30861c447ccdf0ae4cf7afacb5d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mel_Carter> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mel Carter" .
+
+<http://w3id.org/polifonia/pilot/meetups/10942296/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known for his 1965 million-selling recording, \"Hold Me, Thrill Me, Kiss Me\"." ;
+        mtp:hasParticipant   meetup:2683c30861c447ccdf0ae4cf7afacb5d ;
+        mtp:hasPurpose       meetup:a2e646bb8ac482e307145a86f59bfe2d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mel_Carter> ;
+        mtp:hasType          "HT" .
+
+meetup:6179bd707c3c85d7a691d4429150f6f8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99992776" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.22748e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Mel_Carter>
+        rdf:type  core:Person .
+
+meetup:194b443193e4fe5c0bbf693efa89b026
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mel_Carter> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Mel Carter" .
+
+meetup:a2e646bb8ac482e307145a86f59bfe2d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.83246505" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16753311" ;
+        mtp:hasSourcePurpose          "ML" .

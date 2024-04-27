@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/10433865/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He led orchestras under the name Phil Spitalny and His All-Girl Orchestra, beginning with Hour of Charm Orchestra on his radio program The Hour of Charm in 1934." ;
+        mtp:hasParticipant   meetup:fd5cb17ab85d77c24046241fa4546372 , meetup:3b3e92e5421460bcd6006108955e9809 ;
+        mtp:hasPurpose       meetup:46344bf807e322a90d3e74441b4fdcd4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Spitalny> ;
+        mtp:hasType          "HM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/10433865/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Phil Spitalny (November 7, 1890 – October 11, 1970) was a Ukrainian-American musician, music critic, composer, and bandleader heard often on radio during the 1930s and 1940s." ;
+        mtp:hasParticipant   meetup:bf3ca13887e77c53482e3d4561f74aba ;
+        mtp:hasPurpose       meetup:7614af35f2100363df0407dba130fd9f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Phil_Spitalny> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Phil_Spitalny>
+        rdf:type  core:Person .
+
+meetup:fd5cb17ab85d77c24046241fa4546372
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Spitalny" .
+
+meetup:7614af35f2100363df0407dba130fd9f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6846305" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3152168" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:46344bf807e322a90d3e74441b4fdcd4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9259768" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.050869577" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:bf3ca13887e77c53482e3d4561f74aba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Spitalny> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Phil Spitalny" .
+
+meetup:3b3e92e5421460bcd6006108955e9809
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Phil_Spitalny> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Phil Spitalny" .

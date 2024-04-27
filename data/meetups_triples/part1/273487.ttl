@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:17253428da19d8e32cb886bbec38529c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Colin_Greenwood> ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Colin Greenwood" .
+
+meetup:43d44c1d55ea91cf27efdd16a5917da4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 3.5637416e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/273487/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In late 1991, after a chance meeting between Colin Greenwood and A&R representative Keith Wozencroft at Our Price, the record shop where Greenwood worked, On a Friday signed a six-album recording contract with EMI and changed their name to Radiohead." ;
+        mtp:hasParticipant   meetup:17253428da19d8e32cb886bbec38529c , meetup:824a0b21aad3a21453af6a36d8faabb3 ;
+        mtp:hasPurpose       meetup:43d44c1d55ea91cf27efdd16a5917da4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Colin_Greenwood> ;
+        mtp:hasType          "HM" .
+
+meetup:824a0b21aad3a21453af6a36d8faabb3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Keith Wozencroft" .
+
+<http://dbpedia.org/resource/Colin_Greenwood>
+        rdf:type  core:Person .

@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Fakear>
+        rdf:type  core:Person .
+
+meetup:d3d763ebd0c7e56e0cb140738d981018
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "CloZee" .
+
+meetup:4172e67e94f1979098aec6bf113b0588
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fakear> ;
+        mtp:hasOffset           "79" ;
+        mtp:hasSimilarityScore  "0.9999999909383916" ;
+        mtp:hasTextEvidence     "Fakear" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:c6bedd90bba59038d3dee755021adb6f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Fakear> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999909383916" ;
+        mtp:hasTextEvidence     "Fakear" .
+
+meetup:fcdf99ecb6fbe96b860c0acdef44c6da
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9884552" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.007956185" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/51458098/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Fakear (), born Théo Le Vigoureux on 13 May 1991, is a French DJ, musician and producer of electronic music." ;
+        mtp:hasParticipant   meetup:c6bedd90bba59038d3dee755021adb6f ;
+        mtp:hasPurpose       meetup:fcdf99ecb6fbe96b860c0acdef44c6da ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fakear> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/51458098/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Boasting a distinct style akin to that of French musician and producer CloZee, Fakear's music is best described as \"world bass,\" a term also used to describe CloZee's music." ;
+        mtp:hasParticipant   meetup:d3d763ebd0c7e56e0cb140738d981018 , meetup:4172e67e94f1979098aec6bf113b0588 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Fakear> ;
+        mtp:hasType          "HM" .

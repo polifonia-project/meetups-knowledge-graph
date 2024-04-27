@@ -1,0 +1,99 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:856b6cff409e36c8de30f05dc5e66d2c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9969099" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.002111818" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:8985609045825bff486ce73b3abbde4c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Recognition in Forbes' list" ;
+        mtp:hasEvidencePurposeSecond  "Nickname 'Fairy Sister'" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2251536/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Crystal Liu (born An Feng; August 25, 1987), better known by her stage name Liu Yifei (Chinese: 刘亦菲; pinyin:" ;
+        mtp:hasParticipant   meetup:b72f938d725830b743cb59ffee070f1a , meetup:64d67d8fb8d94a947c24eefec1b8c1e1 ;
+        mtp:hasPurpose       meetup:856b6cff409e36c8de30f05dc5e66d2c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Liu_Yifei> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2251536/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2002, she returned to China to pursue an acting career and took the stage name \"Liu Yifei\" (刘亦菲)." ;
+        mtp:hasParticipant   meetup:476d5785f447ba0e4ab3251ee8b60361 ;
+        mtp:hasPurpose       meetup:f91a93bdc9e71cb34453577034d26c91 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Liu_Yifei> ;
+        mtp:hasType          "HT" .
+
+meetup:b72f938d725830b743cb59ffee070f1a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "An Feng" .
+
+<http://w3id.org/polifonia/pilot/meetups/2251536/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She has appeared multiple times on Forbes' China Celebrity 100 list, and was named one of the New Four Dan actresses of China in 2009. She is widely known as \"Fairy Sister\" in China." ;
+        mtp:hasParticipant   meetup:31f5bad64e1b4c613a3d4ae23a4c2b76 ;
+        mtp:hasPurpose       meetup:8985609045825bff486ce73b3abbde4c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Liu_Yifei> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Liu_Yifei>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:31f5bad64e1b4c613a3d4ae23a4c2b76
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Yifei" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:476d5785f447ba0e4ab3251ee8b60361
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Liu_Yifei> ;
+        mtp:hasOffset           "83" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Liu Yifei" .
+
+meetup:64d67d8fb8d94a947c24eefec1b8c1e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Liu_Yifei> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "Crystal Liu" .
+
+meetup:f91a93bdc9e71cb34453577034d26c91
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Pursuing a career in a specific field" ;
+        mtp:hasSourcePurpose          "LLM" .

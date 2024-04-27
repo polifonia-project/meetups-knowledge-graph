@@ -1,0 +1,84 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:08adcbb980931a901dd2d15bd3e59871
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roel_van_Helden> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Roel van Helden" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:cf5ad4a55ea2181da32e6e28b3cb8d91
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roel_van_Helden> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Roel van Helden" .
+
+meetup:8031e30053b5e91a5d09f99c21b10ed8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ivan de Jong" .
+
+<http://w3id.org/polifonia/pilot/meetups/61616857/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He attended various drum lessons with teachers such as Ivan de Jong (ex-Firewind, Torstein Olafsson (Stargazer), etc.)." ;
+        mtp:hasParticipant   meetup:8031e30053b5e91a5d09f99c21b10ed8 , meetup:03d079c030e946ea96e82286001e79d9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roel_van_Helden> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Roel_van_Helden>
+        rdf:type  core:Person .
+
+meetup:fc95e85213232de8760c7e41d5a51255
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.907961" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07460895" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:03d079c030e946ea96e82286001e79d9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Roel_van_Helden> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Roel van Helden" .
+
+meetup:c89d6ed67e9a98e075fda05631319cf1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.5418396e-08" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/61616857/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Roel van Helden (born 2 September 1980)" ;
+        mtp:hasParticipant   meetup:08adcbb980931a901dd2d15bd3e59871 ;
+        mtp:hasPurpose       meetup:c89d6ed67e9a98e075fda05631319cf1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roel_van_Helden> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/61616857/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Born in Hilversum, Roel van Helden's first experience with playing drums was in a talent show at the age of 14." ;
+        mtp:hasParticipant   meetup:cf5ad4a55ea2181da32e6e28b3cb8d91 ;
+        mtp:hasPurpose       meetup:fc95e85213232de8760c7e41d5a51255 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roel_van_Helden> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:591c51309c866c875e0eea52b875589c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rachel_Wammack> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rachel Wammack" .
+
+meetup:ed2a0850c8fd4549cb90f50724dd471f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rachel_Wammack> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rachel Wammack" .
+
+<http://dbpedia.org/resource/Rachel_Wammack>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/57941403/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2018, she released her first self-titled EP." ;
+        mtp:hasParticipant   meetup:591c51309c866c875e0eea52b875589c ;
+        mtp:hasPurpose       meetup:5677836b3b8354667636b480394711a2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rachel_Wammack> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e099a855ca079a9cd0d8770d129914f2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99728096" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.001719866" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/57941403/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rachel Wammack is a country music singer/songwriter signed to RCA Records from Muscle Shoals, Alabama." ;
+        mtp:hasParticipant   meetup:ed2a0850c8fd4549cb90f50724dd471f ;
+        mtp:hasPurpose       meetup:e099a855ca079a9cd0d8770d129914f2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rachel_Wammack> ;
+        mtp:hasType          "HT" .
+
+meetup:5677836b3b8354667636b480394711a2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.994998" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0047060587" ;
+        mtp:hasSourcePurpose          "ML" .

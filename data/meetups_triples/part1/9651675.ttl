@@ -1,0 +1,62 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/9651675/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Natalia Gutman was born on November 14, 1942 in Kazan to a Jewish family." ;
+        mtp:hasParticipant   meetup:a4507d1e6952aa4d34141d29d4094c1f ;
+        mtp:hasPurpose       meetup:40f55f1c9dc73b33ab566a33d98671c0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Natalia_Gutman> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:452795c84aa880530e502ff7880ef656
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "81" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "R. E. Sapozhnikov" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/9651675/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "From the age of 5 she played the cello, studied with her stepfather, the cellist R. E. Sapozhnikov, and from the age of 14 with her grandfather A. A. Berlin." ;
+        mtp:hasParticipant   meetup:452795c84aa880530e502ff7880ef656 , meetup:c2faa94d8a5191cf7ad23b261b874d46 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Natalia_Gutman> ;
+        mtp:hasType          "HM" .
+
+meetup:40f55f1c9dc73b33ab566a33d98671c0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9996408" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00018962684" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a4507d1e6952aa4d34141d29d4094c1f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Natalia_Gutman> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Natalia Gutman" .
+
+meetup:c2faa94d8a5191cf7ad23b261b874d46
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Natalia_Gutman> ;
+        mtp:hasOffset           "18" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Natalia Gutman" .
+
+<http://dbpedia.org/resource/Natalia_Gutman>
+        rdf:type  core:Person .

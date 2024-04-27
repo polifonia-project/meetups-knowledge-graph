@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1957160/8/18>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carol Cooper of Newsday wrote Philip Bailey takes another step forward for neo-traditionalism in black music, with the sensitive gentleman-crooner triumphantly ascendant." ;
+        mtp:hasParticipant   meetup:0d16dd3ea188d8f604da942066494542 , meetup:467a8ed2439fff046f497068d7fd7711 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Philip_Bailey> ;
+        mtp:hasType          "HM" .
+
+meetup:0d16dd3ea188d8f604da942066494542
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Philip_Bailey> ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "0.99999999931498" ;
+        mtp:hasTextEvidence     "Philip Bailey" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:6c9f982ed24fa2f17d0a712ee672e6a5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Homer_Bailey> ;
+        mtp:hasOffset           "61" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bailey" .
+
+<http://w3id.org/polifonia/pilot/meetups/1957160/18/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "On October 27, 2007, Bailey sang \"God Bless America\" during the seventh-inning stretch in Game 3 of the 2007 World Series held at Coors Field, Denver, Colorado. This was the first World Series game that was ever played in his hometown of Denver." ;
+        mtp:hasParticipant   meetup:6c9f982ed24fa2f17d0a712ee672e6a5 ;
+        mtp:hasPurpose       meetup:a104f13c896f43c9f73c7da3b723fb9a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Philip_Bailey> ;
+        mtp:hasType          "HT" .
+
+meetup:467a8ed2439fff046f497068d7fd7711
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Carol Cooper" .
+
+<http://dbpedia.org/resource/Homer_Bailey>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Philip_Bailey>
+        rdf:type  core:Person .
+
+meetup:a104f13c896f43c9f73c7da3b723fb9a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Bailey singing at World Series" ;
+        mtp:hasEvidencePurposeSecond  "World Series game in Denver" ;
+        mtp:hasSourcePurpose          "LLM" .

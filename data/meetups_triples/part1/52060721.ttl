@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/52060721/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He had played 15 years as a Billy Joel cover artist and later joined Joel's band at Joel's invitation in 2013." ;
+        mtp:hasParticipant   meetup:16df6c89b0435ea8174274b39ad7f26f , meetup:768243b7207cc1d743e0b384b9ee146d ;
+        mtp:hasPurpose       meetup:be14e261313d21338a97c24f89a17a7b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_DelGuidice> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:be14e261313d21338a97c24f89a17a7b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9973826" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0025783607" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Billy_Joel>
+        rdf:type  core:Person .
+
+meetup:16df6c89b0435ea8174274b39ad7f26f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_DelGuidice> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael DelGuidice" .
+
+<http://w3id.org/polifonia/pilot/meetups/52060721/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Michael DelGuidice is an American musician, multi-instrumentalist, singer, and songwriter, best known as rhythm guitarist and vocalist of Billy Joel's band, and as the lead vocalist and pianist for the Long Island band Big Shot." ;
+        mtp:hasParticipant   meetup:f82ee5ef16d37d37f09e1547b168cc9f , meetup:e5466398822ff6da19020ac7faf0b213 ;
+        mtp:hasPurpose       meetup:5a1c8d32b2a72f546cd61a1144969ed4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mike_DelGuidice> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Mike_DelGuidice>
+        rdf:type  core:Person .
+
+meetup:768243b7207cc1d743e0b384b9ee146d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Joel> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Billy Joel" .
+
+meetup:f82ee5ef16d37d37f09e1547b168cc9f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mike_DelGuidice> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael DelGuidice" .
+
+meetup:5a1c8d32b2a72f546cd61a1144969ed4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99951696" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00048031195" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e5466398822ff6da19020ac7faf0b213
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_Joel> ;
+        mtp:hasOffset           "138" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Billy Joel" .

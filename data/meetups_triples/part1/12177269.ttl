@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4280c11eb26196c9bd74b474655e1a94
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9779087" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02200458" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jock_Bartley>
+        rdf:type  core:Person .
+
+meetup:0a428d21f13115637f1f7be0481f2770
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jock_Bartley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jock Bartley" .
+
+<http://w3id.org/polifonia/pilot/meetups/12177269/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jock Bartley (born Hutchinson, Kansas) is an American musician." ;
+        mtp:hasParticipant   meetup:0a428d21f13115637f1f7be0481f2770 ;
+        mtp:hasPurpose       meetup:4280c11eb26196c9bd74b474655e1a94 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jock_Bartley> ;
+        mtp:hasType          "HT" .

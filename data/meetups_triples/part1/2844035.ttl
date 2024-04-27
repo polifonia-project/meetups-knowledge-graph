@@ -1,0 +1,56 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:5f07ddf39ec78ca06eba522f4f0de55f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sarah_McLeod_(musician)> ;
+        mtp:hasOffset           "82" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Sarah McLeod" .
+
+meetup:faebffe60732237e615b67f5961a909a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Collaboration and touring for music promotion" ;
+        mtp:hasEvidencePurposeSecond  "Meeting between members of different bands" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Sarah_McLeod_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/2844035/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "During the initial stages of COVID-19 lockdown in Melbourne Victoria, March 2020, McLeod performed a live-streaming solo set on her social media." ;
+        mtp:hasParticipant   meetup:5f07ddf39ec78ca06eba522f4f0de55f ;
+        mtp:hasPurpose       meetup:b6d2db7eeb2f96189ee27f9bf2c924fa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sarah_McLeod_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:b6d2db7eeb2f96189ee27f9bf2c924fa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999552" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.3759894e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2844035/21/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2014 McLeod and Jeff Martin (of the Tea Party) released a duet single, \"Man the Life Boats\"; they toured Australia to promote it. This collaboration was followed by a Tea Party / The Superjesus national tour in 2014." ;
+        mtp:hasPurpose       meetup:faebffe60732237e615b67f5961a909a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sarah_McLeod_(musician)> ;
+        mtp:hasType          "HT" .

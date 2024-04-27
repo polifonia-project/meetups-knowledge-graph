@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/57685421/13/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Continuing to reside in Limpsfield until her death, Margaret Harrison died on Christmas Eve, 1995. All four of the Harrison sisters, who had never married, were buried at the St. Peter Churchyard cemetery in Limpsfield." ;
+        mtp:hasParticipant   meetup:9b5287e5eab7ab4a4302847483c1563d ;
+        mtp:hasPurpose       meetup:5b000235f10e9ca51dce06f1a0540918 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Margaret_Harrison_(violinist)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/George_Harrison>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Margaret_Harrison_(violinist)>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:5b000235f10e9ca51dce06f1a0540918
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about Margaret Harrison's life and death" ;
+        mtp:hasEvidencePurposeSecond  "Coincidence of all four Harrison sisters being buried at the same cemetery" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:9b5287e5eab7ab4a4302847483c1563d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/George_Harrison> ;
+        mtp:hasOffset           "16" ;
+        mtp:hasSimilarityScore  "0.7715437881517131" ;
+        mtp:hasTextEvidence     "Harrison" .

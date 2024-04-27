@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2888838/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Since the late 1980s, he has been at the forefront of the global house music movement." ;
+        mtp:hasParticipant   meetup:ffc05820402d321c67610471c1233c79 ;
+        mtp:hasPurpose       meetup:32143bb7d933987fde65fd09b16550db ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Satoshi_Tomiie> ;
+        mtp:hasType          "HT" .
+
+meetup:7f7251d4060a3a06760b83ba4c4ad5b6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Satoshi_Tomiie> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Satoshi Tomiie" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:ffc05820402d321c67610471c1233c79
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Satoshi_Tomiie> ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Satoshi Tomiie" .
+
+<http://w3id.org/polifonia/pilot/meetups/2888838/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Satoshi Tomiie (富家 哲, Tomi'ie Satoshi, born November 22, 1966 in Tokyo, Japan) is a Japanese DJ, record producer and musician." ;
+        mtp:hasParticipant   meetup:7f7251d4060a3a06760b83ba4c4ad5b6 , meetup:3585824ba8829d90ca0f2ab29b963906 ;
+        mtp:hasPurpose       meetup:fef13c9fa935813c5a20d7da7f67b652 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Satoshi_Tomiie> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Satoshi_Tomiie>
+        rdf:type  core:Person .
+
+meetup:fef13c9fa935813c5a20d7da7f67b652
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Satoshi Tomiie is a DJ and record producer." ;
+        mtp:hasEvidencePurposeSecond  "Satoshi Tomiie was born in Tokyo, Japan." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:3585824ba8829d90ca0f2ab29b963906
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tomi'ie Satoshi" .
+
+meetup:32143bb7d933987fde65fd09b16550db
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.87662023" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07249439" ;
+        mtp:hasSourcePurpose          "ML" .

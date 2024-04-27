@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Robert_de_Reins_La_Chievre>
+        rdf:type  core:Person .
+
+meetup:1647aaadf51d3c3c5d7a3c2b80e8801b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tristan> ;
+        mtp:hasOffset           "44" ;
+        mtp:hasSimilarityScore  "0.9999717345422224" ;
+        mtp:hasTextEvidence     "Tristan" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5ea925fe72b4d14aa786c613b2746a11
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "10" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "de Renart" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/21786305/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Robert may have belonged to the La Chievre family documented in Reims in the thirteenth and fourteenth centuries. The Roman de Renart attributed a poem about Tristan to a certain Chievre de Reins, who may be Robert." ;
+        mtp:hasParticipant   meetup:1647aaadf51d3c3c5d7a3c2b80e8801b , meetup:5ea925fe72b4d14aa786c613b2746a11 ;
+        mtp:hasPurpose       meetup:76e3d433b5c0f892f79d3e1d2311d12b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_de_Reins_La_Chievre> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Tristan>
+        rdf:type  core:Person .
+
+meetup:76e3d433b5c0f892f79d3e1d2311d12b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Individual's personal history" ;
+        mtp:hasEvidencePurposeSecond  "Acquisition of knowledge" ;
+        mtp:hasSourcePurpose          "LLM" .

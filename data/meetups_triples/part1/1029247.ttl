@@ -1,0 +1,82 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Mick_Mars>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:bd47d0724e466ba8c0148ef5877bd0d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in band and solo album" ;
+        mtp:hasEvidencePurposeSecond  "Career and personal projects" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/1029247/3/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In April 1980 he put a want ad in the Los Angeles newspaper The Recycler, describing himself as \"a loud, rude and aggressive guitar player\". Nikki Sixx and Tommy Lee, who were putting together a new band which would soon become Mötley Crüe, contacted him, and hired him after hearing him play." ;
+        mtp:hasParticipant   meetup:446845998282fd5d16d6785dc8967f5d , meetup:62127fbf79b944f17cd375b31a99a9b0 ;
+        mtp:hasPurpose       meetup:38151c84a721c148dd052deacaf420e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mick_Mars> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Nikki_Sixx>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1029247/3/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2015, he played with the band on what was reported at the time to be its final tour. Soon after it was announced he was working on a solo album with former Mötley Crüe member John Corabi." ;
+        mtp:hasParticipant   meetup:ddba2e606096c7f31c7ef41bff8a39af ;
+        mtp:hasPurpose       meetup:bd47d0724e466ba8c0148ef5877bd0d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mick_Mars> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Cliff_Lee>
+        rdf:type  core:Person .
+
+meetup:ddba2e606096c7f31c7ef41bff8a39af
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Corabi> ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Corabi" .
+
+meetup:38151c84a721c148dd052deacaf420e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Formation of a new band" ;
+        mtp:hasEvidencePurposeSecond  "Contacting and hiring a guitar player" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:446845998282fd5d16d6785dc8967f5d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nikki_Sixx> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nikki Sixx" .
+
+meetup:62127fbf79b944f17cd375b31a99a9b0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cliff_Lee> ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "0.9063453076505604" ;
+        mtp:hasTextEvidence     "Lee" .
+
+<http://dbpedia.org/resource/John_Corabi>
+        rdf:type  core:Person .

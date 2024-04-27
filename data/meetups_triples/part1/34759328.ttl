@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:ba7fc2e77c01792d65fed9245bf601c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7117269" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1932594" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:28b7743fdea37a7f3a23a34ee018b161
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cédric DePasquale" .
+
+<http://w3id.org/polifonia/pilot/meetups/34759328/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cédric DePasquale (French pronunciation: ​[sedʁik dəpaskal], born 7 June 1979), better known by his stage name Cedric Gervais (French pronunciation: ​[sedʁik ʒɛʁvɛ])" ;
+        mtp:hasParticipant   meetup:1754506282b0a363d53571f5623f5148 , meetup:28b7743fdea37a7f3a23a34ee018b161 ;
+        mtp:hasPurpose       meetup:ba7fc2e77c01792d65fed9245bf601c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cedric_Gervais> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Cedric_Gervais>
+        rdf:type  core:Person .
+
+meetup:1754506282b0a363d53571f5623f5148
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cedric_Gervais> ;
+        mtp:hasOffset           "116" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cedric Gervais" .

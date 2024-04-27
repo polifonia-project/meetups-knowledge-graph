@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Enrique_Saborido>
+        rdf:type  core:Person .
+
+meetup:da70be1c57b4743670f8b35dff4e9e20
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99993825" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.5603164e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:2233a4aac5ad1ed5e34349b8faab8bcd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about personal life" ;
+        mtp:hasEvidencePurposeSecond  "Mention of his last composition" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/7980413/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Enrique Saborido (1876 or 1877 – 19 September 1941) was an Uruguayan tango pianist, violinist, composer and dance teacher." ;
+        mtp:hasParticipant   meetup:a5adecc48697536920e38d855f0143ff ;
+        mtp:hasPurpose       meetup:da70be1c57b4743670f8b35dff4e9e20 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Enrique_Saborido> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/7980413/2/12>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He returned to Buenos Aires following the outbreak of World War I in 1914, and became a public administration employee. He married Urbana Ruiz and settled the residential Villa Devoto section of Buenos Aires (a daughter, Rosario, became the namesake for his last composition)." ;
+        mtp:hasParticipant   meetup:a766e4f7477e7cf6338c10e7833dd0f1 , meetup:37d40b9d54c46d5f8a1b7096f8193c43 ;
+        mtp:hasPurpose       meetup:2233a4aac5ad1ed5e34349b8faab8bcd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Enrique_Saborido> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:a5adecc48697536920e38d855f0143ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Enrique_Saborido> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999991432278794" ;
+        mtp:hasTextEvidence     "Enrique Saborido" .
+
+<http://dbpedia.org/resource/Rafael_Saborido_Carné>
+        rdf:type  core:Person .
+
+meetup:a766e4f7477e7cf6338c10e7833dd0f1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rafael_Saborido_Carné> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Saborido" .
+
+meetup:37d40b9d54c46d5f8a1b7096f8193c43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Urbana Ruiz" .

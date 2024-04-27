@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:415ab5d6f9ac35b000e835baad72e27c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.66380286" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.33392504" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/42663924/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Charlie Piggott (born 14 July 1948) is an Irish traditional musician, best known as a founding member of De Dannan and has toured extensively in Europe, Canada, and the US." ;
+        mtp:hasParticipant   meetup:d42137b91ecf795cb076f3ba0298d9bd ;
+        mtp:hasPurpose       meetup:415ab5d6f9ac35b000e835baad72e27c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charlie_Piggott> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Charlie_Piggott>
+        rdf:type  core:Person .
+
+meetup:d42137b91ecf795cb076f3ba0298d9bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charlie_Piggott> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charlie Piggott" .

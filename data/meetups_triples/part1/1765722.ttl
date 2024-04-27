@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Adam_Selzer>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3a6a40f8ed5550c2a05d20de425d455b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8438425" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.15615726" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Kyle_Field_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/1765722/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In the past, the band has had members Adam Selzer on drums, Rob Kieswetter (aka Bobby Birdman) on keyboards, Mark Leece as bassist and various others." ;
+        mtp:hasParticipant   meetup:c0190221f4d89140b3e40cc9de78d95b , meetup:c150f33e62f21760552ce14b3f91fa2a , meetup:7cd82d42e62a7e7b5b57d9ef262cf454 , meetup:d06ed56125484b6560bc2c235f6e57f9 , meetup:95e7542f39a794522ff5610011d342d6 ;
+        mtp:hasPurpose       meetup:3a6a40f8ed5550c2a05d20de425d455b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kyle_Field_(musician)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Bobby_Birdman>
+        rdf:type  core:Person .
+
+meetup:c0190221f4d89140b3e40cc9de78d95b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "109" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mark Leece" .
+
+meetup:7cd82d42e62a7e7b5b57d9ef262cf454
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kyle_Field_(musician)> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Little Wings" .
+
+meetup:c150f33e62f21760552ce14b3f91fa2a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_Birdman> ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bobby Birdman" .
+
+<http://dbpedia.org/resource/Rob_Wright>
+        rdf:type  core:Person .
+
+meetup:95e7542f39a794522ff5610011d342d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Adam_Selzer> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "0.999999237445514" ;
+        mtp:hasTextEvidence     "Adam Selzer" .
+
+meetup:d06ed56125484b6560bc2c235f6e57f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rob_Wright> ;
+        mtp:hasOffset           "60" ;
+        mtp:hasSimilarityScore  "0.7017679853332551" ;
+        mtp:hasTextEvidence     "Rob" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:f357edc115aab22ada634b813b71c393
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Guitarist known for 'tapping' style" ;
+        mtp:hasEvidencePurposeSecond  "Italian guitarist and physician" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/50539099/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vittorio Camardese (Potenza, 6 July 1929 – 2 July 2010) was an Italian guitarist and physician, most famous among musicians and general audiences for his 'tapping' style of guitar playing." ;
+        mtp:hasParticipant   meetup:e064179ab94224303c3febd05b65136e ;
+        mtp:hasPurpose       meetup:f357edc115aab22ada634b813b71c393 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Vittorio_Camardese> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Vittorio_Camardese>
+        rdf:type  core:Person .
+
+meetup:e064179ab94224303c3febd05b65136e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vittorio_Camardese> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Vittorio Camardese" .

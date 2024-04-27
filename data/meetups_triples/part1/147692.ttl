@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Charles_Paul_Alexander>
+        rdf:type  core:Person .
+
+meetup:05133feaa735ceadc90e8eb6248e075e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charles_Paul_Alexander> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Alexander" .
+
+<http://dbpedia.org/resource/Tim_Alexander>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/147692/9/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Primus updated Alexander's health status on July 21 with a Facebook post stating, \"The Mighty Tim \"Herb\" Alexander has pulled through surgery, the blockage from his heart has been removed with no complications and all signs point to a glorious and speedy recovery.\"" ;
+        mtp:hasParticipant   meetup:9dce2538ad8360a12668fe37321ce14c , meetup:05133feaa735ceadc90e8eb6248e075e ;
+        mtp:hasPurpose       meetup:45bff3831a850cf815784cceae7901f9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tim_Alexander> ;
+        mtp:hasType          "HM" .
+
+meetup:9dce2538ad8360a12668fe37321ce14c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Alexander> ;
+        mtp:hasOffset           "94" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tim \"Herb\" Alexander" .
+
+meetup:45bff3831a850cf815784cceae7901f9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95591784" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.017466385" ;
+        mtp:hasSourcePurpose          "ML" .

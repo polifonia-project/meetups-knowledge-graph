@@ -1,0 +1,74 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:531c2ec8e11530c0ab9cea97b1a933e7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.54478174" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.41434842" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/27431525/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Envoy (as Gavilán Rayna Russom) (Ecstatic, 2019)" ;
+        mtp:hasParticipant   meetup:51852b590ca501de069ee534628caaeb , meetup:d4071714ac28baabb9fce5864199ab62 ;
+        mtp:hasPurpose       meetup:531c2ec8e11530c0ab9cea97b1a933e7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gavilán_Rayna_Russom> ;
+        mtp:hasType          "HM" .
+
+meetup:d4071714ac28baabb9fce5864199ab62
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gavilán Rayna Russom" .
+
+<http://w3id.org/polifonia/pilot/meetups/27431525/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Russom lives in New York City." ;
+        mtp:hasParticipant   meetup:6b7d874d7a8887ccdd5f6ef3157a0f99 ;
+        mtp:hasPurpose       meetup:e42732d56c09b4ff809dba8df5c8c87d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gavilán_Rayna_Russom> ;
+        mtp:hasType          "HT" .
+
+meetup:6b7d874d7a8887ccdd5f6ef3157a0f99
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gavilán_Rayna_Russom> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rayna Russom" .
+
+<http://dbpedia.org/resource/Gavilán_Rayna_Russom>
+        rdf:type  core:Person .
+
+meetup:e42732d56c09b4ff809dba8df5c8c87d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.57139695" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.427941" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:51852b590ca501de069ee534628caaeb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gavilán_Rayna_Russom> ;
+        mtp:hasOffset           "23" ;
+        mtp:hasSimilarityScore  "0.9999999943159992" ;
+        mtp:hasTextEvidence     "Rayna Russom" .

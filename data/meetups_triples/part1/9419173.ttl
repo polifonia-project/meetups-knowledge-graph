@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Eun_Ji-won>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/9419173/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kang Sung-hoon, who was studying abroad in Hawaii, was scouted by DSP Entertainment, along with friend Eun Ji-won in a nightclub." ;
+        mtp:hasParticipant   meetup:72adb5dcec43bafe952410dc2170fc38 , meetup:3caae482fa06bdeab0342f0c681a9fef ;
+        mtp:hasPurpose       meetup:6a5e184844448c8589286f714ffa2aa8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kang_Sung-hoon_(singer)> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6fd36b359e82e1de54d3b1edc14bbe60
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kang_Sung-hoon_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.544685863100936" ;
+        mtp:hasTextEvidence     "Kang Sung-hoon" .
+
+<http://w3id.org/polifonia/pilot/meetups/9419173/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kang Sung-hoon (hangul:강성훈, born February 22, 1980) is a South Korean singer, best known as a former member of the 90s South Korean boy group Sechs Kies." ;
+        mtp:hasParticipant   meetup:6fd36b359e82e1de54d3b1edc14bbe60 ;
+        mtp:hasPurpose       meetup:eec5eb8e17e845d28546079029c33604 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kang_Sung-hoon_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:3caae482fa06bdeab0342f0c681a9fef
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kang_Sung-hoon_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.544685863100936" ;
+        mtp:hasTextEvidence     "Kang Sung-hoon" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Kang_Sung-hoon_(singer)>
+        rdf:type  core:Person .
+
+meetup:72adb5dcec43bafe952410dc2170fc38
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eun_Ji-won> ;
+        mtp:hasOffset           "103" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Eun Ji-won" .
+
+meetup:eec5eb8e17e845d28546079029c33604
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97559106" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.016418602" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6a5e184844448c8589286f714ffa2aa8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Scouted by DSP Entertainment" ;
+        mtp:hasEvidencePurposeSecond  "Coincidental meeting in a nightclub" ;
+        mtp:hasSourcePurpose          "LLM" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/1688970/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "William Cullen Hart (born June 14, 1971) is an American pop musician and painter." ;
+        mtp:hasParticipant   meetup:c532189be3ec02c29565ac1d5bbe45a6 ;
+        mtp:hasPurpose       meetup:cf1fd4c7837ee7c41d444c7ec63f4728 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Will_Cullen_Hart> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Will_Cullen_Hart>
+        rdf:type  core:Person .
+
+meetup:c532189be3ec02c29565ac1d5bbe45a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Will_Cullen_Hart> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "William Cullen Hart" .
+
+meetup:cf1fd4c7837ee7c41d444c7ec63f4728
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9981515" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0015126499" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,35 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/David_Hogan_(composer)>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:ab80e2a83ae6554aa7af4707e8ce3858
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "July 17 , 1996" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1996-07-17"^^xsd:date ;
+        time:hasEnd          "1996-07-17"^^xsd:date .
+
+meetup:bfe1af3cbadb6a5893ed8858944ba90d
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "July 1 , 1949" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1949-07-01"^^xsd:date ;
+        time:hasEnd          "1949-07-01"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/2417608/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:ab80e2a83ae6554aa7af4707e8ce3858 , meetup:bfe1af3cbadb6a5893ed8858944ba90d ;
+        mtp:hasSubject  <http://dbpedia.org/resource/David_Hogan_(composer)> ;
+        mtp:hasType     "HM" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Christopher_Norton>
+        rdf:type  core:Person .
+
+meetup:003c7931e6f1fc1f503d30113b6167fe
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8325549" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.16714601" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/8488667/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Christopher Norton (born June 22, 1953) was born in New Zealand and is a British pianist and composer." ;
+        mtp:hasParticipant   meetup:90e8dd6afe515f4c6876da7c7fb9ec94 ;
+        mtp:hasPurpose       meetup:003c7931e6f1fc1f503d30113b6167fe ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Christopher_Norton> ;
+        mtp:hasType          "HT" .
+
+meetup:90e8dd6afe515f4c6876da7c7fb9ec94
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Christopher_Norton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999936942331692" ;
+        mtp:hasTextEvidence     "Christopher Norton" .

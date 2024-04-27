@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/66010504/45/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2012, Nash co-founded the music streaming app Spacebar, which was featured at the 2013 TechCrunch Disrupt in New York. Nash and Spacebar hold multiple US Patents for asynchronous audio and video streaming." ;
+        mtp:hasParticipant   meetup:f5c92c49c1cb6b6321f878d3455846c1 ;
+        mtp:hasPurpose       meetup:c056533157b0246acec9195e2de1b1c2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Nash_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:f5c92c49c1cb6b6321f878d3455846c1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Steve_Nash> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.5481647050651753" ;
+        mtp:hasTextEvidence     "Nash" .
+
+meetup:c056533157b0246acec9195e2de1b1c2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Nash co-founded a music streaming app" ;
+        mtp:hasEvidencePurposeSecond  "Featured at a tech conference" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Steve_Nash>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/James_Nash_(musician)>
+        rdf:type  core:Person .

@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_F._Kennedy>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/3906237/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Esther Newberg, originally from Middletown, Connecticut, is an American literary agent and former aide to Senator Robert F. Kennedy during his 1968 presidential campaign." ;
+        mtp:hasParticipant   meetup:2c2d49a00866729b95d92cc0d5960649 , meetup:db40a5eac7facbc32317240e317d691c ;
+        mtp:hasPurpose       meetup:2483bc9e86f76ab6ed6757c24a85d4af ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Esther_Newberg> ;
+        mtp:hasType          "HM" .
+
+meetup:2c2d49a00866729b95d92cc0d5960649
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Esther_Newberg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Esther Newberg" .
+
+meetup:2483bc9e86f76ab6ed6757c24a85d4af
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Information about Esther Newberg's background and career" ;
+        mtp:hasEvidencePurposeSecond  "Her role as an aide to Senator Robert F. Kennedy" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Esther_Newberg>
+        rdf:type  core:Person .
+
+meetup:db40a5eac7facbc32317240e317d691c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_F._Kennedy> ;
+        mtp:hasOffset           "124" ;
+        mtp:hasSimilarityScore  "0.9874206338059264" ;
+        mtp:hasTextEvidence     "Kennedy" .

@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:8c8cef2bc3d34d2d490730c03519ccd2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maynard_Solomon> ;
+        mtp:hasOffset           "156" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Maynard Solomon" .
+
+meetup:9348e070c670a7ebf22c8498c00ac2fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Seymour_Solomon> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Seymour Solomon" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Maynard_Solomon>
+        rdf:type  core:Person .
+
+meetup:63b89934d7cdff69759d26109b9c381a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6668441" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.18845047" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/42467098/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Seymour Solomon (May 23, 1922 – July 18, 2002) was an American music business executive who co-founded Vanguard Records in 1950, with his younger brother Maynard Solomon." ;
+        mtp:hasParticipant   meetup:8c8cef2bc3d34d2d490730c03519ccd2 , meetup:584e3e6990e7929ea4538c0a20b8b79d ;
+        mtp:hasPurpose       meetup:aecffef1bebcd8ab62cf02341a6f5df1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Seymour_Solomon> ;
+        mtp:hasType          "HM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Seymour_Solomon>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/42467098/1/9>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1988, Seymour Solomon started a new company, Omega Classics, and later bought back Vanguard's classical catalog from Welk, reissuing it on CD on the Omega and Vanguard Classics labels." ;
+        mtp:hasParticipant   meetup:9348e070c670a7ebf22c8498c00ac2fe ;
+        mtp:hasPurpose       meetup:63b89934d7cdff69759d26109b9c381a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Seymour_Solomon> ;
+        mtp:hasType          "HT" .
+
+meetup:584e3e6990e7929ea4538c0a20b8b79d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Seymour_Solomon> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Seymour Solomon" .
+
+meetup:aecffef1bebcd8ab62cf02341a6f5df1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.77727324" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10812729" ;
+        mtp:hasSourcePurpose          "ML" .

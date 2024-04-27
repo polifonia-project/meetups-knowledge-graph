@@ -1,0 +1,44 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/65372406/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "At the 1939 World's Fair in New York, Roy played upright bass behind Red River Dave McEnery. Also in New York, Horton participated in numerous recording session secured by his brother Vaughn in Rhythm and blues music for companies such as Continental, London, Majestic, MGM, National, and Varsity among others." ;
+        mtp:hasParticipant   meetup:8b3aa23f5fd9aa8c8f6c8d6295238a82 ;
+        mtp:hasPurpose       meetup:9b93e74a509560c3c77f6879e0aad446 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Roy_Horton> ;
+        mtp:hasType          "HT" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:9b93e74a509560c3c77f6879e0aad446
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Involvement in recording sessions and playing bass" ;
+        mtp:hasEvidencePurposeSecond  "Securing recording sessions for music companies" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Roy_Horton>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Danny_Vaughn>
+        rdf:type  core:Person .
+
+meetup:8b3aa23f5fd9aa8c8f6c8d6295238a82
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Danny_Vaughn> ;
+        mtp:hasOffset           "91" ;
+        mtp:hasSimilarityScore  "0.7672385904481304" ;
+        mtp:hasTextEvidence     "Vaughn" .

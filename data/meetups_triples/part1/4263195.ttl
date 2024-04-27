@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/4263195/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cesar J. Rosas (born September 26, 1954 in Hermosillo, Mexico) is a singer, songwriter and guitarist for Los Lobos. Rosas also participates in the Latin supergroup Los Super Seven." ;
+        mtp:hasPurpose       meetup:4f88631a1ab3973c3f1eff5c7e52b506 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cesar_Rosas> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/4263195/1/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aside from live shows with Los Lobos, Cesar Rosas has been active as a session musician and sideman during the past several decades." ;
+        mtp:hasParticipant   meetup:1f26f21ac141e2c60d879387a4814460 ;
+        mtp:hasPurpose       meetup:2a30f655b43430500fb1d45b8252972c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cesar_Rosas> ;
+        mtp:hasType          "HT" .
+
+meetup:66a70be9057bbc8833c8420afd6b4bf3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.76651794" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11225617" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Cesar_Rosas>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4f88631a1ab3973c3f1eff5c7e52b506
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music as a singer, songwriter, and guitarist" ;
+        mtp:hasEvidencePurposeSecond  "Personal background and origin" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:2a30f655b43430500fb1d45b8252972c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8207083" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17919725" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/4263195/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In addition, he released a solo album, Soul Disguise, in February 1999, and toured after its release." ;
+        mtp:hasParticipant   meetup:3653ce783c7feeadd574bd6570929c79 ;
+        mtp:hasPurpose       meetup:66a70be9057bbc8833c8420afd6b4bf3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Cesar_Rosas> ;
+        mtp:hasType          "HT" .
+
+meetup:1f26f21ac141e2c60d879387a4814460
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cesar_Rosas> ;
+        mtp:hasOffset           "38" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Cesar Rosas" .
+
+meetup:3653ce783c7feeadd574bd6570929c79
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cesar_Rosas> ;
+        mtp:hasOffset           "13" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cesar Rosas" .

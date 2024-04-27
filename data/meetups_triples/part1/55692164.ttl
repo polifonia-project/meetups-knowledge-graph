@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/CJ_Perez>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/55692164/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nelly Perez Trevisan de Vuksic was born in Totoras, Santa Fe, Argentina, on August 19, 1938, to Emilio and Lydia Perez. Her family was well known in the town, as her grandmother was the first school teacher and her grandfather had owned the largest general store in the town." ;
+        mtp:hasParticipant   meetup:82d3ce2a4a5cadb6a01865e80b04e5d5 ;
+        mtp:hasPurpose       meetup:a47398915338bcdf9a885f1755b46ee0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nelly_Vuksic> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:82d3ce2a4a5cadb6a01865e80b04e5d5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/CJ_Perez> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Perez" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:312245ddfd362d5736453760c6b04a6f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nelly_Vuksic> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999992346638552" ;
+        mtp:hasTextEvidence     "Nelly Vuksic" .
+
+<http://dbpedia.org/resource/Nelly_Vuksic>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/55692164/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nelly Vuksic (born August 19, 1938) is an Argentinian conductor and singer." ;
+        mtp:hasParticipant   meetup:312245ddfd362d5736453760c6b04a6f ;
+        mtp:hasPurpose       meetup:2cef7da1637979616a10df75b0bbbda6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nelly_Vuksic> ;
+        mtp:hasType          "HT" .
+
+meetup:2cef7da1637979616a10df75b0bbbda6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8080023" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1896391" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a47398915338bcdf9a885f1755b46ee0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Nelly Perez Trevisan de Vuksic's family and hometown" ;
+        mtp:hasEvidencePurposeSecond  "Mention of her grandmother being a school teacher" ;
+        mtp:hasSourcePurpose          "LLM" .

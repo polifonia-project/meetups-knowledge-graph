@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Yip_Sai_Wing>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1310390/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yip Sai Wing (born 19 August 1963) is a Hong Kong musician, best known as the drummer and co-founder of the rock band Beyond, formed with the lead vocalist Wong Ka Kui." ;
+        mtp:hasParticipant   meetup:e52045dff1d5b6631f0e75a4d8a9e148 , meetup:6a124dd5903c2072bbfca1072ee4e6c2 ;
+        mtp:hasPurpose       meetup:8cb93f93102ccfe2ae2090f3497e3aa0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yip_Sai_Wing> ;
+        mtp:hasType          "HM" .
+
+meetup:e52045dff1d5b6631f0e75a4d8a9e148
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wong_Ka_Kui> ;
+        mtp:hasOffset           "156" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Wong Ka Kui" .
+
+meetup:6a124dd5903c2072bbfca1072ee4e6c2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yip_Sai_Wing> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Yip Sai Wing" .
+
+<http://dbpedia.org/resource/Wong_Ka_Kui>
+        rdf:type  core:Person .
+
+meetup:8cb93f93102ccfe2ae2090f3497e3aa0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.40461177" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.39359316" ;
+        mtp:hasSourcePurpose          "ML" .

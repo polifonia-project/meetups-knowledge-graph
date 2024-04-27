@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:28f8a6808c5a35193cce28459f1cc79c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.3995974" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.30127054" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:dc4d80f44f010f8468a50f51cab91950
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Researching and preserving Jewish music traditions" ;
+        mtp:hasEvidencePurposeSecond  "Working as a research fellow at a university" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Leo_Levi>
+        rdf:type  core:Person .
+
+meetup:fcba7279d2f412cef47ce344c90e497b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leo_Levi> ;
+        mtp:hasOffset           "100" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Leo Levi" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/6367483/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Leo Levi (1912–1982)  was an Italian musicologist." ;
+        mtp:hasParticipant   meetup:bf3a411ca49724628ac06d8314fbc1ab ;
+        mtp:hasPurpose       meetup:28f8a6808c5a35193cce28459f1cc79c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leo_Levi> ;
+        mtp:hasType          "HT" .
+
+meetup:bf3a411ca49724628ac06d8314fbc1ab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Leo_Levi> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999997371" ;
+        mtp:hasTextEvidence     "Leo Levi" .
+
+<http://w3id.org/polifonia/pilot/meetups/6367483/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Some of his research is available on a 2001 CD entitled  Italian Jewish Musical Traditions from the Leo Levi Collection (1954-1961); recording number AMTI CD 0102 of the  Jewish Music Research Centre and the Accademia Nazionale di Santa Cecilia, Rome." ;
+        mtp:hasParticipant   meetup:fcba7279d2f412cef47ce344c90e497b ;
+        mtp:hasPurpose       meetup:dc4d80f44f010f8468a50f51cab91950 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Leo_Levi> ;
+        mtp:hasType          "HT" .

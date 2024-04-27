@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1b724001ef4ba4553d2c37883efbf815
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Exploring Australian painting in the 1970s" ;
+        mtp:hasEvidencePurposeSecond  "Involvement of Kym Bonython & Elwynn Lynn" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:df83c041667ba1b721395e455c878d3c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "74" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Elwynn Lynn" .
+
+<http://w3id.org/polifonia/pilot/meetups/20293465/19/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Modern Australian Painting 1970-75, Rigby, Adelaide, 1976, Kym Bonython & Elwynn Lynn" ;
+        mtp:hasParticipant   meetup:df83c041667ba1b721395e455c878d3c , meetup:a2b05d3b2b762a6bb9be7516a64e7fc0 ;
+        mtp:hasPurpose       meetup:1b724001ef4ba4553d2c37883efbf815 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kym_Bonython> ;
+        mtp:hasType          "HM" .
+
+meetup:a2b05d3b2b762a6bb9be7516a64e7fc0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kym_Bonython> ;
+        mtp:hasOffset           "59" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kym Bonython" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Kym_Bonython>
+        rdf:type  core:Person .

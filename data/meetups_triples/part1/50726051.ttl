@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Michael_Ray_(guitarist)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Michael_Ray_(singer)>
+        rdf:type  core:Person .
+
+meetup:78729305fa1e3c39ee61fd4cdd171bda
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Recording guitar solos for an album" ;
+        mtp:hasEvidencePurposeSecond  "Being a lead guitarist for multiple songs" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/50726051/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He recorded guitar solos for the album Creatures of the Night at Record Plant Studios, New York. Michael recorded as lead guitarist for the songs Keep me comin, Creatures of the Night , I Still Love You, and War Machine." ;
+        mtp:hasParticipant   meetup:caf9fd9806b3604cc4736e07d2b41a17 ;
+        mtp:hasPurpose       meetup:78729305fa1e3c39ee61fd4cdd171bda ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Michael_Ray_(guitarist)> ;
+        mtp:hasType          "HT" .
+
+meetup:caf9fd9806b3604cc4736e07d2b41a17
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Michael_Ray_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Michael Ray" .

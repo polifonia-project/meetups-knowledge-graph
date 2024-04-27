@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:b46fb6fef6da4312f73b4a4c4ea61423
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Music performances and songs" ;
+        mtp:hasEvidencePurposeSecond  "Personal experiences and activities" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/4743456/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His theme song in later years became My Baby Just Cares for Me. Audiences also craved his version of Bobby McFerrin's Don't Worry Be Happy, in which he sang the lead during his time with a cappella group The Singing Waiters." ;
+        mtp:hasParticipant   meetup:8a891a4100c38f4d22aa317c82900669 ;
+        mtp:hasPurpose       meetup:b46fb6fef6da4312f73b4a4c4ea61423 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Andrew_Bisset> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bobby_McFerrin>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Andrew_Bisset>
+        rdf:type  core:Person .
+
+meetup:8a891a4100c38f4d22aa317c82900669
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bobby_McFerrin> ;
+        mtp:hasOffset           "37" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bobby McFerrin" .

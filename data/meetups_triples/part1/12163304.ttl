@@ -1,0 +1,99 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Floyd_Mayweather_Jr.>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://dbpedia.org/resource/Eric_Clapton>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Trevor_May>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e7120632d06a7c85dd4194ae56bdd294
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8728909" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.117525466" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/12163304/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Imelda Mary Higham (born Imelda Mary Clabby, 10 July 1974), professionally known as Imelda May, is an Irish singer, songwriter and multi-instrumentalist." ;
+        mtp:hasParticipant   meetup:2053c3f7888bbfe436bf0a8e6dda9183 , meetup:b78e7378c62dbd7812162f77edf1fdbd ;
+        mtp:hasPurpose       meetup:e7120632d06a7c85dd4194ae56bdd294 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Imelda_May> ;
+        mtp:hasType          "HM" .
+
+meetup:2053c3f7888bbfe436bf0a8e6dda9183
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Imelda Mary Higham" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/12163304/11/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In Ireland, she also had her own music TV show, The Imelda May Show, showcasing the best of Irish and international talent. May performed the Irish national anthem on 26 August 2017 at the T-Mobile Arena in Las Vegas, Nevada, prior to the Floyd Mayweather Jr. vs. Conor McGregor fight." ;
+        mtp:hasParticipant   meetup:93dc906375032e98d419fde5af77c8f3 , meetup:f75f1609ef08a0d958feccad88d28e95 , meetup:941f359c7628551d1ccc48d8fec9b2a4 ;
+        mtp:hasPurpose       meetup:fc1da26b3b10ba4fbc396a56bbe32e37 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Imelda_May> ;
+        mtp:hasType          "HT" .
+
+meetup:b78e7378c62dbd7812162f77edf1fdbd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Imelda_May> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Imelda May" .
+
+meetup:fc1da26b3b10ba4fbc396a56bbe32e37
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Music TV show and performance" ;
+        mtp:hasEvidencePurposeSecond  "National anthem performance" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:f75f1609ef08a0d958feccad88d28e95
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eric_Clapton> ;
+        mtp:hasOffset           "140" ;
+        mtp:hasSimilarityScore  "0.8486860734464627" ;
+        mtp:hasTextEvidence     "Conor" .
+
+<http://dbpedia.org/resource/Imelda_May>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:93dc906375032e98d419fde5af77c8f3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Floyd_Mayweather_Jr.> ;
+        mtp:hasOffset           "115" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Floyd Mayweather Jr." .
+
+meetup:941f359c7628551d1ccc48d8fec9b2a4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Trevor_May> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "May" .

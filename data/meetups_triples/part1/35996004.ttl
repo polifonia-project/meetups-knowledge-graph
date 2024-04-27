@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Misha_Mansoor>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:5dc4ef3f2d96af45a96814830b65b550
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Misha_Mansoor> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Misha Mansoor" .
+
+meetup:0d1d1a9c1cf4605e8f3cd67c77d2cbc4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9574504" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.036555115" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/35996004/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Misha Mansoor (born October 31, 1984), also known as Bulb after the name of his solo project, is an American guitarist, businessman, entrepreneur, composer, songwriter, and music producer, best known as the founder of and one of the three guitarists in the progressive metal band Periphery." ;
+        mtp:hasParticipant   meetup:5dc4ef3f2d96af45a96814830b65b550 ;
+        mtp:hasPurpose       meetup:0d1d1a9c1cf4605e8f3cd67c77d2cbc4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Misha_Mansoor> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:0f5d6c22ce5d4f75ae34cfb8b359e97b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Yuki Uchida is a singer" ;
+        mtp:hasEvidencePurposeSecond  "Yuki Uchida is a Japanese actress" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/10979230/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Yuki Uchida (内田有紀, Uchida Yuki) (born in Tokyo on November 16, 1975) is a Japanese actress, and a popular 1990s idol, model and singer." ;
+        mtp:hasParticipant   meetup:f15e0eedfdb56f031eeb79775e9df0fd , meetup:b6470c6e946c69ef05ca9af181ad295f ;
+        mtp:hasPurpose       meetup:0f5d6c22ce5d4f75ae34cfb8b359e97b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Yuki_Uchida> ;
+        mtp:hasType          "HM" .
+
+meetup:b6470c6e946c69ef05ca9af181ad295f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Yuki_Uchida> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Yuki Uchida" .
+
+<http://dbpedia.org/resource/Yuki_Uchida>
+        rdf:type  core:Person .
+
+meetup:f15e0eedfdb56f031eeb79775e9df0fd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Uchida Yuki" .

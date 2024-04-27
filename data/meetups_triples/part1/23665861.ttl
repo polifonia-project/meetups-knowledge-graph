@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Hanns_Eisler>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:0d9a48cd7232caced1d071e6e18f73dd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hanns_Eisler> ;
+        mtp:hasOffset           "213" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hanns Eisler" .
+
+meetup:80f80dc9f80c7d0359d601aafede0c1b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Percussionist and timpanist" ;
+        mtp:hasEvidencePurposeSecond  "Guest professor at music school" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/23665861/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rainer Seegers (born 6 August 1952 in Dessau), is a German percussionist, former timpanist of the Berlin Philharmonic, tutor of the European Union Youth Orchestra and guest professor at the Hochschule für Musik \"Hanns Eisler\"." ;
+        mtp:hasParticipant   meetup:0d9a48cd7232caced1d071e6e18f73dd , meetup:bf48f2bbedece064126818ad94bf30c2 ;
+        mtp:hasPurpose       meetup:80f80dc9f80c7d0359d601aafede0c1b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rainer_Seegers> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Rainer_Seegers>
+        rdf:type  core:Person .
+
+meetup:bf48f2bbedece064126818ad94bf30c2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rainer_Seegers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999994173248288" ;
+        mtp:hasTextEvidence     "Rainer Seegers" .

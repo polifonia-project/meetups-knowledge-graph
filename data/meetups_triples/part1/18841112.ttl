@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/18841112/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tallan Noble Latz (born September 22, 1999) is an American blues rock musician,  who began performing professionally at age 6 and in the following 9 years, he has made recordings, appeared on multiple television shows and festivals and performed with many other blues and other music artists." ;
+        mtp:hasParticipant   meetup:0f80339745f27a1a09e49d1b3f368335 ;
+        mtp:hasPurpose       meetup:09dbf83286c883def9e87ba22e8ed286 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tallan_Noble_Latz> ;
+        mtp:hasType          "HT" .
+
+meetup:09dbf83286c883def9e87ba22e8ed286
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9310371" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.05194853" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:0f80339745f27a1a09e49d1b3f368335
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tallan_Noble_Latz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tallan Noble Latz" .
+
+<http://dbpedia.org/resource/Tallan_Noble_Latz>
+        rdf:type  core:Person .

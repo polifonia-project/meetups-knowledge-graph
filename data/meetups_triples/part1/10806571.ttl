@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:ead4b1a670a1de27dda45b5e8299412d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Assif_Tsahar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Assif Tsahar" .
+
+<http://dbpedia.org/resource/Assif_Tsahar>
+        rdf:type  core:Person .
+
+meetup:2b1bf4a3f97b14368ebc5a5ac730e448
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Assif Tsahar is a musician" ;
+        mtp:hasEvidencePurposeSecond  "Assif Tsahar's personal background" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/10806571/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Assif Tsahar (born Israel, June 11, 1969) is an Israeli tenor saxophonist and bass clarinetist." ;
+        mtp:hasParticipant   meetup:ca13ca9617ce53b5a23693dfa039c55f ;
+        mtp:hasPurpose       meetup:2b1bf4a3f97b14368ebc5a5ac730e448 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Assif_Tsahar> ;
+        mtp:hasType          "HT" .
+
+meetup:ca13ca9617ce53b5a23693dfa039c55f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Assif_Tsahar> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Assif Tsahar" .
+
+meetup:98740db83f565ecb3de5de9faeff1c1b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.4149078" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.373074" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/10806571/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has lived in New York City since 1990." ;
+        mtp:hasParticipant   meetup:ead4b1a670a1de27dda45b5e8299412d ;
+        mtp:hasPurpose       meetup:98740db83f565ecb3de5de9faeff1c1b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Assif_Tsahar> ;
+        mtp:hasType          "HT" .

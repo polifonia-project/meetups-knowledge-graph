@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/37749179/4/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2015, Olivier released the album \"A Different Life\" under his own name." ;
+        mtp:hasParticipant   meetup:4f2cfab9d4bc518f798ae65402ef4f37 ;
+        mtp:hasPurpose       meetup:59561480008da16edeb813b689c7939c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Olivier_Heim> ;
+        mtp:hasType          "HT" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/37749179/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The first single \"Ocean\" featured in a documentary about the painter Kazimir Malevich, running as part of the temporary exhibition at the Stedelijk Museum in Amsterdam." ;
+        mtp:hasParticipant   meetup:474a4eb339066dd426b0a8b1f19a0a28 ;
+        mtp:hasPurpose       meetup:9c537d055b2fa16555ddf8509afce69a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Olivier_Heim> ;
+        mtp:hasType          "HT" .
+
+meetup:59561480008da16edeb813b689c7939c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99683183" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0023963796" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Olivier_Heim>
+        rdf:type  core:Person .
+
+meetup:474a4eb339066dd426b0a8b1f19a0a28
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Olivier_Heim> ;
+        mtp:hasOffset           "169" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Olivier Heim" .
+
+meetup:4f2cfab9d4bc518f798ae65402ef4f37
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Olivier_Heim> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Olivier Heim" .
+
+meetup:9c537d055b2fa16555ddf8509afce69a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8953084" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.10281826" ;
+        mtp:hasSourcePurpose          "ML" .

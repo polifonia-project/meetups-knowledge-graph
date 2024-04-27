@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Dan_Schlissel>
+        rdf:type  core:Person .
+
+meetup:e9500688a110e9929936857095f4a11e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Glenn_Wool> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Glenn Wool" .
+
+meetup:cd54d860adf808c04b10d6e8b48c2a3b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Glenn_Wool> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Glenn Wool" .
+
+<http://w3id.org/polifonia/pilot/meetups/4947181/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Glenn Wool is a Canadian stand-up comedian now living in England." ;
+        mtp:hasParticipant   meetup:e9500688a110e9929936857095f4a11e ;
+        mtp:hasPurpose       meetup:84140b7e1c8278b1d5ae490e7fbfff29 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Glenn_Wool> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Glenn_Wool>
+        rdf:type  core:Person .
+
+meetup:2acea28ccd46fd152eec816d25c089a9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999497" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.9905135e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:81403d982600fc65f866f38985a1ad2e
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dan_Schlissel> ;
+        mtp:hasOffset           "71" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dan Schlissel" .
+
+<http://w3id.org/polifonia/pilot/meetups/4947181/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has released six albums, including 2020's Viva Forever, produced by Dan Schlissel for Stand Up!" ;
+        mtp:hasParticipant   meetup:cd54d860adf808c04b10d6e8b48c2a3b , meetup:81403d982600fc65f866f38985a1ad2e ;
+        mtp:hasPurpose       meetup:2acea28ccd46fd152eec816d25c089a9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Glenn_Wool> ;
+        mtp:hasType          "HM" .
+
+meetup:84140b7e1c8278b1d5ae490e7fbfff29
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9679722" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01000964" ;
+        mtp:hasSourcePurpose          "ML" .

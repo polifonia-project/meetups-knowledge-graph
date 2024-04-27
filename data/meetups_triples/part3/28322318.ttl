@@ -1,0 +1,55 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/28322318/0/2>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Reveal_(rapper)> ;
+        mtp:hasType     "HM" .
+
+<http://dbpedia.org/resource/Reveal_(rapper)>
+        rdf:type  core:Person .
+
+meetup:7e6bd1e297a0c360ea0af02bd941e4ad
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "29 December 1983" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1983-12-29"^^xsd:date ;
+        time:hasEnd          "1983-12-29"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/28322318/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:7e6bd1e297a0c360ea0af02bd941e4ad ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Reveal_(rapper)> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/28322318/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:89189d5d367e20e8ef5595dbab14fe84 , meetup:b4883214991d047ba85a14ea709fc004 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Reveal_(rapper)> ;
+        mtp:hasType     "HT" .
+
+meetup:b4883214991d047ba85a14ea709fc004
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "of 2011" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2011-01-01"^^xsd:date ;
+        time:hasEnd          "2011-12-31"^^xsd:date .
+
+meetup:89189d5d367e20e8ef5595dbab14fe84
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "9 August 2011" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2011-08-09"^^xsd:date ;
+        time:hasEnd          "2011-08-09"^^xsd:date .

@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:d59f43b6f201b5b614efdfacfd9667ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6731668" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.31831914" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:729353c704ebabc306298057c78e17b9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kenneth Trebbe" .
+
+meetup:e2bcb3ad9bfada6154ca569cb110ebb1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kenny_Starr> ;
+        mtp:hasOffset           "96" ;
+        mtp:hasSimilarityScore  "0.9999953132721776" ;
+        mtp:hasTextEvidence     "Kenny Starr" .
+
+<http://w3id.org/polifonia/pilot/meetups/23634294/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kenneth Trebbe (born September 21, 1952) is an American country singer, known professionally as Kenny Starr." ;
+        mtp:hasParticipant   meetup:e2bcb3ad9bfada6154ca569cb110ebb1 , meetup:729353c704ebabc306298057c78e17b9 ;
+        mtp:hasPurpose       meetup:d59f43b6f201b5b614efdfacfd9667ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Kenny_Starr> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Kenny_Starr>
+        rdf:type  core:Person .

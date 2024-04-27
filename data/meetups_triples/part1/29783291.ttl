@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Sean_Mackin_(musician)>
+        rdf:type  core:Person .
+
+meetup:8f1e21ee31cfa52e8b657fa5f63ceaab
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sean_Mackin_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999993552335784" ;
+        mtp:hasTextEvidence     "Sean Mackin" .
+
+<http://w3id.org/polifonia/pilot/meetups/29783291/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sean Mackin (born April 30, 1979) is an American rock musician." ;
+        mtp:hasParticipant   meetup:8f1e21ee31cfa52e8b657fa5f63ceaab ;
+        mtp:hasPurpose       meetup:5b63bb4385c9874685ab1114faa6b5ec ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Sean_Mackin_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:5b63bb4385c9874685ab1114faa6b5ec
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9695696" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.029845454" ;
+        mtp:hasSourcePurpose          "ML" .

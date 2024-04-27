@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:26da229aa1111a0874bc3c3290ed9fbc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9178429" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08113711" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:dfca0520bbdc520e9343fe0c20666d28
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jamie_McMann> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jamie McMann" .
+
+meetup:669b94db0265ea1ef8b487c9588c9249
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jamie_McMann> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jamie McMann" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/41578704/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jamie McMann (born July 20, 1976) is an American record producer, mixer, and audio engineer, currently based in Rochester, New York, United States." ;
+        mtp:hasParticipant   meetup:dfca0520bbdc520e9343fe0c20666d28 ;
+        mtp:hasPurpose       meetup:af3c3277fc3cfe7b149d005f3f03d2a0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jamie_McMann> ;
+        mtp:hasType          "HT" .
+
+meetup:af3c3277fc3cfe7b149d005f3f03d2a0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93598735" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.053352874" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/41578704/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jamie McMann has produced recordings spanning multiple genres of music professionally since 2002 when he began working at San Francisco's historic Hyde Street Studios." ;
+        mtp:hasParticipant   meetup:669b94db0265ea1ef8b487c9588c9249 ;
+        mtp:hasPurpose       meetup:26da229aa1111a0874bc3c3290ed9fbc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jamie_McMann> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jamie_McMann>
+        rdf:type  core:Person .

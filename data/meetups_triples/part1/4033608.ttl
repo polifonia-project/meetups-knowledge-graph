@@ -1,0 +1,58 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4033608/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Duke Mitchell (born Dominic Salvatore Miceli; May 9, 1926 – December 2, 1981) was an American film actor, slapstick comedian, crooner and independent film director of 1970s gangster movies starring himself." ;
+        mtp:hasParticipant   meetup:81b0a48578d5b2ef8194b082cd935c36 , meetup:0a7bbf6f6c8cd298eb6a256c27ecf263 , meetup:bac1fdc3982a02e9b397e86bf7e1bcba ;
+        mtp:hasPurpose       meetup:26d128091906332e1cfb1a2857231b63 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Duke_Mitchell> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Duke_Mitchell>
+        rdf:type  core:Person .
+
+meetup:0a7bbf6f6c8cd298eb6a256c27ecf263
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dominic Salvatore Miceli" .
+
+meetup:81b0a48578d5b2ef8194b082cd935c36
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Duke_Mitchell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Duke Mitchell" .
+
+meetup:26d128091906332e1cfb1a2857231b63
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.9399826e-09" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Salvatore_Adamo>
+        rdf:type  core:Person .
+
+meetup:bac1fdc3982a02e9b397e86bf7e1bcba
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Salvatore_Adamo> ;
+        mtp:hasOffset           "28" ;
+        mtp:hasSimilarityScore  "0.6448947738056505" ;
+        mtp:hasTextEvidence     "Salvatore" .

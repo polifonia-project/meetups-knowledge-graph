@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jordan_Mancino>
+        rdf:type  core:Person .
+
+meetup:f4d615bd05ce43992a631ec066ebe6b7
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "May 22 , 1983" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1983-05-22"^^xsd:date ;
+        time:hasEnd          "1983-05-22"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/1985965/2/1>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Jordan_Mancino> ;
+        mtp:hasType     "HM" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/1985965/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:f4d615bd05ce43992a631ec066ebe6b7 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Jordan_Mancino> ;
+        mtp:hasType     "HT" .

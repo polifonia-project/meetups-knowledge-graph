@@ -1,0 +1,45 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:1cb5ff9d144de9a8b1ba573280a6b0ef
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "Now" ;
+        mtp:hasSource        "ML" .
+
+<http://dbpedia.org/resource/Jason_Crane>
+        rdf:type  core:Person .
+
+meetup:d26887adeee9e3167ec15c303ae61b10
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1992" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1992-01-01"^^xsd:date ;
+        time:hasEnd          "1992-12-31"^^xsd:date .
+
+meetup:134c44e12465d21a479e63cf6d4e4bf4
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2000" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2000-01-01"^^xsd:date ;
+        time:hasEnd          "2000-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/21583579/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Jason_Crane> ;
+        mtp:hasType     "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/21583579/2/2>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:d26887adeee9e3167ec15c303ae61b10 , meetup:134c44e12465d21a479e63cf6d4e4bf4 , meetup:1cb5ff9d144de9a8b1ba573280a6b0ef ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Jason_Crane> ;
+        mtp:hasType     "HT" .

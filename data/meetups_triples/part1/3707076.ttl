@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:663da783b74855402eaf8a4ae8db457d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Collaboration with German bluegrass band" ;
+        mtp:hasEvidencePurposeSecond  "Promotion-touring in Europe and the United States" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:7092b6de8ef1f3198c9560cebdb14776
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Victor_Kahn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Kahn" .
+
+<http://w3id.org/polifonia/pilot/meetups/3707076/10/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"On his later albums, Aragon Mill - The Bluegrass Sessions and It's A Dog's Life, he collaborated with the German bluegrass band The Looping Brothers, founded by Ulrich Sieker and Matthias Malcher – two of Europe's best known and awarded blugrass musicians since the 1970s. Kahn himself initiated and featured both albums and joined promotion-touring in Europe as well as the United States." ;
+        mtp:hasParticipant   meetup:7092b6de8ef1f3198c9560cebdb14776 ;
+        mtp:hasPurpose       meetup:663da783b74855402eaf8a4ae8db457d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Si_Kahn> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/3707076/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Si Kahn (born April 23, 1944) is an American singer-songwriter, activist, and founder and former executive director of Grassroots Leadership." ;
+        mtp:hasParticipant   meetup:a153398741c0e37b3fe6b2460b9862ce ;
+        mtp:hasPurpose       meetup:e59e947cdcf90baa34c7f37bc2dfe3ee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Si_Kahn> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Victor_Kahn>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Si_Kahn>
+        rdf:type  core:Person .
+
+meetup:a153398741c0e37b3fe6b2460b9862ce
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Si_Kahn> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Si Kahn" .
+
+meetup:e59e947cdcf90baa34c7f37bc2dfe3ee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98154944" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.014798765" ;
+        mtp:hasSourcePurpose          "ML" .

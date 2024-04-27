@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:7ee3cab0b94e1264c829e44a043c823e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99979645" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 9.758e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/1437890/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ali Shaheed Muhammad (born August 11, 1970) is an American hip hop DJ, record producer, and rapper, best known as a member of A Tribe Called Quest." ;
+        mtp:hasParticipant   meetup:99ed428e280258b7d84789e79b1d7225 ;
+        mtp:hasPurpose       meetup:7ee3cab0b94e1264c829e44a043c823e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ali_Shaheed_Muhammad> ;
+        mtp:hasType          "HT" .
+
+meetup:99ed428e280258b7d84789e79b1d7225
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ali_Shaheed_Muhammad> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Ali Shaheed Muhammad" .
+
+<http://dbpedia.org/resource/Ali_Shaheed_Muhammad>
+        rdf:type  core:Person .

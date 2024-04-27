@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:041e6b8c169726f160ddb9dc76823c48
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Flula_Borg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Flula Borg" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/44938611/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He lives in Los Angeles." ;
+        mtp:hasParticipant   meetup:210fdcf7480a63a9f9cdfafdd6a52ec7 ;
+        mtp:hasPurpose       meetup:db3b3072c0c8be069ed3ac89d9af9c16 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Flula_Borg> ;
+        mtp:hasType          "HT" .
+
+meetup:fbd57b25a2255c8b6cfd230fd4a84eb5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999918" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.377479e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:210fdcf7480a63a9f9cdfafdd6a52ec7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Flula_Borg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Flula Borg" .
+
+meetup:db3b3072c0c8be069ed3ac89d9af9c16
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8958267" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.101853125" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/44938611/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Flula Borg (German: [flʊla bɔɐ̯k]) (born 28 March 1982), is a German actor, musician, comedian, YouTube personality, and DJ who is also known simply as Flula (sometimes stylized as f|u|a) or DJ Flula." ;
+        mtp:hasParticipant   meetup:041e6b8c169726f160ddb9dc76823c48 ;
+        mtp:hasPurpose       meetup:fbd57b25a2255c8b6cfd230fd4a84eb5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Flula_Borg> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Flula_Borg>
+        rdf:type  core:Person .

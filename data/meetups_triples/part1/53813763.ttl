@@ -1,0 +1,81 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Blair_Daly>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/53813763/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Seth Ennis (born November 30, 1992) is an American country music singer." ;
+        mtp:hasParticipant   meetup:0b4e7f78e6e56da79f5f0ac21a32cb90 ;
+        mtp:hasPurpose       meetup:0ece1bde9ea67f97d57bf99bce075370 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Seth_Ennis> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/David_Hodges>
+        rdf:type  core:Person .
+
+meetup:9b478352170449dcadf52f0cbf2815dc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about signing with a music label and releasing a debut single." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions signing a contract with Arista Nashville." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Seth_Ennis>
+        rdf:type  core:Person .
+
+meetup:0ece1bde9ea67f97d57bf99bce075370
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99603856" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0023373426" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:0b4e7f78e6e56da79f5f0ac21a32cb90
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Seth_Ennis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Seth Ennis" .
+
+meetup:7321fe47c5ff30b3802c375ec9a724db
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Blair_Daly> ;
+        mtp:hasOffset           "77" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Blair Daly" .
+
+meetup:08f17c945ac6cf35423ca400c4e26245
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/David_Hodges> ;
+        mtp:hasOffset           "92" ;
+        mtp:hasSimilarityScore  "0.9999999992546976" ;
+        mtp:hasTextEvidence     "David Hodges" .
+
+<http://w3id.org/polifonia/pilot/meetups/53813763/2/6>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He signed to Arista Nashville in September 2016. Arista released his debut single \"Woke Up in Nashville\", which he wrote with Blair Daly and David Hodges." ;
+        mtp:hasParticipant   meetup:08f17c945ac6cf35423ca400c4e26245 , meetup:7321fe47c5ff30b3802c375ec9a724db ;
+        mtp:hasPurpose       meetup:9b478352170449dcadf52f0cbf2815dc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Seth_Ennis> ;
+        mtp:hasType          "HT" .

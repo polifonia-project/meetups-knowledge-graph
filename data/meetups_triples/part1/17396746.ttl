@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:7e52c3253e6f1e892c7de796c5056206
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9717434" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02651883" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:19b9ddd7570b8427e21d96eb346b2e77
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Brian_Teasley> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Brian Teasley" .
+
+<http://w3id.org/polifonia/pilot/meetups/17396746/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Brian Teasley is an American musician, producer, writer, and entrepreneur from Alabama." ;
+        mtp:hasParticipant   meetup:19b9ddd7570b8427e21d96eb346b2e77 ;
+        mtp:hasPurpose       meetup:7e52c3253e6f1e892c7de796c5056206 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Teasley> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Brian_Teasley>
+        rdf:type  core:Person .

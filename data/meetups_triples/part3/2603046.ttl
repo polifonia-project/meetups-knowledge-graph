@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:20e6c4c36d9e99fb83a2ba8180498670
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "June 15 , 1969" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1969-06-15"^^xsd:date ;
+        time:hasEnd          "1969-06-15"^^xsd:date .
+
+meetup:11ab8a0a82c85cd8c33476162e52589b
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2002" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2002-01-01"^^xsd:date ;
+        time:hasEnd          "2002-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/2603046/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:11ab8a0a82c85cd8c33476162e52589b , meetup:20e6c4c36d9e99fb83a2ba8180498670 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Jeff_Neal> ;
+        mtp:hasType     "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2603046/2/2>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Jeff_Neal> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Jeff_Neal>
+        rdf:type  core:Person .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .

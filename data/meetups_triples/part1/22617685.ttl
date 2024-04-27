@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/22617685/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Knud Vad Thomsen  (March 24, 1905 – February 2, 1971) was a Danish composer." ;
+        mtp:hasParticipant   meetup:34eb3386412e4944f8dbb05dd1fa7027 ;
+        mtp:hasPurpose       meetup:13c2433b7f698ff16525b870d26fad12 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Knud_Vad_Thomsen> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Knud_Vad_Thomsen>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:34eb3386412e4944f8dbb05dd1fa7027
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Knud_Vad_Thomsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Knud Vad Thomsen" .
+
+meetup:13c2433b7f698ff16525b870d26fad12
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99779093" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0013851321" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:302937d6e890a31ce9503255da448b40
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9947056" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0028476757" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:93f566810a771d982cd8ca0f438a2926
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "51" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rudolf \"Rudy\" Ratzinger" .
+
+<http://w3id.org/polifonia/pilot/meetups/548527/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He released a \"best of\" album titled Innerfire on May 5, 2017, while also announcing that Wumpscut would no longer be producing or making any new music on his Facebook and Twitter accounts." ;
+        mtp:hasParticipant   meetup:528bee9db754793e4587303425814d00 ;
+        mtp:hasPurpose       meetup:302937d6e890a31ce9503255da448b40 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wumpscut> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:e41d2f18acdb5a5f16a95e72850c8f97
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9034325" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.08783141" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/548527/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It was founded in May 1991 by Bavarian disc jockey Rudolf \"Rudy\" Ratzinger (born June 3, 1966)." ;
+        mtp:hasParticipant   meetup:b9fe6d2fd6ad61d0772c474d575c4ee1 , meetup:93f566810a771d982cd8ca0f438a2926 ;
+        mtp:hasPurpose       meetup:e41d2f18acdb5a5f16a95e72850c8f97 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wumpscut> ;
+        mtp:hasType          "HM" .
+
+meetup:b9fe6d2fd6ad61d0772c474d575c4ee1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wumpscut> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Wumpscut" .
+
+meetup:528bee9db754793e4587303425814d00
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wumpscut> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rudy Ratzinger" .
+
+<http://dbpedia.org/resource/Wumpscut>
+        rdf:type  core:Person .

@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Brian_Kennedy_(singer)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3198526/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Around this time, he also scored a minor UK hit album of his own with The Great War of Words (1990). This album featured the lead single \"Captured\" which was a minor hit in both the UK and Irish charts." ;
+        mtp:hasPurpose       meetup:ac35eab765b7c44614e3b9f4bf30c5fd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Brian_Kennedy_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:ac35eab765b7c44614e3b9f4bf30c5fd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Album release and hit single" ;
+        mtp:hasEvidencePurposeSecond  "Personal achievements" ;
+        mtp:hasSourcePurpose          "LLM" .

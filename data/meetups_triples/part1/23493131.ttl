@@ -1,0 +1,72 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:ff4f0059d41dfafd3cc49a884b389996
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "166" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ian Parry's" .
+
+meetup:8618b189be4eb183b87cbb90ce60a7d7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98417574" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.014030013" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Dirk_Bruinenberg>
+        rdf:type  core:Person .
+
+meetup:b98e6ae3ae03769eaddcd1d2cac07090
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "The sentence mentions the complexity of the music and a performance in Adagio." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions personal reasons for leaving the band." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/23493131/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Dirk Bruinenberg (born 21 August 1968) is a Dutch musician known as the former drummer of several European progressive metal and power metal bands, including: Elegy, Ian Parry's Consortium Project and Adagio." ;
+        mtp:hasParticipant   meetup:ff4f0059d41dfafd3cc49a884b389996 , meetup:1fe8d4f6f9508d6f35f2be7662eeecec ;
+        mtp:hasPurpose       meetup:8618b189be4eb183b87cbb90ce60a7d7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dirk_Bruinenberg> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/23493131/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He left the band in late 2003, citing personal reasons coupled with conflicting schedules. His performance in Adagio has been critically acclaimed due mainly to the high complexity of the music." ;
+        mtp:hasParticipant   meetup:5786f95124182385d8484221f69a27d8 ;
+        mtp:hasPurpose       meetup:b98e6ae3ae03769eaddcd1d2cac07090 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Dirk_Bruinenberg> ;
+        mtp:hasType          "HT" .
+
+meetup:1fe8d4f6f9508d6f35f2be7662eeecec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dirk_Bruinenberg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Dirk Bruinenberg" .
+
+meetup:5786f95124182385d8484221f69a27d8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bruinenberg" .

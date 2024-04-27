@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3762a47ec81ae90b3fcfbbab5d12c058
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "20" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "William McIsaac" .
+
+meetup:f17169c75acb4e8f4213cc771c804920
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Billy McIsaac is a musician" ;
+        mtp:hasEvidencePurposeSecond  "He was born in Rothesay, Scotland" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/21242146/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Billy McIsaac (born William McIsaac, 12 July 1949 in Rothesay, Scotland) is a musician, who played mainly keyboards since his early days with different pop bands." ;
+        mtp:hasParticipant   meetup:3762a47ec81ae90b3fcfbbab5d12c058 , meetup:b55b332a7d4dcf9c1a8d5e4efc95dde1 ;
+        mtp:hasPurpose       meetup:f17169c75acb4e8f4213cc771c804920 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Billy_McIsaac> ;
+        mtp:hasType          "HM" .
+
+meetup:b55b332a7d4dcf9c1a8d5e4efc95dde1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Billy_McIsaac> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Billy McIsaac" .
+
+<http://dbpedia.org/resource/Billy_McIsaac>
+        rdf:type  core:Person .

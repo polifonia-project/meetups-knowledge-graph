@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Dave_Smith_(pitcher,_born_1955)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/47621648/6/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2015, Smith was invited to Disney World, Florida to talk and present to over 100 Disney Imagineers about his philosophy on design across Europe, as well as his Victorian style lettering he has become famous for. In 2015 Smith designed the bottle artwork for Booth's Gin." ;
+        mtp:hasPurpose       meetup:1e32680a34d997ccefc8f34951333d1b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_A._Smith_(designer)> ;
+        mtp:hasType          "HT" .
+
+meetup:a098d0b6ee5333ca2bf2b1c790da6fbc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Smith's gold leaf glass signs" ;
+        mtp:hasEvidencePurposeSecond  "Ginstitute receiving gilded advertising mirrors" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:1e32680a34d997ccefc8f34951333d1b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Meeting with Disney Imagineers" ;
+        mtp:hasEvidencePurposeSecond  "Designing bottle artwork for Booth's Gin" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/David_A._Smith_(designer)>
+        rdf:type  core:Person .
+
+meetup:874b951543d9922793ad7d0548112922
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Smith_(pitcher,_born_1955)> ;
+        mtp:hasOffset           "102" ;
+        mtp:hasSimilarityScore  "0.658694795326029" ;
+        mtp:hasTextEvidence     "Dave Smith" .
+
+<http://w3id.org/polifonia/pilot/meetups/47621648/5/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2013 Smith made gold leaf glass signs for the Burberry store in Regent Street in London. The Ginstitute on Portobello Road, London, has received ornate gilded advertising mirrors produced by Dave Smith." ;
+        mtp:hasParticipant   meetup:874b951543d9922793ad7d0548112922 ;
+        mtp:hasPurpose       meetup:a098d0b6ee5333ca2bf2b1c790da6fbc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/David_A._Smith_(designer)> ;
+        mtp:hasType          "HT" .

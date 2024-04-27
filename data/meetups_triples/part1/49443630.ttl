@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/49443630/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The family lived in Cupertino from about the time Hua was nine to 18, though his father moved to Taiwan to pursue work and Hua often spent summers and other school vacations there. In Cupertino, Hsu attended high school with Ben Cho, who went on to become a fashion designer." ;
+        mtp:hasParticipant   meetup:7917722ffa32852ae6b7beda370487fc ;
+        mtp:hasPurpose       meetup:54858d2434cf0d0dc5ce75ed2b1de00a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hua_Hsu> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Cho_Jung-tai>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/49443630/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His work includes investigations of immigrant culture in the United States, as well as public perceptions of diversity and multiculturalism." ;
+        mtp:hasParticipant   meetup:b8c2b0438559b02c74bfc811b89f781d ;
+        mtp:hasPurpose       meetup:87129e595c304c76b723ae39bb54c8ee ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hua_Hsu> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b8c2b0438559b02c74bfc811b89f781d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hua_Hsu> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Hua Hsu" .
+
+meetup:54858d2434cf0d0dc5ce75ed2b1de00a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about someone's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about attending high school" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Hua_Hsu>
+        rdf:type  core:Person .
+
+meetup:7917722ffa32852ae6b7beda370487fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Cho_Jung-tai> ;
+        mtp:hasOffset           "48" ;
+        mtp:hasSimilarityScore  "0.5463960676237043" ;
+        mtp:hasTextEvidence     "Cho" .
+
+meetup:87129e595c304c76b723ae39bb54c8ee
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9494637" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.04483363" ;
+        mtp:hasSourcePurpose          "ML" .

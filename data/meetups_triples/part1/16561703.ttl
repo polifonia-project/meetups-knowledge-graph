@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Lichens_(musician)>
+        rdf:type  core:Person .
+
+meetup:1c0324455c2e55956f8c0f58e21fc1c0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lichens_(musician)> ;
+        mtp:hasOffset           "35" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Robert Aiki Aubrey Lowe" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:0b11528a99a288e38bee53fb7519475d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Robert Aiki" .
+
+<http://w3id.org/polifonia/pilot/meetups/16561703/17/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "lítiȭ fólk (morc tapes, 2012)As Robert Aiki Aubrey Lowe" ;
+        mtp:hasParticipant   meetup:1c0324455c2e55956f8c0f58e21fc1c0 , meetup:0b11528a99a288e38bee53fb7519475d ;
+        mtp:hasPurpose       meetup:70dffcbc8d80cddf519ffc33f3d8ee03 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lichens_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:70dffcbc8d80cddf519ffc33f3d8ee03
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9130103" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.058384024" ;
+        mtp:hasSourcePurpose          "ML" .

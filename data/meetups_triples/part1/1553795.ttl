@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1553795/5/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He moved to Spain and recorded another four albums: Llueve (1997), Frontera (1999), Sea (2001) and Eco (2004). In 2001, Drexler co-wrote two songs for Spanish singer Rosario Flores (\"Agua y Sal\" and \"Rosa y Miel\") for her album Muchas Flores." ;
+        mtp:hasParticipant   meetup:21ff0d6f4f2c64026772ed73a33693ae , meetup:76a80a04fa5d929c86d8449ab5d30159 ;
+        mtp:hasPurpose       meetup:cda368a1bfbb96f2ff3cc8053a8df988 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jorge_Drexler> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cda368a1bfbb96f2ff3cc8053a8df988
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Recording albums and co-writing songs" ;
+        mtp:hasEvidencePurposeSecond  "Moving to Spain" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:21ff0d6f4f2c64026772ed73a33693ae
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rosario_Flores> ;
+        mtp:hasOffset           "55" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rosario Flores" .
+
+<http://dbpedia.org/resource/Jorge_Drexler>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Rosario_Flores>
+        rdf:type  core:Person .
+
+meetup:76a80a04fa5d929c86d8449ab5d30159
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Clyde_Drexler> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.8497396393642244" ;
+        mtp:hasTextEvidence     "Drexler" .
+
+<http://dbpedia.org/resource/Clyde_Drexler>
+        rdf:type  core:Person .

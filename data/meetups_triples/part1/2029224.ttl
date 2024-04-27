@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/John_Hiatt>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Patrick_O'Hearn>
+        rdf:type  core:Person .
+
+meetup:b74e9e2456bb903c34a56b6c89298461
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Creating and releasing music" ;
+        mtp:hasEvidencePurposeSecond  "Interactions and collaborations in personal life" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2029224/22/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The next year in 2007 O'Hearn released the CD Glaciation, inspired by images of Earth's Arctic regions. In the summer of 2007, O'Hearn was introduced to singer-songwriter John Hiatt and played bass on Hiatt's Same Old Man album." ;
+        mtp:hasParticipant   meetup:49c92c423e4589e0dc38838cf891c48f ;
+        mtp:hasPurpose       meetup:b74e9e2456bb903c34a56b6c89298461 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Patrick_O'Hearn> ;
+        mtp:hasType          "HT" .
+
+meetup:49c92c423e4589e0dc38838cf891c48f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/John_Hiatt> ;
+        mtp:hasOffset           "67" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "John Hiatt" .

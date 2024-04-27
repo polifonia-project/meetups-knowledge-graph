@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1744233/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was also president of G. Schirmer, Inc., a writer on music for The Musical Quarterly, and chief of the Music Division of the Library of Congress." ;
+        mtp:hasParticipant   meetup:aa5b8326d8040a68cd1862b932d4649d ;
+        mtp:hasPurpose       meetup:dd0afa51b3741eea41e3f9f238e1e4cf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carl_Engel> ;
+        mtp:hasType          "HT" .
+
+meetup:aa5b8326d8040a68cd1862b932d4649d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carl_Engel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Carl Engel" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:830744c2df6a6ff7c09f4e1703933ef9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9991726" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0008266823" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:049f8711d6e2ba0bb7a1a5c75987ba74
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Carl_Engel> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999997300165" ;
+        mtp:hasTextEvidence     "Carl Engel" .
+
+<http://dbpedia.org/resource/Carl_Engel>
+        rdf:type  core:Person .
+
+meetup:dd0afa51b3741eea41e3f9f238e1e4cf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.999998" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.748562e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1744233/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Carl Engel (July 21, 1883 – May 6, 1944) was a French-born American pianist, composer, musicologist and publisher from Paris." ;
+        mtp:hasParticipant   meetup:049f8711d6e2ba0bb7a1a5c75987ba74 ;
+        mtp:hasPurpose       meetup:830744c2df6a6ff7c09f4e1703933ef9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Carl_Engel> ;
+        mtp:hasType          "HT" .

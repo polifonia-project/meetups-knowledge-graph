@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Lindsay_Lohan>
+        rdf:type  core:Person .
+
+meetup:06737ac2f9e1c8df8be7577d3fd0e38f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lindsay_Lohan> ;
+        mtp:hasOffset           "14" ;
+        mtp:hasSimilarityScore  "0.9999999999443788" ;
+        mtp:hasTextEvidence     "Lohan" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/4344815/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Aliana Taylor Lohan (born December 22, 1993) is an American singer, actress, fashion model and television personality." ;
+        mtp:hasParticipant   meetup:e412f3f097a2caff6760b403eac9ad8b , meetup:06737ac2f9e1c8df8be7577d3fd0e38f ;
+        mtp:hasPurpose       meetup:150d6878c2a2abfc6aa051451fabb8ba ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Aliana_Lohan> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Aliana_Lohan>
+        rdf:type  core:Person .
+
+meetup:150d6878c2a2abfc6aa051451fabb8ba
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5534772" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.3415312" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e412f3f097a2caff6760b403eac9ad8b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Aliana_Lohan> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Aliana" .

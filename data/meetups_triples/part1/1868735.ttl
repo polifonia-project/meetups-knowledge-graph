@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:6b406d8986a5c96023a86a745ef0763a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Will_Oldham> ;
+        mtp:hasOffset           "15" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Bonnie 'Prince' Billy" .
+
+<http://dbpedia.org/resource/Will_Oldham>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/1868735/33/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Matt Sweeney & Bonnie 'Prince' Billy" ;
+        mtp:hasParticipant   meetup:6b406d8986a5c96023a86a745ef0763a , meetup:47444353d5ae094c53a43fc24f0215e0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_Sweeney> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:47444353d5ae094c53a43fc24f0215e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Sweeney> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999993748" ;
+        mtp:hasTextEvidence     "Matt Sweeney" .
+
+meetup:8a7e08a45123805cb15173c3bac56c84
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Matt_Sweeney> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Matt Sweeney" .
+
+<http://w3id.org/polifonia/pilot/meetups/1868735/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Matt Sweeney (born July 2, 1969) is an American musician and record producer best known as a guitarist of Skunk, Chavez, and supergroup Zwan." ;
+        mtp:hasParticipant   meetup:8a7e08a45123805cb15173c3bac56c84 ;
+        mtp:hasPurpose       meetup:caf8f43292b94b6d50f16899b9bc8a16 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Matt_Sweeney> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Matt_Sweeney>
+        rdf:type  core:Person .
+
+meetup:caf8f43292b94b6d50f16899b9bc8a16
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8955027" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.062114786" ;
+        mtp:hasSourcePurpose          "ML" .

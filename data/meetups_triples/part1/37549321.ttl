@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/František_Neumann>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Oscar_Neumann>
+        rdf:type  core:Person .
+
+meetup:ae10e3b7b57e999a2ef622409d85f4fe
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Oscar_Neumann> ;
+        mtp:hasOffset           "11" ;
+        mtp:hasSimilarityScore  "0.5729612342224769" ;
+        mtp:hasTextEvidence     "Neumann" .
+
+meetup:d979590559183afd746f6fbc2f349c01
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/František_Neumann> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "František Neumann" .
+
+<http://w3id.org/polifonia/pilot/meetups/37549321/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "František Neumann (16 June 1874 – 25 February 1929) was a Czech conductor and composer." ;
+        mtp:hasParticipant   meetup:ae10e3b7b57e999a2ef622409d85f4fe , meetup:d979590559183afd746f6fbc2f349c01 ;
+        mtp:hasPurpose       meetup:59cc262daf0146280c499c1409af87cc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/František_Neumann> ;
+        mtp:hasType          "HM" .
+
+meetup:59cc262daf0146280c499c1409af87cc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9964259" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.003571029" ;
+        mtp:hasSourcePurpose          "ML" .

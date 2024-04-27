@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Tony_Currenti>
+        rdf:type  core:Person .
+
+meetup:8f394292f67345cc0704494e8a712e31
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing in Italy with tribute bands" ;
+        mtp:hasEvidencePurposeSecond  "Announcing tour on Facebook" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:50ea60038b28a6388275cbb9ab5bea43
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Currenti" .
+
+<http://w3id.org/polifonia/pilot/meetups/19945270/24/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In July 2016, he announced on his Facebook page an October 2016 tour of Italy with tribute band Bon Scott Experience. In Italy he also performed with Overdose 74, Black Ice and Back In Hell." ;
+        mtp:hasParticipant   meetup:50ea60038b28a6388275cbb9ab5bea43 ;
+        mtp:hasPurpose       meetup:8f394292f67345cc0704494e8a712e31 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Currenti> ;
+        mtp:hasType          "HT" .

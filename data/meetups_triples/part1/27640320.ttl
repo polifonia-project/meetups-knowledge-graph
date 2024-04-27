@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:c6651e1703216a41d659baadeeab71ce
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performance at a music festival" ;
+        mtp:hasEvidencePurposeSecond  "Postponement of a public celebration" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/27640320/16/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2020, Reid was slated to perform at the Overpass Music Festival which was to be held at Oak Canyon Park in Orange County. However, the festival was postponed due to the COVID-19 pandemic." ;
+        mtp:hasPurpose       meetup:c6651e1703216a41d659baadeeab71ce ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Reid_(actor)> ;
+        mtp:hasType          "HT" .
+
+meetup:10449f90ad30599f2ba2334f635ced11
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Reid_(actor)> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "0.9062980910808344" ;
+        mtp:hasTextEvidence     "James Reid" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/27640320/3/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Reid was born as Robert James Reid in Sydney, Australia, on 11 May 1993 to an Australian father and a Filipino mother." ;
+        mtp:hasParticipant   meetup:10449f90ad30599f2ba2334f635ced11 ;
+        mtp:hasPurpose       meetup:7c0b1bd8e490780fb0b665badef95f9c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Reid_(actor)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/James_Reid_(actor)>
+        rdf:type  core:Person .
+
+meetup:7c0b1bd8e490780fb0b665badef95f9c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about Reid's personal background" ;
+        mtp:hasEvidencePurposeSecond  "Information about Reid's birth and upbringing" ;
+        mtp:hasSourcePurpose          "LLM" .

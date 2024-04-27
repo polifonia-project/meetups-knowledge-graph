@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:c6fa8975cfa6998cf22078396e026e9c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95318276" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03667465" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/15761896/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Danny Rubin (born 1957) is an American screenwriter and playwright." ;
+        mtp:hasParticipant   meetup:b703671b3b268056638d67ca99aef0e5 ;
+        mtp:hasPurpose       meetup:d708ca1b50d4599bc122d9a06f9d7bcf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Danny_Rubin> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Danny_Rubin>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Harold_Ramis>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:6dada6b0d683f8fc48f4bc8ea3860113
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Harold_Ramis> ;
+        mtp:hasOffset           "17" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Harold Ramis" .
+
+meetup:71607c70f291866f6d357233fa600278
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Danny_Rubin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Danny Rubin" .
+
+<http://w3id.org/polifonia/pilot/meetups/15761896/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He co-wrote with Harold Ramis the screenplay for the comedy film Groundhog Day (1993), for which the two received a BAFTA Award for Best Screenplay." ;
+        mtp:hasParticipant   meetup:6dada6b0d683f8fc48f4bc8ea3860113 , meetup:71607c70f291866f6d357233fa600278 ;
+        mtp:hasPurpose       meetup:c6fa8975cfa6998cf22078396e026e9c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Danny_Rubin> ;
+        mtp:hasType          "HM" .
+
+meetup:b703671b3b268056638d67ca99aef0e5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Danny_Rubin> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999987679332" ;
+        mtp:hasTextEvidence     "Danny Rubin" .
+
+meetup:d708ca1b50d4599bc122d9a06f9d7bcf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.65450686" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.34547344" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/James_Genus>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/16308678/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He plays both electric bass guitar and upright bass and currently plays in the Saturday Night Live Band." ;
+        mtp:hasParticipant   meetup:4aaf6ecf365ec259b1f812b989796a03 ;
+        mtp:hasPurpose       meetup:2ec32686eb73598be0245c601ae5bea9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Genus> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:f89f635aa44754ddee647b6eab7a307d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999774" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.0519244e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:2ec32686eb73598be0245c601ae5bea9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.49945062" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.48946372" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:74e8ac47d247365ab1080baee6f8772c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Genus> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.999999999996902" ;
+        mtp:hasTextEvidence     "James Genus" .
+
+<http://w3id.org/polifonia/pilot/meetups/16308678/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "James Genus (January 20, 1966) is an American jazz bassist." ;
+        mtp:hasParticipant   meetup:74e8ac47d247365ab1080baee6f8772c ;
+        mtp:hasPurpose       meetup:f89f635aa44754ddee647b6eab7a307d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Genus> ;
+        mtp:hasType          "HT" .
+
+meetup:4aaf6ecf365ec259b1f812b989796a03
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Genus> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "James Genus" .

@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/32539745/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Georgs Pelēcis (also Georges Pélétsis; born 18 June 1947) is a Latvian composer and musicologist." ;
+        mtp:hasParticipant   meetup:d90409d0ea4527c8f0805ca0c5c0a481 , meetup:d7c658a649c2f9807757df355e6c97cd ;
+        mtp:hasPurpose       meetup:5e1d2f34ecbcc86cc33cad09a88dc3e3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Georgs_Pelēcis> ;
+        mtp:hasType          "HM" .
+
+meetup:395c3c873439195d86a24f9f9575927c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.84289837" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.12638149" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:5e1d2f34ecbcc86cc33cad09a88dc3e3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999981" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.9629508e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/32539745/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is currently a Professor at the Latvian Academy of Music." ;
+        mtp:hasParticipant   meetup:ee3e709fbd944dc5eec977f694e137e7 ;
+        mtp:hasPurpose       meetup:395c3c873439195d86a24f9f9575927c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Georgs_Pelēcis> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Georgs_Pelēcis>
+        rdf:type  core:Person .
+
+meetup:d7c658a649c2f9807757df355e6c97cd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "21" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Georges Pélétsis" .
+
+meetup:d90409d0ea4527c8f0805ca0c5c0a481
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Georgs_Pelēcis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Georgs Pelēcis" .
+
+meetup:ee3e709fbd944dc5eec977f694e137e7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Georgs_Pelēcis> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Georgs Pelēcis" .

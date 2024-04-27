@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Jenn_Wasner>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:2c693c84fb8dec70c8c9dd35002b883c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the release and success of an album." ;
+        mtp:hasEvidencePurposeSecond  "The album was celebrated as the best album of 2011." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/42621666/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "After the release of their highly regarded album Civilian in 2011, the group toured in the United States and Europe. Civilian was named the best album of 2011 by The A.V. Club, and was featured on television in the popular series The Walking Dead and in the film, Safety Not Guaranteed." ;
+        mtp:hasPurpose       meetup:2c693c84fb8dec70c8c9dd35002b883c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jenn_Wasner> ;
+        mtp:hasType          "HT" .

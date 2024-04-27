@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Taylor_Ho_Bynum>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d39db7aaf36f3dfeded54232b50f1f5c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Related to musical projects and performances" ;
+        mtp:hasEvidencePurposeSecond  "Personal activities and experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/55087912/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Taylor Ho Bynum (born 1975) is a musician, composer, educator and writer." ;
+        mtp:hasParticipant   meetup:da7664786fc3ba8b3f6d0dd1c61742be ;
+        mtp:hasPurpose       meetup:76eee0c1d549683ec3f7908c68a8de81 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taylor_Ho_Bynum> ;
+        mtp:hasType          "HT" .
+
+meetup:76eee0c1d549683ec3f7908c68a8de81
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.66220886" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.33759883" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:da7664786fc3ba8b3f6d0dd1c61742be
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Taylor_Ho_Bynum> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Taylor Ho Bynum" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/55087912/4/18>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2014, he undertook another \"Acoustic Bicycle Tour\" from Vancouver, Canada down the West Coast to Tijuana, Mexico, captured in a short documentary film by Chris Jonas. Book of Three was a trio album in 2014, and Enter the PlusTet two years later was performed by a 15-piece band." ;
+        mtp:hasPurpose       meetup:d39db7aaf36f3dfeded54232b50f1f5c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Taylor_Ho_Bynum> ;
+        mtp:hasType          "HT" .

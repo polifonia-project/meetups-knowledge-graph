@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Tomas_Lindberg>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/166393/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Tomas \"Tompa\" Lindberg (born 16 October 1972) is a Swedish musician who has fronted many death metal bands, most notably At the Gates." ;
+        mtp:hasParticipant   meetup:90ffd00077fd7f7bcedc7045a3aa1c93 ;
+        mtp:hasPurpose       meetup:fd352d4648656700fdc0c8845930af43 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tomas_Lindberg> ;
+        mtp:hasType          "HT" .
+
+meetup:065de746246cabc5beb6f8a5d12b7220
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8443602" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.09896128" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:fd352d4648656700fdc0c8845930af43
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.82173944" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.17818786" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/166393/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He has been active as a musician and composer since the late 1980s." ;
+        mtp:hasParticipant   meetup:4983adca72ccda894ba3c3b928068819 ;
+        mtp:hasPurpose       meetup:065de746246cabc5beb6f8a5d12b7220 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tomas_Lindberg> ;
+        mtp:hasType          "HT" .
+
+meetup:90ffd00077fd7f7bcedc7045a3aa1c93
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tomas_Lindberg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tomas \"Tompa\" Lindberg" .
+
+meetup:4983adca72ccda894ba3c3b928068819
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tomas_Lindberg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Tomas \"Tompa\" Lindberg" .

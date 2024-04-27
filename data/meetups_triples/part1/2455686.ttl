@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:44f62551c8002aaaf352f2a7220f6b9c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pete_Gill> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999989484" ;
+        mtp:hasTextEvidence     "Pete Gill" .
+
+meetup:6811e86a6935fc6ddd0a49c9f7506c54
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5396962" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.42439494" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/2455686/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Pete Gill detoxed in 2004 after having a problem with alcohol for two years, and is unable to play anymore due to severe arthritis which \"has spread to my hands and my legs and my back\"." ;
+        mtp:hasParticipant   meetup:44f62551c8002aaaf352f2a7220f6b9c ;
+        mtp:hasPurpose       meetup:6811e86a6935fc6ddd0a49c9f7506c54 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Pete_Gill> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Pete_Gill>
+        rdf:type  core:Person .

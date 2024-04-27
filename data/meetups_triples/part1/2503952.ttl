@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/2503952/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is a guitarist, bandleader, and main songwriter for thrash metal band Exodus and was a member of Slayer from 2011 to 2019, replacing Jeff Hanneman following his death in May 2013." ;
+        mtp:hasParticipant   meetup:d1188f635540d698b721dce4ae1ba26a , meetup:dec9b1c440bb6bbff51c07deb4fc8735 ;
+        mtp:hasPurpose       meetup:b6e14d8985b8317a9bc881cca9576f59 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Holt_(musician)> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Gary_Holt_(musician)>
+        rdf:type  core:Person .
+
+meetup:dec9b1c440bb6bbff51c07deb4fc8735
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_Holt_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gary Wayne Holt" .
+
+meetup:c6a0dc950fa3ba453851e10b95480e31
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9989374" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0007755748" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/2503952/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gary Wayne Holt (born May 4, 1964) is an American musician from the San Francisco Bay Area." ;
+        mtp:hasParticipant   meetup:9ea2d3a549cbad822c8c39a5b7e879a6 ;
+        mtp:hasPurpose       meetup:c6a0dc950fa3ba453851e10b95480e31 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gary_Holt_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jeff_Hanneman>
+        rdf:type  core:Person .
+
+meetup:9ea2d3a549cbad822c8c39a5b7e879a6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gary_Holt_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999808722" ;
+        mtp:hasTextEvidence     "Gary Wayne Holt" .
+
+meetup:d1188f635540d698b721dce4ae1ba26a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Hanneman> ;
+        mtp:hasOffset           "136" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jeff Hanneman" .
+
+meetup:b6e14d8985b8317a9bc881cca9576f59
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9910705" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.008843898" ;
+        mtp:hasSourcePurpose          "ML" .

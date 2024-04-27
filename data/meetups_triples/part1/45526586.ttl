@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Midnight_Boy>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:64334434d868d7789d59e16fd96f2d07
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "41" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Krafman" .
+
+meetup:20d04c6ddd65a7938c08a0fe78bd6f36
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Performing and releasing songs" ;
+        mtp:hasEvidencePurposeSecond  "Collaborating with other artists" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/45526586/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also performed at the Ladies Night shows in Stockholm, Gothenburg and Malmö with the singer Martin Stenmarck, actor Peter Stormare and comedian Henrik Hjelt. In connection with the Ladies Night tour he released two songs called \"Disarmed\" and \"Chain Reaction\" under his regular name." ;
+        mtp:hasParticipant   meetup:64334434d868d7789d59e16fd96f2d07 ;
+        mtp:hasPurpose       meetup:20d04c6ddd65a7938c08a0fe78bd6f36 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Midnight_Boy> ;
+        mtp:hasType          "HT" .

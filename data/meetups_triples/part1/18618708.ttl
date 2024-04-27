@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/18618708/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was named Music Director of the Cantemus Chamber Chorus (Essex County, MA) in 2011." ;
+        mtp:hasParticipant   meetup:1021e6db306a2d01331e0eaa2754ed35 ;
+        mtp:hasPurpose       meetup:6ebd0b51d23c2a1be1a651f7599d8d3f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jane_Ring_Frank> ;
+        mtp:hasType          "HT" .
+
+meetup:64cf2f2bc728521ee9479517d0d56dc4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jane_Ring_Frank> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jane Ring Frank" .
+
+meetup:6ebd0b51d23c2a1be1a651f7599d8d3f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.65987647" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.28924212" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:d418833a67b5c693bf00453dcb7d06e0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9836828" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.016099008" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jane_Ring_Frank>
+        rdf:type  core:Person .
+
+meetup:1021e6db306a2d01331e0eaa2754ed35
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jane_Ring_Frank> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jane Ring Frank" .
+
+<http://w3id.org/polifonia/pilot/meetups/18618708/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jane Ring Frank (born 1960 in Los Angeles, California) is a female American Choral Conductor who leads music publisher" ;
+        mtp:hasParticipant   meetup:64cf2f2bc728521ee9479517d0d56dc4 ;
+        mtp:hasPurpose       meetup:d418833a67b5c693bf00453dcb7d06e0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jane_Ring_Frank> ;
+        mtp:hasType          "HT" .

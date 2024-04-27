@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:eb4a2c942dbdb9632d32c3590106c524
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1981" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1981-01-01"^^xsd:date ;
+        time:hasEnd          "1981-12-31"^^xsd:date .
+
+meetup:33e991f7610112c6ea8b28aee4612414
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the Fall" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1977-01-01"^^xsd:date ;
+        time:hasEnd          "1998-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/3297455/4/3>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:eb4a2c942dbdb9632d32c3590106c524 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Karl_Burns> ;
+        mtp:hasType     "HT" .
+
+<http://dbpedia.org/resource/Karl_Burns>
+        rdf:type  core:Person .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+meetup:e22ed1ebcca741194dbab19dc4756c47
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1958" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1958-01-01"^^xsd:date ;
+        time:hasEnd          "1958-12-31"^^xsd:date .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:e3026a806fda3b883a256dde5d25fc89
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "1977 and 1998" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1977-01-01"^^xsd:date ;
+        time:hasEnd          "1998-12-31"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/3297455/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:e3026a806fda3b883a256dde5d25fc89 , meetup:e22ed1ebcca741194dbab19dc4756c47 , meetup:33e991f7610112c6ea8b28aee4612414 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Karl_Burns> ;
+        mtp:hasType     "HT" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:b24c59e2261f30e79ad9c8b9d4671a79
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Beppe_Gambetta> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Beppe Gambetta" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:54bfde628ff6b6ac6ae7302b6c42cfec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Beppe_Gambetta> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Beppe Gambetta" .
+
+<http://w3id.org/polifonia/pilot/meetups/17329219/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Beppe Gambetta (born 1955) is an Italian acoustic guitarist and singer." ;
+        mtp:hasParticipant   meetup:b24c59e2261f30e79ad9c8b9d4671a79 ;
+        mtp:hasPurpose       meetup:3005935f1214f55126a317f9ada7aebf ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Beppe_Gambetta> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Beppe_Gambetta>
+        rdf:type  core:Person .
+
+meetup:3005935f1214f55126a317f9ada7aebf
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.76124495" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23151118" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/17329219/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A native of Genoa, he is a composer, teacher, author, and researcher of traditional music and instruments." ;
+        mtp:hasParticipant   meetup:54bfde628ff6b6ac6ae7302b6c42cfec ;
+        mtp:hasPurpose       meetup:f5559eb3fc59eeb7cdabf8a651e72a7c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Beppe_Gambetta> ;
+        mtp:hasType          "HT" .
+
+meetup:f5559eb3fc59eeb7cdabf8a651e72a7c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99390817" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0036570323" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:545ec09314d534ca959968a3d4d0a462
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96466476" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02884909" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3be165bc4abe8ed65a67b1bd09e4e806
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999945" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 5.4057377e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2813003/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 2002, she pursued a solo career in music, releasing her independent album, Preface." ;
+        mtp:hasParticipant   meetup:43349740a99e1577757449e66255495f ;
+        mtp:hasPurpose       meetup:3be165bc4abe8ed65a67b1bd09e4e806 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jessica_Harp> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:43349740a99e1577757449e66255495f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jessica_Harp> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jessica Harp" .
+
+<http://w3id.org/polifonia/pilot/meetups/2813003/2/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jessica Harp grew up with her parents and her sister, Annie, in Kansas City, Missouri." ;
+        mtp:hasParticipant   meetup:65af309d6ffee14bbf30390522c67736 ;
+        mtp:hasPurpose       meetup:545ec09314d534ca959968a3d4d0a462 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jessica_Harp> ;
+        mtp:hasType          "HT" .
+
+meetup:65af309d6ffee14bbf30390522c67736
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jessica_Harp> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999992896" ;
+        mtp:hasTextEvidence     "Jessica Harp" .
+
+<http://dbpedia.org/resource/Jessica_Harp>
+        rdf:type  core:Person .

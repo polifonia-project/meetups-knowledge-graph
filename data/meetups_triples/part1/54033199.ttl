@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:77ed7f460f8d100064cd071cdc9b864d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruben_Wright> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Ruben Wright" .
+
+meetup:ab62a640085c5ad0c0a1f1de6339498b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruben_Wright> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Ruben Wright" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Ruben_Wright>
+        rdf:type  core:Person .
+
+meetup:e30c5f0fdc809673068ca8e4ea2353ab
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99999714" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 2.164745e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/54033199/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ruben Wright is a musician and former bandleader from Philadelphia." ;
+        mtp:hasParticipant   meetup:ab62a640085c5ad0c0a1f1de6339498b ;
+        mtp:hasPurpose       meetup:1dfe68e830ab6cb17a7299146da1e25d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruben_Wright> ;
+        mtp:hasType          "HT" .
+
+meetup:1dfe68e830ab6cb17a7299146da1e25d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9979532" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0015354821" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/54033199/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He also wrote the regional hit \"God Only Knows\" for The Capris in 1954." ;
+        mtp:hasParticipant   meetup:77ed7f460f8d100064cd071cdc9b864d ;
+        mtp:hasPurpose       meetup:e30c5f0fdc809673068ca8e4ea2353ab ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruben_Wright> ;
+        mtp:hasType          "HT" .

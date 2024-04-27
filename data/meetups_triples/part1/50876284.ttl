@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/50876284/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Anna Malenfant (October 16, 1902 – June 15, 1988) was a Canadian singer, educator and composer." ;
+        mtp:hasParticipant   meetup:e7a018287aad208a0f8197274c1c0fe9 ;
+        mtp:hasPurpose       meetup:f59e2f00de18851d07e9a7ef0f089ebc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Anna_Malenfant> ;
+        mtp:hasType          "HT" .
+
+meetup:f59e2f00de18851d07e9a7ef0f089ebc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 1.0" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.3782254e-08" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e7a018287aad208a0f8197274c1c0fe9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Anna_Malenfant> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Anna Malenfant" .
+
+<http://dbpedia.org/resource/Anna_Malenfant>
+        rdf:type  core:Person .

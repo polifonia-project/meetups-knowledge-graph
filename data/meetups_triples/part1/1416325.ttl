@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/1416325/6/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He sang for Glyndebourne for the first time in 1993 and made his debut at the Metropolitan Opera in New York in 1996. Keenlyside has performed at virtually all the major opera houses in the world, including the Paris Opera and the Metropolitan Opera." ;
+        mtp:hasParticipant   meetup:4ddb8e1a9bb0ec9077c9b3b8fcbc95cd ;
+        mtp:hasPurpose       meetup:76ce1e119a2ab17f64bc657718ffb835 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_Keenlyside> ;
+        mtp:hasType          "HT" .
+
+meetup:76ce1e119a2ab17f64bc657718ffb835
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performing at major opera houses" ;
+        mtp:hasEvidencePurposeSecond  "Debut at the Metropolitan Opera" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Simon_Keenlyside>
+        rdf:type  core:Person .
+
+meetup:4ddb8e1a9bb0ec9077c9b3b8fcbc95cd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Keenlyside" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:088d584a9916351062f80fca8054651b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.66546285" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29757887" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/1416325/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Sir Simon Keenlyside  (born 3 August 1959) is a British baritone who has performed in operas and concerts since the mid-1980s." ;
+        mtp:hasParticipant   meetup:9d87be5240efc96214342139aab14c34 ;
+        mtp:hasPurpose       meetup:088d584a9916351062f80fca8054651b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Simon_Keenlyside> ;
+        mtp:hasType          "HT" .
+
+meetup:9d87be5240efc96214342139aab14c34
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Simon_Keenlyside> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sir Simon Keenlyside" .

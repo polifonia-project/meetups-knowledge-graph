@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/16933770/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gene Rodgers (March 5, 1910, New York City – October 23, 1987, New York City) was an American jazz pianist, composer, and arranger." ;
+        mtp:hasParticipant   meetup:05943e0a0ea53ffb1fb60d6ad48bcdb8 ;
+        mtp:hasPurpose       meetup:d880098358848c1b77f2adb467c04521 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gene_Rodgers> ;
+        mtp:hasType          "HT" .
+
+meetup:0904e5fc9f7a9fada8e8ff528cb93af6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gene_Rodgers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Gene Rodgers" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/16933770/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is best known for being the pianist on Coleman Hawkins' famous 1939 recording of \"Body and Soul\"." ;
+        mtp:hasParticipant   meetup:3f13dceff9880e6cd5106fff888064d5 , meetup:0904e5fc9f7a9fada8e8ff528cb93af6 ;
+        mtp:hasPurpose       meetup:5e5154814043db903facf8e6520cbccc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Gene_Rodgers> ;
+        mtp:hasType          "HM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Coleman_Hawkins>
+        rdf:type  core:Person .
+
+meetup:5e5154814043db903facf8e6520cbccc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9953034" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0030751042" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Gene_Rodgers>
+        rdf:type  core:Person .
+
+meetup:05943e0a0ea53ffb1fb60d6ad48bcdb8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gene_Rodgers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Gene Rodgers" .
+
+meetup:d880098358848c1b77f2adb467c04521
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95795995" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.041244254" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3f13dceff9880e6cd5106fff888064d5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Coleman_Hawkins> ;
+        mtp:hasOffset           "42" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Coleman Hawkins" .

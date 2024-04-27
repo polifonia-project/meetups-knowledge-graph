@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6e3f60f21c441010c17f250ca4fbf676
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9872126" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.012465946" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Queena_Mario>
+        rdf:type  core:Person .
+
+meetup:e1eaa4dbcbefc78d1dd190d14a3130f6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Queena_Mario> ;
+        mtp:hasOffset           "84" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Queena Mario" .
+
+<http://w3id.org/polifonia/pilot/meetups/55755790/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Queena Marian Tillotson (August 21, 1896 – May 28, 1951), known professionally as Queena Mario, was  an American soprano opera singer, newspaper columnist, voice teacher, and fiction writer." ;
+        mtp:hasParticipant   meetup:e1eaa4dbcbefc78d1dd190d14a3130f6 ;
+        mtp:hasPurpose       meetup:6e3f60f21c441010c17f250ca4fbf676 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Queena_Mario> ;
+        mtp:hasType          "HT" .

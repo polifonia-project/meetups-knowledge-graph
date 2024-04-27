@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jeanne_Added>
+        rdf:type  core:Person .
+
+meetup:bb47a1a8d6737911ea5f715f2b9425d5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9397661" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.028898679" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:e93bd57ad14ebc730b36e65b6b547bd0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeanne_Added> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999997726" ;
+        mtp:hasTextEvidence     "Jeanne Added" .
+
+meetup:e83e5a134a0abf1c04f8343282e8ab77
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeanne_Added> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999752732" ;
+        mtp:hasTextEvidence     "Jeanne Added" .
+
+<http://w3id.org/polifonia/pilot/meetups/60085864/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeanne Added (born 25 September 1980 in Reims) is a French singer songwriter singing mainly in English." ;
+        mtp:hasParticipant   meetup:e93bd57ad14ebc730b36e65b6b547bd0 ;
+        mtp:hasPurpose       meetup:bb47a1a8d6737911ea5f715f2b9425d5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeanne_Added> ;
+        mtp:hasType          "HT" .
+
+meetup:e080a25528256e97ad22b95d00a21715
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.89389706" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.048823718" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/60085864/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeanne Added won the award of Best Female Artist during Victoires de la musique in 2019 and her album Radiate won Best Rock Album during the same event." ;
+        mtp:hasParticipant   meetup:e83e5a134a0abf1c04f8343282e8ab77 ;
+        mtp:hasPurpose       meetup:e080a25528256e97ad22b95d00a21715 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeanne_Added> ;
+        mtp:hasType          "HT" .

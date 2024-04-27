@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Patrik_Jensen>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/5642950/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Patrik Jensen (born 24 November 1969) is a Swedish guitarist and co-founder of the bands, The Haunted (1996-present), and Witchery (1997-present), and also the former guitarist of the bands Orchriste (1987-1990), Seance (1990-1995)" ;
+        mtp:hasParticipant   meetup:d5cb9cec573f39f82fcb68722d1451b4 ;
+        mtp:hasPurpose       meetup:bfa3f05b8fb734048931c95005aa73d4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Patrik_Jensen> ;
+        mtp:hasType          "HT" .
+
+meetup:d5cb9cec573f39f82fcb68722d1451b4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Patrik_Jensen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Patrik Jensen" .
+
+meetup:bfa3f05b8fb734048931c95005aa73d4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.74761367" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2512357" ;
+        mtp:hasSourcePurpose          "ML" .

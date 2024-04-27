@@ -1,0 +1,51 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Erlend_Slettevoll>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:d8432b1bf1ade01c8f6c88fd91c878bd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99995565" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 4.190153e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/44733241/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Audun Ellingsen (born 4 January 1979) is a Norwegian jazz musician (Upright bass) known from collaborations within bands like \"Sphinx\" and with musicians like Frøy Aagre, Erlend Slettevoll and Gisle Torvik." ;
+        mtp:hasParticipant   meetup:e339add580c127b68ec55dd1672bd929 , meetup:c5d95bc3c03976e7b6c80636efdb21ac ;
+        mtp:hasPurpose       meetup:d8432b1bf1ade01c8f6c88fd91c878bd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Audun_Ellingsen> ;
+        mtp:hasType          "HM" .
+
+meetup:c5d95bc3c03976e7b6c80636efdb21ac
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Erlend_Slettevoll> ;
+        mtp:hasOffset           "172" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Erlend Slettevoll" .
+
+<http://dbpedia.org/resource/Audun_Ellingsen>
+        rdf:type  core:Person .
+
+meetup:e339add580c127b68ec55dd1672bd929
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Audun_Ellingsen> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999938224846" ;
+        mtp:hasTextEvidence     "Audun Ellingsen" .

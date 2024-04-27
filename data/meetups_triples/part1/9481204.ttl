@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/9481204/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Araba Walton (born 4 November 1975 in Simbach am Inn, Germany) is an Afro-German actress and singer." ;
+        mtp:hasParticipant   meetup:84ce0ea3502ee0fedde2fc491657a096 ;
+        mtp:hasPurpose       meetup:94ff8839f9dce656710b7c35196540b3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Araba_Walton> ;
+        mtp:hasType          "HT" .
+
+meetup:84ce0ea3502ee0fedde2fc491657a096
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Araba_Walton> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999700966672" ;
+        mtp:hasTextEvidence     "Araba Walton" .
+
+<http://dbpedia.org/resource/Araba_Walton>
+        rdf:type  core:Person .
+
+meetup:94ff8839f9dce656710b7c35196540b3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.955824" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.043143284" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .

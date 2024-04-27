@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:c6bc3d2a3c961ae6667770017ae6555e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Music making - learning to play bass guitar" ;
+        mtp:hasEvidencePurposeSecond  "Personal life - acting roles and filming" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/1660879/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Paré shot the CBS pilot Protect and Serve in 2007, co-starred in the independent French-Canadian romantic comedy Jusqu'à toi, and had a small role in The Trotsky (2008), a comedy filmed in Montreal. She filmed Suck (2008), a vampire horror-comedy written and directed by Rob Stefaniuk, for which role she learned to play the bass guitar." ;
+        mtp:hasParticipant   meetup:6ce2c470fe5b44710b4fe2d2beebf912 , meetup:921a06daa1d8c24b81a7584f8a33eef8 ;
+        mtp:hasPurpose       meetup:c6bc3d2a3c961ae6667770017ae6555e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jessica_Paré> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jean-Guy_Paré>
+        rdf:type  core:Person .
+
+meetup:6ce2c470fe5b44710b4fe2d2beebf912
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jean-Guy_Paré> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Paré" .
+
+meetup:921a06daa1d8c24b81a7584f8a33eef8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rob_Wright> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "0.6812212952817223" ;
+        mtp:hasTextEvidence     "Rob" .
+
+<http://dbpedia.org/resource/Jessica_Paré>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Rob_Wright>
+        rdf:type  core:Person .

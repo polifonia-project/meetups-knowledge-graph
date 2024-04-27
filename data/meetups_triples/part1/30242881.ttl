@@ -1,0 +1,75 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:a965d683c6165a40f7a22c78ee33ea42
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lambertini" .
+
+meetup:a3feae9b76b98cedc9c5c635bfa50d34
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marta_Lambertini> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999994181148952" ;
+        mtp:hasTextEvidence     "Marta Lambertini" .
+
+meetup:42f83a83c9f69b621bda665107783ac9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Gerardo_Gandini> ;
+        mtp:hasOffset           "138" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Gerardo Gandini" .
+
+<http://dbpedia.org/resource/Gerardo_Gandini>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:3ac334263a89406f83d7ca3d8daa1a35
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98909366" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01006364" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Marta_Lambertini>
+        rdf:type  core:Person .
+
+meetup:75b6e11a3c9eb5bb6462cc37e01d384f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "The sentence is about the person's education background." ;
+        mtp:hasEvidencePurposeSecond  "The sentence mentions studying music and electroacoustic music." ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/30242881/1/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She was born in San Isidro, Buenos Aires, and studied at the Universidad Catolica Argentina with Roberto Caamano, Luis Gianneo and Gerardo Gandini, graduating in 1972. She continued her studies in electroacoustic music in Buenos Aires, at the Centro de Investigationes de la Ciudad with Francisco Kröpfl, Gerardo Gandini, José Maranzano and Gabriel Brncic." ;
+        mtp:hasParticipant   meetup:a965d683c6165a40f7a22c78ee33ea42 , meetup:42f83a83c9f69b621bda665107783ac9 ;
+        mtp:hasPurpose       meetup:75b6e11a3c9eb5bb6462cc37e01d384f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marta_Lambertini> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/30242881/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Marta Lambertini (13 November 1937 – 25 March 2019) was an Argentine composer." ;
+        mtp:hasParticipant   meetup:a3feae9b76b98cedc9c5c635bfa50d34 ;
+        mtp:hasPurpose       meetup:3ac334263a89406f83d7ca3d8daa1a35 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Marta_Lambertini> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/21748032/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He came to Abbey Road in 1965 as a tape operator and has since worked with many artists at the studio." ;
+        mtp:hasParticipant   meetup:d8ee03cf9717cbbae80b45cb09760d2d ;
+        mtp:hasPurpose       meetup:efc7b1e41bbdc7839663fc93abaae69c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Mew> ;
+        mtp:hasType          "HT" .
+
+meetup:96c0e003c81ceaa76fb20d93ccc59410
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Kevin_Ayers> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Kevin Ayers" .
+
+meetup:d8ee03cf9717cbbae80b45cb09760d2d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Mew> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Mew" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Kevin_Ayers>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/21748032/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Kevin Ayers of Soft Machine has called Mew \"the best engineer I've ever worked with\"." ;
+        mtp:hasParticipant   meetup:34edc01d61ceb3f115f6c9fa456b6d66 , meetup:96c0e003c81ceaa76fb20d93ccc59410 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Peter_Mew> ;
+        mtp:hasType          "HM" .
+
+meetup:34edc01d61ceb3f115f6c9fa456b6d66
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Peter_Mew> ;
+        mtp:hasOffset           "39" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Peter Mew" .
+
+<http://dbpedia.org/resource/Peter_Mew>
+        rdf:type  core:Person .
+
+meetup:efc7b1e41bbdc7839663fc93abaae69c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9801369" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01574561" ;
+        mtp:hasSourcePurpose          "ML" .

@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/James_McNair>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Tracy_Morgan>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/43001030/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The Peekskill, N.Y., native was well known in his community where he was often seen volunteering at his local church or playing host to The Original Uncle Jimmy Mack's Amateur Hour, a recurring fundraising event that helped to showcase local comedic talent. McNair left the construction industry to pursue comedy, an effort that was grueling and paid little; but did put him in touch with other aspiring entertainers at, among other places, the Uptown Comedy Club in Harlem where he would meet Tracy Morgan." ;
+        mtp:hasParticipant   meetup:6ab862b2f66a3799161b763842031634 ;
+        mtp:hasPurpose       meetup:e6364c20e746f5b4952bba22e0f60a17 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_McNair> ;
+        mtp:hasType          "HT" .
+
+meetup:6ab862b2f66a3799161b763842031634
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tracy_Morgan> ;
+        mtp:hasOffset           "236" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Tracy Morgan" .
+
+meetup:e6364c20e746f5b4952bba22e0f60a17
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about McNair's personal life and community involvement." ;
+        mtp:hasEvidencePurposeSecond  "Mention of McNair's involvement with the Uptown Comedy Club and meeting Tracy Morgan." ;
+        mtp:hasSourcePurpose          "LLM" .

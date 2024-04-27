@@ -1,0 +1,70 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/64550919/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She is known for representing the Netherlands in the Eurovision Song Contest 1996, together with Franklin Brown." ;
+        mtp:hasParticipant   meetup:2a7011d9114cd393fff1d6b639ca5366 ;
+        mtp:hasPurpose       meetup:e27bf553a590e3e05f13517768644121 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maxine_(singer)> ;
+        mtp:hasType          "HT" .
+
+meetup:96502b68c3a899768d64ac25cbdbc751
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maxine_(singer)> , <http://dbpedia.org/resource/Maxine_Blossom_Miles> ;
+        mtp:hasOffset           "0" , "66" ;
+        mtp:hasSimilarityScore  "" , "0.4490614711057225" ;
+        mtp:hasTextEvidence     "Maxine" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:2a7011d9114cd393fff1d6b639ca5366
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Maxine_(singer)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Maxine" .
+
+meetup:6620804de38daa4be3ad8112471ce0ae
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.74494493" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.11992562" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Maxine_Blossom_Miles>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/64550919/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Gonny Buurmeester (born 14 October 1970), known professionally as Maxine, is a Dutch singer." ;
+        mtp:hasParticipant   meetup:96502b68c3a899768d64ac25cbdbc751 ;
+        mtp:hasPurpose       meetup:6620804de38daa4be3ad8112471ce0ae ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Maxine_(singer)> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Maxine_(singer)>
+        rdf:type  core:Person .
+
+meetup:e27bf553a590e3e05f13517768644121
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Involves participating in a music competition" ;
+        mtp:hasEvidencePurposeSecond  "A widely watched event with performances and voting" ;
+        mtp:hasSourcePurpose          "LLM" .

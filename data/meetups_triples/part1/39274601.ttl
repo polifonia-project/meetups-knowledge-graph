@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://w3id.org/polifonia/pilot/meetups/39274601/12/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jim Beck died on May 3, 1956, at Baylor Hospital, after collapsing at his recording studio from accidentally inhaling carbon tetrachloride fumes while he and his assistant Jimmy Rollins were cleaning recording equipment." ;
+        mtp:hasParticipant   meetup:94510a2c7111c361af251b07a312d5bd ;
+        mtp:hasPurpose       meetup:2e32036947349d269da8ff5a21b38f03 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jim_Beck> ;
+        mtp:hasType          "HT" .
+
+meetup:2e32036947349d269da8ff5a21b38f03
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.59691733" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4029124" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:1f75deedc0932424ca6f57a620d82ed4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Building a music studio" ;
+        mtp:hasEvidencePurposeSecond  "Location of the studio" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:94510a2c7111c361af251b07a312d5bd
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jim_Beck> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999999432" ;
+        mtp:hasTextEvidence     "Jim Beck" .
+
+<http://dbpedia.org/resource/Jim_Beck>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/39274601/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Beck built his second studio – the \"Jim Beck Studio\" – in 1950 at 1101 Ross Avenue in Dallas. His first studio had been on Main Street in Dallas." ;
+        mtp:hasPurpose       meetup:1f75deedc0932424ca6f57a620d82ed4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jim_Beck> ;
+        mtp:hasType          "HT" .

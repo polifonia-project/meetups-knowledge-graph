@@ -1,0 +1,67 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Rachel_Barton_Pine>
+        rdf:type  core:Person .
+
+meetup:5671a5072bed412a2132cf7c245efbb1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Rachel_Barton_Pine> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Rachel Barton Pine" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:636e1068ac7b3b651a3475d7b4ec1318
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Achievements in violin competitions" ;
+        mtp:hasEvidencePurposeSecond  "Recognition in international competitions" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:cbf11fbebf62c1a9b792fea733197bb9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "25" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Rachel Elizabeth Barton" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/9587975/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Rachel Barton Pine (born Rachel Elizabeth Barton, October 11, 1974) is an American violinist." ;
+        mtp:hasParticipant   meetup:5671a5072bed412a2132cf7c245efbb1 , meetup:cbf11fbebf62c1a9b792fea733197bb9 ;
+        mtp:hasPurpose       meetup:ec1d5e32d83a25bace00ed1622f0c78b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rachel_Barton_Pine> ;
+        mtp:hasType          "HM" .
+
+<http://w3id.org/polifonia/pilot/meetups/9587975/2/7>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "\"She attained notable success in a number of violin competitions, including winning the 1992 Johann Sebastian Bach International Competition in Leipzig, Germany. She also earned 2nd prizes in the József Szigeti Violin Competition (1992) and the International Fritz Kreisler Competition (1992), as well as awards from the Montreal International Musical Competition (1991), the Paganini Competition (1993), and the Queen Elisabeth Music Competition (1993)." ;
+        mtp:hasPurpose       meetup:636e1068ac7b3b651a3475d7b4ec1318 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Rachel_Barton_Pine> ;
+        mtp:hasType          "HT" .
+
+meetup:ec1d5e32d83a25bace00ed1622f0c78b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9546588" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.043379977" ;
+        mtp:hasSourcePurpose          "ML" .

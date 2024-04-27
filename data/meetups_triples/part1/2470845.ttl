@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Joe_Castro>
+        rdf:type  core:Person .
+
+meetup:6b93429f7cd6f872edc8dccd4b29b829
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Joe_Castro> ;
+        mtp:hasOffset           "80" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Joe Castro" .
+
+meetup:3448238c731a523798c4dbcc71a0fcb6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Teddy_Edwards> ;
+        mtp:hasOffset           "32" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Teddy Edwards" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d82e0883ba6b3274a2f0def69f3584f3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Sonny_Rollins> ;
+        mtp:hasOffset           "5" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Sonny Rollins" .
+
+<http://dbpedia.org/resource/Sonny_Rollins>
+        rdf:type  core:Person .
+
+meetup:9dd9bcc56e1ef60be18b79a98133118b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99990416" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 8.498516e-05" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2470845/11/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "1958 Sonny Rollins at Music Inn/Teddy Edwards at Falcon's Lair (Metrojazz) with Joe Castro - split album featuring Sonny Rollins tracks" ;
+        mtp:hasParticipant   meetup:3448238c731a523798c4dbcc71a0fcb6 , meetup:d82e0883ba6b3274a2f0def69f3584f3 , meetup:6b93429f7cd6f872edc8dccd4b29b829 ;
+        mtp:hasPurpose       meetup:9dd9bcc56e1ef60be18b79a98133118b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Teddy_Edwards> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Teddy_Edwards>
+        rdf:type  core:Person .

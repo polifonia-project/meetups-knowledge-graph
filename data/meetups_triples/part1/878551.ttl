@@ -1,0 +1,83 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+<http://dbpedia.org/resource/Bing_Crosby>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/878551/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He and his band did regular recording and radio work through the 1930s, and appeared with Bing Crosby in the 1940 film Rhythm on the River." ;
+        mtp:hasParticipant   meetup:5797ff396c1edc0892de2fe4139b8a92 , meetup:58413665e6352fbf2bb4c8759435d6a2 , meetup:773436845cc0de2a7d4e31f13fd5f4a2 ;
+        mtp:hasPurpose       meetup:a5102dbd02aa4e06f05e0aed81c96cc8 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wingy_Manone> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:58413665e6352fbf2bb4c8759435d6a2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wingy_Manone> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Wingy Manone" .
+
+meetup:a5102dbd02aa4e06f05e0aed81c96cc8
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98741883" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.01236591" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:773436845cc0de2a7d4e31f13fd5f4a2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bing_Crosby> ;
+        mtp:hasOffset           "95" ;
+        mtp:hasSimilarityScore  "0.9999784021932288" ;
+        mtp:hasTextEvidence     "Crosby" .
+
+<http://dbpedia.org/resource/Wingy_Manone>
+        rdf:type  core:Person .
+
+meetup:bf014b9364f3832100485365ee7a5bd2
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.96121985" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03858931" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:9de4fe0b4329265237047c19418aafec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Wingy_Manone> ;
+        mtp:hasOffset           "6" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Wingy Manone" .
+
+<http://w3id.org/polifonia/pilot/meetups/878551/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Among his better records are \"There'll Come a Time (Wait and See)\" (1934, also known as \"San Antonio Stomp\"), \"Send Me\" (1936), and the novelty hit \"The Broken Record\" (1936)." ;
+        mtp:hasParticipant   meetup:9de4fe0b4329265237047c19418aafec ;
+        mtp:hasPurpose       meetup:bf014b9364f3832100485365ee7a5bd2 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Wingy_Manone> ;
+        mtp:hasType          "HT" .
+
+meetup:5797ff396c1edc0892de2fe4139b8a92
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Manone" .

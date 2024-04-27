@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/51845597/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Travis Cave (born July 14, 1991), better known by his stage name Trap Beckham, is an American trap music recording artist from Jacksonville, Florida." ;
+        mtp:hasParticipant   meetup:ca2b5d2d900bcf96a72cc9d0acb95e74 , meetup:84beae3d64e78fc0f6da833be4c5b577 ;
+        mtp:hasPurpose       meetup:bbf7d3289f6a5470f817bcf952ecc7e7 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Trap_Beckham> ;
+        mtp:hasType          "HM" .
+
+meetup:ca2b5d2d900bcf96a72cc9d0acb95e74
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Trap_Beckham> ;
+        mtp:hasOffset           "65" ;
+        mtp:hasSimilarityScore  "0.9999999999998296" ;
+        mtp:hasTextEvidence     "Trap Beckham" .
+
+meetup:bbf7d3289f6a5470f817bcf952ecc7e7
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Trap Beckham is a trap music recording artist" ;
+        mtp:hasEvidencePurposeSecond  "Travis Cave is his real name" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Trap_Beckham>
+        rdf:type  core:Person .
+
+meetup:84beae3d64e78fc0f6da833be4c5b577
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Travis Cave" .

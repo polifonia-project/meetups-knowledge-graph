@@ -1,0 +1,32 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/53555147/4/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He married Pauline in 1948, with whom they had son John and daughter Lois. He lived much of his married life in Westerville, Ohio." ;
+        mtp:hasPurpose       meetup:e64433abc243b878fc97ecb579599fed ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Paul_E._Bierley> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Paul_E._Bierley>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:e64433abc243b878fc97ecb579599fed
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about his marriage and family" ;
+        mtp:hasEvidencePurposeSecond  "Information about his life in Westerville, Ohio" ;
+        mtp:hasSourcePurpose          "LLM" .

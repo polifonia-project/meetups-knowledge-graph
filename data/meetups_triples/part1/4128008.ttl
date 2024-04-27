@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Lee_Thompson_(saxophonist)>
+        rdf:type  core:Person .
+
+meetup:1ac835ac41263f1a347c06c83e133099
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_Thompson_(saxophonist)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999322996" ;
+        mtp:hasTextEvidence     "Lee Jay Thompson" .
+
+<http://w3id.org/polifonia/pilot/meetups/4128008/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Lee Jay Thompson (born 5 October 1957), nicknamed Kix or El Thommo, is an English multi-instrumentalist, songwriter, and composer." ;
+        mtp:hasParticipant   meetup:1ac835ac41263f1a347c06c83e133099 ;
+        mtp:hasPurpose       meetup:3e6c40642b249cd3649d4d253204496f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lee_Thompson_(saxophonist)> ;
+        mtp:hasType          "HT" .
+
+meetup:3e6c40642b249cd3649d4d253204496f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9385053" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03313852" ;
+        mtp:hasSourcePurpose          "ML" .

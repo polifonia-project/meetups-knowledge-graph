@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:2e7279c748df18e32e7ffb76b9cbb2e0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Nancy_Bea> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Nancy Bea" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/31663042/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Nancy Bea Hefley (born February 24, 1936) was the stadium organist for 27 years for Major League Baseball's Los Angeles Dodgers." ;
+        mtp:hasParticipant   meetup:2e7279c748df18e32e7ffb76b9cbb2e0 ;
+        mtp:hasPurpose       meetup:fb5c72f5cb4903a648843fbc341eb81b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Nancy_Bea> ;
+        mtp:hasType          "HT" .
+
+meetup:fb5c72f5cb4903a648843fbc341eb81b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.702467" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.29734644" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Nancy_Bea>
+        rdf:type  core:Person .

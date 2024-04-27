@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/196933/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was known for his ragtime and vaudeville style, and wrote some of the biggest hits of the first third of the 20th century." ;
+        mtp:hasParticipant   meetup:5b9149cd0aa087561b15acbcce51ed25 ;
+        mtp:hasPurpose       meetup:db45a34c112c3166779b76068669b95d ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shelton_Brooks> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:5b9149cd0aa087561b15acbcce51ed25
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shelton_Brooks> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Shelton Brooks" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/196933/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Shelton Brooks (May 4, 1886 – September 6, 1975) was a Canadian-born African American composer of popular music and jazz." ;
+        mtp:hasParticipant   meetup:6a005c2f279eec7c5deaf05129521cf0 ;
+        mtp:hasPurpose       meetup:54ebed3fc1d9c29c71b6bdfacd27fc43 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Shelton_Brooks> ;
+        mtp:hasType          "HT" .
+
+meetup:db45a34c112c3166779b76068669b95d
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9998468" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00010035245" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:6a005c2f279eec7c5deaf05129521cf0
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Shelton_Brooks> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Shelton Brooks" .
+
+<http://dbpedia.org/resource/Shelton_Brooks>
+        rdf:type  core:Person .
+
+meetup:54ebed3fc1d9c29c71b6bdfacd27fc43
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.6084964" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.39149773" ;
+        mtp:hasSourcePurpose          "ML" .

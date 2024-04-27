@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/53456069/2/9>
+        rdf:type        mtp:Meetup ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Jowst> ;
+        mtp:hasType     "HT" .
+
+meetup:4f79bbfc0dc8b1737d20fec84dbe7f25
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "26 June 1989" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1989-06-26"^^xsd:date ;
+        time:hasEnd          "1989-06-26"^^xsd:date .
+
+<http://w3id.org/polifonia/pilot/meetups/53456069/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:4f79bbfc0dc8b1737d20fec84dbe7f25 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Jowst> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:221085489aa8f9e9d7f610a5e41b54ba
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "the Moment" ;
+        mtp:hasSource        "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/53456069/0/1>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:221085489aa8f9e9d7f610a5e41b54ba , meetup:a10ec928a58f7ebde9ee5da15d53172c ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Jowst> ;
+        mtp:hasType     "HM" .
+
+meetup:a10ec928a58f7ebde9ee5da15d53172c
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "2017" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2017-01-01"^^xsd:date ;
+        time:hasEnd          "2017-12-31"^^xsd:date .
+
+<http://dbpedia.org/resource/Jowst>
+        rdf:type  core:Person .

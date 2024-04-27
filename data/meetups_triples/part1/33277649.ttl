@@ -1,0 +1,68 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:e61c23d41c3a8b7ead8992974b6bddf1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9958264" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0038858778" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e79d014ad1aaf4bb17ae61983513e0f6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Art_Rochester> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Art Rochester" .
+
+meetup:da95eded20c8b70703cb80d620c26082
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99936503" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00038612392" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:b14f6f317404ec17aa1906b9381031e1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Art_Rochester> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999780584" ;
+        mtp:hasTextEvidence     "Art Rochester" .
+
+<http://dbpedia.org/resource/Art_Rochester>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/33277649/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He worked on more than 60 films from 1970 to 2008." ;
+        mtp:hasParticipant   meetup:e79d014ad1aaf4bb17ae61983513e0f6 ;
+        mtp:hasPurpose       meetup:e61c23d41c3a8b7ead8992974b6bddf1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Art_Rochester> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/33277649/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Art Rochester (born February 25, 1944) is an American sound engineer." ;
+        mtp:hasParticipant   meetup:b14f6f317404ec17aa1906b9381031e1 ;
+        mtp:hasPurpose       meetup:da95eded20c8b70703cb80d620c26082 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Art_Rochester> ;
+        mtp:hasType          "HT" .

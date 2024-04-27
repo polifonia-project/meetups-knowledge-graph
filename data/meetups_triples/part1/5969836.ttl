@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:4376bab48a006ab54f671acdebca3dbb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about Cosby's life and death" ;
+        mtp:hasEvidencePurposeSecond  "Coincidental connection with the hospital" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:b2ef09683a63e7e518c81ac9261c0fa7
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bill_Cosby> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Cosby" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Henry_Cosby>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Bill_Cosby>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/5969836/8/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Cosby died at age 73 on January 22, 2002, at the William Beaumont Hospital in Royal Oak, Michigan, after complications from a cardiac bypass surgery. His name is written on an honorary South Tower Construction beam of the hospital." ;
+        mtp:hasParticipant   meetup:b2ef09683a63e7e518c81ac9261c0fa7 ;
+        mtp:hasPurpose       meetup:4376bab48a006ab54f671acdebca3dbb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Henry_Cosby> ;
+        mtp:hasType          "HT" .

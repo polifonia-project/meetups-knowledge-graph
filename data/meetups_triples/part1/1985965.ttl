@@ -1,0 +1,64 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Tim_Lambesis>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:8e983a87565d938fb600bc85be22305c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jordan_Mancino> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jordan Mancino" .
+
+<http://dbpedia.org/resource/Jordan_Mancino>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/1985965/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He later met his longtime friend Tim Lambesis." ;
+        mtp:hasParticipant   meetup:a63a4bee9c2f197b7da329085c631c57 , meetup:e4033a5007d22b412211ab08ff2525aa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jordan_Mancino> ;
+        mtp:hasType          "HM" .
+
+meetup:d2a12e5eb0a93d4c0aaccda8c220648f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9392783" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.060049977" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:e4033a5007d22b412211ab08ff2525aa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jordan_Mancino> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jordan Mancino" .
+
+meetup:a63a4bee9c2f197b7da329085c631c57
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Tim_Lambesis> ;
+        mtp:hasOffset           "33" ;
+        mtp:hasSimilarityScore  "0.9999999999999858" ;
+        mtp:hasTextEvidence     "Tim Lambesis" .
+
+<http://w3id.org/polifonia/pilot/meetups/1985965/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jordan Mancino (born May 22, 1983) is an American drummer who was born in Escondido, California." ;
+        mtp:hasParticipant   meetup:8e983a87565d938fb600bc85be22305c ;
+        mtp:hasPurpose       meetup:d2a12e5eb0a93d4c0aaccda8c220648f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jordan_Mancino> ;
+        mtp:hasType          "HT" .

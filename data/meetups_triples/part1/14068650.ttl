@@ -1,0 +1,50 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/14068650/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hitomi Harada (原田 ひとみ, Harada Hitomi, born November 18) is a Japanese voice actress and singer from Ube, Yamaguchi." ;
+        mtp:hasParticipant   meetup:4de977d93c2e0126444edd41c557af3c , meetup:8c3d29a0820ce6efdea36d1d1d8f5a67 ;
+        mtp:hasPurpose       meetup:3d94a247d10c9cf5f0cd0c86e7133b51 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hitomi_Harada> ;
+        mtp:hasType          "HM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:4de977d93c2e0126444edd41c557af3c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hitomi_(singer)> ;
+        mtp:hasOffset           "40" ;
+        mtp:hasSimilarityScore  "0.7664955650828233" ;
+        mtp:hasTextEvidence     "Hitomi" .
+
+meetup:3d94a247d10c9cf5f0cd0c86e7133b51
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Hitomi Harada is a singer" ;
+        mtp:hasEvidencePurposeSecond  "Hitomi Harada is from Ube, Yamaguchi" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:8c3d29a0820ce6efdea36d1d1d8f5a67
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hitomi_Harada> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Hitomi Harada" .
+
+<http://dbpedia.org/resource/Hitomi_(singer)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Hitomi_Harada>
+        rdf:type  core:Person .

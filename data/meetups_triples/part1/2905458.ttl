@@ -1,0 +1,71 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/2905458/5/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jones died unexpectedly on January 1, 2007 after an accidental fall outside his Uptown New Orleans home. He was interred in Metairie Cemetery following a \"jazz funeral\" organized by New Orleans musicians." ;
+        mtp:hasParticipant   meetup:addf1c196490c48bacf17ff48eedc4cc ;
+        mtp:hasPurpose       meetup:c7774bea8ef5f0d99f11510fc2f77201 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tad_Jones> ;
+        mtp:hasType          "HT" .
+
+meetup:68a962e62e1ca7b8ed15f4515309290f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Todd_Jones> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jones" .
+
+<http://w3id.org/polifonia/pilot/meetups/2905458/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "While earning a degree in Communications at Loyola, Jones was named Music Director of the university's radio station, WLDC and served from 1971-74. Frequently, Jones merged his broadcasting training with his musical historical expertise to promote New Orleans music in the station's playlist." ;
+        mtp:hasParticipant   meetup:68a962e62e1ca7b8ed15f4515309290f ;
+        mtp:hasPurpose       meetup:d1e65844d7a0140080180aac6c075b6f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tad_Jones> ;
+        mtp:hasType          "HT" .
+
+meetup:c7774bea8ef5f0d99f11510fc2f77201
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Details about a person's life" ;
+        mtp:hasEvidencePurposeSecond  "Involvement of musicians in funeral" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:d1e65844d7a0140080180aac6c075b6f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Jones promoted New Orleans music" ;
+        mtp:hasEvidencePurposeSecond  "Jones earned a degree in Communications" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Doug_Jones_(baseball)>
+        rdf:type  core:Person .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://dbpedia.org/resource/Todd_Jones>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Tad_Jones>
+        rdf:type  core:Person .
+
+meetup:addf1c196490c48bacf17ff48eedc4cc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Doug_Jones_(baseball)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jones" .

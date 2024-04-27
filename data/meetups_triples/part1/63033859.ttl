@@ -1,0 +1,73 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:cf78d896c72c9753c0fd21e4ecdd94ec
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charlotte_de_Witte> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Charlotte de Witte" .
+
+<http://w3id.org/polifonia/pilot/meetups/63033859/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Charlotte de Witte (born 21 July 1992) is a Belgian DJ and record producer, best known for her \"dark and stripped-back\" brand of minimal techno and acid techno music." ;
+        mtp:hasParticipant   meetup:21210eac96bf931e8d6be31264ae05fc ;
+        mtp:hasPurpose       meetup:a482ff601a0ed287192fbace81f99567 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charlotte_de_Witte> ;
+        mtp:hasType          "HT" .
+
+meetup:12a260db99235d67b0113e24bd58f165
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.73522353" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.25248444" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a482ff601a0ed287192fbace81f99567
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93244946" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.065293536" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:21210eac96bf931e8d6be31264ae05fc
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Charlotte_de_Witte> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Charlotte de Witte" .
+
+meetup:a478bda0550c448e5c21216a27adedb1
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "45" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Raving George" .
+
+<http://w3id.org/polifonia/pilot/meetups/63033859/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She has previously performed under the alias Raving George." ;
+        mtp:hasParticipant   meetup:a478bda0550c448e5c21216a27adedb1 , meetup:cf78d896c72c9753c0fd21e4ecdd94ec ;
+        mtp:hasPurpose       meetup:12a260db99235d67b0113e24bd58f165 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Charlotte_de_Witte> ;
+        mtp:hasType          "HM" .
+
+<http://dbpedia.org/resource/Charlotte_de_Witte>
+        rdf:type  core:Person .

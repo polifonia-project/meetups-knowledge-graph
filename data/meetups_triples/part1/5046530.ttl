@@ -1,0 +1,57 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:4f1f16231bee2c7349313a2a52b0d7a8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ronnie_Shade> ;
+        mtp:hasOffset           "8" ;
+        mtp:hasSimilarityScore  "0.9919157804813832" ;
+        mtp:hasTextEvidence     "Shade" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:68baf17344f9b27d35036e02e7fcc5f9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "William Shade Jr." .
+
+<http://w3id.org/polifonia/pilot/meetups/5046530/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "William Shade Jr. (February 5, 1898 – September 18, 1966), known as Will Shade, was a Memphis blues musician, best known for his leadership of the Memphis Jug Band." ;
+        mtp:hasParticipant   meetup:68baf17344f9b27d35036e02e7fcc5f9 , meetup:2e829bd6443c6c56e647b63ef7a53193 , meetup:4f1f16231bee2c7349313a2a52b0d7a8 ;
+        mtp:hasPurpose       meetup:cdfcdc24d15743ce27d98c5dd26ee4de ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Will_Shade> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://dbpedia.org/resource/Will_Shade>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Ronnie_Shade>
+        rdf:type  core:Person .
+
+meetup:2e829bd6443c6c56e647b63ef7a53193
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Will_Shade> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Will Shade" .
+
+meetup:cdfcdc24d15743ce27d98c5dd26ee4de
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93359023" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.046441354" ;
+        mtp:hasSourcePurpose          "ML" .

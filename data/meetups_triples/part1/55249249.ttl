@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Jeremy_Pelt>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:d09b94f0379fc2eb8c03a818ada2a19d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeremy_Pelt> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jeremy Pelt" .
+
+meetup:489e3cc0b8feddf89f1caa7e7a3ad18f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99944395" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00055481016" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/55249249/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jeremy Pelt (born November 4, 1976, in California) is an American jazz trumpeter." ;
+        mtp:hasParticipant   meetup:d09b94f0379fc2eb8c03a818ada2a19d ;
+        mtp:hasPurpose       meetup:489e3cc0b8feddf89f1caa7e7a3ad18f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeremy_Pelt> ;
+        mtp:hasType          "HT" .

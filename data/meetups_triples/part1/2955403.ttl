@@ -1,0 +1,52 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e83d4b8e22ea449a709a5be313de1a9b
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Performing in different countries" ;
+        mtp:hasEvidencePurposeSecond  "Receiving an award in Spain" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2955403/2/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His family moved to New York City in 1968. In New York, Vega continued to go to school." ;
+        mtp:hasPurpose       meetup:a1d56085c237768e1d2a7734f3580eda ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Vega> ;
+        mtp:hasType          "HT" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/2955403/11/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "That same year Vega and his band performed in Spain, Chile, Colombia and the United States. He was also among a committee sent to Spain by the Government of Puerto Rico to represent the island when it was awarded the Prince of Asturias Award." ;
+        mtp:hasPurpose       meetup:e83d4b8e22ea449a709a5be313de1a9b ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Tony_Vega> ;
+        mtp:hasType          "HT" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:a1d56085c237768e1d2a7734f3580eda
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "About someone's life" ;
+        mtp:hasEvidencePurposeSecond  "About someone's education" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Tony_Vega>
+        rdf:type  core:Person .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Mikrokolektyw>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:2591b91d65128f7315d6ac0cbff6bbdb
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999968" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 1.4505016e-06" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:b9e9c0df53b1ea6d9be923eeb748f326
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mikrokolektyw> ;
+        mtp:hasOffset           "56" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Mikrokolektyw" .
+
+<http://w3id.org/polifonia/pilot/meetups/33736024/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In March 2010, Delmark Records announced the release of their first album Revisit, which marked the first release of a European avant jazz group on the Delmark label in its 57-year history." ;
+        mtp:hasParticipant   meetup:b9e9c0df53b1ea6d9be923eeb748f326 ;
+        mtp:hasPurpose       meetup:2591b91d65128f7315d6ac0cbff6bbdb ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mikrokolektyw> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,35 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:db3c292fbcd0f08cfc5ac95068990a69
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "27 June 2020" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "2020-06-27"^^xsd:date ;
+        time:hasEnd          "2020-06-27"^^xsd:date .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/43765315/0/13>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:db3c292fbcd0f08cfc5ac95068990a69 , meetup:48ce14b8ec52db5120a3a8be35f22b80 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Yemi_Alade> ;
+        mtp:hasType     "HT" .
+
+meetup:48ce14b8ec52db5120a3a8be35f22b80
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "future" ;
+        mtp:hasSource        "ML" .
+
+<http://dbpedia.org/resource/Yemi_Alade>
+        rdf:type  core:Person .

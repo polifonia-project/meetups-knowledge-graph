@@ -1,0 +1,48 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:ed5fd052edea73d021605e67335d8a86
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Diana_Yukawa> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Diana Yukawa" .
+
+meetup:3604e1cd5aaa27047c28f7f9772f41ff
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.505687" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.49405286" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/16352164/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Diana Yukawa (ダイアナ湯川, Daiana Yukawa) is a Japanese-born British solo violinist and composer." ;
+        mtp:hasParticipant   meetup:be88854669d012a16c00aaa0598a5f68 , meetup:ed5fd052edea73d021605e67335d8a86 ;
+        mtp:hasPurpose       meetup:3604e1cd5aaa27047c28f7f9772f41ff ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Diana_Yukawa> ;
+        mtp:hasType          "HM" .
+
+meetup:be88854669d012a16c00aaa0598a5f68
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "22" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Daiana Yukawa" .
+
+<http://dbpedia.org/resource/Diana_Yukawa>
+        rdf:type  core:Person .

@@ -1,0 +1,61 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jeff_Pezzati>
+        rdf:type  core:Person .
+
+meetup:dbd6b2f8c3ad2a029b984dfcccac1103
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a band" ;
+        mtp:hasEvidencePurposeSecond  "Career and personal journey" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/1526931/0/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The band has been credited by Dave Grohl of Nirvana/ Foo Fighters fame for inspiring the then 9 year old Grohl to get into punk music. The band has also been credited with being the ones responsible for Riot Fest being as large as it is." ;
+        mtp:hasPurpose       meetup:c9750571276b0be41536afb50ca7ee3f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Pezzati> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jeffrey_Lyons>
+        rdf:type  core:Person .
+
+meetup:c9750571276b0be41536afb50ca7ee3f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Band inspiring Dave Grohl" ;
+        mtp:hasEvidencePurposeSecond  "Band responsible for Riot Fest" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:96dbbdc4ac8ffe2b683022391cb20578
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeffrey_Lyons> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jeffrey" .
+
+<http://w3id.org/polifonia/pilot/meetups/1526931/0/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1980 Pezzati was asked to audition for Naked Raygun (then known as Negro Commando). Pezzati passed the audition and became the band's longest-running member." ;
+        mtp:hasParticipant   meetup:96dbbdc4ac8ffe2b683022391cb20578 ;
+        mtp:hasPurpose       meetup:dbd6b2f8c3ad2a029b984dfcccac1103 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jeff_Pezzati> ;
+        mtp:hasType          "HT" .

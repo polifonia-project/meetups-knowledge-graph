@@ -1,0 +1,66 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Hugo_(musician)>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:e815e73cf257d0d2036280178b79a72d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Levy" .
+
+meetup:9d8d0773770b308af841c186cb7c523f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.775508" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22255518" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:8da12d585f5dfa43c6bf9dd553cdc584
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Hugo_(musician)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999998864" ;
+        mtp:hasTextEvidence     "Hugo Chakrabongse" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:162d6aa04905596d3bd017ee08b66211
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Information about the person's family background" ;
+        mtp:hasEvidencePurposeSecond  "Information about the person's education and lineage" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/31535586/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Hugo Chakrabongse Levy (born 6 August 1981), known under the mononym Hugo or Thai name Chulachak Chakrabongse (Thai: จุลจักร จักรพงษ์; RTGS: Chunlachak Chakkraphong) is a Thai actor and singer-songwriter." ;
+        mtp:hasParticipant   meetup:8da12d585f5dfa43c6bf9dd553cdc584 ;
+        mtp:hasPurpose       meetup:9d8d0773770b308af841c186cb7c523f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hugo_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/31535586/2/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Now he resides in Bangkok, Thailand. He is the grandson of Prince Chula Chakrabongse, the great-grandson of Chakrabongse Bhuvanath, and the great-great-grandson of King Rama V of Siam." ;
+        mtp:hasParticipant   meetup:e815e73cf257d0d2036280178b79a72d ;
+        mtp:hasPurpose       meetup:162d6aa04905596d3bd017ee08b66211 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Hugo_(musician)> ;
+        mtp:hasType          "HT" .

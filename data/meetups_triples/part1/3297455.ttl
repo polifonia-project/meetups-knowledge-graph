@@ -1,0 +1,59 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:dbb293a9d20daa1be5adbf6d24cb8aaf
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Karl_Burns> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Karl Burns" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e330bb8bd66abac83b84f790a6375276
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Involvement in a music tour" ;
+        mtp:hasEvidencePurposeSecond  "Unforeseen circumstances leading to a replacement" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:66db8542ef2e634f3a8406444261c15c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.72336036" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.2763166" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/3297455/4/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Burns rejoined the Fall in 1981, initially as a temporary replacement for Paul Hanley who was refused a visa for a U.S. tour due to being too young. Recordings from this tour were released as A Part of America Therein, 1981." ;
+        mtp:hasPurpose       meetup:e330bb8bd66abac83b84f790a6375276 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Karl_Burns> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Karl_Burns>
+        rdf:type  core:Person .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/3297455/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Karl Burns (born 1958 in Manchester, England) is a British musician best known as drummer for the Fall, featuring in many incarnations of the band between 1977 and 1998." ;
+        mtp:hasParticipant   meetup:dbb293a9d20daa1be5adbf6d24cb8aaf ;
+        mtp:hasPurpose       meetup:66db8542ef2e634f3a8406444261c15c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Karl_Burns> ;
+        mtp:hasType          "HT" .

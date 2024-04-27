@@ -1,0 +1,69 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:dc10edac56544476332796d514db91bd
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7392458" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.14847498" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Will_Kimbrough>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:5bc2fffadd67390a0be4f2b4de649368
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Kimbrough's debut album" ;
+        mtp:hasEvidencePurposeSecond  "Operating a juke joint" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/2806724/22/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Introducing Junior Kimbrough  (2021)" ;
+        mtp:hasParticipant   meetup:cbb763b928cd55edc18369629ac7f6e5 ;
+        mtp:hasPurpose       meetup:dc10edac56544476332796d514db91bd ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Junior_Kimbrough> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/2806724/6/8>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Beginning around 1992, Kimbrough operated Junior's Place, a juke joint in Chulahoma, near Holly Springs, in a building previously used as a church. Kimbrough came to national attention in 1992 with his debut album, All Night Long." ;
+        mtp:hasParticipant   meetup:e3e11ab55030ab49e9230b6bdb025540 ;
+        mtp:hasPurpose       meetup:5bc2fffadd67390a0be4f2b4de649368 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Junior_Kimbrough> ;
+        mtp:hasType          "HT" .
+
+meetup:cbb763b928cd55edc18369629ac7f6e5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Junior_Kimbrough> ;
+        mtp:hasOffset           "12" ;
+        mtp:hasSimilarityScore  "0.9999999999990834" ;
+        mtp:hasTextEvidence     "Junior Kimbrough" .
+
+<http://dbpedia.org/resource/Junior_Kimbrough>
+        rdf:type  core:Person .
+
+meetup:e3e11ab55030ab49e9230b6bdb025540
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Will_Kimbrough> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9965819340438686" ;
+        mtp:hasTextEvidence     "Kimbrough" .

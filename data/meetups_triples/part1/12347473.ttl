@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:ab106d3dc2d4327d79e0085d41a57350
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9232125" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06447384" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/12347473/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Scott Powell (born August 13, 1948 in Dallas, Texas) is an American musician and a former founding member of Sha Na Na, which began at Columbia University in 1969, under the name The Kingsmen." ;
+        mtp:hasParticipant   meetup:ab60d8b4f2704e3503379e072e3f9653 ;
+        mtp:hasPurpose       meetup:ab106d3dc2d4327d79e0085d41a57350 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Scott_Powell> ;
+        mtp:hasType          "HT" .
+
+meetup:ab60d8b4f2704e3503379e072e3f9653
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Scott_Powell> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999801446748372" ;
+        mtp:hasTextEvidence     "Scott Powell" .
+
+<http://dbpedia.org/resource/Scott_Powell>
+        rdf:type  core:Person .

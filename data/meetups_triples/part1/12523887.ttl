@@ -1,0 +1,47 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:efa8f455697246b9f961e89efb3a5917
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "30" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "William McLean Wirths" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:09d3616a4436893c4ddf5daa91cbcbb6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.886629" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.1103497" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/12523887/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Reverend Billy C. Wirtz (born William McLean Wirths in 1954) is an American blues musician, comedian and writer." ;
+        mtp:hasParticipant   meetup:efa8f455697246b9f961e89efb3a5917 , meetup:bada91fbe92562e183b0bfffbb906b96 ;
+        mtp:hasPurpose       meetup:09d3616a4436893c4ddf5daa91cbcbb6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Reverend_Billy_C._Wirtz> ;
+        mtp:hasType          "HM" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:bada91fbe92562e183b0bfffbb906b96
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Reverend_Billy_C._Wirtz> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Billy C. Wirtz" .
+
+<http://dbpedia.org/resource/Reverend_Billy_C._Wirtz>
+        rdf:type  core:Person .

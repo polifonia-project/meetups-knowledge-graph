@@ -1,0 +1,78 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Stardust_Planet>
+        rdf:type  core:Person .
+
+meetup:7cf75d4cf604fe99f811ddb827e8a901
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stardust_Planet> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "3B Junior" .
+
+meetup:5e30938e67a2799d5c679b6feca1192a
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Stardust_Planet> ;
+        mtp:hasOffset           "136" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "3B Junior" .
+
+meetup:d344ab860fb60ac260095cc91589ba62
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Dave_Shoji> ;
+        mtp:hasOffset           "19" ;
+        mtp:hasSimilarityScore  "0.7698374874444447" ;
+        mtp:hasTextEvidence     "Shoji" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:4be851a286747e442b6d957b6b720e73
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99890757" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.00097009994" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/42050635/35/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The incident was not made public until a week later." ;
+        mtp:hasParticipant   meetup:5e30938e67a2799d5c679b6feca1192a ;
+        mtp:hasPurpose       meetup:4be851a286747e442b6d957b6b720e73 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stardust_Planet> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/42050635/33/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "3B Junior Stardust Shoji (3B Juniorの星くず商事) (BS Asahi, 24 January 2015 —)" ;
+        mtp:hasParticipant   meetup:d344ab860fb60ac260095cc91589ba62 , meetup:7cf75d4cf604fe99f811ddb827e8a901 ;
+        mtp:hasPurpose       meetup:7e7f44a705f928d4421a542352a7236a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Stardust_Planet> ;
+        mtp:hasType          "HM" .
+
+meetup:7e7f44a705f928d4421a542352a7236a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.95885" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02919302" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Dave_Shoji>
+        rdf:type  core:Person .

@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Scott_Ottaway>
+        rdf:type  core:Person .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/27778205/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Scott Ottaway (born 13 May 1972) is an English drummer and percussionist." ;
+        mtp:hasParticipant   meetup:a5dd3a394ae9601bdc85b10b8d0a48e2 ;
+        mtp:hasPurpose       meetup:cb13f58fd48b46cfa9e8768930e1f539 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Scott_Ottaway> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Eddie_Van_Halen>
+        rdf:type  core:Person .
+
+meetup:dca78e108f940b2682d8403f31b7c1aa
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Scott_Ottaway> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Scott Ottaway" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+<http://w3id.org/polifonia/pilot/meetups/27778205/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He was the drummer for veteran Merseybeat band The Searchers, replacing Eddie Rothe in February 2010, until the band retired in 2019." ;
+        mtp:hasParticipant   meetup:dca78e108f940b2682d8403f31b7c1aa , meetup:7d24eed1f1578389e723dbddd30f75d2 ;
+        mtp:hasPurpose       meetup:3f0933e8716dd6f496b3b7aa928b82c5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Scott_Ottaway> ;
+        mtp:hasType          "HM" .
+
+meetup:cb13f58fd48b46cfa9e8768930e1f539
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.8821349" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.062091175" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:3f0933e8716dd6f496b3b7aa928b82c5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5168177" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.48317936" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:a5dd3a394ae9601bdc85b10b8d0a48e2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Scott_Ottaway> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999840838" ;
+        mtp:hasTextEvidence     "Scott Ottaway" .
+
+meetup:7d24eed1f1578389e723dbddd30f75d2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Van_Halen> ;
+        mtp:hasOffset           "72" ;
+        mtp:hasSimilarityScore  "0.9993366964780236" ;
+        mtp:hasTextEvidence     "Eddie" .

@@ -1,0 +1,60 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/William_F._Albright>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/65402668/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "The family moved to Santa Fe, New Mexico in 1880, and then Albuquerque in 1882. She attended St. Vincent's Academy in Albuquerque, the Kenwood Institute in Chicago, and Vassar College." ;
+        mtp:hasParticipant   meetup:cee700360048ebb0ab979648a8007697 ;
+        mtp:hasPurpose       meetup:3130adf6d8969698862b84365dde140c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Claude_Albright> ;
+        mtp:hasType          "HT" .
+
+meetup:42b200a1512293ce7e923c2944cd45aa
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "She was a famous singer" ;
+        mtp:hasEvidencePurposeSecond  "She grew up in Albuquerque" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/65402668/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She grew up in Albuquerque, New Mexico, and was recognized as New Mexico's most famous singer during the early 20th century. She performed with various opera companies during her career, most notably the Carl Rosa Opera Company in the United Kingdom." ;
+        mtp:hasPurpose       meetup:42b200a1512293ce7e923c2944cd45aa ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Claude_Albright> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Claude_Albright>
+        rdf:type  core:Person .
+
+meetup:3130adf6d8969698862b84365dde140c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Academic institutions and education" ;
+        mtp:hasEvidencePurposeSecond  "Life events and personal experiences" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:cee700360048ebb0ab979648a8007697
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/William_F._Albright> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Albright" .

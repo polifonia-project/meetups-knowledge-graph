@@ -1,0 +1,76 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Felix_Cavaliere>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Eddie_Brigati>
+        rdf:type  core:Person .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:d8e0f825ea9bab66e1849267edeaec9b
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Eddie_Brigati> ;
+        mtp:hasOffset           "118" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Eddie Brigati" .
+
+meetup:679f226aded64b53e7da62807f45f9d3
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Felix_Cavaliere> ;
+        mtp:hasOffset           "24" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Felix Cavaliere" .
+
+<http://w3id.org/polifonia/pilot/meetups/2259448/5/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He continues to tour as Felix Cavaliere's Rascals, and on June 18, 2009, Cavaliere, along with former writing partner Eddie Brigati, was inducted into the Songwriters Hall of Fame." ;
+        mtp:hasParticipant   meetup:679f226aded64b53e7da62807f45f9d3 , meetup:d8e0f825ea9bab66e1849267edeaec9b ;
+        mtp:hasPurpose       meetup:c0b50854ff27f3fa07d5df831fdda3da ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Felix_Cavaliere> ;
+        mtp:hasType          "HM" .
+
+meetup:2a6b865d6d50faa524502e872075ca84
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Felix_Cavaliere> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Felix Cavaliere" .
+
+meetup:e8890c04fc70ea9fcb57307026498d0e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.93644357" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.06283772" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c0b50854ff27f3fa07d5df831fdda3da
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.998757" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.000797083" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/2259448/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Felix Cavaliere (born November 29, 1942) is an American singer, songwriter, record producer, and musician." ;
+        mtp:hasParticipant   meetup:2a6b865d6d50faa524502e872075ca84 ;
+        mtp:hasPurpose       meetup:e8890c04fc70ea9fcb57307026498d0e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Felix_Cavaliere> ;
+        mtp:hasType          "HT" .

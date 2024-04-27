@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:22b05bedbda999f96943bce17e608c52
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Lee_Minkler> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Lee Minkler" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/33356132/0/2>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "His name was featured in the Oscars In Memoriam 2018." ;
+        mtp:hasParticipant   meetup:22b05bedbda999f96943bce17e608c52 ;
+        mtp:hasPurpose       meetup:6953bbc230e402f4af56b13648e6ebde ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Lee_Minkler> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Lee_Minkler>
+        rdf:type  core:Person .
+
+meetup:6953bbc230e402f4af56b13648e6ebde
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.98774636" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.011735826" ;
+        mtp:hasSourcePurpose          "ML" .

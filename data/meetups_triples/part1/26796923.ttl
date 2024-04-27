@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/26796923/2/5>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "She released a few self-covers albums in the 2000s. She has been active as a creative director, consultant and designer." ;
+        mtp:hasPurpose       meetup:3f52a32cef8e60bd416cc29c71082251 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ann_Lewis_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:3f52a32cef8e60bd416cc29c71082251
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Releasing self-covers albums" ;
+        mtp:hasEvidencePurposeSecond  "Being active as a creative director, consultant, and designer" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Ann_Lewis_(musician)>
+        rdf:type  core:Person .

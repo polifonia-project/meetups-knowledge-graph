@@ -1,0 +1,53 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:10016fc741f145f1f7e87a8af58503af
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Involvement in music arrangement and orchestration" ;
+        mtp:hasEvidencePurposeSecond  "Collaboration with various singers and bands" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://dbpedia.org/resource/Pat_Boone>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/3555864/2/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He served as a music arranger for the Dorsey Brothers Orchestra in his early years. Outside of scoring music for film and television, he often served as a music arranger and orchestrator for singers including Marvin Gaye and Pat Boone and rock bands including Nelson (band) and Dokken." ;
+        mtp:hasParticipant   meetup:750fcc04a720a8ea9f730cc33c9acaad , meetup:73c455868f3ce5f77269a16b09404bfb ;
+        mtp:hasPurpose       meetup:10016fc741f145f1f7e87a8af58503af ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Robert_O._Ragland> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Marvin_Gaye>
+        rdf:type  core:Person .
+
+meetup:73c455868f3ce5f77269a16b09404bfb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Pat_Boone> ;
+        mtp:hasOffset           "141" ;
+        mtp:hasSimilarityScore  "0.9999999999999716" ;
+        mtp:hasTextEvidence     "Pat Boone" .
+
+meetup:750fcc04a720a8ea9f730cc33c9acaad
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Marvin_Gaye> ;
+        mtp:hasOffset           "125" ;
+        mtp:hasSimilarityScore  "0.9999999999928946" ;
+        mtp:hasTextEvidence     "Marvin Gaye" .
+
+<http://dbpedia.org/resource/Robert_O._Ragland>
+        rdf:type  core:Person .

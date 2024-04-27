@@ -1,0 +1,96 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:226d3f0260c342d2663660b198a20934
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Williamson_(musician)> ;
+        mtp:hasOffset           "7" ;
+        mtp:hasSimilarityScore  "0.8036100317081771" ;
+        mtp:hasTextEvidence     "James Williamson" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:e816269f7880f652de1f583f85f1f9f5
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Zion_Williamson> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Williamson" .
+
+meetup:b0ad0cdb3d6e32de2e6fbdc00ab2e0b3
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.99798703" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0019719638" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:95d8bcbdedfd245ee3fe0efe46d9aff9
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:coincidence ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9999989" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 7.068198e-07" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Zion_Williamson>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/James_Williamson_(musician)>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/4018458/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Williamson was born in Castroville, Texas in 1949. His father died while he was young and he moved to San Antonio, Texas around the age of five." ;
+        mtp:hasParticipant   meetup:e816269f7880f652de1f583f85f1f9f5 ;
+        mtp:hasPurpose       meetup:1ce11fb02feeb9facb0b9865a6d12be0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Williamson_(musician)> ;
+        mtp:hasType          "HT" .
+
+<http://w3id.org/polifonia/pilot/meetups/4018458/46/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "2010 - James Williamson with Careless Hearts: Guitar" ;
+        mtp:hasParticipant   meetup:226d3f0260c342d2663660b198a20934 ;
+        mtp:hasPurpose       meetup:b0ad0cdb3d6e32de2e6fbdc00ab2e0b3 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Williamson_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:education  rdfs:label  "Education" .
+
+<http://w3id.org/polifonia/pilot/meetups/4018458/21/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "A detailed gear diagram of James Williamson's 2011 Iggy & The Stooges guitar rig is well-documented:" ;
+        mtp:hasParticipant   meetup:d2058603df6aa9b39d88af8f437fe726 ;
+        mtp:hasPurpose       meetup:95d8bcbdedfd245ee3fe0efe46d9aff9 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/James_Williamson_(musician)> ;
+        mtp:hasType          "HT" .
+
+meetup:d2058603df6aa9b39d88af8f437fe726
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/James_Williamson_(musician)> ;
+        mtp:hasOffset           "27" ;
+        mtp:hasSimilarityScore  "0.787676497520744" ;
+        mtp:hasTextEvidence     "James Williamson" .
+
+meetup:1ce11fb02feeb9facb0b9865a6d12be0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:education ;
+        mtp:hasEvidencePurposeFirst   "Details about a person's life" ;
+        mtp:hasEvidencePurposeSecond  "Information about someone's education" ;
+        mtp:hasSourcePurpose          "LLM" .

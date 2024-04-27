@@ -1,0 +1,43 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:b505da4e081211157911d1b1fc379d63
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1907" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1907-01-01"^^xsd:date ;
+        time:hasEnd          "1907-12-31"^^xsd:date .
+
+meetup:a842cf10c1a8c1355f46f9fe6e1f95bd
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "24 November 1848 – 17 May 1929" ;
+        mtp:hasSource        "LLM" ;
+        time:hasBeginning    "1848-11-24"^^xsd:date ;
+        time:hasEnd          "1929-05-17"^^xsd:date .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+<http://w3id.org/polifonia/pilot/meetups/921498/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:a842cf10c1a8c1355f46f9fe6e1f95bd ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Lilli_Lehmann> ;
+        mtp:hasType     "HM" .
+
+<http://dbpedia.org/resource/Lilli_Lehmann>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/921498/10/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:b505da4e081211157911d1b1fc379d63 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Lilli_Lehmann> ;
+        mtp:hasType     "HT" .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .

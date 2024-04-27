@@ -1,0 +1,77 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/145389/33/3>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He realizes (in a satire of a famous plot element in the television series Dallas a few years earlier) that the entire eight-year Newhart series had been a single nightmare of Dr. Bob Hartley's, which Emily attributes to eating Japanese food before he went to bed." ;
+        mtp:hasParticipant   meetup:6cd47d20fb9ea69addd5103da3fc8beb , meetup:67e644af9f5b71dad8927f171984ba02 ;
+        mtp:hasPurpose       meetup:a0f808d9bb8c5478e5aa6f75c16deb3e ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Newhart> ;
+        mtp:hasType          "HM" .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:6cd47d20fb9ea69addd5103da3fc8beb
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Newhart> ;
+        mtp:hasOffset           "201" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bob Newhart" .
+
+<http://dbpedia.org/resource/Bob_Hartley>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/145389/9/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "It won the 1961 Grammy Award for Album of the Year and peaked at number two in the UK Albums Chart." ;
+        mtp:hasParticipant   meetup:adaa7c03c817b77bc24e47f443b41ab9 ;
+        mtp:hasPurpose       meetup:5422a135c2d3edd008de41e805b8875c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Newhart> ;
+        mtp:hasType          "HT" .
+
+meetup:67e644af9f5b71dad8927f171984ba02
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Hartley> ;
+        mtp:hasOffset           "180" ;
+        mtp:hasSimilarityScore  "0.9999999999927808" ;
+        mtp:hasTextEvidence     "Bob Hartley" .
+
+meetup:5422a135c2d3edd008de41e805b8875c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:publiccelebration ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5314837" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4073793" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:adaa7c03c817b77bc24e47f443b41ab9
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Newhart> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bob Newhart" .
+
+meetup:a0f808d9bb8c5478e5aa6f75c16deb3e
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.75609815" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.22058022" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Bob_Newhart>
+        rdf:type  core:Person .

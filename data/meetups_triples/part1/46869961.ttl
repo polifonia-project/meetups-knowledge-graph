@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:7581b3d00f590e05fae88f61b33fc534
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9383241" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.054578" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:c1250598cbdb1de1e666605b10201a6d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Bob_Power> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999999999803322" ;
+        mtp:hasTextEvidence     "Bob Power" .
+
+<http://w3id.org/polifonia/pilot/meetups/46869961/10/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bob Power is currently an Arts Professor in the Clive Davis Institute of Recorded Music at New York University's Tisch School of the Arts located in New York City, NY." ;
+        mtp:hasParticipant   meetup:c1250598cbdb1de1e666605b10201a6d ;
+        mtp:hasPurpose       meetup:7581b3d00f590e05fae88f61b33fc534 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Bob_Power> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Bob_Power>
+        rdf:type  core:Person .

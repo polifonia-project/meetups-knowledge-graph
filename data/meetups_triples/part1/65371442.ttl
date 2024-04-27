@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://dbpedia.org/resource/Ruth_Kemper>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/65371442/6/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Ruth Kemper died in 1985, aged 83 years, at home in New York City." ;
+        mtp:hasParticipant   meetup:2345f7e6b25cbcd262ed61e9ce0c59d6 ;
+        mtp:hasPurpose       meetup:f61ed785e2510285e8111555328f23d6 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Ruth_Kemper> ;
+        mtp:hasType          "HT" .
+
+meetup:f61ed785e2510285e8111555328f23d6
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.996929" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.0029072985" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:2345f7e6b25cbcd262ed61e9ce0c59d6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Ruth_Kemper> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999951910014274" ;
+        mtp:hasTextEvidence     "Ruth Kemper" .

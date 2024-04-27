@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:51f6e2e4ef8bef1046723c548a4c9d5a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:businessmeeting ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.97232515" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.02741297" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:30daee6251da1e213fbd11d394e9e31f
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Mac_Curtis> ;
+        mtp:hasOffset           "9" ;
+        mtp:hasSimilarityScore  "0.9999999999999148" ;
+        mtp:hasTextEvidence     "Mac Curtis" .
+
+<http://dbpedia.org/resource/Mac_Curtis>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/15505532/3/4>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "In 1970, Mac Curtis had two hits on Billboard Hot Country Songs chart, \"Early In The Morning\" (#35) and \"Honey, Don't\" (#43)." ;
+        mtp:hasParticipant   meetup:30daee6251da1e213fbd11d394e9e31f ;
+        mtp:hasPurpose       meetup:51f6e2e4ef8bef1046723c548a4c9d5a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Mac_Curtis> ;
+        mtp:hasType          "HT" .

@@ -1,0 +1,40 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+meetup:bd258c920a5859d3f720d20aab09a56f
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.7619626" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.23803602" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:12a8de3f555014f072b25c52a123e94c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jason_Gerken> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jason Gerken" .
+
+<http://w3id.org/polifonia/pilot/meetups/48140313/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jason Gerken is an American musician, who has played in Molly McGuire, Shiner, Open Hand, Project 86, and most recently, HUM as well as The Birth Defects and Sie Lieben Maschinen." ;
+        mtp:hasParticipant   meetup:12a8de3f555014f072b25c52a123e94c ;
+        mtp:hasPurpose       meetup:bd258c920a5859d3f720d20aab09a56f ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jason_Gerken> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/Jason_Gerken>
+        rdf:type  core:Person .

@@ -1,0 +1,65 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jared_Warren>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Coady_Willis>
+        rdf:type  core:Person .
+
+meetup:4ee68cbb8da9f0b75d748595c631913c
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.979259" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.017831208" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://w3id.org/polifonia/pilot/meetups/7340804/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Jared Warren is an American musician who is the bassist of Big Business (alongside drummer Coady Willis) and formerly the Melvins." ;
+        mtp:hasParticipant   meetup:f25049f816028328e9f6b7f37c4de22c , meetup:a9e9b7923d912c8b9579ba39bbb690b4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jared_Warren> ;
+        mtp:hasType          "HM" .
+
+meetup:f25049f816028328e9f6b7f37c4de22c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Coady_Willis> ;
+        mtp:hasOffset           "91" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Coady Willis" .
+
+meetup:90e5bb007a16abbadb2709882e9f1d27
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jared_Warren> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Jared Warren" .
+
+<http://w3id.org/polifonia/pilot/meetups/7340804/0/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He is currently the longest serving bassist for the Melvins." ;
+        mtp:hasParticipant   meetup:90e5bb007a16abbadb2709882e9f1d27 ;
+        mtp:hasPurpose       meetup:4ee68cbb8da9f0b75d748595c631913c ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jared_Warren> ;
+        mtp:hasType          "HT" .
+
+meetup:a9e9b7923d912c8b9579ba39bbb690b4
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jared_Warren> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Jared Warren" .

@@ -1,0 +1,41 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://w3id.org/polifonia/pilot/meetups/40626435/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Piotr Rogucki (born 5 May 1978 in Łódź) is a Polish singer, musician, and actor, best known as the leader of rock band Coma." ;
+        mtp:hasParticipant   meetup:bc3c7a3d0198208fe6895080d18e23c2 ;
+        mtp:hasPurpose       meetup:d991b90bd2560a8b705a88b83e7ca0d0 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Piotr_Rogucki> ;
+        mtp:hasType          "HT" .
+
+meetup:d991b90bd2560a8b705a88b83e7ca0d0
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.5609141" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.4342933" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Piotr_Rogucki>
+        rdf:type  core:Person .
+
+meetup:bc3c7a3d0198208fe6895080d18e23c2
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Piotr_Rogucki> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Piotr Rogucki" .

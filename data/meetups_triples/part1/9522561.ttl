@@ -1,0 +1,92 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+<http://w3id.org/polifonia/pilot/meetups/9522561/2/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Bennett was born Haley Loraine Keeling in Fort Myers, Florida, on January 7, 1988. Her parents, Leilani (née Dorsey Bennett) and Ronald Keeling, met in church and hitchhiked to Florida while Leilani was pregnant with her." ;
+        mtp:hasParticipant   meetup:cbabb013fa828fdcf81b1701b05b4d2c , meetup:f00498d893f218952205195060053534 ;
+        mtp:hasPurpose       meetup:9fb237b686ff98e8ce31f76da7dadb3a ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Haley_Bennett> ;
+        mtp:hasType          "HT" .
+
+meetup:f00498d893f218952205195060053534
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Jeff_Bennett_(baseball)> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Bennett" .
+
+<http://w3id.org/polifonia/pilot/meetups/9522561/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "When Bennett was 10, she and her father moved to Stow, Ohio, where she attended Stow-Munroe Falls High School. At 13, she enrolled at Barbizon Modeling School in Akron, Ohio." ;
+        mtp:hasPurpose       meetup:61d5818b12d38e9c9a0d441859ebace1 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Haley_Bennett> ;
+        mtp:hasType          "HT" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/9522561/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Haley Loraine Keeling (born January 7, 1988), known professionally as Haley Bennett, is an American actress." ;
+        mtp:hasParticipant   meetup:22e7128a4c9017fe344cadd55ffd07c8 ;
+        mtp:hasPurpose       meetup:49d9b4f190c60ff032d5a41bc48d6c59 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Haley_Bennett> ;
+        mtp:hasType          "HT" .
+
+meetup:9fb237b686ff98e8ce31f76da7dadb3a
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:coincidence ;
+        mtp:hasEvidencePurposeFirst   "Details about a person's life" ;
+        mtp:hasEvidencePurposeSecond  "Unplanned events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:cbabb013fa828fdcf81b1701b05b4d2c
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           [ rdf:type  core:Person ] ;
+        mtp:hasOffset           "26" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "Dorsey Bennett" .
+
+meetup:coincidence  rdfs:label  "Coincidence" .
+
+meetup:22e7128a4c9017fe344cadd55ffd07c8
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Haley_Bennett> ;
+        mtp:hasOffset           "70" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "Haley Bennett" .
+
+meetup:education  rdfs:label  "Education" .
+
+meetup:61d5818b12d38e9c9a0d441859ebace1
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:education ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Attending school and modeling school" ;
+        mtp:hasEvidencePurposeSecond  "Personal experiences and upbringing" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+meetup:49d9b4f190c60ff032d5a41bc48d6c59
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:personallife ;
+        mtp:hasAPurposeSecond         meetup:musicmaking ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.89873815" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.07597859" ;
+        mtp:hasSourcePurpose          "ML" .
+
+<http://dbpedia.org/resource/Jeff_Bennett_(baseball)>
+        rdf:type  core:Person .
+
+<http://dbpedia.org/resource/Haley_Bennett>
+        rdf:type  core:Person .

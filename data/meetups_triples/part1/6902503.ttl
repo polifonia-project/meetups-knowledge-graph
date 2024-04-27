@@ -1,0 +1,79 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:businessmeeting
+        rdfs:label  "Business meeting" .
+
+meetup:personallife  rdfs:label  "Personal life" .
+
+<http://dbpedia.org/resource/Vince_Edwards>
+        rdf:type  core:Person .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://w3id.org/polifonia/pilot/meetups/6902503/0/0>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "Vincent Edwards (September 9, 1963 – January 12, 2022) professionally known by his stage name CPO Boss Hogg, was an American rapper from Compton, California." ;
+        mtp:hasParticipant   meetup:43162123b8e5b6b2fce78bfd07d3fff6 , meetup:3c28134882a00e42982b183129f8d17d ;
+        mtp:hasPurpose       meetup:eba6333ebc67399c73f8ab55df4f63dc ;
+        mtp:hasSubject       <http://dbpedia.org/resource/CPO_Boss_Hogg> ;
+        mtp:hasType          "HM" .
+
+meetup:43162123b8e5b6b2fce78bfd07d3fff6
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/CPO_Boss_Hogg> ;
+        mtp:hasOffset           "96" ;
+        mtp:hasSimilarityScore  "1.0" ;
+        mtp:hasTextEvidence     "CPO Boss Hogg" .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+<http://w3id.org/polifonia/pilot/meetups/6902503/3/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "He dropped his first single off of it, \"Your Body Is Hot!\", on August 19, 2014." ;
+        mtp:hasParticipant   meetup:da522335ad04327dfe146000eddf69ff ;
+        mtp:hasPurpose       meetup:788eee858738e81621cc323fa2a088e5 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/CPO_Boss_Hogg> ;
+        mtp:hasType          "HT" .
+
+<http://dbpedia.org/resource/CPO_Boss_Hogg>
+        rdf:type  core:Person .
+
+meetup:3c28134882a00e42982b183129f8d17d
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/Vince_Edwards> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "0.9999878252636908" ;
+        mtp:hasTextEvidence     "Vincent Edwards" .
+
+meetup:788eee858738e81621cc323fa2a088e5
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:businessmeeting ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Confidence value: 0.9393431" ;
+        mtp:hasEvidencePurposeSecond  "Confidence value: 0.03304106" ;
+        mtp:hasSourcePurpose          "ML" .
+
+meetup:da522335ad04327dfe146000eddf69ff
+        rdf:type                mtp:Participant ;
+        mtp:hasEntity           <http://dbpedia.org/resource/CPO_Boss_Hogg> ;
+        mtp:hasOffset           "0" ;
+        mtp:hasSimilarityScore  "" ;
+        mtp:hasTextEvidence     "CPO Boss Hogg" .
+
+meetup:eba6333ebc67399c73f8ab55df4f63dc
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:personallife ;
+        mtp:hasEvidencePurposeFirst   "Vincent Edwards was a rapper" ;
+        mtp:hasEvidencePurposeSecond  "He was from Compton, California" ;
+        mtp:hasSourcePurpose          "LLM" .

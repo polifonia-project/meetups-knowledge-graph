@@ -1,0 +1,33 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+meetup:musicmaking  rdfs:label  "Music making" .
+
+<http://dbpedia.org/resource/Jack_Dupon>
+        rdf:type  core:Person .
+
+meetup:publiccelebration
+        rdfs:label  "Public celebration" .
+
+meetup:bbbe86ac917885bc116b87cc3183f4a4
+        rdf:type                      mtp:Purpose ;
+        mtp:hasAPurposeFirst          meetup:musicmaking ;
+        mtp:hasAPurposeSecond         meetup:publiccelebration ;
+        mtp:hasEvidencePurposeFirst   "Releasing albums and performing at music festivals" ;
+        mtp:hasEvidencePurposeSecond  "Participating in public celebrations and events" ;
+        mtp:hasSourcePurpose          "LLM" .
+
+<http://w3id.org/polifonia/pilot/meetups/31082911/4/1>
+        rdf:type             mtp:Meetup ;
+        mtp:hasEvidenceText  "They released the double live album, Bascule à Vif in 2012 and played at the Zappanale Festival in Bad Doberan, Germany amongst Magma, George Duke & Jean-Luc Ponty : Brothers of Invention, and Alice Cooper. They were also in Poland at the experimental music festival Energia Dzwieku with BLURT, Gedaliah Tazartes, and were the opening act for GONG at the \"Abattoirs\" in Bourgoin-Jallieu, France." ;
+        mtp:hasPurpose       meetup:bbbe86ac917885bc116b87cc3183f4a4 ;
+        mtp:hasSubject       <http://dbpedia.org/resource/Jack_Dupon> ;
+        mtp:hasType          "HT" .

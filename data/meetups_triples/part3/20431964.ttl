@@ -1,0 +1,46 @@
+@prefix core:   <https://w3id.org/polifonia/ontology/core/> .
+@prefix fx:     <http://sparql.xyz/facade-x/ns/> .
+@prefix geo:    <https://www.w3.org/2003/01/geo/wgs84_pos> .
+@prefix meetup: <http://w3id.org/polifonia/pilot/meetups/> .
+@prefix mtp:    <http://w3id.org/polifonia/ontology/meetups-ontology#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz:    <http://sparql.xyz/facade-x/data/> .
+
+mtp:TimePoint  rdf:type  mtp:TimeExpression .
+
+meetup:32cbdb24f6edf9e8c8d23dd1299bf768
+        rdf:type             mtp:TimeRange ;
+        mtp:hasEvidenceText  "1976 to 1980" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1976-01-01"^^xsd:date ;
+        time:hasEnd          "1980-12-31"^^xsd:date .
+
+meetup:6fc9f38d36800d222a707b9420891540
+        rdf:type             mtp:TimePoint ;
+        mtp:hasEvidenceText  "2 July 1937" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1937-07-02"^^xsd:date ;
+        time:hasEnd          "1937-07-02"^^xsd:date .
+
+mtp:TimeRange  rdf:type  mtp:TimeExpression .
+
+mtp:TimeReference  rdf:type  mtp:TimeExpression .
+
+meetup:f3b06cbeb88571f6dd66f3557283d2b1
+        rdf:type             mtp:TimeReference ;
+        mtp:hasEvidenceText  "1968" ;
+        mtp:hasSource        "ML" ;
+        time:hasBeginning    "1968-01-01"^^xsd:date ;
+        time:hasEnd          "1968-12-31"^^xsd:date .
+
+<http://dbpedia.org/resource/Dee_Palmer>
+        rdf:type  core:Person .
+
+<http://w3id.org/polifonia/pilot/meetups/20431964/0/0>
+        rdf:type        mtp:Meetup ;
+        mtp:happensAt   meetup:6fc9f38d36800d222a707b9420891540 , meetup:f3b06cbeb88571f6dd66f3557283d2b1 , meetup:32cbdb24f6edf9e8c8d23dd1299bf768 ;
+        mtp:hasSubject  <http://dbpedia.org/resource/Dee_Palmer> ;
+        mtp:hasType     "HT" .
